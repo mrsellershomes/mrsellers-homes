@@ -176,26 +176,6 @@
       .hero-stats { gap: 24px; }
     }
   </style>
-<!-- begin Widget Tracker Code -->
-<script>
-(function(w,i,d,g,e,t){w["WidgetTrackerObject"]=g;(w[g]=w[g]||function()
-{(w[g].q=w[g].q||[]).push(arguments);}),(w[g].ds=1*new Date());(e="script"),
-(t=d.createElement(e)),(e=d.getElementsByTagName(e)[0]);t.async=1;t.src=i;
-e.parentNode.insertBefore(t,e);})
-(window,"https://widgetbe.com/agent",document,"widgetTracker");
-window.widgetTracker("create", "WT-HHUBDZCX");
-window.widgetTracker("send", "pageview");
-</script>
-<!-- end Widget Tracker Code -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5VC5MDECPH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5VC5MDECPH');
-</script>
 </head>
 <body>
 
@@ -383,28 +363,28 @@ window.widgetTracker("send", "pageview");
       </p>
     </div>
     <div class="content-grid">
-      <div class="content-card">
+      <div class="content-card" onclick="window.open('https://www.youtube.com/watch?v=vLPk0UdDyFE','_blank')" style="cursor:pointer;">
         <div class="content-type">Town guide &middot; YouTube</div>
         <div class="content-title">Fort Lee, NJ &mdash; NYC skyline views, zero commute stress, and a real estate market that never slows down</div>
         <div class="content-desc">From Hudson Lights to the Bluffs, Fort Lee offers condos, duplexes, and multi-million dollar single-families &mdash; all within minutes of the George Washington Bridge.</div>
         <div class="content-arrow">&#8594;</div>
       </div>
-      <div class="content-card">
+      <div class="content-card" onclick="window.open('https://www.youtube.com/watch?v=OBA-PoC5fN8','_blank')" style="cursor:pointer;">
+        <div class="content-type">Buyer education &middot; YouTube</div>
+        <div class="content-title">The 7 most affordable towns in Bergen County &mdash; and why they&rsquo;re better than their price tag suggests</div>
+        <div class="content-desc">Median prices under $500k, solid NYC commutes, and real inventory. If you think Bergen County is out of reach, watch this first.</div>
+        <div class="content-arrow">&#8594;</div>
+      </div>
+      <div class="content-card" onclick="window.open('https://www.tiktok.com/@tsellnj/video/7554892156956167479','_blank')" style="cursor:pointer;">
         <div class="content-type">Home walkthrough &middot; TikTok</div>
-        <div class="content-title">Full walkthrough: $649,000 colonial in Fair Lawn &mdash; what the listing doesn&rsquo;t show you</div>
-        <div class="content-desc">A narrated room-by-room tour with no filter and no spin &mdash; just what you&rsquo;d want to know before scheduling a showing.</div>
+        <div class="content-title">Newly built French Modern in Englewood Cliffs &mdash; 15 minutes from NYC, top schools, and a lifestyle most people don&rsquo;t know exists</div>
+        <div class="content-desc">A full narrated walkthrough of one of Bergen County&rsquo;s most desirable new builds. Premium location, premium community &mdash; see exactly what you get.</div>
         <div class="content-arrow">&#8594;</div>
       </div>
-      <div class="content-card">
-        <div class="content-type">Buyer education</div>
-        <div class="content-title">North of Route 4 vs. south &mdash; what the divide actually means for your search</div>
-        <div class="content-desc">Bergen County&rsquo;s informal dividing line explained honestly &mdash; what it means for school ratings, home prices, and daily life.</div>
-        <div class="content-arrow">&#8594;</div>
-      </div>
-      <div class="content-card">
-        <div class="content-type">Seller strategy</div>
-        <div class="content-title">How I got multiple offers above asking in the first weekend</div>
-        <div class="content-desc">Photography, narrated video, listing timing, and how to generate competition before the first open house.</div>
+      <div class="content-card" onclick="window.open('https://www.tiktok.com/@tsellnj/video/7597201557511212343','_blank')" style="cursor:pointer;">
+        <div class="content-type">Off-market listing &middot; TikTok</div>
+        <div class="content-title">1945 stone colonial with pool on an oversized lot in Elmwood Park &mdash; off market, available only through Tyler</div>
+        <div class="content-desc">Not on Zillow. Not on the MLS. A private showing opportunity for buyers who are ready to move fast.</div>
         <div class="content-arrow">&#8594;</div>
       </div>
     </div>
@@ -583,11 +563,11 @@ window.widgetTracker("send", "pageview");
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-logo">Mr. Sellers Homes</div>
-    <div><span class="footer-red">tyler@mrsellers.homes</span> &middot; Bergen County, NJ &middot; RE/MAX Licensed Agent</div>
+    <div><span class="footer-red"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="80f4f9ece5f2c0edf2f3e5ecece5f2f3aee8efede5f3">[email&#160;protected]</a></span> &middot; Bergen County, NJ &middot; RE/MAX Licensed Agent</div>
     <div>&copy; 2025 Tyler Sellers</div>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     const regions = [
       { name: "Southwest Bergen", towns: [
         {name:"Carlstadt",guide:false},{name:"East Rutherford",guide:false},
@@ -687,12 +667,4 @@ window.widgetTracker("send", "pageview");
       try {
         const res = await fetch(buyerForm.action, { method:'POST', body:new FormData(buyerForm), headers:{'Accept':'application/json'} });
         if (res.ok) { buyerForm.style.display='none'; document.getElementById('buyerFormSuccess').style.display='block'; }
-        else { btn.textContent='Something went wrong — please email tyler@mrsellers.homes'; btn.disabled=false; }
-      } catch { btn.textContent='Something went wrong — please email tyler@mrsellers.homes'; btn.disabled=false; }
-    });
-
-    renderDirectory('');
-  </script>
-
-</body>
-</html>
+        else { btn.textContent='Something went wrong — please
