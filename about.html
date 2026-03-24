@@ -24,17 +24,16 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'DM Sans', sans-serif; color: var(--black); background: var(--white); -webkit-font-smoothing: antialiased; }
 
-    /* NAV */
     .nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 40px; border-bottom: 1px solid var(--gray-light); background: var(--white); position: sticky; top: 0; z-index: 100; }
     .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--black); text-decoration: none; }
     .nav-logo span { font-weight: 400; opacity: 0.5; font-size: 11px; display: block; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 1px; }
     .nav-links { display: flex; gap: 28px; font-size: 13px; color: var(--gray-mid); }
     .nav-links a { color: inherit; text-decoration: none; cursor: pointer; transition: color 0.2s; }
     .nav-links a:hover { color: var(--red); }
+    .nav-links a.active { color: var(--red); }
     .nav-cta { background: var(--red); color: var(--white); border: none; padding: 10px 22px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; cursor: pointer; border-radius: 2px; letter-spacing: 0.04em; transition: background 0.2s; text-decoration: none; }
     .nav-cta:hover { background: var(--red-dark); }
 
-    /* MOBILE MENU */
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
     .hamburger span { display: block; width: 22px; height: 2px; background: var(--black); border-radius: 2px; }
     .mobile-menu { display: none; position: fixed; top: 57px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--gray-light); z-index: 99; padding: 16px 20px; flex-direction: column; gap: 0; }
@@ -43,12 +42,10 @@
     .mobile-menu a:last-child { border-bottom: none; }
     .mobile-menu .mobile-cta { margin-top: 12px; background: var(--red); color: var(--white); text-align: center; padding: 14px; border-radius: 2px; font-weight: 500; font-size: 14px; letter-spacing: 0.04em; }
 
-    /* RED BAR */
     .red-bar { background: var(--red); color: var(--white); padding: 9px 40px; display: flex; align-items: center; justify-content: space-between; font-size: 12px; letter-spacing: 0.05em; }
     .red-bar-item { display: flex; align-items: center; gap: 8px; opacity: 0.92; }
     .red-bar-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.5); }
 
-    /* HERO */
     .about-hero { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--gray-light); }
     .about-hero-left { padding: 72px 48px 72px 40px; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid var(--gray-light); }
     .hero-eyebrow { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; font-weight: 500; }
@@ -56,16 +53,15 @@
     .hero-headline { font-family: 'Cormorant Garamond', serif; font-size: 52px; line-height: 1.08; font-weight: 500; margin-bottom: 24px; color: var(--black); }
     .hero-headline em { font-style: italic; color: var(--red); }
     .hero-sub { font-size: 15px; line-height: 1.8; color: var(--gray-mid); max-width: 460px; }
+
     .about-hero-right { position: relative; overflow: hidden; background: var(--gray-bg); max-height: 600px; }
     .about-hero-img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; display: block; }
 
-    /* SECTIONS */
     .section { padding: 72px 40px; border-bottom: 1px solid var(--gray-light); }
     .section-label { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); margin-bottom: 36px; display: flex; align-items: center; gap: 10px; font-weight: 500; }
     .section-label::after { content: ''; flex: 1; height: 1px; background: var(--gray-light); }
     .section-title { font-family: 'Cormorant Garamond', serif; font-size: 38px; font-weight: 500; line-height: 1.15; color: var(--black); margin-bottom: 28px; }
 
-    /* STORY */
     .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; }
     .story-body p { font-size: 15px; line-height: 1.85; color: var(--gray-mid); margin-bottom: 20px; }
     .story-body p:last-child { margin-bottom: 0; }
@@ -77,7 +73,6 @@
     .aside-title { font-size: 14px; font-weight: 500; color: var(--black); margin-bottom: 6px; }
     .aside-text { font-size: 13px; color: var(--gray-mid); line-height: 1.7; }
 
-    /* TIMELINE */
     .timeline { position: relative; padding-left: 28px; }
     .timeline::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; width: 1px; background: var(--gray-light); }
     .timeline-item { position: relative; margin-bottom: 36px; }
@@ -87,7 +82,6 @@
     .timeline-title { font-size: 14px; font-weight: 500; color: var(--black); margin-bottom: 4px; }
     .timeline-text { font-size: 13px; color: var(--gray-mid); line-height: 1.65; }
 
-    /* REVIEWS */
     .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
     .review-card { padding: 32px 28px; border: 1px solid var(--gray-light); margin: -1px 0 0 -1px; }
     .review-stars { color: var(--red); font-size: 13px; margin-bottom: 16px; letter-spacing: 2px; }
@@ -96,17 +90,15 @@
     .review-name { font-size: 12px; font-weight: 500; color: var(--black); }
     .review-context { font-size: 11px; color: var(--gray-mid); margin-top: 2px; }
 
-    /* CTA */
     .cta-section { display: grid; grid-template-columns: 1fr 1fr; background: var(--black); }
     .cta-left { padding: 64px 48px 64px 40px; border-right: 1px solid rgba(255,255,255,0.1); }
     .cta-right { padding: 64px 40px 64px 48px; display: flex; flex-direction: column; justify-content: center; }
     .cta-title { font-family: 'Cormorant Garamond', serif; font-size: 38px; font-weight: 500; color: var(--white); line-height: 1.15; margin-bottom: 20px; }
     .cta-title em { font-style: italic; color: var(--red); }
     .cta-text { font-size: 15px; line-height: 1.75; color: rgba(255,255,255,0.6); margin-bottom: 32px; }
-    .cta-stat { margin-bottom: 24px; }
+    .cta-stats { display: flex; gap: 40px; margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); }
     .cta-stat-num { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 500; color: var(--red); }
     .cta-stat-label { font-size: 12px; color: rgba(255,255,255,0.5); letter-spacing: 0.06em; margin-top: 2px; }
-    .cta-stats { display: flex; gap: 40px; margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); }
     .btn-red { background: var(--red); color: var(--white); border: none; padding: 16px 32px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; border-radius: 2px; letter-spacing: 0.04em; transition: background 0.2s; text-decoration: none; display: inline-block; }
     .btn-red:hover { background: var(--red-dark); }
     .btn-outline-white { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,0.3); padding: 16px 32px; font-family: 'DM Sans', sans-serif; font-size: 14px; cursor: pointer; border-radius: 2px; text-decoration: none; display: inline-block; margin-left: 12px; transition: border-color 0.2s; }
@@ -115,12 +107,10 @@
     .regis-quote p { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; color: rgba(255,255,255,0.85); line-height: 1.5; }
     .regis-quote cite { display: block; font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 10px; font-style: normal; }
 
-    /* FOOTER */
     .footer { background: var(--black); color: rgba(255,255,255,0.45); padding: 32px 40px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; border-top: 1px solid rgba(255,255,255,0.08); }
     .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; color: var(--white); }
     .footer-red { color: var(--red); }
 
-    /* RESPONSIVE */
     @media (max-width: 900px) {
       .nav-links { display: none; }
       .nav-cta { display: none; }
@@ -143,7 +133,6 @@
 </head>
 <body>
 
-  <!-- NAV -->
   <nav class="nav">
     <a href="/" class="nav-logo">
       Mr. Sellers Homes
@@ -154,6 +143,7 @@
       <a href="/#buy">Buy in Bergen County</a>
       <a href="/#towns">Town directory</a>
       <a href="/#content">Guides &amp; walkthroughs</a>
+      <a href="/about" class="active">About Tyler</a>
     </div>
     <a href="/#sell" class="nav-cta">Get your home&rsquo;s value</a>
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -161,16 +151,15 @@
     </button>
   </nav>
 
-  <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="/#sell" onclick="closeMenu()">Sell your home</a>
     <a href="/#buy" onclick="closeMenu()">Buy in Bergen County</a>
     <a href="/#towns" onclick="closeMenu()">Town directory</a>
     <a href="/#content" onclick="closeMenu()">Guides &amp; walkthroughs</a>
+    <a href="/about" onclick="closeMenu()">About Tyler</a>
     <a href="/#sell" class="mobile-cta" onclick="closeMenu()">Get your home&rsquo;s value</a>
   </div>
 
-  <!-- RED BAR -->
   <div class="red-bar">
     <div class="red-bar-item"><span class="red-bar-dot"></span>Bergen County specialist &middot; all 70 municipalities</div>
     <div class="red-bar-item"><span class="red-bar-dot"></span>Licensed since 2019</div>
@@ -178,7 +167,6 @@
     <div class="red-bar-item"><span class="red-bar-dot"></span>tyler@mrsellers.homes</div>
   </div>
 
-  <!-- HERO -->
   <div class="about-hero">
     <div class="about-hero-left">
       <div class="hero-eyebrow">About Tyler Sellers</div>
@@ -188,98 +176,35 @@
         <em>real estate agent.</em>
       </h1>
       <p class="hero-sub">
-        I grew up here. I left. I worked in tech, tried to build something abroad,
+        I grew up here. I left. I worked in tech, tried to build something in Southeast Asia,
         came home, and stumbled into real estate on a drive down Main Street.
         That unconventional path is exactly why I&rsquo;m better at this job than most people who planned for it.
       </p>
     </div>
     <div class="about-hero-right">
-      <img class="about-hero-img" style="object-position:center 25%;" src="tyler-sellers.jpg" alt="Tyler Sellers, Bergen County NJ Real Estate Agent" />
+      <img class="about-hero-img" src="tyler-sellers.jpg" alt="Tyler Sellers, Bergen County NJ Real Estate Agent" />
     </div>
   </div>
 
-  <!-- STORY -->
   <section class="section">
     <div class="section-label">The full story</div>
     <div class="story-grid">
       <div class="story-body">
-        <p>
-          I was born and raised in Bergen County. At 14, I earned a spot at
-          <strong>Regis High School</strong> in Manhattan &mdash; one of the most academically rigorous
-          schools in the country. For 4 years I commuted into NYC every day,
-          which gave me something most Bergen County kids don&rsquo;t get: an early,
-          firsthand understanding of exactly what the NYC-to-suburbs commute looks and feels like.
-          That knowledge still informs how I advise buyers today.
-        </p>
-        <p>
-          After Regis I went to <strong>Santa Clara University</strong> in California,
-          where I studied finance. After graduating in 2016 I moved to
-          <strong>San Francisco to work at Salesforce</strong> on their recruiting team.
-          I was on track toward sales, but I had always wanted to build something of my own.
-          So in 2018 I took a risk &mdash; I left tech, and my brother and I moved to Southeast Asia
-          to build an online fitness company for guys who wanted to build muscle and improve their lives.
-        </p>
-        <p>
-          We set up in <strong>Chiang Mai, Thailand</strong> first, then found a community of
-          entrepreneurs and expats and moved into a villa in
-          <strong>Canggu, Bali</strong>. The business didn&rsquo;t scale the way we hoped &mdash;
-          we were years ahead of a trend that would explode during the pandemic &mdash;
-          but I learned more about content creation, online marketing, and building an audience
-          from scratch than any job could have taught me.
-        </p>
-        <p>
-          I came home to Bergen County in mid-2019 to recover and regroup.
-          While I figured out my next move, I went back to work with my father &mdash;
-          a <strong>wallpaper installer</strong> who has spent 44+ years working in the most
-          prestigious homes in Bergen County. Alpine, Tenafly, Saddle River, Ridgewood.
-          I had been working alongside him since I was 11 years old.
-          I know what premium craftsmanship looks like because I&rsquo;ve been inside those homes
-          most agents have only seen in listings.
-        </p>
-        <p>
-          I also worked at a <strong>home decorating center</strong>, installing window shades and blinds
-          in the high-rise towers along the Fort Lee palisades and in residential homes across Bergen County.
-          Between my father&rsquo;s work and mine, I built an eye for construction quality, materials,
-          and the kind of details that don&rsquo;t show up in listing photos but absolutely affect value.
-        </p>
-        <p>
-          One day I was driving down Main Street in Ridgefield Park and saw a sign:
-          <em>&ldquo;Real estate salespeople wanted.&rdquo;</em>
-          I was heading into sales in NYC anyway. But this one was right in my backyard.
-          I met the broker, <strong>Ted Crocco</strong>, who informed me I needed a license first &mdash;
-          handed me a $50 coupon to real estate school &mdash; and the rest followed quickly.
-          I enrolled at Kovats Real Estate School, one of the most respected programs in New Jersey,
-          took my state exam the day after finishing class, and passed.
-        </p>
-        <p>
-          I started out on a small team, sold seven homes, and learned the business from the ground up.
-          Real estate is nothing like tech. The procedures exist, but only as outlines.
-          Every transaction is different. Every client is different. You figure it out as you go,
-          and the agents who do it best are the ones who genuinely care about the outcome.
-        </p>
-        <p>
-          In 2021 I went solo and turned to <strong>social media</strong> to build my own client base.
-          My Regis and college connections weren&rsquo;t in Bergen County &mdash; I had to create my own
-          storefront. I started making content about Bergen County homes, towns, and the real estate market.
-          Today I have over <strong>15,000 followers</strong> across TikTok, Instagram, and YouTube,
-          and I sell about seven to ten homes a year with a goal of reaching 12&ndash;15.
-          I&rsquo;m at <strong>RE/MAX</strong> because they have the best technology and the fastest
-          response to changes in New Jersey real estate law &mdash; which matters when you&rsquo;re
-          acting as a fiduciary for people making the biggest financial decision of their lives.
-        </p>
-        <p>
-          The Regis High School education instilled something in me that has never left:
-          the belief that I am a <em>man for others.</em>
-          I have moved truckloads of furniture. I have painted rooms, I have installed railings, I have answered calls on vacation.
-          I have negotiated $15,000 under asking in a market where that doesn&rsquo;t happen.
-          Not because I had to, but because that&rsquo;s what the job actually means to me.
-        </p>
+        <p>I was born and raised in Bergen County. At 14, I earned a spot at <strong>Regis High School</strong> in Manhattan &mdash; one of the most academically rigorous schools in the country. For four years I commuted into the city every day, which gave me something most Bergen County kids don&rsquo;t get: an early, firsthand understanding of exactly what the NYC-to-suburbs commute looks and feels like. That knowledge still informs how I advise buyers today.</p>
+        <p>After Regis I went to <strong>Santa Clara University</strong> in California, where I studied finance. After graduating in 2016 I moved to <strong>San Francisco to work at Salesforce</strong> on their recruiting team. I was on track toward sales, but I had always wanted to build something of my own. So in 2018 I took a risk &mdash; I left tech, and my brother and I moved to Southeast Asia to build an online fitness company for guys who wanted to build muscle and improve their lives.</p>
+        <p>We set up in <strong>Chiang Mai, Thailand</strong> first, then found a community of entrepreneurs and digital nomads and moved into a guest house in <strong>Canggu, Bali</strong>. The business didn&rsquo;t scale the way we hoped &mdash; we were years ahead of a trend that would explode during the pandemic &mdash; but I learned more about content creation, online marketing, and building an audience from scratch than any job could have taught me.</p>
+        <p>I came home to Bergen County in mid-2019 to regroup. While I figured out my next move, I went back to work with my father &mdash; a <strong>wallpaper installer</strong> who has spent decades working in the most prestigious homes in Bergen County. Alpine, Tenafly, Saddle River, Ridgewood. I had been working alongside him since I was 10 years old. I know what premium craftsmanship looks like because I&rsquo;ve been inside those homes most agents have only seen in listings.</p>
+        <p>I also worked at a <strong>home decorating center</strong>, installing window shades and blinds in the high-rise towers along the Fort Lee Gold Coast and in residential homes across the county. Between my father&rsquo;s work and mine, I built an eye for construction quality, materials, and the kind of details that don&rsquo;t show up in listing photos but absolutely affect value.</p>
+        <p>One day I was driving down Main Street in Ridgefield Park and saw a sign: <em>&ldquo;Real estate salespeople wanted.&rdquo;</em> I was heading into sales anyway. This one was right in my backyard. I met the broker, <strong>Ted Crocco</strong>, who informed me I needed a license first &mdash; handed me a $50 coupon to real estate school &mdash; and the rest followed quickly. I enrolled at Kovats Real Estate School, one of the most respected programs in New Jersey, took my state exam the day after finishing class, and passed.</p>
+        <p>I started on a small team, sold seven homes, and learned the business from the ground up. Real estate is nothing like tech. The procedures exist, but only as outlines. Every transaction is different. Every client is different. You figure it out as you go, and the agents who do it best are the ones who genuinely care about the outcome.</p>
+        <p>In 2021 I went solo and turned to <strong>social media</strong> to build my own client base. My Regis and college connections weren&rsquo;t in Bergen County &mdash; I had to create my own storefront. I started making content about Bergen County homes, towns, and the real estate market. Today I have over <strong>15,000 followers</strong> across TikTok, Instagram, and YouTube, and I sell about seven homes a year with a goal of reaching 12&ndash;15. I&rsquo;m at <strong>RE/MAX</strong> because they have the best technology and the fastest response to changes in New Jersey real estate law &mdash; which matters when you&rsquo;re acting as a fiduciary for people making the biggest financial decision of their lives.</p>
+        <p>The Regis education instilled something in me that has never left: the idea that you should be a <em>man for others.</em> I have moved furniture. I have painted walls. I have answered calls on vacation. I have negotiated $15,000 under asking in a market where that doesn&rsquo;t happen. Not because I had to, but because that&rsquo;s what the job actually means to me.</p>
       </div>
       <div class="story-aside">
         <div class="aside-block">
           <div class="aside-num">70</div>
           <div class="aside-title">Bergen County municipalities</div>
-          <div class="aside-text">Every town, every school district, every commute. I can point to all of them on a map — and tell you what living there actually feels like.</div>
+          <div class="aside-text">Every town, every school district, every commute. I can point to all of them on a map &mdash; and tell you what living there actually feels like.</div>
         </div>
         <div class="aside-block">
           <div class="aside-num">15K+</div>
@@ -289,28 +214,23 @@
         <div class="aside-block">
           <div class="aside-num">5+</div>
           <div class="aside-title">Years in Bergen County real estate</div>
-          <div class="aside-text">Licensed since 2019. Solo since 2021. RE/MAX since the move made sense — for the technology and for the clients.</div>
+          <div class="aside-text">Licensed since 2019. Solo since 2021. RE/MAX since the move made sense &mdash; for the technology and for the clients.</div>
         </div>
         <div class="aside-block">
-          <div class="aside-num">10+</div>
+          <div class="aside-num">10</div>
           <div class="aside-title">Years inside Bergen County&rsquo;s best homes</div>
-          <div class="aside-text">Working alongside my father since age 10 — hanging wallpaper in Alpine, Tenafly, Saddle River. I know quality construction when I see it.</div>
+          <div class="aside-text">Working alongside my father since age 10 &mdash; hanging wallpaper in Alpine, Tenafly, Saddle River. I know quality construction when I see it.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TIMELINE -->
   <section class="section">
     <div class="section-label">The path here</div>
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:72px;">
       <div>
         <h2 class="section-title">An unconventional route<br>to the right place.</h2>
-        <p style="font-size:15px; line-height:1.75; color:var(--gray-mid); margin-top:16px;">
-          Most agents grew up here, stayed here, and built their book of business through relationships
-          they&rsquo;ve had their whole lives. I took a different road.
-          Every stop along the way gave me something that makes me better at this job.
-        </p>
+        <p style="font-size:15px; line-height:1.75; color:var(--gray-mid); margin-top:16px;">Most agents grew up here, stayed here, and built their book of business through relationships they&rsquo;ve had their whole lives. I took a different road. Every stop along the way gave me something that makes me better at this job.</p>
       </div>
       <div class="timeline">
         <div class="timeline-item">
@@ -352,58 +272,34 @@
     </div>
   </section>
 
-  <!-- REVIEWS -->
   <section class="section">
     <div class="section-label">What clients say</div>
     <div class="reviews-grid">
       <div class="review-card">
         <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">
-          Tyler is the BEST realtor around. He goes above and beyond and really takes care of his clients.
-          Within a week of listing, he had professional photos, the listing live, and
-          <em>&ldquo;we had several competing offers above asking by the end of the first weekend.&rdquo;</em>
-          He even helped me move furniture into my new home &mdash; and came back to help paint.
-          <em>&ldquo;What realtor does that?!&rdquo;</em>
-        </p>
+        <p class="review-text">Tyler is the BEST realtor around. He goes above and beyond and really takes care of his clients. Within a week of listing, he had professional photos, the listing live, and <em>&ldquo;we had several competing offers above asking by the end of the first weekend.&rdquo;</em> He even helped me move furniture into my new home &mdash; and came back to help paint. <em>&ldquo;What realtor does that?!&rdquo;</em></p>
         <div class="review-name">Townhouse sale &amp; purchase</div>
         <div class="review-context">Bergen County &middot; 2021 &amp; 2023</div>
       </div>
       <div class="review-card">
         <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">
-          Tyler is fantastic &mdash; he goes above and beyond for his clients.
-          <em>&ldquo;He was always available if I needed to ask anything, even when he was on vacation.&rdquo;</em>
-          Very professional and always willing to help. If you&rsquo;re selling or buying,
-          he&rsquo;s the one to call. <em>&ldquo;Besides being my realtor, I feel I made a friend.&rdquo;</em>
-        </p>
+        <p class="review-text">Tyler is fantastic &mdash; he goes above and beyond for his clients. <em>&ldquo;He was always available if I needed to ask anything, even when he was on vacation.&rdquo;</em> Very professional and always willing to help. If you&rsquo;re selling or buying, he&rsquo;s the one to call. <em>&ldquo;Besides being my realtor, I feel I made a friend.&rdquo;</em></p>
         <div class="review-name">Buyer &amp; seller client</div>
         <div class="review-context">Bergen County</div>
       </div>
       <div class="review-card">
         <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">
-          After our contract fell through, Tyler put in a new offer <em>minutes later</em>.
-          He then negotiated <em>$15,000 under asking</em> &mdash;
-          <em>&ldquo;unheard of in the 2024&ndash;2025 NJ market.&rdquo;</em>
-          His negotiating, fast action, and quick thinking got us our forever home.
-          My sister is already using him to find her new home.
-        </p>
+        <p class="review-text">After our contract fell through, Tyler put in a new offer <em>minutes later</em>. He then negotiated <em>$15,000 under asking</em> &mdash; <em>&ldquo;unheard of in the 2024&ndash;2025 NJ market.&rdquo;</em> His negotiating, fast action, and quick thinking got us our forever home. My sister is already using him to find her new home.</p>
         <div class="review-name">First home buyers</div>
         <div class="review-context">Bergen County &middot; 2024&ndash;2025</div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
   <div class="cta-section">
     <div class="cta-left">
       <h2 class="cta-title">Ready to buy or sell<br>in <em>Bergen County?</em></h2>
-      <p class="cta-text">
-        You&rsquo;ve read the story. You know who I am and how I work.
-        If that sounds like the kind of agent you want in your corner,
-        let&rsquo;s talk. No commitment, no pressure &mdash; just an honest conversation
-        about what you&rsquo;re trying to accomplish.
-      </p>
+      <p class="cta-text">You&rsquo;ve read the story. You know who I am and how I work. If that sounds like the kind of agent you want in your corner, let&rsquo;s talk. No commitment, no pressure &mdash; just an honest conversation about what you&rsquo;re trying to accomplish.</p>
       <div class="cta-stats">
         <div class="cta-stat">
           <div class="cta-stat-num">70</div>
@@ -450,7 +346,6 @@
     </div>
   </div>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-logo">Mr. Sellers Homes</div>
     <div><span class="footer-red">tyler@mrsellers.homes</span> &middot; Bergen County, NJ &middot; RE/MAX Licensed Agent</div>
