@@ -70,7 +70,7 @@
     /* ── HERO ── */
     .hero {
       display: grid; grid-template-columns: 1fr 1fr;
-      min-height: 88vh; border-bottom: 1px solid var(--gray-light);
+      min-height: auto; border-bottom: 1px solid var(--gray-light);
     }
     .hero-left {
       padding: 60px 48px 60px 40px;
@@ -121,7 +121,7 @@
     }
     .stat-label { font-size: 11px; color: var(--gray-mid); letter-spacing: 0.05em; margin-top: 2px; }
 
-    .hero-right { position: relative; overflow: hidden; background: var(--gray-bg); }
+    .hero-right { position: relative; overflow: hidden; background: var(--gray-bg); max-height: 600px; }
     .hero-img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
     .hero-badge {
       position: absolute; bottom: 28px; left: 24px;
