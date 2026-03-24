@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mr. Sellers Homes | Bergen County NJ Real Estate | Tyler Sellers</title>
+  <meta name="description" content="Bergen County's most transparent real estate agent. Tyler Sellers specializes in all 70 Bergen County municipalities — school districts, home values, and honest market guidance." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red: #E2001A;
+      --red-dark: #b50015;
+      --black: #111111;
+      --gray-dark: #2e2e2e;
+      --gray-mid: #6b6b6b;
+      --gray-light: #e0e0e0;
+      --gray-bg: #f5f5f5;
+      --white: #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--black);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 40px; border-bottom: 1px solid var(--gray-light);
+      background: var(--white); position: sticky; top: 0; z-index: 100;
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px; font-weight: 600; color: var(--black);
+      text-decoration: none;
+    }
+    .nav-logo span {
+      font-weight: 400; opacity: 0.5; font-size: 11px;
+      display: block; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 1px;
+    }
+    .nav-links { display: flex; gap: 28px; font-size: 13px; color: var(--gray-mid); }
+    .nav-links a { color: inherit; text-decoration: none; cursor: pointer; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--red); }
+    .nav-cta {
+      background: var(--red); color: var(--white); border: none;
+      padding: 10px 22px; font-family: 'DM Sans', sans-serif;
+      font-size: 13px; font-weight: 500; cursor: pointer;
+      border-radius: 2px; letter-spacing: 0.04em; transition: background 0.2s;
+      text-decoration: none;
+    }
+    .nav-cta:hover { background: var(--red-dark); }
+
+    /* ── RED BAR ── */
+    .red-bar {
+      background: var(--red); color: var(--white);
+      padding: 9px 40px; display: flex; align-items: center;
+      justify-content: space-between; font-size: 12px; letter-spacing: 0.05em;
+    }
+    .red-bar-item { display: flex; align-items: center; gap: 8px; opacity: 0.92; }
+    .red-bar-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.5); }
+
+    /* ── HERO ── */
+    .hero {
+      display: grid; grid-template-columns: 1fr 1fr;
+      min-height: 88vh; border-bottom: 1px solid var(--gray-light);
+    }
+    .hero-left {
+      padding: 60px 48px 60px 40px;
+      display: flex; flex-direction: column; justify-content: center;
+      border-right: 1px solid var(--gray-light);
+    }
+    .hero-eyebrow {
+      font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--red); margin-bottom: 20px;
+      display: flex; align-items: center; gap: 10px; font-weight: 500;
+    }
+    .hero-eyebrow::before { content: ''; display: block; width: 28px; height: 2px; background: var(--red); }
+    .hero-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 52px; line-height: 1.08; font-weight: 500;
+      margin-bottom: 24px; color: var(--black);
+    }
+    .hero-headline em { font-style: italic; color: var(--red); }
+    .hero-sub {
+      font-size: 15px; line-height: 1.75; color: var(--gray-mid);
+      max-width: 420px; margin-bottom: 36px;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-red {
+      background: var(--red); color: var(--white); border: none;
+      padding: 14px 28px; font-family: 'DM Sans', sans-serif;
+      font-size: 13px; font-weight: 500; cursor: pointer;
+      border-radius: 2px; letter-spacing: 0.04em;
+      transition: background 0.2s; text-decoration: none; display: inline-block;
+    }
+    .btn-red:hover { background: var(--red-dark); }
+    .btn-outline {
+      background: transparent; color: var(--black);
+      border: 1px solid var(--gray-light); padding: 14px 28px;
+      font-family: 'DM Sans', sans-serif; font-size: 13px;
+      cursor: pointer; border-radius: 2px; transition: border-color 0.2s;
+      text-decoration: none; display: inline-block;
+    }
+    .btn-outline:hover { border-color: var(--black); }
+    .hero-stats {
+      margin-top: 44px; padding-top: 28px;
+      border-top: 1px solid var(--gray-light);
+      display: flex; gap: 36px;
+    }
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px; font-weight: 500; color: var(--red);
+    }
+    .stat-label { font-size: 11px; color: var(--gray-mid); letter-spacing: 0.05em; margin-top: 2px; }
+
+    .hero-right { position: relative; overflow: hidden; background: var(--gray-bg); }
+    .hero-img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+    .hero-badge {
+      position: absolute; bottom: 28px; left: 24px;
+      background: var(--white); border-left: 3px solid var(--red);
+      padding: 14px 18px; font-size: 12px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+    }
+    .hero-badge strong { display: block; font-size: 13px; font-weight: 500; margin-bottom: 2px; }
+    .hero-badge span { color: var(--gray-mid); font-size: 11px; }
+
+    /* ── SECTIONS ── */
+    .section { padding: 72px 40px; border-bottom: 1px solid var(--gray-light); }
+    .section-label {
+      font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--red); margin-bottom: 36px;
+      display: flex; align-items: center; gap: 10px; font-weight: 500;
+    }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--gray-light); }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px; font-weight: 500; line-height: 1.15; color: var(--black);
+    }
+
+    /* ── WHY TYLER ── */
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+    .promise-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+    .promise-item {
+      padding: 28px 24px; border: 1px solid var(--gray-light);
+      margin: -1px 0 0 -1px;
+    }
+    .promise-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px; color: var(--red); opacity: 0.25; margin-bottom: 10px;
+    }
+    .promise-title { font-size: 14px; font-weight: 500; margin-bottom: 6px; color: var(--black); }
+    .promise-text { font-size: 13px; color: var(--gray-mid); line-height: 1.7; }
+
+    /* ── REVIEWS ── */
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+    .review-card {
+      padding: 32px 28px; border: 1px solid var(--gray-light);
+      margin: -1px 0 0 -1px;
+    }
+    .review-stars { color: var(--red); font-size: 13px; margin-bottom: 16px; letter-spacing: 2px; }
+    .review-text { font-size: 13px; line-height: 1.8; color: var(--gray-mid); margin-bottom: 20px; }
+    .review-text em { font-style: italic; color: var(--black); font-weight: 500; }
+    .review-name { font-size: 12px; font-weight: 500; color: var(--black); }
+    .review-context { font-size: 11px; color: var(--gray-mid); margin-top: 2px; }
+
+    /* ── TOWN DIRECTORY ── */
+    .town-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-bottom: 36px; align-items: end; }
+    .town-search { position: relative; margin-bottom: 16px; }
+    .town-search input {
+      width: 100%; padding: 13px 16px 13px 42px;
+      border: 1px solid var(--gray-light);
+      font-family: 'DM Sans', sans-serif; font-size: 14px;
+      background: var(--gray-bg); border-radius: 2px; color: var(--black);
+      transition: border-color 0.2s;
+    }
+    .town-search input:focus { outline: none; border-color: var(--red); }
+    .town-search-icon {
+      position: absolute; left: 14px; top: 50%;
+      transform: translateY(-50%); color: var(--gray-mid); font-size: 16px;
+      pointer-events: none;
+    }
+    .legend { display: flex; gap: 16px; font-size: 12px; color: var(--gray-mid); flex-wrap: wrap; }
+    .legend-item { display: flex; align-items: center; gap: 5px; }
+    .towns-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; }
+    .town-item {
+      padding: 12px 14px; border: 1px solid var(--gray-light);
+      margin: -1px 0 0 -1px; cursor: pointer; transition: background 0.15s;
+    }
+    .town-item:hover { background: var(--gray-bg); }
+    .town-item:hover .town-name { color: var(--red); }
+    .town-name { font-size: 13px; font-weight: 500; color: var(--black); transition: color 0.15s; }
+    .town-badges { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 5px; }
+    .town-badge {
+      display: inline-block; font-size: 9px; padding: 2px 6px;
+      border-radius: 2px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .badge-guide { background: #fdecea; color: var(--red); }
+    .badge-north { background: var(--black); color: var(--white); }
+    .badge-south { background: var(--gray-light); color: var(--gray-mid); }
+    .no-results { grid-column: 1/-1; padding: 32px; text-align: center; color: var(--gray-mid); font-size: 14px; }
+
+    /* ── CONTENT ── */
+    .content-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; }
+    .content-card {
+      padding: 32px 28px; border: 1px solid var(--gray-light);
+      margin: -1px 0 0 -1px; cursor: pointer; transition: background 0.15s;
+    }
+    .content-card:hover { background: var(--gray-bg); }
+    .content-type {
+      font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--red); margin-bottom: 12px; font-weight: 500;
+    }
+    .content-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px; font-weight: 500; margin-bottom: 8px; line-height: 1.3;
+    }
+    .content-desc { font-size: 13px; color: var(--gray-mid); line-height: 1.65; }
+    .content-arrow { margin-top: 18px; font-size: 18px; color: var(--red); }
+
+    /* ── SELLER SECTION ── */
+    .seller-section {
+      display: grid; grid-template-columns: 1fr 1fr;
+      border-bottom: 1px solid var(--gray-light);
+    }
+    .seller-left {
+      padding: 64px 48px 64px 40px;
+      border-right: 1px solid var(--gray-light);
+      background: var(--black); color: var(--white);
+    }
+    .seller-left .section-label { color: var(--red); }
+    .seller-left .section-label::after { background: rgba(255,255,255,0.12); }
+    .seller-left .section-title { color: var(--white); }
+    .process-steps { margin-top: 32px; }
+    .step { display: flex; gap: 20px; margin-bottom: 28px; }
+    .step-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px; color: var(--red); min-width: 24px; padding-top: 1px;
+    }
+    .step-title { font-size: 14px; font-weight: 500; margin-bottom: 5px; color: var(--white); }
+    .step-text { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.65; }
+
+    .seller-right { padding: 64px 40px 64px 48px; }
+    .form-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30px; font-weight: 500; margin-bottom: 8px;
+    }
+    .form-sub { font-size: 13px; color: var(--gray-mid); margin-bottom: 28px; line-height: 1.65; }
+    .form-row { margin-bottom: 16px; }
+    .form-row label {
+      display: block; font-size: 10px; letter-spacing: 0.1em;
+      color: var(--gray-mid); margin-bottom: 6px; text-transform: uppercase;
+    }
+    .form-row input,
+    .form-row select,
+    .form-row textarea {
+      width: 100%; padding: 12px 14px;
+      background: var(--gray-bg); border: 1px solid var(--gray-light);
+      border-radius: 2px; font-family: 'DM Sans', sans-serif;
+      font-size: 14px; color: var(--black); transition: border-color 0.2s;
+    }
+    .form-row input:focus,
+    .form-row textarea:focus { outline: none; border-color: var(--red); }
+    .form-row textarea { height: 90px; resize: none; }
+    .form-submit {
+      width: 100%; background: var(--red); color: var(--white);
+      border: none; padding: 14px; font-family: 'DM Sans', sans-serif;
+      font-size: 13px; font-weight: 500; cursor: pointer; margin-top: 8px;
+      border-radius: 2px; letter-spacing: 0.06em; transition: background 0.2s;
+    }
+    .form-submit:hover { background: var(--red-dark); }
+    .form-success {
+      display: none; background: #f0faf4; border: 1px solid #b7dfca;
+      border-radius: 2px; padding: 16px; font-size: 14px; color: #2d6a4f;
+      margin-top: 8px; text-align: center;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: var(--black); color: rgba(255,255,255,0.45);
+      padding: 32px 40px; display: flex;
+      justify-content: space-between; align-items: center; font-size: 12px;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px; font-weight: 500; color: var(--white);
+    }
+    .footer-red { color: var(--red); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav { padding: 16px 20px; }
+      .red-bar { padding: 9px 20px; font-size: 11px; gap: 12px; flex-wrap: wrap; justify-content: center; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 40px 20px; border-right: none; border-bottom: 1px solid var(--gray-light); }
+      .hero-right { height: 420px; }
+      .hero-headline { font-size: 38px; }
+      .section { padding: 48px 20px; }
+      .why-grid { grid-template-columns: 1fr; gap: 32px; }
+      .promise-grid { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .town-intro { grid-template-columns: 1fr; gap: 24px; }
+      .towns-grid { grid-template-columns: repeat(2, 1fr); }
+      .content-grid { grid-template-columns: 1fr; }
+      .seller-section { grid-template-columns: 1fr; }
+      .seller-left { padding: 48px 20px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+      .seller-right { padding: 48px 20px; }
+      .footer { flex-direction: column; gap: 12px; text-align: center; padding: 28px 20px; }
+      .hero-stats { gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#" class="nav-logo">
+      Mr. Sellers Homes
+      <span>Bergen County, NJ &middot; RE/MAX</span>
+    </a>
+    <div class="nav-links">
+      <a href="#sell">Sell your home</a>
+      <a href="#towns">Town directory</a>
+      <a href="#content">Guides &amp; walkthroughs</a>
+      <a href="#sell">About Tyler</a>
+    </div>
+    <a href="#sell" class="nav-cta">Get your home&rsquo;s value</a>
+  </nav>
+
+  <!-- RED BAR -->
+  <div class="red-bar">
+    <div class="red-bar-item"><span class="red-bar-dot"></span>Bergen County specialist &middot; all 70 municipalities</div>
+    <div class="red-bar-item"><span class="red-bar-dot"></span>20&ndash;25 min to NYC</div>
+    <div class="red-bar-item"><span class="red-bar-dot"></span>School district expertise</div>
+    <div class="red-bar-item"><span class="red-bar-dot"></span>RE/MAX licensed agent</div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Bergen County Real Estate</div>
+      <h1 class="hero-headline">
+        Bergen County&rsquo;s<br>
+        most <em>transparent</em><br>
+        real estate agent.
+      </h1>
+      <p class="hero-sub">
+        I don&rsquo;t just sell homes here &mdash; I know every town, every school district,
+        and every street. Before you make the biggest financial decision of your life,
+        you deserve an agent who will show you everything.
+      </p>
+      <div class="hero-actions">
+        <a href="#sell" class="btn-red">What&rsquo;s my home worth?</a>
+        <a href="#content" class="btn-outline">Watch town guides</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">70</div>
+          <div class="stat-label">Municipalities covered</div>
+        </div>
+        <div>
+          <div class="stat-num">4+</div>
+          <div class="stat-label">Years in Bergen County</div>
+        </div>
+        <div>
+          <div class="stat-num">15K+</div>
+          <div class="stat-label">Followers learning with me</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <!-- REPLACE THE src BELOW WITH YOUR ACTUAL PHOTO URL AFTER UPLOADING -->
+      <img class="hero-img" src="tyler-sellers.jpg" alt="Tyler Sellers, Bergen County NJ Real Estate Agent" />
+      <div class="hero-badge">
+        <strong>Tyler Sellers</strong>
+        RE/MAX Licensed Agent<br>
+        <span>Bergen County specialist &middot; NJ</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY TYLER -->
+  <section class="section" id="about">
+    <div class="section-label">Why Tyler</div>
+    <div class="why-grid">
+      <div>
+        <h2 class="section-title">The storefront is gone.<br>I rebuilt it online.</h2>
+        <p style="font-size:15px; line-height:1.75; color:var(--gray-mid); margin-top:18px;">
+          There was a time when you&rsquo;d walk into a real estate office, meet your agent,
+          and build trust before signing anything. That world is gone &mdash; today most people
+          hire whoever their friend recommended, without ever researching who will represent them.
+        </p>
+        <p style="font-size:15px; line-height:1.75; color:var(--gray-mid); margin-top:14px;">
+          I make content so you can know exactly who I am, how I work, and what I know &mdash;
+          before we ever speak. If you reach out, you&rsquo;re not taking a chance. You already know me.
+        </p>
+      </div>
+      <div class="promise-grid">
+        <div class="promise-item">
+          <div class="promise-num">01</div>
+          <div class="promise-title">Local depth</div>
+          <div class="promise-text">All 70 Bergen County municipalities &mdash; what each one looks like, feels like, and costs.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-num">02</div>
+          <div class="promise-title">School clarity</div>
+          <div class="promise-text">The honest truth about ratings &mdash; and why &ldquo;decent&rdquo; in Bergen County is often much better than it sounds.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-num">03</div>
+          <div class="promise-title">Full transparency</div>
+          <div class="promise-text">I narrate the walkthrough. I show you the issues. I tell you what the listing won&rsquo;t.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-num">04</div>
+          <div class="promise-title">You matter</div>
+          <div class="promise-text">I&rsquo;ve helped move furniture and paint walls. Every client gets the same attention regardless of price point.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section" id="reviews">
+    <div class="section-label">What clients say</div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">
+          Tyler is the BEST realtor around. He goes above and beyond and really takes care of his clients.
+          Within a week of listing, he had professional photos, the listing live, and
+          <em>&ldquo;we had several competing offers above asking by the end of the first weekend.&rdquo;</em>
+          He even helped me move furniture into my new home &mdash; and came back to help paint.
+          <em>&ldquo;What realtor does that?!&rdquo;</em>
+        </p>
+        <div class="review-name">Townhouse sale &amp; purchase</div>
+        <div class="review-context">Bergen County &middot; 2021 &amp; 2023</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">
+          Tyler is fantastic &mdash; he goes above and beyond for his clients.
+          <em>&ldquo;He was always available if I needed to ask anything, even when he was on vacation.&rdquo;</em>
+          Very professional and always willing to help. If you&rsquo;re selling or buying,
+          he&rsquo;s the one to call. <em>&ldquo;Besides being my realtor, I feel I made a friend.&rdquo;</em>
+        </p>
+        <div class="review-name">Buyer &amp; seller client</div>
+        <div class="review-context">Bergen County</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">
+          After our contract fell through, Tyler put in a new offer <em>minutes later</em>.
+          He then negotiated <em>$15,000 under asking</em> &mdash;
+          <em>&ldquo;unheard of in the 2024&ndash;2025 NJ market.&rdquo;</em>
+          His negotiating, fast action, and quick thinking got us our forever home.
+          My sister is already using him to find her new home.
+        </p>
+        <div class="review-name">First home buyers</div>
+        <div class="review-context">Bergen County &middot; 2024&ndash;2025</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOWN DIRECTORY -->
+  <section class="section" id="towns">
+    <div class="section-label">Bergen County town directory</div>
+    <div class="town-intro">
+      <div>
+        <h2 class="section-title">Every town in Bergen County &mdash; explored.</h2>
+        <p style="font-size:15px; color:var(--gray-mid); line-height:1.75; margin-top:14px;">
+          Commute times, school ratings, housing stock, food, parks, and my honest take
+          on what living there actually feels like. Towns marked with a Guide badge have a full video tour.
+        </p>
+      </div>
+      <div>
+        <div class="town-search">
+          <span class="town-search-icon">&#9906;</span>
+          <input type="text" id="townSearch" placeholder="Search a Bergen County town..." oninput="filterTowns(this.value)" />
+        </div>
+        <div class="legend">
+          <div class="legend-item"><span class="town-badge badge-north">N</span> North of Rt. 4</div>
+          <div class="legend-item"><span class="town-badge badge-south">S</span> South of Rt. 4</div>
+          <div class="legend-item"><span class="town-badge badge-guide">Guide</span> Video guide available</div>
+        </div>
+      </div>
+    </div>
+    <div class="towns-grid" id="townsGrid"></div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="section" id="content">
+    <div class="section-label">Bergen County knowledge</div>
+    <div style="margin-bottom:32px;">
+      <h2 class="section-title">Every town. Every school. Every street.</h2>
+      <p style="font-size:15px; color:var(--gray-mid); line-height:1.75; max-width:560px; margin-top:14px;">
+        Walkthroughs, town guides, and honest market breakdowns &mdash;
+        so you understand Bergen County before you make a move.
+      </p>
+    </div>
+    <div class="content-grid">
+      <div class="content-card">
+        <div class="content-type">Town guide &middot; YouTube</div>
+        <div class="content-title">Living in Ridgewood, NJ &mdash; schools, commute &amp; what homes actually cost</div>
+        <div class="content-desc">A ground-level look at one of Bergen County&rsquo;s most sought-after towns &mdash; the school system, the train to NYC, and where the price tags really sit.</div>
+        <div class="content-arrow">&#8594;</div>
+      </div>
+      <div class="content-card">
+        <div class="content-type">Home walkthrough &middot; TikTok</div>
+        <div class="content-title">Full walkthrough: $649,000 colonial in Fair Lawn &mdash; what the listing doesn&rsquo;t show you</div>
+        <div class="content-desc">A narrated room-by-room tour with no filter and no spin &mdash; just what you&rsquo;d want to know before scheduling a showing.</div>
+        <div class="content-arrow">&#8594;</div>
+      </div>
+      <div class="content-card">
+        <div class="content-type">Buyer education</div>
+        <div class="content-title">North of Route 4 vs. south &mdash; what the divide actually means for your search</div>
+        <div class="content-desc">Bergen County&rsquo;s informal dividing line explained honestly &mdash; what it means for school ratings, home prices, and daily life.</div>
+        <div class="content-arrow">&#8594;</div>
+      </div>
+      <div class="content-card">
+        <div class="content-type">Seller strategy</div>
+        <div class="content-title">How I got multiple offers above asking in the first weekend</div>
+        <div class="content-desc">Photography, narrated video, listing timing, and how to generate competition before the first open house.</div>
+        <div class="content-arrow">&#8594;</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELL WITH TYLER -->
+  <div class="seller-section" id="sell">
+    <div class="seller-left">
+      <div class="section-label">Sell with Tyler</div>
+      <h2 class="section-title">What selling your Bergen County home actually looks like</h2>
+      <p style="font-size:14px; line-height:1.75; color:rgba(255,255,255,0.6); margin-top:14px; margin-bottom:36px;">
+        No vague promises. Here&rsquo;s the real process, from first conversation to closed deal.
+      </p>
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div>
+            <div class="step-title">Free home valuation conversation</div>
+            <div class="step-text">Tell me about your home. I&rsquo;ll give you an honest market analysis &mdash; not a padded number to win your listing.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div>
+            <div class="step-title">Professional photography &amp; narrated video</div>
+            <div class="step-text">Every listing gets a walkthrough video built for social sharing &mdash; the same format generating thousands of views on TikTok.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div>
+            <div class="step-title">Strategic launch &amp; open house</div>
+            <div class="step-text">Timing matters. I schedule to maximize buyer traffic and create competition &mdash; not just get a number on Zillow.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div>
+            <div class="step-title">Offers reviewed, negotiation handled</div>
+            <div class="step-text">I&rsquo;ll explain every offer at a level you can act on. Clear guidance, no pressure, your best interest always first.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="seller-right">
+      <div class="form-title">Tell me about your home</div>
+      <p class="form-sub">
+        No commitment, no pressure. I&rsquo;ll review your details and reach out with
+        honest thoughts on what your home is worth in today&rsquo;s Bergen County market.
+      </p>
+      <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-row">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" placeholder="First and last name" required />
+        </div>
+        <div class="form-row">
+          <label for="contact">Phone or email</label>
+          <input type="text" id="contact" name="contact" placeholder="How should I reach you?" required />
+        </div>
+        <div class="form-row">
+          <label for="address">Property address or town</label>
+          <input type="text" id="address" name="address" placeholder="e.g. 123 Maple St, Ridgewood NJ" />
+        </div>
+        <div class="form-row">
+          <label for="message">Anything else I should know</label>
+          <textarea id="message" name="message" placeholder="Timeline, situation, questions &mdash; anything helps..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send me your home details &rarr;</button>
+      </form>
+      <div class="form-success" id="formSuccess">
+        &#10003;&nbsp; Got it! Tyler will be in touch within 24 hours.
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">Mr. Sellers Homes</div>
+    <div><span class="footer-red">tyler@mrsellers.homes</span> &middot; Bergen County, NJ &middot; RE/MAX Licensed Agent</div>
+    <div>&copy; 2025 Tyler Sellers</div>
+  </footer>
+
+  <script>
+    // Town directory data
+    const towns = [
+      {name:"Allendale",zone:"N",guide:false},{name:"Alpine",zone:"N",guide:false},
+      {name:"Bergenfield",zone:"S",guide:false},{name:"Bogota",zone:"S",guide:false},
+      {name:"Carlstadt",zone:"S",guide:false},{name:"Cliffside Park",zone:"S",guide:false},
+      {name:"Closter",zone:"N",guide:false},{name:"Cresskill",zone:"N",guide:false},
+      {name:"Demarest",zone:"N",guide:false},{name:"Dumont",zone:"S",guide:false},
+      {name:"East Rutherford",zone:"S",guide:false},{name:"Edgewater",zone:"S",guide:false},
+      {name:"Elmwood Park",zone:"S",guide:false},{name:"Emerson",zone:"N",guide:false},
+      {name:"Englewood",zone:"S",guide:false},{name:"Englewood Cliffs",zone:"N",guide:false},
+      {name:"Fair Lawn",zone:"S",guide:false},{name:"Fairview",zone:"S",guide:false},
+      {name:"Fort Lee",zone:"S",guide:false},{name:"Franklin Lakes",zone:"N",guide:false},
+      {name:"Garfield",zone:"S",guide:false},{name:"Glen Rock",zone:"N",guide:false},
+      {name:"Hackensack",zone:"S",guide:false},{name:"Harrington Park",zone:"N",guide:false},
+      {name:"Hasbrouck Heights",zone:"S",guide:false},{name:"Haworth",zone:"N",guide:false},
+      {name:"Hillsdale",zone:"N",guide:false},{name:"Ho-Ho-Kus",zone:"N",guide:false},
+      {name:"Leonia",zone:"S",guide:false},{name:"Little Ferry",zone:"S",guide:false},
+      {name:"Lodi",zone:"S",guide:false},{name:"Lyndhurst",zone:"S",guide:false},
+      {name:"Mahwah",zone:"N",guide:false},{name:"Maywood",zone:"S",guide:false},
+      {name:"Midland Park",zone:"N",guide:false},{name:"Montvale",zone:"N",guide:false},
+      {name:"Moonachie",zone:"S",guide:false},{name:"New Milford",zone:"N",guide:false},
+      {name:"North Arlington",zone:"S",guide:false},{name:"Northvale",zone:"N",guide:false},
+      {name:"Norwood",zone:"N",guide:false},{name:"Oakland",zone:"N",guide:false},
+      {name:"Old Tappan",zone:"N",guide:false},{name:"Oradell",zone:"N",guide:false},
+      {name:"Palisades Park",zone:"S",guide:false},{name:"Paramus",zone:"N",guide:false},
+      {name:"Park Ridge",zone:"N",guide:false},{name:"Ramsey",zone:"N",guide:false},
+      {name:"Ridgefield",zone:"S",guide:false},{name:"Ridgefield Park",zone:"S",guide:false},
+      {name:"Ridgewood",zone:"N",guide:false},{name:"River Edge",zone:"N",guide:false},
+      {name:"River Vale",zone:"N",guide:false},{name:"Rochelle Park",zone:"S",guide:false},
+      {name:"Rockleigh",zone:"N",guide:false},{name:"Rutherford",zone:"S",guide:false},
+      {name:"Saddle Brook",zone:"S",guide:false},{name:"Saddle River",zone:"N",guide:false},
+      {name:"South Hackensack",zone:"S",guide:false},{name:"Teaneck",zone:"S",guide:false},
+      {name:"Tenafly",zone:"N",guide:false},{name:"Teterboro",zone:"S",guide:false},
+      {name:"Upper Saddle River",zone:"N",guide:false},{name:"Waldwick",zone:"N",guide:false},
+      {name:"Wallington",zone:"S",guide:false},{name:"Washington Township",zone:"N",guide:false},
+      {name:"Westwood",zone:"N",guide:false},{name:"Wood-Ridge",zone:"S",guide:false},
+      {name:"Woodcliff Lake",zone:"N",guide:false},{name:"Wyckoff",zone:"N",guide:false}
+    ];
+
+    function renderTowns(list) {
+      const grid = document.getElementById('townsGrid');
+      if (list.length === 0) {
+        grid.innerHTML = '<div class="no-results">No towns found. Try a different search.</div>';
+        return;
+      }
+      grid.innerHTML = list.map(t => `
+        <div class="town-item">
+          <div class="town-name">${t.name}</div>
+          <div class="town-badges">
+            <span class="town-badge ${t.zone === 'N' ? 'badge-north' : 'badge-south'}">${t.zone === 'N' ? 'N' : 'S'}</span>
+            ${t.guide ? '<span class="town-badge badge-guide">Guide</span>' : ''}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function filterTowns(q) {
+      const filtered = q
+        ? towns.filter(t => t.name.toLowerCase().includes(q.toLowerCase()))
+        : towns;
+      renderTowns(filtered);
+    }
+
+    // Form submission
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = form.querySelector('.form-submit');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.style.display = 'none';
+          document.getElementById('formSuccess').style.display = 'block';
+        } else {
+          btn.textContent = 'Something went wrong — please email tyler@mrsellers.homes';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = 'Something went wrong — please email tyler@mrsellers.homes';
+        btn.disabled = false;
+      }
+    });
+
+    // Initialize towns
+    renderTowns(towns);
+  </script>
+
+</body>
+</html>
