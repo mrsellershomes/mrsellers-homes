@@ -137,6 +137,14 @@
     .form-submit:hover { background: var(--red-dark); }
     .form-success { display: none; background: #f0faf4; border: 1px solid #b7dfca; border-radius: 2px; padding: 16px; font-size: 14px; color: #2d6a4f; margin-top: 8px; text-align: center; }
 
+    /* SKIP BUTTON */
+    .form-skip { display: block; width: 100%; background: none; border: none; color: var(--gray-mid); font-family: 'DM Sans', sans-serif; font-size: 13px; cursor: pointer; padding: 12px; margin-top: 6px; text-align: center; transition: color 0.2s; }
+    .form-skip:hover { color: var(--black); }
+
+    /* PROGRESSIVE DISCLOSURE */
+    .form-extra { max-height: 0; overflow: hidden; opacity: 0; transition: max-height 0.4s ease, opacity 0.3s ease; }
+    .form-extra.visible { max-height: 500px; opacity: 1; }
+
     /* BUYER SECTION */
     .buyer-section { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--gray-light); scroll-margin-top: 57px; min-height: calc(100vh - 57px); }
     .buyer-left { padding: 64px 48px 64px 40px; border-right: 1px solid var(--gray-light); background: var(--gray-bg); }
@@ -465,29 +473,46 @@
       </div>
     </div>
     <div class="seller-right">
-      <div class="form-title">Tell me about your home</div>
+      <div class="form-title">Find out what your home is worth</div>
       <p class="form-sub">
         No commitment, no pressure. I&rsquo;ll review your details and reach out with
         honest thoughts on what your home is worth in today&rsquo;s Bergen County market.
       </p>
       <form id="contactForm" action="https://formspree.io/f/xjgpbzjd" method="POST">
-        <div class="form-row">
-          <label for="name">Your name</label>
-          <input type="text" id="name" name="name" placeholder="First and last name" required />
+        <!-- Step 1: Name + Email -->
+        <div id="sellerStep1">
+          <div class="form-row">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="First and last name" required />
+          </div>
+          <div class="form-row">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-extra" id="sellerExtra">
+            <div class="form-row">
+              <label for="address">Property address or town</label>
+              <input type="text" id="address" name="address" placeholder="e.g. 123 Maple St, Ridgewood NJ" />
+            </div>
+            <div class="form-row">
+              <label for="message">Anything else I should know</label>
+              <textarea id="message" name="message" placeholder="Timeline, situation, questions &mdash; anything helps..."></textarea>
+            </div>
+          </div>
+          <button type="button" class="form-submit" id="sellerNext">Get my free home valuation &rarr;</button>
         </div>
-        <div class="form-row">
-          <label for="contact">Phone or email</label>
-          <input type="text" id="contact" name="contact" placeholder="How should I reach you?" required />
+        <!-- Step 2: Phone (optional) -->
+        <div id="sellerStep2" style="display:none;">
+          <p style="font-size:14px; color:var(--gray-mid); line-height:1.65; margin-bottom:20px;">
+            Want a faster response? Add your number and Tyler will call you directly.
+          </p>
+          <div class="form-row">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(201) 555-1234" />
+          </div>
+          <button type="submit" class="form-submit">Submit with phone &rarr;</button>
+          <button type="button" class="form-skip" id="sellerSkip">Skip &mdash; just use my email</button>
         </div>
-        <div class="form-row">
-          <label for="address">Property address or town</label>
-          <input type="text" id="address" name="address" placeholder="e.g. 123 Maple St, Ridgewood NJ" />
-        </div>
-        <div class="form-row">
-          <label for="message">Anything else I should know</label>
-          <textarea id="message" name="message" placeholder="Timeline, situation, questions &mdash; anything helps..."></textarea>
-        </div>
-        <button type="submit" class="form-submit">Send me your home details &rarr;</button>
       </form>
       <div class="form-success" id="formSuccess">
         &#10003;&nbsp; Got it! Tyler will be in touch within 24 hours.
@@ -547,48 +572,65 @@
       </div>
     </div>
     <div class="seller-right">
-      <div class="form-title">Tell me where you want to live</div>
+      <div class="form-title">Let&rsquo;s find your next home</div>
       <p class="form-sub">
         No commitment, no pressure. Tell me what you&rsquo;re looking for and I&rsquo;ll
         point you in the right direction &mdash; honestly, even if that means telling you
         something you didn&rsquo;t expect to hear.
       </p>
       <form id="buyerForm" action="https://formspree.io/f/xlgorvze" method="POST">
-        <div class="form-row">
-          <label for="buyer-name">Your name</label>
-          <input type="text" id="buyer-name" name="name" placeholder="First and last name" required />
+        <!-- Step 1: Name + Email + extras -->
+        <div id="buyerStep1">
+          <div class="form-row">
+            <label for="buyer-name">Your name</label>
+            <input type="text" id="buyer-name" name="name" placeholder="First and last name" required />
+          </div>
+          <div class="form-row">
+            <label for="buyer-email">Email address</label>
+            <input type="email" id="buyer-email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-extra" id="buyerExtra">
+            <div class="form-row">
+              <label for="buyer-towns">Towns or areas you&rsquo;re considering</label>
+              <input type="text" id="buyer-towns" name="towns" placeholder="e.g. Ridgewood, Glen Rock, or not sure yet" />
+            </div>
+            <div class="form-row">
+              <label for="buyer-budget">Budget range</label>
+              <select id="buyer-budget" name="budget">
+                <option value="">Select a range</option>
+                <option>Under $500K</option>
+                <option>$500K &ndash; $700K</option>
+                <option>$700K &ndash; $900K</option>
+                <option>$900K &ndash; $1.25M</option>
+                <option>$1.25M &ndash; $2M</option>
+                <option>$2M+</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="buyer-timeline">Your timeline</label>
+              <select id="buyer-timeline" name="timeline">
+                <option value="">Select a timeline</option>
+                <option>Ready now &mdash; actively looking</option>
+                <option>Within 3 months</option>
+                <option>Within 6 months</option>
+                <option>Just exploring for now</option>
+              </select>
+            </div>
+          </div>
+          <button type="button" class="form-submit" style="background:var(--black);" id="buyerNext">Start my Bergen County search &rarr;</button>
         </div>
-        <div class="form-row">
-          <label for="buyer-contact">Phone or email</label>
-          <input type="text" id="buyer-contact" name="contact" placeholder="How should I reach you?" required />
+        <!-- Step 2: Phone (optional) -->
+        <div id="buyerStep2" style="display:none;">
+          <p style="font-size:14px; color:var(--gray-mid); line-height:1.65; margin-bottom:20px;">
+            Want a faster response? Add your number and Tyler will call you directly.
+          </p>
+          <div class="form-row">
+            <label for="buyer-phone">Phone number</label>
+            <input type="tel" id="buyer-phone" name="phone" placeholder="(201) 555-1234" />
+          </div>
+          <button type="submit" class="form-submit" style="background:var(--black);">Submit with phone &rarr;</button>
+          <button type="button" class="form-skip" id="buyerSkip">Skip &mdash; just use my email</button>
         </div>
-        <div class="form-row">
-          <label for="buyer-towns">Towns or areas you&rsquo;re considering</label>
-          <input type="text" id="buyer-towns" name="towns" placeholder="e.g. Ridgewood, Glen Rock, or not sure yet" />
-        </div>
-        <div class="form-row">
-          <label for="buyer-budget">Budget range</label>
-          <select id="buyer-budget" name="budget">
-            <option value="">Select a range</option>
-            <option>Under $500K</option>
-            <option>$500K &ndash; $700K</option>
-            <option>$700K &ndash; $900K</option>
-            <option>$900K &ndash; $1.25M</option>
-            <option>$1.25M &ndash; $2M</option>
-            <option>$2M+</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label for="buyer-timeline">Your timeline</label>
-          <select id="buyer-timeline" name="timeline">
-            <option value="">Select a timeline</option>
-            <option>Ready now &mdash; actively looking</option>
-            <option>Within 3 months</option>
-            <option>Within 6 months</option>
-            <option>Just exploring for now</option>
-          </select>
-        </div>
-        <button type="submit" class="form-submit" style="background:var(--black);">Start my Bergen County search &rarr;</button>
       </form>
       <div class="form-success" id="buyerFormSuccess">
         &#10003;&nbsp; Got it! Tyler will be in touch within 24 hours.
@@ -611,6 +653,22 @@
     function closeMenu() {
       document.getElementById('mobileMenu').classList.remove('open');
     }
+
+    // Progressive disclosure — reveal extra fields once name + contact are filled
+    function setupProgressiveForm(nameId, contactId, extraId) {
+      const nameInput = document.getElementById(nameId);
+      const contactInput = document.getElementById(contactId);
+      const extra = document.getElementById(extraId);
+      function check() {
+        if (nameInput.value.trim() && contactInput.value.trim()) {
+          extra.classList.add('visible');
+        }
+      }
+      nameInput.addEventListener('input', check);
+      contactInput.addEventListener('input', check);
+    }
+    setupProgressiveForm('name', 'email', 'sellerExtra');
+    setupProgressiveForm('buyer-name', 'buyer-email', 'buyerExtra');
   </script>
 
   <script>
@@ -691,26 +749,60 @@
 
     function filterTowns(q) { renderDirectory(q); }
 
-    // Seller form
-    const sellerForm = document.getElementById('contactForm');
-    sellerForm.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const btn = sellerForm.querySelector('.form-submit');
-      btn.textContent = 'Sending...'; btn.disabled = true;
-      try {
-        const res = await fetch(sellerForm.action, { method:'POST', body:new FormData(sellerForm), headers:{'Accept':'application/json'} });
-        if (res.ok) { sellerForm.style.display='none'; document.getElementById('formSuccess').style.display='block'; }
-        else { btn.textContent='Something went wrong — please email tyler@mrsellers.homes'; btn.disabled=false; }
-      } catch { btn.textContent='Something went wrong — please email tyler@mrsellers.homes'; btn.disabled=false; }
+    // Two-step form logic
+    function setupTwoStepForm(config) {
+      const form = document.getElementById(config.formId);
+      const step1 = document.getElementById(config.step1Id);
+      const step2 = document.getElementById(config.step2Id);
+      const nextBtn = document.getElementById(config.nextBtnId);
+      const skipBtn = document.getElementById(config.skipBtnId);
+      const successEl = document.getElementById(config.successId);
+
+      function submitForm(btn) {
+        btn.textContent = 'Sending...'; btn.disabled = true;
+        fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+          .then(function(res) {
+            if (res.ok) { form.style.display = 'none'; successEl.style.display = 'block'; }
+            else { btn.textContent = 'Something went wrong \u2014 please email tyler@mrsellers.homes'; btn.disabled = false; }
+          })
+          .catch(function() { btn.textContent = 'Something went wrong \u2014 please email tyler@mrsellers.homes'; btn.disabled = false; });
+      }
+
+      // Step 1 -> Step 2: validate name + email, then show phone step
+      nextBtn.addEventListener('click', function() {
+        var nameInput = step1.querySelector('input[name="name"]');
+        var emailInput = step1.querySelector('input[name="email"]');
+        if (!nameInput.value.trim() || !emailInput.value.trim() || !emailInput.validity.valid) {
+          form.reportValidity();
+          return;
+        }
+        step1.style.display = 'none';
+        step2.style.display = 'block';
+      });
+
+      // Skip: submit without phone
+      skipBtn.addEventListener('click', function() {
+        submitForm(skipBtn);
+      });
+
+      // Submit with phone
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var btn = step2.querySelector('.form-submit');
+        submitForm(btn);
+      });
+    }
+
+    setupTwoStepForm({
+      formId: 'contactForm', step1Id: 'sellerStep1', step2Id: 'sellerStep2',
+      nextBtnId: 'sellerNext', skipBtnId: 'sellerSkip', successId: 'formSuccess'
+    });
+    setupTwoStepForm({
+      formId: 'buyerForm', step1Id: 'buyerStep1', step2Id: 'buyerStep2',
+      nextBtnId: 'buyerNext', skipBtnId: 'buyerSkip', successId: 'buyerFormSuccess'
     });
 
-    // Buyer form
-    const buyerForm = document.getElementById('buyerForm');
-    buyerForm.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const btn = buyerForm.querySelector('.form-submit');
-      btn.textContent = 'Sending...'; btn.disabled = true;
-      try {
-        const res = await fetch(buyerForm.action, { method:'POST', body:new FormData(buyerForm), headers:{'Accept':'application/json'} });
-        if (res.ok) { buyerForm.style.display='none'; document.getElementById('buyerFormSuccess').style.display='block'; }
-        else { btn.textContent='Something went wrong — please 
+    renderDirectory('');
+  </script>
+</body>
+</html>
