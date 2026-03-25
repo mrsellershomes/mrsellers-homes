@@ -478,7 +478,7 @@
         No commitment, no pressure. I&rsquo;ll review your details and reach out with
         honest thoughts on what your home is worth in today&rsquo;s Bergen County market.
       </p>
-      <form id="contactForm" action="https://formspree.io/f/xjgpbzjd" method="POST">
+      <form id="contactForm">
         <!-- Step 1: Name + Email -->
         <div id="sellerStep1">
           <div class="form-row">
@@ -578,7 +578,7 @@
         point you in the right direction &mdash; honestly, even if that means telling you
         something you didn&rsquo;t expect to hear.
       </p>
-      <form id="buyerForm" action="https://formspree.io/f/xlgorvze" method="POST">
+      <form id="buyerForm">
         <!-- Step 1: Name + Email + extras -->
         <div id="buyerStep1">
           <div class="form-row">
@@ -749,26 +749,94 @@
 
     function filterTowns(q) { renderDirectory(q); }
 
+    // Follow Up Boss API
+    var FUB_API_KEY = 'fka_0E2H1dG5ch1zr3VepnlIt9Oczs5uXO3Fi8';
+    var FUB_API_URL = 'https://api.followupboss.com/v1/events';
+
+    function sendToFUB(leadData, btn, form, successEl) {
+      btn.textContent = 'Sending...'; btn.disabled = true;
+      fetch(FUB_API_URL, {
+        method: 'POST',
+        headers: {
+          'Authorization': 'Basic ' + btoa(FUB_API_KEY + ':'),
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(leadData)
+      })
+      .then(function(res) {
+        if (res.ok) { form.style.display = 'none'; successEl.style.display = 'block'; }
+        else { btn.textContent = 'Something went wrong \u2014 please email tyler@mrsellers.homes'; btn.disabled = false; }
+      })
+      .catch(function() { btn.textContent = 'Something went wrong \u2014 please email tyler@mrsellers.homes'; btn.disabled = false; });
+    }
+
+    function buildSellerLead() {
+      var fullName = document.getElementById('name').value.trim();
+      var parts = fullName.split(' ');
+      var firstName = parts[0] || '';
+      var lastName = parts.slice(1).join(' ') || '';
+      var lead = {
+        source: 'MrSellers.homes',
+        system: 'Website',
+        type: 'Registration',
+        person: {
+          firstName: firstName,
+          lastName: lastName,
+          emails: [{ value: document.getElementById('email').value.trim() }]
+        },
+        description: 'Seller lead from MrSellers.homes'
+      };
+      var phone = document.getElementById('phone').value.trim();
+      if (phone) lead.person.phones = [{ value: phone }];
+      var address = document.getElementById('address').value.trim();
+      var message = document.getElementById('message').value.trim();
+      var notes = [];
+      if (address) notes.push('Property: ' + address);
+      if (message) notes.push('Message: ' + message);
+      if (notes.length) lead.description = notes.join(' | ');
+      if (address) lead.property = { street: address };
+      return lead;
+    }
+
+    function buildBuyerLead() {
+      var fullName = document.getElementById('buyer-name').value.trim();
+      var parts = fullName.split(' ');
+      var firstName = parts[0] || '';
+      var lastName = parts.slice(1).join(' ') || '';
+      var lead = {
+        source: 'MrSellers.homes',
+        system: 'Website',
+        type: 'Registration',
+        person: {
+          firstName: firstName,
+          lastName: lastName,
+          emails: [{ value: document.getElementById('buyer-email').value.trim() }]
+        },
+        description: 'Buyer lead from MrSellers.homes'
+      };
+      var phone = document.getElementById('buyer-phone').value.trim();
+      if (phone) lead.person.phones = [{ value: phone }];
+      var towns = document.getElementById('buyer-towns').value.trim();
+      var budget = document.getElementById('buyer-budget').value;
+      var timeline = document.getElementById('buyer-timeline').value;
+      var notes = [];
+      if (towns) notes.push('Towns: ' + towns);
+      if (budget) notes.push('Budget: ' + budget);
+      if (timeline) notes.push('Timeline: ' + timeline);
+      if (notes.length) lead.description = notes.join(' | ');
+      return lead;
+    }
+
     // Two-step form logic
     function setupTwoStepForm(config) {
-      const form = document.getElementById(config.formId);
-      const step1 = document.getElementById(config.step1Id);
-      const step2 = document.getElementById(config.step2Id);
-      const nextBtn = document.getElementById(config.nextBtnId);
-      const skipBtn = document.getElementById(config.skipBtnId);
-      const successEl = document.getElementById(config.successId);
+      var form = document.getElementById(config.formId);
+      var step1 = document.getElementById(config.step1Id);
+      var step2 = document.getElementById(config.step2Id);
+      var nextBtn = document.getElementById(config.nextBtnId);
+      var skipBtn = document.getElementById(config.skipBtnId);
+      var successEl = document.getElementById(config.successId);
 
-      function submitForm(btn) {
-        btn.textContent = 'Sending...'; btn.disabled = true;
-        fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
-          .then(function(res) {
-            if (res.ok) { form.style.display = 'none'; successEl.style.display = 'block'; }
-            else { btn.textContent = 'Something went wrong \u2014 please email tyler@mrsellers.homes'; btn.disabled = false; }
-          })
-          .catch(function() { btn.textContent = 'Something went wrong \u2014 please email tyler@mrsellers.homes'; btn.disabled = false; });
-      }
-
-      // Step 1 -> Step 2: validate name + email, then show phone step
+      // Step 1 -> Step 2
       nextBtn.addEventListener('click', function() {
         var nameInput = step1.querySelector('input[name="name"]');
         var emailInput = step1.querySelector('input[name="email"]');
@@ -782,24 +850,26 @@
 
       // Skip: submit without phone
       skipBtn.addEventListener('click', function() {
-        submitForm(skipBtn);
+        sendToFUB(config.buildLead(), skipBtn, form, successEl);
       });
 
       // Submit with phone
       form.addEventListener('submit', function(e) {
         e.preventDefault();
         var btn = step2.querySelector('.form-submit');
-        submitForm(btn);
+        sendToFUB(config.buildLead(), btn, form, successEl);
       });
     }
 
     setupTwoStepForm({
       formId: 'contactForm', step1Id: 'sellerStep1', step2Id: 'sellerStep2',
-      nextBtnId: 'sellerNext', skipBtnId: 'sellerSkip', successId: 'formSuccess'
+      nextBtnId: 'sellerNext', skipBtnId: 'sellerSkip', successId: 'formSuccess',
+      buildLead: buildSellerLead
     });
     setupTwoStepForm({
       formId: 'buyerForm', step1Id: 'buyerStep1', step2Id: 'buyerStep2',
-      nextBtnId: 'buyerNext', skipBtnId: 'buyerSkip', successId: 'buyerFormSuccess'
+      nextBtnId: 'buyerNext', skipBtnId: 'buyerSkip', successId: 'buyerFormSuccess',
+      buildLead: buildBuyerLead
     });
 
     renderDirectory('');
