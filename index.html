@@ -570,11 +570,12 @@
           <label for="buyer-budget">Budget range</label>
           <select id="buyer-budget" name="budget">
             <option value="">Select a range</option>
-            <option>Under $600,000</option>
-            <option>$600,000 &ndash; $750,000</option>
-            <option>$750,000 &ndash; $1,000,000</option>
-            <option>$1,000,000 &ndash; $1,500,000</option>
-            <option>Over $1,500,000</option>
+            <option>Under $500K</option>
+            <option>$500K &ndash; $700K</option>
+            <option>$700K &ndash; $900K</option>
+            <option>$900K &ndash; $1.25M</option>
+            <option>$1.25M &ndash; $2M</option>
+            <option>$2M+</option>
           </select>
         </div>
         <div class="form-row">
@@ -712,4 +713,4 @@
       try {
         const res = await fetch(buyerForm.action, { method:'POST', body:new FormData(buyerForm), headers:{'Accept':'application/json'} });
         if (res.ok) { buyerForm.style.display='none'; document.getElementById('buyerFormSuccess').style.display='block'; }
-        else { btn.textContent='Something went wrong — please
+        else { btn.textContent='Something went wrong — please 
