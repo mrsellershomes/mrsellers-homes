@@ -688,7 +688,7 @@
         {name:"Cliffside Park",guide:false},{name:"Edgewater",guide:false},
         {name:"Fairview",guide:false},{name:"Fort Lee",guide:false},
         {name:"Leonia",guide:false},{name:"Palisades Park",guide:false},
-        {name:"Ridgefield",guide:false},{name:"Ridgefield Park",guide:false}
+        {name:"Ridgefield",guide:false},{name:"Ridgefield Park",guide:true,link:"https://www.youtube.com/watch?v=s3tOAm4nyD4"}
       ]},
       { name: "Central Bergen", towns: [
         {name:"Bogota",guide:false},{name:"Elmwood Park",guide:false},
@@ -739,7 +739,7 @@
           <div class="region-title">${region.name}</div>
           <div class="towns-grid">
             ${filtered.map(t => `
-              <div class="town-item">
+              <div class="town-item${t.link ? ' town-item-linked' : ''}"${t.link ? ` onclick="window.open('${t.link}','_blank')"` : ''}>
                 <div class="town-name">${t.name}</div>
                 <div class="town-badges">${t.guide ? '<span class="town-badge badge-guide">Guide</span>' : ''}</div>
               </div>`).join('')}
