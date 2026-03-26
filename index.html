@@ -226,16 +226,16 @@
       .hero-stats { gap: 24px; }
     }
 
-    /* STICKY MOBILE CTA */
+    /* STICKY MOBILE CTA — hidden by default, shown via JS on mobile after scroll */
     .sticky-mobile-cta {
-      display: none;
       position: fixed; bottom: 0; left: 0; right: 0; z-index: 98;
       background: var(--red); padding: 12px 20px;
-      align-items: center; justify-content: space-between;
+      display: flex; align-items: center; justify-content: space-between;
       box-shadow: 0 -2px 12px rgba(0,0,0,0.15);
       transform: translateY(100%); transition: transform 0.3s ease;
+      pointer-events: none; opacity: 0;
     }
-    .sticky-mobile-cta.visible { transform: translateY(0); }
+    .sticky-mobile-cta.visible { transform: translateY(0); pointer-events: auto; opacity: 1; }
     .sticky-mobile-cta a {
       color: var(--white); text-decoration: none; font-size: 14px;
       font-weight: 500; font-family: 'DM Sans', sans-serif;
@@ -244,9 +244,6 @@
     .sticky-mobile-cta .sticky-close {
       background: none; border: none; color: rgba(255,255,255,0.7);
       font-size: 18px; cursor: pointer; padding: 0 0 0 12px;
-    }
-    @media (max-width: 900px) {
-      .sticky-mobile-cta { display: flex; }
     }
   </style>
 </head>
@@ -895,13 +892,14 @@
       document.getElementById('buyerFormSuccess').style.display = 'block';
     }
 
-    // Sticky mobile CTA — show after scrolling past hero
+    // Sticky mobile CTA — show on mobile after scrolling past hero
     (function() {
       const stickyCta = document.getElementById('stickyCta');
       const hero = document.querySelector('.hero');
       if (!stickyCta || !hero) return;
       window.addEventListener('scroll', function() {
         if (stickyCta.dataset.dismissed === 'true') return;
+        if (window.innerWidth > 900) { stickyCta.classList.remove('visible'); return; }
         const heroBottom = hero.offsetTop + hero.offsetHeight;
         if (window.scrollY > heroBottom) {
           stickyCta.classList.add('visible');
