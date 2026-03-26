@@ -71,12 +71,17 @@
 
     /* HERO */
     .lp-hero {
-      margin-top: 57px; display: grid; grid-template-columns: 1fr 1fr;
-      min-height: calc(100vh - 57px); border-bottom: 1px solid var(--gray-light);
+      margin-top: 57px; position: relative; min-height: calc(100vh - 57px);
+      background: url('tyler-hero-bg.png') center center / cover no-repeat;
+      display: flex; align-items: center; border-bottom: 1px solid var(--gray-light);
     }
-    .lp-hero-left {
-      padding: 72px 48px 72px 40px; display: flex; flex-direction: column;
-      justify-content: center; border-right: 1px solid var(--gray-light);
+    .lp-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to right, rgba(17,17,17,0.92) 0%, rgba(17,17,17,0.75) 45%, rgba(17,17,17,0.15) 100%);
+    }
+    .lp-hero-content {
+      position: relative; z-index: 1; padding: 72px 48px 72px 40px;
+      max-width: 580px; display: flex; flex-direction: column; justify-content: center;
     }
     .lp-hero-eyebrow {
       font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
@@ -85,26 +90,21 @@
     }
     .lp-hero-eyebrow::before { content: ''; display: block; width: 28px; height: 2px; background: var(--red); }
     .lp-hero-headline {
-      font-family: 'Cormorant Garamond', serif; font-size: 48px; line-height: 1.1;
-      font-weight: 500; margin-bottom: 24px;
+      font-family: 'Cormorant Garamond', serif; font-size: 52px; line-height: 1.1;
+      font-weight: 500; margin-bottom: 24px; color: var(--white);
     }
     .lp-hero-headline em { font-style: italic; color: var(--red); }
-    .lp-hero-sub { font-size: 15px; line-height: 1.75; color: var(--gray-mid); max-width: 440px; margin-bottom: 32px; }
+    .lp-hero-sub { font-size: 15px; line-height: 1.75; color: rgba(255,255,255,0.75); max-width: 440px; margin-bottom: 32px; }
     .lp-hero-cta {
       display: inline-block; background: var(--red); color: var(--white);
       padding: 16px 32px; font-family: 'DM Sans', sans-serif; font-size: 14px;
       font-weight: 500; text-decoration: none; border-radius: 2px;
-      letter-spacing: 0.04em; transition: background 0.2s;
+      letter-spacing: 0.04em; transition: background 0.2s; align-self: flex-start;
     }
     .lp-hero-cta:hover { background: var(--red-dark); }
-    .lp-hero-stats { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--gray-light); display: flex; gap: 36px; }
+    .lp-hero-stats { margin-top: 44px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.2); display: flex; gap: 36px; }
     .lp-stat-num { font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 500; color: var(--red); }
-    .lp-stat-label { font-size: 11px; color: var(--gray-mid); letter-spacing: 0.05em; margin-top: 2px; }
-    .lp-hero-right { position: relative; overflow: hidden; background: var(--gray-bg); }
-    .lp-hero-img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; display: block; }
-    .lp-hero-badge { position: absolute; bottom: 28px; left: 24px; background: var(--white); border-left: 3px solid var(--red); padding: 14px 18px; font-size: 12px; box-shadow: 0 2px 16px rgba(0,0,0,0.10); }
-    .lp-hero-badge strong { display: block; font-size: 13px; font-weight: 500; margin-bottom: 2px; }
-    .lp-hero-badge span { color: var(--gray-mid); font-size: 11px; }
+    .lp-stat-label { font-size: 11px; color: rgba(255,255,255,0.6); letter-spacing: 0.05em; margin-top: 2px; }
 
     /* SECTION SHARED */
     .lp-section { padding: 72px 40px; border-bottom: 1px solid var(--gray-light); }
@@ -237,9 +237,9 @@
     /* MOBILE */
     @media (max-width: 900px) {
       .lp-nav { padding: 16px 20px; }
-      .lp-hero { grid-template-columns: 1fr; }
-      .lp-hero-left { padding: 40px 20px; border-right: none; border-bottom: 1px solid var(--gray-light); }
-      .lp-hero-right { height: 380px; }
+      .lp-hero { min-height: 90vh; }
+      .lp-hero::before { background: linear-gradient(to bottom, rgba(17,17,17,0.88) 0%, rgba(17,17,17,0.6) 100%); }
+      .lp-hero-content { padding: 40px 20px; max-width: 100%; }
       .lp-hero-headline { font-size: 36px; }
       .lp-hero-stats { gap: 24px; }
       .lp-section { padding: 48px 20px; }
@@ -270,7 +270,7 @@
 
   <!-- HERO -->
   <section class="lp-hero">
-    <div class="lp-hero-left">
+    <div class="lp-hero-content">
       <div class="lp-hero-eyebrow">Bergen County Real Estate</div>
       <h1 class="lp-hero-headline">
         Buy or sell your home<br>
@@ -295,14 +295,6 @@
           <div class="lp-stat-num">15K+</div>
           <div class="lp-stat-label">Followers learning with me</div>
         </div>
-      </div>
-    </div>
-    <div class="lp-hero-right">
-      <img class="lp-hero-img" src="tyler-sellers.jpg" alt="Tyler Sellers, Bergen County NJ Real Estate Agent" />
-      <div class="lp-hero-badge">
-        <strong>Tyler Sellers</strong>
-        RE/MAX Licensed Agent<br>
-        <span>Bergen County specialist &middot; NJ</span>
       </div>
     </div>
   </section>
