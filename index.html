@@ -224,6 +224,27 @@
       .buyer-left { padding: 48px 20px; border-right: none; border-bottom: 1px solid var(--gray-light); }
       .footer { flex-direction: column; gap: 12px; text-align: center; padding: 28px 20px; }
       .hero-stats { gap: 24px; }
+      .sticky-mobile-cta { display: flex; }
+    }
+
+    /* STICKY MOBILE CTA */
+    .sticky-mobile-cta {
+      display: none;
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 98;
+      background: var(--red); padding: 12px 20px;
+      align-items: center; justify-content: space-between;
+      box-shadow: 0 -2px 12px rgba(0,0,0,0.15);
+      transform: translateY(100%); transition: transform 0.3s ease;
+    }
+    .sticky-mobile-cta.visible { transform: translateY(0); }
+    .sticky-mobile-cta a {
+      color: var(--white); text-decoration: none; font-size: 14px;
+      font-weight: 500; font-family: 'DM Sans', sans-serif;
+      letter-spacing: 0.04em;
+    }
+    .sticky-mobile-cta .sticky-close {
+      background: none; border: none; color: rgba(255,255,255,0.7);
+      font-size: 18px; cursor: pointer; padding: 0 0 0 12px;
     }
   </style>
 </head>
@@ -654,6 +675,12 @@
     </div>
   </div>
 
+  <!-- STICKY MOBILE CTA -->
+  <div class="sticky-mobile-cta" id="stickyCta">
+    <a href="#sell">What&rsquo;s my home worth? &rarr;</a>
+    <button class="sticky-close" onclick="document.getElementById('stickyCta').classList.remove('visible');document.getElementById('stickyCta').dataset.dismissed='true';" aria-label="Close">&times;</button>
+  </div>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-logo">Mr. Sellers Homes</div>
@@ -865,6 +892,22 @@
       document.getElementById('buyerForm').style.display = 'none';
       document.getElementById('buyerFormSuccess').style.display = 'block';
     }
+
+    // Sticky mobile CTA — show after scrolling past hero
+    (function() {
+      const stickyCta = document.getElementById('stickyCta');
+      const hero = document.querySelector('.hero');
+      if (!stickyCta || !hero) return;
+      window.addEventListener('scroll', function() {
+        if (stickyCta.dataset.dismissed === 'true') return;
+        const heroBottom = hero.offsetTop + hero.offsetHeight;
+        if (window.scrollY > heroBottom) {
+          stickyCta.classList.add('visible');
+        } else {
+          stickyCta.classList.remove('visible');
+        }
+      });
+    })();
 
     // Initialize town directory
     renderDirectory();
