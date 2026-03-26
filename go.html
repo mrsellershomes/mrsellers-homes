@@ -72,17 +72,21 @@
     /* HERO */
     .lp-hero {
       margin-top: 57px; position: relative; min-height: calc(100vh - 57px);
-      background: url('tyler-hero-bg.png') right center / cover no-repeat;
       display: flex; align-items: center; border-bottom: 1px solid var(--gray-light);
+      overflow: hidden;
+    }
+    .lp-hero-bg {
+      position: absolute; inset: 0;
+      background: url('tyler-hero-bg.png') right top / cover no-repeat;
     }
     .lp-hero::before {
-      content: ''; position: absolute; inset: 0;
+      content: ''; position: absolute; inset: 0; z-index: 1;
       background:
         linear-gradient(to right, rgba(17,17,17,0.93) 0%, rgba(17,17,17,0.82) 40%, rgba(17,17,17,0.45) 62%, rgba(17,17,17,0.12) 100%),
         linear-gradient(to top, rgba(17,17,17,0.4) 0%, transparent 40%);
     }
     .lp-hero-content {
-      position: relative; z-index: 1;
+      position: relative; z-index: 2;
       padding: clamp(36px, 5vw, 60px) clamp(20px, 4vw, 48px) clamp(36px, 5vw, 60px) clamp(40px, 10vw, 140px);
       max-width: clamp(340px, 55vw, 680px);
       display: flex; flex-direction: column; justify-content: center;
@@ -279,6 +283,7 @@
 
   <!-- HERO -->
   <section class="lp-hero">
+    <div class="lp-hero-bg"></div>
     <div class="lp-hero-content">
       <div class="lp-hero-eyebrow">Bergen County Real Estate</div>
       <h1 class="lp-hero-headline">
