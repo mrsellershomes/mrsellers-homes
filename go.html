@@ -90,10 +90,12 @@
     }
     .lp-hero-eyebrow::before { content: ''; display: block; width: 28px; height: 2px; background: var(--red); }
     .lp-hero-headline {
-      font-family: 'Cormorant Garamond', serif; font-size: 52px; line-height: 1.1;
+      font-family: 'Cormorant Garamond', serif; font-size: 62px; line-height: 1.08;
       font-weight: 500; margin-bottom: 24px; color: var(--white);
     }
-    .lp-hero-headline em { font-style: italic; color: var(--red); }
+    .lp-hero-headline .kw-smarter { color: var(--red); font-weight: 600; }
+    .lp-hero-headline .kw-faster { color: var(--red); font-style: italic; font-weight: 600; }
+    .lp-hero-headline .kw-better { color: var(--red); font-weight: 700; }
     .lp-hero-sub { font-size: 15px; line-height: 1.75; color: rgba(255,255,255,0.75); max-width: 440px; margin-bottom: 32px; }
     .lp-hero-cta {
       display: inline-block; background: var(--red); color: var(--white);
@@ -240,7 +242,7 @@
       .lp-hero { min-height: 90vh; }
       .lp-hero::before { background: linear-gradient(to bottom, rgba(17,17,17,0.88) 0%, rgba(17,17,17,0.6) 100%); }
       .lp-hero-content { padding: 40px 20px; max-width: 100%; }
-      .lp-hero-headline { font-size: 36px; }
+      .lp-hero-headline { font-size: 40px; }
       .lp-hero-stats { gap: 24px; }
       .lp-section { padding: 48px 20px; }
       .lp-testimonials-grid { grid-template-columns: 1fr; }
@@ -273,9 +275,9 @@
     <div class="lp-hero-content">
       <div class="lp-hero-eyebrow">Bergen County Real Estate</div>
       <h1 class="lp-hero-headline">
-        Buy or sell your home<br>
-        <em>smarter, faster,</em><br>
-        and at a better price.
+        Buy or Sell Your Home<br>
+        <span class="kw-smarter">Smarter</span>, <span class="kw-faster">Faster</span>,<br>
+        and at a <span class="kw-better">Better Price</span>.
       </h1>
       <p class="lp-hero-sub">
         Hyper-local expertise across all 70 Bergen County municipalities.
@@ -284,12 +286,12 @@
       <a href="#book" class="lp-hero-cta">Book your free strategy call &rarr;</a>
       <div class="lp-hero-stats">
         <div>
-          <div class="lp-stat-num">70</div>
-          <div class="lp-stat-label">Municipalities covered</div>
+          <div class="lp-stat-num">6+</div>
+          <div class="lp-stat-label">Years in Bergen County</div>
         </div>
         <div>
-          <div class="lp-stat-num">5+</div>
-          <div class="lp-stat-label">Years in Bergen County</div>
+          <div class="lp-stat-num">33+</div>
+          <div class="lp-stat-label">Homes sold</div>
         </div>
         <div>
           <div class="lp-stat-num">15K+</div>
