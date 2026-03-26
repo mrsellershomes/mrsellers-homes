@@ -72,47 +72,57 @@
     /* HERO */
     .lp-hero {
       margin-top: 57px; position: relative; min-height: calc(100vh - 57px);
-      background: url('tyler-hero-bg.png') center center / cover no-repeat;
+      background: url('tyler-hero-bg.png') right center / cover no-repeat;
       display: flex; align-items: center; border-bottom: 1px solid var(--gray-light);
     }
     .lp-hero::before {
       content: ''; position: absolute; inset: 0;
-      background: linear-gradient(to right, rgba(17,17,17,0.92) 0%, rgba(17,17,17,0.75) 45%, rgba(17,17,17,0.15) 100%);
+      background: linear-gradient(to right, rgba(17,17,17,0.92) 0%, rgba(17,17,17,0.78) 40%, rgba(17,17,17,0.2) 75%, transparent 100%);
     }
     .lp-hero-content {
-      position: relative; z-index: 1; padding: 72px 48px 72px 40px;
-      max-width: 580px; display: flex; flex-direction: column; justify-content: center;
+      position: relative; z-index: 1;
+      padding: clamp(40px, 6vw, 72px) clamp(20px, 4vw, 48px) clamp(40px, 6vw, 72px) clamp(20px, 4vw, 40px);
+      max-width: clamp(320px, 50vw, 580px);
+      display: flex; flex-direction: column; justify-content: center;
     }
     .lp-hero-eyebrow {
       font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--red); margin-bottom: 20px; display: flex; align-items: center;
+      color: var(--red); margin-bottom: clamp(12px, 2vw, 20px); display: flex; align-items: center;
       gap: 10px; font-weight: 500;
     }
     .lp-hero-eyebrow::before { content: ''; display: block; width: 28px; height: 2px; background: var(--red); }
     .lp-hero-headline {
-      font-family: 'Cormorant Garamond', serif; font-size: 62px; line-height: 1.08;
-      font-weight: 500; margin-bottom: 24px; color: var(--white);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(34px, 5vw, 62px); line-height: 1.08;
+      font-weight: 500; margin-bottom: clamp(16px, 2vw, 24px); color: var(--white);
     }
     .lp-hero-headline .kw-smarter { color: var(--red); font-weight: 600; }
     .lp-hero-headline .kw-faster { color: var(--red); font-style: italic; font-weight: 600; }
     .lp-hero-headline .kw-better { color: var(--red); font-weight: 700; }
-    .lp-hero-sub { font-size: 15px; line-height: 1.75; color: rgba(255,255,255,0.75); max-width: 440px; margin-bottom: 32px; }
+    .lp-hero-sub {
+      font-size: clamp(13px, 1.2vw, 15px); line-height: 1.75;
+      color: rgba(255,255,255,0.75); max-width: 440px; margin-bottom: clamp(20px, 3vw, 32px);
+    }
     .lp-hero-cta {
       display: inline-block; background: var(--red); color: var(--white);
-      padding: 16px 32px; font-family: 'DM Sans', sans-serif; font-size: 14px;
+      padding: clamp(12px, 1.5vw, 16px) clamp(20px, 3vw, 32px);
+      font-family: 'DM Sans', sans-serif; font-size: clamp(12px, 1.2vw, 14px);
       font-weight: 500; text-decoration: none; border-radius: 2px;
       letter-spacing: 0.04em; transition: background 0.2s; align-self: flex-start;
     }
     .lp-hero-cta:hover { background: var(--red-dark); }
-    .lp-hero-stats { margin-top: 44px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.2); display: flex; gap: 36px; }
-    .lp-stat-num { font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 500; color: var(--red); }
-    .lp-stat-label { font-size: 11px; color: rgba(255,255,255,0.6); letter-spacing: 0.05em; margin-top: 2px; }
+    .lp-hero-stats {
+      margin-top: clamp(28px, 4vw, 44px); padding-top: clamp(18px, 2.5vw, 28px);
+      border-top: 1px solid rgba(255,255,255,0.2); display: flex; gap: clamp(20px, 3vw, 36px);
+    }
+    .lp-stat-num { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 3vw, 34px); font-weight: 500; color: var(--red); }
+    .lp-stat-label { font-size: clamp(9px, 1vw, 11px); color: rgba(255,255,255,0.6); letter-spacing: 0.05em; margin-top: 2px; }
 
     /* SECTION SHARED */
-    .lp-section { padding: 72px 40px; border-bottom: 1px solid var(--gray-light); }
+    .lp-section { padding: clamp(48px, 6vw, 72px) clamp(20px, 4vw, 40px); border-bottom: 1px solid var(--gray-light); }
     .lp-section-label { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); margin-bottom: 12px; font-weight: 500; display: flex; align-items: center; gap: 10px; }
     .lp-section-label::after { content: ''; flex: 1; height: 1px; background: var(--gray-light); }
-    .lp-section-title { font-family: 'Cormorant Garamond', serif; font-size: 38px; font-weight: 500; line-height: 1.15; margin-bottom: 16px; }
+    .lp-section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3.5vw, 38px); font-weight: 500; line-height: 1.15; margin-bottom: 16px; }
     .lp-section-sub { font-size: 15px; color: var(--gray-mid); line-height: 1.75; max-width: 560px; }
     .lp-section-cta { display: inline-block; margin-top: 28px; background: var(--red); color: var(--white); padding: 14px 28px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; text-decoration: none; border-radius: 2px; letter-spacing: 0.04em; transition: background 0.2s; }
     .lp-section-cta:hover { background: var(--red-dark); }
@@ -131,7 +141,7 @@
     .lp-testimonial-loc { font-size: 11px; color: var(--gray-mid); margin-top: 2px; }
 
     /* PAIN POINTS */
-    .lp-pain-headline { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 500; line-height: 1.2; margin-bottom: 32px; }
+    .lp-pain-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3vw, 32px); font-weight: 500; line-height: 1.2; margin-bottom: 32px; }
     .lp-pain-headline em { font-style: italic; color: var(--red); }
     .lp-pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
     .lp-pain-card { padding: 28px 24px; border: 1px solid var(--gray-light); margin: -1px 0 0 -1px; text-align: center; }
@@ -239,12 +249,9 @@
     /* MOBILE */
     @media (max-width: 900px) {
       .lp-nav { padding: 16px 20px; }
-      .lp-hero { min-height: auto; background-position: 75% center; }
-      .lp-hero::before { background: linear-gradient(to bottom, rgba(17,17,17,0.85) 0%, rgba(17,17,17,0.65) 100%); }
-      .lp-hero-content { padding: 40px 20px; max-width: 100%; }
-      .lp-hero-headline { font-size: 40px; }
-      .lp-hero-stats { gap: 24px; }
-      .lp-section { padding: 48px 20px; }
+      .lp-hero { min-height: 85vh; background-position: 70% center; }
+      .lp-hero::before { background: linear-gradient(to bottom, rgba(17,17,17,0.88) 0%, rgba(17,17,17,0.55) 70%, rgba(17,17,17,0.3) 100%); }
+      .lp-hero-content { max-width: 100%; }
       .lp-testimonials-grid { grid-template-columns: 1fr; }
       .lp-pain-grid { grid-template-columns: 1fr; }
       .lp-uvp-grid { grid-template-columns: 1fr; gap: 28px; }
