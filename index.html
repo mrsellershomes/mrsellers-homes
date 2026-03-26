@@ -761,11 +761,17 @@
         html += `<div class="region-block">
           <div class="region-title">${region.name}</div>
           <div class="towns-grid">
-            ${filtered.map(t => `
-              <div class="town-item"${t.guideUrl ? ` onclick="window.open('${t.guideUrl}','_blank')"` : ''}>
+            ${filtered.map(t => {
+              let action = '';
+              if (t.pageUrl) action = `onclick="window.location.href='${t.pageUrl}'"`;
+              else if (t.guideUrl) action = `onclick="window.open('${t.guideUrl}','_blank')"`;
+              else action = `onclick="prefillBuyerForm('${t.name}')"`;
+              return `
+              <div class="town-item" ${action}>
                 <div class="town-name">${t.name}</div>
                 <div class="town-badges">${t.guide ? '<span class="town-badge badge-guide">Guide</span>' : ''}</div>
-              </div>`).join('')}
+              </div>`;
+            }).join('')}
           </div>
         </div>`;
       });
@@ -866,6 +872,10 @@
         await sendToFUB(buyerData, 'MrSellers.homes — Buyer Form');
         document.getElementById('buyerStep1').style.display = 'none';
         document.getElementById('buyerStep2').style.display = 'block';
+        if (window._prefillTown) {
+          document.getElementById('buyer-towns').value = window._prefillTown;
+          window._prefillTown = null;
+        }
       } catch {
         btn.textContent = 'Something went wrong — please email tyler@mrsellers.homes';
         btn.disabled = false;
@@ -890,6 +900,21 @@
     function skipBuyerStep2() {
       document.getElementById('buyerForm').style.display = 'none';
       document.getElementById('buyerFormSuccess').style.display = 'block';
+    }
+
+    // Town directory → buyer form pre-fill
+    function prefillBuyerForm(townName) {
+      const buyerStep1 = document.getElementById('buyerStep1');
+      const buyerStep2 = document.getElementById('buyerStep2');
+      const townsField = document.getElementById('buyer-towns');
+      // If form is still on step 1, scroll to it
+      document.getElementById('buy').scrollIntoView({ behavior: 'smooth' });
+      // If step 2 is visible, pre-fill the towns field directly
+      if (buyerStep2 && buyerStep2.style.display === 'block' && townsField) {
+        townsField.value = townName;
+      }
+      // Store the town so it gets included when step 2 appears
+      window._prefillTown = townName;
     }
 
     // Sticky mobile CTA — show on mobile after scrolling past hero
