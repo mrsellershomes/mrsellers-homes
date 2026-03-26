@@ -71,12 +71,13 @@
 
     /* HERO */
     .lp-hero {
-      margin-top: 57px; position: relative; min-height: calc(100vh - 57px);
+      margin-top: 57px; position: relative; min-height: calc(100svh - 57px);
       display: flex; align-items: center; border-bottom: 1px solid var(--gray-light);
       overflow: hidden;
     }
     .lp-hero-bg {
-      position: absolute; inset: 0;
+      position: absolute; top: 0; left: 0; right: 0;
+      height: calc(100svh - 57px); min-height: 100%;
       background: url('tyler-hero-bg.png') right top / cover no-repeat;
     }
     .lp-hero::before {
