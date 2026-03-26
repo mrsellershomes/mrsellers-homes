@@ -170,6 +170,31 @@
     .form-error-msg.show { display: block; }
     .form-error-banner { display: none; background: #fdecea; border: 1px solid #f5c6cb; border-radius: 2px; padding: 12px 16px; font-size: 13px; color: var(--red-dark); margin-top: 8px; text-align: center; }
     .form-error-banner.show { display: block; }
+    .form-social-proof { margin-top: 14px; font-size: 12px; color: var(--gray-mid); text-align: center; line-height: 1.5; font-style: italic; }
+
+    /* SCROLL-DEPTH SLIDE-IN CTA */
+    .slide-in-cta {
+      position: fixed; bottom: 80px; right: -360px; z-index: 97;
+      width: 320px; background: var(--white); border: 1px solid var(--gray-light);
+      border-right: none; border-radius: 4px 0 0 4px;
+      box-shadow: -4px 4px 20px rgba(0,0,0,0.12);
+      padding: 24px; transition: right 0.4s ease;
+    }
+    .slide-in-cta.visible { right: 0; }
+    .slide-in-cta-close {
+      position: absolute; top: 8px; right: 12px;
+      background: none; border: none; font-size: 18px;
+      color: var(--gray-mid); cursor: pointer;
+    }
+    .slide-in-cta h3 {
+      font-family: 'Cormorant Garamond', serif; font-size: 20px;
+      font-weight: 500; margin-bottom: 8px; color: var(--black);
+    }
+    .slide-in-cta p { font-size: 13px; color: var(--gray-mid); line-height: 1.6; margin-bottom: 14px; }
+    .slide-in-cta a.btn-red { display: block; text-align: center; }
+    @media (max-width: 900px) {
+      .slide-in-cta { display: none !important; }
+    }
 
     /* BUYER SECTION */
     .buyer-section { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--gray-light); scroll-margin-top: 57px; min-height: calc(100vh - 57px); }
@@ -556,6 +581,7 @@
             <div class="form-error-msg" id="seller-email-error">Please enter a valid email address</div>
           </div>
           <button type="submit" class="form-submit">Get my free home valuation &rarr;</button>
+          <div class="form-social-proof">&ldquo;Tyler responded within 2 hours and gave me an honest number &mdash; not a padded one.&rdquo;</div>
           <div class="form-error-banner" id="sellerErrorBanner">Something went wrong &mdash; please try again or email tyler@mrsellers.homes</div>
         </div>
         <div id="sellerStep2" style="display:none;">
@@ -653,6 +679,7 @@
             <div class="form-error-msg" id="buyer-email-error">Please enter a valid email address</div>
           </div>
           <button type="submit" class="form-submit" style="background:var(--black);">Start my Bergen County search &rarr;</button>
+          <div class="form-social-proof">&ldquo;Tyler knew every town and matched us to one we never would have found on our own.&rdquo;</div>
           <div class="form-error-banner" id="buyerErrorBanner">Something went wrong &mdash; please try again or email tyler@mrsellers.homes</div>
         </div>
         <div id="buyerStep2" style="display:none;">
@@ -695,6 +722,14 @@
         &#10003;&nbsp; Got it! Tyler will be in touch within 24 hours.
       </div>
     </div>
+  </div>
+
+  <!-- SCROLL-DEPTH SLIDE-IN CTA (desktop only) -->
+  <div class="slide-in-cta" id="slideInCta">
+    <button class="slide-in-cta-close" onclick="document.getElementById('slideInCta').classList.remove('visible');document.getElementById('slideInCta').dataset.dismissed='true';" aria-label="Close">&times;</button>
+    <h3>Still exploring?</h3>
+    <p>Tell me what you&rsquo;re looking for and I&rsquo;ll point you in the right direction &mdash; no commitment.</p>
+    <a href="#sell" class="btn-red" onclick="document.getElementById('slideInCta').classList.remove('visible');document.getElementById('slideInCta').dataset.dismissed='true';">Get your free home valuation &rarr;</a>
   </div>
 
   <!-- STICKY MOBILE CTA -->
@@ -976,6 +1011,22 @@
       // Store the town so it gets included when step 2 appears
       window._prefillTown = townName;
     }
+
+    // Scroll-depth slide-in CTA (desktop only, 70% scroll)
+    (function() {
+      var slideIn = document.getElementById('slideInCta');
+      if (!slideIn) return;
+      var triggered = false;
+      window.addEventListener('scroll', function() {
+        if (triggered || slideIn.dataset.dismissed === 'true') return;
+        if (window.innerWidth <= 900) return;
+        var scrollPct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+        if (scrollPct > 0.7) {
+          slideIn.classList.add('visible');
+          triggered = true;
+        }
+      });
+    })();
 
     // Sticky mobile CTA — show on mobile after scrolling past hero
     (function() {
