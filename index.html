@@ -165,6 +165,11 @@
     .form-submit { width: 100%; background: var(--red); color: var(--white); border: none; padding: 14px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; cursor: pointer; margin-top: 8px; border-radius: 2px; letter-spacing: 0.06em; transition: background 0.2s; }
     .form-submit:hover { background: var(--red-dark); }
     .form-success { display: none; background: #f0faf4; border: 1px solid #b7dfca; border-radius: 2px; padding: 16px; font-size: 14px; color: #2d6a4f; margin-top: 8px; text-align: center; }
+    .form-row input.input-error, .form-row select.input-error, .form-row textarea.input-error { border-color: var(--red); background: #fef6f6; }
+    .form-error-msg { display: none; font-size: 11px; color: var(--red); margin-top: 4px; }
+    .form-error-msg.show { display: block; }
+    .form-error-banner { display: none; background: #fdecea; border: 1px solid #f5c6cb; border-radius: 2px; padding: 12px 16px; font-size: 13px; color: var(--red-dark); margin-top: 8px; text-align: center; }
+    .form-error-banner.show { display: block; }
 
     /* BUYER SECTION */
     .buyer-section { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--gray-light); scroll-margin-top: 57px; min-height: calc(100vh - 57px); }
@@ -542,13 +547,16 @@
         <div id="sellerStep1">
           <div class="form-row">
             <label for="name">Your name</label>
-            <input type="text" id="name" name="name" placeholder="First and last name" required />
+            <input type="text" id="name" name="name" placeholder="First and last name" />
+            <div class="form-error-msg" id="name-error">Please enter your name</div>
           </div>
           <div class="form-row">
             <label for="seller-email">Email</label>
-            <input type="email" id="seller-email" name="email" placeholder="your@email.com" required />
+            <input type="email" id="seller-email" name="email" placeholder="your@email.com" />
+            <div class="form-error-msg" id="seller-email-error">Please enter a valid email address</div>
           </div>
           <button type="submit" class="form-submit">Get my free home valuation &rarr;</button>
+          <div class="form-error-banner" id="sellerErrorBanner">Something went wrong &mdash; please try again or email tyler@mrsellers.homes</div>
         </div>
         <div id="sellerStep2" style="display:none;">
           <p style="font-size:14px; color:var(--black); margin-bottom:16px; font-weight:500;">&#10003; Got it! Want a faster response?</p>
@@ -636,13 +644,16 @@
         <div id="buyerStep1">
           <div class="form-row">
             <label for="buyer-name">Your name</label>
-            <input type="text" id="buyer-name" name="name" placeholder="First and last name" required />
+            <input type="text" id="buyer-name" name="name" placeholder="First and last name" />
+            <div class="form-error-msg" id="buyer-name-error">Please enter your name</div>
           </div>
           <div class="form-row">
             <label for="buyer-email">Email</label>
-            <input type="email" id="buyer-email" name="email" placeholder="your@email.com" required />
+            <input type="email" id="buyer-email" name="email" placeholder="your@email.com" />
+            <div class="form-error-msg" id="buyer-email-error">Please enter a valid email address</div>
           </div>
           <button type="submit" class="form-submit" style="background:var(--black);">Start my Bergen County search &rarr;</button>
+          <div class="form-error-banner" id="buyerErrorBanner">Something went wrong &mdash; please try again or email tyler@mrsellers.homes</div>
         </div>
         <div id="buyerStep2" style="display:none;">
           <p style="font-size:14px; color:var(--black); margin-bottom:16px; font-weight:500;">&#10003; Got it! Want a faster response?</p>
@@ -829,24 +840,56 @@
       });
     }
 
+    // Form validation helpers
+    function clearErrors(fields) {
+      fields.forEach(function(id) {
+        var el = document.getElementById(id);
+        var err = document.getElementById(id + '-error');
+        if (el) el.classList.remove('input-error');
+        if (err) err.classList.remove('show');
+      });
+    }
+    function showError(id) {
+      var el = document.getElementById(id);
+      var err = document.getElementById(id + '-error');
+      if (el) el.classList.add('input-error');
+      if (err) err.classList.add('show');
+    }
+    function isValidEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+    // Clear error styling when user starts typing
+    document.querySelectorAll('.form-row input, .form-row select, .form-row textarea').forEach(function(el) {
+      el.addEventListener('input', function() {
+        el.classList.remove('input-error');
+        var err = document.getElementById(el.id + '-error');
+        if (err) err.classList.remove('show');
+      });
+    });
+
     // Seller form — step 1
     let sellerData = {};
     const sellerForm = document.getElementById('contactForm');
     sellerForm.addEventListener('submit', async function(e) {
       e.preventDefault();
+      clearErrors(['name', 'seller-email']);
+      document.getElementById('sellerErrorBanner').classList.remove('show');
+      var nameVal = document.getElementById('name').value.trim();
+      var emailVal = document.getElementById('seller-email').value.trim();
+      var valid = true;
+      if (!nameVal) { showError('name'); valid = false; }
+      if (!emailVal || !isValidEmail(emailVal)) { showError('seller-email'); valid = false; }
+      if (!valid) return;
       const btn = sellerForm.querySelector('#sellerStep1 .form-submit');
       btn.textContent = 'Sending...'; btn.disabled = true;
-      sellerData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('seller-email').value
-      };
+      sellerData = { name: nameVal, email: emailVal };
       try {
         await sendToFUB(sellerData, 'MrSellers.homes — Seller Form');
         document.getElementById('sellerStep1').style.display = 'none';
         document.getElementById('sellerStep2').style.display = 'block';
       } catch {
-        btn.textContent = 'Something went wrong — please email tyler@mrsellers.homes';
-        btn.disabled = false;
+        btn.textContent = 'Get my free home valuation \u2192'; btn.disabled = false;
+        document.getElementById('sellerErrorBanner').classList.add('show');
       }
     });
 
@@ -874,12 +917,17 @@
     const buyerForm = document.getElementById('buyerForm');
     buyerForm.addEventListener('submit', async function(e) {
       e.preventDefault();
+      clearErrors(['buyer-name', 'buyer-email']);
+      document.getElementById('buyerErrorBanner').classList.remove('show');
+      var nameVal = document.getElementById('buyer-name').value.trim();
+      var emailVal = document.getElementById('buyer-email').value.trim();
+      var valid = true;
+      if (!nameVal) { showError('buyer-name'); valid = false; }
+      if (!emailVal || !isValidEmail(emailVal)) { showError('buyer-email'); valid = false; }
+      if (!valid) return;
       const btn = buyerForm.querySelector('#buyerStep1 .form-submit');
       btn.textContent = 'Sending...'; btn.disabled = true;
-      buyerData = {
-        name: document.getElementById('buyer-name').value,
-        email: document.getElementById('buyer-email').value
-      };
+      buyerData = { name: nameVal, email: emailVal };
       try {
         await sendToFUB(buyerData, 'MrSellers.homes — Buyer Form');
         document.getElementById('buyerStep1').style.display = 'none';
@@ -889,8 +937,8 @@
           window._prefillTown = null;
         }
       } catch {
-        btn.textContent = 'Something went wrong — please email tyler@mrsellers.homes';
-        btn.disabled = false;
+        btn.textContent = 'Start my Bergen County search \u2192'; btn.disabled = false;
+        document.getElementById('buyerErrorBanner').classList.add('show');
       }
     });
 
