@@ -55,6 +55,7 @@
     }
 
     html { scroll-behavior: smooth; overflow-x: hidden; }
+    .mobile-br { display: none; }
     body { font-family: 'DM Sans', sans-serif; color: var(--black); background: var(--white); -webkit-font-smoothing: antialiased; line-height: 1.6; overflow-x: hidden; }
 
     /* NAV */
@@ -140,7 +141,8 @@
     .lp-stat-label { font-size: clamp(9px, 1vw, 11px); color: rgba(255,255,255,0.6); letter-spacing: 0.05em; margin-top: 2px; }
     @media (max-width: 900px) {
       .lp-hero-eyebrow { font-size: 9px; margin-bottom: 14px; padding-top: 12px; }
-      .lp-hero-headline { font-size: 10vw; margin-bottom: 14px; }
+      .lp-hero-headline { font-size: clamp(32px, 9vw, 42px); margin-bottom: 14px; }
+      .mobile-br { display: block; }
       .lp-hero-sub { font-size: 12px; line-height: 1.55; margin-bottom: 18px; }
       .lp-hero-cta { align-self: center; padding: 14px 32px; font-size: 14px; font-weight: 600; white-space: nowrap; }
       .lp-hero-stats { margin-top: auto; padding-top: 14px; padding-bottom: 8px; justify-content: space-around; gap: 0; text-align: center; }
@@ -313,9 +315,7 @@
       <div class="lp-hero-top">
         <div class="lp-hero-eyebrow">Bergen County Real Estate</div>
         <h1 class="lp-hero-headline">
-          Buy or Sell Your Home
-          <span class="kw-smarter">Smarter</span>, <span class="kw-faster">Faster</span>,
-          and at a <span class="kw-better">Better Price</span>.
+          Buy or Sell Your<br class="mobile-br"> Home <span class="kw-smarter">Smarter</span>,<br class="mobile-br"> <span class="kw-faster">Faster</span>, and at a<br class="mobile-br"> <span class="kw-better">Better Price</span>.
         </h1>
         <p class="lp-hero-sub">
           Hyper-local expertise across all 70 Bergen County municipalities.
