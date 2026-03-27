@@ -140,11 +140,15 @@
     .lp-stat-num { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3.2vw, 38px); font-weight: 500; color: var(--red); }
     .lp-stat-label { font-size: clamp(9px, 1vw, 11px); color: rgba(255,255,255,0.6); letter-spacing: 0.05em; margin-top: 2px; }
     @media (max-width: 900px) {
-      .lp-hero-eyebrow { font-size: 9px; margin-bottom: 14px; padding-top: 12px; }
+      .lp-hero-eyebrow { font-size: 9px; margin-bottom: 14px; padding-top: 12px; color: #e63946; }
+      .lp-hero-eyebrow::before { background: #e63946; }
       .lp-hero-headline { font-size: clamp(32px, 9vw, 42px); margin-bottom: 14px; }
+      .lp-hero-headline .kw-smarter,
+      .lp-hero-headline .kw-faster,
+      .lp-hero-headline .kw-better { color: #e63946; }
       .mobile-br { display: block; }
       .lp-hero-sub { font-size: 12px; line-height: 1.55; margin-bottom: 18px; }
-      .lp-hero-cta { align-self: center; padding: 14px 32px; font-size: 14px; font-weight: 600; white-space: nowrap; }
+      .lp-hero-cta { align-self: center; padding: 14px 32px; font-size: 14px; font-weight: 600; white-space: nowrap; background: #e63946; }
       .lp-hero-stats { margin-top: auto; padding-top: 14px; padding-bottom: 8px; justify-content: space-around; gap: 0; text-align: center; }
       .lp-hero-stats > div { flex: 1; }
       .lp-stat-num { font-size: 24px; color: var(--white); }
