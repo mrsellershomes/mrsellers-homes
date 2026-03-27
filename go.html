@@ -37,740 +37,884 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Ubuntu:wght@300;400;500;700&family=DM+Sans:wght@300;400;500;600&family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Ubuntu:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --red: #E2001A;
-      --red-dark: #b50015;
-      --black: #111111;
-      --gray-mid: #6b6b6b;
-      --gray-light: #e0e0e0;
-      --gray-bg: #f5f5f5;
-      --white: #ffffff;
-      --green: #2d6a4f;
-      --green-bg: #f0faf4;
-    }
-
-    html { scroll-behavior: smooth; overflow-x: hidden; }
-    .mobile-br { display: none; }
-    body { font-family: 'DM Sans', sans-serif; color: var(--black); background: var(--white); -webkit-font-smoothing: antialiased; line-height: 1.6; overflow-x: hidden; }
-
-    /* NAV */
-    .lp-nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: clamp(10px, 1.5vw, 16px) clamp(16px, 3vw, 40px); background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(8px); border-bottom: 1px solid var(--gray-light);
-    }
-    .lp-nav-logo { font-family: 'Cormorant Garamond', serif; font-size: clamp(16px, 2.5vw, 22px); font-weight: 600; color: var(--black); text-decoration: none; white-space: nowrap; }
-    .lp-nav-logo span { font-weight: 400; opacity: 0.5; font-size: clamp(8px, 1vw, 11px); display: block; letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; }
-    .lp-nav-cta { background: var(--red); color: var(--white); border: none; padding: clamp(8px, 1vw, 10px) clamp(14px, 2vw, 22px); font-family: 'DM Sans', sans-serif; font-size: clamp(11px, 1.2vw, 13px); font-weight: 500; cursor: pointer; border-radius: 2px; letter-spacing: 0.04em; text-decoration: none; transition: background 0.2s; white-space: nowrap; }
-    .lp-nav-cta:hover { background: var(--red-dark); }
-
-    /* HERO */
-    .lp-hero {
-      margin-top: 57px; position: relative;
-      display: flex; align-items: center; border-bottom: 1px solid var(--gray-light);
-      overflow: hidden;
-    }
-    .lp-hero-bg {
-      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-    }
-    .lp-hero-bg img {
-      width: 100%; height: 100%; object-fit: cover; object-position: right top;
-      display: block;
-    }
-    .lp-hero::before {
-      content: ''; position: absolute; inset: 0; z-index: 1;
-      background:
-        linear-gradient(to right, rgba(17,17,17,0.93) 0%, rgba(17,17,17,0.82) 40%, rgba(17,17,17,0.45) 62%, rgba(17,17,17,0.12) 100%),
-        linear-gradient(to top, rgba(17,17,17,0.4) 0%, transparent 40%);
-    }
-    .lp-hero-content {
-      position: relative; z-index: 2;
-      padding: clamp(36px, 5vw, 60px) clamp(20px, 4vw, 48px) clamp(36px, 5vw, 60px) clamp(40px, 10vw, 140px);
-      max-width: clamp(340px, 55vw, 680px);
-      min-height: 600px;
-      display: flex; flex-direction: column; justify-content: center;
-    }
-    @media (max-width: 900px) {
-      .lp-hero { height: calc(100vh - 57px - 50px); max-height: calc(100vh - 57px - 50px); overflow: visible; }
-      .lp-hero-content {
-        height: 100%;
-        min-height: 0;
-        padding: 16px 20px 12px;
-        max-width: 100%;
-        justify-content: flex-start;
-        gap: 0;
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#E2001A',
+            'primary-dark': '#b50015',
+          },
+          fontFamily: {
+            playfair: ['Playfair Display', 'serif'],
+            ubuntu: ['Ubuntu', 'sans-serif'],
+            sans: ['DM Sans', 'sans-serif'],
+          }
+        }
       }
     }
-    .lp-hero-eyebrow {
-      font-size: clamp(10px, 1vw, 12px); letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--red); margin-bottom: clamp(10px, 1.5vw, 16px); display: flex; align-items: center;
-      gap: 10px; font-weight: 500;
-    }
-    .lp-hero-eyebrow::before { content: ''; display: block; width: 28px; height: 2px; background: var(--red); }
-    .lp-hero-headline {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(36px, 5.5vw, 68px); line-height: 1.05;
-      font-weight: 500; margin-bottom: clamp(14px, 1.8vw, 20px); color: var(--white);
-    }
-    .lp-hero-headline .kw-smarter { color: #FDA4AF; font-family: 'Ubuntu', sans-serif; font-weight: 400; font-size: 0.92em; }
-    .lp-hero-headline .kw-faster { color: #FB7185; font-family: 'Playfair Display', serif; font-style: italic; font-weight: 600; }
-    .lp-hero-headline .kw-better { color: #F43F5E; font-family: 'Playfair Display', serif; font-weight: 800; }
-    .lp-hero-sub {
-      font-size: clamp(13px, 1.2vw, 15px); line-height: 1.65;
-      color: rgba(255,255,255,0.75); max-width: 440px; margin-bottom: clamp(18px, 2.5vw, 28px);
-    }
-    .lp-hero-cta {
-      display: inline-block; background: var(--red); color: var(--white);
-      padding: clamp(12px, 1.5vw, 16px) clamp(20px, 3vw, 32px);
-      font-family: 'DM Sans', sans-serif; font-size: clamp(12px, 1.2vw, 14px);
-      font-weight: 500; text-decoration: none; border-radius: 2px;
-      letter-spacing: 0.04em; transition: background 0.2s; align-self: flex-start;
-    }
-    .lp-hero-cta:hover { background: var(--red-dark); }
-    .lp-hero-stats {
-      margin-top: clamp(24px, 3vw, 36px); padding-top: clamp(16px, 2vw, 24px);
-      border-top: 1px solid rgba(255,255,255,0.2); display: flex; gap: clamp(20px, 3vw, 36px);
-    }
-    .lp-stat-num { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3.2vw, 38px); font-weight: 500; color: var(--red); }
-    .lp-stat-label { font-size: clamp(9px, 1vw, 11px); color: rgba(255,255,255,0.6); letter-spacing: 0.05em; margin-top: 2px; }
-    @media (max-width: 900px) {
-      .lp-hero-eyebrow { font-size: 9px; margin-bottom: 14px; padding-top: 12px; color: #e63946; }
-      .lp-hero-eyebrow::before { background: #e63946; }
-      .lp-hero-headline { font-size: clamp(32px, 9vw, 42px); margin-bottom: 14px; line-height: 1.15; }
-      .lp-hero-headline .kw-smarter { color: #FDA4AF; font-family: 'Ubuntu', sans-serif; font-weight: 400; font-size: 0.92em; }
-      .lp-hero-headline .kw-faster { color: #FB7185; font-style: italic; font-weight: 600; }
-      .lp-hero-headline .kw-better { color: #F43F5E; font-weight: 800; }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { -webkit-font-smoothing: antialiased; }
+    .mobile-br { display: none; }
+    @media (max-width: 768px) {
       .mobile-br { display: block; }
-      .lp-hero-sub { font-size: 12px; line-height: 1.55; margin-bottom: 18px; }
-      .lp-hero-cta { align-self: center; padding: 14px 32px; font-size: 14px; font-weight: 600; white-space: nowrap; background: #FF1200; }
-      .lp-hero-stats { margin-top: auto; padding-top: 14px; padding-bottom: 8px; justify-content: space-around; gap: 0; text-align: center; }
-      .lp-hero-stats > div { flex: 1; }
-      .lp-stat-num { font-size: 24px; color: var(--white); }
-      .lp-stat-label { font-size: 9px; }
     }
-
-    /* SECTION SHARED */
-    .lp-section { padding: clamp(48px, 6vw, 72px) clamp(20px, 4vw, 40px); border-bottom: 1px solid var(--gray-light); }
-    .lp-section-label { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); margin-bottom: 12px; font-weight: 500; display: flex; align-items: center; gap: 10px; }
-    .lp-section-label::after { content: ''; flex: 1; height: 1px; background: var(--gray-light); }
-    .lp-section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3.5vw, 38px); font-weight: 500; line-height: 1.15; margin-bottom: 16px; }
-    .lp-section-sub { font-size: 15px; color: var(--gray-mid); line-height: 1.75; max-width: 560px; }
-    .lp-section-cta { display: inline-block; margin-top: 28px; background: var(--red); color: var(--white); padding: 14px 28px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; text-decoration: none; border-radius: 2px; letter-spacing: 0.04em; transition: background 0.2s; }
-    .lp-section-cta:hover { background: var(--red-dark); }
-    .lp-center { text-align: center; }
-    .lp-center .lp-section-sub { margin-left: auto; margin-right: auto; }
-    .lp-center .lp-section-label::after { display: none; }
-    .lp-center .lp-section-label { justify-content: center; }
-
-    /* TESTIMONIALS */
-    .lp-testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 32px; }
-    .lp-testimonial-card { padding: 28px 24px; border: 1px solid var(--gray-light); margin: -1px 0 0 -1px; }
-    .lp-testimonial-result { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 500; color: var(--red); margin-bottom: 10px; }
-    .lp-testimonial-stars { color: var(--red); font-size: 13px; letter-spacing: 2px; margin-bottom: 14px; }
-    .lp-testimonial-text { font-size: 13px; line-height: 1.8; color: var(--gray-mid); margin-bottom: 16px; font-style: italic; }
-    .lp-testimonial-name { font-size: 12px; font-weight: 500; color: var(--black); }
-    .lp-testimonial-loc { font-size: 11px; color: var(--gray-mid); margin-top: 2px; }
-
-    /* PAIN POINTS */
-    .lp-pain-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3vw, 32px); font-weight: 500; line-height: 1.2; margin-bottom: 32px; }
-    .lp-pain-headline em { font-style: italic; color: var(--red); }
-    .lp-pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
-    .lp-pain-card { padding: 28px 24px; border: 1px solid var(--gray-light); margin: -1px 0 0 -1px; text-align: center; }
-    .lp-pain-icon { font-size: 28px; margin-bottom: 12px; display: inline-flex; width: 56px; height: 56px; align-items: center; justify-content: center; background: #fdecea; border-radius: 50%; color: var(--red); }
-    .lp-pain-title { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
-    .lp-pain-text { font-size: 13px; color: var(--gray-mid); line-height: 1.6; }
-
-    /* ZILLOW COMPARISON (UVP1) */
-    .lp-uvp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-top: 32px; }
-    .lp-uvp-copy { font-size: 15px; color: var(--gray-mid); line-height: 1.75; }
-    .lp-uvp-copy strong { color: var(--black); }
-    .lp-comparison-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-    .lp-comparison-table th { text-align: left; padding: 10px 14px; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray-mid); border-bottom: 2px solid var(--gray-light); }
-    .lp-comparison-table td { padding: 12px 14px; border-bottom: 1px solid var(--gray-light); }
-    .lp-comparison-table .zillow-price { text-decoration: line-through; color: var(--gray-mid); }
-    .lp-comparison-table .tyler-price { font-weight: 600; color: var(--black); }
-    .lp-diff-positive { background: var(--green-bg); color: var(--green); font-size: 12px; font-weight: 500; padding: 3px 8px; border-radius: 2px; display: inline-block; }
-    .lp-diff-negative { background: #fdecea; color: var(--red); font-size: 12px; font-weight: 500; padding: 3px 8px; border-radius: 2px; display: inline-block; }
-    .lp-callout { background: var(--gray-bg); border-left: 3px solid var(--red); padding: 16px 20px; margin-top: 20px; font-size: 13px; color: var(--gray-mid); line-height: 1.7; }
-    .lp-callout strong { color: var(--black); }
-    .lp-tagline { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; color: var(--black); margin-top: 20px; font-style: italic; }
-
-    /* VS COMPARISON (UVP2) */
-    .lp-vs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 32px; }
-    .lp-vs-card { padding: 32px 28px; border: 1px solid var(--gray-light); }
-    .lp-vs-card.dark { background: var(--black); color: var(--white); border-color: var(--black); }
-    .lp-vs-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; margin-bottom: 20px; }
-    .lp-vs-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; font-size: 13px; line-height: 1.6; }
-    .lp-vs-x { color: var(--red); font-weight: 600; min-width: 18px; }
-    .lp-vs-check { color: #4caf50; font-weight: 600; min-width: 18px; }
-    .lp-vs-result { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--gray-light); font-size: 13px; font-weight: 500; }
-    .lp-vs-card.dark .lp-vs-result { border-color: rgba(255,255,255,0.15); color: var(--red); }
-
-    /* 30 vs YOU (UVP3) */
-    .lp-focus-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-top: 32px; }
-    .lp-focus-visual { text-align: center; }
-    .lp-crowd { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; padding: 24px; background: var(--gray-bg); border: 1px solid var(--gray-light); margin-bottom: 20px; }
-    .lp-crowd-dot { width: 20px; height: 20px; border-radius: 50%; background: var(--gray-light); }
-    .lp-crowd-label { font-size: 12px; color: var(--gray-mid); }
-    .lp-you-box { padding: 32px; background: var(--black); border: 1px solid var(--black); text-align: center; }
-    .lp-you-dot { width: 40px; height: 40px; border-radius: 50%; background: var(--red); margin: 0 auto 10px; }
-    .lp-you-label { font-size: 14px; color: var(--white); font-weight: 500; }
-    .lp-commitment-cards { display: flex; flex-direction: column; gap: 0; }
-    .lp-commitment-card { padding: 20px 24px; border: 1px solid var(--gray-light); margin-top: -1px; }
-    .lp-commitment-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
-    .lp-commitment-text { font-size: 13px; color: var(--gray-mid); line-height: 1.6; }
-
-    /* SOLUTION CARDS */
-    .lp-solution-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 32px; }
-    .lp-solution-card { padding: 28px 24px; border: 1px solid var(--gray-light); margin: -1px 0 0 -1px; text-align: center; }
-    .lp-solution-icon { font-size: 28px; margin-bottom: 12px; display: inline-flex; width: 56px; height: 56px; align-items: center; justify-content: center; background: var(--green-bg); border-radius: 50%; color: var(--green); }
-    .lp-solution-title { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
-    .lp-solution-text { font-size: 13px; color: var(--gray-mid); line-height: 1.6; }
-
-    /* PROCESS TIMELINE */
-    .lp-timeline { margin-top: 40px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
-    .lp-timeline-step { padding: 24px; border: 1px solid var(--gray-light); margin: -1px 0 0 -1px; }
-    .lp-step-num { font-family: 'Cormorant Garamond', serif; font-size: 28px; color: var(--red); opacity: 0.3; margin-bottom: 8px; }
-    .lp-step-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
-    .lp-step-text { font-size: 13px; color: var(--gray-mid); line-height: 1.6; }
-
-    /* FAQ */
-    .lp-faq-list { margin-top: 32px; max-width: 640px; }
-    .lp-center .lp-faq-list { margin-left: auto; margin-right: auto; }
-    .lp-faq-item { border-bottom: 1px solid var(--gray-light); }
-    .lp-faq-question { width: 100%; text-align: left; background: none; border: none; padding: 18px 0; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; color: var(--black); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-    .lp-faq-question:hover { color: var(--red); }
-    .lp-faq-arrow { font-size: 18px; transition: transform 0.2s; color: var(--gray-mid); }
-    .lp-faq-answer { display: none; padding: 0 0 18px; font-size: 14px; color: var(--gray-mid); line-height: 1.75; }
-    .lp-faq-item.open .lp-faq-answer { display: block; }
-    .lp-faq-item.open .lp-faq-arrow { transform: rotate(45deg); }
-
-    /* BOOKING FORM */
-    .lp-booking { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--gray-light); scroll-margin-top: 57px; }
-    .lp-booking-left { padding: 64px 48px 64px 40px; background: var(--black); color: var(--white); border-right: 1px solid rgba(255,255,255,0.1); }
-    .lp-booking-left .lp-section-label { color: var(--red); }
-    .lp-booking-left .lp-section-label::after { background: rgba(255,255,255,0.12); }
-    .lp-booking-left .lp-section-title { color: var(--white); }
-    .lp-booking-benefits { margin-top: 28px; }
-    .lp-benefit { display: flex; gap: 12px; margin-bottom: 16px; font-size: 14px; color: rgba(255,255,255,0.8); line-height: 1.6; }
-    .lp-benefit-check { color: var(--red); font-weight: 600; min-width: 18px; }
-    .lp-booking-right { padding: 64px 40px 64px 48px; }
-    .lp-form-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 500; margin-bottom: 8px; }
-    .lp-form-sub { font-size: 13px; color: var(--gray-mid); margin-bottom: 24px; line-height: 1.65; }
-    .lp-form-row { margin-bottom: 16px; }
-    .lp-form-row label { display: block; font-size: 10px; letter-spacing: 0.1em; color: var(--gray-mid); margin-bottom: 6px; text-transform: uppercase; }
-    .lp-form-row input, .lp-form-row select { width: 100%; padding: 12px 14px; background: var(--gray-bg); border: 1px solid var(--gray-light); border-radius: 2px; font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--black); transition: border-color 0.2s; }
-    .lp-form-row input:focus, .lp-form-row select:focus { outline: none; border-color: var(--red); }
-    .lp-form-row input.error { border-color: var(--red); }
-    .lp-form-error { display: none; font-size: 11px; color: var(--red); margin-top: 4px; }
-    .lp-form-error.show { display: block; }
-    .lp-form-submit { width: 100%; background: var(--red); color: var(--white); border: none; padding: 14px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; cursor: pointer; margin-top: 8px; border-radius: 2px; letter-spacing: 0.06em; transition: background 0.2s; }
-    .lp-form-submit:hover { background: var(--red-dark); }
-    .lp-form-social-proof { margin-top: 14px; font-size: 12px; color: var(--gray-mid); text-align: center; line-height: 1.5; font-style: italic; }
-    .lp-form-success { display: none; background: var(--green-bg); border: 1px solid #b7dfca; border-radius: 2px; padding: 20px; font-size: 14px; color: var(--green); text-align: center; }
-    .lp-form-disclaimer { margin-top: 12px; font-size: 11px; color: var(--gray-mid); text-align: center; }
-
-    /* FOOTER */
-    .lp-footer { background: var(--black); color: rgba(255,255,255,0.45); padding: 32px 40px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; }
-    .lp-footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; color: var(--white); }
-    .lp-footer a { color: var(--red); text-decoration: none; }
-    .lp-footer-link { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 12px; }
-    .lp-footer-link:hover { color: var(--white); }
-
-    /* MOBILE */
-    @media (max-width: 900px) {
-      .lp-nav { padding: 16px 20px; }
-      .lp-hero-content { max-width: 100%; }
-      .lp-testimonials-grid { grid-template-columns: 1fr; }
-      .lp-pain-grid { grid-template-columns: 1fr; }
-      .lp-uvp-grid { grid-template-columns: 1fr; gap: 28px; }
-      .lp-vs-grid { grid-template-columns: 1fr; }
-      .lp-focus-grid { grid-template-columns: 1fr; gap: 28px; }
-      .lp-solution-grid { grid-template-columns: 1fr; }
-      .lp-timeline { grid-template-columns: 1fr; }
-      .lp-booking { grid-template-columns: 1fr; }
-      .lp-booking-left { padding: 48px 20px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
-      .lp-booking-right { padding: 48px 20px; }
-      .lp-footer { flex-direction: column; gap: 12px; text-align: center; padding: 28px 20px; }
-    }
+    /* FAQ accordion */
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; padding: 0 1.5rem; }
+    .faq-item.open .faq-answer { max-height: 300px; padding: 0 1.5rem 1.25rem; }
+    .faq-item.open .faq-arrow { transform: rotate(45deg); }
+    .faq-arrow { transition: transform 0.2s; }
+    /* Form error states */
+    .form-error { display: none; font-size: 0.6875rem; color: #E2001A; margin-top: 4px; }
+    .form-error.show { display: block; }
+    input.error, select.error { border-color: #E2001A !important; }
   </style>
 </head>
-<body>
+<body class="font-sans text-[#111111] bg-white leading-relaxed">
 
-  <!-- NAV -->
-  <nav class="lp-nav">
-    <a href="#" class="lp-nav-logo">
-      Mr. Sellers Homes
-      <span>Bergen County, NJ &middot; RE/MAX</span>
-    </a>
-    <a href="#book" class="lp-nav-cta">Book your free call</a>
+  <!-- ============ NAV ============ -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <a href="#" class="no-underline">
+        <div class="font-playfair text-lg sm:text-xl font-semibold text-[#111]">Mr. Sellers Homes</div>
+        <div class="text-[9px] sm:text-[10px] tracking-[0.12em] uppercase text-[#111]/50">Bergen County, NJ &middot; RE/MAX</div>
+      </a>
+      <a href="#book" class="bg-primary hover:bg-primary-dark text-white text-xs sm:text-sm font-medium px-4 sm:px-5 py-2.5 rounded-sm transition-colors no-underline whitespace-nowrap">
+        Book your free call
+      </a>
+    </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="lp-hero">
-    <div class="lp-hero-bg"><img src="tyler-hero-bg.png" alt="" /></div>
-    <div class="lp-hero-content">
-      <div class="lp-hero-top">
-        <div class="lp-hero-eyebrow">Bergen County Real Estate</div>
-        <h1 class="lp-hero-headline">
-          Buy or Sell Your<br class="mobile-br"> Home <span class="kw-smarter">Smarter</span>,<br class="mobile-br"> <span class="kw-faster">Faster</span>, and at a<br class="mobile-br"> <span class="kw-better">Better Price</span>.
+  <!-- ============ HERO ============ -->
+  <section class="relative min-h-[75vh] flex items-center overflow-hidden mt-[57px]" id="hero">
+    <!-- Background image -->
+    <div class="absolute inset-0 bg-cover bg-no-repeat" style="background-image: url('https://media.base44.com/images/public/69c1bd8f6c9a0d59f49e9a47/3aace292f_Tyler_Sellers_Hero_PS.png'); background-position: right top;"></div>
+    <!-- Overlay -->
+    <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(17,17,17,0.93) 0%, rgba(17,17,17,0.82) 40%, rgba(17,17,17,0.45) 62%, rgba(17,17,17,0.12) 100%), linear-gradient(to top, rgba(17,17,17,0.4) 0%, transparent 40%);"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 pt-10 sm:pt-16 pb-6 w-full">
+      <div class="max-w-[600px]">
+        <!-- Eyebrow -->
+        <div class="flex items-center gap-2.5 mb-4">
+          <div class="w-7 h-0.5 bg-primary"></div>
+          <span class="text-primary text-[10px] sm:text-xs font-medium tracking-[0.18em] uppercase">Bergen County Real Estate</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="font-playfair text-[clamp(32px,9vw,68px)] leading-[1.08] font-medium text-white mb-4 sm:mb-5">
+          Buy or Sell Your<br class="mobile-br"> Home <span class="font-ubuntu font-light text-[#FDA4AF]" style="font-size:0.92em;">Smarter</span>,<br class="mobile-br"> <span class="font-playfair italic font-semibold text-[#FB7185]">Faster</span>, and at a<br class="mobile-br"> <span class="font-playfair font-extrabold text-[#F43F5E]">Better Price</span>.
         </h1>
-        <p class="lp-hero-sub">
+
+        <!-- Subheading -->
+        <p class="text-white/75 text-sm sm:text-[15px] leading-relaxed max-w-[440px] mb-5 sm:mb-7">
           Hyper-local expertise across all 70 Bergen County municipalities.
           Honest pricing. A concierge experience built around your timeline.
         </p>
-        <a href="#book" class="lp-hero-cta">Book your free strategy call &rarr;</a>
+
+        <!-- CTA -->
+        <a href="#book" class="inline-block bg-[#FF1200] hover:bg-primary-dark text-white px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-[15px] font-medium rounded-sm transition-colors no-underline tracking-wide">
+          Book your free strategy call &rarr;
+        </a>
+
+        <!-- Stats -->
+        <div class="flex gap-8 sm:gap-10 mt-8 sm:mt-10 pt-5 border-t border-white/20">
+          <div class="text-center sm:text-left">
+            <div class="font-playfair text-2xl sm:text-4xl font-medium text-primary hero-stat-num">6+</div>
+            <div class="text-[9px] sm:text-[11px] text-white/60 tracking-wide mt-0.5">Years Active</div>
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-playfair text-2xl sm:text-4xl font-medium text-primary hero-stat-num">33+</div>
+            <div class="text-[9px] sm:text-[11px] text-white/60 tracking-wide mt-0.5">Homes Sold</div>
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-playfair text-2xl sm:text-4xl font-medium text-primary hero-stat-num">5M+</div>
+            <div class="text-[9px] sm:text-[11px] text-white/60 tracking-wide mt-0.5">Video Views</div>
+          </div>
+        </div>
       </div>
-      <div class="lp-hero-stats">
+
+      <!-- Desktop testimonial card -->
+      <div class="hidden lg:block absolute right-12 top-1/2 -translate-y-1/2">
+        <div class="bg-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-6 max-w-[340px]">
+          <div class="text-xs font-bold text-white mb-3 uppercase tracking-widest">Client Feedback</div>
+          <p class="text-white/85 text-sm leading-relaxed italic">
+            &ldquo;Tyler is fantastic, he goes above and beyond for his clients&hellip; Besides being my realtor, <strong class="text-white text-base">I feel I made a <span class="bg-yellow-300 text-black px-1 rounded">friend</span>.</strong>&rdquo;
+          </p>
+          <div class="flex items-center gap-3 mt-4">
+            <img src="https://media.base44.com/images/public/69c1bd8f6c9a0d59f49e9a47/0bfcf2099_generated_image.png" alt="Linda Rutledge" class="w-9 h-9 rounded-full object-cover" />
+            <div>
+              <div class="font-semibold text-white text-sm">Linda Rutledge</div>
+              <div class="text-white/50 text-xs">Bergen County, NJ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS 1 ============ -->
+  <section class="py-10 sm:py-14 bg-white">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6">
+      <h2 class="font-playfair text-2xl md:text-3xl font-bold text-[#111] text-center mb-8">
+        Real People. Real Bergen County Results.
+      </h2>
+      <div class="grid md:grid-cols-3 gap-5">
+        <!-- Testimonial 1 -->
+        <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 flex flex-col">
+          <div class="font-ubuntu text-lg md:text-xl font-bold text-primary leading-tight mb-3">&ldquo;Purchased $11K under asking&rdquo;</div>
+          <div class="flex gap-0.5 mb-1.5 text-primary text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="flex items-center gap-1 mb-3">
+            <span class="text-[10px] text-gray-400">Verified on</span>
+            <img src="https://media.base44.com/images/public/69c1bd8f6c9a0d59f49e9a47/561bd50a7_Zillow_id5aqCETJk_1.png" alt="Zillow" class="h-3 w-auto" />
+          </div>
+          <p class="text-gray-500 text-sm leading-relaxed italic flex-1">
+            &ldquo;As a single mother, I was very nervous about buying my first home. Tyler explained the process and walked me through all the steps &mdash; I was able to purchase my home about $11k under asking!&rdquo;
+          </p>
+          <div class="mt-4">
+            <div class="font-semibold text-[#111] text-sm">Jessica Batista</div>
+            <div class="text-gray-400 text-xs">Hackensack, NJ</div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 flex flex-col">
+          <div class="font-ubuntu text-lg md:text-xl font-bold text-primary leading-tight mb-3">&ldquo;Multiple competing offers within days&rdquo;</div>
+          <div class="flex gap-0.5 mb-1.5 text-primary text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="flex items-center gap-1 mb-3">
+            <span class="text-[10px] text-gray-400">Verified on</span>
+            <img src="https://media.base44.com/images/public/69c1bd8f6c9a0d59f49e9a47/561bd50a7_Zillow_id5aqCETJk_1.png" alt="Zillow" class="h-3 w-auto" />
+          </div>
+          <p class="text-gray-500 text-sm leading-relaxed italic flex-1">
+            &ldquo;Tyler is the BEST realtor around! We had several competing offers above asking by the end of the first weekend. I would 100% recommend Tyler to anyone.&rdquo;
+          </p>
+          <div class="mt-4">
+            <div class="font-semibold text-[#111] text-sm">Jennifer Lynn-Bjorklund</div>
+            <div class="text-gray-400 text-xs">Morris Twp., NJ</div>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 flex flex-col">
+          <div class="font-ubuntu text-lg md:text-xl font-bold text-primary leading-tight mb-3">&ldquo;Toured 21 towns to find our home&rdquo;</div>
+          <div class="flex gap-0.5 mb-1.5 text-primary text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="flex items-center gap-1 mb-3">
+            <span class="text-[10px] text-gray-400">Verified on</span>
+            <img src="https://media.base44.com/images/public/69c1bd8f6c9a0d59f49e9a47/561bd50a7_Zillow_id5aqCETJk_1.png" alt="Zillow" class="h-3 w-auto" />
+          </div>
+          <p class="text-gray-500 text-sm leading-relaxed italic flex-1">
+            &ldquo;Tyler made this experience 10x easier. He showed the utmost patience, taking us to 21 different towns in Bergen County. We found a home we absolutely love.&rdquo;
+          </p>
+          <div class="mt-4">
+            <div class="font-semibold text-[#111] text-sm">Rashida Estevez</div>
+            <div class="text-gray-400 text-xs">Bogota, NJ</div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center mt-8">
+        <a href="#book" class="inline-flex items-center gap-2 bg-[#FF1200] hover:bg-primary-dark text-white font-medium text-sm px-8 py-3.5 rounded-sm transition-all no-underline shadow-lg">
+          Book Your Free Strategy Call
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PAIN POINTS / FLOW CHART ============ -->
+  <section class="py-12 sm:py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-5 sm:px-6 text-center">
+      <h2 class="font-playfair text-3xl md:text-4xl font-extrabold text-[#111] mb-5">The Hard Truth</h2>
+      <div class="flex flex-col items-center gap-1 mb-10">
+        <h3 class="text-xl md:text-2xl font-bold text-[#111]">
+          Most Sellers <span class="font-playfair italic text-primary text-2xl md:text-3xl">Leave Thousands</span> on the Table
+        </h3>
+        <p class="font-playfair text-lg font-bold text-[#111]">&amp;</p>
+        <h3 class="text-xl md:text-2xl font-bold text-[#111]">
+          Most Buyers Pay <span class="font-playfair italic text-primary text-2xl md:text-3xl">More Than Necessary</span>
+        </h3>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-5 sm:px-6">
+      <div class="grid md:grid-cols-3 gap-4">
+        <!-- Pain 1 -->
+        <div class="bg-white rounded-2xl p-6 sm:p-8 text-center flex flex-col items-center">
+          <div class="relative w-14 h-14 mb-5">
+            <div class="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div class="absolute -top-2 -right-2 w-7 h-7 bg-red-600 rounded-full flex items-center justify-center shadow-lg">
+              <span class="text-white font-extrabold text-sm leading-none">&times;</span>
+            </div>
+          </div>
+          <h3 class="font-playfair text-xl font-bold text-[#111] mb-3">Poorly Priced Listings</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Algorithms miss what makes your property unique. Sellers leave money on the table while buyers overpay.</p>
+        </div>
+        <!-- Pain 2 -->
+        <div class="bg-white rounded-2xl p-6 sm:p-8 text-center flex flex-col items-center">
+          <div class="relative w-14 h-14 mb-5">
+            <div class="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="absolute -top-2 -right-2 w-7 h-7 bg-red-600 rounded-full flex items-center justify-center shadow-lg">
+              <span class="text-white font-extrabold text-sm leading-none">&times;</span>
+            </div>
+          </div>
+          <h3 class="font-playfair text-xl font-bold text-[#111] mb-3">No Hyper-Local Insight</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Generic agents cover too wide an area to know your street, school zone, or commute. Missed opportunities cost you.</p>
+        </div>
+        <!-- Pain 3 -->
+        <div class="bg-white rounded-2xl p-6 sm:p-8 text-center flex flex-col items-center">
+          <div class="relative w-14 h-14 mb-5">
+            <div class="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <div class="absolute -top-2 -right-2 w-7 h-7 bg-red-600 rounded-full flex items-center justify-center shadow-lg">
+              <span class="text-white font-extrabold text-sm leading-none">&times;</span>
+            </div>
+          </div>
+          <h3 class="font-playfair text-xl font-bold text-[#111] mb-3">Weak Negotiation</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Without preparation and fast action, you lose leverage the moment offers come in. Most agents accept the first offer.</p>
+        </div>
+      </div>
+      <div class="flex justify-center mt-10">
+        <a href="#book" class="inline-flex items-center gap-2 bg-[#FF1200] hover:bg-primary-dark text-white font-medium text-sm px-8 py-3.5 rounded-sm transition-all no-underline shadow-lg">
+          Book Your Free Strategy Call
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ UVP1: PRICING INTELLIGENCE ============ -->
+  <section class="py-16 sm:py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Left: Copy -->
         <div>
-          <div class="lp-stat-num">6+</div>
-          <div class="lp-stat-label">Years Active</div>
+          <p class="text-primary font-medium text-xs uppercase tracking-[0.16em] mb-3">Pricing Intelligence</p>
+          <h2 class="font-playfair text-3xl md:text-4xl font-bold text-[#111] mb-4 leading-tight">
+            Don&rsquo;t Let Zillow Cost You Thousands
+          </h2>
+          <p class="text-gray-500 text-base leading-relaxed mb-5">
+            Zillow gives every unit in the same building the same estimate. Tyler prices based on what actually matters &mdash; views, floor level, street position, and micro-market conditions algorithms miss entirely.
+          </p>
+          <div class="bg-gray-50 border-l-[3px] border-primary p-4 mb-4">
+            <p class="text-sm text-gray-600 leading-relaxed"><strong class="text-[#111]">Same building. Same Zillow estimate. Wildly different real values.</strong> Only hyper-local expertise can tell the difference.</p>
+          </div>
+          <p class="flex items-center gap-2 text-sm text-[#111] font-medium">
+            <svg class="w-4 h-4 text-green-500 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Priced block by block &mdash; not zip code by zip code.
+          </p>
         </div>
+        <!-- Right: Comparison Table -->
         <div>
-          <div class="lp-stat-num">33+</div>
-          <div class="lp-stat-label">Homes Sold</div>
-        </div>
-        <div>
-          <div class="lp-stat-num">5M+</div>
-          <div class="lp-stat-label">Video Views</div>
+          <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
+            <div class="grid grid-cols-4 text-[10px] font-semibold text-gray-400 uppercase tracking-wide mb-3 px-1">
+              <span>Property</span>
+              <span class="text-center">Zillow</span>
+              <span class="text-center">Tyler</span>
+              <span class="text-center">Diff</span>
+            </div>
+            <!-- Row 1 -->
+            <div class="grid grid-cols-4 items-center bg-white rounded-lg px-4 py-3 mb-2 border border-gray-200">
+              <div class="flex items-center gap-2">
+                <svg class="w-3.5 h-3.5 text-primary shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span class="text-xs text-[#111] leading-tight">River View Unit</span>
+              </div>
+              <div class="text-center text-sm text-gray-400 line-through">$580K</div>
+              <div class="text-center text-sm font-bold text-[#111]">$720K</div>
+              <div class="text-center"><span class="bg-green-100 text-green-700 text-[10px] font-semibold px-1.5 py-0.5 rounded-full">+$140K</span></div>
+            </div>
+            <!-- Row 2 -->
+            <div class="grid grid-cols-4 items-center bg-white rounded-lg px-4 py-3 mb-2 border border-gray-200">
+              <div class="flex items-center gap-2">
+                <svg class="w-3.5 h-3.5 text-primary shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span class="text-xs text-[#111] leading-tight">Highway-Facing</span>
+              </div>
+              <div class="text-center text-sm text-gray-400 line-through">$580K</div>
+              <div class="text-center text-sm font-bold text-[#111]">$495K</div>
+              <div class="text-center"><span class="bg-red-100 text-red-700 text-[10px] font-semibold px-1.5 py-0.5 rounded-full">-$85K</span></div>
+            </div>
+            <!-- Row 3 -->
+            <div class="grid grid-cols-4 items-center bg-white rounded-lg px-4 py-3 border border-gray-200">
+              <div class="flex items-center gap-2">
+                <svg class="w-3.5 h-3.5 text-primary shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span class="text-xs text-[#111] leading-tight">Corner Lot</span>
+              </div>
+              <div class="text-center text-sm text-gray-400 line-through">$580K</div>
+              <div class="text-center text-sm font-bold text-[#111]">$655K</div>
+              <div class="text-center"><span class="bg-green-100 text-green-700 text-[10px] font-semibold px-1.5 py-0.5 rounded-full">+$75K</span></div>
+            </div>
+            <p class="text-[11px] text-gray-400 text-center mt-3 italic">* Illustrative example based on Bergen County micro-market pricing</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS 1 -->
-  <section class="lp-section">
-    <div class="lp-section-label">What clients say</div>
-    <h2 class="lp-section-title">Real people. Real Bergen County results.</h2>
-    <div class="lp-testimonials-grid">
-      <div class="lp-testimonial-card">
-        <div class="lp-testimonial-result">Purchased $11K under asking</div>
-        <div class="lp-testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="lp-testimonial-text">
-          &ldquo;Tyler&rsquo;s knowledge of the local market helped us secure our dream home
-          well under asking price. His negotiation skills are unmatched.&rdquo;
+  <!-- ============ UVP2: MOST REALTORS vs TYLER ============ -->
+  <section class="py-16 sm:py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6">
+      <div class="text-center mb-10">
+        <p class="text-primary font-medium text-xs uppercase tracking-[0.16em] mb-3">Market Strategy</p>
+        <h2 class="font-playfair text-3xl md:text-4xl font-bold text-[#111] leading-tight max-w-3xl mx-auto">
+          Your Agent Should Be Your Economist
+        </h2>
+        <p class="text-gray-500 text-base mt-4 max-w-2xl mx-auto leading-relaxed">
+          Most agents list and hope. Tyler analyzes rates, inventory, and demand &mdash; then prices accordingly.
         </p>
-        <div class="lp-testimonial-name">Jessica Batista</div>
-        <div class="lp-testimonial-loc">Hackensack, NJ</div>
       </div>
-      <div class="lp-testimonial-card">
-        <div class="lp-testimonial-result">Multiple offers within days</div>
-        <div class="lp-testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="lp-testimonial-text">
-          &ldquo;He had professional photos, the listing live, and we had
-          competing offers above asking by the end of the first weekend.&rdquo;
+
+      <div class="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
+        <!-- Most Realtors -->
+        <div class="bg-white border border-gray-200 rounded-xl p-6">
+          <div class="flex items-center gap-2 mb-5">
+            <div class="w-7 h-7 rounded-full bg-red-100 flex items-center justify-center">
+              <svg class="w-3.5 h-3.5 text-red-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </div>
+            <h3 class="font-bold text-base text-[#111]">Most Realtors</h3>
+          </div>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-red-400 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span class="text-sm text-gray-500">Yard sign + MLS listing</span></li>
+            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-red-400 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span class="text-sm text-gray-500">Gut-feel pricing</span></li>
+            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-red-400 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span class="text-sm text-gray-500">No macro-economic analysis</span></li>
+            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-red-400 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span class="text-sm text-gray-500">Ignore interest rate cycles</span></li>
+            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-red-400 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span class="text-sm text-gray-500">Miss inventory shift signals</span></li>
+          </ul>
+          <div class="mt-5 bg-red-50 rounded-lg px-4 py-3 flex items-center gap-2">
+            <svg class="w-4 h-4 text-red-500 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg>
+            <span class="text-xs text-red-700 font-semibold">Result: Wrong price. Longer days on market. Less money.</span>
+          </div>
+        </div>
+
+        <!-- Tyler's Approach -->
+        <div class="bg-[#111] rounded-xl p-6 text-white">
+          <div class="flex items-center gap-2 mb-5">
+            <div class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center">
+              <svg class="w-3.5 h-3.5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3 class="font-bold text-base text-white">Tyler&rsquo;s Approach</h3>
+          </div>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-primary shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-sm text-white/85">Data-driven pricing strategy</span></li>
+            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-primary shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-sm text-white/85">Real-time economic analysis</span></li>
+            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-primary shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-sm text-white/85">Tracks interest rate &amp; inventory cycles</span></li>
+            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-primary shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-sm text-white/85">Neighborhood-level demand signals</span></li>
+            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-primary shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-sm text-white/85">Priced right the first time</span></li>
+          </ul>
+          <div class="mt-5 bg-white/10 rounded-lg px-4 py-3 flex items-center gap-2">
+            <svg class="w-4 h-4 text-primary shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <span class="text-xs text-white font-semibold">Result: Precision pricing. Faster sale. Maximum proceeds.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center mt-10">
+        <a href="#book" class="inline-flex items-center gap-2 bg-[#FF1200] hover:bg-primary-dark text-white font-medium text-sm px-8 py-3.5 rounded-sm transition-all no-underline shadow-lg">
+          Book Your Free Strategy Call
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ UVP3: TOTAL COMMITMENT ============ -->
+  <section class="py-16 sm:py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6">
+      <div class="mb-10">
+        <p class="text-primary font-medium text-xs uppercase tracking-[0.16em] mb-3">Total Commitment</p>
+        <h2 class="font-playfair text-3xl md:text-4xl font-bold text-[#111] mb-4 leading-tight">
+          Agent vs. True Advocate
+        </h2>
+        <p class="text-gray-500 text-base leading-relaxed max-w-2xl">
+          Most agents juggle 20-30 clients. Tyler limits his roster so every client gets his full attention, proactive communication, and relentless negotiation.
         </p>
-        <div class="lp-testimonial-name">Jennifer Lynn-Bjorklund</div>
-        <div class="lp-testimonial-loc">Morris Township, NJ</div>
       </div>
-      <div class="lp-testimonial-card">
-        <div class="lp-testimonial-result">Found home after touring 21 towns</div>
-        <div class="lp-testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="lp-testimonial-text">
-          &ldquo;Tyler toured 21 different towns with us and never rushed the process.
-          We found our forever home because he understood exactly what we needed.&rdquo;
-        </p>
-        <div class="lp-testimonial-name">Rashida Estevez</div>
-        <div class="lp-testimonial-loc">Bogota, NJ</div>
-      </div>
-    </div>
-    <div class="lp-center" style="margin-top:28px;">
-      <a href="#book" class="lp-section-cta" style="margin-top:0;">Book your free strategy call &rarr;</a>
-    </div>
-  </section>
 
-  <!-- PAIN POINTS -->
-  <section class="lp-section" style="background:var(--gray-bg);">
-    <div class="lp-center">
-      <div class="lp-section-label">The hard truth</div>
-      <div class="lp-pain-headline">
-        Most sellers <em>leave thousands on the table.</em><br>
-        Most buyers <em>pay more than necessary.</em>
+      <!-- Commitment cards -->
+      <div class="space-y-3 mb-10 max-w-2xl">
+        <div class="flex items-start gap-4 bg-gray-50 border border-gray-200 rounded-lg p-4">
+          <div class="w-9 h-9 rounded-full bg-red-50 flex items-center justify-center shrink-0">
+            <svg class="w-4 h-4 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-bold text-sm text-[#111] mb-1">Same-Day Response</h4>
+            <p class="text-sm text-gray-500">Tyler picks up the phone. No assistants, no call centers &mdash; direct access from day one.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-gray-50 border border-gray-200 rounded-lg p-4">
+          <div class="w-9 h-9 rounded-full bg-red-50 flex items-center justify-center shrink-0">
+            <svg class="w-4 h-4 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-bold text-sm text-[#111] mb-1">Proactive Communication</h4>
+            <p class="text-sm text-gray-500">Weekly check-ins and real-time updates &mdash; you never have to wonder where things stand.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-gray-50 border border-gray-200 rounded-lg p-4">
+          <div class="w-9 h-9 rounded-full bg-red-50 flex items-center justify-center shrink-0">
+            <svg class="w-4 h-4 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div>
+            <h4 class="font-bold text-sm text-[#111] mb-1">Relentless Negotiation</h4>
+            <p class="text-sm text-gray-500">Every deal treated like his own. $15K under asking in the 2024-2025 NJ market.</p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="lp-pain-grid">
-      <div class="lp-pain-card">
-        <div class="lp-pain-icon">$</div>
-        <div class="lp-pain-title">Poorly priced listings</div>
-        <p class="lp-pain-text">Generic algorithms miss what makes your property unique &mdash; or overpriced.</p>
-      </div>
-      <div class="lp-pain-card">
-        <div class="lp-pain-icon">&#9906;</div>
-        <div class="lp-pain-title">No hyper-local insight</div>
-        <p class="lp-pain-text">Most agents cover too wide an area to know your street, your school zone, your commute.</p>
-      </div>
-      <div class="lp-pain-card">
-        <div class="lp-pain-icon">!</div>
-        <div class="lp-pain-title">Weak negotiation</div>
-        <p class="lp-pain-text">Without preparation and fast action, you lose leverage the moment offers come in.</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- UVP1: ZILLOW COMPARISON -->
-  <section class="lp-section">
-    <div class="lp-section-label">Pricing intelligence</div>
-    <h2 class="lp-section-title">Don&rsquo;t let Zillow cost you thousands.</h2>
-    <div class="lp-uvp-grid">
-      <div>
-        <p class="lp-uvp-copy">
-          <strong>Zillow gives every unit in the same building the same estimate.</strong>
-          Tyler prices based on what actually matters &mdash; views, floor level, street position,
-          and micro-market conditions that algorithms miss entirely.
-        </p>
-        <div class="lp-callout">
-          <strong>Same building. Same Zillow estimate. Wildly different real values.</strong>
-          This is why hyper-local pricing matters.
+      <!-- Agent load visual -->
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="bg-gray-50 border border-gray-200 rounded-xl p-5">
+          <div class="flex items-center gap-2 mb-4">
+            <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span class="font-semibold text-sm text-gray-500">Typical Agent&rsquo;s Client Load</span>
+          </div>
+          <div class="flex flex-wrap gap-1.5">
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
+          </div>
+          <p class="text-xs text-gray-400 mt-3 italic">30 clients. Divided attention. Divided results.</p>
         </div>
-        <div class="lp-tagline">Priced block by block &mdash; not zip code by zip code.</div>
-      </div>
-      <div>
-        <table class="lp-comparison-table">
-          <thead>
-            <tr>
-              <th>Property</th>
-              <th>Zillow</th>
-              <th>Tyler</th>
-              <th>Difference</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>River view unit</strong></td>
-              <td class="zillow-price">$580K</td>
-              <td class="tyler-price">$720K</td>
-              <td><span class="lp-diff-positive">+$140K</span></td>
-            </tr>
-            <tr>
-              <td><strong>Highway-facing unit</strong></td>
-              <td class="zillow-price">$580K</td>
-              <td class="tyler-price">$495K</td>
-              <td><span class="lp-diff-negative">-$85K</span></td>
-            </tr>
-            <tr>
-              <td><strong>Corner lot</strong></td>
-              <td class="zillow-price">$580K</td>
-              <td class="tyler-price">$655K</td>
-              <td><span class="lp-diff-positive">+$75K</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
 
-  <!-- UVP2: MOST REALTORS vs TYLER -->
-  <section class="lp-section" style="background:var(--gray-bg);">
-    <div class="lp-center">
-      <div class="lp-section-label">Market strategy</div>
-      <h2 class="lp-section-title">Your agent should be your economist.</h2>
-      <p class="lp-section-sub">Most agents list and hope. Tyler analyzes rates, inventory, and demand &mdash; then prices accordingly.</p>
-    </div>
-    <div class="lp-vs-grid">
-      <div class="lp-vs-card">
-        <h3>Most realtors</h3>
-        <div class="lp-vs-item"><span class="lp-vs-x">&#10005;</span> Yard sign + MLS listing</div>
-        <div class="lp-vs-item"><span class="lp-vs-x">&#10005;</span> Gut-feel pricing</div>
-        <div class="lp-vs-item"><span class="lp-vs-x">&#10005;</span> No macro-economic analysis</div>
-        <div class="lp-vs-item"><span class="lp-vs-x">&#10005;</span> Ignore interest rate cycles</div>
-        <div class="lp-vs-item"><span class="lp-vs-x">&#10005;</span> Miss inventory shift signals</div>
-        <div class="lp-vs-result">Wrong price. Longer days on market. Less money.</div>
-      </div>
-      <div class="lp-vs-card dark">
-        <h3>Tyler&rsquo;s approach</h3>
-        <div class="lp-vs-item"><span class="lp-vs-check">&#10003;</span> Data-driven pricing strategy</div>
-        <div class="lp-vs-item"><span class="lp-vs-check">&#10003;</span> Real-time economic analysis</div>
-        <div class="lp-vs-item"><span class="lp-vs-check">&#10003;</span> Tracks interest rate &amp; inventory cycles</div>
-        <div class="lp-vs-item"><span class="lp-vs-check">&#10003;</span> Neighborhood-level demand signals</div>
-        <div class="lp-vs-item"><span class="lp-vs-check">&#10003;</span> Priced right the first time</div>
-        <div class="lp-vs-result">Precision pricing. Faster sale. Maximum proceeds.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- UVP3: 30 CLIENTS vs YOU -->
-  <section class="lp-section">
-    <div class="lp-section-label">Total commitment</div>
-    <h2 class="lp-section-title">The difference between an agent and a true advocate.</h2>
-    <div class="lp-focus-grid">
-      <div class="lp-focus-visual">
-        <div class="lp-crowd">
-          <div class="lp-crowd-dot"></div><div class="lp-crowd-dot"></div><div class="lp-crowd-dot"></div><div class="lp-crowd-dot"></div><div class="lp-crowd-dot"></div>
-          <div class="lp-crowd-dot"></div><div class="lp-crowd-dot"></div><div class="lp-crowd-dot"></div><div class="lp-crowd-dot"></div><div class="lp-crowd-dot"></div>
-          <div class="lp-crowd-dot"></div><div class="lp-crowd-dot"></div><div class="lp-crowd-dot"></div><div class="lp-crowd-dot"></div><div class="lp-crowd-dot"></div>
-          <div class="lp-crowd-dot"></div><div class="lp-crowd-dot"></div><div class="lp-crowd-dot"></div><div class="lp-crowd-dot"></div><div class="lp-crowd-dot"></div>
-          <div class="lp-crowd-dot"></div><div class="lp-crowd-dot"></div><div class="lp-crowd-dot"></div><div class="lp-crowd-dot"></div><div class="lp-crowd-dot"></div>
-          <div class="lp-crowd-dot"></div><div class="lp-crowd-dot"></div><div class="lp-crowd-dot"></div><div class="lp-crowd-dot"></div><div class="lp-crowd-dot"></div>
-        </div>
-        <div class="lp-crowd-label">Typical agent: 30 clients. Divided attention.</div>
-        <div class="lp-you-box" style="margin-top:16px;">
-          <div class="lp-you-dot"></div>
-          <div class="lp-you-label">You. Tyler&rsquo;s full focus.</div>
-        </div>
-      </div>
-      <div class="lp-commitment-cards">
-        <div class="lp-commitment-card">
-          <div class="lp-commitment-title">Same-day response</div>
-          <p class="lp-commitment-text">Tyler picks up the phone directly. No assistants, no callbacks tomorrow.</p>
-        </div>
-        <div class="lp-commitment-card">
-          <div class="lp-commitment-title">Proactive communication</div>
-          <p class="lp-commitment-text">Weekly check-ins and real-time updates &mdash; you never have to wonder where things stand.</p>
-        </div>
-        <div class="lp-commitment-card">
-          <div class="lp-commitment-title">Relentless negotiation</div>
-          <p class="lp-commitment-text">Every deal is treated like his own. $15K under asking in the 2024&ndash;2025 NJ market.</p>
+        <div class="bg-[#111] rounded-xl p-5">
+          <div class="flex items-center gap-2 mb-4">
+            <svg class="w-5 h-5 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span class="font-semibold text-sm text-white">Tyler&rsquo;s Commitment to You</span>
+          </div>
+          <div class="flex gap-3 items-center">
+            <div class="w-16 h-16 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center">
+              <svg class="w-8 h-8 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div>
+              <p class="font-playfair text-white text-xl font-bold">You.</p>
+              <p class="text-white/70 text-sm">Tyler&rsquo;s full focus. Every call. Every offer. Every detail.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS 2 -->
-  <section class="lp-section" style="background:var(--black); color:var(--white);">
-    <div class="lp-section-label" style="color:var(--red);">More success stories</div>
-    <h2 class="lp-section-title" style="color:var(--white);">Bergen County clients who trusted Tyler.</h2>
-    <div class="lp-testimonials-grid" style="margin-top:32px;">
-      <div class="lp-testimonial-card" style="background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.1);">
-        <div class="lp-testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="lp-testimonial-text" style="color:rgba(255,255,255,0.7);">
-          &ldquo;Tyler&rsquo;s professionalism and expertise made the entire process seamless.
-          He truly knows Bergen County inside and out.&rdquo;
-        </p>
-        <div class="lp-testimonial-name" style="color:var(--white);">Jia Mohnani</div>
-        <div class="lp-testimonial-loc" style="color:rgba(255,255,255,0.5);">Cliffside Park, NJ</div>
+  <!-- ============ TESTIMONIALS 2 (SOCIAL PROOF) ============ -->
+  <section class="py-12 sm:py-16" style="background-color: #111111;">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6">
+      <h2 class="font-playfair text-2xl md:text-3xl font-bold text-white text-center mb-8 pt-2">
+        More Bergen County Success Stories
+      </h2>
+      <div class="grid md:grid-cols-3 gap-5">
+        <!-- Testimonial 4 -->
+        <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-5 flex flex-col">
+          <div class="font-ubuntu text-lg md:text-xl font-bold text-white leading-tight mb-3">&ldquo;Professionalism unlike any other agent&rdquo;</div>
+          <div class="flex gap-0.5 mb-1.5 text-primary text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="flex items-center gap-1 mb-3">
+            <span class="text-[10px] text-white/60">Verified on</span>
+            <img src="https://media.base44.com/images/public/69c1bd8f6c9a0d59f49e9a47/561bd50a7_Zillow_id5aqCETJk_1.png" alt="Zillow" class="h-3 w-auto" />
+          </div>
+          <p class="text-white/80 text-sm leading-relaxed italic flex-1">
+            &ldquo;I&rsquo;ve met with many agents but never met someone with the professionalism, expertise, and comfort level of Tyler. He was always available whenever I needed him.&rdquo;
+          </p>
+          <div class="mt-4">
+            <div class="font-semibold text-white text-sm">Jia Mohnani</div>
+            <div class="text-white/50 text-xs">Cliffside Park, NJ</div>
+          </div>
+        </div>
+        <!-- Testimonial 5 -->
+        <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-5 flex flex-col">
+          <div class="font-ubuntu text-lg md:text-xl font-bold text-white leading-tight mb-3">&ldquo;Secured home for $15K under asking&rdquo;</div>
+          <div class="flex gap-0.5 mb-1.5 text-primary text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="flex items-center gap-1 mb-3">
+            <span class="text-[10px] text-white/60">Verified on</span>
+            <img src="https://media.base44.com/images/public/69c1bd8f6c9a0d59f49e9a47/561bd50a7_Zillow_id5aqCETJk_1.png" alt="Zillow" class="h-3 w-auto" />
+          </div>
+          <p class="text-white/80 text-sm leading-relaxed italic flex-1">
+            &ldquo;He actually got us 15k UNDER asking, unheard of in today&rsquo;s NJ market! His negotiating and quick thinking got us our forever home.&rdquo;
+          </p>
+          <div class="mt-4">
+            <div class="font-semibold text-white text-sm">Claire Saal</div>
+            <div class="text-white/50 text-xs">Carlstadt, NJ</div>
+          </div>
+        </div>
+        <!-- Testimonial 6 -->
+        <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-5 flex flex-col">
+          <div class="font-ubuntu text-lg md:text-xl font-bold text-white leading-tight mb-3">&ldquo;Incredible, personable agent from day 1&rdquo;</div>
+          <div class="flex gap-0.5 mb-1.5 text-primary text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="flex items-center gap-1 mb-3">
+            <span class="text-[10px] text-white/60">Verified on</span>
+            <img src="https://media.base44.com/images/public/69c1bd8f6c9a0d59f49e9a47/561bd50a7_Zillow_id5aqCETJk_1.png" alt="Zillow" class="h-3 w-auto" />
+          </div>
+          <p class="text-white/80 text-sm leading-relaxed italic flex-1">
+            &ldquo;Tyler was an incredible, personable agent from day one. He totally respected our decisions every step of the way. I would recommend him to anyone.&rdquo;
+          </p>
+          <div class="mt-4">
+            <div class="font-semibold text-white text-sm">Marcela Callejas</div>
+            <div class="text-white/50 text-xs">Paramus, NJ</div>
+          </div>
+        </div>
       </div>
-      <div class="lp-testimonial-card" style="background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.1);">
-        <div class="lp-testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="lp-testimonial-text" style="color:rgba(255,255,255,0.7);">
-          &ldquo;Tyler got us $15,000 under asking in the 2024&ndash;2025 NJ market.
-          His fast action and quick thinking got us our forever home.&rdquo;
-        </p>
-        <div class="lp-testimonial-name" style="color:var(--white);">Claire Saal</div>
-        <div class="lp-testimonial-loc" style="color:rgba(255,255,255,0.5);">Carlstadt, NJ</div>
+      <div class="flex justify-center mt-8 pb-2">
+        <a href="#book" class="inline-flex items-center gap-2 bg-[#FF1200] hover:bg-primary-dark text-white font-medium text-sm px-8 py-3.5 rounded-sm transition-all no-underline shadow-lg">
+          Book Your Free Strategy Call
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
       </div>
-      <div class="lp-testimonial-card" style="background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.1);">
-        <div class="lp-testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="lp-testimonial-text" style="color:rgba(255,255,255,0.7);">
-          &ldquo;Tyler is an incredible, personable agent. He made what could have been
-          a stressful process feel easy and straightforward.&rdquo;
-        </p>
-        <div class="lp-testimonial-name" style="color:var(--white);">Marcela Callejas</div>
-        <div class="lp-testimonial-loc" style="color:rgba(255,255,255,0.5);">Paramus, NJ</div>
-      </div>
-    </div>
-    <div class="lp-center" style="margin-top:28px;">
-      <a href="#book" class="lp-section-cta" style="margin-top:0;">Book your free strategy call &rarr;</a>
     </div>
   </section>
 
-  <!-- TYLER'S STRENGTHS -->
-  <section class="lp-section">
-    <div class="lp-center">
-      <div class="lp-section-label">Why Tyler Sellers</div>
-      <h2 class="lp-section-title">Where others fall short, Tyler delivers.</h2>
-    </div>
-    <div class="lp-solution-grid">
-      <div class="lp-solution-card">
-        <div class="lp-solution-icon">&#9906;</div>
-        <div class="lp-solution-title">Deep local market insight</div>
-        <p class="lp-solution-text">All 70 municipalities &mdash; schools, commutes, pricing, and what living there actually feels like.</p>
+  <!-- ============ WHY TYLER / STRENGTHS + WORKFLOW ============ -->
+  <section class="py-16 sm:py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-5 sm:px-6">
+
+      <!-- Strengths Header -->
+      <div class="text-center mb-12">
+        <p class="text-primary font-medium text-xs uppercase tracking-[0.16em] mb-3">Why Tyler Sellers</p>
+        <h2 class="font-playfair text-3xl md:text-4xl font-bold text-[#111] leading-tight max-w-2xl mx-auto">
+          Where Others Fall Short, Tyler Delivers
+        </h2>
       </div>
-      <div class="lp-solution-card">
-        <div class="lp-solution-icon">&#8593;</div>
-        <div class="lp-solution-title">Precise, data-driven pricing</div>
-        <p class="lp-solution-text">Block-by-block analysis, not zip-code estimates. Your home priced for maximum return.</p>
+
+      <!-- Strength cards -->
+      <div class="grid md:grid-cols-3 gap-4 mb-20">
+        <div class="bg-gray-50 rounded-2xl p-6 sm:p-8 text-center flex flex-col items-center">
+          <div class="relative w-14 h-14 mb-5">
+            <div class="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center">
+              <svg class="w-7 h-7 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="absolute -top-2 -right-2 w-7 h-7 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
+              <svg class="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+          </div>
+          <h3 class="font-playfair text-xl font-bold text-[#111] mb-3">Deep Local Insight</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Block-by-block Bergen County knowledge. Tyler spots opportunities and avoids costly mistakes generic agents miss.</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-6 sm:p-8 text-center flex flex-col items-center">
+          <div class="relative w-14 h-14 mb-5">
+            <div class="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center">
+              <svg class="w-7 h-7 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            </div>
+            <div class="absolute -top-2 -right-2 w-7 h-7 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
+              <svg class="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+          </div>
+          <h3 class="font-playfair text-xl font-bold text-[#111] mb-3">Data-Driven Pricing</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Real-time market data ensures your home is priced to maximize return &mdash; not a dollar left on the table.</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-6 sm:p-8 text-center flex flex-col items-center">
+          <div class="relative w-14 h-14 mb-5">
+            <div class="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center">
+              <svg class="w-7 h-7 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="absolute -top-2 -right-2 w-7 h-7 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
+              <svg class="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+          </div>
+          <h3 class="font-playfair text-xl font-bold text-[#111] mb-3">Masterful Negotiation</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Battle-tested tactics that protect your interests at every turn, securing the best possible outcome.</p>
+        </div>
       </div>
-      <div class="lp-solution-card">
-        <div class="lp-solution-icon">&#9733;</div>
-        <div class="lp-solution-title">Masterful negotiation</div>
-        <p class="lp-solution-text">Every deal handled like his own. Fast action, preparation, and relentless advocacy.</p>
+
+      <!-- Workflow Header -->
+      <div class="text-center mb-12">
+        <h2 class="font-playfair text-3xl md:text-4xl font-bold text-[#111]">Your Path to Closing</h2>
+        <p class="text-gray-500 text-base mt-4">A clear, step-by-step journey &mdash; guided by Tyler every single step.</p>
+      </div>
+
+      <!-- Workflow Steps -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+        <div class="bg-gray-50 border border-gray-200 rounded-xl p-5">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div class="text-xs font-semibold text-primary uppercase tracking-widest">Step 1</div>
+          </div>
+          <h3 class="font-playfair text-lg font-bold text-[#111] mb-1">Free Strategy Call</h3>
+          <p class="text-sm text-gray-500">30-min discovery to discuss your goals and timeline.</p>
+        </div>
+        <div class="bg-gray-50 border border-gray-200 rounded-xl p-5">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+            <div class="text-xs font-semibold text-primary uppercase tracking-widest">Step 2</div>
+          </div>
+          <h3 class="font-playfair text-lg font-bold text-[#111] mb-1">Market Analysis</h3>
+          <p class="text-sm text-gray-500">Custom report on neighborhoods and precise pricing.</p>
+        </div>
+        <div class="bg-gray-50 border border-gray-200 rounded-xl p-5">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <div class="text-xs font-semibold text-primary uppercase tracking-widest">Step 3</div>
+          </div>
+          <h3 class="font-playfair text-lg font-bold text-[#111] mb-1">Search or Listing</h3>
+          <p class="text-sm text-gray-500">Curated opportunities matched to your exact criteria.</p>
+        </div>
+        <div class="bg-gray-50 border border-gray-200 rounded-xl p-5">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            </div>
+            <div class="text-xs font-semibold text-primary uppercase tracking-widest">Step 4</div>
+          </div>
+          <h3 class="font-playfair text-lg font-bold text-[#111] mb-1">Offer &amp; Negotiation</h3>
+          <p class="text-sm text-gray-500">Expert strategy to win the deal or maximize proceeds.</p>
+        </div>
+        <div class="bg-gray-50 border border-gray-200 rounded-xl p-5">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="text-xs font-semibold text-primary uppercase tracking-widest">Step 5</div>
+          </div>
+          <h3 class="font-playfair text-lg font-bold text-[#111] mb-1">Inspection &amp; Appraisal</h3>
+          <p class="text-sm text-gray-500">Full guidance through every due-diligence step.</p>
+        </div>
+        <div class="bg-gray-50 border border-gray-200 rounded-xl p-5">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="text-xs font-semibold text-primary uppercase tracking-widest">Step 6</div>
+          </div>
+          <h3 class="font-playfair text-lg font-bold text-[#111] mb-1">Closing</h3>
+          <p class="text-sm text-gray-500">Seamless final steps to the keys of your new home.</p>
+        </div>
+      </div>
+
+      <p class="text-gray-400 text-center text-sm mt-8">Every step guided by Tyler. Every milestone communicated clearly.</p>
+
+      <div class="flex justify-center mt-8">
+        <a href="#book" class="inline-flex items-center gap-2 bg-[#FF1200] hover:bg-primary-dark text-white font-medium text-sm px-8 py-3.5 rounded-sm transition-all no-underline shadow-lg">
+          Book Your Free Strategy Call
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- PROCESS TIMELINE -->
-  <section class="lp-section" style="background:var(--gray-bg);">
-    <div class="lp-center">
-      <div class="lp-section-label">Your path to closing</div>
-      <h2 class="lp-section-title">A clear, step-by-step journey &mdash; guided by Tyler.</h2>
-    </div>
-    <div class="lp-timeline">
-      <div class="lp-timeline-step">
-        <div class="lp-step-num">01</div>
-        <div class="lp-step-title">Free strategy call</div>
-        <p class="lp-step-text">Tell Tyler your goals. Get an honest roadmap &mdash; no pressure, no obligation.</p>
+  <!-- ============ FAQ ============ -->
+  <section class="py-16 sm:py-20 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-5 sm:px-6">
+      <div class="text-center mb-10">
+        <h2 class="font-playfair text-3xl md:text-4xl font-bold text-[#111]">Frequently Asked Questions</h2>
+        <p class="text-gray-500 text-base mt-4">Everything you need to know before booking your call.</p>
       </div>
-      <div class="lp-timeline-step">
-        <div class="lp-step-num">02</div>
-        <div class="lp-step-title">Market analysis</div>
-        <p class="lp-step-text">Hyper-local pricing based on real data &mdash; not Zillow estimates.</p>
-      </div>
-      <div class="lp-timeline-step">
-        <div class="lp-step-num">03</div>
-        <div class="lp-step-title">Search or listing</div>
-        <p class="lp-step-text">Custom MLS search or professional photography and strategic launch for sellers.</p>
-      </div>
-      <div class="lp-timeline-step">
-        <div class="lp-step-num">04</div>
-        <div class="lp-step-title">Offer &amp; negotiation</div>
-        <p class="lp-step-text">Every offer explained clearly. Tyler negotiates for your best outcome.</p>
-      </div>
-      <div class="lp-timeline-step">
-        <div class="lp-step-num">05</div>
-        <div class="lp-step-title">Inspection &amp; appraisal</div>
-        <p class="lp-step-text">Tyler guides you through every finding and ensures nothing derails the deal.</p>
-      </div>
-      <div class="lp-timeline-step">
-        <div class="lp-step-num">06</div>
-        <div class="lp-step-title">Closing</div>
-        <p class="lp-step-text">Keys in hand. Tyler stays in touch long after the deal is done.</p>
-      </div>
-    </div>
-    <div class="lp-center" style="margin-top:28px;">
-      <a href="#book" class="lp-section-cta" style="margin-top:0;">Book your free strategy call &rarr;</a>
-    </div>
-  </section>
 
-  <!-- FAQ -->
-  <section class="lp-section">
-    <div class="lp-center">
-      <div class="lp-section-label">Common questions</div>
-      <h2 class="lp-section-title">Before you book, here&rsquo;s what people ask.</h2>
-      <div class="lp-faq-list">
-        <div class="lp-faq-item">
-          <button class="lp-faq-question" onclick="this.parentElement.classList.toggle('open')">
-            How long does the buying or selling process take?
-            <span class="lp-faq-arrow">+</span>
+      <div class="space-y-3">
+        <div class="faq-item">
+          <button class="w-full flex items-center justify-between bg-white border border-gray-200 rounded-lg px-6 py-4 hover:bg-gray-50 transition-colors text-left cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
+            <h3 class="font-semibold text-[#111] text-base pr-4">How long does the buying or selling process take?</h3>
+            <span class="faq-arrow text-gray-400 text-lg shrink-0">+</span>
           </button>
-          <div class="lp-faq-answer">
-            Every situation is different. Sellers in Bergen County typically go under contract within
-            1&ndash;2 weeks if priced correctly. Buyers can take 2&ndash;6 months depending on budget
-            and flexibility. Tyler will give you a realistic timeline on your free call.
+          <div class="faq-answer bg-white border border-t-0 border-gray-200 rounded-b-lg">
+            <p class="text-gray-500 text-base leading-relaxed">
+              Sellers typically go under contract within 1-2 weeks if priced correctly. Buyers can take 2-6 months depending on criteria. Tyler will give you a realistic timeline on your free call.
+            </p>
           </div>
         </div>
-        <div class="lp-faq-item">
-          <button class="lp-faq-question" onclick="this.parentElement.classList.toggle('open')">
-            What makes Tyler different from other agents?
-            <span class="lp-faq-arrow">+</span>
+        <div class="faq-item">
+          <button class="w-full flex items-center justify-between bg-white border border-gray-200 rounded-lg px-6 py-4 hover:bg-gray-50 transition-colors text-left cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
+            <h3 class="font-semibold text-[#111] text-base pr-4">What makes Tyler different from other agents?</h3>
+            <span class="faq-arrow text-gray-400 text-lg shrink-0">+</span>
           </button>
-          <div class="lp-faq-answer">
-            Tyler covers all 70 Bergen County municipalities with genuine depth &mdash; schools, commutes,
-            pricing, and neighborhood feel. He creates video content so you can see his knowledge before
-            you ever speak. And he answers his own phone.
+          <div class="faq-answer bg-white border border-t-0 border-gray-200 rounded-b-lg">
+            <p class="text-gray-500 text-base leading-relaxed">
+              Tyler brings 6+ years of hyper-local Bergen County expertise, white-glove concierge service, and direct availability. Unlike agencies juggling dozens of clients, you get one dedicated expert focused on your outcome.
+            </p>
           </div>
         </div>
-        <div class="lp-faq-item">
-          <button class="lp-faq-question" onclick="this.parentElement.classList.toggle('open')">
-            Are there any upfront fees?
-            <span class="lp-faq-arrow">+</span>
+        <div class="faq-item">
+          <button class="w-full flex items-center justify-between bg-white border border-gray-200 rounded-lg px-6 py-4 hover:bg-gray-50 transition-colors text-left cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
+            <h3 class="font-semibold text-[#111] text-base pr-4">Are there any upfront fees?</h3>
+            <span class="faq-arrow text-gray-400 text-lg shrink-0">+</span>
           </button>
-          <div class="lp-faq-answer">
-            No. The strategy call is completely free. If you decide to work together, Tyler&rsquo;s
-            commission is standard and only paid at closing &mdash; never upfront.
+          <div class="faq-answer bg-white border border-t-0 border-gray-200 rounded-b-lg">
+            <p class="text-gray-500 text-base leading-relaxed">
+              No. The strategy call is completely free with zero obligation. If you work together, Tyler&rsquo;s commission is standard and only paid at closing &mdash; never upfront.
+            </p>
           </div>
         </div>
-        <div class="lp-faq-item">
-          <button class="lp-faq-question" onclick="this.parentElement.classList.toggle('open')">
-            What areas does Tyler cover?
-            <span class="lp-faq-arrow">+</span>
+        <div class="faq-item">
+          <button class="w-full flex items-center justify-between bg-white border border-gray-200 rounded-lg px-6 py-4 hover:bg-gray-50 transition-colors text-left cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
+            <h3 class="font-semibold text-[#111] text-base pr-4">What areas does Tyler cover?</h3>
+            <span class="faq-arrow text-gray-400 text-lg shrink-0">+</span>
           </button>
-          <div class="lp-faq-answer">
-            Tyler specializes in all 70 municipalities of Bergen County, NJ &mdash; from Ridgewood and
-            Tenafly to Paramus, Ho-Ho-Kus, Ramsey, and everywhere in between.
+          <div class="faq-answer bg-white border border-t-0 border-gray-200 rounded-b-lg">
+            <p class="text-gray-500 text-base leading-relaxed">
+              Tyler specializes in Bergen County, NJ &mdash; all 70 municipalities including Ridgewood, Tenafly, Paramus, Ho-Ho-Kus, Ramsey, and surrounding communities.
+            </p>
           </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center mt-10">
+        <a href="#book" class="inline-flex items-center gap-2 bg-[#FF1200] hover:bg-primary-dark text-white font-medium text-sm px-8 py-3.5 rounded-sm transition-all no-underline shadow-lg">
+          Book Your Free Strategy Call
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BOOKING FORM ============ -->
+  <section id="book" class="scroll-mt-[57px]">
+    <div class="grid md:grid-cols-2">
+      <!-- Left: Benefits -->
+      <div class="bg-[#111] text-white p-10 sm:p-12 lg:p-16">
+        <p class="text-primary font-medium text-xs uppercase tracking-[0.16em] mb-3 flex items-center gap-2">
+          <span>Free Strategy Call</span>
+          <span class="flex-1 h-px bg-white/12"></span>
+        </p>
+        <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-white leading-tight mb-4">
+          Claim Your Free 30-Minute Bergen County Strategy Session
+        </h2>
+        <p class="text-white/75 text-sm leading-relaxed mb-6">
+          No pressure. No obligation. Just a clear, expert roadmap for your next move.
+        </p>
+        <div class="space-y-4">
+          <div class="flex items-start gap-3 text-sm text-white/80">
+            <span class="text-primary font-bold shrink-0 mt-0.5">&#10003;</span>
+            Discover your home&rsquo;s real value or ideal buying range
+          </div>
+          <div class="flex items-start gap-3 text-sm text-white/80">
+            <span class="text-primary font-bold shrink-0 mt-0.5">&#10003;</span>
+            Get a custom Bergen County market report
+          </div>
+          <div class="flex items-start gap-3 text-sm text-white/80">
+            <span class="text-primary font-bold shrink-0 mt-0.5">&#10003;</span>
+            Walk away with a clear, no-pressure action plan
+          </div>
+          <div class="flex items-start gap-3 text-sm text-white/80">
+            <span class="text-primary font-bold shrink-0 mt-0.5">&#10003;</span>
+            Ask every question &mdash; zero sales pressure
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="p-10 sm:p-12 lg:p-16">
+        <div class="font-playfair text-2xl font-bold text-[#111] mb-2">Book your call with Tyler</div>
+        <p class="text-sm text-gray-500 mb-6 leading-relaxed">Fill in your details and Tyler will reach out within 24 hours.</p>
+
+        <form id="bookingForm">
+          <!-- Step 1: Name + Email -->
+          <div id="bookStep1">
+            <div class="mb-4">
+              <label for="book-name" class="block text-[10px] uppercase tracking-[0.1em] text-gray-500 mb-1.5 font-medium">Your name</label>
+              <input type="text" id="book-name" placeholder="First and last name" required class="w-full p-3 bg-gray-50 border border-gray-200 rounded-sm text-sm text-[#111] focus:outline-none focus:border-primary transition-colors" />
+              <div class="form-error" id="book-name-error">Please enter your name</div>
+            </div>
+            <div class="mb-4">
+              <label for="book-email" class="block text-[10px] uppercase tracking-[0.1em] text-gray-500 mb-1.5 font-medium">Email</label>
+              <input type="email" id="book-email" placeholder="your@email.com" required class="w-full p-3 bg-gray-50 border border-gray-200 rounded-sm text-sm text-[#111] focus:outline-none focus:border-primary transition-colors" />
+              <div class="form-error" id="book-email-error">Please enter a valid email address</div>
+            </div>
+            <button type="submit" class="w-full bg-[#FF1200] hover:bg-primary-dark text-white border-none p-3.5 text-sm font-medium cursor-pointer rounded-sm tracking-wide transition-colors mt-2">
+              Claim my free call &rarr;
+            </button>
+            <p class="text-gray-500 text-xs text-center mt-3 italic">&ldquo;Tyler called me back within 2 hours. No other agent has ever done that.&rdquo;</p>
+            <p class="text-gray-400 text-[11px] text-center mt-2">100% free &middot; No pressure &middot; No obligation</p>
+          </div>
+
+          <!-- Step 2: Phone + Intent -->
+          <div id="bookStep2" style="display:none;">
+            <p class="text-sm text-[#111] mb-4 font-medium">&#10003; You&rsquo;re in! Want a faster response?</p>
+            <div class="mb-4">
+              <label for="book-phone" class="block text-[10px] uppercase tracking-[0.1em] text-gray-500 mb-1.5 font-medium">Phone (optional &mdash; for faster response)</label>
+              <input type="tel" id="book-phone" placeholder="(201) 555-1234" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-sm text-sm text-[#111] focus:outline-none focus:border-primary transition-colors" />
+            </div>
+            <div class="mb-4">
+              <label for="book-intent" class="block text-[10px] uppercase tracking-[0.1em] text-gray-500 mb-1.5 font-medium">I&rsquo;m looking to</label>
+              <select id="book-intent" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-sm text-sm text-[#111] focus:outline-none focus:border-primary transition-colors">
+                <option value="">Select one</option>
+                <option>Buy a home</option>
+                <option>Sell my home</option>
+                <option>Buy and sell</option>
+              </select>
+            </div>
+            <button type="button" class="w-full bg-[#FF1200] hover:bg-primary-dark text-white border-none p-3.5 text-sm font-medium cursor-pointer rounded-sm tracking-wide transition-colors" onclick="submitBookStep2()">
+              Send additional details &rarr;
+            </button>
+            <button type="button" class="w-full bg-transparent border-none text-gray-400 text-xs p-3 cursor-pointer mt-1" onclick="skipBookStep2()">
+              Skip &mdash; just book my call
+            </button>
+          </div>
+        </form>
+
+        <!-- Success state -->
+        <div id="bookSuccess" class="hidden bg-green-50 border border-green-200 rounded-sm p-6 text-center">
+          <svg class="w-12 h-12 text-green-600 mx-auto mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <h3 class="font-playfair text-xl font-bold text-[#111] mb-2">You&rsquo;re All Set!</h3>
+          <p class="text-gray-500 text-sm">Tyler will reach out within 24 hours to confirm your free strategy call.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- BOOKING FORM -->
-  <div class="lp-booking" id="book">
-    <div class="lp-booking-left">
-      <div class="lp-section-label">Free strategy call</div>
-      <h2 class="lp-section-title">Claim your free 30-minute Bergen County strategy session.</h2>
-      <p style="font-size:14px; line-height:1.75; color:rgba(255,255,255,0.75); margin-top:14px;">
-        No pressure. No obligation. Just a clear, expert roadmap for your next move.
-      </p>
-      <div class="lp-booking-benefits">
-        <div class="lp-benefit"><span class="lp-benefit-check">&#10003;</span> Discover your home&rsquo;s real value or your ideal buying range</div>
-        <div class="lp-benefit"><span class="lp-benefit-check">&#10003;</span> Get a custom Bergen County market report</div>
-        <div class="lp-benefit"><span class="lp-benefit-check">&#10003;</span> Walk away with a clear, no-pressure action plan</div>
-        <div class="lp-benefit"><span class="lp-benefit-check">&#10003;</span> Ask every question &mdash; zero sales pressure</div>
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-[#111] py-8 px-5 sm:px-10">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="font-playfair text-lg font-medium text-white">Mr. Sellers Homes</div>
+      <div class="text-white/45 text-xs text-center">
+        <a href="tel:2013080525" class="text-primary no-underline">201-308-0525</a>
+        &middot; tyler@mrsellers.homes &middot; Bergen County, NJ
       </div>
-    </div>
-    <div class="lp-booking-right">
-      <div class="lp-form-title">Book your call with Tyler</div>
-      <p class="lp-form-sub">Fill in your details and Tyler will reach out within 24 hours.</p>
-      <form id="bookingForm">
-        <div id="bookStep1">
-          <div class="lp-form-row">
-            <label for="book-name">Your name</label>
-            <input type="text" id="book-name" placeholder="First and last name" required />
-            <div class="lp-form-error" id="book-name-error">Please enter your name</div>
-          </div>
-          <div class="lp-form-row">
-            <label for="book-email">Email</label>
-            <input type="email" id="book-email" placeholder="your@email.com" required />
-            <div class="lp-form-error" id="book-email-error">Please enter a valid email address</div>
-          </div>
-          <button type="submit" class="lp-form-submit">Claim my free call &rarr;</button>
-          <div class="lp-form-social-proof">&ldquo;Tyler called me back within 2 hours. No other agent has ever done that.&rdquo;</div>
-          <div class="lp-form-disclaimer">100% free &middot; No pressure &middot; No obligation</div>
-        </div>
-        <div id="bookStep2" style="display:none;">
-          <p style="font-size:14px; color:var(--black); margin-bottom:16px; font-weight:500;">&#10003; You&rsquo;re in! Want a faster response?</p>
-          <div class="lp-form-row">
-            <label for="book-phone">Phone (optional &mdash; for faster response)</label>
-            <input type="tel" id="book-phone" placeholder="(201) 555-1234" />
-          </div>
-          <div class="lp-form-row">
-            <label for="book-intent">I&rsquo;m looking to</label>
-            <select id="book-intent">
-              <option value="">Select one</option>
-              <option>Buy a home</option>
-              <option>Sell my home</option>
-              <option>Buy and sell</option>
-            </select>
-          </div>
-          <button type="button" class="lp-form-submit" onclick="submitBookStep2()">Send additional details &rarr;</button>
-          <button type="button" style="width:100%; background:none; border:none; color:var(--gray-mid); font-size:12px; padding:12px; cursor:pointer; font-family:'DM Sans',sans-serif;" onclick="skipBookStep2()">Skip &mdash; just book my call</button>
-        </div>
-      </form>
-      <div class="lp-form-success" id="bookSuccess">
-        &#10003;&nbsp; You&rsquo;re all set! Tyler will reach out within 24 hours.
+      <div class="text-white/45 text-xs">
+        &copy; 2025 Tyler Sellers Real Estate. Licensed in New Jersey.
       </div>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <footer class="lp-footer">
-    <div class="lp-footer-logo">Mr. Sellers Homes</div>
-    <div>
-      <a href="tel:2013080525" style="color:var(--red); text-decoration:none;">201-308-0525</a>
-      &middot; tyler@mrsellers.homes &middot; Bergen County, NJ
-    </div>
-    <div>
-      <a href="https://mrsellers.homes" class="lp-footer-link">Explore Bergen County towns &rarr;</a>
-      &middot; &copy; 2025 Tyler Sellers
     </div>
   </footer>
 
+  <!-- ============ SCRIPTS ============ -->
   <script>
     // Lock hero height on mobile to prevent resize on scroll
     (function() {
-      if (window.innerWidth <= 900) {
-        var hero = document.querySelector('.lp-hero');
+      if (window.innerWidth <= 768) {
+        var hero = document.getElementById('hero');
         if (hero) {
-          var h = window.innerHeight - 57 - 50;
-          hero.style.height = h + 'px';
+          var h = window.innerHeight - 57;
+          hero.style.minHeight = h + 'px';
           hero.style.maxHeight = h + 'px';
+          // Pin background to right center on mobile
+          var bg = hero.querySelector('[style*="background-image"]');
+          if (bg) bg.style.backgroundPosition = 'right center';
         }
+        // Make stat numbers white on mobile
+        document.querySelectorAll('.hero-stat-num').forEach(function(el) {
+          el.style.color = '#ffffff';
+        });
       }
     })();
 
@@ -841,7 +985,7 @@
       var emailValid = validateField(document.getElementById('book-email'), 'book-email-error');
       if (!nameValid || !emailValid) return;
 
-      var btn = document.querySelector('#bookStep1 .lp-form-submit');
+      var btn = document.querySelector('#bookStep1 button[type="submit"]');
       btn.textContent = 'Sending...'; btn.disabled = true;
       bookData = {
         name: document.getElementById('book-name').value,
@@ -862,15 +1006,15 @@
       bookData.intent = document.getElementById('book-intent').value;
       sendToFUB(bookData, 'go.MrSellers.homes — Landing Page (details)').then(function() {
         document.getElementById('bookingForm').style.display = 'none';
-        document.getElementById('bookSuccess').style.display = 'block';
+        document.getElementById('bookSuccess').classList.remove('hidden');
       }).catch(function() {
         document.getElementById('bookingForm').style.display = 'none';
-        document.getElementById('bookSuccess').style.display = 'block';
+        document.getElementById('bookSuccess').classList.remove('hidden');
       });
     }
     function skipBookStep2() {
       document.getElementById('bookingForm').style.display = 'none';
-      document.getElementById('bookSuccess').style.display = 'block';
+      document.getElementById('bookSuccess').classList.remove('hidden');
     }
   </script>
 
