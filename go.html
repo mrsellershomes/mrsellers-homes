@@ -97,10 +97,10 @@
       display: flex; flex-direction: column; justify-content: center;
     }
     @media (max-width: 900px) {
-      .lp-hero { min-height: calc(100vh - 57px - 50px); min-height: calc(100dvh - 57px - 50px); }
+      .lp-hero { height: calc(100vh - 57px - 50px); max-height: calc(100vh - 57px - 50px); overflow: hidden; }
       .lp-hero-content {
-        min-height: calc(100vh - 57px - 50px);
-        min-height: calc(100dvh - 57px - 50px);
+        height: 100%;
+        min-height: 0;
         padding: 16px 20px 12px;
         max-width: 100%;
         justify-content: flex-start;
@@ -762,6 +762,18 @@
   </footer>
 
   <script>
+    // Lock hero height on mobile to prevent resize on scroll
+    (function() {
+      if (window.innerWidth <= 900) {
+        var hero = document.querySelector('.lp-hero');
+        if (hero) {
+          var h = window.innerHeight - 57 - 50;
+          hero.style.height = h + 'px';
+          hero.style.maxHeight = h + 'px';
+        }
+      }
+    })();
+
     // Follow Up Boss API
     var FUB_API_KEY = 'fka_0E2H1dG5ch1zr3VepnlIt9Oczs5uXO3Fi8';
     var FUB_API_URL = 'https://api.followupboss.com/v1/events';
