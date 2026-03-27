@@ -99,7 +99,7 @@
       .lp-hero-content {
         min-height: 0;
         height: auto;
-        padding: 20px 20px 16px;
+        padding: 16px 20px 12px;
         max-width: 100%;
         justify-content: flex-start;
       }
@@ -130,9 +130,6 @@
       letter-spacing: 0.04em; transition: background 0.2s; align-self: flex-start;
     }
     .lp-hero-cta:hover { background: var(--red-dark); }
-    @media (max-width: 900px) {
-      .lp-hero-cta { align-self: stretch; text-align: center; padding: 14px 20px; font-size: 14px; font-weight: 600; white-space: nowrap; }
-    }
     .lp-hero-stats {
       margin-top: clamp(24px, 3vw, 36px); padding-top: clamp(16px, 2vw, 24px);
       border-top: 1px solid rgba(255,255,255,0.2); display: flex; gap: clamp(20px, 3vw, 36px);
@@ -140,7 +137,13 @@
     .lp-stat-num { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3.2vw, 38px); font-weight: 500; color: var(--red); }
     .lp-stat-label { font-size: clamp(9px, 1vw, 11px); color: rgba(255,255,255,0.6); letter-spacing: 0.05em; margin-top: 2px; }
     @media (max-width: 900px) {
-      .lp-hero-stats { margin-top: 20px; padding-top: 14px; }
+      .lp-hero-eyebrow { font-size: 9px; margin-bottom: 8px; }
+      .lp-hero-headline { font-size: 28px; margin-bottom: 10px; }
+      .lp-hero-sub { font-size: 12px; line-height: 1.55; margin-bottom: 14px; }
+      .lp-hero-cta { align-self: flex-start; padding: 12px 24px; font-size: 13px; font-weight: 600; white-space: nowrap; }
+      .lp-hero-stats { margin-top: 14px; padding-top: 10px; gap: 20px; }
+      .lp-stat-num { font-size: 24px; }
+      .lp-stat-label { font-size: 9px; }
     }
 
     /* SECTION SHARED */
