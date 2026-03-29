@@ -202,7 +202,7 @@
 
     <div class="header">
       <h1>Welcome to the Open House</h1>
-      <p>Please sign in below. It only takes 10 seconds.</p>
+      <p id="signInSubtext">Please sign in below. It only takes 10 seconds.</p>
     </div>
 
     <form id="signInForm">
@@ -319,10 +319,12 @@
 
       sendToFUB(data).then(function() {
         document.getElementById('signInForm').style.display = 'none';
+        document.getElementById('signInSubtext').style.display = 'none';
         document.getElementById('successState').style.display = 'block';
       }).catch(function() {
         // Still show success — we don't want to block the open house flow
         document.getElementById('signInForm').style.display = 'none';
+        document.getElementById('signInSubtext').style.display = 'none';
         document.getElementById('successState').style.display = 'block';
       });
     });
