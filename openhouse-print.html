@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open House Sign-In — Print</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    @page {
+      size: letter;
+      margin: 0;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #111;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .page {
+      width: 8.5in;
+      height: 11in;
+      padding: 0.6in 0.75in;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Top accent bar */
+    .top-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: #FF1200;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding-top: 10px;
+    }
+    .header img {
+      height: 52px;
+      width: auto;
+    }
+    .header-divider {
+      width: 1px;
+      height: 40px;
+      background: #ddd;
+    }
+
+    /* Welcome text */
+    .welcome {
+      text-align: center;
+    }
+    .welcome-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #FF1200;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .welcome h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.15;
+      color: #111;
+      margin-bottom: 14px;
+    }
+    .welcome p {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.6;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    /* QR Section */
+    .qr-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .qr-frame {
+      background: #fff;
+      border: 3px solid #111;
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    .qr-frame img {
+      width: 240px;
+      height: 240px;
+      display: block;
+    }
+    .scan-text {
+      margin-top: 18px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #111;
+      letter-spacing: 0.02em;
+    }
+    .scan-arrow {
+      margin-top: 4px;
+      font-size: 28px;
+      color: #FF1200;
+      line-height: 1;
+    }
+
+    /* Steps */
+    .steps {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+    }
+    .step {
+      text-align: center;
+      max-width: 160px;
+    }
+    .step-num {
+      width: 32px;
+      height: 32px;
+      background: #FF1200;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      margin: 0 auto 8px;
+    }
+    .step-text {
+      font-size: 13px;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding-bottom: 6px;
+    }
+    .footer-line {
+      width: 60px;
+      height: 2px;
+      background: #FF1200;
+      margin: 0 auto 12px;
+    }
+    .footer-text {
+      font-size: 11px;
+      color: #999;
+      letter-spacing: 0.06em;
+    }
+    .footer-text strong {
+      color: #666;
+    }
+
+    /* Bottom accent bar */
+    .bottom-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: #FF1200;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+    <div class="top-bar"></div>
+
+    <!-- Header: Logos -->
+    <div class="header">
+      <img src="mrsellershomes-logo.svg" alt="Mr. Sellers Homes" />
+      <div class="header-divider"></div>
+      <img src="remax-balloon.svg" alt="RE/MAX" />
+    </div>
+
+    <!-- Welcome -->
+    <div class="welcome">
+      <div class="welcome-eyebrow">Welcome to the Open House</div>
+      <h1>Scan to<br>Sign In</h1>
+      <p>Point your phone&rsquo;s camera at the code below. It takes 10 seconds.</p>
+    </div>
+
+    <!-- QR Code -->
+    <div class="qr-section">
+      <div class="scan-arrow">&darr;</div>
+      <div class="qr-frame">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=600x600&data=https%3A%2F%2Fmrsellers.homes%2Fopenhouse&format=png&margin=10" alt="Scan to sign in" />
+      </div>
+      <div class="scan-text">Scan with your phone camera</div>
+    </div>
+
+    <!-- Steps -->
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">Open your camera &amp; point at code</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">Tap the link that appears</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">Enter your name &amp; info</div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-line"></div>
+      <div class="footer-text"><strong>Tyler Sellers</strong> &middot; RE/MAX &middot; Bergen County, NJ</div>
+    </div>
+
+    <div class="bottom-bar"></div>
+  </div>
+
+</body>
+</html>
