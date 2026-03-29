@@ -879,17 +879,10 @@
           </div>
         </form>
 
-        <!-- Success state: Calendar booking -->
+        <!-- Success state: Inline Calendar -->
         <div id="bookSuccess" class="hidden">
-          <div class="bg-green-50 border border-green-200 rounded-sm p-5 text-center mb-5">
-            <svg class="w-10 h-10 text-green-600 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <h3 class="font-playfair text-xl font-bold text-[#111] mb-1">You&rsquo;re in!</h3>
-            <p class="text-gray-600 text-sm">Now pick a time that works for you.</p>
-          </div>
-          <a id="calendarLink" href="https://calendar.app.google/7AodHqH34quV1pCu7" target="_blank" class="block w-full bg-[#FF1200] hover:bg-primary-dark text-white text-center font-medium text-sm px-6 py-4 rounded-sm transition-colors no-underline tracking-wide mb-3">
-            Book your 30-min strategy call &rarr;
-          </a>
-          <p class="text-gray-400 text-xs text-center">Opens Google Calendar &middot; Pick any available slot</p>
+          <p class="text-sm text-[#111] font-medium mb-3">&#10003; You&rsquo;re in! Now pick a time:</p>
+          <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0XGi24Qj2qB_q7bOt4x-hq0UpJKq6VHv_8WrVLMkGJ1QeaBCuKVa7jx8LFKlQDzs-7NZIOroAH?gv=true" style="border:0; border-radius:4px;" width="100%" height="500" frameborder="0"></iframe>
           <p class="text-gray-400 text-[11px] text-center mt-3">Don&rsquo;t have time right now? No worries &mdash; Tyler will reach out within 24 hours.</p>
         </div>
       </div>
@@ -1024,16 +1017,12 @@
     // Step 2 submit
     function showCalendarBooking() {
       document.getElementById('bookingForm').style.display = 'none';
+      // Hide the subtitle text
+      var subtitle = document.querySelector('#bookform .text-gray-500.mb-6');
+      if (subtitle) subtitle.style.display = 'none';
+      // Change heading
+      document.querySelector('#bookform .font-playfair').textContent = "Pick a time that works for you";
       document.getElementById('bookSuccess').classList.remove('hidden');
-      // Auto-fill Google Calendar link with name and email
-      var nameParts = (bookData.name || '').trim().split(/\s+/);
-      var firstName = nameParts[0] || '';
-      var lastName = nameParts.slice(1).join(' ') || '';
-      var email = bookData.email || '';
-      var calUrl = 'https://calendar.app.google/7AodHqH34quV1pCu7';
-      // Google Calendar appointment links don't support URL params for pre-fill,
-      // but the link opens the booking page where they confirm details
-      document.getElementById('calendarLink').href = calUrl;
     }
 
     function submitBookStep2() {
