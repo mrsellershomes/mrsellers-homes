@@ -280,6 +280,22 @@
       });
     }
 
+    // Auto-format phone number as (XXX) XXX-XXXX
+    document.getElementById('oh-phone').addEventListener('input', function(e) {
+      var x = e.target.value.replace(/\D/g, '').substring(0, 10);
+      var formatted = '';
+      if (x.length === 0) {
+        formatted = '';
+      } else if (x.length <= 3) {
+        formatted = '(' + x;
+      } else if (x.length <= 6) {
+        formatted = '(' + x.substring(0, 3) + ') ' + x.substring(3);
+      } else {
+        formatted = '(' + x.substring(0, 3) + ') ' + x.substring(3, 6) + '-' + x.substring(6);
+      }
+      e.target.value = formatted;
+    });
+
     document.getElementById('signInForm').addEventListener('submit', function(e) {
       e.preventDefault();
 
