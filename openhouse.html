@@ -219,11 +219,12 @@
       </div>
 
       <div class="form-group">
-        <label for="oh-phone">Phone <span class="optional-tag">(optional)</span></label>
-        <input type="tel" id="oh-phone" placeholder="(201) 555-1234" autocomplete="tel" inputmode="tel" />
+        <label for="oh-phone">Phone <span style="color:#FF1200;">*</span></label>
+        <input type="tel" id="oh-phone" placeholder="(201) 555-1234" autocomplete="tel" inputmode="tel" required />
+        <div class="error-msg" id="oh-phone-error">Please enter your phone number</div>
       </div>
 
-      <div class="agency-group" onclick="document.getElementById('oh-agency').click()">
+      <div class="agency-group">
         <input type="checkbox" id="oh-agency" />
         <label for="oh-agency">I have an <strong>Exclusive Agency Agreement</strong> signed with another buyer&rsquo;s agent.</label>
       </div>
@@ -262,7 +263,11 @@
       if (data.email) payload.person.emails = [{ value: data.email }];
       if (data.phone) payload.person.phones = [{ value: data.phone }];
       var tags = ['Open House Visitor'];
-      if (data.hasAgency) tags.push('Has Exclusive Agency Agreement');
+      if (data.hasAgency) {
+        tags.push('Has Exclusive Agency Agreement');
+      } else {
+        tags.push('No Exclusive Agency Agreement');
+      }
       payload.person.tags = tags;
 
       return fetch(FUB_API_URL, {
@@ -280,18 +285,24 @@
 
       var nameEl = document.getElementById('oh-name');
       var emailEl = document.getElementById('oh-email');
+      var phoneEl = document.getElementById('oh-phone');
       var nameErr = document.getElementById('oh-name-error');
       var emailErr = document.getElementById('oh-email-error');
+      var phoneErr = document.getElementById('oh-phone-error');
       var valid = true;
 
       nameEl.classList.remove('error'); nameErr.classList.remove('show');
       emailEl.classList.remove('error'); emailErr.classList.remove('show');
+      phoneEl.classList.remove('error'); phoneErr.classList.remove('show');
 
       if (!nameEl.value.trim()) {
         nameEl.classList.add('error'); nameErr.classList.add('show'); valid = false;
       }
       if (!emailEl.value.trim() || !emailEl.value.includes('@')) {
         emailEl.classList.add('error'); emailErr.classList.add('show'); valid = false;
+      }
+      if (!phoneEl.value.trim()) {
+        phoneEl.classList.add('error'); phoneErr.classList.add('show'); valid = false;
       }
       if (!valid) return;
 
@@ -322,6 +333,8 @@
       document.getElementById('oh-name').value = '';
       document.getElementById('oh-email').value = '';
       document.getElementById('oh-phone').value = '';
+      document.getElementById('oh-phone').classList.remove('error');
+      document.getElementById('oh-phone-error').classList.remove('show');
       document.getElementById('oh-agency').checked = false;
       var btn = document.querySelector('.submit-btn');
       btn.textContent = 'Sign In →';
