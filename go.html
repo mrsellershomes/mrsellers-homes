@@ -78,6 +78,9 @@
     .form-error { display: none; font-size: 0.6875rem; color: #FF1200; margin-top: 4px; }
     .form-error.show { display: block; }
     input.error, select.error { border-color: #FF1200 !important; }
+    /* Hide Google's scheduling button — we trigger it programmatically */
+    #gcal-btn-container { position: fixed !important; left: -9999px !important; top: -9999px !important; visibility: hidden !important; height: 0 !important; overflow: hidden !important; }
+    #gcal-btn-container * { visibility: hidden !important; height: 0 !important; }
   </style>
 </head>
 <body class="font-sans text-[#111111] bg-white leading-relaxed">
@@ -878,7 +881,7 @@
               Book my free call &rarr;
             </button>
             <!-- Hidden Google Calendar scheduling button (desktop only) -->
-            <div id="gcal-btn-container" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;pointer-events:none;"></div>
+            <div id="gcal-btn-container" aria-hidden="true"></div>
             <p class="text-gray-400 text-[11px] text-center mt-2">Don&rsquo;t have time right now? No worries &mdash; Tyler will reach out within 24 hours.</p>
           </div>
         </form>
