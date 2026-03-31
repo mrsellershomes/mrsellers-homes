@@ -74,6 +74,12 @@
     .form-error { display: none; font-size: 0.6875rem; color: #FF1200; margin-top: 4px; }
     .form-error.show { display: block; }
     input.error, select.error { border-color: #FF1200 !important; }
+    /* Google Calendar: hide iframe on mobile, show button instead */
+    .gcal-mobile-btn { display: none; }
+    @media (max-width: 768px) {
+      #gcal-wrap { display: none; }
+      .gcal-mobile-btn { display: block; }
+    }
   </style>
 </head>
 <body class="font-sans text-[#111111] bg-white leading-relaxed">
@@ -882,7 +888,12 @@
         <!-- Success state: Inline Calendar -->
         <div id="bookSuccess" class="hidden">
           <p class="text-sm text-[#111] font-medium mb-3">&#10003; You&rsquo;re in! Now pick a time:</p>
-          <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0XGi24Qj2qB_q7bOt4x-hq0UpJKq6VHv_8WrVLMkGJ1QeaBCuKVa7jx8LFKlQDzs-7NZIOroAH?gv=true" style="border:0; border-radius:4px;" width="100%" height="500" frameborder="0"></iframe>
+          <div id="gcal-wrap">
+            <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0XGi24Qj2qB_q7bOt4x-hq0UpJKq6VHv_8WrVLMkGJ1QeaBCuKVa7jx8LFKlQDzs-7NZIOroAH?gv=true" style="border:0; border-radius:4px; width:100%; height:600px;" frameborder="0"></iframe>
+          </div>
+          <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0XGi24Qj2qB_q7bOt4x-hq0UpJKq6VHv_8WrVLMkGJ1QeaBCuKVa7jx8LFKlQDzs-7NZIOroAH?gv=true" target="_blank" rel="noopener" class="gcal-mobile-btn w-full bg-[#FF1200] hover:bg-primary-dark text-white text-center font-medium text-sm px-6 py-4 rounded-sm transition-colors no-underline block">
+            Pick a time on my calendar &rarr;
+          </a>
           <p class="text-gray-400 text-[11px] text-center mt-3">Don&rsquo;t have time right now? No worries &mdash; Tyler will reach out within 24 hours.</p>
         </div>
       </div>
