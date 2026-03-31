@@ -1064,21 +1064,19 @@
       if (!nameValid || !emailValid) return;
 
       var btn = document.querySelector('#bookStep1 button[type="submit"]');
-      btn.textContent = 'Sending...'; btn.disabled = true;
+      btn.disabled = true;
       bookData = {
         name: document.getElementById('book-name').value,
         email: document.getElementById('book-email').value
       };
-      sendToFUB(bookData, 'go.MrSellers.homes — Landing Page').then(function() {
-        document.getElementById('bookStep1').style.display = 'none';
-        document.getElementById('bookStep2').style.display = 'block';
-        // Hide the subtitle since it's no longer relevant
-        var subtitle = document.querySelector('#bookform .text-gray-500.mb-6');
-        if (subtitle) subtitle.style.display = 'none';
-      }).catch(function() {
-        btn.textContent = 'Something went wrong — try again';
-        btn.disabled = false;
+      // Fire and forget — don't block the UI on API response time
+      sendToFUB(bookData, 'go.MrSellers.homes — Landing Page').catch(function() {
+        console.warn('FUB step 1 submission failed');
       });
+      document.getElementById('bookStep1').style.display = 'none';
+      document.getElementById('bookStep2').style.display = 'block';
+      var subtitle = document.querySelector('#bookform .text-gray-500.mb-6');
+      if (subtitle) subtitle.style.display = 'none';
     });
 
     // Step 2 submit
@@ -1137,19 +1135,18 @@
       if (!nameValid || !emailValid) return;
 
       var btn = document.querySelector('#mStep1 button[type="submit"]');
-      btn.textContent = 'Sending...'; btn.disabled = true;
+      btn.disabled = true;
       mBookData = {
         name: document.getElementById('m-book-name').value,
         email: document.getElementById('m-book-email').value
       };
-      sendToFUB(mBookData, 'go.MrSellers.homes — Landing Page').then(function() {
-        document.getElementById('mStep1').style.display = 'none';
-        document.getElementById('mStep2').style.display = 'block';
-        document.getElementById('mSubtitle').style.display = 'none';
-      }).catch(function() {
-        btn.textContent = 'Something went wrong — try again';
-        btn.disabled = false;
+      // Fire and forget — advance immediately, don't block on API response
+      sendToFUB(mBookData, 'go.MrSellers.homes — Landing Page').catch(function() {
+        console.warn('FUB modal step 1 submission failed');
       });
+      document.getElementById('mStep1').style.display = 'none';
+      document.getElementById('mStep2').style.display = 'block';
+      document.getElementById('mSubtitle').style.display = 'none';
     });
 
     // Modal Step 2 submit
