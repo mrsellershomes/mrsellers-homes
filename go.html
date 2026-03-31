@@ -98,8 +98,10 @@
     <!-- Overlay -->
     <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(17,17,17,0.93) 0%, rgba(17,17,17,0.82) 40%, rgba(17,17,17,0.45) 62%, rgba(17,17,17,0.12) 100%), linear-gradient(to top, rgba(17,17,17,0.4) 0%, transparent 40%);"></div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 pt-10 sm:pt-16 pb-6 w-full">
-      <div class="max-w-[600px]">
+    <div class="relative z-10 max-w-6xl mx-auto px-5 sm:px-6 pt-10 sm:pt-16 pb-10 w-full flex items-center gap-10 lg:gap-16">
+
+      <!-- Left: headline + CTA + stats -->
+      <div class="flex-1 min-w-0">
         <!-- Eyebrow -->
         <div class="flex items-center gap-2.5 mb-4">
           <div class="w-7 h-0.5 bg-primary"></div>
@@ -139,9 +141,9 @@
         </div>
       </div>
 
-      <!-- Desktop testimonial card -->
-      <div class="hidden lg:block absolute right-12 bottom-10">
-        <div class="bg-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-6 max-w-[340px]">
+      <!-- Right: testimonial card (desktop only) -->
+      <div class="hidden lg:block flex-shrink-0 w-[320px]">
+        <div class="bg-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-6">
           <div class="text-xs font-bold text-white mb-3 uppercase tracking-widest">Client Feedback</div>
           <p class="text-white/85 text-sm leading-relaxed italic">
             &ldquo;Tyler is fantastic, he goes above and beyond for his clients&hellip; Besides being my realtor, <strong class="text-white text-base">I feel I made a <span class="bg-yellow-300 text-black px-1 rounded">friend</span>.</strong>&rdquo;
@@ -155,6 +157,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
