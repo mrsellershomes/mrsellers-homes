@@ -114,7 +114,7 @@
     input.error, select.error { border-color: #FF1200 !important; }
     /* Custom dropdown — replaces native <select> to fix Safari fixed-modal click offset bug */
     .custom-select { position: relative; user-select: none; -webkit-user-select: none; }
-    .custom-select-trigger { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 12px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 2px; font-size: 0.875rem; color: #111; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+    .custom-select-trigger { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 12px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 2px; font-size: 0.875rem; color: #111; cursor: pointer; -webkit-tap-highlight-color: transparent; text-align: left; outline: none; }
     .custom-select-trigger.placeholder { color: #9ca3af; }
     .custom-select-trigger svg { flex-shrink: 0; transition: transform 0.2s; }
     .custom-select.open .custom-select-trigger svg { transform: rotate(180deg); }
@@ -922,10 +922,10 @@
             <div class="mb-4">
               <label class="block text-[10px] uppercase tracking-[0.1em] text-gray-500 mb-1.5 font-medium">I&rsquo;m looking to</label>
               <div class="custom-select" id="book-intent-select">
-                <div class="custom-select-trigger placeholder" onclick="toggleCustomSelect('book-intent-select')">
+                <button type="button" class="custom-select-trigger placeholder" onclick="toggleCustomSelect('book-intent-select')">
                   <span>Select one</span>
                   <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l5 5 5-5" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round"/></svg>
-                </div>
+                </button>
                 <div class="custom-select-options">
                   <div class="custom-select-option" onclick="selectCustomOption('book-intent-select', 'Buy a home')">Buy a home</div>
                   <div class="custom-select-option" onclick="selectCustomOption('book-intent-select', 'Sell my home')">Sell my home</div>
