@@ -112,17 +112,11 @@
     .form-error { display: none; font-size: 0.6875rem; color: #FF1200; margin-top: 4px; }
     .form-error.show { display: block; }
     input.error, select.error { border-color: #FF1200 !important; }
-    /* Custom dropdown — replaces native <select> to fix Safari fixed-modal click offset bug */
-    .custom-select { position: relative; user-select: none; -webkit-user-select: none; }
-    .custom-select-trigger { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 12px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 2px; font-size: 0.875rem; color: #111; cursor: pointer; -webkit-tap-highlight-color: transparent; text-align: left; outline: none; }
-    .custom-select-trigger.placeholder { color: #9ca3af; }
-    .custom-select-trigger svg { flex-shrink: 0; transition: transform 0.2s; }
-    .custom-select.open .custom-select-trigger svg { transform: rotate(180deg); }
-    .custom-select-options { display: none; position: absolute; top: calc(100% + 4px); left: 0; right: 0; background: white; border: 1px solid #e5e7eb; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); z-index: 99999; }
-    .custom-select.open .custom-select-options { display: block; }
-    .custom-select-option { padding: 10px 12px; font-size: 0.875rem; color: #111; cursor: pointer; }
-    .custom-select-option:hover { background: #f3f4f6; }
-    .custom-select-option.selected { color: #FF1200; font-weight: 500; }
+    /* Intent pill buttons */
+    .intent-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+    .intent-pill { flex: 1; min-width: 0; padding: 9px 8px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 4px; font-size: 0.8125rem; color: #555; cursor: pointer; text-align: center; transition: all 0.15s; white-space: nowrap; }
+    .intent-pill:hover { border-color: #FF1200; color: #FF1200; }
+    .intent-pill.selected { background: #FF1200; border-color: #FF1200; color: white; font-weight: 500; }
   </style>
 </head>
 <body class="font-sans text-[#111111] bg-white leading-relaxed">
@@ -921,16 +915,10 @@
             </div>
             <div class="mb-4">
               <label class="block text-[10px] uppercase tracking-[0.1em] text-gray-500 mb-1.5 font-medium">I&rsquo;m looking to</label>
-              <div class="custom-select" id="book-intent-select">
-                <button type="button" class="custom-select-trigger placeholder" onclick="toggleCustomSelect('book-intent-select')">
-                  <span>Select one</span>
-                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l5 5 5-5" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round"/></svg>
-                </button>
-                <div class="custom-select-options">
-                  <div class="custom-select-option" onclick="selectCustomOption('book-intent-select', 'Buy a home')">Buy a home</div>
-                  <div class="custom-select-option" onclick="selectCustomOption('book-intent-select', 'Sell my home')">Sell my home</div>
-                  <div class="custom-select-option" onclick="selectCustomOption('book-intent-select', 'Buy and sell')">Buy and sell</div>
-                </div>
+              <div class="intent-pills" id="book-intent-pills">
+                <button type="button" class="intent-pill" onclick="selectIntentPill('book-intent-pills', 'Buy a home', this)">Buy a home</button>
+                <button type="button" class="intent-pill" onclick="selectIntentPill('book-intent-pills', 'Sell my home', this)">Sell my home</button>
+                <button type="button" class="intent-pill" onclick="selectIntentPill('book-intent-pills', 'Buy and sell', this)">Buy &amp; sell</button>
               </div>
             </div>
             <button type="button" class="w-full bg-[#FF1200] hover:bg-primary-dark text-white border-none p-3.5 text-sm font-medium cursor-pointer rounded-sm tracking-wide transition-colors" onclick="submitAndBook()">
@@ -1005,16 +993,10 @@
             </div>
             <div class="mb-4">
               <label class="block text-[10px] uppercase tracking-[0.1em] text-gray-500 mb-1.5 font-medium">I&rsquo;m looking to</label>
-              <div class="custom-select" id="m-book-intent-select">
-                <div class="custom-select-trigger placeholder" onclick="toggleCustomSelect('m-book-intent-select')">
-                  <span>Select one</span>
-                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l5 5 5-5" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round"/></svg>
-                </div>
-                <div class="custom-select-options">
-                  <div class="custom-select-option" onclick="selectCustomOption('m-book-intent-select', 'Buy a home')">Buy a home</div>
-                  <div class="custom-select-option" onclick="selectCustomOption('m-book-intent-select', 'Sell my home')">Sell my home</div>
-                  <div class="custom-select-option" onclick="selectCustomOption('m-book-intent-select', 'Buy and sell')">Buy and sell</div>
-                </div>
+              <div class="intent-pills" id="m-book-intent-pills">
+                <button type="button" class="intent-pill" onclick="selectIntentPill('m-book-intent-pills', 'Buy a home', this)">Buy a home</button>
+                <button type="button" class="intent-pill" onclick="selectIntentPill('m-book-intent-pills', 'Sell my home', this)">Sell my home</button>
+                <button type="button" class="intent-pill" onclick="selectIntentPill('m-book-intent-pills', 'Buy and sell', this)">Buy &amp; sell</button>
               </div>
             </div>
             <button type="button" class="w-full bg-[#FF1200] hover:bg-primary-dark text-white border-none p-3.5 text-sm font-medium cursor-pointer rounded-sm tracking-wide transition-colors" onclick="mSubmitAndBook()">
@@ -1147,42 +1129,21 @@
       if (subtitle) subtitle.style.display = 'none';
     });
 
-    // ---- CUSTOM SELECT ----
-    function toggleCustomSelect(id) {
-      var el = document.getElementById(id);
-      var isOpen = el.classList.contains('open');
-      // Close all open selects first
-      document.querySelectorAll('.custom-select.open').forEach(function(s) { s.classList.remove('open'); });
-      if (!isOpen) el.classList.add('open');
+    // ---- INTENT PILLS ----
+    function selectIntentPill(groupId, value, btn) {
+      var group = document.getElementById(groupId);
+      group.querySelectorAll('.intent-pill').forEach(function(p) { p.classList.remove('selected'); });
+      btn.classList.add('selected');
+      group.dataset.value = value;
     }
-    function selectCustomOption(id, value) {
-      var el = document.getElementById(id);
-      var trigger = el.querySelector('.custom-select-trigger');
-      trigger.querySelector('span').textContent = value;
-      trigger.classList.remove('placeholder');
-      el.querySelectorAll('.custom-select-option').forEach(function(o) {
-        o.classList.toggle('selected', o.textContent === value);
-      });
-      el.dataset.value = value;
-      el.classList.remove('open');
+    function getIntentPillValue(groupId) {
+      return document.getElementById(groupId).dataset.value || '';
     }
-    function getCustomSelectValue(id) {
-      return document.getElementById(id).dataset.value || '';
+    function resetIntentPills(groupId) {
+      var group = document.getElementById(groupId);
+      group.querySelectorAll('.intent-pill').forEach(function(p) { p.classList.remove('selected'); });
+      group.dataset.value = '';
     }
-    function resetCustomSelect(id) {
-      var el = document.getElementById(id);
-      el.querySelector('.custom-select-trigger span').textContent = 'Select one';
-      el.querySelector('.custom-select-trigger').classList.add('placeholder');
-      el.querySelectorAll('.custom-select-option').forEach(function(o) { o.classList.remove('selected'); });
-      el.dataset.value = '';
-      el.classList.remove('open');
-    }
-    // Close on outside click
-    document.addEventListener('click', function(e) {
-      if (!e.target.closest('.custom-select')) {
-        document.querySelectorAll('.custom-select.open').forEach(function(s) { s.classList.remove('open'); });
-      }
-    });
 
     // ---- TRACKING HELPERS ----
     function trackEvent(name, params) {
@@ -1198,7 +1159,7 @@
 
     function submitAndBook() {
       bookData.phone = document.getElementById('book-phone').value;
-      bookData.intent = getCustomSelectValue('book-intent-select');
+      bookData.intent = getIntentPillValue('book-intent-pills');
       sendToFUB(bookData, 'go.MrSellers.homes — Landing Page (details)');
       trackEvent('calendar_click', { intent: bookData.intent, form_location: 'page' });
       if (bookData.intent) clarityTag('lead_intent', bookData.intent);
@@ -1222,7 +1183,7 @@
       ['m-book-name','m-book-email','m-book-phone'].forEach(function(id) {
         var el = document.getElementById(id); if (el) el.value = '';
       });
-      resetCustomSelect('m-book-intent-select');
+      resetIntentPills('m-book-intent-pills');
       // Show modal — use body scroll lock to fix Safari fixed-modal click offset bug
       var scrollY = window.scrollY;
       document.body.style.position = 'fixed';
@@ -1281,7 +1242,7 @@
     // Modal Step 2 submit
     function mSubmitAndBook() {
       mBookData.phone = document.getElementById('m-book-phone').value;
-      mBookData.intent = getCustomSelectValue('m-book-intent-select');
+      mBookData.intent = getIntentPillValue('m-book-intent-pills');
       sendToFUB(mBookData, 'go.MrSellers.homes — Landing Page (details)');
       trackEvent('calendar_click', { intent: mBookData.intent, form_location: 'modal' });
       if (mBookData.intent) clarityTag('lead_intent', mBookData.intent);
