@@ -113,8 +113,10 @@
     .form-error.show { display: block; }
     input.error, select.error { border-color: #FF1200 !important; }
     /* Intent pill buttons */
-    .intent-pills { display: flex; gap: 8px; flex-wrap: wrap; }
-    .intent-pill { flex: 1; min-width: 0; padding: 9px 8px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 4px; font-size: 0.8125rem; color: #555; cursor: pointer; text-align: center; transition: all 0.15s; white-space: nowrap; }
+    .intent-pills { display: flex; flex-direction: column; gap: 8px; }
+    @media (min-width: 480px) { .intent-pills { flex-direction: row; } }
+    .intent-pill { width: 100%; padding: 10px 12px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 4px; font-size: 0.875rem; color: #555; cursor: pointer; text-align: center; transition: all 0.15s; }
+    @media (min-width: 480px) { .intent-pill { flex: 1; } }
     .intent-pill:hover { border-color: #FF1200; color: #FF1200; }
     .intent-pill.selected { background: #FF1200; border-color: #FF1200; color: white; font-weight: 500; }
   </style>
