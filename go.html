@@ -1223,15 +1223,23 @@
         var el = document.getElementById(id); if (el) el.value = '';
       });
       resetCustomSelect('m-book-intent-select');
-      // Show modal
+      // Show modal — use body scroll lock to fix Safari fixed-modal click offset bug
+      var scrollY = window.scrollY;
+      document.body.style.position = 'fixed';
+      document.body.style.top = '-' + scrollY + 'px';
+      document.body.style.width = '100%';
+      document.body.dataset.scrollY = scrollY;
       document.getElementById('bookModal').style.display = 'flex';
-      document.body.style.overflow = 'hidden';
     }
 
     function closeBookModal() {
       if (!mLeadCaptured) trackEvent('modal_abandon');
       document.getElementById('bookModal').style.display = 'none';
-      document.body.style.overflow = '';
+      var scrollY = parseInt(document.body.dataset.scrollY || '0');
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, scrollY);
     }
 
     // Close on backdrop click
