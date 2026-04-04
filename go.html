@@ -1164,6 +1164,8 @@
       trackEvent('calendar_click', { intent: bookData.intent, form_location: 'page' });
       if (bookData.intent) clarityTag('lead_intent', bookData.intent);
       window.open(GCAL_URL, '_blank');
+      document.getElementById('bookingForm').style.display = 'none';
+      document.getElementById('bookSuccess').classList.remove('hidden');
     }
 
     // ---- MODAL ----
