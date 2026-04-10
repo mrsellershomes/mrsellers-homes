@@ -262,11 +262,12 @@
       }
       if (data.email) payload.person.emails = [{ value: data.email }];
       if (data.phone) payload.person.phones = [{ value: data.phone }];
-      var tags = ['Open House Visitor'];
+      var tags = ['open house visitor'];
       if (data.hasAgency) {
-        tags.push('Has Exclusive Agency Agreement');
+        tags.push('has exclusive agency agreement');
       } else {
-        tags.push('No Exclusive Agency Agreement');
+        tags.push('no exclusive agency agreement');
+        tags.push('buyer');
       }
       payload.person.tags = tags;
 

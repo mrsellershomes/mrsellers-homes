@@ -858,12 +858,14 @@
       if (data.email) payload.person.emails = [{ value: data.email }];
       if (data.phone) payload.person.phones = [{ value: data.phone }];
       const tags = [];
+      if (data.formType === 'seller') tags.push('seller');
+      if (data.formType === 'buyer') tags.push('buyer');
       if (data.address) tags.push('Property: ' + data.address);
       if (data.towns) tags.push('Towns: ' + data.towns);
       if (data.budget) tags.push('Budget: ' + data.budget);
       if (data.timeline) tags.push('Timeline: ' + data.timeline);
       if (data.message) payload.person.description = data.message;
-      if (tags.length) payload.person.tags = tags;
+      payload.person.tags = tags;
 
       return fetch(FUB_API_URL, {
         method: 'POST',
@@ -917,7 +919,7 @@
       if (!valid) return;
       const btn = sellerForm.querySelector('#sellerStep1 .form-submit');
       btn.textContent = 'Sending...'; btn.disabled = true;
-      sellerData = { name: nameVal, email: emailVal };
+      sellerData = { name: nameVal, email: emailVal, formType: 'seller' };
       try {
         await sendToFUB(sellerData, 'MrSellers.homes — Seller Form');
         document.getElementById('sellerStep1').style.display = 'none';
@@ -962,7 +964,7 @@
       if (!valid) return;
       const btn = buyerForm.querySelector('#buyerStep1 .form-submit');
       btn.textContent = 'Sending...'; btn.disabled = true;
-      buyerData = { name: nameVal, email: emailVal };
+      buyerData = { name: nameVal, email: emailVal, formType: 'buyer' };
       try {
         await sendToFUB(buyerData, 'MrSellers.homes — Buyer Form');
         document.getElementById('buyerStep1').style.display = 'none';

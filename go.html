@@ -1055,8 +1055,12 @@
       if (data.email) payload.person.emails = [{ value: data.email }];
       if (data.phone) payload.person.phones = [{ value: data.phone }];
       var tags = [];
+      if (data.intent === 'Buy a home') tags.push('buyer');
+      else if (data.intent === 'Sell my home') tags.push('seller');
+      else if (data.intent === 'Buy and sell') tags.push('buyer/seller');
+      else tags.push('buyer');
       if (data.intent) tags.push('Intent: ' + data.intent);
-      if (tags.length) payload.person.tags = tags;
+      payload.person.tags = tags;
       return fetch(FUB_API_URL, {
         method: 'POST',
         headers: {
