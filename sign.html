@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Mr. Sellers Homes | Bergen County NJ Real Estate</title>
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5VC5MDECPH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-5VC5MDECPH');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window,document,"clarity","script","w1n2wmq26w");
+  </script>
+
+  <!-- Follow Up Boss Pixel -->
+  <script>
+    (function(d,w){var a=d.createElement('script');a.async=1;
+    a.src='https://assets.followupboss.com/third-party/current/fub.min.js';
+    var s=d.getElementsByTagName('script')[0];s.parentNode.insertBefore(a,s);
+    w.FubPixelId='WT-HHUBDZCX';
+    })(document,window);
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8f8f8;
+      color: #111;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      width: 100%;
+      max-width: 420px;
+      padding: 32px 24px;
+    }
+    .logo-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .logo-bar img { height: 36px; width: auto; }
+    .header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 6px;
+    }
+    .header p {
+      font-size: 13px;
+      color: #888;
+      line-height: 1.5;
+    }
+
+    /* Intent selector */
+    .intent-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 0;
+    }
+    .intent-btn {
+      width: 100%;
+      padding: 18px 16px;
+      border: 2px solid #e0e0e0;
+      border-radius: 10px;
+      background: #fafafa;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: #111;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .intent-btn:hover { border-color: #FF1200; background: #fff; }
+    .intent-btn:active { background: #fff3f3; }
+    .intent-btn .icon {
+      font-size: 22px;
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff3f3;
+      border-radius: 8px;
+    }
+    .intent-btn .label small {
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    /* Form (hidden initially) */
+    .form-section {
+      display: none;
+      margin-top: 20px;
+    }
+    .form-section.show { display: block; }
+    .intent-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #FF1200;
+      background: #fff3f3;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    .back-link {
+      font-size: 12px;
+      color: #888;
+      cursor: pointer;
+      margin-left: 8px;
+      text-decoration: underline;
+    }
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #666;
+      margin-bottom: 6px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 14px;
+      border: 1.5px solid #e0e0e0;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      color: #111;
+      background: #fafafa;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .form-group input:focus {
+      outline: none;
+      border-color: #FF1200;
+      background: #fff;
+    }
+    .form-group input::placeholder { color: #bbb; }
+    .error-msg {
+      display: none;
+      font-size: 11px;
+      color: #FF1200;
+      margin-top: 4px;
+    }
+    .error-msg.show { display: block; }
+    .form-group input.error { border-color: #FF1200; }
+    .submit-btn {
+      width: 100%;
+      padding: 16px;
+      background: #FF1200;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      letter-spacing: 0.02em;
+    }
+    .submit-btn:hover { background: #e00f00; }
+    .submit-btn:disabled { background: #ccc; cursor: not-allowed; }
+
+    /* Success state */
+    .success-state {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .success-state .check {
+      width: 60px;
+      height: 60px;
+      background: #e8f5e9;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .success-state .check svg {
+      width: 30px;
+      height: 30px;
+      color: #2e7d32;
+    }
+    .success-state h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .success-state p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .powered {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 11px;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="logo-bar">
+      <img src="mrsellershomes-logo.svg" alt="Mr. Sellers Homes" />
+      <img src="remax-balloon.svg" alt="RE/MAX" />
+    </div>
+
+    <div class="header">
+      <h1>Hi, I'm Tyler Sellers</h1>
+      <p id="headerSubtext">Bergen County's most transparent real estate agent. How can I help you?</p>
+    </div>
+
+    <!-- Step 1: Intent Selection -->
+    <div class="intent-buttons" id="intentButtons">
+      <button class="intent-btn" onclick="selectIntent('Buyer')">
+        <span class="icon">🏡</span>
+        <span class="label">I'm interested in this home<small>Get details and schedule a showing</small></span>
+      </button>
+      <button class="intent-btn" onclick="selectIntent('Seller')">
+        <span class="icon">📊</span>
+        <span class="label">Thinking of selling yours?<small>Get a free home value estimate</small></span>
+      </button>
+    </div>
+
+    <!-- Step 2: Contact Form -->
+    <div class="form-section" id="formSection">
+      <span class="intent-badge" id="intentBadge"></span>
+      <span class="back-link" onclick="goBack()">change</span>
+
+      <form id="signForm">
+        <div class="form-group">
+          <label for="sign-name">Full Name <span style="color:#FF1200;">*</span></label>
+          <input type="text" id="sign-name" placeholder="First and last name" required autocomplete="name" />
+          <div class="error-msg" id="sign-name-error">Please enter your name</div>
+        </div>
+
+        <div class="form-group">
+          <label for="sign-phone">Phone <span style="color:#FF1200;">*</span></label>
+          <input type="tel" id="sign-phone" placeholder="(201) 555-1234" required autocomplete="tel" inputmode="tel" />
+          <div class="error-msg" id="sign-phone-error">Please enter your phone number</div>
+        </div>
+
+        <div class="form-group">
+          <label for="sign-email">Email <span style="color:#FF1200;">*</span></label>
+          <input type="email" id="sign-email" placeholder="your@email.com" required autocomplete="email" inputmode="email" />
+          <div class="error-msg" id="sign-email-error">Please enter a valid email</div>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">Send My Info &rarr;</button>
+      </form>
+    </div>
+
+    <!-- Step 3: Success -->
+    <div class="success-state" id="successState">
+      <div class="check">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h2>You're all set!</h2>
+      <p>Tyler will reach out to you shortly. Redirecting you now&hellip;</p>
+    </div>
+
+    <div class="powered">Mr. Sellers Homes &middot; RE/MAX &middot; Bergen County, NJ</div>
+  </div>
+
+  <script>
+    var FUB_API_KEY = 'fka_0E2H1dG5ch1zr3VepnlIt9Oczs5uXO3Fi8';
+    var FUB_API_URL = 'https://api.followupboss.com/v1/events';
+    var selectedIntent = '';
+
+    // Check for address parameter
+    var urlParams = new URLSearchParams(window.location.search);
+    var addressParam = urlParams.get('a');
+
+    function getSource() {
+      if (addressParam) {
+        return 'Yard Sign QR - ' + addressParam;
+      }
+      return 'Yard Sign QR';
+    }
+
+    function selectIntent(intent) {
+      selectedIntent = intent;
+      document.getElementById('intentButtons').style.display = 'none';
+      document.getElementById('formSection').classList.add('show');
+      document.getElementById('intentBadge').textContent = intent === 'Buyer' ? '🏡 Interested Buyer' : '📊 Considering Selling';
+      document.getElementById('sign-name').focus();
+    }
+
+    function goBack() {
+      selectedIntent = '';
+      document.getElementById('formSection').classList.remove('show');
+      document.getElementById('intentButtons').style.display = 'flex';
+      clearErrors();
+    }
+
+    function clearErrors() {
+      var fields = ['sign-name', 'sign-phone', 'sign-email'];
+      for (var i = 0; i < fields.length; i++) {
+        document.getElementById(fields[i]).classList.remove('error');
+        document.getElementById(fields[i] + '-error').classList.remove('show');
+      }
+    }
+
+    // Auto-format phone number as (XXX) XXX-XXXX
+    document.getElementById('sign-phone').addEventListener('input', function(e) {
+      var x = e.target.value.replace(/\D/g, '').substring(0, 10);
+      var formatted = '';
+      if (x.length === 0) {
+        formatted = '';
+      } else if (x.length <= 3) {
+        formatted = '(' + x;
+      } else if (x.length <= 6) {
+        formatted = '(' + x.substring(0, 3) + ') ' + x.substring(3);
+      } else {
+        formatted = '(' + x.substring(0, 3) + ') ' + x.substring(3, 6) + '-' + x.substring(6);
+      }
+      e.target.value = formatted;
+    });
+
+    function sendToFUB(data) {
+      var payload = {
+        source: getSource(),
+        system: 'MrSellersHomes Website',
+        type: 'Registration',
+        person: {}
+      };
+
+      var parts = data.name.trim().split(/\s+/);
+      payload.person.firstName = parts[0] || '';
+      payload.person.lastName = parts.slice(1).join(' ') || '';
+      payload.person.emails = [{ value: data.email }];
+      payload.person.phones = [{ value: data.phone }];
+      payload.person.tags = [selectedIntent];
+
+      return fetch(FUB_API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Basic ' + btoa(FUB_API_KEY + ':')
+        },
+        body: JSON.stringify(payload)
+      });
+    }
+
+    document.getElementById('signForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      clearErrors();
+
+      var nameEl = document.getElementById('sign-name');
+      var phoneEl = document.getElementById('sign-phone');
+      var emailEl = document.getElementById('sign-email');
+      var valid = true;
+
+      if (!nameEl.value.trim()) {
+        nameEl.classList.add('error');
+        document.getElementById('sign-name-error').classList.add('show');
+        valid = false;
+      }
+      if (!phoneEl.value.trim() || phoneEl.value.replace(/\D/g, '').length < 10) {
+        phoneEl.classList.add('error');
+        document.getElementById('sign-phone-error').classList.add('show');
+        valid = false;
+      }
+      if (!emailEl.value.trim() || !emailEl.value.includes('@')) {
+        emailEl.classList.add('error');
+        document.getElementById('sign-email-error').classList.add('show');
+        valid = false;
+      }
+      if (!valid) return;
+
+      var btn = document.getElementById('submitBtn');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      var data = {
+        name: nameEl.value,
+        phone: phoneEl.value,
+        email: emailEl.value
+      };
+
+      sendToFUB(data).then(function() {
+        showSuccess();
+      }).catch(function() {
+        // Still show success — don't block the user experience
+        showSuccess();
+      });
+    });
+
+    function showSuccess() {
+      document.getElementById('formSection').classList.remove('show');
+      document.getElementById('headerSubtext').style.display = 'none';
+      document.querySelector('.header h1').textContent = 'Thank You!';
+      document.getElementById('successState').style.display = 'block';
+      setTimeout(function() {
+        window.location.href = 'https://mrsellers.homes';
+      }, 2500);
+    }
+  </script>
+
+</body>
+</html>
