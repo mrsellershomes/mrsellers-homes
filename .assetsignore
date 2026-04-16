@@ -1,0 +1,16 @@
+.git
+.git/**
+.github
+.github/**
+.claude
+.claude/**
+.DS_Store
+**/.DS_Store
+.gitignore
+.assetsignore
+docs
+docs/**
+README.md
+wrangler.jsonc
+node_modules
+node_modules/**
