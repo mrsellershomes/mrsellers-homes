@@ -344,11 +344,8 @@
     .gallery-item:hover img {
       transform: scale(1.03);
     }
-    /* Feature items: every 7th item is a wide hero */
-    .gallery-item.wide { grid-column: span 2; aspect-ratio: 6 / 2; }
     @media (max-width: 768px) {
       .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-      .gallery-item.wide { grid-column: span 2; aspect-ratio: 4 / 2.2; }
     }
 
     /* ======= Lightbox ======= */
@@ -1013,14 +1010,13 @@
       <h2>The Layout</h2>
       <div class="plan-controls">
         <div class="plan-tabs" role="tablist">
-          <button class="plan-tab" data-floor="main">Main Floor</button>
+          <button class="plan-tab active" data-floor="main">Main Floor</button>
           <button class="plan-tab" data-floor="upper">Upper</button>
           <button class="plan-tab" data-floor="lower">Lower Level</button>
-          <button class="plan-tab active" data-floor="all">All Floors</button>
         </div>
         <div class="plan-toggle" id="planToggle">
-          <button data-view="2d" class="active">2D · with dimensions</button>
-          <button data-view="3d">3D · staged</button>
+          <button data-view="3d" class="active">3D · staged</button>
+          <button data-view="2d">2D · with dimensions</button>
         </div>
       </div>
       <div class="plan-viewer" id="planViewer"></div>
@@ -1075,7 +1071,7 @@
 
   <!-- ============ 12. FOOTER ============ -->
   <footer>
-    <p>MLS&nbsp;# — <span id="mlsNumber">To be assigned</span></p>
+    <p>MLS&nbsp;# 26012810</p>
     <p>© 2026 · Equal Housing Opportunity</p>
   </footer>
 
@@ -1100,7 +1096,7 @@
 
       // Google Maps
       mapsApiKey: 'AIzaSyAuoWqBU_Cd6UsIbstNjZ_7GdRwaJdpmbY',
-      houseCoords: { lat: 40.9574, lng: -73.9567 }, // 8 Broad St Demarest (approx — Google will refine)
+      houseCoords: { lat: 40.952857, lng: -73.960866 }, // 8 Broad St Demarest (Tyler-verified)
 
       // Follow Up Boss
       fub: {
@@ -1135,9 +1131,7 @@
       let html = '';
       for (let i = 1; i <= CONFIG.totalPhotos; i++) {
         const n = String(i).padStart(2, '0');
-        // Make every 7th item a "wide" span for visual rhythm
-        const wide = (i % 7 === 0) ? ' wide' : '';
-        html += '<div class="gallery-item' + wide + '" data-index="' + (i-1) + '">' +
+        html += '<div class="gallery-item" data-index="' + (i-1) + '">' +
                 '<img src="photos/thumb/' + n + '.jpg" loading="lazy" alt="Interior view" />' +
                 '</div>';
       }
@@ -1201,23 +1195,15 @@
       const tabs = document.querySelectorAll('.plan-tab');
       const toggleBtns = document.querySelectorAll('.plan-toggle button');
       const viewer = document.getElementById('planViewer');
-      let currentFloor = 'all';
-      let currentView = '2d';
+      let currentFloor = 'main';
+      let currentView = '3d';
 
       function render() {
-        // All Floors only available in 2D
-        if (currentFloor === 'all' && currentView === '3d') {
-          viewer.innerHTML = '<div class="plan-unavailable">3D view is available per-floor. Switch to 2D for the combined view, or select a single floor above.</div>';
-          return;
-        }
         const ext = currentView === '2d' ? 'svg' : 'jpg';
         const dir = currentView === '2d' ? '2d' : '3d';
         const src = 'floor-plans/' + dir + '-' + currentFloor + '.' + ext;
-        if (ext === 'svg') {
-          viewer.innerHTML = '<img src="' + src + '" alt="Floor plan — ' + currentFloor + '" />';
-        } else {
-          viewer.innerHTML = '<img src="' + src + '" alt="3D floor plan — ' + currentFloor + '" />';
-        }
+        const label = currentView === '3d' ? '3D floor plan' : 'Floor plan';
+        viewer.innerHTML = '<img src="' + src + '" alt="' + label + ' — ' + currentFloor + '" />';
       }
 
       tabs.forEach(function(t) {
@@ -1241,15 +1227,16 @@
 
     /* ============ 5. GOOGLE MAPS ============ */
     const POIs = [
-      { name: 'George Washington Bridge',            coords: { lat: 40.8517, lng: -73.9527 }, blurb: '≈ 35 min to Manhattan' },
-      { name: 'County Rd & Hardenburgh Ave Bus Stop', coords: { lat: 40.9555, lng: -73.9587 }, blurb: 'NJ Transit bus to Port Authority / GWB' },
-      { name: 'Whole Foods Market — Closter',        coords: { lat: 40.9717, lng: -73.9573 }, blurb: 'Everyday grocery & café' },
-      { name: 'Rockefeller Lookout',                 coords: { lat: 40.9097, lng: -73.9195 }, blurb: 'Palisades Interstate Park scenic overlook' },
-      { name: 'Downtown Tenafly',                    coords: { lat: 40.9195, lng: -73.9624 }, blurb: 'Restaurants, cafés, and shops' },
-      { name: 'Alpine Country Club',                 coords: { lat: 40.9632, lng: -73.9437 }, blurb: 'Private club — Demarest' },
-      { name: 'Demarest Nature Center',              coords: { lat: 40.9649, lng: -73.9604 }, blurb: 'Woodland trails & preserve' },
-      { name: 'Alpine Boat Basin',                   coords: { lat: 40.9437, lng: -73.9181 }, blurb: 'Palisades Park — Hudson River access' },
-      { name: 'Bergen Equestrian Center',            coords: { lat: 40.8639, lng: -73.9935 }, blurb: 'Riding & boarding — Leonia' }
+      { name: 'George Washington Bridge',            coords: { lat: 40.8517,   lng: -73.9527   }, blurb: '≈ 35 min to Manhattan' },
+      { name: 'County Rd & Hardenburgh Ave Bus Stop', coords: { lat: 40.956775, lng: -73.962081 }, blurb: 'NJ Transit bus to Port Authority / GWB' },
+      { name: 'Whole Foods Market — Closter',        coords: { lat: 40.970425, lng: -73.956475 }, blurb: 'Everyday grocery & café' },
+      { name: 'Rockefeller Lookout',                 coords: { lat: 40.892749, lng: -73.940894 }, blurb: 'Palisades Interstate Park scenic overlook' },
+      { name: 'Downtown Tenafly',                    coords: { lat: 40.925367, lng: -73.964646 }, blurb: 'Restaurants, cafés, and shops' },
+      { name: 'Alpine Country Club',                 coords: { lat: 40.951949, lng: -73.947187 }, blurb: 'Private club — Demarest' },
+      { name: 'Demarest Nature Center',              coords: { lat: 40.961925, lng: -73.966543 }, blurb: 'Woodland trails & preserve' },
+      { name: 'Alpine Boat Basin',                   coords: { lat: 40.9437,   lng: -73.9181   }, blurb: 'Palisades Park — Hudson River access' },
+      { name: 'Bergen Equestrian Center',            coords: { lat: 40.863180, lng: -73.997446 }, blurb: 'Riding & boarding — Leonia' },
+      { name: 'Northern Valley Regional HS',         coords: { lat: 40.963267, lng: -73.973910 }, blurb: 'Demarest' }
     ];
 
     const MAP_STYLES = [
