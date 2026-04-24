@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>The Sellers Take — Starting Soon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared/styles.css" />
+<style>
+  body { background: radial-gradient(ellipse at center, #1a1a1a 0%, #000 70%); }
+  .show-logo {
+    font-size: 120px;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 0.9;
+  }
+  .show-tag {
+    font-size: 18px;
+    letter-spacing: 0.35em;
+    color: var(--accent-red);
+    font-weight: 700;
+    margin-top: 22px;
+  }
+  .countdown {
+    font-family: var(--font-mono);
+    font-size: 64px;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    margin-top: 42px;
+  }
+  .countdown-label {
+    font-size: 14px;
+    letter-spacing: 0.32em;
+    color: var(--text-muted-5);
+    margin-top: 10px;
+    font-weight: 700;
+  }
+</style>
+</head>
+<body class="stream-bg">
+  <div class="center-wrap">
+    <div class="show-logo">THE<br>SELLERS<br>TAKE</div>
+    <div class="show-tag">NO BS · BERGEN COUNTY, NJ</div>
+    <div class="countdown" id="countdown">00:05:00</div>
+    <div class="countdown-label">STARTING SOON</div>
+  </div>
+  <div class="ep-stamp" id="ep-stamp">EP. 001</div>
+  <div class="ticker" id="ticker">
+    <div class="tag">BRAND</div>
+    <div class="text">Buyers chasing deals are losing. Every single week.</div>
+  </div>
+
+  <script type="module">
+    import { createTicker } from "../shared/ticker.js";
+    import { EVERGREEN_LINES, ROTATION_INTERVAL_MS } from "../shared/evergreen.js";
+
+    const countdownEl = document.getElementById("countdown");
+    let targetMs = Date.now() + 5 * 60 * 1000; // default 5 min
+
+    function fmt(ms) {
+      if (ms < 0) ms = 0;
+      const s = Math.floor(ms / 1000);
+      const hh = String(Math.floor(s / 3600)).padStart(2, "0");
+      const mm = String(Math.floor((s % 3600) / 60)).padStart(2, "0");
+      const ss = String(s % 60).padStart(2, "0");
+      return `${hh}:${mm}:${ss}`;
+    }
+
+    function tick() {
+      countdownEl.textContent = fmt(targetMs - Date.now());
+    }
+    tick();
+    setInterval(tick, 1000);
+
+    async function fetchState() {
+      const r = await fetch("/api/topic", { cache: "no-store" });
+      if (!r.ok) throw new Error("fetch failed");
+      const s = await r.json();
+      if (s.startingSoonTarget) {
+        const t = Date.parse(s.startingSoonTarget);
+        if (!Number.isNaN(t)) targetMs = t;
+      }
+      return s;
+    }
+
+    const ticker = createTicker(document.getElementById("ticker"), {
+      evergreen: EVERGREEN_LINES,
+      fetchState,
+      intervalMs: ROTATION_INTERVAL_MS,
+      pollMs: 5000,
+    });
+    ticker.startRotation();
+    ticker.startPolling();
+  </script>
+</body>
+</html>
