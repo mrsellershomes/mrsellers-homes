@@ -1,0 +1,126 @@
+/* mrsellers-homes/take/shared/styles.css */
+/* Design tokens for The Sellers Take stream overlays. */
+
+:root {
+  --bg-black: #000;
+  --panel-deep: #111;
+  --webcam-placeholder: #141414;
+  --accent-red: #FF1200;
+  --text-white: #fff;
+  --text-muted-7: rgba(255, 255, 255, 0.7);
+  --text-muted-5: rgba(255, 255, 255, 0.5);
+  --text-muted-3: rgba(255, 255, 255, 0.3);
+  --border-red-top: 2px solid #FF1200;
+  --font-display: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", Menlo, monospace;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-display);
+  color: var(--text-white);
+  background: transparent;
+  overflow: hidden;
+}
+
+body.stream-bg { background: var(--bg-black); }
+
+/* --- Name card (top-left) --- */
+.name-card {
+  position: absolute;
+  top: 28px;
+  left: 32px;
+  color: var(--text-white);
+  z-index: 2;
+}
+.name-card .name-big {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.name-card .name-sub {
+  font-size: 11px;
+  margin-top: 7px;
+  letter-spacing: 0.28em;
+  color: var(--accent-red);
+  font-weight: 700;
+}
+
+/* --- LIVE badge (top-right) --- */
+.live-badge {
+  position: absolute;
+  top: 30px;
+  right: 32px;
+  background: var(--accent-red);
+  color: var(--text-white);
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  z-index: 2;
+}
+
+/* --- Episode stamp (bottom-right, above ticker) --- */
+.ep-stamp {
+  position: absolute;
+  bottom: 68px;
+  right: 32px;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  color: var(--text-muted-5);
+  font-weight: 700;
+  z-index: 2;
+}
+
+/* --- Ticker bar (bottom) --- */
+.ticker {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: stretch;
+  height: 56px;
+  z-index: 2;
+}
+.ticker .tag {
+  background: var(--accent-red);
+  color: var(--text-white);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+.ticker .text {
+  background: var(--panel-deep);
+  color: var(--text-white);
+  padding: 0 22px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  border-top: var(--border-red-top);
+  transition: opacity 400ms ease;
+}
+.ticker .text.fading { opacity: 0; }
+
+/* --- Fullscreen centered layout for utility scenes --- */
+.center-wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 60px;
+}
