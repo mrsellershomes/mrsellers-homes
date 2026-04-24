@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>The Sellers Take — Screen Share</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared/styles.css" />
+<style>
+  body { background: transparent; }
+  .name-tag-small {
+    position: absolute;
+    top: 24px;
+    left: 30px;
+    color: var(--text-white);
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(4px);
+    padding: 8px 14px;
+    z-index: 2;
+  }
+  .name-tag-small .n { font-size: 14px; font-weight: 900; letter-spacing: -0.01em; line-height: 1; }
+  .name-tag-small .s { font-size: 8px; letter-spacing: 0.25em; color: var(--accent-red); margin-top: 4px; font-weight: 700; }
+</style>
+</head>
+<body>
+  <div class="name-tag-small">
+    <div class="n">TYLER SELLERS</div>
+    <div class="s">THE SELLERS TAKE</div>
+  </div>
+  <div class="live-badge">LIVE</div>
+  <div class="ep-stamp" id="ep-stamp">EP. 001</div>
+  <div class="ticker" id="ticker">
+    <div class="tag">BRAND</div>
+    <div class="text">Real estate Twitter ≠ Bergen County.</div>
+  </div>
+
+  <script type="module">
+    import { createTicker } from "../shared/ticker.js";
+    import { EVERGREEN_LINES, ROTATION_INTERVAL_MS } from "../shared/evergreen.js";
+    async function fetchState() {
+      const r = await fetch("/api/topic", { cache: "no-store" });
+      if (!r.ok) throw new Error("fetch failed");
+      return r.json();
+    }
+    const ticker = createTicker(document.getElementById("ticker"), {
+      evergreen: EVERGREEN_LINES,
+      fetchState,
+      intervalMs: ROTATION_INTERVAL_MS,
+      pollMs: 5000,
+    });
+    ticker.startRotation();
+    ticker.startPolling();
+  </script>
+</body>
+</html>
