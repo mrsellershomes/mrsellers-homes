@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>The Sellers Take — Guest Split</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared/styles.css" />
+<style>
+  body { background: transparent; }
+  .split-name { position: absolute; bottom: 78px; color: var(--text-white); background: rgba(0,0,0,0.55); backdrop-filter: blur(4px); padding: 10px 18px; }
+  .split-name .n { font-size: 22px; font-weight: 900; letter-spacing: -0.02em; line-height: 1; }
+  .split-name .role { display: block; color: var(--accent-red); font-size: 11px; letter-spacing: 0.3em; margin-top: 6px; font-weight: 900; }
+  .split-name.left { left: 60px; }
+  .split-name.right { right: 60px; }
+</style>
+</head>
+<body>
+  <div class="live-badge">LIVE</div>
+  <div class="split-name left">
+    <div class="n">TYLER SELLERS</div>
+    <div class="role">HOST</div>
+  </div>
+  <div class="split-name right">
+    <div class="n" id="guest-name">[GUEST NAME]</div>
+    <div class="role">GUEST</div>
+  </div>
+  <div class="ticker" id="ticker">
+    <div class="tag">BRAND</div>
+    <div class="text">Real estate Twitter ≠ Bergen County.</div>
+  </div>
+
+  <script type="module">
+    import { createTicker } from "../shared/ticker.js";
+    import { EVERGREEN_LINES, ROTATION_INTERVAL_MS } from "../shared/evergreen.js";
+    async function fetchState() {
+      const r = await fetch("/api/topic", { cache: "no-store" });
+      if (!r.ok) throw new Error("fetch failed");
+      return r.json();
+    }
+    const ticker = createTicker(document.getElementById("ticker"), {
+      evergreen: EVERGREEN_LINES,
+      fetchState,
+      intervalMs: ROTATION_INTERVAL_MS,
+      pollMs: 5000,
+    });
+    ticker.startRotation();
+    ticker.startPolling();
+  </script>
+</body>
+</html>
