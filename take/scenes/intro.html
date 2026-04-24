@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>The Sellers Take — Intro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared/styles.css" />
+<style>
+  body { background: var(--bg-black); overflow: hidden; }
+  .intro-root { position: absolute; inset: 0; }
+  .date-stamp {
+    position: absolute; top: 40px; left: 40px;
+    font-family: var(--font-mono); font-size: 22px;
+    color: rgba(255,255,255,0.7); letter-spacing: 0.1em;
+    opacity: 0; animation: dateIn 0.8s ease-out 0.2s forwards;
+  }
+  .logo-wrap {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center;
+    opacity: 0; animation: logoIn 0.5s ease-out 1.5s forwards;
+  }
+  .main-logo {
+    font-size: 160px; font-weight: 900; letter-spacing: -0.04em; color: var(--text-white);
+    line-height: 0.92; text-shadow: 8px 8px 0 var(--accent-red);
+  }
+  .tagline {
+    font-size: 18px; letter-spacing: 0.4em; color: var(--text-white);
+    margin-top: 28px; font-weight: 700;
+    opacity: 0; animation: taglineIn 0.4s ease-out 2.7s forwards;
+  }
+  .flash {
+    position: absolute; inset: 0; background: var(--accent-red);
+    opacity: 0; pointer-events: none;
+    animation: flash 0.15s ease-out 3.2s;
+  }
+  @keyframes dateIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes logoIn {
+    from { opacity: 0; transform: scale(1.2); filter: blur(12px); }
+    to { opacity: 1; transform: scale(1); filter: blur(0); }
+  }
+  @keyframes taglineIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes flash {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 0.5; }
+  }
+</style>
+</head>
+<body class="stream-bg">
+  <div class="intro-root">
+    <div class="date-stamp" id="date"></div>
+    <div class="logo-wrap">
+      <div class="main-logo">THE<br>SELLERS<br>TAKE</div>
+      <div class="tagline">NO BS · BERGEN COUNTY, NJ</div>
+    </div>
+    <div class="flash"></div>
+  </div>
+  <script>
+    const now = new Date();
+    const months = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+    document.getElementById("date").textContent =
+      `${months[now.getMonth()]} ${now.getDate()} · ${now.getFullYear()}`;
+  </script>
+</body>
+</html>
