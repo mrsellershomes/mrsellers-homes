@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Sellers Take — Control</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    background: #f4f4f4; margin: 0; padding: 40px 20px;
+    display: flex; justify-content: center; min-height: 100vh;
+  }
+  .panel { max-width: 560px; width: 100%; background: #fff; padding: 36px 38px; border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
+  h1 { font-size: 26px; font-weight: 900; letter-spacing: -0.01em; margin: 0 0 6px; color: #111; }
+  .sub { color: #666; font-size: 13px; margin-bottom: 26px; }
+  label { display: block; font-size: 11px; color: #999; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; margin-bottom: 7px; }
+  input { width: 100%; padding: 12px 14px; font-size: 15px; border: 2px solid #111; border-radius: 6px; font-weight: 600; font-family: inherit; }
+  input:focus { outline: none; border-color: #FF1200; }
+  .field { margin-bottom: 22px; }
+  .btn-row { display: flex; gap: 10px; margin-top: 10px; }
+  .btn { padding: 12px 20px; font-size: 13px; font-weight: 900; letter-spacing: 0.06em; border: 0; cursor: pointer; border-radius: 6px; font-family: inherit; }
+  .btn.primary { background: #FF1200; color: #fff; flex: 1; }
+  .btn.primary:hover { background: #dd0f00; }
+  .btn.ghost { background: #f0f0f0; color: #111; }
+  .btn.ghost:hover { background: #e4e4e4; }
+  .status { margin-top: 14px; font-size: 13px; color: #666; }
+  .status.ok { color: #0a7b0a; }
+  .status.err { color: #cc0000; }
+  .preview { margin-top: 18px; padding: 14px; background: #000; border-radius: 6px; display: flex; align-items: stretch; min-height: 40px; }
+  .preview .tag { background: #FF1200; color: #fff; padding: 6px 12px; font-weight: 900; font-size: 11px; letter-spacing: 0.12em; display: flex; align-items: center; }
+  .preview .text { background: #111; color: #fff; padding: 6px 12px; flex: 1; font-size: 13px; font-weight: 600; border-top: 2px solid #FF1200; display: flex; align-items: center; }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+  <div class="panel">
+    <h1>The Sellers Take · Control</h1>
+    <div class="sub">Change what's showing at the bottom of the stream.</div>
+
+    <div id="login-view" class="hidden">
+      <div class="field">
+        <label>Password</label>
+        <input id="password" type="password" autocomplete="current-password" placeholder="••••••••" />
+      </div>
+      <div class="btn-row">
+        <button id="login-btn" class="btn primary">UNLOCK</button>
+      </div>
+      <div id="login-status" class="status"></div>
+    </div>
+
+    <div id="control-view" class="hidden">
+      <div class="field">
+        <label>Today's topic (optional)</label>
+        <input id="topic" type="text" maxlength="200" placeholder="Leave blank for rotating brand lines" />
+      </div>
+      <div class="field">
+        <label>Hot Take quote</label>
+        <input id="hot-take" type="text" maxlength="200" placeholder="Tonight's pull quote" />
+      </div>
+      <div class="field">
+        <label>Next episode</label>
+        <input id="next-episode" type="text" maxlength="80" placeholder="e.g. TUESDAY 3:00 PM ET" />
+      </div>
+      <div class="field">
+        <label>Starting Soon target (ISO or blank for +5 min)</label>
+        <input id="ss-target" type="text" placeholder="2026-04-23T19:00:00Z or blank" />
+      </div>
+      <div class="btn-row">
+        <button id="save-btn" class="btn primary">SAVE &amp; SHOW</button>
+        <button id="reset-btn" class="btn ghost">RESET TO ROTATING</button>
+      </div>
+      <div id="status" class="status"></div>
+      <div class="preview" id="preview">
+        <div class="tag">BRAND</div>
+        <div class="text">Buyers chasing deals are losing. Every single week.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const loginView = document.getElementById("login-view");
+    const controlView = document.getElementById("control-view");
+    const loginStatus = document.getElementById("login-status");
+    const status = document.getElementById("status");
+    const topicEl = document.getElementById("topic");
+    const hotTakeEl = document.getElementById("hot-take");
+    const nextEpEl = document.getElementById("next-episode");
+    const ssEl = document.getElementById("ss-target");
+    const preview = document.getElementById("preview");
+
+    function show(view) {
+      loginView.classList.toggle("hidden", view !== "login");
+      controlView.classList.toggle("hidden", view !== "control");
+    }
+
+    async function checkAuth() {
+      try {
+        const r = await fetch("/api/me", { credentials: "include", cache: "no-store" });
+        const { authenticated } = await r.json();
+        if (authenticated) {
+          await loadState();
+          show("control");
+        } else {
+          show("login");
+        }
+      } catch {
+        show("login");
+      }
+    }
+
+    async function loadState() {
+      try {
+        const r = await fetch("/api/topic", { cache: "no-store" });
+        const s = await r.json();
+        topicEl.value = s.topic ?? "";
+        hotTakeEl.value = s.hotTake ?? "";
+        nextEpEl.value = s.nextEpisode ?? "";
+        ssEl.value = s.startingSoonTarget ?? "";
+        renderPreview();
+      } catch {}
+    }
+
+    function renderPreview() {
+      const topic = topicEl.value.trim();
+      preview.querySelector(".tag").textContent = topic ? "TODAY" : "BRAND";
+      preview.querySelector(".text").textContent = topic || "Buyers chasing deals are losing. Every single week.";
+    }
+    [topicEl, hotTakeEl, nextEpEl, ssEl].forEach(el => el.addEventListener("input", renderPreview));
+
+    document.getElementById("login-btn").addEventListener("click", async () => {
+      const password = document.getElementById("password").value;
+      loginStatus.textContent = "Checking…";
+      loginStatus.className = "status";
+      try {
+        const r = await fetch("/api/login", {
+          method: "POST",
+          credentials: "include",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ password }),
+        });
+        if (r.ok) {
+          loginStatus.textContent = "";
+          await loadState();
+          show("control");
+        } else {
+          loginStatus.textContent = "Wrong password.";
+          loginStatus.className = "status err";
+        }
+      } catch {
+        loginStatus.textContent = "Network error.";
+        loginStatus.className = "status err";
+      }
+    });
+
+    document.getElementById("save-btn").addEventListener("click", async () => {
+      status.textContent = "Saving…";
+      status.className = "status";
+      try {
+        const r = await fetch("/api/topic", {
+          method: "POST",
+          credentials: "include",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({
+            topic: topicEl.value.trim() || null,
+            hotTake: hotTakeEl.value.trim() || null,
+            nextEpisode: nextEpEl.value.trim() || null,
+            startingSoonTarget: ssEl.value.trim() || null,
+          }),
+        });
+        if (r.ok) {
+          status.textContent = "Saved. Overlay updates within 5 seconds.";
+          status.className = "status ok";
+        } else if (r.status === 401) {
+          show("login");
+        } else {
+          status.textContent = "Save failed.";
+          status.className = "status err";
+        }
+      } catch {
+        status.textContent = "Network error.";
+        status.className = "status err";
+      }
+    });
+
+    document.getElementById("reset-btn").addEventListener("click", async () => {
+      topicEl.value = "";
+      renderPreview();
+      document.getElementById("save-btn").click();
+    });
+
+    checkAuth();
+  </script>
+</body>
+</html>
