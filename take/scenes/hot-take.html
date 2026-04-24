@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>The Sellers Take — Hot Take</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../shared/styles.css" />
+<style>
+  .ht-label { position: absolute; top: 60px; left: 0; right: 0; text-align: center; color: var(--accent-red); font-weight: 900; font-size: 18px; letter-spacing: 0.5em; }
+  .ht-label::before, .ht-label::after { content: ''; display: inline-block; width: 80px; height: 2px; background: var(--accent-red); vertical-align: middle; margin: 0 24px; }
+  .ht-quote-wrap { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 0 120px; text-align: center; }
+  .ht-quote { font-size: 72px; font-weight: 800; line-height: 1.12; letter-spacing: -0.02em; }
+  .ht-quote::before { content: '\201C'; display: block; color: var(--accent-red); font-size: 140px; font-family: Georgia, serif; line-height: 0.6; margin-bottom: 20px; }
+  .ht-attr { position: absolute; bottom: 80px; left: 0; right: 0; text-align: center; color: var(--text-muted-7); font-size: 15px; letter-spacing: 0.32em; font-weight: 700; }
+</style>
+</head>
+<body class="stream-bg">
+  <div class="ht-label">HOT TAKE</div>
+  <div class="ht-quote-wrap">
+    <div class="ht-quote" id="ht-quote">If you're buying in five years, your game plan starts now.</div>
+  </div>
+  <div class="ht-attr">— TYLER SELLERS · EP. <span id="ep-num">001</span></div>
+
+  <script type="module">
+    (async () => {
+      try {
+        const r = await fetch("/api/topic", { cache: "no-store" });
+        if (r.ok) {
+          const s = await r.json();
+          if (s.hotTake) document.getElementById("ht-quote").textContent = s.hotTake;
+        }
+      } catch {}
+    })();
+  </script>
+</body>
+</html>
