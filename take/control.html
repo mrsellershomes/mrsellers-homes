@@ -66,8 +66,8 @@
         <input id="next-episode" type="text" maxlength="80" placeholder="e.g. TUESDAY 3:00 PM ET" />
       </div>
       <div class="field">
-        <label>Starting Soon target (ISO or blank for +5 min)</label>
-        <input id="ss-target" type="text" placeholder="2026-04-23T19:00:00Z or blank" />
+        <label>Start in how many minutes?</label>
+        <input id="ss-minutes" type="number" min="1" max="180" placeholder="e.g. 5 (leave blank = 5 min default)" />
       </div>
       <div class="btn-row">
         <button id="save-btn" class="btn primary">SAVE &amp; SHOW</button>
@@ -89,7 +89,7 @@
     const topicEl = document.getElementById("topic");
     const hotTakeEl = document.getElementById("hot-take");
     const nextEpEl = document.getElementById("next-episode");
-    const ssEl = document.getElementById("ss-target");
+    const ssMinEl = document.getElementById("ss-minutes");
     const preview = document.getElementById("preview");
 
     function show(view) {
@@ -119,7 +119,13 @@
         topicEl.value = s.topic ?? "";
         hotTakeEl.value = s.hotTake ?? "";
         nextEpEl.value = s.nextEpisode ?? "";
-        ssEl.value = s.startingSoonTarget ?? "";
+        // Convert stored ISO → remaining whole minutes (if still in the future)
+        if (s.startingSoonTarget) {
+          const ms = Date.parse(s.startingSoonTarget) - Date.now();
+          ssMinEl.value = ms > 0 ? String(Math.max(1, Math.round(ms / 60000))) : "";
+        } else {
+          ssMinEl.value = "";
+        }
         renderPreview();
       } catch {}
     }
@@ -129,7 +135,7 @@
       preview.querySelector(".tag").textContent = topic ? "TODAY" : "BRAND";
       preview.querySelector(".text").textContent = topic || "Buyers chasing deals are losing. Every single week.";
     }
-    [topicEl, hotTakeEl, nextEpEl, ssEl].forEach(el => el.addEventListener("input", renderPreview));
+    [topicEl, hotTakeEl, nextEpEl, ssMinEl].forEach(el => el.addEventListener("input", renderPreview));
 
     document.getElementById("login-btn").addEventListener("click", async () => {
       const password = document.getElementById("password").value;
@@ -160,6 +166,10 @@
       status.textContent = "Saving…";
       status.className = "status";
       try {
+        const minutes = parseInt(ssMinEl.value.trim(), 10);
+        const ssTarget = Number.isFinite(minutes) && minutes > 0
+          ? new Date(Date.now() + minutes * 60000).toISOString()
+          : null;
         const r = await fetch("/api/topic", {
           method: "POST",
           credentials: "include",
@@ -168,7 +178,7 @@
             topic: topicEl.value.trim() || null,
             hotTake: hotTakeEl.value.trim() || null,
             nextEpisode: nextEpEl.value.trim() || null,
-            startingSoonTarget: ssEl.value.trim() || null,
+            startingSoonTarget: ssTarget,
           }),
         });
         if (r.ok) {
