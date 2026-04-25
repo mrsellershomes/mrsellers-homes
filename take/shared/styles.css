@@ -67,9 +67,9 @@ body.stream-bg { background: var(--bg-black); }
 /* --- Episode stamp (bottom-right, above ticker) --- */
 .ep-stamp {
   position: absolute;
-  bottom: 68px;
+  bottom: 100px;
   right: 32px;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.25em;
   color: var(--text-muted-5);
   font-weight: 700;
@@ -84,17 +84,17 @@ body.stream-bg { background: var(--bg-black); }
   right: 0;
   display: flex;
   align-items: stretch;
-  height: 56px;
+  height: 84px;
   z-index: 2;
 }
 .ticker .tag {
   background: var(--accent-red);
   color: var(--text-white);
-  padding: 0 20px;
+  padding: 0 26px;
   display: flex;
   align-items: center;
   font-weight: 900;
-  font-size: 14px;
+  font-size: 19px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   flex-shrink: 0;
@@ -102,11 +102,11 @@ body.stream-bg { background: var(--bg-black); }
 .ticker .text {
   background: var(--panel-deep);
   color: var(--text-white);
-  padding: 0 22px;
+  padding: 0 28px;
   flex: 1;
   display: flex;
   align-items: center;
-  font-size: 16px;
+  font-size: 23px;
   font-weight: 600;
   border-top: var(--border-red-top);
   transition: opacity 400ms ease;
