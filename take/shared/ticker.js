@@ -12,7 +12,9 @@ export function createTicker(el, opts) {
   const textEl = el.querySelector(".text");
 
   let rotationIdx = 0;
-  let currentTopic = null;
+  // Active topic-mode payload, or null when in evergreen mode.
+  // { text: string, tag: string }
+  let topicDisplay = null;
   let rotationTimer = null;
   let pollTimer = null;
 
@@ -22,12 +24,12 @@ export function createTicker(el, opts) {
   }
 
   function currentMode() {
-    return currentTopic ? "TODAY" : "NO BS";
+    return topicDisplay ? "TOPIC" : "NO BS";
   }
 
   function renderCurrent() {
-    if (currentTopic) {
-      showLine(currentTopic, "TODAY");
+    if (topicDisplay) {
+      showLine(topicDisplay.text, topicDisplay.tag);
     } else {
       showLine(evergreen[rotationIdx % evergreen.length], "NO BS");
     }
@@ -37,7 +39,7 @@ export function createTicker(el, opts) {
     renderCurrent();
     if (rotationTimer) clearInterval(rotationTimer);
     rotationTimer = setInterval(() => {
-      if (currentTopic) return; // don't rotate when showing today's topic
+      if (topicDisplay) return; // don't rotate when showing today's topic
       rotationIdx = (rotationIdx + 1) % evergreen.length;
       renderCurrent();
     }, intervalMs);
@@ -48,14 +50,35 @@ export function createTicker(el, opts) {
     rotationTimer = null;
   }
 
+  function deriveDisplay(state) {
+    if (!state || typeof state !== "object") return null;
+    const topics = Array.isArray(state.topics) ? state.topics : null;
+    const idx = state.currentTopicIndex;
+    if (
+      topics &&
+      topics.length > 0 &&
+      typeof idx === "number" &&
+      Number.isInteger(idx) &&
+      idx >= 0 &&
+      idx < topics.length
+    ) {
+      return {
+        text: topics[idx],
+        tag: `TOPIC ${idx + 1}/${topics.length}`,
+      };
+    }
+    return null;
+  }
+
   async function poll() {
     try {
       const state = await fetchState();
-      const next = state && typeof state.topic === "string" && state.topic.length > 0
-        ? state.topic
-        : null;
-      if (next !== currentTopic) {
-        currentTopic = next;
+      const next = deriveDisplay(state);
+      const changed =
+        (next === null) !== (topicDisplay === null) ||
+        (next && topicDisplay && (next.text !== topicDisplay.text || next.tag !== topicDisplay.tag));
+      if (changed) {
+        topicDisplay = next;
         renderCurrent();
       }
     } catch {
