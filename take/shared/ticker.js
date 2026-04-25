@@ -22,14 +22,14 @@ export function createTicker(el, opts) {
   }
 
   function currentMode() {
-    return currentTopic ? "TODAY" : "BRAND";
+    return currentTopic ? "TODAY" : "NO BS";
   }
 
   function renderCurrent() {
     if (currentTopic) {
       showLine(currentTopic, "TODAY");
     } else {
-      showLine(evergreen[rotationIdx % evergreen.length], "BRAND");
+      showLine(evergreen[rotationIdx % evergreen.length], "NO BS");
     }
   }
 

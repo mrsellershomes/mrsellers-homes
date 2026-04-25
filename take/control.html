@@ -75,7 +75,7 @@
       </div>
       <div id="status" class="status"></div>
       <div class="preview" id="preview">
-        <div class="tag">BRAND</div>
+        <div class="tag">NO BS</div>
         <div class="text">Buyers chasing deals are losing. Every single week.</div>
       </div>
     </div>
@@ -132,7 +132,7 @@
 
     function renderPreview() {
       const topic = topicEl.value.trim();
-      preview.querySelector(".tag").textContent = topic ? "TODAY" : "BRAND";
+      preview.querySelector(".tag").textContent = topic ? "TODAY" : "NO BS";
       preview.querySelector(".text").textContent = topic || "Buyers chasing deals are losing. Every single week.";
     }
     [topicEl, hotTakeEl, nextEpEl, ssMinEl].forEach(el => el.addEventListener("input", renderPreview));
