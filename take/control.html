@@ -14,32 +14,60 @@
     background: #f4f4f4; margin: 0; padding: 40px 20px;
     display: flex; justify-content: center; min-height: 100vh;
   }
-  .panel { max-width: 560px; width: 100%; background: #fff; padding: 36px 38px; border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
+  .panel { max-width: 620px; width: 100%; background: #fff; padding: 36px 38px; border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
   h1 { font-size: 26px; font-weight: 900; letter-spacing: -0.01em; margin: 0 0 6px; color: #111; }
+  h2 { font-size: 18px; font-weight: 900; letter-spacing: -0.01em; margin: 0 0 12px; color: #111; text-transform: uppercase; }
   .sub { color: #666; font-size: 13px; margin-bottom: 26px; }
   label { display: block; font-size: 11px; color: #999; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; margin-bottom: 7px; }
-  input { width: 100%; padding: 12px 14px; font-size: 15px; border: 2px solid #111; border-radius: 6px; font-weight: 600; font-family: inherit; }
-  input:focus { outline: none; border-color: #FF1200; }
+  input, textarea { width: 100%; padding: 12px 14px; font-size: 15px; border: 2px solid #111; border-radius: 6px; font-weight: 600; font-family: inherit; }
+  textarea { resize: vertical; min-height: 140px; line-height: 1.5; }
+  input:focus, textarea:focus { outline: none; border-color: #FF1200; }
   .field { margin-bottom: 22px; }
-  .btn-row { display: flex; gap: 10px; margin-top: 10px; }
+  .btn-row { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
   .btn { padding: 12px 20px; font-size: 13px; font-weight: 900; letter-spacing: 0.06em; border: 0; cursor: pointer; border-radius: 6px; font-family: inherit; }
+  .btn:disabled { opacity: 0.4; cursor: not-allowed; }
   .btn.primary { background: #FF1200; color: #fff; flex: 1; }
-  .btn.primary:hover { background: #dd0f00; }
+  .btn.primary:hover:not(:disabled) { background: #dd0f00; }
   .btn.ghost { background: #f0f0f0; color: #111; }
-  .btn.ghost:hover { background: #e4e4e4; }
+  .btn.ghost:hover:not(:disabled) { background: #e4e4e4; }
+  .btn.ghost-link { background: transparent; color: #666; padding-left: 0; padding-right: 0; }
+  .btn.ghost-link:hover:not(:disabled) { color: #111; }
+  .btn.destructive { background: #f0f0f0; color: #cc0000; }
+  .btn.destructive:hover:not(:disabled) { background: #ffe5e5; }
   .status { margin-top: 14px; font-size: 13px; color: #666; }
   .status.ok { color: #0a7b0a; }
   .status.err { color: #cc0000; }
-  .preview { margin-top: 18px; padding: 14px; background: #000; border-radius: 6px; display: flex; align-items: stretch; min-height: 40px; }
-  .preview .tag { background: #FF1200; color: #fff; padding: 6px 12px; font-weight: 900; font-size: 11px; letter-spacing: 0.12em; display: flex; align-items: center; }
-  .preview .text { background: #111; color: #fff; padding: 6px 12px; flex: 1; font-size: 13px; font-weight: 600; border-top: 2px solid #FF1200; display: flex; align-items: center; }
   .hidden { display: none; }
+
+  /* Live mode docket styling — sports scoreboard vibe */
+  .docket-card { background: #fafafa; border: 2px solid #111; border-radius: 8px; padding: 20px; margin-bottom: 22px; }
+  .docket-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
+  .docket-title { font-size: 12px; letter-spacing: 0.18em; font-weight: 900; text-transform: uppercase; color: #111; }
+  .docket-progress-label { font-size: 11px; letter-spacing: 0.12em; font-weight: 700; color: #666; text-transform: uppercase; }
+  .progress-bar { background: #1a1a1a; height: 10px; border-radius: 4px; overflow: hidden; margin-bottom: 16px; }
+  .progress-fill { background: #FF1200; height: 100%; transition: width 250ms ease; }
+  .topic-list { list-style: none; padding: 0; margin: 0; }
+  .topic-item { display: flex; align-items: flex-start; gap: 10px; padding: 10px 8px; border-radius: 5px; cursor: pointer; transition: background 100ms; user-select: none; }
+  .topic-item:hover { background: rgba(255, 18, 0, 0.06); }
+  .topic-item .marker { font-size: 16px; font-weight: 900; line-height: 1.4; min-width: 22px; text-align: center; }
+  .topic-item .marker.done { color: #0a7b0a; }
+  .topic-item .marker.live { color: #FF1200; }
+  .topic-item .marker.pending { color: #bbb; }
+  .topic-item .topic-text { flex: 1; font-size: 15px; font-weight: 600; line-height: 1.4; color: #111; word-break: break-word; }
+  .topic-item.done .topic-text { color: #999; text-decoration: line-through; }
+  .topic-item.live .topic-text { font-weight: 900; color: #000; }
+  .live-suffix { color: #FF1200; font-weight: 900; font-size: 11px; letter-spacing: 0.14em; margin-left: 8px; }
+  .docket-controls { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+  .docket-controls .btn { flex: 1; min-width: 130px; }
+  .docket-meta { font-size: 11px; color: #999; margin-top: 12px; letter-spacing: 0.04em; text-align: center; }
+  .other-fields-section { padding-top: 8px; border-top: 1px solid #eaeaea; margin-top: 12px; }
+  .other-fields-section h2 { margin-top: 22px; font-size: 13px; letter-spacing: 0.14em; }
 </style>
 </head>
 <body>
   <div class="panel">
     <h1>The Sellers Take · Control</h1>
-    <div class="sub">Change what's showing at the bottom of the stream.</div>
+    <div class="sub">Run today's docket and overlay state.</div>
 
     <div id="login-view" class="hidden">
       <div class="field">
@@ -52,91 +80,274 @@
       <div id="login-status" class="status"></div>
     </div>
 
-    <div id="control-view" class="hidden">
+    <!-- EDIT DOCKET VIEW -->
+    <div id="edit-view" class="hidden">
       <div class="field">
-        <label>Today's topic (optional)</label>
-        <input id="topic" type="text" maxlength="200" placeholder="Leave blank for rotating brand lines" />
+        <label>Today's docket — one topic per line</label>
+        <textarea id="docket-textarea" placeholder="e.g.&#10;Ridgewood comp came in $80k under list&#10;NJ migration data is wild&#10;Buyer agency commission rule changes"></textarea>
       </div>
-      <div class="field">
-        <label>Hot Take quote</label>
-        <input id="hot-take" type="text" maxlength="200" placeholder="Tonight's pull quote" />
-      </div>
-      <div class="field">
-        <label>Next episode</label>
-        <input id="next-episode" type="text" maxlength="80" placeholder="e.g. TUESDAY 3:00 PM ET" />
-      </div>
-      <div class="field">
-        <label>Start in how many minutes?</label>
-        <input id="ss-minutes" type="number" min="1" max="180" placeholder="e.g. 5 (leave blank = 5 min default)" />
+      <div class="other-fields-section">
+        <div class="field">
+          <label>Hot Take quote</label>
+          <input id="hot-take-edit" type="text" maxlength="200" placeholder="Tonight's pull quote" />
+        </div>
+        <div class="field">
+          <label>Next episode</label>
+          <input id="next-episode-edit" type="text" maxlength="80" placeholder="e.g. TUESDAY 3:00 PM ET" />
+        </div>
+        <div class="field">
+          <label>Start in how many minutes?</label>
+          <input id="ss-minutes-edit" type="number" min="1" max="180" placeholder="e.g. 5" />
+        </div>
       </div>
       <div class="btn-row">
-        <button id="save-btn" class="btn primary">SAVE &amp; SHOW</button>
-        <button id="reset-btn" class="btn ghost">RESET TO ROTATING</button>
+        <button id="save-docket-btn" class="btn primary">SAVE DOCKET</button>
       </div>
-      <div id="status" class="status"></div>
-      <div class="preview" id="preview">
-        <div class="tag">NO BS</div>
-        <div class="text">Buyers chasing deals are losing. Every single week.</div>
+      <div id="edit-status" class="status"></div>
+    </div>
+
+    <!-- LIVE MODE VIEW -->
+    <div id="live-view" class="hidden">
+      <div class="docket-card">
+        <div class="docket-header">
+          <div class="docket-title">Today's Docket</div>
+          <div class="docket-progress-label" id="progress-label">Progress: 0 of 0</div>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width: 0%"></div></div>
+        <ul class="topic-list" id="topic-list"></ul>
+        <div class="docket-controls">
+          <button id="prev-btn" class="btn ghost">&larr; PREVIOUS</button>
+          <button id="next-btn" class="btn primary">NEXT TOPIC &rarr;</button>
+        </div>
+        <div class="docket-controls">
+          <button id="clear-docket-btn" class="btn destructive">CLEAR DOCKET</button>
+          <button id="edit-docket-btn" class="btn ghost-link">+ EDIT DOCKET</button>
+        </div>
+        <div id="live-status" class="status"></div>
+      </div>
+
+      <div class="other-fields-section">
+        <h2>Other overlay fields</h2>
+        <div class="field">
+          <label>Hot Take quote</label>
+          <input id="hot-take-live" type="text" maxlength="200" placeholder="Tonight's pull quote" />
+        </div>
+        <div class="field">
+          <label>Next episode</label>
+          <input id="next-episode-live" type="text" maxlength="80" placeholder="e.g. TUESDAY 3:00 PM ET" />
+        </div>
+        <div class="field">
+          <label>Start in how many minutes?</label>
+          <input id="ss-minutes-live" type="number" min="1" max="180" placeholder="e.g. 5" />
+        </div>
+        <div class="btn-row">
+          <button id="save-other-btn" class="btn primary">SAVE OTHER FIELDS</button>
+        </div>
+        <div id="other-status" class="status"></div>
       </div>
     </div>
   </div>
 
   <script>
+    // Element refs
     const loginView = document.getElementById("login-view");
-    const controlView = document.getElementById("control-view");
+    const editView = document.getElementById("edit-view");
+    const liveView = document.getElementById("live-view");
     const loginStatus = document.getElementById("login-status");
-    const status = document.getElementById("status");
-    const topicEl = document.getElementById("topic");
-    const hotTakeEl = document.getElementById("hot-take");
-    const nextEpEl = document.getElementById("next-episode");
-    const ssMinEl = document.getElementById("ss-minutes");
-    const preview = document.getElementById("preview");
+    const editStatus = document.getElementById("edit-status");
+    const liveStatus = document.getElementById("live-status");
+    const otherStatus = document.getElementById("other-status");
+    const docketTextarea = document.getElementById("docket-textarea");
+    const hotTakeEdit = document.getElementById("hot-take-edit");
+    const nextEpisodeEdit = document.getElementById("next-episode-edit");
+    const ssMinutesEdit = document.getElementById("ss-minutes-edit");
+    const hotTakeLive = document.getElementById("hot-take-live");
+    const nextEpisodeLive = document.getElementById("next-episode-live");
+    const ssMinutesLive = document.getElementById("ss-minutes-live");
+    const progressLabel = document.getElementById("progress-label");
+    const progressFill = document.getElementById("progress-fill");
+    const topicList = document.getElementById("topic-list");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
 
-    function show(view) {
-      loginView.classList.toggle("hidden", view !== "login");
-      controlView.classList.toggle("hidden", view !== "control");
+    // Local state mirror
+    let state = {
+      topics: [],
+      currentTopicIndex: null,
+      hotTake: null,
+      nextEpisode: null,
+      startingSoonTarget: null,
+    };
+
+    // True when user explicitly chose Edit view (don't auto-flip back)
+    let forceEdit = false;
+    let pollTimer = null;
+
+    function showView(name) {
+      loginView.classList.toggle("hidden", name !== "login");
+      editView.classList.toggle("hidden", name !== "edit");
+      liveView.classList.toggle("hidden", name !== "live");
     }
 
-    async function checkAuth() {
-      try {
-        const r = await fetch("/api/me", { credentials: "include", cache: "no-store" });
-        const { authenticated } = await r.json();
-        if (authenticated) {
-          await loadState();
-          show("control");
+    function pickView() {
+      if (forceEdit || !state.topics || state.topics.length === 0) return "edit";
+      return "live";
+    }
+
+    function minutesFromTarget(iso) {
+      if (!iso) return "";
+      const ms = Date.parse(iso) - Date.now();
+      return ms > 0 ? String(Math.max(1, Math.round(ms / 60000))) : "";
+    }
+
+    function targetFromMinutesInput(el) {
+      const minutes = parseInt(el.value.trim(), 10);
+      return Number.isFinite(minutes) && minutes > 0
+        ? new Date(Date.now() + minutes * 60000).toISOString()
+        : null;
+    }
+
+    function syncFormFromState() {
+      // Edit-view mirrors
+      docketTextarea.value = (state.topics || []).join("\n");
+      hotTakeEdit.value = state.hotTake ?? "";
+      nextEpisodeEdit.value = state.nextEpisode ?? "";
+      ssMinutesEdit.value = minutesFromTarget(state.startingSoonTarget);
+      // Live-view mirrors
+      hotTakeLive.value = state.hotTake ?? "";
+      nextEpisodeLive.value = state.nextEpisode ?? "";
+      ssMinutesLive.value = minutesFromTarget(state.startingSoonTarget);
+    }
+
+    function renderLive() {
+      const total = state.topics.length;
+      const idx = state.currentTopicIndex;
+      const stepNum = idx === null ? 0 : (idx + 1);
+      progressLabel.textContent = `Progress: ${stepNum} of ${total}`;
+      const pct = total > 0 ? (stepNum / total) * 100 : 0;
+      progressFill.style.width = `${pct}%`;
+
+      topicList.innerHTML = "";
+      state.topics.forEach((t, i) => {
+        const li = document.createElement("li");
+        li.className = "topic-item";
+        let markerClass, markerChar;
+        if (idx === null) {
+          markerClass = "pending"; markerChar = "○";
+        } else if (i < idx) {
+          li.classList.add("done"); markerClass = "done"; markerChar = "✓";
+        } else if (i === idx) {
+          li.classList.add("live"); markerClass = "live"; markerChar = "►";
         } else {
-          show("login");
+          markerClass = "pending"; markerChar = "○";
         }
+        const marker = document.createElement("span");
+        marker.className = `marker ${markerClass}`;
+        marker.textContent = markerChar;
+        const text = document.createElement("span");
+        text.className = "topic-text";
+        text.textContent = t;
+        if (i === idx) {
+          const suffix = document.createElement("span");
+          suffix.className = "live-suffix";
+          suffix.textContent = "← LIVE";
+          text.appendChild(suffix);
+        }
+        li.appendChild(marker);
+        li.appendChild(text);
+        li.addEventListener("click", () => activateIndex(i));
+        topicList.appendChild(li);
+      });
+
+      prevBtn.disabled = idx === null || idx <= 0;
+      nextBtn.disabled = idx === null || idx >= total - 1;
+    }
+
+    function render() {
+      const view = pickView();
+      showView(view);
+      if (view === "live") renderLive();
+    }
+
+    async function loadState({ silent = false } = {}) {
+      try {
+        const r = await fetch("/api/topic", { cache: "no-store" });
+        if (!r.ok) throw new Error("fetch failed");
+        const s = await r.json();
+        state = {
+          topics: Array.isArray(s.topics) ? s.topics : [],
+          currentTopicIndex: typeof s.currentTopicIndex === "number" ? s.currentTopicIndex : null,
+          hotTake: s.hotTake ?? null,
+          nextEpisode: s.nextEpisode ?? null,
+          startingSoonTarget: s.startingSoonTarget ?? null,
+        };
+        // If there's an active docket, exit forceEdit so live mode shows
+        if (state.topics.length > 0 && !silent) forceEdit = false;
+        syncFormFromState();
+        render();
       } catch {
-        show("login");
+        if (!silent) {
+          // Stay where we are
+        }
       }
     }
 
-    async function loadState() {
+    function startPolling() {
+      stopPolling();
+      pollTimer = setInterval(() => loadState({ silent: true }), 8000);
+    }
+    function stopPolling() {
+      if (pollTimer) clearInterval(pollTimer);
+      pollTimer = null;
+    }
+
+    async function postPatch(patch) {
+      const r = await fetch("/api/topic", {
+        method: "POST",
+        credentials: "include",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(patch),
+      });
+      if (r.status === 401) {
+        showView("login");
+        throw new Error("unauthorized");
+      }
+      if (!r.ok) {
+        const body = await r.json().catch(() => ({}));
+        throw new Error(body.error || "save failed");
+      }
+      const newState = await r.json();
+      state = {
+        topics: Array.isArray(newState.topics) ? newState.topics : [],
+        currentTopicIndex: typeof newState.currentTopicIndex === "number" ? newState.currentTopicIndex : null,
+        hotTake: newState.hotTake ?? null,
+        nextEpisode: newState.nextEpisode ?? null,
+        startingSoonTarget: newState.startingSoonTarget ?? null,
+      };
+      syncFormFromState();
+      return newState;
+    }
+
+    // Click-to-activate with optimistic UI
+    async function activateIndex(i) {
+      if (i < 0 || i >= state.topics.length) return;
+      if (i === state.currentTopicIndex) return;
+      const prevIdx = state.currentTopicIndex;
+      state.currentTopicIndex = i;
+      renderLive();
       try {
-        const r = await fetch("/api/topic", { cache: "no-store" });
-        const s = await r.json();
-        topicEl.value = s.topic ?? "";
-        hotTakeEl.value = s.hotTake ?? "";
-        nextEpEl.value = s.nextEpisode ?? "";
-        // Convert stored ISO → remaining whole minutes (if still in the future)
-        if (s.startingSoonTarget) {
-          const ms = Date.parse(s.startingSoonTarget) - Date.now();
-          ssMinEl.value = ms > 0 ? String(Math.max(1, Math.round(ms / 60000))) : "";
-        } else {
-          ssMinEl.value = "";
-        }
-        renderPreview();
-      } catch {}
+        await postPatch({ currentTopicIndex: i });
+        liveStatus.textContent = "";
+      } catch (e) {
+        // Revert
+        state.currentTopicIndex = prevIdx;
+        renderLive();
+        liveStatus.textContent = "Activation failed: " + (e.message || e);
+        liveStatus.className = "status err";
+      }
     }
 
-    function renderPreview() {
-      const topic = topicEl.value.trim();
-      preview.querySelector(".tag").textContent = topic ? "TODAY" : "NO BS";
-      preview.querySelector(".text").textContent = topic || "Buyers chasing deals are losing. Every single week.";
-    }
-    [topicEl, hotTakeEl, nextEpEl, ssMinEl].forEach(el => el.addEventListener("input", renderPreview));
-
+    // ---- Login ----
     document.getElementById("login-btn").addEventListener("click", async () => {
       const password = document.getElementById("password").value;
       loginStatus.textContent = "Checking…";
@@ -151,7 +362,7 @@
         if (r.ok) {
           loginStatus.textContent = "";
           await loadState();
-          show("control");
+          startPolling();
         } else {
           loginStatus.textContent = "Wrong password.";
           loginStatus.className = "status err";
@@ -162,45 +373,105 @@
       }
     });
 
-    document.getElementById("save-btn").addEventListener("click", async () => {
-      status.textContent = "Saving…";
-      status.className = "status";
+    // ---- Edit-view: SAVE DOCKET ----
+    document.getElementById("save-docket-btn").addEventListener("click", async () => {
+      editStatus.textContent = "Saving…";
+      editStatus.className = "status";
+      const topics = docketTextarea.value
+        .split("\n")
+        .map(s => s.trim())
+        .filter(s => s.length > 0);
+      const patch = {
+        topics,
+        currentTopicIndex: topics.length > 0 ? 0 : null,
+        hotTake: hotTakeEdit.value.trim() || null,
+        nextEpisode: nextEpisodeEdit.value.trim() || null,
+        startingSoonTarget: targetFromMinutesInput(ssMinutesEdit),
+      };
       try {
-        const minutes = parseInt(ssMinEl.value.trim(), 10);
-        const ssTarget = Number.isFinite(minutes) && minutes > 0
-          ? new Date(Date.now() + minutes * 60000).toISOString()
-          : null;
-        const r = await fetch("/api/topic", {
-          method: "POST",
-          credentials: "include",
-          headers: { "content-type": "application/json" },
-          body: JSON.stringify({
-            topic: topicEl.value.trim() || null,
-            hotTake: hotTakeEl.value.trim() || null,
-            nextEpisode: nextEpEl.value.trim() || null,
-            startingSoonTarget: ssTarget,
-          }),
-        });
-        if (r.ok) {
-          status.textContent = "Saved. Overlay updates within 5 seconds.";
-          status.className = "status ok";
-        } else if (r.status === 401) {
-          show("login");
-        } else {
-          status.textContent = "Save failed.";
-          status.className = "status err";
+        await postPatch(patch);
+        editStatus.textContent = "Saved. Overlay updates within 8 seconds.";
+        editStatus.className = "status ok";
+        forceEdit = false;
+        render();
+      } catch (e) {
+        if (e.message !== "unauthorized") {
+          editStatus.textContent = "Save failed: " + (e.message || e);
+          editStatus.className = "status err";
         }
-      } catch {
-        status.textContent = "Network error.";
-        status.className = "status err";
       }
     });
 
-    document.getElementById("reset-btn").addEventListener("click", async () => {
-      topicEl.value = "";
-      renderPreview();
-      document.getElementById("save-btn").click();
+    // ---- Live-view buttons ----
+    prevBtn.addEventListener("click", () => {
+      if (state.currentTopicIndex !== null && state.currentTopicIndex > 0) {
+        activateIndex(state.currentTopicIndex - 1);
+      }
     });
+    nextBtn.addEventListener("click", () => {
+      if (state.currentTopicIndex !== null && state.currentTopicIndex < state.topics.length - 1) {
+        activateIndex(state.currentTopicIndex + 1);
+      }
+    });
+
+    document.getElementById("clear-docket-btn").addEventListener("click", async () => {
+      if (!confirm("Clear today's docket? This wipes the live topics list.")) return;
+      liveStatus.textContent = "Clearing…";
+      liveStatus.className = "status";
+      try {
+        await postPatch({ topics: [], currentTopicIndex: null });
+        liveStatus.textContent = "";
+        forceEdit = false;
+        render();
+      } catch (e) {
+        if (e.message !== "unauthorized") {
+          liveStatus.textContent = "Clear failed: " + (e.message || e);
+          liveStatus.className = "status err";
+        }
+      }
+    });
+
+    document.getElementById("edit-docket-btn").addEventListener("click", () => {
+      forceEdit = true;
+      // Make sure textarea reflects the current docket
+      syncFormFromState();
+      showView("edit");
+    });
+
+    document.getElementById("save-other-btn").addEventListener("click", async () => {
+      otherStatus.textContent = "Saving…";
+      otherStatus.className = "status";
+      try {
+        await postPatch({
+          hotTake: hotTakeLive.value.trim() || null,
+          nextEpisode: nextEpisodeLive.value.trim() || null,
+          startingSoonTarget: targetFromMinutesInput(ssMinutesLive),
+        });
+        otherStatus.textContent = "Saved. Overlay updates within 8 seconds.";
+        otherStatus.className = "status ok";
+      } catch (e) {
+        if (e.message !== "unauthorized") {
+          otherStatus.textContent = "Save failed: " + (e.message || e);
+          otherStatus.className = "status err";
+        }
+      }
+    });
+
+    // ---- Init ----
+    async function checkAuth() {
+      try {
+        const r = await fetch("/api/me", { credentials: "include", cache: "no-store" });
+        const { authenticated } = await r.json();
+        if (authenticated) {
+          await loadState();
+          startPolling();
+        } else {
+          showView("login");
+        }
+      } catch {
+        showView("login");
+      }
+    }
 
     checkAuth();
   </script>
