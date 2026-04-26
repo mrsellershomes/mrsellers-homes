@@ -46,7 +46,7 @@
     <div class="countdown" id="countdown">00:05:00</div>
     <div class="countdown-label">STARTING SOON</div>
   </div>
-  <div class="ep-stamp" id="ep-stamp">EP. 001</div>
+  <div class="ep-stamp" id="ep-stamp" style="display:none"></div>
   <div class="ticker" id="ticker">
     <div class="tag">NO BS</div>
     <div class="text">Buyers chasing deals are losing. Every single week.</div>
@@ -55,8 +55,10 @@
   <script type="module">
     import { createTicker } from "../shared/ticker.js";
     import { EVERGREEN_LINES, ROTATION_INTERVAL_MS } from "../shared/evergreen.js";
+    import { fetchState, applyEpisode } from "../shared/api.js";
 
     const countdownEl = document.getElementById("countdown");
+    const epEl = document.getElementById("ep-stamp");
     let targetMs = Date.now() + 5 * 60 * 1000; // default 5 min
 
     function fmt(ms) {
@@ -74,20 +76,19 @@
     tick();
     setInterval(tick, 1000);
 
-    async function fetchState() {
-      const r = await fetch("/api/topic", { cache: "no-store" });
-      if (!r.ok) throw new Error("fetch failed");
-      const s = await r.json();
+    async function fetchStateAndApply() {
+      const s = await fetchState();
       if (s.startingSoonTarget) {
         const t = Date.parse(s.startingSoonTarget);
         if (!Number.isNaN(t)) targetMs = t;
       }
+      applyEpisode(epEl, s);
       return s;
     }
 
     const ticker = createTicker(document.getElementById("ticker"), {
       evergreen: EVERGREEN_LINES,
-      fetchState,
+      fetchState: fetchStateAndApply,
       intervalMs: ROTATION_INTERVAL_MS,
       pollMs: 5000,
     });

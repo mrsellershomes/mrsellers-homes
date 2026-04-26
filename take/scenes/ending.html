@@ -38,11 +38,10 @@
   <script type="module">
     import { createTicker } from "../shared/ticker.js";
     import { EVERGREEN_LINES, ROTATION_INTERVAL_MS } from "../shared/evergreen.js";
+    import { fetchState } from "../shared/api.js";
 
-    async function fetchState() {
-      const r = await fetch("/api/topic", { cache: "no-store" });
-      if (!r.ok) throw new Error("fetch failed");
-      const s = await r.json();
+    async function fetchStateAndApply() {
+      const s = await fetchState();
       const line = document.getElementById("next-line");
       if (s.nextEpisode && s.nextEpisode.trim()) {
         line.innerHTML = 'NEXT EPISODE \u00b7 <strong></strong>';
@@ -54,7 +53,7 @@
     }
     const ticker = createTicker(document.getElementById("ticker"), {
       evergreen: EVERGREEN_LINES,
-      fetchState,
+      fetchState: fetchStateAndApply,
       intervalMs: ROTATION_INTERVAL_MS,
       pollMs: 5000,
     });

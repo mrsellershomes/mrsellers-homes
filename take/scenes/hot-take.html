@@ -21,18 +21,30 @@
   <div class="ht-quote-wrap">
     <div class="ht-quote" id="ht-quote">If you're buying in five years, your game plan starts now.</div>
   </div>
-  <div class="ht-attr">— TYLER SELLERS · EP. <span id="ep-num">001</span></div>
+  <div class="ht-attr" id="ht-attr">— TYLER SELLERS</div>
 
   <script type="module">
-    (async () => {
+    import { fetchState, formatEpisode } from "../shared/api.js";
+
+    function applyHotTake(state) {
+      if (state && typeof state.hotTake === "string" && state.hotTake.length > 0) {
+        document.getElementById("ht-quote").textContent = state.hotTake;
+      }
+      const epLabel = formatEpisode(state && state.episodeNumber);
+      const attr = document.getElementById("ht-attr");
+      attr.textContent = epLabel ? `— TYLER SELLERS · ${epLabel}` : "— TYLER SELLERS";
+    }
+
+    async function refresh() {
       try {
-        const r = await fetch("/api/topic", { cache: "no-store" });
-        if (r.ok) {
-          const s = await r.json();
-          if (s.hotTake) document.getElementById("ht-quote").textContent = s.hotTake;
-        }
-      } catch {}
-    })();
+        applyHotTake(await fetchState());
+      } catch {
+        // keep whatever is on screen
+      }
+    }
+
+    refresh();
+    setInterval(refresh, 5000);
   </script>
 </body>
 </html>
