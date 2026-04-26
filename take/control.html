@@ -6,26 +6,42 @@
 <title>The Sellers Take — Control</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
 <style>
   * { box-sizing: border-box; }
   body {
     font-family: "Inter", system-ui, sans-serif;
-    background: #f4f4f4; margin: 0; padding: 40px 20px;
-    display: flex; justify-content: center; min-height: 100vh;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
   }
   .panel { max-width: 620px; width: 100%; background: #fff; padding: 36px 38px; border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
-  h1 { font-size: 26px; font-weight: 900; letter-spacing: -0.01em; margin: 0 0 6px; color: #111; }
+  .panel-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+  .panel-header h1 { margin: 0 0 6px; }
+  .panel-header-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+  .conn-dot { width: 10px; height: 10px; border-radius: 50%; background: #bbb; transition: background 200ms; cursor: help; }
+  .conn-dot.ok { background: #0a7b0a; }
+  .conn-dot.bad { background: #cc0000; }
+
+  h1 { font-size: 26px; font-weight: 900; letter-spacing: -0.01em; color: #111; }
   h2 { font-size: 18px; font-weight: 900; letter-spacing: -0.01em; margin: 0 0 12px; color: #111; text-transform: uppercase; }
   .sub { color: #666; font-size: 13px; margin-bottom: 26px; }
+
   label { display: block; font-size: 11px; color: #999; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; margin-bottom: 7px; }
   input, textarea { width: 100%; padding: 12px 14px; font-size: 15px; border: 2px solid #111; border-radius: 6px; font-weight: 600; font-family: inherit; }
   textarea { resize: vertical; min-height: 140px; line-height: 1.5; }
-  input:focus, textarea:focus { outline: none; border-color: #FF1200; }
+  input:focus, textarea:focus { outline: none; border-color: #FF1200; box-shadow: 0 0 0 3px rgba(255,18,0,0.15); }
   .field { margin-bottom: 22px; }
+  .field-row { display: flex; gap: 12px; }
+  .field-row .field { flex: 1; }
+
   .btn-row { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
   .btn { padding: 12px 20px; font-size: 13px; font-weight: 900; letter-spacing: 0.06em; border: 0; cursor: pointer; border-radius: 6px; font-family: inherit; }
   .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  .btn:focus-visible { outline: 3px solid #FF1200; outline-offset: 2px; }
   .btn.primary { background: #FF1200; color: #fff; flex: 1; }
   .btn.primary:hover:not(:disabled) { background: #dd0f00; }
   .btn.ghost { background: #f0f0f0; color: #111; }
@@ -34,18 +50,27 @@
   .btn.ghost-link:hover:not(:disabled) { color: #111; }
   .btn.destructive { background: #f0f0f0; color: #cc0000; }
   .btn.destructive:hover:not(:disabled) { background: #ffe5e5; }
-  .status { margin-top: 14px; font-size: 13px; color: #666; }
+  .btn.lock { background: #f0f0f0; color: #111; padding: 8px 12px; font-size: 12px; }
+  .btn.lock:hover:not(:disabled) { background: #e4e4e4; }
+  .btn.cta { background: #111; color: #fff; flex: 1; min-width: 130px; }
+  .btn.cta:hover:not(:disabled) { background: #000; }
+
+  .status { margin-top: 14px; font-size: 13px; color: #666; min-height: 18px; transition: opacity 400ms ease; }
   .status.ok { color: #0a7b0a; }
   .status.err { color: #cc0000; }
+  .status.fading { opacity: 0; }
   .hidden { display: none; }
 
   /* Live mode docket styling — sports scoreboard vibe */
   .docket-card { background: #fafafa; border: 2px solid #111; border-radius: 8px; padding: 20px; margin-bottom: 22px; }
+  .runtime { font-family: "JetBrains Mono", "SF Mono", Menlo, monospace; font-size: 12px; font-weight: 700; color: #FF1200; letter-spacing: 0.1em; margin-bottom: 10px; }
+  .runtime.hidden { display: none; }
   .docket-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
   .docket-title { font-size: 12px; letter-spacing: 0.18em; font-weight: 900; text-transform: uppercase; color: #111; }
   .docket-progress-label { font-size: 11px; letter-spacing: 0.12em; font-weight: 700; color: #666; text-transform: uppercase; }
   .progress-bar { background: #1a1a1a; height: 10px; border-radius: 4px; overflow: hidden; margin-bottom: 16px; }
   .progress-fill { background: #FF1200; height: 100%; transition: width 250ms ease; }
+
   .topic-list { list-style: none; padding: 0; margin: 0; }
   .topic-item { display: flex; align-items: flex-start; gap: 10px; padding: 10px 8px; border-radius: 5px; cursor: pointer; transition: background 100ms; user-select: none; }
   .topic-item:hover { background: rgba(255, 18, 0, 0.06); }
@@ -56,142 +81,317 @@
   .topic-item .topic-text { flex: 1; font-size: 15px; font-weight: 600; line-height: 1.4; color: #111; word-break: break-word; }
   .topic-item.done .topic-text { color: #999; text-decoration: line-through; }
   .topic-item.live .topic-text { font-weight: 900; color: #000; }
+  .topic-item .drag-handle { color: #bbb; font-size: 18px; line-height: 1.4; cursor: grab; padding: 0 4px; user-select: none; flex-shrink: 0; }
+  .topic-item .drag-handle:hover { color: #666; }
+  .topic-item.dragging { opacity: 0.4; }
+  .topic-item.drop-target { box-shadow: inset 0 2px 0 0 #FF1200; }
   .live-suffix { color: #FF1200; font-weight: 900; font-size: 11px; letter-spacing: 0.14em; margin-left: 8px; }
-  .docket-controls { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+
+  .add-topic-row { display: flex; gap: 8px; margin-top: 14px; }
+  .add-topic-row input { flex: 1; padding: 10px 12px; font-size: 14px; border-width: 2px; }
+  .add-topic-row button { padding: 10px 16px; font-size: 12px; }
+
+  .docket-controls { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
   .docket-controls .btn { flex: 1; min-width: 130px; }
-  .docket-meta { font-size: 11px; color: #999; margin-top: 12px; letter-spacing: 0.04em; text-align: center; }
+
+  .shortcuts-hint { font-size: 10px; color: #999; margin-top: 14px; letter-spacing: 0.08em; text-align: center; font-weight: 600; }
+  kbd { background: #eee; border: 1px solid #ccc; border-bottom-width: 2px; border-radius: 3px; padding: 1px 5px; font-family: "JetBrains Mono", monospace; font-size: 10px; color: #333; }
+
   .other-fields-section { padding-top: 8px; border-top: 1px solid #eaeaea; margin-top: 12px; }
   .other-fields-section h2 { margin-top: 22px; font-size: 13px; letter-spacing: 0.14em; }
+
+  .cta-section { background: #fafafa; border: 2px solid #111; border-radius: 8px; padding: 16px 18px; margin-bottom: 22px; }
+  .cta-section h2 { font-size: 13px; letter-spacing: 0.14em; margin-bottom: 12px; }
+  .cta-buttons { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  /* Hot Take preview mockup */
+  .ht-preview {
+    background: #000; color: #fff; border-radius: 6px; padding: 18px 20px;
+    margin-top: 8px; font-family: inherit; max-width: 100%;
+  }
+  .ht-preview .ht-q {
+    font-size: 17px; font-weight: 800; line-height: 1.25; letter-spacing: -0.01em;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .ht-preview .ht-q.placeholder { font-style: italic; color: rgba(255,255,255,0.5); font-weight: 500; }
+  .ht-preview .ht-q::before {
+    content: '\201C'; color: #FF1200; font-family: Georgia, serif; font-size: 36px; line-height: 0.5;
+    margin-right: 6px; vertical-align: -0.1em;
+  }
+  .ht-preview .ht-q.placeholder::before { content: ''; margin: 0; }
+  .ht-preview .ht-attr {
+    margin-top: 10px; font-size: 10px; letter-spacing: 0.22em; color: rgba(255,255,255,0.55); font-weight: 700;
+  }
 </style>
 </head>
 <body>
   <div class="panel">
-    <h1>The Sellers Take · Control</h1>
-    <div class="sub">Run today's docket and overlay state.</div>
+    <div class="panel-header">
+      <div>
+        <h1>The Sellers Take · Control</h1>
+        <div class="sub">Run today's docket and overlay state.</div>
+      </div>
+      <div class="panel-header-right">
+        <div id="conn-dot" class="conn-dot" title="Connecting…" aria-label="Connection status"></div>
+        <button id="lock-btn" class="btn lock hidden" aria-label="Lock and sign out">🔒 LOCK</button>
+      </div>
+    </div>
 
     <div id="login-view" class="hidden">
       <div class="field">
-        <label>Password</label>
+        <label for="password">Password</label>
         <input id="password" type="password" autocomplete="current-password" placeholder="••••••••" />
       </div>
       <div class="btn-row">
         <button id="login-btn" class="btn primary">UNLOCK</button>
       </div>
-      <div id="login-status" class="status"></div>
+      <div id="login-status" class="status" role="status" aria-live="polite"></div>
     </div>
 
     <!-- EDIT DOCKET VIEW -->
     <div id="edit-view" class="hidden">
       <div class="field">
-        <label>Today's docket — one topic per line</label>
+        <label for="docket-textarea">Today's docket — one topic per line</label>
         <textarea id="docket-textarea" placeholder="e.g.&#10;Ridgewood comp came in $80k under list&#10;NJ migration data is wild&#10;Buyer agency commission rule changes"></textarea>
       </div>
       <div class="other-fields-section">
         <div class="field">
-          <label>Hot Take quote</label>
+          <label for="hot-take-edit">Hot Take quote</label>
           <input id="hot-take-edit" type="text" maxlength="200" placeholder="Tonight's pull quote" />
+          <div class="ht-preview" aria-hidden="true">
+            <div class="ht-q placeholder" id="ht-preview-edit">Tonight's pull quote will appear here</div>
+            <div class="ht-attr" id="ht-preview-attr-edit">— TYLER SELLERS</div>
+          </div>
         </div>
         <div class="field">
-          <label>Next episode</label>
+          <label for="next-episode-edit">Next episode</label>
           <input id="next-episode-edit" type="text" maxlength="80" placeholder="e.g. TUESDAY 3:00 PM ET" />
         </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="ep-num-edit">Episode #</label>
+            <input id="ep-num-edit" type="number" min="1" max="9999" step="1" placeholder="e.g. 12" />
+          </div>
+          <div class="field">
+            <label for="ss-minutes-edit">Start in (min)</label>
+            <input id="ss-minutes-edit" type="number" min="1" max="180" placeholder="e.g. 5" />
+          </div>
+        </div>
         <div class="field">
-          <label>Start in how many minutes?</label>
-          <input id="ss-minutes-edit" type="number" min="1" max="180" placeholder="e.g. 5" />
+          <label for="guest-name-edit">Guest name</label>
+          <input id="guest-name-edit" type="text" maxlength="80" placeholder="Optional — only used on guest scene" />
         </div>
       </div>
       <div class="btn-row">
         <button id="save-docket-btn" class="btn primary">SAVE DOCKET</button>
       </div>
-      <div id="edit-status" class="status"></div>
+      <div id="edit-status" class="status" role="status" aria-live="polite"></div>
     </div>
 
     <!-- LIVE MODE VIEW -->
     <div id="live-view" class="hidden">
       <div class="docket-card">
+        <div id="runtime" class="runtime hidden" aria-live="off"></div>
         <div class="docket-header">
           <div class="docket-title">Today's Docket</div>
           <div class="docket-progress-label" id="progress-label">Progress: 0 of 0</div>
         </div>
         <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width: 0%"></div></div>
         <ul class="topic-list" id="topic-list"></ul>
+
+        <div class="add-topic-row">
+          <input id="add-topic-input" type="text" maxlength="200" placeholder="+ Add a topic on the fly…" aria-label="Add a topic" />
+          <button id="add-topic-btn" class="btn ghost" disabled>+ Add</button>
+        </div>
+
         <div class="docket-controls">
-          <button id="prev-btn" class="btn ghost">&larr; PREVIOUS</button>
-          <button id="next-btn" class="btn primary">NEXT TOPIC &rarr;</button>
+          <button id="prev-btn" class="btn ghost">&larr; PREV</button>
+          <button id="next-btn" class="btn primary">NEXT &rarr;</button>
+          <button id="pause-btn" class="btn ghost">PAUSE → NO BS</button>
         </div>
         <div class="docket-controls">
           <button id="clear-docket-btn" class="btn destructive">CLEAR DOCKET</button>
           <button id="edit-docket-btn" class="btn ghost-link">+ EDIT DOCKET</button>
         </div>
-        <div id="live-status" class="status"></div>
+        <div id="live-status" class="status" role="status" aria-live="polite"></div>
+        <div class="shortcuts-hint">
+          Shortcuts: <kbd>1</kbd>–<kbd>9</kbd> activate · <kbd>N</kbd>/<kbd>→</kbd> next · <kbd>P</kbd>/<kbd>←</kbd> prev · <kbd>Esc</kbd> pause
+        </div>
+      </div>
+
+      <div class="cta-section">
+        <h2>Quick CTAs (10 sec override)</h2>
+        <div class="cta-buttons">
+          <button class="btn cta" data-cta="🔔 SUBSCRIBE" data-cta-text="Hit subscribe — you know the drill">🔔 SUBSCRIBE</button>
+          <button class="btn cta" data-cta="💬 ZIP CODE" data-cta-text="Drop your Bergen County zip in chat">💬 ZIP CODE</button>
+          <button class="btn cta" data-cta="🔁 NOTIFICATIONS" data-cta-text="Turn notifications on so you don't miss the next one">🔁 NOTIFICATIONS</button>
+        </div>
+        <div id="cta-status" class="status" role="status" aria-live="polite"></div>
       </div>
 
       <div class="other-fields-section">
         <h2>Other overlay fields</h2>
         <div class="field">
-          <label>Hot Take quote</label>
+          <label for="hot-take-live">Hot Take quote</label>
           <input id="hot-take-live" type="text" maxlength="200" placeholder="Tonight's pull quote" />
+          <div class="ht-preview" aria-hidden="true">
+            <div class="ht-q placeholder" id="ht-preview-live">Tonight's pull quote will appear here</div>
+            <div class="ht-attr" id="ht-preview-attr-live">— TYLER SELLERS</div>
+          </div>
         </div>
         <div class="field">
-          <label>Next episode</label>
+          <label for="next-episode-live">Next episode</label>
           <input id="next-episode-live" type="text" maxlength="80" placeholder="e.g. TUESDAY 3:00 PM ET" />
         </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="ep-num-live">Episode #</label>
+            <input id="ep-num-live" type="number" min="1" max="9999" step="1" placeholder="e.g. 12" />
+          </div>
+          <div class="field">
+            <label for="ss-minutes-live">Start in (min)</label>
+            <input id="ss-minutes-live" type="number" min="1" max="180" placeholder="e.g. 5" />
+          </div>
+        </div>
         <div class="field">
-          <label>Start in how many minutes?</label>
-          <input id="ss-minutes-live" type="number" min="1" max="180" placeholder="e.g. 5" />
+          <label for="guest-name-live">Guest name</label>
+          <input id="guest-name-live" type="text" maxlength="80" placeholder="Optional — only used on guest scene" />
         </div>
         <div class="btn-row">
           <button id="save-other-btn" class="btn primary">SAVE OTHER FIELDS</button>
         </div>
-        <div id="other-status" class="status"></div>
+        <div id="other-status" class="status" role="status" aria-live="polite"></div>
       </div>
     </div>
   </div>
 
   <script>
-    // Element refs
-    const loginView = document.getElementById("login-view");
-    const editView = document.getElementById("edit-view");
-    const liveView = document.getElementById("live-view");
-    const loginStatus = document.getElementById("login-status");
-    const editStatus = document.getElementById("edit-status");
-    const liveStatus = document.getElementById("live-status");
-    const otherStatus = document.getElementById("other-status");
-    const docketTextarea = document.getElementById("docket-textarea");
-    const hotTakeEdit = document.getElementById("hot-take-edit");
-    const nextEpisodeEdit = document.getElementById("next-episode-edit");
-    const ssMinutesEdit = document.getElementById("ss-minutes-edit");
-    const hotTakeLive = document.getElementById("hot-take-live");
-    const nextEpisodeLive = document.getElementById("next-episode-live");
-    const ssMinutesLive = document.getElementById("ss-minutes-live");
-    const progressLabel = document.getElementById("progress-label");
-    const progressFill = document.getElementById("progress-fill");
-    const topicList = document.getElementById("topic-list");
-    const prevBtn = document.getElementById("prev-btn");
-    const nextBtn = document.getElementById("next-btn");
+    // ================================================================
+    // The Sellers Take · Control Panel
+    // Sections: refs → state → helpers → render → handlers → init
+    // ================================================================
 
-    // Local state mirror
-    let state = {
+    // ---- ELEMENT REFS ----
+    const $ = (id) => document.getElementById(id);
+    const loginView = $("login-view");
+    const editView = $("edit-view");
+    const liveView = $("live-view");
+    const lockBtn = $("lock-btn");
+    const connDot = $("conn-dot");
+
+    const loginStatus = $("login-status");
+    const editStatus = $("edit-status");
+    const liveStatus = $("live-status");
+    const otherStatus = $("other-status");
+    const ctaStatus = $("cta-status");
+
+    const docketTextarea = $("docket-textarea");
+    const hotTakeEdit = $("hot-take-edit");
+    const nextEpisodeEdit = $("next-episode-edit");
+    const ssMinutesEdit = $("ss-minutes-edit");
+    const epNumEdit = $("ep-num-edit");
+    const guestNameEdit = $("guest-name-edit");
+
+    const hotTakeLive = $("hot-take-live");
+    const nextEpisodeLive = $("next-episode-live");
+    const ssMinutesLive = $("ss-minutes-live");
+    const epNumLive = $("ep-num-live");
+    const guestNameLive = $("guest-name-live");
+
+    const htPreviewEdit = $("ht-preview-edit");
+    const htPreviewAttrEdit = $("ht-preview-attr-edit");
+    const htPreviewLive = $("ht-preview-live");
+    const htPreviewAttrLive = $("ht-preview-attr-live");
+
+    const runtimeEl = $("runtime");
+    const progressLabel = $("progress-label");
+    const progressFill = $("progress-fill");
+    const topicList = $("topic-list");
+    const addTopicInput = $("add-topic-input");
+    const addTopicBtn = $("add-topic-btn");
+    const prevBtn = $("prev-btn");
+    const nextBtn = $("next-btn");
+    const pauseBtn = $("pause-btn");
+
+    // ---- STATE ----
+    const EMPTY_STATE = {
       topics: [],
       currentTopicIndex: null,
       hotTake: null,
       nextEpisode: null,
       startingSoonTarget: null,
+      episodeNumber: null,
+      guestName: null,
+      streamStartedAt: null,
+      tickerOverride: null,
     };
+
+    let state = { ...EMPTY_STATE };
 
     // True when user explicitly chose Edit view (don't auto-flip back)
     let forceEdit = false;
     let pollTimer = null;
+    let runtimeTimer = null;
+    let connTimer = null;
+    let ctaTimeout = null;
+    let lastFetchOk = false;
+    let lastFetchAt = 0;
 
+    // Map of element → setTimeout id, for status fade scheduling.
+    const statusTimers = new Map();
+
+    // ---- HELPERS ----
     function showView(name) {
       loginView.classList.toggle("hidden", name !== "login");
       editView.classList.toggle("hidden", name !== "edit");
       liveView.classList.toggle("hidden", name !== "live");
+      lockBtn.classList.toggle("hidden", name === "login");
     }
 
     function pickView() {
       if (forceEdit || !state.topics || state.topics.length === 0) return "edit";
       return "live";
+    }
+
+    // Translate API error strings to plain-English copy for the user.
+    function friendlyError(err) {
+      const m = (err && err.message) || String(err || "");
+      const map = {
+        "invalid currentTopicIndex": "That topic position isn't valid anymore.",
+        "topics must be an array of strings": "The docket couldn't be saved — try again.",
+        "invalid episodeNumber": "Episode # must be a whole number between 1 and 9999.",
+        "invalid guestName": "Guest name is too long (max 80 characters).",
+        "invalid streamStartedAt": "Stream timestamp is invalid.",
+        "invalid tickerOverride": "That CTA couldn't be saved.",
+        "invalid body": "Something went wrong. Please try again.",
+        "unauthorized": "Session expired. Sign in again.",
+      };
+      return map[m] || m || "Save failed.";
+    }
+
+    // Single status helper — DRYs success/error fade-out across all panels.
+    // kind: "ok" | "err" | "" (neutral)
+    function showStatus(el, text, kind) {
+      if (!el) return;
+      // Cancel any pending fade.
+      if (statusTimers.has(el)) {
+        clearTimeout(statusTimers.get(el));
+        statusTimers.delete(el);
+      }
+      el.textContent = text;
+      el.className = "status" + (kind ? " " + kind : "");
+      if (!text) return;
+      const holdMs = kind === "err" ? 8000 : 5000;
+      const id = setTimeout(() => {
+        el.classList.add("fading");
+        const fadeId = setTimeout(() => {
+          el.textContent = "";
+          el.className = "status";
+          statusTimers.delete(el);
+        }, 400);
+        statusTimers.set(el, fadeId);
+      }, holdMs);
+      statusTimers.set(el, id);
     }
 
     function minutesFromTarget(iso) {
@@ -207,16 +407,104 @@
         : null;
     }
 
+    function parseEpisodeInput(el) {
+      const v = el.value.trim();
+      if (v === "") return null;
+      const n = parseInt(v, 10);
+      if (!Number.isFinite(n) || !Number.isInteger(n) || n < 1 || n > 9999) return null;
+      return n;
+    }
+
+    function formatEpLabel(n) {
+      if (typeof n !== "number" || !Number.isInteger(n) || n < 1) return null;
+      return `EP. ${String(n).padStart(3, "0")}`;
+    }
+
+    function formatRuntime(elapsedMs) {
+      if (elapsedMs < 0) elapsedMs = 0;
+      const s = Math.floor(elapsedMs / 1000);
+      const hh = Math.floor(s / 3600);
+      const mm = Math.floor((s % 3600) / 60);
+      const ss = s % 60;
+      const pad = (n) => String(n).padStart(2, "0");
+      return hh > 0 ? `${hh}:${pad(mm)}:${pad(ss)}` : `${pad(mm)}:${pad(ss)}`;
+    }
+
+    function normalizeServerState(s) {
+      return {
+        topics: Array.isArray(s.topics) ? s.topics : [],
+        currentTopicIndex: typeof s.currentTopicIndex === "number" ? s.currentTopicIndex : null,
+        hotTake: typeof s.hotTake === "string" ? s.hotTake : null,
+        nextEpisode: typeof s.nextEpisode === "string" ? s.nextEpisode : null,
+        startingSoonTarget: typeof s.startingSoonTarget === "string" ? s.startingSoonTarget : null,
+        episodeNumber: typeof s.episodeNumber === "number" ? s.episodeNumber : null,
+        guestName: typeof s.guestName === "string" ? s.guestName : null,
+        streamStartedAt: typeof s.streamStartedAt === "number" ? s.streamStartedAt : null,
+        tickerOverride: s.tickerOverride && typeof s.tickerOverride === "object" ? s.tickerOverride : null,
+      };
+    }
+
+    // ---- CONNECTION DOT ----
+    function markFetch(ok) {
+      lastFetchOk = ok;
+      lastFetchAt = Date.now();
+      refreshConnDot();
+    }
+    function refreshConnDot() {
+      const fresh = Date.now() - lastFetchAt < 15000;
+      if (lastFetchOk && fresh) {
+        connDot.className = "conn-dot ok";
+        connDot.title = "Connected";
+      } else {
+        connDot.className = "conn-dot bad";
+        connDot.title = "Connection issue";
+      }
+    }
+
+    // ---- RENDER ----
     function syncFormFromState() {
       // Edit-view mirrors
       docketTextarea.value = (state.topics || []).join("\n");
       hotTakeEdit.value = state.hotTake ?? "";
       nextEpisodeEdit.value = state.nextEpisode ?? "";
       ssMinutesEdit.value = minutesFromTarget(state.startingSoonTarget);
+      epNumEdit.value = state.episodeNumber == null ? "" : String(state.episodeNumber);
+      guestNameEdit.value = state.guestName ?? "";
       // Live-view mirrors
       hotTakeLive.value = state.hotTake ?? "";
       nextEpisodeLive.value = state.nextEpisode ?? "";
       ssMinutesLive.value = minutesFromTarget(state.startingSoonTarget);
+      epNumLive.value = state.episodeNumber == null ? "" : String(state.episodeNumber);
+      guestNameLive.value = state.guestName ?? "";
+      renderHotTakePreview();
+    }
+
+    function renderHotTakePreview() {
+      const PLACEHOLDER = "Tonight's pull quote will appear here";
+      function applyPair(quoteEl, attrEl, quoteValue, epValue) {
+        const trimmed = (quoteValue || "").trim();
+        if (!trimmed) {
+          quoteEl.classList.add("placeholder");
+          quoteEl.textContent = PLACEHOLDER;
+        } else {
+          quoteEl.classList.remove("placeholder");
+          quoteEl.textContent = trimmed;
+        }
+        const epLabel = formatEpLabel(epValue);
+        attrEl.textContent = epLabel ? `— TYLER SELLERS · ${epLabel}` : "— TYLER SELLERS";
+      }
+      applyPair(htPreviewEdit, htPreviewAttrEdit, hotTakeEdit.value, parseEpisodeInput(epNumEdit));
+      applyPair(htPreviewLive, htPreviewAttrLive, hotTakeLive.value, parseEpisodeInput(epNumLive));
+    }
+
+    function renderRuntime() {
+      if (!state.streamStartedAt) {
+        runtimeEl.classList.add("hidden");
+        runtimeEl.textContent = "";
+        return;
+      }
+      runtimeEl.classList.remove("hidden");
+      runtimeEl.textContent = `📡 LIVE · ${formatRuntime(Date.now() - state.streamStartedAt)}`;
     }
 
     function renderLive() {
@@ -231,6 +519,9 @@
       state.topics.forEach((t, i) => {
         const li = document.createElement("li");
         li.className = "topic-item";
+        li.dataset.index = String(i);
+        li.draggable = false; // initiate drag only via the handle
+
         let markerClass, markerChar;
         if (idx === null) {
           markerClass = "pending"; markerChar = "○";
@@ -253,14 +544,62 @@
           suffix.textContent = "← LIVE";
           text.appendChild(suffix);
         }
+        const handle = document.createElement("span");
+        handle.className = "drag-handle";
+        handle.textContent = "⋮⋮";
+        handle.title = "Drag to reorder";
+        handle.setAttribute("aria-label", "Drag to reorder topic " + (i + 1));
+        handle.addEventListener("mousedown", () => { li.draggable = true; });
+        handle.addEventListener("mouseup", () => { li.draggable = false; });
+        handle.addEventListener("touchstart", () => { li.draggable = true; }, { passive: true });
+
         li.appendChild(marker);
         li.appendChild(text);
-        li.addEventListener("click", () => activateIndex(i));
+        li.appendChild(handle);
+        li.addEventListener("click", (e) => {
+          // Don't activate when the click was on the handle.
+          if (e.target === handle) return;
+          activateIndex(i);
+        });
+
+        // Drag-and-drop wiring
+        li.addEventListener("dragstart", (e) => {
+          li.classList.add("dragging");
+          if (e.dataTransfer) {
+            e.dataTransfer.effectAllowed = "move";
+            e.dataTransfer.setData("text/plain", String(i));
+          }
+        });
+        li.addEventListener("dragend", () => {
+          li.draggable = false;
+          li.classList.remove("dragging");
+          document.querySelectorAll(".topic-item.drop-target").forEach((n) => n.classList.remove("drop-target"));
+        });
+        li.addEventListener("dragover", (e) => {
+          e.preventDefault();
+          li.classList.add("drop-target");
+        });
+        li.addEventListener("dragleave", () => {
+          li.classList.remove("drop-target");
+        });
+        li.addEventListener("drop", (e) => {
+          e.preventDefault();
+          li.classList.remove("drop-target");
+          const fromIdx = parseInt(e.dataTransfer && e.dataTransfer.getData("text/plain"), 10);
+          const toIdx = i;
+          if (Number.isInteger(fromIdx) && fromIdx !== toIdx) {
+            reorderTopics(fromIdx, toIdx);
+          }
+        });
+
         topicList.appendChild(li);
       });
 
       prevBtn.disabled = idx === null || idx <= 0;
       nextBtn.disabled = idx === null || idx >= total - 1;
+      pauseBtn.disabled = idx === null || total === 0;
+
+      renderRuntime();
     }
 
     function render() {
@@ -269,26 +608,49 @@
       if (view === "live") renderLive();
     }
 
+    // ---- FETCH / SAVE ----
     async function loadState({ silent = false } = {}) {
       try {
         const r = await fetch("/api/topic", { cache: "no-store" });
         if (!r.ok) throw new Error("fetch failed");
         const s = await r.json();
-        state = {
-          topics: Array.isArray(s.topics) ? s.topics : [],
-          currentTopicIndex: typeof s.currentTopicIndex === "number" ? s.currentTopicIndex : null,
-          hotTake: s.hotTake ?? null,
-          nextEpisode: s.nextEpisode ?? null,
-          startingSoonTarget: s.startingSoonTarget ?? null,
-        };
-        // If there's an active docket, exit forceEdit so live mode shows
+        state = normalizeServerState(s);
         if (state.topics.length > 0 && !silent) forceEdit = false;
         syncFormFromState();
         render();
+        markFetch(true);
       } catch {
-        if (!silent) {
-          // Stay where we are
+        markFetch(false);
+        // Stay where we are — the connection dot signals the issue.
+      }
+    }
+
+    async function postPatch(patch) {
+      try {
+        const r = await fetch("/api/topic", {
+          method: "POST",
+          credentials: "include",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify(patch),
+        });
+        if (r.status === 401) {
+          markFetch(true); // reachable, just unauthed
+          showView("login");
+          throw new Error("unauthorized");
         }
+        if (!r.ok) {
+          const body = await r.json().catch(() => ({}));
+          markFetch(true);
+          throw new Error(body.error || "save failed");
+        }
+        const newState = await r.json();
+        state = normalizeServerState(newState);
+        syncFormFromState();
+        markFetch(true);
+        return newState;
+      } catch (e) {
+        if (e && e.message !== "unauthorized") markFetch(false);
+        throw e;
       }
     }
 
@@ -301,34 +663,21 @@
       pollTimer = null;
     }
 
-    async function postPatch(patch) {
-      const r = await fetch("/api/topic", {
-        method: "POST",
-        credentials: "include",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(patch),
-      });
-      if (r.status === 401) {
-        showView("login");
-        throw new Error("unauthorized");
-      }
-      if (!r.ok) {
-        const body = await r.json().catch(() => ({}));
-        throw new Error(body.error || "save failed");
-      }
-      const newState = await r.json();
-      state = {
-        topics: Array.isArray(newState.topics) ? newState.topics : [],
-        currentTopicIndex: typeof newState.currentTopicIndex === "number" ? newState.currentTopicIndex : null,
-        hotTake: newState.hotTake ?? null,
-        nextEpisode: newState.nextEpisode ?? null,
-        startingSoonTarget: newState.startingSoonTarget ?? null,
-      };
-      syncFormFromState();
-      return newState;
+    function startRuntimeTicker() {
+      stopRuntimeTicker();
+      runtimeTimer = setInterval(renderRuntime, 1000);
+    }
+    function stopRuntimeTicker() {
+      if (runtimeTimer) clearInterval(runtimeTimer);
+      runtimeTimer = null;
     }
 
-    // Click-to-activate with optimistic UI
+    function startConnTicker() {
+      if (connTimer) clearInterval(connTimer);
+      connTimer = setInterval(refreshConnDot, 2000);
+    }
+
+    // ---- DOCKET ACTIONS ----
     async function activateIndex(i) {
       if (i < 0 || i >= state.topics.length) return;
       if (i === state.currentTopicIndex) return;
@@ -337,21 +686,80 @@
       renderLive();
       try {
         await postPatch({ currentTopicIndex: i });
-        liveStatus.textContent = "";
+        showStatus(liveStatus, "", "");
       } catch (e) {
-        // Revert
         state.currentTopicIndex = prevIdx;
         renderLive();
-        liveStatus.textContent = "Activation failed: " + (e.message || e);
-        liveStatus.className = "status err";
+        if (e.message !== "unauthorized") {
+          showStatus(liveStatus, "Activation failed: " + friendlyError(e), "err");
+        }
       }
     }
 
-    // ---- Login ----
-    document.getElementById("login-btn").addEventListener("click", async () => {
-      const password = document.getElementById("password").value;
-      loginStatus.textContent = "Checking…";
-      loginStatus.className = "status";
+    async function reorderTopics(fromIdx, toIdx) {
+      const topics = [...state.topics];
+      if (fromIdx < 0 || fromIdx >= topics.length || toIdx < 0 || toIdx >= topics.length) return;
+      const liveTopic = state.currentTopicIndex !== null ? topics[state.currentTopicIndex] : null;
+      const [moved] = topics.splice(fromIdx, 1);
+      topics.splice(toIdx, 0, moved);
+      const newIdx = liveTopic !== null ? topics.indexOf(liveTopic) : null;
+
+      try {
+        await postPatch({ topics, currentTopicIndex: newIdx });
+        showStatus(liveStatus, "Reordered.", "ok");
+      } catch (e) {
+        if (e.message !== "unauthorized") {
+          showStatus(liveStatus, "Reorder failed: " + friendlyError(e), "err");
+        }
+      }
+    }
+
+    async function addTopicInline() {
+      const text = addTopicInput.value.trim();
+      if (!text) return;
+      const topics = [...state.topics, text];
+      try {
+        await postPatch({ topics, currentTopicIndex: state.currentTopicIndex });
+        addTopicInput.value = "";
+        addTopicBtn.disabled = true;
+        showStatus(liveStatus, "Topic added.", "ok");
+      } catch (e) {
+        if (e.message !== "unauthorized") {
+          showStatus(liveStatus, "Add failed: " + friendlyError(e), "err");
+        }
+      }
+    }
+
+    // ---- CTA OVERRIDE ----
+    async function applyCta(text) {
+      if (ctaTimeout) {
+        clearTimeout(ctaTimeout);
+        ctaTimeout = null;
+      }
+      const expiresAt = Date.now() + 10_000;
+      try {
+        await postPatch({ tickerOverride: { text, expiresAt } });
+        showStatus(ctaStatus, `Showing for 10 sec…`, "ok");
+        ctaTimeout = setTimeout(async () => {
+          ctaTimeout = null;
+          try {
+            await postPatch({ tickerOverride: null });
+          } catch {
+            // ignore — server cleanup will be picked up on next save
+          }
+          showStatus(ctaStatus, "", "");
+        }, 10_000);
+      } catch (e) {
+        if (e.message !== "unauthorized") {
+          showStatus(ctaStatus, "CTA failed: " + friendlyError(e), "err");
+        }
+      }
+    }
+
+    // ---- HANDLERS ----
+    $("login-btn").addEventListener("click", async () => {
+      const password = $("password").value;
+      showStatus(loginStatus, "Checking…", "");
       try {
         const r = await fetch("/api/login", {
           method: "POST",
@@ -359,50 +767,88 @@
           headers: { "content-type": "application/json" },
           body: JSON.stringify({ password }),
         });
+        markFetch(true);
         if (r.ok) {
-          loginStatus.textContent = "";
+          showStatus(loginStatus, "", "");
           await loadState();
           startPolling();
         } else {
-          loginStatus.textContent = "Wrong password.";
-          loginStatus.className = "status err";
+          showStatus(loginStatus, "Wrong password.", "err");
         }
       } catch {
-        loginStatus.textContent = "Network error.";
-        loginStatus.className = "status err";
+        markFetch(false);
+        showStatus(loginStatus, "Network error.", "err");
       }
     });
 
-    // ---- Edit-view: SAVE DOCKET ----
-    document.getElementById("save-docket-btn").addEventListener("click", async () => {
-      editStatus.textContent = "Saving…";
-      editStatus.className = "status";
-      const topics = docketTextarea.value
+    lockBtn.addEventListener("click", async () => {
+      try {
+        await fetch("/api/logout", { method: "POST", credentials: "include" });
+      } catch {
+        // best effort
+      }
+      window.location.reload();
+    });
+
+    // Edit-view: SAVE DOCKET
+    // Preserves the user's place when re-saving a docket mid-stream:
+    //   - If the previously-current topic STRING still exists in the new list, jump to its new index.
+    //   - If it was removed, fall back to clamping the previous index into the new list.
+    //   - If we weren't on any topic before and there are now topics, default to 0.
+    $("save-docket-btn").addEventListener("click", async () => {
+      showStatus(editStatus, "Saving…", "");
+      const newTopics = docketTextarea.value
         .split("\n")
-        .map(s => s.trim())
-        .filter(s => s.length > 0);
+        .map((s) => s.trim())
+        .filter((s) => s.length > 0);
+
+      const prevIdx = state.currentTopicIndex;
+      const prevTopic = prevIdx !== null && prevIdx >= 0 && prevIdx < state.topics.length
+        ? state.topics[prevIdx]
+        : null;
+
+      let nextIdx;
+      if (newTopics.length === 0) {
+        nextIdx = null;
+      } else if (prevTopic !== null) {
+        const found = newTopics.indexOf(prevTopic);
+        if (found !== -1) {
+          nextIdx = found;
+        } else if (prevIdx !== null) {
+          nextIdx = Math.min(Math.max(prevIdx, 0), newTopics.length - 1);
+        } else {
+          nextIdx = 0;
+        }
+      } else {
+        nextIdx = 0;
+      }
+
+      const isStartingNew = newTopics.length > 0 && state.streamStartedAt == null;
+
       const patch = {
-        topics,
-        currentTopicIndex: topics.length > 0 ? 0 : null,
+        topics: newTopics,
+        currentTopicIndex: nextIdx,
         hotTake: hotTakeEdit.value.trim() || null,
         nextEpisode: nextEpisodeEdit.value.trim() || null,
         startingSoonTarget: targetFromMinutesInput(ssMinutesEdit),
+        episodeNumber: parseEpisodeInput(epNumEdit),
+        guestName: guestNameEdit.value.trim() || null,
       };
+      if (isStartingNew) patch.streamStartedAt = Date.now();
+
       try {
         await postPatch(patch);
-        editStatus.textContent = "Saved. Overlay updates within 8 seconds.";
-        editStatus.className = "status ok";
+        showStatus(editStatus, "Saved. Overlays refresh within 8 seconds.", "ok");
         forceEdit = false;
         render();
       } catch (e) {
         if (e.message !== "unauthorized") {
-          editStatus.textContent = "Save failed: " + (e.message || e);
-          editStatus.className = "status err";
+          showStatus(editStatus, "Save failed: " + friendlyError(e), "err");
         }
       }
     });
 
-    // ---- Live-view buttons ----
+    // Live-view buttons
     prevBtn.addEventListener("click", () => {
       if (state.currentTopicIndex !== null && state.currentTopicIndex > 0) {
         activateIndex(state.currentTopicIndex - 1);
@@ -413,54 +859,120 @@
         activateIndex(state.currentTopicIndex + 1);
       }
     });
-
-    document.getElementById("clear-docket-btn").addEventListener("click", async () => {
-      if (!confirm("Clear today's docket? This wipes the live topics list.")) return;
-      liveStatus.textContent = "Clearing…";
-      liveStatus.className = "status";
+    pauseBtn.addEventListener("click", async () => {
       try {
-        await postPatch({ topics: [], currentTopicIndex: null });
-        liveStatus.textContent = "";
-        forceEdit = false;
-        render();
+        await postPatch({ currentTopicIndex: null });
+        showStatus(liveStatus, "Paused — ticker on NO BS rotation.", "ok");
       } catch (e) {
         if (e.message !== "unauthorized") {
-          liveStatus.textContent = "Clear failed: " + (e.message || e);
-          liveStatus.className = "status err";
+          showStatus(liveStatus, "Pause failed: " + friendlyError(e), "err");
         }
       }
     });
 
-    document.getElementById("edit-docket-btn").addEventListener("click", () => {
+    addTopicInput.addEventListener("input", () => {
+      addTopicBtn.disabled = addTopicInput.value.trim().length === 0;
+    });
+    addTopicInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && !addTopicBtn.disabled) {
+        e.preventDefault();
+        addTopicInline();
+      }
+    });
+    addTopicBtn.addEventListener("click", addTopicInline);
+
+    $("clear-docket-btn").addEventListener("click", async () => {
+      if (!confirm("Clear today's docket? This wipes the live topics list.")) return;
+      showStatus(liveStatus, "Clearing…", "");
+      try {
+        await postPatch({
+          topics: [],
+          currentTopicIndex: null,
+          streamStartedAt: null,
+        });
+        showStatus(liveStatus, "", "");
+        forceEdit = false;
+        render();
+      } catch (e) {
+        if (e.message !== "unauthorized") {
+          showStatus(liveStatus, "Clear failed: " + friendlyError(e), "err");
+        }
+      }
+    });
+
+    $("edit-docket-btn").addEventListener("click", () => {
       forceEdit = true;
-      // Make sure textarea reflects the current docket
       syncFormFromState();
       showView("edit");
     });
 
-    document.getElementById("save-other-btn").addEventListener("click", async () => {
-      otherStatus.textContent = "Saving…";
-      otherStatus.className = "status";
+    $("save-other-btn").addEventListener("click", async () => {
+      showStatus(otherStatus, "Saving…", "");
       try {
         await postPatch({
           hotTake: hotTakeLive.value.trim() || null,
           nextEpisode: nextEpisodeLive.value.trim() || null,
           startingSoonTarget: targetFromMinutesInput(ssMinutesLive),
+          episodeNumber: parseEpisodeInput(epNumLive),
+          guestName: guestNameLive.value.trim() || null,
         });
-        otherStatus.textContent = "Saved. Overlay updates within 8 seconds.";
-        otherStatus.className = "status ok";
+        showStatus(otherStatus, "Saved. Overlays refresh within 8 seconds.", "ok");
       } catch (e) {
         if (e.message !== "unauthorized") {
-          otherStatus.textContent = "Save failed: " + (e.message || e);
-          otherStatus.className = "status err";
+          showStatus(otherStatus, "Save failed: " + friendlyError(e), "err");
         }
       }
     });
 
-    // ---- Init ----
+    // Hot Take preview live updates as user types or changes EP
+    [hotTakeEdit, hotTakeLive, epNumEdit, epNumLive].forEach((el) => {
+      el.addEventListener("input", renderHotTakePreview);
+    });
+
+    // Quick CTA buttons
+    document.querySelectorAll(".btn.cta").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const text = btn.dataset.ctaText;
+        if (text) applyCta(text);
+      });
+    });
+
+    // Keyboard shortcuts (live mode only, not when typing in inputs)
+    document.addEventListener("keydown", (e) => {
+      if (liveView.classList.contains("hidden")) return;
+      const tag = (e.target && e.target.tagName) || "";
+      if (tag === "INPUT" || tag === "TEXTAREA") return;
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+
+      if (e.key >= "1" && e.key <= "9") {
+        const i = parseInt(e.key, 10) - 1;
+        if (i < state.topics.length) {
+          e.preventDefault();
+          activateIndex(i);
+        }
+      } else if (e.key === "n" || e.key === "N" || e.key === "ArrowRight") {
+        if (!nextBtn.disabled) {
+          e.preventDefault();
+          nextBtn.click();
+        }
+      } else if (e.key === "p" || e.key === "P" || e.key === "ArrowLeft") {
+        if (!prevBtn.disabled) {
+          e.preventDefault();
+          prevBtn.click();
+        }
+      } else if (e.key === "Escape") {
+        if (!pauseBtn.disabled) {
+          e.preventDefault();
+          pauseBtn.click();
+        }
+      }
+    });
+
+    // ---- INIT ----
     async function checkAuth() {
       try {
         const r = await fetch("/api/me", { credentials: "include", cache: "no-store" });
+        markFetch(true);
         const { authenticated } = await r.json();
         if (authenticated) {
           await loadState();
@@ -469,10 +981,14 @@
           showView("login");
         }
       } catch {
+        markFetch(false);
         showView("login");
       }
     }
 
+    startRuntimeTicker();
+    startConnTicker();
+    refreshConnDot();
     checkAuth();
   </script>
 </body>
