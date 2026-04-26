@@ -6,52 +6,44 @@ export function createTicker(el, opts) {
     fetchState,
     intervalMs = 7000,
     pollMs = 5000,
+    now = () => Date.now(),
   } = opts;
 
   const tagEl = el.querySelector(".tag");
   const textEl = el.querySelector(".text");
 
   let rotationIdx = 0;
-  // Active topic-mode payload, or null when in evergreen mode.
-  // { text: string, tag: string }
-  let topicDisplay = null;
+  // Most-recent state from the API (or null if never fetched).
+  let latestState = null;
   let rotationTimer = null;
   let pollTimer = null;
+  // Tracks the last rendered display so we only paint when something changes.
+  let lastRendered = { text: null, tag: null };
 
-  function showLine(text, tag) {
+  function paint(text, tag) {
+    if (lastRendered.text === text && lastRendered.tag === tag) return;
+    lastRendered = { text, tag };
     textEl.textContent = text;
     tagEl.textContent = tag;
   }
 
-  function currentMode() {
-    return topicDisplay ? "TOPIC" : "NO BS";
+  // Public showLine bypasses the diff (used by callers to force a paint).
+  function showLine(text, tag) {
+    lastRendered = { text, tag };
+    textEl.textContent = text;
+    tagEl.textContent = tag;
   }
 
-  function renderCurrent() {
-    if (topicDisplay) {
-      showLine(topicDisplay.text, topicDisplay.tag);
-    } else {
-      showLine(evergreen[rotationIdx % evergreen.length], "NO BS");
-    }
+  function activeOverride(state) {
+    if (!state || !state.tickerOverride) return null;
+    const o = state.tickerOverride;
+    if (typeof o.text !== "string" || o.text.length === 0) return null;
+    if (typeof o.expiresAt !== "number" || o.expiresAt <= now()) return null;
+    return o;
   }
 
-  function startRotation() {
-    renderCurrent();
-    if (rotationTimer) clearInterval(rotationTimer);
-    rotationTimer = setInterval(() => {
-      if (topicDisplay) return; // don't rotate when showing today's topic
-      rotationIdx = (rotationIdx + 1) % evergreen.length;
-      renderCurrent();
-    }, intervalMs);
-  }
-
-  function stopRotation() {
-    if (rotationTimer) clearInterval(rotationTimer);
-    rotationTimer = null;
-  }
-
-  function deriveDisplay(state) {
-    if (!state || typeof state !== "object") return null;
+  function activeTopic(state) {
+    if (!state) return null;
     const topics = Array.isArray(state.topics) ? state.topics : null;
     const idx = state.currentTopicIndex;
     if (
@@ -62,25 +54,55 @@ export function createTicker(el, opts) {
       idx >= 0 &&
       idx < topics.length
     ) {
-      return {
-        text: topics[idx],
-        tag: `TOPIC ${idx + 1}/${topics.length}`,
-      };
+      return { text: topics[idx], tag: `TOPIC ${idx + 1}/${topics.length}` };
     }
     return null;
   }
 
+  function currentMode() {
+    if (activeOverride(latestState)) return "OVERRIDE";
+    if (activeTopic(latestState)) return "TOPIC";
+    return "NO BS";
+  }
+
+  function renderCurrent() {
+    const override = activeOverride(latestState);
+    if (override) {
+      paint(override.text, "NO BS");
+      return;
+    }
+    const topic = activeTopic(latestState);
+    if (topic) {
+      paint(topic.text, topic.tag);
+      return;
+    }
+    paint(evergreen[rotationIdx % evergreen.length], "NO BS");
+  }
+
+  function startRotation() {
+    renderCurrent();
+    if (rotationTimer) clearInterval(rotationTimer);
+    rotationTimer = setInterval(() => {
+      // Override and topic modes are static; only evergreen rotates.
+      if (activeOverride(latestState) || activeTopic(latestState)) {
+        // Still call renderCurrent so an expired override falls back immediately.
+        renderCurrent();
+        return;
+      }
+      rotationIdx = (rotationIdx + 1) % evergreen.length;
+      renderCurrent();
+    }, intervalMs);
+  }
+
+  function stopRotation() {
+    if (rotationTimer) clearInterval(rotationTimer);
+    rotationTimer = null;
+  }
+
   async function poll() {
     try {
-      const state = await fetchState();
-      const next = deriveDisplay(state);
-      const changed =
-        (next === null) !== (topicDisplay === null) ||
-        (next && topicDisplay && (next.text !== topicDisplay.text || next.tag !== topicDisplay.tag));
-      if (changed) {
-        topicDisplay = next;
-        renderCurrent();
-      }
+      latestState = await fetchState();
+      renderCurrent();
     } catch {
       // Ignore fetch errors — keep showing whatever is visible.
     }
