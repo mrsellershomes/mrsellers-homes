@@ -1,8 +1,10 @@
 // mrsellers-homes/take/shared/api.js
 // Tiny shared helpers used by every scene script.
+// VERSION: 2026-04-25-fast-poll-1
 
 export async function fetchState() {
-  const r = await fetch("/api/topic", { cache: "no-store" });
+  // Cache-bust with a timestamp param so no proxy/CDN/CEF can serve stale.
+  const r = await fetch(`/api/topic?t=${Date.now()}`, { cache: "no-store" });
   if (!r.ok) throw new Error("fetch failed");
   return r.json();
 }
