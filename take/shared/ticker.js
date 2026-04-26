@@ -5,7 +5,7 @@ export function createTicker(el, opts) {
     evergreen,
     fetchState,
     intervalMs = 7000,
-    pollMs = 5000,
+    pollMs = 1500,
     now = () => Date.now(),
   } = opts;
 
