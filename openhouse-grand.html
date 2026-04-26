@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Open House Sign-In | 561 Grand Ave, Leonia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8f8f8;
+      color: #111;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      width: 100%;
+      max-width: 420px;
+      padding: 32px 24px;
+    }
+    .logo-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .logo-bar img { height: 36px; width: auto; }
+    .header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 6px;
+    }
+    .header p {
+      font-size: 13px;
+      color: #888;
+      line-height: 1.5;
+    }
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #666;
+      margin-bottom: 6px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 14px 14px;
+      border: 1.5px solid #e0e0e0;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      color: #111;
+      background: #fafafa;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .form-group input:focus {
+      outline: none;
+      border-color: #FF1200;
+      background: #fff;
+    }
+    .form-group input::placeholder { color: #bbb; }
+    .optional-tag {
+      font-weight: 400;
+      text-transform: none;
+      letter-spacing: 0;
+      color: #aaa;
+      font-size: 10px;
+    }
+    .agency-group {
+      margin-bottom: 20px;
+      padding: 14px 16px;
+      background: #f5f5f5;
+      border-radius: 8px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      cursor: pointer;
+    }
+    .agency-group input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      accent-color: #FF1200;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .agency-group label {
+      font-size: 13px;
+      color: #444;
+      line-height: 1.5;
+      cursor: pointer;
+    }
+    .agency-group label strong {
+      color: #111;
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 16px;
+      background: #FF1200;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      letter-spacing: 0.02em;
+    }
+    .submit-btn:hover { background: #e00f00; }
+    .submit-btn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    .success-state {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .success-state .check {
+      width: 60px;
+      height: 60px;
+      background: #e8f5e9;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .success-state .check svg {
+      width: 30px;
+      height: 30px;
+      color: #2e7d32;
+    }
+    .success-state h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .success-state p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.5;
+    }
+    .success-state .reset-link {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 13px;
+      color: #FF1200;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    .powered {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 11px;
+      color: #bbb;
+    }
+    .error-msg {
+      display: none;
+      font-size: 11px;
+      color: #FF1200;
+      margin-top: 4px;
+    }
+    .error-msg.show { display: block; }
+    .form-group input.error { border-color: #FF1200; }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="logo-bar">
+      <img src="mrsellershomes-logo.svg" alt="Mr. Sellers Homes" />
+      <img src="remax-balloon.svg" alt="RE/MAX" />
+    </div>
+
+    <div class="header">
+      <h1>Welcome to the Open House</h1>
+      <p id="openHouseAddress" style="font-family:'Playfair Display',serif; font-size:15px; font-weight:500; color:#111; margin-bottom:4px;"></p>
+      <p id="signInSubtext">Please sign in below. It only takes 10 seconds.</p>
+    </div>
+
+    <form id="signInForm">
+      <div class="form-group">
+        <label for="oh-name">Full Name <span style="color:#FF1200;">*</span></label>
+        <input type="text" id="oh-name" placeholder="First and last name" required autocomplete="name" />
+        <div class="error-msg" id="oh-name-error">Please enter your name</div>
+      </div>
+
+      <div class="form-group">
+        <label for="oh-email">Email Address <span style="color:#FF1200;">*</span></label>
+        <input type="email" id="oh-email" placeholder="your@email.com" required autocomplete="email" inputmode="email" />
+        <div class="error-msg" id="oh-email-error">Please enter a valid email</div>
+      </div>
+
+      <div class="form-group">
+        <label for="oh-phone">Phone <span style="color:#FF1200;">*</span></label>
+        <input type="tel" id="oh-phone" placeholder="(201) 555-1234" autocomplete="tel" inputmode="tel" required />
+        <div class="error-msg" id="oh-phone-error">Please enter your phone number</div>
+      </div>
+
+      <div class="agency-group">
+        <input type="checkbox" id="oh-agency" />
+        <label for="oh-agency">I have an <strong>Exclusive Agency Agreement</strong> signed with another buyer&rsquo;s agent.</label>
+      </div>
+
+      <button type="submit" class="submit-btn">Sign In &rarr;</button>
+    </form>
+
+    <div class="success-state" id="successState">
+      <div class="check">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h2>You&rsquo;re signed in!</h2>
+      <p>Thanks for stopping by. Enjoy the tour &mdash; Tyler will follow up with you soon.</p>
+      <span class="reset-link" onclick="resetForm()">Sign in another guest</span>
+    </div>
+
+    <div class="powered">Mr. Sellers Homes &middot; RE/MAX &middot; Bergen County, NJ</div>
+  </div>
+
+  <script>
+    // === Open House Config — UPDATE THESE FOR EACH EVENT ===
+    var OPEN_HOUSE = {
+      address:     '561 Grand Avenue · Leonia, NJ 07605',     // shown in the page header
+      tag:         'Open House - 561 Grand Ave Leonia',       // info tag added to the FUB lead
+      sourceLabel: '561 Grand Ave Leonia',                    // appended to the FUB source
+      redirectUrl: ''                                         // empty = no redirect, stay on page
+    };
+    // =======================================================
+
+    // Inject address into header
+    document.getElementById('openHouseAddress').textContent = OPEN_HOUSE.address;
+
+    var FUB_API_KEY = 'fka_0E2H1dG5ch1zr3VepnlIt9Oczs5uXO3Fi8';
+    var FUB_API_URL = 'https://api.followupboss.com/v1/events';
+
+    function sendToFUB(data) {
+      var payload = {
+        source: 'MrSellers.homes — Open House Sign-In — ' + OPEN_HOUSE.sourceLabel,
+        system: 'MrSellersHomes Website',
+        type: 'Registration',
+        person: {}
+      };
+      if (data.name) {
+        var parts = data.name.trim().split(/\s+/);
+        payload.person.firstName = parts[0] || '';
+        payload.person.lastName = parts.slice(1).join(' ') || '';
+      }
+      if (data.email) payload.person.emails = [{ value: data.email }];
+      if (data.phone) payload.person.phones = [{ value: data.phone }];
+      var tags = ['open house visitor', OPEN_HOUSE.tag];
+      if (data.hasAgency) {
+        tags.push('has exclusive agency agreement');
+      } else {
+        tags.push('no exclusive agency agreement');
+        tags.push('buyer');
+      }
+      payload.person.tags = tags;
+
+      return fetch(FUB_API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Basic ' + btoa(FUB_API_KEY + ':')
+        },
+        body: JSON.stringify(payload)
+      });
+    }
+
+    // Auto-format phone number as (XXX) XXX-XXXX
+    document.getElementById('oh-phone').addEventListener('input', function(e) {
+      var x = e.target.value.replace(/\D/g, '').substring(0, 10);
+      var formatted = '';
+      if (x.length === 0) {
+        formatted = '';
+      } else if (x.length <= 3) {
+        formatted = '(' + x;
+      } else if (x.length <= 6) {
+        formatted = '(' + x.substring(0, 3) + ') ' + x.substring(3);
+      } else {
+        formatted = '(' + x.substring(0, 3) + ') ' + x.substring(3, 6) + '-' + x.substring(6);
+      }
+      e.target.value = formatted;
+    });
+
+    document.getElementById('signInForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      var nameEl = document.getElementById('oh-name');
+      var emailEl = document.getElementById('oh-email');
+      var phoneEl = document.getElementById('oh-phone');
+      var nameErr = document.getElementById('oh-name-error');
+      var emailErr = document.getElementById('oh-email-error');
+      var phoneErr = document.getElementById('oh-phone-error');
+      var valid = true;
+
+      nameEl.classList.remove('error'); nameErr.classList.remove('show');
+      emailEl.classList.remove('error'); emailErr.classList.remove('show');
+      phoneEl.classList.remove('error'); phoneErr.classList.remove('show');
+
+      if (!nameEl.value.trim()) {
+        nameEl.classList.add('error'); nameErr.classList.add('show'); valid = false;
+      }
+      if (!emailEl.value.trim() || !emailEl.value.includes('@')) {
+        emailEl.classList.add('error'); emailErr.classList.add('show'); valid = false;
+      }
+      if (!phoneEl.value.trim()) {
+        phoneEl.classList.add('error'); phoneErr.classList.add('show'); valid = false;
+      }
+      if (!valid) return;
+
+      var btn = document.querySelector('.submit-btn');
+      btn.textContent = 'Signing in...';
+      btn.disabled = true;
+
+      var data = {
+        name: nameEl.value,
+        email: emailEl.value,
+        phone: document.getElementById('oh-phone').value,
+        hasAgency: document.getElementById('oh-agency').checked
+      };
+
+      function showSuccess() {
+        document.getElementById('signInForm').style.display = 'none';
+        document.getElementById('signInSubtext').style.display = 'none';
+        document.getElementById('openHouseAddress').style.display = 'none';
+        document.getElementById('successState').style.display = 'block';
+        if (OPEN_HOUSE.redirectUrl) {
+          setTimeout(function() {
+            window.location.href = OPEN_HOUSE.redirectUrl;
+          }, 2200);
+        }
+      }
+
+      sendToFUB(data)
+        .then(showSuccess)
+        .catch(showSuccess); // never block the open-house flow
+    });
+
+    function resetForm() {
+      document.getElementById('signInForm').style.display = 'block';
+      document.getElementById('successState').style.display = 'none';
+      document.getElementById('signInSubtext').style.display = 'block';
+      document.getElementById('openHouseAddress').style.display = 'block';
+      document.getElementById('oh-name').value = '';
+      document.getElementById('oh-email').value = '';
+      document.getElementById('oh-phone').value = '';
+      document.getElementById('oh-phone').classList.remove('error');
+      document.getElementById('oh-phone-error').classList.remove('show');
+      document.getElementById('oh-agency').checked = false;
+      var btn = document.querySelector('.submit-btn');
+      btn.textContent = 'Sign In →';
+      btn.disabled = false;
+    }
+  </script>
+
+</body>
+</html>
