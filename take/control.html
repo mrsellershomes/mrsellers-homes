@@ -462,20 +462,25 @@
     }
 
     // ---- RENDER ----
+    // Skip writing to a field that currently has focus so background polling
+    // (every 8s) doesn't clobber the user's in-progress typing.
+    function setFieldValue(el, value) {
+      if (el !== document.activeElement) el.value = value;
+    }
     function syncFormFromState() {
       // Edit-view mirrors
-      docketTextarea.value = (state.topics || []).join("\n");
-      hotTakeEdit.value = state.hotTake ?? "";
-      nextEpisodeEdit.value = state.nextEpisode ?? "";
-      ssMinutesEdit.value = minutesFromTarget(state.startingSoonTarget);
-      epNumEdit.value = state.episodeNumber == null ? "" : String(state.episodeNumber);
-      guestNameEdit.value = state.guestName ?? "";
+      setFieldValue(docketTextarea, (state.topics || []).join("\n"));
+      setFieldValue(hotTakeEdit, state.hotTake ?? "");
+      setFieldValue(nextEpisodeEdit, state.nextEpisode ?? "");
+      setFieldValue(ssMinutesEdit, minutesFromTarget(state.startingSoonTarget));
+      setFieldValue(epNumEdit, state.episodeNumber == null ? "" : String(state.episodeNumber));
+      setFieldValue(guestNameEdit, state.guestName ?? "");
       // Live-view mirrors
-      hotTakeLive.value = state.hotTake ?? "";
-      nextEpisodeLive.value = state.nextEpisode ?? "";
-      ssMinutesLive.value = minutesFromTarget(state.startingSoonTarget);
-      epNumLive.value = state.episodeNumber == null ? "" : String(state.episodeNumber);
-      guestNameLive.value = state.guestName ?? "";
+      setFieldValue(hotTakeLive, state.hotTake ?? "");
+      setFieldValue(nextEpisodeLive, state.nextEpisode ?? "");
+      setFieldValue(ssMinutesLive, minutesFromTarget(state.startingSoonTarget));
+      setFieldValue(epNumLive, state.episodeNumber == null ? "" : String(state.episodeNumber));
+      setFieldValue(guestNameLive, state.guestName ?? "");
       renderHotTakePreview();
     }
 
