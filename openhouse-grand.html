@@ -295,17 +295,27 @@
     }
 
     // Auto-format phone number as (XXX) XXX-XXXX
+    // Auto-strips a leading country code "1" so people who type +1 or 1
+    // before their 10-digit number don't lose the last digit.
     document.getElementById('oh-phone').addEventListener('input', function(e) {
-      var x = e.target.value.replace(/\D/g, '').substring(0, 10);
+      var digits = e.target.value.replace(/\D/g, '');
+      // NANP area codes never start with 1, so any "1" followed by 3+ more
+      // digits is either a country code or a typo — strip it.
+      if (digits.length >= 4 && digits.charAt(0) === '1') {
+        digits = digits.substring(1);
+      }
+      // Cap at 10 digits
+      digits = digits.substring(0, 10);
+
       var formatted = '';
-      if (x.length === 0) {
+      if (digits.length === 0) {
         formatted = '';
-      } else if (x.length <= 3) {
-        formatted = '(' + x;
-      } else if (x.length <= 6) {
-        formatted = '(' + x.substring(0, 3) + ') ' + x.substring(3);
+      } else if (digits.length <= 3) {
+        formatted = '(' + digits;
+      } else if (digits.length <= 6) {
+        formatted = '(' + digits.substring(0, 3) + ') ' + digits.substring(3);
       } else {
-        formatted = '(' + x.substring(0, 3) + ') ' + x.substring(3, 6) + '-' + x.substring(6);
+        formatted = '(' + digits.substring(0, 3) + ') ' + digits.substring(3, 6) + '-' + digits.substring(6);
       }
       e.target.value = formatted;
     });
