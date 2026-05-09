@@ -1,0 +1,562 @@
+[
+  {
+    "name": "Allendale",
+    "slug": "allendale",
+    "pageSlug": "allendale-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Alpine",
+    "slug": "alpine",
+    "pageSlug": "alpine-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=PlWSFoAyvuA",
+    "multiFamily": false
+  },
+  {
+    "name": "Bergenfield",
+    "slug": "bergenfield",
+    "pageSlug": "bergenfield-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": true
+  },
+  {
+    "name": "Bogota",
+    "slug": "bogota",
+    "pageSlug": "bogota-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=cB06GPIWxjc",
+    "multiFamily": false
+  },
+  {
+    "name": "Carlstadt",
+    "slug": "carlstadt",
+    "pageSlug": "carlstadt-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": true
+  },
+  {
+    "name": "Cliffside Park",
+    "slug": "cliffside-park",
+    "pageSlug": "cliffside-park-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": true
+  },
+  {
+    "name": "Closter",
+    "slug": "closter",
+    "pageSlug": "closter-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=CbYOLA_yKgI",
+    "multiFamily": false
+  },
+  {
+    "name": "Cresskill",
+    "slug": "cresskill",
+    "pageSlug": "cresskill-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=TVkBPdDgElA",
+    "multiFamily": false
+  },
+  {
+    "name": "Demarest",
+    "slug": "demarest",
+    "pageSlug": "demarest-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=1dyFYtX36Tc",
+    "multiFamily": false
+  },
+  {
+    "name": "Dumont",
+    "slug": "dumont",
+    "pageSlug": "dumont-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=TAOECx8EeJA",
+    "multiFamily": true
+  },
+  {
+    "name": "East Rutherford",
+    "slug": "east-rutherford",
+    "pageSlug": "east-rutherford-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Edgewater",
+    "slug": "edgewater",
+    "pageSlug": "edgewater-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=ZIC4nW1gAjo",
+    "multiFamily": false
+  },
+  {
+    "name": "Elmwood Park",
+    "slug": "elmwood-park",
+    "pageSlug": "elmwood-park-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": true
+  },
+  {
+    "name": "Emerson",
+    "slug": "emerson",
+    "pageSlug": "emerson-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Englewood",
+    "slug": "englewood",
+    "pageSlug": "englewood-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=vuKlUtLnbb8",
+    "multiFamily": false
+  },
+  {
+    "name": "Englewood Cliffs",
+    "slug": "englewood-cliffs",
+    "pageSlug": "englewood-cliffs-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=Yw2r7DrxElQ",
+    "multiFamily": false
+  },
+  {
+    "name": "Fair Lawn",
+    "slug": "fair-lawn",
+    "pageSlug": "fair-lawn-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Fairview",
+    "slug": "fairview",
+    "pageSlug": "fairview-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": true
+  },
+  {
+    "name": "Fort Lee",
+    "slug": "fort-lee",
+    "pageSlug": "fort-lee-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=hgECvV24r9A",
+    "multiFamily": true
+  },
+  {
+    "name": "Franklin Lakes",
+    "slug": "franklin-lakes",
+    "pageSlug": "franklin-lakes-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Garfield",
+    "slug": "garfield",
+    "pageSlug": "garfield-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": true
+  },
+  {
+    "name": "Glen Rock",
+    "slug": "glen-rock",
+    "pageSlug": "glen-rock-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=uJ6OSKt4CJQ",
+    "multiFamily": false
+  },
+  {
+    "name": "Hackensack",
+    "slug": "hackensack",
+    "pageSlug": "hackensack-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=niwTDjk851o",
+    "multiFamily": true
+  },
+  {
+    "name": "Harrington Park",
+    "slug": "harrington-park",
+    "pageSlug": "harrington-park-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Hasbrouck Heights",
+    "slug": "hasbrouck-heights",
+    "pageSlug": "hasbrouck-heights-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=2UsO9pacuEE",
+    "multiFamily": false
+  },
+  {
+    "name": "Haworth",
+    "slug": "haworth",
+    "pageSlug": "haworth-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Hillsdale",
+    "slug": "hillsdale",
+    "pageSlug": "hillsdale-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Ho-Ho-Kus",
+    "slug": "ho-ho-kus",
+    "pageSlug": "ho-ho-kus-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=ekGYZ9KqjgA",
+    "multiFamily": false
+  },
+  {
+    "name": "Leonia",
+    "slug": "leonia",
+    "pageSlug": "leonia-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=5K9MeNwACEQ",
+    "multiFamily": false
+  },
+  {
+    "name": "Little Ferry",
+    "slug": "little-ferry",
+    "pageSlug": "little-ferry-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": true
+  },
+  {
+    "name": "Lodi",
+    "slug": "lodi",
+    "pageSlug": "lodi-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": true
+  },
+  {
+    "name": "Lyndhurst",
+    "slug": "lyndhurst",
+    "pageSlug": "lyndhurst-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": true
+  },
+  {
+    "name": "Mahwah",
+    "slug": "mahwah",
+    "pageSlug": "mahwah-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Maywood",
+    "slug": "maywood",
+    "pageSlug": "maywood-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=emR8t1PnLO4",
+    "multiFamily": false
+  },
+  {
+    "name": "Midland Park",
+    "slug": "midland-park",
+    "pageSlug": "midland-park-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Montvale",
+    "slug": "montvale",
+    "pageSlug": "montvale-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Moonachie",
+    "slug": "moonachie",
+    "pageSlug": "moonachie-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "New Milford",
+    "slug": "new-milford",
+    "pageSlug": "new-milford-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "North Arlington",
+    "slug": "north-arlington",
+    "pageSlug": "north-arlington-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": true
+  },
+  {
+    "name": "Northvale",
+    "slug": "northvale",
+    "pageSlug": "northvale-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Norwood",
+    "slug": "norwood",
+    "pageSlug": "norwood-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Oakland",
+    "slug": "oakland",
+    "pageSlug": "oakland-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Old Tappan",
+    "slug": "old-tappan",
+    "pageSlug": "old-tappan-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Oradell",
+    "slug": "oradell",
+    "pageSlug": "oradell-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=dVyZh6yJcXY",
+    "multiFamily": false
+  },
+  {
+    "name": "Palisades Park",
+    "slug": "palisades-park",
+    "pageSlug": "palisades-park-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=-hYXMuXQQcY",
+    "multiFamily": true
+  },
+  {
+    "name": "Paramus",
+    "slug": "paramus",
+    "pageSlug": "paramus-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=UvUmTDUooME",
+    "multiFamily": false
+  },
+  {
+    "name": "Park Ridge",
+    "slug": "park-ridge",
+    "pageSlug": "park-ridge-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Ramsey",
+    "slug": "ramsey",
+    "pageSlug": "ramsey-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=h9Z7FfUNXpg",
+    "multiFamily": false
+  },
+  {
+    "name": "Ridgefield",
+    "slug": "ridgefield",
+    "pageSlug": "ridgefield-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=m2O_KpeyGvk",
+    "multiFamily": true
+  },
+  {
+    "name": "Ridgefield Park",
+    "slug": "ridgefield-park",
+    "pageSlug": "ridgefield-park-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=s3tOAm4nyD4",
+    "multiFamily": false
+  },
+  {
+    "name": "Ridgewood",
+    "slug": "ridgewood",
+    "pageSlug": "ridgewood-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=iQxgLH0n0Z8",
+    "multiFamily": false
+  },
+  {
+    "name": "River Edge",
+    "slug": "river-edge",
+    "pageSlug": "river-edge-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=vn-ZWJlPeys",
+    "multiFamily": false
+  },
+  {
+    "name": "River Vale",
+    "slug": "river-vale",
+    "pageSlug": "river-vale-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=VWGczRxFn8k",
+    "multiFamily": false
+  },
+  {
+    "name": "Rochelle Park",
+    "slug": "rochelle-park",
+    "pageSlug": "rochelle-park-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Rockleigh",
+    "slug": "rockleigh",
+    "pageSlug": "rockleigh-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Rutherford",
+    "slug": "rutherford",
+    "pageSlug": "rutherford-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=zsGfjVJBa-w",
+    "multiFamily": true
+  },
+  {
+    "name": "Saddle Brook",
+    "slug": "saddle-brook",
+    "pageSlug": "saddle-brook-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Saddle River",
+    "slug": "saddle-river",
+    "pageSlug": "saddle-river-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "South Hackensack",
+    "slug": "south-hackensack",
+    "pageSlug": "south-hackensack-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Teaneck",
+    "slug": "teaneck",
+    "pageSlug": "teaneck-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=dxr3JoMS9d8",
+    "multiFamily": false
+  },
+  {
+    "name": "Tenafly",
+    "slug": "tenafly",
+    "pageSlug": "tenafly-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=XrwVlMNYvV8",
+    "multiFamily": false
+  },
+  {
+    "name": "Teterboro",
+    "slug": "teterboro",
+    "pageSlug": "teterboro-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Upper Saddle River",
+    "slug": "upper-saddle-river",
+    "pageSlug": "upper-saddle-river-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Waldwick",
+    "slug": "waldwick",
+    "pageSlug": "waldwick-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Wallington",
+    "slug": "wallington",
+    "pageSlug": "wallington-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": true
+  },
+  {
+    "name": "Washington Township",
+    "slug": "washington-township",
+    "pageSlug": "washington-township-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Westwood",
+    "slug": "westwood",
+    "pageSlug": "westwood-real-estate",
+    "hasGuide": true,
+    "youtubeUrl": "https://www.youtube.com/watch?v=Dd-M3XMuPAY",
+    "multiFamily": false
+  },
+  {
+    "name": "Wood-Ridge",
+    "slug": "wood-ridge",
+    "pageSlug": "wood-ridge-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Woodcliff Lake",
+    "slug": "woodcliff-lake",
+    "pageSlug": "woodcliff-lake-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  },
+  {
+    "name": "Wyckoff",
+    "slug": "wyckoff",
+    "pageSlug": "wyckoff-real-estate",
+    "hasGuide": false,
+    "youtubeUrl": null,
+    "multiFamily": false
+  }
+]
