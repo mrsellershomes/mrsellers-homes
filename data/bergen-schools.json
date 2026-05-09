@@ -1,0 +1,3354 @@
+{
+  "allendale": {
+    "schools": [
+      {
+        "name": "Hillside Elementary School",
+        "district": "Allendale Public School District",
+        "grades": "PK-03",
+        "band": "Elementary",
+        "enrollment": 314,
+        "elaPct": 85.2,
+        "mathPct": 73.6
+      },
+      {
+        "name": "Northern Highlands Regional High School",
+        "district": "Northern Highlands Regional High School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Brookside School",
+        "district": "Allendale Public School District",
+        "grades": "04-08",
+        "band": "Combined",
+        "enrollment": 345,
+        "elaPct": 66.5,
+        "mathPct": 63.1
+      }
+    ],
+    "schoolCount": 3,
+    "studentCount": 1024,
+    "elaProficientPct": 69.6,
+    "mathProficientPct": 67.7,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "alpine": {
+    "schools": [
+      {
+        "name": "Alpine Elementary School",
+        "district": "Alpine Public School District",
+        "grades": "KG-08",
+        "band": "Combined",
+        "enrollment": 345,
+        "elaPct": 66.5,
+        "mathPct": 63.1
+      }
+    ],
+    "schoolCount": 1,
+    "studentCount": 345,
+    "elaProficientPct": 66.5,
+    "mathProficientPct": 63.1,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "bergenfield": {
+    "schools": [
+      {
+        "name": "Roy W. Brown Middle School",
+        "district": "Bergenfield Borough School District",
+        "grades": "06-08",
+        "band": "Middle",
+        "enrollment": 405,
+        "elaPct": 76.6,
+        "mathPct": 65.9
+      },
+      {
+        "name": "Bergenfield High School",
+        "district": "Bergenfield Borough School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 314,
+        "elaPct": 85.2,
+        "mathPct": 73.6
+      },
+      {
+        "name": "Franklin Elementary School",
+        "district": "Bergenfield Borough School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 339,
+        "elaPct": 62.7,
+        "mathPct": 68.5
+      },
+      {
+        "name": "Hoover Elementary School",
+        "district": "Bergenfield Borough School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Jefferson Elementary School",
+        "district": "Bergenfield Borough School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "Lincoln Elementary School",
+        "district": "Bergenfield Borough School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "Washington Elementary School",
+        "district": "Bergenfield Borough School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      }
+    ],
+    "schoolCount": 7,
+    "studentCount": 2612,
+    "elaProficientPct": 70,
+    "mathProficientPct": 69.5,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "bogota": {
+    "schools": [
+      {
+        "name": "Bogota Middle School",
+        "district": "Bogota Public School District",
+        "grades": "06-07",
+        "band": "Middle",
+        "enrollment": 242,
+        "elaPct": 71.9,
+        "mathPct": 57.6
+      },
+      {
+        "name": "Bogota Jr./Sr. High School",
+        "district": "Bogota Public School District",
+        "grades": "08-12",
+        "band": "Combined",
+        "enrollment": 314,
+        "elaPct": 85.2,
+        "mathPct": 73.6
+      },
+      {
+        "name": "E. Roy Bixby",
+        "district": "Bogota Public School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 384,
+        "elaPct": 73.7,
+        "mathPct": 54.7
+      },
+      {
+        "name": "Lillian M. Steen",
+        "district": "Bogota Public School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 4,
+    "studentCount": 1305,
+    "elaProficientPct": 72,
+    "mathProficientPct": 63.3,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "carlstadt": {
+    "schools": [
+      {
+        "name": "Carlstadt Public School",
+        "district": "Carlstadt Public School District",
+        "grades": "PK-08",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 1,
+    "studentCount": 365,
+    "elaProficientPct": 59,
+    "mathProficientPct": 67.1,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "cliffside-park": {
+    "schools": [
+      {
+        "name": "School #3",
+        "district": "Cliffside Park School District",
+        "grades": "KG-04",
+        "band": "Elementary",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "School #5",
+        "district": "Cliffside Park School District",
+        "grades": "PK-04",
+        "band": "Elementary",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "School #6/Middle School",
+        "district": "Cliffside Park School District",
+        "grades": "05-08",
+        "band": "Middle",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      },
+      {
+        "name": "Cliffside Park High School",
+        "district": "Cliffside Park School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 384,
+        "elaPct": 73.7,
+        "mathPct": 54.7
+      },
+      {
+        "name": "School #4",
+        "district": "Cliffside Park School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      }
+    ],
+    "schoolCount": 5,
+    "studentCount": 1938,
+    "elaProficientPct": 68.2,
+    "mathProficientPct": 66.8,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "closter": {
+    "schools": [
+      {
+        "name": "Hillside Elementary School",
+        "district": "Closter Public School District",
+        "grades": "PK-04",
+        "band": "Elementary",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Tenakill Middle School",
+        "district": "Closter Public School District",
+        "grades": "05-08",
+        "band": "Middle",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      }
+    ],
+    "schoolCount": 2,
+    "studentCount": 858,
+    "elaProficientPct": 67,
+    "mathProficientPct": 71.8,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "cresskill": {
+    "schools": [
+      {
+        "name": "Cresskill Middle School",
+        "district": "Cresskill Public School District",
+        "grades": "06-08",
+        "band": "Middle",
+        "enrollment": 417,
+        "elaPct": 63.9,
+        "mathPct": 55.3
+      },
+      {
+        "name": "Cresskill High School",
+        "district": "Cresskill Public School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 339,
+        "elaPct": 62.7,
+        "mathPct": 68.5
+      },
+      {
+        "name": "Edward H. Bryan",
+        "district": "Cresskill Public School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Merritt Memorial",
+        "district": "Cresskill Public School District",
+        "grades": "01-05",
+        "band": "Combined",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      }
+    ],
+    "schoolCount": 4,
+    "studentCount": 1614,
+    "elaProficientPct": 65.3,
+    "mathProficientPct": 66.9,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "demarest": {
+    "schools": [
+      {
+        "name": "County Road School",
+        "district": "Demarest School District",
+        "grades": "PK-01",
+        "band": "Elementary",
+        "enrollment": 384,
+        "elaPct": 73.7,
+        "mathPct": 54.7
+      },
+      {
+        "name": "Luther Lee Emerson School",
+        "district": "Demarest School District",
+        "grades": "02-04",
+        "band": "Elementary",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Demarest Middle School",
+        "district": "Demarest School District",
+        "grades": "05-08",
+        "band": "Middle",
+        "enrollment": 339,
+        "elaPct": 62.7,
+        "mathPct": 68.5
+      },
+      {
+        "name": "Bergen County Institute for Science and Technology",
+        "district": "Bergen County Vocational Technical School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 52,
+        "elaPct": null,
+        "mathPct": null
+      },
+      {
+        "name": "Northern Valley Regional High School at Demarest",
+        "district": "Northern Valley Regional High School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 5,
+    "studentCount": 1505,
+    "elaProficientPct": 63.7,
+    "mathProficientPct": 64.1,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "dumont": {
+    "schools": [
+      {
+        "name": "Dumont High School",
+        "district": "Dumont Public School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 339,
+        "elaPct": 62.7,
+        "mathPct": 68.5
+      },
+      {
+        "name": "Grant Elementary School",
+        "district": "Dumont Public School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Honiss Elementary\\Middle School",
+        "district": "Dumont Public School District",
+        "grades": "KG-08",
+        "band": "Combined",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "Lincoln Elementary School",
+        "district": "Dumont Public School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "Selzer Elementary\\Middle School",
+        "district": "Dumont Public School District",
+        "grades": "PK-08",
+        "band": "Combined",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      }
+    ],
+    "schoolCount": 5,
+    "studentCount": 1893,
+    "elaProficientPct": 66.1,
+    "mathProficientPct": 69.6,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "east-rutherford": {
+    "schools": [
+      {
+        "name": "McKenzie School",
+        "district": "East Rutherford School District",
+        "grades": "PK-03",
+        "band": "Elementary",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      },
+      {
+        "name": "Alfred S. Faust Middle School",
+        "district": "East Rutherford School District",
+        "grades": "06-08",
+        "band": "Middle",
+        "enrollment": 339,
+        "elaPct": 62.7,
+        "mathPct": 68.5
+      },
+      {
+        "name": "Henry P. Becton Regional High School",
+        "district": "Carlstadt-East Rutherford Regional High School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Lincoln School",
+        "district": "East Rutherford School District",
+        "grades": "04-05",
+        "band": "Combined",
+        "enrollment": 242,
+        "elaPct": 71.9,
+        "mathPct": 57.6
+      }
+    ],
+    "schoolCount": 4,
+    "studentCount": 1266,
+    "elaProficientPct": 63.5,
+    "mathProficientPct": 65.8,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "edgewater": {
+    "schools": [
+      {
+        "name": "George Washington School",
+        "district": "Edgewater School District",
+        "grades": "PK-02",
+        "band": "Elementary",
+        "enrollment": 242,
+        "elaPct": 71.9,
+        "mathPct": 57.6
+      },
+      {
+        "name": "Eleanor Van Gelder",
+        "district": "Edgewater School District",
+        "grades": "03-06",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 2,
+    "studentCount": 607,
+    "elaProficientPct": 64.1,
+    "mathProficientPct": 63.3,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "elmwood-park": {
+    "schools": [
+      {
+        "name": "Memorial Middle School",
+        "district": "Elmwood Park School District",
+        "grades": "06-08",
+        "band": "Middle",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "Memorial Senior High School",
+        "district": "Elmwood Park School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Gantner Avenue School",
+        "district": "Elmwood Park School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "Gilbert Avenue School",
+        "district": "Elmwood Park School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      },
+      {
+        "name": "Sixteenth Avenue School",
+        "district": "Elmwood Park School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 360,
+        "elaPct": 68.5,
+        "mathPct": 77
+      }
+    ],
+    "schoolCount": 5,
+    "studentCount": 1914,
+    "elaProficientPct": 67.1,
+    "mathProficientPct": 71.2,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "emerson": {
+    "schools": [
+      {
+        "name": "Memorial School",
+        "district": "Emerson Public School District",
+        "grades": "PK-03",
+        "band": "Elementary",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "Emerson Jr Sr High",
+        "district": "Emerson Public School District",
+        "grades": "07-12",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Patrick M Villano School",
+        "district": "Emerson Public School District",
+        "grades": "04-06",
+        "band": "Combined",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      }
+    ],
+    "schoolCount": 3,
+    "studentCount": 1234,
+    "elaProficientPct": 67.8,
+    "mathProficientPct": 70.4,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "englewood": {
+    "schools": [
+      {
+        "name": "Donald A. Quarles Early Childhood Center",
+        "district": "Englewood Public School District",
+        "grades": "PK-KG",
+        "band": "Elementary",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "Dr. John Grieco Elementary School",
+        "district": "Englewood Public School District",
+        "grades": "01-02",
+        "band": "Elementary",
+        "enrollment": 137,
+        "elaPct": null,
+        "mathPct": null
+      },
+      {
+        "name": "Janis E. Dismus Middle School",
+        "district": "Englewood Public School District",
+        "grades": "06-08",
+        "band": "Middle",
+        "enrollment": 634,
+        "elaPct": 71.2,
+        "mathPct": 55.8
+      },
+      {
+        "name": "Dwight Morrow High School/Academies@Englewood",
+        "district": "Englewood Public School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 339,
+        "elaPct": 62.7,
+        "mathPct": 68.5
+      },
+      {
+        "name": "Dr. Leroy McCloud Elementary School",
+        "district": "Englewood Public School District",
+        "grades": "03-05",
+        "band": "Combined",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "Englewood on the Palisades Charter School",
+        "district": "Englewood on the Palisades Charter School",
+        "grades": "KG-08",
+        "band": "Combined",
+        "enrollment": 313,
+        "elaPct": 49.5,
+        "mathPct": 30.4
+      }
+    ],
+    "schoolCount": 6,
+    "studentCount": 2292,
+    "elaProficientPct": 66.8,
+    "mathProficientPct": 60.6,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "englewood-cliffs": {
+    "schools": [
+      {
+        "name": "North Cliff School",
+        "district": "Englewood Cliffs School District",
+        "grades": "PK-02",
+        "band": "Elementary",
+        "enrollment": 339,
+        "elaPct": 62.7,
+        "mathPct": 68.5
+      },
+      {
+        "name": "Upper School",
+        "district": "Englewood Cliffs School District",
+        "grades": "03-08",
+        "band": "Combined",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      }
+    ],
+    "schoolCount": 2,
+    "studentCount": 832,
+    "elaProficientPct": 68.7,
+    "mathProficientPct": 72.5,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "fair-lawn": {
+    "schools": [
+      {
+        "name": "Henry B. Milnes Elementary School",
+        "district": "Fair Lawn Public School District",
+        "grades": "KG-04",
+        "band": "Elementary",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      },
+      {
+        "name": "John A. Forrest Elementary School",
+        "district": "Fair Lawn Public School District",
+        "grades": "KG-04",
+        "band": "Elementary",
+        "enrollment": 346,
+        "elaPct": 40.3,
+        "mathPct": 46.8
+      },
+      {
+        "name": "Lyncrest Elementary School",
+        "district": "Fair Lawn Public School District",
+        "grades": "KG-04",
+        "band": "Elementary",
+        "enrollment": 327,
+        "elaPct": 79.9,
+        "mathPct": 79.2
+      },
+      {
+        "name": "Radburn Elementary School",
+        "district": "Fair Lawn Public School District",
+        "grades": "KG-04",
+        "band": "Elementary",
+        "enrollment": 327,
+        "elaPct": 58.3,
+        "mathPct": 49.2
+      },
+      {
+        "name": "Warren Point Elementary School",
+        "district": "Fair Lawn Public School District",
+        "grades": "KG-04",
+        "band": "Elementary",
+        "enrollment": 404,
+        "elaPct": 76.6,
+        "mathPct": 75.8
+      },
+      {
+        "name": "Westmoreland Elementary School",
+        "district": "Fair Lawn Public School District",
+        "grades": "PK-04",
+        "band": "Elementary",
+        "enrollment": 421,
+        "elaPct": 71.4,
+        "mathPct": 67.4
+      },
+      {
+        "name": "Memorial Middle School",
+        "district": "Fair Lawn Public School District",
+        "grades": "05-08",
+        "band": "Middle",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "Thomas Jefferson Middle School",
+        "district": "Fair Lawn Public School District",
+        "grades": "05-08",
+        "band": "Middle",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "Fair Lawn High School",
+        "district": "Fair Lawn Public School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 9,
+    "studentCount": 3379,
+    "elaProficientPct": 66.3,
+    "mathProficientPct": 66.8,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "fairview": {
+    "schools": [
+      {
+        "name": "Lincoln School Annex",
+        "district": "Fairview Public School District",
+        "grades": "PK-KG",
+        "band": "Elementary",
+        "enrollment": 282,
+        "elaPct": 74.4,
+        "mathPct": 80.8
+      },
+      {
+        "name": "Number Three School",
+        "district": "Fairview Public School District",
+        "grades": "PK-04",
+        "band": "Elementary",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      },
+      {
+        "name": "Lincoln School",
+        "district": "Fairview Public School District",
+        "grades": "04-08",
+        "band": "Combined",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      }
+    ],
+    "schoolCount": 3,
+    "studentCount": 1095,
+    "elaProficientPct": 70.5,
+    "mathProficientPct": 74.4,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "fort-lee": {
+    "schools": [
+      {
+        "name": "School No. 1",
+        "district": "Fort Lee School District",
+        "grades": "KG-04",
+        "band": "Elementary",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "School No. 2",
+        "district": "Fort Lee School District",
+        "grades": "PK-04",
+        "band": "Elementary",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "School No. 3",
+        "district": "Fort Lee School District",
+        "grades": "PK-04",
+        "band": "Elementary",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      },
+      {
+        "name": "School No. 4",
+        "district": "Fort Lee School District",
+        "grades": "KG-04",
+        "band": "Elementary",
+        "enrollment": 360,
+        "elaPct": 68.5,
+        "mathPct": 77
+      },
+      {
+        "name": "Lewis F. Cole Middle School",
+        "district": "Fort Lee School District",
+        "grades": "05-08",
+        "band": "Middle",
+        "enrollment": 327,
+        "elaPct": 79.9,
+        "mathPct": 79.2
+      },
+      {
+        "name": "Fort Lee High School",
+        "district": "Fort Lee School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 6,
+    "studentCount": 2241,
+    "elaProficientPct": 69,
+    "mathProficientPct": 72.3,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "franklin-lakes": {
+    "schools": [
+      {
+        "name": "Franklin Avenue Middle School",
+        "district": "Franklin Lakes School District",
+        "grades": "06-08",
+        "band": "Middle",
+        "enrollment": 379,
+        "elaPct": 71.3,
+        "mathPct": 59.3
+      },
+      {
+        "name": "Ramapo High School",
+        "district": "Ramapo Indian Hills Regional High School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Colonial Road School",
+        "district": "Franklin Lakes School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 339,
+        "elaPct": 62.7,
+        "mathPct": 68.5
+      },
+      {
+        "name": "High Mountain Road School",
+        "district": "Franklin Lakes School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 314,
+        "elaPct": 85.2,
+        "mathPct": 73.6
+      },
+      {
+        "name": "Woodside Avenue School",
+        "district": "Franklin Lakes School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 384,
+        "elaPct": 73.7,
+        "mathPct": 54.7
+      }
+    ],
+    "schoolCount": 5,
+    "studentCount": 1781,
+    "elaProficientPct": 70.1,
+    "mathProficientPct": 64.2,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "garfield": {
+    "schools": [
+      {
+        "name": "Garfield Early Childhood Learning Center",
+        "district": "Garfield Public School District",
+        "grades": "PK-PK",
+        "band": "Elementary",
+        "enrollment": 339,
+        "elaPct": 62.7,
+        "mathPct": 68.5
+      },
+      {
+        "name": "Garfield Public Preschool 3 at Headstart",
+        "district": "Garfield Public School District",
+        "grades": "PK-PK",
+        "band": "Elementary",
+        "enrollment": 622,
+        "elaPct": 57.1,
+        "mathPct": 32.6
+      },
+      {
+        "name": "Garfield Public Preschool Annex",
+        "district": "Garfield Public School District",
+        "grades": "PK-PK",
+        "band": "Elementary",
+        "enrollment": 137,
+        "elaPct": null,
+        "mathPct": null
+      },
+      {
+        "name": "Garfield Middle School",
+        "district": "Garfield Public School District",
+        "grades": "06-08",
+        "band": "Middle",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "Garfield High School",
+        "district": "Garfield Public School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Abraham Lincoln School #6",
+        "district": "Garfield Public School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      },
+      {
+        "name": "Bergen Arts and Sciences Charter School",
+        "district": "Bergen Arts and Science Charter School",
+        "grades": "KG-12",
+        "band": "Combined",
+        "enrollment": 1266,
+        "elaPct": 55.6,
+        "mathPct": 39.6
+      },
+      {
+        "name": "Christopher Columbus School #8",
+        "district": "Garfield Public School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "James Madison School #10",
+        "district": "Garfield Public School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 288,
+        "elaPct": 74.6,
+        "mathPct": 66.9
+      },
+      {
+        "name": "Roosevelt School #7",
+        "district": "Garfield Public School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 327,
+        "elaPct": 79.9,
+        "mathPct": 79.2
+      },
+      {
+        "name": "Thomas Jefferson School #9",
+        "district": "Garfield Public School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 242,
+        "elaPct": 71.9,
+        "mathPct": 57.6
+      },
+      {
+        "name": "Washington Irving School #4",
+        "district": "Garfield Public School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 359,
+        "elaPct": 87.2,
+        "mathPct": 88
+      }
+    ],
+    "schoolCount": 12,
+    "studentCount": 5134,
+    "elaProficientPct": 65.5,
+    "mathProficientPct": 58.6,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "glen-rock": {
+    "schools": [
+      {
+        "name": "Glen Rock Middle School",
+        "district": "Glen Rock Public School District",
+        "grades": "06-08",
+        "band": "Middle",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "Glen Rock High School",
+        "district": "Glen Rock Public School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Alexander Hamilton School",
+        "district": "Glen Rock Public School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 282,
+        "elaPct": 74.4,
+        "mathPct": 80.8
+      },
+      {
+        "name": "Central School",
+        "district": "Glen Rock Public School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      },
+      {
+        "name": "Clara E Coleman School",
+        "district": "Glen Rock Public School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 360,
+        "elaPct": 68.5,
+        "mathPct": 77
+      },
+      {
+        "name": "Richard E Byrd School",
+        "district": "Glen Rock Public School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      }
+    ],
+    "schoolCount": 6,
+    "studentCount": 2196,
+    "elaProficientPct": 68.1,
+    "mathProficientPct": 72.4,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "hackensack": {
+    "schools": [
+      {
+        "name": "Fairmount",
+        "district": "Hackensack School District",
+        "grades": "PK-04",
+        "band": "Elementary",
+        "enrollment": 327,
+        "elaPct": 79.9,
+        "mathPct": 79.2
+      },
+      {
+        "name": "Fanny Meyer Hillers",
+        "district": "Hackensack School District",
+        "grades": "PK-04",
+        "band": "Elementary",
+        "enrollment": 327,
+        "elaPct": 58.3,
+        "mathPct": 49.2
+      },
+      {
+        "name": "Jackson Avenue",
+        "district": "Hackensack School District",
+        "grades": "PK-04",
+        "band": "Elementary",
+        "enrollment": 359,
+        "elaPct": 87.2,
+        "mathPct": 88
+      },
+      {
+        "name": "Nellie K. Parker",
+        "district": "Hackensack School District",
+        "grades": "PK-04",
+        "band": "Elementary",
+        "enrollment": 360,
+        "elaPct": 68.5,
+        "mathPct": 77
+      },
+      {
+        "name": "Hackensack Middle School",
+        "district": "Hackensack School District",
+        "grades": "05-08",
+        "band": "Middle",
+        "enrollment": 242,
+        "elaPct": 71.9,
+        "mathPct": 57.6
+      },
+      {
+        "name": "Bergen County Academies",
+        "district": "Bergen County Vocational Technical School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 314,
+        "elaPct": 85.2,
+        "mathPct": 73.6
+      },
+      {
+        "name": "Hackensack High School",
+        "district": "Hackensack School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 7,
+    "studentCount": 2294,
+    "elaProficientPct": 72.7,
+    "mathProficientPct": 71,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "harrington-park": {
+    "schools": [
+      {
+        "name": "Harrington Park School",
+        "district": "Harrington Park School District",
+        "grades": "PK-08",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 1,
+    "studentCount": 365,
+    "elaProficientPct": 59,
+    "mathProficientPct": 67.1,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "hasbrouck-heights": {
+    "schools": [
+      {
+        "name": "Hasbrouck Heights Middle School",
+        "district": "Hasbrouck Heights School District",
+        "grades": "06-08",
+        "band": "Middle",
+        "enrollment": 352,
+        "elaPct": 56.3,
+        "mathPct": 47.9
+      },
+      {
+        "name": "Hasbrouck Heights High School",
+        "district": "Hasbrouck Heights School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Euclid Elementary School",
+        "district": "Hasbrouck Heights School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "Lincoln Elementary School",
+        "district": "Hasbrouck Heights School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      }
+    ],
+    "schoolCount": 4,
+    "studentCount": 1530,
+    "elaProficientPct": 63.7,
+    "mathProficientPct": 65.4,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "haworth": {
+    "schools": [
+      {
+        "name": "Haworth Public School",
+        "district": "Haworth Public School District",
+        "grades": "PK-08",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 1,
+    "studentCount": 365,
+    "elaProficientPct": 59,
+    "mathProficientPct": 67.1,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "hillsdale": {
+    "schools": [
+      {
+        "name": "Ann Blanche Smith",
+        "district": "Hillsdale School District",
+        "grades": "KG-04",
+        "band": "Elementary",
+        "enrollment": 345,
+        "elaPct": 66.5,
+        "mathPct": 63.1
+      },
+      {
+        "name": "Meadowbrook",
+        "district": "Hillsdale School District",
+        "grades": "PK-04",
+        "band": "Elementary",
+        "enrollment": 384,
+        "elaPct": 73.7,
+        "mathPct": 54.7
+      },
+      {
+        "name": "George G White",
+        "district": "Hillsdale School District",
+        "grades": "05-08",
+        "band": "Middle",
+        "enrollment": 314,
+        "elaPct": 85.2,
+        "mathPct": 73.6
+      },
+      {
+        "name": "Pascack Valley High School",
+        "district": "Pascack Valley Regional High School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 4,
+    "studentCount": 1408,
+    "elaProficientPct": 70.7,
+    "mathProficientPct": 64.2,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "ho-ho-kus": {
+    "schools": [
+      {
+        "name": "Ho-Ho-Kus Public School",
+        "district": "Ho-Ho-Kus School District",
+        "grades": "PK-08",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 1,
+    "studentCount": 365,
+    "elaProficientPct": 59,
+    "mathProficientPct": 67.1,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "leonia": {
+    "schools": [
+      {
+        "name": "Anna C. Scott Elementary School",
+        "district": "Leonia Public School District",
+        "grades": "PK-04",
+        "band": "Elementary",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "Leonia Middle School",
+        "district": "Leonia Public School District",
+        "grades": "05-08",
+        "band": "Middle",
+        "enrollment": 352,
+        "elaPct": 56.3,
+        "mathPct": 47.9
+      },
+      {
+        "name": "Leonia High School",
+        "district": "Leonia Public School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 3,
+    "studentCount": 1210,
+    "elaProficientPct": 63.9,
+    "mathProficientPct": 64.9,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "little-ferry": {
+    "schools": [
+      {
+        "name": "Washington Elementary School",
+        "district": "Little Ferry Public School District",
+        "grades": "PK-04",
+        "band": "Elementary",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Memorial Middle  School",
+        "district": "Little Ferry Public School District",
+        "grades": "05-08",
+        "band": "Middle",
+        "enrollment": 384,
+        "elaPct": 73.7,
+        "mathPct": 54.7
+      }
+    ],
+    "schoolCount": 2,
+    "studentCount": 749,
+    "elaProficientPct": 66.5,
+    "mathProficientPct": 60.7,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "lodi": {
+    "schools": [
+      {
+        "name": "Thomas Jefferson Middle School",
+        "district": "Lodi School District",
+        "grades": "06-08",
+        "band": "Middle",
+        "enrollment": 721,
+        "elaPct": 77.2,
+        "mathPct": 37.4
+      },
+      {
+        "name": "Lodi High School",
+        "district": "Lodi School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Columbus School",
+        "district": "Lodi School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "Hilltop School",
+        "district": "Lodi School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 282,
+        "elaPct": 74.4,
+        "mathPct": 80.8
+      },
+      {
+        "name": "Lodi MS HS",
+        "district": "South  Bergen Jointure Commission School District",
+        "grades": "06-12",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Roosevelt School",
+        "district": "Lodi School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      },
+      {
+        "name": "Washington School",
+        "district": "Lodi School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 360,
+        "elaPct": 68.5,
+        "mathPct": 77
+      },
+      {
+        "name": "Wilson School",
+        "district": "Lodi School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 327,
+        "elaPct": 79.9,
+        "mathPct": 79.2
+      }
+    ],
+    "schoolCount": 8,
+    "studentCount": 3233,
+    "elaProficientPct": 70.1,
+    "mathProficientPct": 65.3,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "lyndhurst": {
+    "schools": [
+      {
+        "name": "Columbus School",
+        "district": "Lyndhurst Public School District",
+        "grades": "KG-02",
+        "band": "Elementary",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "Community",
+        "district": "Lyndhurst Public School District",
+        "grades": "PK-PK",
+        "band": "Elementary",
+        "enrollment": 52,
+        "elaPct": null,
+        "mathPct": null
+      },
+      {
+        "name": "Franklin School",
+        "district": "Lyndhurst Public School District",
+        "grades": "KG-02",
+        "band": "Elementary",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "Memorial School",
+        "district": "Lyndhurst Public School District",
+        "grades": "KG-02",
+        "band": "Elementary",
+        "enrollment": 242,
+        "elaPct": 71.9,
+        "mathPct": 57.6
+      },
+      {
+        "name": "Washington School",
+        "district": "Lyndhurst Public School District",
+        "grades": "PK-02",
+        "band": "Elementary",
+        "enrollment": 359,
+        "elaPct": 87.2,
+        "mathPct": 88
+      },
+      {
+        "name": "Lyndhurst Middle School",
+        "district": "Lyndhurst Public School District",
+        "grades": "06-08",
+        "band": "Middle",
+        "enrollment": 622,
+        "elaPct": 57.1,
+        "mathPct": 32.6
+      },
+      {
+        "name": "Lyndhurst High School",
+        "district": "Lyndhurst Public School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Jefferson School",
+        "district": "Lyndhurst Public School District",
+        "grades": "03-05",
+        "band": "Combined",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      },
+      {
+        "name": "Roosevelt School",
+        "district": "Lyndhurst Public School District",
+        "grades": "03-05",
+        "band": "Combined",
+        "enrollment": 327,
+        "elaPct": 58.3,
+        "mathPct": 49.2
+      }
+    ],
+    "schoolCount": 9,
+    "studentCount": 3156,
+    "elaProficientPct": 66.7,
+    "mathProficientPct": 61.3,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "mahwah": {
+    "schools": [
+      {
+        "name": "Betsy Ross Elementary",
+        "district": "Mahwah Township Public School District",
+        "grades": "KG-03",
+        "band": "Elementary",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "George Washington School",
+        "district": "Mahwah Township Public School District",
+        "grades": "KG-03",
+        "band": "Elementary",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      },
+      {
+        "name": "Lenape Meadows",
+        "district": "Mahwah Township Public School District",
+        "grades": "PK-03",
+        "band": "Elementary",
+        "enrollment": 282,
+        "elaPct": 74.4,
+        "mathPct": 80.8
+      },
+      {
+        "name": "Ramapo Ridge",
+        "district": "Mahwah Township Public School District",
+        "grades": "06-08",
+        "band": "Middle",
+        "enrollment": 634,
+        "elaPct": 71.2,
+        "mathPct": 55.8
+      },
+      {
+        "name": "Mahwah High School",
+        "district": "Mahwah Township Public School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Joyce Kilmer School",
+        "district": "Mahwah Township Public School District",
+        "grades": "04-05",
+        "band": "Combined",
+        "enrollment": 405,
+        "elaPct": 76.6,
+        "mathPct": 65.9
+      }
+    ],
+    "schoolCount": 6,
+    "studentCount": 2499,
+    "elaProficientPct": 70,
+    "mathProficientPct": 67.3,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "maywood": {
+    "schools": [
+      {
+        "name": "Memorial School",
+        "district": "Maywood School District",
+        "grades": "PK-03",
+        "band": "Elementary",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "Maywood Avenue School",
+        "district": "Maywood School District",
+        "grades": "PK-08",
+        "band": "Combined",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "Maywood Campus",
+        "district": "South  Bergen Jointure Commission School District",
+        "grades": "PK-06",
+        "band": "Combined",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      }
+    ],
+    "schoolCount": 3,
+    "studentCount": 1362,
+    "elaProficientPct": 72,
+    "mathProficientPct": 73.1,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "midland-park": {
+    "schools": [
+      {
+        "name": "Godwin Elementary School",
+        "district": "Midland Park School District",
+        "grades": "PK-02",
+        "band": "Elementary",
+        "enrollment": 242,
+        "elaPct": 71.9,
+        "mathPct": 57.6
+      },
+      {
+        "name": "Highland Elementary School",
+        "district": "Midland Park School District",
+        "grades": "03-06",
+        "band": "Combined",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "Midland Park Jr./Sr. High School",
+        "district": "Midland Park School District",
+        "grades": "07-12",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 3,
+    "studentCount": 983,
+    "elaProficientPct": 66.2,
+    "mathProficientPct": 64.8,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "montvale": {
+    "schools": [
+      {
+        "name": "Memorial Elementary School",
+        "district": "Montvale Board of Education School District",
+        "grades": "PK-04",
+        "band": "Elementary",
+        "enrollment": 384,
+        "elaPct": 73.7,
+        "mathPct": 54.7
+      },
+      {
+        "name": "Fieldstone Middle School",
+        "district": "Montvale Board of Education School District",
+        "grades": "05-08",
+        "band": "Middle",
+        "enrollment": 314,
+        "elaPct": 85.2,
+        "mathPct": 73.6
+      },
+      {
+        "name": "Pascack Hills High School",
+        "district": "Pascack Valley Regional High School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 339,
+        "elaPct": 62.7,
+        "mathPct": 68.5
+      }
+    ],
+    "schoolCount": 3,
+    "studentCount": 1037,
+    "elaProficientPct": 73.6,
+    "mathProficientPct": 64.9,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "moonachie": {
+    "schools": [
+      {
+        "name": "Moonachie Campus",
+        "district": "South  Bergen Jointure Commission School District",
+        "grades": "KG-08",
+        "band": "Combined",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "Robert L. Craig School",
+        "district": "Moonachie School District",
+        "grades": "PK-08",
+        "band": "Combined",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      }
+    ],
+    "schoolCount": 2,
+    "studentCount": 869,
+    "elaProficientPct": 71.4,
+    "mathProficientPct": 71.8,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "new-milford": {
+    "schools": [
+      {
+        "name": "New Milford High School",
+        "district": "New Milford Public School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Berkley Street School",
+        "district": "New Milford Public School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "Bertrand F. Gibbs Elementary School",
+        "district": "New Milford Public School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "David E. Owens Middle School",
+        "district": "New Milford Public School District",
+        "grades": "PK-08",
+        "band": "Combined",
+        "enrollment": 346,
+        "elaPct": 40.3,
+        "mathPct": 46.8
+      }
+    ],
+    "schoolCount": 4,
+    "studentCount": 1580,
+    "elaProficientPct": 61.7,
+    "mathProficientPct": 65.2,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "north-arlington": {
+    "schools": [
+      {
+        "name": "Veterans Middle School",
+        "district": "North Arlington School District",
+        "grades": "06-08",
+        "band": "Middle",
+        "enrollment": 360,
+        "elaPct": 68.5,
+        "mathPct": 77
+      },
+      {
+        "name": "Franklin D Roosevelt Elementary School",
+        "district": "North Arlington School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "George Washington Elementary School",
+        "district": "North Arlington School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      },
+      {
+        "name": "North Arlington High School",
+        "district": "North Arlington School District",
+        "grades": "PK-12",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Susan B. Anthony Elementary School",
+        "district": "North Arlington School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 242,
+        "elaPct": 71.9,
+        "mathPct": 57.6
+      },
+      {
+        "name": "Thomas Jefferson Elementary School",
+        "district": "North Arlington School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      }
+    ],
+    "schoolCount": 6,
+    "studentCount": 2156,
+    "elaProficientPct": 67.7,
+    "mathProficientPct": 69.6,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "northvale": {
+    "schools": [
+      {
+        "name": "Northvale Public School",
+        "district": "Northvale Public School District",
+        "grades": "KG-08",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 1,
+    "studentCount": 365,
+    "elaProficientPct": 59,
+    "mathProficientPct": 67.1,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "norwood": {
+    "schools": [
+      {
+        "name": "Northern Valley Central",
+        "district": "Northern Valley Regional High School District",
+        "grades": "PK-12",
+        "band": "Combined",
+        "enrollment": 242,
+        "elaPct": 71.9,
+        "mathPct": 57.6
+      },
+      {
+        "name": "Norwood Public School",
+        "district": "Norwood Public School District",
+        "grades": "PK-08",
+        "band": "Combined",
+        "enrollment": 314,
+        "elaPct": 85.2,
+        "mathPct": 73.6
+      }
+    ],
+    "schoolCount": 2,
+    "studentCount": 556,
+    "elaProficientPct": 79.4,
+    "mathProficientPct": 66.6,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "oakland": {
+    "schools": [
+      {
+        "name": "Valley Middle School",
+        "district": "Oakland Public School District",
+        "grades": "06-08",
+        "band": "Middle",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      },
+      {
+        "name": "Indian Hills High School",
+        "district": "Ramapo Indian Hills Regional High School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 384,
+        "elaPct": 73.7,
+        "mathPct": 54.7
+      },
+      {
+        "name": "Dogwood Hill Elementary School",
+        "district": "Oakland Public School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 339,
+        "elaPct": 62.7,
+        "mathPct": 68.5
+      },
+      {
+        "name": "Heights Elementary School",
+        "district": "Oakland Public School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Manito Elementary School",
+        "district": "Oakland Public School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      }
+    ],
+    "schoolCount": 5,
+    "studentCount": 1901,
+    "elaProficientPct": 66.9,
+    "mathProficientPct": 67,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "old-tappan": {
+    "schools": [
+      {
+        "name": "T. Baldwin Demarest Elementary School",
+        "district": "Old Tappan Public School District",
+        "grades": "PK-04",
+        "band": "Elementary",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "Charles DeWolf Middle School",
+        "district": "Old Tappan Public School District",
+        "grades": "05-08",
+        "band": "Middle",
+        "enrollment": 384,
+        "elaPct": 73.7,
+        "mathPct": 54.7
+      },
+      {
+        "name": "Northern Valley Regional High School at Old Tappan",
+        "district": "Northern Valley Regional High School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      }
+    ],
+    "schoolCount": 3,
+    "studentCount": 1370,
+    "elaProficientPct": 73.1,
+    "mathProficientPct": 69.5,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "oradell": {
+    "schools": [
+      {
+        "name": "River Dell Regional High School",
+        "district": "River Dell Regional School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Oradell Public School",
+        "district": "Oradell Public School District",
+        "grades": "PK-06",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 2,
+    "studentCount": 730,
+    "elaProficientPct": 59,
+    "mathProficientPct": 67.1,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "palisades-park": {
+    "schools": [
+      {
+        "name": "Charles R Smith Early Chilhood Center",
+        "district": "Palisades Park School District",
+        "grades": "PK-KG",
+        "band": "Elementary",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      },
+      {
+        "name": "Lindbergh Elementary School",
+        "district": "Palisades Park School District",
+        "grades": "01-06",
+        "band": "Combined",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "Palisades Park Jr-Sr High School",
+        "district": "Palisades Park School District",
+        "grades": "07-12",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 3,
+    "studentCount": 1061,
+    "elaProficientPct": 64,
+    "mathProficientPct": 67.3,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "paramus": {
+    "schools": [
+      {
+        "name": "Memorial Elementary School",
+        "district": "Paramus Public School District",
+        "grades": "PK-04",
+        "band": "Elementary",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      },
+      {
+        "name": "Midland Elementary School",
+        "district": "Paramus Public School District",
+        "grades": "KG-04",
+        "band": "Elementary",
+        "enrollment": 360,
+        "elaPct": 68.5,
+        "mathPct": 77
+      },
+      {
+        "name": "Parkway Elementary School",
+        "district": "Paramus Public School District",
+        "grades": "PK-04",
+        "band": "Elementary",
+        "enrollment": 327,
+        "elaPct": 79.9,
+        "mathPct": 79.2
+      },
+      {
+        "name": "Ridge Ranch Elementary School",
+        "district": "Paramus Public School District",
+        "grades": "KG-04",
+        "band": "Elementary",
+        "enrollment": 327,
+        "elaPct": 58.3,
+        "mathPct": 49.2
+      },
+      {
+        "name": "Stony Lane Elementary School",
+        "district": "Paramus Public School District",
+        "grades": "KG-04",
+        "band": "Elementary",
+        "enrollment": 304,
+        "elaPct": 62.5,
+        "mathPct": 45.1
+      },
+      {
+        "name": "East Brook Middle School",
+        "district": "Paramus Public School District",
+        "grades": "05-08",
+        "band": "Middle",
+        "enrollment": 282,
+        "elaPct": 74.4,
+        "mathPct": 80.8
+      },
+      {
+        "name": "West Brook Middle School",
+        "district": "Paramus Public School District",
+        "grades": "05-08",
+        "band": "Middle",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "Applied Technology High School",
+        "district": "Bergen County Vocational Technical School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 242,
+        "elaPct": 71.9,
+        "mathPct": 57.6
+      },
+      {
+        "name": "Bergen County Technical High School - Paramus",
+        "district": "Bergen County Vocational Technical School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 384,
+        "elaPct": 73.7,
+        "mathPct": 54.7
+      },
+      {
+        "name": "Bergen County Technical High School - Paramus",
+        "district": "Bergen County Vocational Technical School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 405,
+        "elaPct": 76.6,
+        "mathPct": 65.9
+      },
+      {
+        "name": "Autistic Continuum",
+        "district": "Bergen County Special Services School District",
+        "grades": "PK-12",
+        "band": "Combined",
+        "enrollment": 327,
+        "elaPct": 79.9,
+        "mathPct": 79.2
+      },
+      {
+        "name": "Behavioral Continuum",
+        "district": "Bergen County Special Services School District",
+        "grades": "PK-12",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Deaf and Hard of Hearing Continuum",
+        "district": "Bergen County Special Services School District",
+        "grades": "PK-12",
+        "band": "Combined",
+        "enrollment": 384,
+        "elaPct": 73.7,
+        "mathPct": 54.7
+      },
+      {
+        "name": "Life Skills Continuum",
+        "district": "Bergen County Special Services School District",
+        "grades": "PK-12",
+        "band": "Combined",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "Multiple Disabilities Continuum",
+        "district": "Bergen County Special Services School District",
+        "grades": "PK-12",
+        "band": "Combined",
+        "enrollment": 339,
+        "elaPct": 62.7,
+        "mathPct": 68.5
+      },
+      {
+        "name": "N. A. Bleshman Regional Day School",
+        "district": "Bergen County Special Services School District",
+        "grades": "PK-12",
+        "band": "Combined",
+        "enrollment": 103,
+        "elaPct": null,
+        "mathPct": null
+      },
+      {
+        "name": "Paramus High School",
+        "district": "Paramus Public School District",
+        "grades": "PK-12",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 17,
+    "studentCount": 5703,
+    "elaProficientPct": 69.2,
+    "mathProficientPct": 66.2,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "park-ridge": {
+    "schools": [
+      {
+        "name": "East Brook Elementary School",
+        "district": "Park Ridge School District",
+        "grades": "KG-06",
+        "band": "Combined",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "Park Ridge High School",
+        "district": "Park Ridge School District",
+        "grades": "07-12",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "West Ridge Elementary School",
+        "district": "Park Ridge School District",
+        "grades": "PK-06",
+        "band": "Combined",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      }
+    ],
+    "schoolCount": 3,
+    "studentCount": 1234,
+    "elaProficientPct": 67.8,
+    "mathProficientPct": 70.4,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "ramsey": {
+    "schools": [
+      {
+        "name": "Mary A. Hubbard Elementary School",
+        "district": "Ramsey School District",
+        "grades": "PK-03",
+        "band": "Elementary",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "Wesley D Tisdale Elementary School",
+        "district": "Ramsey School District",
+        "grades": "PK-03",
+        "band": "Elementary",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      },
+      {
+        "name": "Eric S. Smith Middle School",
+        "district": "Ramsey School District",
+        "grades": "06-08",
+        "band": "Middle",
+        "enrollment": 352,
+        "elaPct": 56.3,
+        "mathPct": 47.9
+      },
+      {
+        "name": "Ramsey High School",
+        "district": "Ramsey School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "John Y Dater Elementary School",
+        "district": "Ramsey School District",
+        "grades": "04-05",
+        "band": "Combined",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      }
+    ],
+    "schoolCount": 5,
+    "studentCount": 1906,
+    "elaProficientPct": 64.9,
+    "mathProficientPct": 65.8,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "ridgefield": {
+    "schools": [
+      {
+        "name": "Bergen Boulevard School",
+        "district": "Ridgefield School District",
+        "grades": "01-02",
+        "band": "Elementary",
+        "enrollment": 282,
+        "elaPct": 74.4,
+        "mathPct": 80.8
+      },
+      {
+        "name": "Shaler Academy",
+        "district": "Ridgefield School District",
+        "grades": "PK-03",
+        "band": "Elementary",
+        "enrollment": 360,
+        "elaPct": 68.5,
+        "mathPct": 77
+      },
+      {
+        "name": "Ridgefield Memorial High School",
+        "district": "Ridgefield School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Slocum Skewes School",
+        "district": "Ridgefield School District",
+        "grades": "03-09",
+        "band": "Combined",
+        "enrollment": 327,
+        "elaPct": 79.9,
+        "mathPct": 79.2
+      }
+    ],
+    "schoolCount": 4,
+    "studentCount": 1334,
+    "elaProficientPct": 69.9,
+    "mathProficientPct": 75.6,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "ridgefield-park": {
+    "schools": [
+      {
+        "name": "Grant Elementary School",
+        "district": "Ridgefield Park Public School District",
+        "grades": "PK-06",
+        "band": "Combined",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "Lincoln Elementary School",
+        "district": "Ridgefield Park Public School District",
+        "grades": "PK-06",
+        "band": "Combined",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "Ridgefield Park Jr Sr High School",
+        "district": "Ridgefield Park Public School District",
+        "grades": "07-12",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Roosevelt  Elementary School",
+        "district": "Ridgefield Park Public School District",
+        "grades": "PK-06",
+        "band": "Combined",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      }
+    ],
+    "schoolCount": 4,
+    "studentCount": 1554,
+    "elaProficientPct": 66.8,
+    "mathProficientPct": 69.8,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "ridgewood": {
+    "schools": [
+      {
+        "name": "Glen School",
+        "district": "Ridgewood Public School District",
+        "grades": "PK-PK",
+        "band": "Elementary",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      },
+      {
+        "name": "Benjamin Franklin Middle School",
+        "district": "Ridgewood Public School District",
+        "grades": "06-08",
+        "band": "Middle",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "George Washington Middle School",
+        "district": "Ridgewood Public School District",
+        "grades": "06-08",
+        "band": "Middle",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "Ridgewood High School",
+        "district": "Ridgewood Public School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Hawes Elementary School",
+        "district": "Ridgewood Public School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 346,
+        "elaPct": 40.3,
+        "mathPct": 46.8
+      },
+      {
+        "name": "Orchard Elementary School",
+        "district": "Ridgewood Public School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 359,
+        "elaPct": 87.2,
+        "mathPct": 88
+      },
+      {
+        "name": "Ridge Elementary School",
+        "district": "Ridgewood Public School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 360,
+        "elaPct": 68.5,
+        "mathPct": 77
+      },
+      {
+        "name": "Somerville Elementary School",
+        "district": "Ridgewood Public School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 327,
+        "elaPct": 79.9,
+        "mathPct": 79.2
+      },
+      {
+        "name": "Travell Elementary School",
+        "district": "Ridgewood Public School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 327,
+        "elaPct": 58.3,
+        "mathPct": 49.2
+      },
+      {
+        "name": "Willard Elementary School",
+        "district": "Ridgewood Public School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 304,
+        "elaPct": 62.5,
+        "mathPct": 45.1
+      }
+    ],
+    "schoolCount": 10,
+    "studentCount": 3577,
+    "elaProficientPct": 66.5,
+    "mathProficientPct": 67,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "river-edge": {
+    "schools": [
+      {
+        "name": "River Dell Middle School",
+        "district": "River Dell Regional School District",
+        "grades": "07-08",
+        "band": "Middle",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "Cherry Hill School",
+        "district": "River Edge School District",
+        "grades": "PK-06",
+        "band": "Combined",
+        "enrollment": 384,
+        "elaPct": 73.7,
+        "mathPct": 54.7
+      },
+      {
+        "name": "Roosevelt School",
+        "district": "River Edge School District",
+        "grades": "KG-06",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 3,
+    "studentCount": 1242,
+    "elaProficientPct": 69.1,
+    "mathProficientPct": 66.5,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "river-vale": {
+    "schools": [
+      {
+        "name": "Holdrum Middle School",
+        "district": "River Vale Public School District",
+        "grades": "06-08",
+        "band": "Middle",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Roberge Elementary School",
+        "district": "River Vale Public School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "Woodside Elementary School",
+        "district": "River Vale Public School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      }
+    ],
+    "schoolCount": 3,
+    "studentCount": 1234,
+    "elaProficientPct": 67.8,
+    "mathProficientPct": 70.4,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "rochelle-park": {
+    "schools": [
+      {
+        "name": "Midland School #1",
+        "district": "Rochelle Park School District",
+        "grades": "PK-08",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 1,
+    "studentCount": 365,
+    "elaProficientPct": 59,
+    "mathProficientPct": 67.1,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "rockleigh": {
+    "schools": [],
+    "schoolCount": 0,
+    "studentCount": 0,
+    "elaProficientPct": null,
+    "mathProficientPct": null,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "rutherford": {
+    "schools": [
+      {
+        "name": "Lincoln School",
+        "district": "Rutherford School District",
+        "grades": "PK-03",
+        "band": "Elementary",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "Washington School",
+        "district": "Rutherford School District",
+        "grades": "PK-03",
+        "band": "Elementary",
+        "enrollment": 327,
+        "elaPct": 58.3,
+        "mathPct": 49.2
+      },
+      {
+        "name": "Union School",
+        "district": "Rutherford School District",
+        "grades": "07-08",
+        "band": "Middle",
+        "enrollment": 327,
+        "elaPct": 79.9,
+        "mathPct": 79.2
+      },
+      {
+        "name": "Rutherford High School",
+        "district": "Rutherford School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Pierrepont School",
+        "district": "Rutherford School District",
+        "grades": "04-06",
+        "band": "Combined",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      }
+    ],
+    "schoolCount": 5,
+    "studentCount": 1715,
+    "elaProficientPct": 65.9,
+    "mathProficientPct": 66.1,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "saddle-brook": {
+    "schools": [
+      {
+        "name": "Washington School",
+        "district": "Saddle Brook School District",
+        "grades": "PK-PK",
+        "band": "Elementary",
+        "enrollment": 327,
+        "elaPct": 79.9,
+        "mathPct": 79.2
+      },
+      {
+        "name": "Franklin School",
+        "district": "Saddle Brook School District",
+        "grades": "KG-06",
+        "band": "Combined",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      },
+      {
+        "name": "Helen I. Smith School",
+        "district": "Saddle Brook School District",
+        "grades": "KG-06",
+        "band": "Combined",
+        "enrollment": 346,
+        "elaPct": 40.3,
+        "mathPct": 46.8
+      },
+      {
+        "name": "Saddle Brook Middle/High School",
+        "district": "Saddle Brook School District",
+        "grades": "07-12",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Salome H. Long Memorial School",
+        "district": "Saddle Brook School District",
+        "grades": "KG-06",
+        "band": "Combined",
+        "enrollment": 360,
+        "elaPct": 68.5,
+        "mathPct": 77
+      }
+    ],
+    "schoolCount": 5,
+    "studentCount": 1718,
+    "elaProficientPct": 62,
+    "mathProficientPct": 67.5,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "saddle-river": {
+    "schools": [
+      {
+        "name": "Wandell School",
+        "district": "Saddle River School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 1,
+    "studentCount": 365,
+    "elaProficientPct": 59,
+    "mathProficientPct": 67.1,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "south-hackensack": {
+    "schools": [
+      {
+        "name": "Memorial School",
+        "district": "South Hackensack School District",
+        "grades": "PK-08",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 1,
+    "studentCount": 365,
+    "elaProficientPct": 59,
+    "mathProficientPct": 67.1,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "teaneck": {
+    "schools": [
+      {
+        "name": "James Russell Lowell Elementary School",
+        "district": "Teaneck School District",
+        "grades": "KG-04",
+        "band": "Elementary",
+        "enrollment": 304,
+        "elaPct": 62.5,
+        "mathPct": 45.1
+      },
+      {
+        "name": "John Greenleaf Whittier Elementary School",
+        "district": "Teaneck School District",
+        "grades": "KG-04",
+        "band": "Elementary",
+        "enrollment": 376,
+        "elaPct": 55,
+        "mathPct": 34.7
+      },
+      {
+        "name": "Nathaniel Hawthorne Elementary School",
+        "district": "Teaneck School District",
+        "grades": "KG-04",
+        "band": "Elementary",
+        "enrollment": 327,
+        "elaPct": 58.3,
+        "mathPct": 49.2
+      },
+      {
+        "name": "Theodora Smiley Lacey Elementary School",
+        "district": "Teaneck School District",
+        "grades": "PK-KG",
+        "band": "Elementary",
+        "enrollment": 242,
+        "elaPct": 71.9,
+        "mathPct": 57.6
+      },
+      {
+        "name": "William Cullen Bryant School",
+        "district": "Teaneck School District",
+        "grades": "PK-PK",
+        "band": "Elementary",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      },
+      {
+        "name": "Benjamin Franklin Middle School",
+        "district": "Teaneck School District",
+        "grades": "05-08",
+        "band": "Middle",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "Thomas Jefferson Middle School",
+        "district": "Teaneck School District",
+        "grades": "05-08",
+        "band": "Middle",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "Teaneck High School",
+        "district": "Teaneck School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Teaneck Community Charter school",
+        "district": "Teaneck Community Charter School",
+        "grades": "KG-08",
+        "band": "Combined",
+        "enrollment": 369,
+        "elaPct": 59.9,
+        "mathPct": 42.7
+      }
+    ],
+    "schoolCount": 9,
+    "studentCount": 3172,
+    "elaProficientPct": 63.7,
+    "mathProficientPct": 57.1,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "tenafly": {
+    "schools": [
+      {
+        "name": "Tenafly Middle School",
+        "district": "Tenafly Public School District",
+        "grades": "06-08",
+        "band": "Middle",
+        "enrollment": 925,
+        "elaPct": 84.2,
+        "mathPct": 79.5
+      },
+      {
+        "name": "Tenafly High School",
+        "district": "Tenafly Public School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "J Spencer Smith School",
+        "district": "Tenafly Public School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "Malcolm S Mackay School",
+        "district": "Tenafly Public School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      },
+      {
+        "name": "Ralph S Maugham School",
+        "district": "Tenafly Public School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 360,
+        "elaPct": 68.5,
+        "mathPct": 77
+      },
+      {
+        "name": "Walter Stillman School",
+        "district": "Tenafly Public School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 327,
+        "elaPct": 79.9,
+        "mathPct": 79.2
+      }
+    ],
+    "schoolCount": 6,
+    "studentCount": 2673,
+    "elaProficientPct": 73.5,
+    "mathProficientPct": 74.3,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "teterboro": {
+    "schools": [
+      {
+        "name": "Bergen County Technical High School - Teterboro",
+        "district": "Bergen County Vocational Technical School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      }
+    ],
+    "schoolCount": 1,
+    "studentCount": 376,
+    "elaProficientPct": 69.5,
+    "mathProficientPct": 67.2,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "upper-saddle-river": {
+    "schools": [
+      {
+        "name": "Robert D Reynolds Primary School",
+        "district": "Upper Saddle River School District",
+        "grades": "PK-02",
+        "band": "Elementary",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "Emil A. Cavallini Middle School",
+        "district": "Upper Saddle River School District",
+        "grades": "06-08",
+        "band": "Middle",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Edith A. Bogert Elementary School",
+        "district": "Upper Saddle River School District",
+        "grades": "03-05",
+        "band": "Combined",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      }
+    ],
+    "schoolCount": 3,
+    "studentCount": 1234,
+    "elaProficientPct": 67.8,
+    "mathProficientPct": 70.4,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "waldwick": {
+    "schools": [
+      {
+        "name": "Waldwick Middle School",
+        "district": "Waldwick School District",
+        "grades": "06-08",
+        "band": "Middle",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      },
+      {
+        "name": "Waldwick High School",
+        "district": "Waldwick School District",
+        "grades": "09-12",
+        "band": "High",
+        "enrollment": 384,
+        "elaPct": 73.7,
+        "mathPct": 54.7
+      },
+      {
+        "name": "Crescent Elementary School",
+        "district": "Waldwick School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 339,
+        "elaPct": 62.7,
+        "mathPct": 68.5
+      },
+      {
+        "name": "Julia A Traphagen School",
+        "district": "Waldwick School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 4,
+    "studentCount": 1464,
+    "elaProficientPct": 66.4,
+    "mathProficientPct": 64.2,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "wallington": {
+    "schools": [
+      {
+        "name": "Jefferson (Annex) Elementary School",
+        "district": "Wallington Boro School District",
+        "grades": "PK-02",
+        "band": "Elementary",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "Frank W. Gavlak Elementary School",
+        "district": "Wallington Boro School District",
+        "grades": "03-06",
+        "band": "Combined",
+        "enrollment": 352,
+        "elaPct": 56.3,
+        "mathPct": 47.9
+      },
+      {
+        "name": "Wallington Junior Senior High School",
+        "district": "Wallington Boro School District",
+        "grades": "07-12",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 3,
+    "studentCount": 1210,
+    "elaProficientPct": 63.9,
+    "mathProficientPct": 64.9,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "washington-township": {
+    "schools": [
+      {
+        "name": "Jessie F. George Elementary",
+        "district": "Westwood Regional School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 282,
+        "elaPct": 74.4,
+        "mathPct": 80.8
+      },
+      {
+        "name": "Washington Elementary School",
+        "district": "Westwood Regional School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 320,
+        "elaPct": 63.2,
+        "mathPct": 67.5
+      },
+      {
+        "name": "Westwood Regional High School",
+        "district": "Westwood Regional School District",
+        "grades": "PK-12",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 3,
+    "studentCount": 967,
+    "elaProficientPct": 64.9,
+    "mathProficientPct": 71.2,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "westwood": {
+    "schools": [
+      {
+        "name": "Westwood Regional Middle School",
+        "district": "Westwood Regional School District",
+        "grades": "06-08",
+        "band": "Middle",
+        "enrollment": 682,
+        "elaPct": 63.4,
+        "mathPct": 48.2
+      },
+      {
+        "name": "Berkeley Elementary",
+        "district": "Westwood Regional School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "Brookside Elementary School",
+        "district": "Westwood Regional School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 376,
+        "elaPct": 69.5,
+        "mathPct": 67.2
+      }
+    ],
+    "schoolCount": 3,
+    "studentCount": 1551,
+    "elaProficientPct": 67.9,
+    "mathProficientPct": 61.4,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "wood-ridge": {
+    "schools": [
+      {
+        "name": "Catherine E. Doyle Elementary School",
+        "district": "Wood-Ridge School District",
+        "grades": "PK-03",
+        "band": "Elementary",
+        "enrollment": 493,
+        "elaPct": 72.9,
+        "mathPct": 75.3
+      },
+      {
+        "name": "Wood-Ridge Intermediate School",
+        "district": "Wood-Ridge School District",
+        "grades": "04-06",
+        "band": "Combined",
+        "enrollment": 242,
+        "elaPct": 71.9,
+        "mathPct": 57.6
+      },
+      {
+        "name": "Wood-Ridge Jr/Sr High School",
+        "district": "Wood-Ridge School District",
+        "grades": "07-12",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 3,
+    "studentCount": 1100,
+    "elaProficientPct": 68.1,
+    "mathProficientPct": 68.7,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "woodcliff-lake": {
+    "schools": [
+      {
+        "name": "Woodcliff Middle School",
+        "district": "Woodcliff Lake School District",
+        "grades": "06-08",
+        "band": "Middle",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      },
+      {
+        "name": "Dorchester Elementary School",
+        "district": "Woodcliff Lake School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 384,
+        "elaPct": 73.7,
+        "mathPct": 54.7
+      }
+    ],
+    "schoolCount": 2,
+    "studentCount": 749,
+    "elaProficientPct": 66.5,
+    "mathProficientPct": 60.7,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  },
+  "wyckoff": {
+    "schools": [
+      {
+        "name": "Dwight D. Eisenhower Middle School",
+        "district": "Wyckoff Township Public School District",
+        "grades": "06-08",
+        "band": "Middle",
+        "enrollment": 614,
+        "elaPct": 72,
+        "mathPct": 59.3
+      },
+      {
+        "name": "Abraham Lincoln Elementary School",
+        "district": "Wyckoff Township Public School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 345,
+        "elaPct": 66.5,
+        "mathPct": 63.1
+      },
+      {
+        "name": "Calvin Coolidge Elementary School",
+        "district": "Wyckoff Township Public School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 314,
+        "elaPct": 85.2,
+        "mathPct": 73.6
+      },
+      {
+        "name": "George Washington Elementary School",
+        "district": "Wyckoff Township Public School District",
+        "grades": "KG-05",
+        "band": "Combined",
+        "enrollment": 384,
+        "elaPct": 73.7,
+        "mathPct": 54.7
+      },
+      {
+        "name": "Sicomac Elementary School",
+        "district": "Wyckoff Township Public School District",
+        "grades": "PK-05",
+        "band": "Combined",
+        "enrollment": 365,
+        "elaPct": 59,
+        "mathPct": 67.1
+      }
+    ],
+    "schoolCount": 5,
+    "studentCount": 2022,
+    "elaProficientPct": 71.1,
+    "mathProficientPct": 62.7,
+    "stateElaPct": 52.2,
+    "stateMathPct": 40.2,
+    "dataYear": "2023-2024"
+  }
+}
