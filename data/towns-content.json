@@ -1,0 +1,480 @@
+{
+  "allendale": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "alpine": {
+    "videos": [
+      "PlWSFoAyvuA"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "bergenfield": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": true
+  },
+  "bogota": {
+    "videos": [
+      "cB06GPIWxjc"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "carlstadt": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": true
+  },
+  "cliffside-park": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": true
+  },
+  "closter": {
+    "videos": [
+      "CbYOLA_yKgI"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "cresskill": {
+    "videos": [
+      "TVkBPdDgElA"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "demarest": {
+    "videos": [
+      "1dyFYtX36Tc"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "dumont": {
+    "videos": [
+      "TAOECx8EeJA"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": true
+  },
+  "east-rutherford": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "edgewater": {
+    "videos": [
+      "ZIC4nW1gAjo"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "elmwood-park": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": true
+  },
+  "emerson": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "englewood": {
+    "videos": [
+      "vuKlUtLnbb8"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "englewood-cliffs": {
+    "videos": [
+      "Yw2r7DrxElQ"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "fair-lawn": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "fairview": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": true
+  },
+  "fort-lee": {
+    "videos": [
+      "hgECvV24r9A"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": true
+  },
+  "franklin-lakes": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "garfield": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": true
+  },
+  "glen-rock": {
+    "videos": [
+      "uJ6OSKt4CJQ"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "hackensack": {
+    "videos": [
+      "niwTDjk851o"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": true
+  },
+  "harrington-park": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "hasbrouck-heights": {
+    "videos": [
+      "2UsO9pacuEE"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "haworth": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "hillsdale": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "ho-ho-kus": {
+    "videos": [
+      "ekGYZ9KqjgA"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "leonia": {
+    "videos": [
+      "5K9MeNwACEQ"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "little-ferry": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": true
+  },
+  "lodi": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": true
+  },
+  "lyndhurst": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": true
+  },
+  "mahwah": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "maywood": {
+    "videos": [
+      "emR8t1PnLO4"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "midland-park": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "montvale": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "moonachie": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "new-milford": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "north-arlington": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": true
+  },
+  "northvale": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "norwood": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "oakland": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "old-tappan": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "oradell": {
+    "videos": [
+      "dVyZh6yJcXY"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "palisades-park": {
+    "videos": [
+      "-hYXMuXQQcY"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": true
+  },
+  "paramus": {
+    "videos": [
+      "UvUmTDUooME"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "park-ridge": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "ramsey": {
+    "videos": [
+      "h9Z7FfUNXpg"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "ridgefield": {
+    "videos": [
+      "m2O_KpeyGvk"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": true
+  },
+  "ridgefield-park": {
+    "videos": [
+      "s3tOAm4nyD4"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "ridgewood": {
+    "videos": [
+      "iQxgLH0n0Z8"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "river-edge": {
+    "videos": [
+      "vn-ZWJlPeys"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "river-vale": {
+    "videos": [
+      "VWGczRxFn8k"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "rochelle-park": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "rockleigh": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "rutherford": {
+    "videos": [
+      "zsGfjVJBa-w"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": true
+  },
+  "saddle-brook": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "saddle-river": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "south-hackensack": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "teaneck": {
+    "videos": [
+      "dxr3JoMS9d8"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "tenafly": {
+    "videos": [
+      "XrwVlMNYvV8"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "teterboro": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "upper-saddle-river": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "waldwick": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "wallington": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": true
+  },
+  "washington-township": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "westwood": {
+    "videos": [
+      "Dd-M3XMuPAY"
+    ],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "wood-ridge": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "woodcliff-lake": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  },
+  "wyckoff": {
+    "videos": [],
+    "blogs": [],
+    "aboutText": "",
+    "multiFamily": false
+  }
+}
