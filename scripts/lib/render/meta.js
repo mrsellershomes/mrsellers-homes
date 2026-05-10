@@ -1,0 +1,61 @@
+// Renders the <head> meta tags for a town real estate page: title, description,
+// canonical, OpenGraph, Twitter card, and JSON-LD structured data.
+
+const TYLER_AGENT = {
+  '@type': 'RealEstateAgent',
+  '@id': 'https://mrsellers.homes/#agent',
+  name: 'Tyler Sellers',
+  url: 'https://mrsellers.homes',
+  email: 'tyler@mrsellers.homes',
+  telephone: '+1-201-308-0525',
+  worksFor: {
+    '@type': 'LocalBusiness',
+    name: 'RE/MAX',
+    address: {
+      '@type': 'PostalAddress',
+      addressRegion: 'NJ',
+      addressLocality: 'Tenafly',
+      addressCountry: 'US'
+    }
+  }
+};
+
+function escapeAttr(s) {
+  return String(s ?? '').replace(/[&<>"']/g, c => (
+    { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
+  ));
+}
+
+export function renderMeta({ townName, townSlug, monthYear, metaDescription, canonicalUrl, ogImageUrl }) {
+  const title = `${townName} Real Estate Market Report &mdash; ${monthYear} | Tyler Sellers`;
+  const today = new Date().toISOString().slice(0, 10);
+  const ogImage = ogImageUrl || `https://mrsellers.homes/assets/og/${townSlug}.png`;
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      TYLER_AGENT,
+      {
+        '@type': 'Article',
+        headline: `${townName} Real Estate Market Report — ${monthYear}`,
+        author: { '@id': TYLER_AGENT['@id'] },
+        publisher: { '@id': TYLER_AGENT['@id'] },
+        datePublished: today,
+        dateModified: today,
+        mainEntityOfPage: canonicalUrl,
+        about: { '@type': 'Place', name: `${townName}, NJ` }
+      }
+    ]
+  };
+
+  return `<title>${title}</title>
+<meta name="description" content="${escapeAttr(metaDescription)}">
+<link rel="canonical" href="${escapeAttr(canonicalUrl)}">
+<meta property="og:title" content="${escapeAttr(`${townName} Real Estate Market Report — ${monthYear}`)}">
+<meta property="og:description" content="${escapeAttr(metaDescription)}">
+<meta property="og:url" content="${escapeAttr(canonicalUrl)}">
+<meta property="og:image" content="${escapeAttr(ogImage)}">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">${JSON.stringify(schema)}</script>`;
+}
