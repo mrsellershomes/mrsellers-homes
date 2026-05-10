@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { renderMeta } from '../lib/render/meta.js';
 import { renderHero } from '../lib/render/hero.js';
+import { renderStatTiles } from '../lib/render/stat-tiles.js';
 
 test('renderMeta includes town-specific title', () => {
   const html = renderMeta({
@@ -24,6 +25,34 @@ test('renderHero includes town name and silhouette ref', () => {
   assert.ok(html.includes('May 2026'));
   assert.ok(html.includes('/assets/silhouettes/fort-lee.svg'));
   assert.ok(html.includes('aria-label'));
+});
+
+test('renderStatTiles formats currency and percentages', () => {
+  const html = renderStatTiles({
+    medianSalePrice: 890000,
+    medianSalePriceYoy: -0.02,
+    medianPpsf: 487,
+    medianPpsfYoy: 0.04,
+    homesSold: 47,
+    homesSoldYoy: -0.06,
+    saleToList: 0.992,
+    saleToListYoy: 0,
+    monthsOfSupply: 5.0,
+    monthsOfSupplyYoy: 0.14
+  });
+  assert.ok(html.includes('$890,000'));
+  assert.ok(html.includes('$487'));
+  assert.ok(html.includes('99.2%'));
+  assert.ok(html.includes('5.0'));
+  assert.ok(html.includes('aria-label'));
+  assert.ok(html.includes('trend-down') && html.includes('trend-up') && html.includes('trend-flat'));
+});
+
+test('renderStatTiles renders em-dash for missing values', () => {
+  const html = renderStatTiles({});
+  // 5 stat tiles, each with a missing value, should render em-dash placeholders
+  const dashes = (html.match(/—/g) || []).length;
+  assert.ok(dashes >= 5);
 });
 
 test('renderMeta escapes HTML in description', () => {
