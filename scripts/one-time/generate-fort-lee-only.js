@@ -35,12 +35,21 @@ const ctx = {
     priceDrops: 0.107, priceDropsMom: 0.024, priceDropsYoy: 0.021,
     offMarketInTwoWeeks: 0.404, offMarketInTwoWeeksMom: 0.085, offMarketInTwoWeeksYoy: 0.082
   },
+  // Real Fort Lee March 2026 data, pulled from the cached Redfin city tracker.
+  // Single-Family had 0 sales in March 2026 (Fort Lee is condo-dominated; recent
+  // SF activity has been thin), so the SF card is suppressed.
+  // Multi-Family had 1 sale - too few to feature meaningfully, so suppressed
+  // until we have a 3-sale rolling threshold rule (added in Phase 2).
+  // Condo/Co-op had 40 sales - this is the dominant signal for Fort Lee, and
+  // explains why the All Residential median ($390K) sits below the SF/MF range:
+  // 40 of 47 closed sales were condos at median $355K, dragging the all-types
+  // middle down.
   propertyTypes: {
-    singleFamily: { medianSalePrice: 1400000, medianPpsf: 542, homesSold: 12 },
-    multiFamily: { medianSalePrice: 950000, medianPpsf: 380, homesSold: 8 },
-    condo: { medianSalePrice: 600000, medianPpsf: 450, homesSold: 25 }
+    singleFamily: null,
+    multiFamily: null,
+    condo: { medianSalePrice: 355000, medianPpsf: 445, homesSold: 40 }
   },
-  aiParagraph: 'Fort Lee is sitting in a balanced spot right now. Median sale prices are off about 10% from last year, but homes are still trading right at asking on average. The town has about 5 months of inventory, enough that buyers do not have to write panicked offers anymore. Condos here are doing their own thing - see the breakdown below.',
+  aiParagraph: 'Fort Lee is sitting in a balanced spot right now. The market here is condo-heavy, and that pulls the median sale price down to about $390K because 40 of last month&rsquo;s 47 closings were condos. Inventory is up about 18% from a year ago and months of supply is around 5, which means buyers have a little breathing room and do not have to write panicked offers anymore.',
   aiParagraphFallback: false,
   schoolsData: schools['fort-lee'] || { schools: [], schoolCount: 0 },
   schoolsSummary: 'Fort Lee public schools serve about 2,200 students across 6 schools, with state assessment results trending well above the New Jersey average in both math and reading.',
