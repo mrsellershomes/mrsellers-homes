@@ -16,6 +16,7 @@ import { renderVideosBlogs } from './videos-blogs.js';
 import { renderCtas } from './ctas.js';
 import { renderFooter } from './footer.js';
 import { renderSub10Placeholder } from './sub10-placeholder.js';
+import { renderNeighbors } from './neighbors.js';
 import { renderSiteNav, renderSiteFooter, renderMobileMenuScript } from './site-nav.js';
 
 const TRACKING_HEAD = `<script async src="https://www.googletagmanager.com/gtag/js?id=G-5VC5MDECPH"></script>
@@ -30,15 +31,24 @@ export function renderTownPage(ctx) {
   const {
     townName, townSlug, monthYear, canonicalUrl, metaDescription, ogImageUrl,
     townData, propertyTypes, aiParagraph, aiParagraphFallback,
-    schoolsData, schoolsSummary, content, sub10
+    schoolsData, schoolsSummary, content, sub10, neighbors
   } = ctx;
 
   const meta = renderMeta({ townName, townSlug, monthYear, metaDescription, canonicalUrl, ogImageUrl });
   const nav = renderSiteNav();
   const hero = renderHero({ townName, townSlug, monthYear });
+  const neighborsStrip = renderNeighbors({ townName, neighbors });
 
+  // When SF volume is too thin for a meaningful headline (sub-10 trigger),
+  // we replace the stat tiles + data table with the sub-10 placeholder.
+  // We KEEP the AI commentary card and the property breakdown - both still
+  // matter to the visitor. A condo-heavy town like Fort Lee in a thin SF
+  // month should still feel like a substantive page that interprets the
+  // data, not a dead end.
   const dataSection = sub10
-    ? renderSub10Placeholder({ townName, threeMonthBlend: sub10 })
+    ? `${renderSub10Placeholder({ townName, threeMonthBlend: sub10 })}
+${renderWhatThisMeans({ aiParagraph, fallback: aiParagraphFallback })}
+${renderPropertyBreakdown({ townName, monthYear, ...(propertyTypes || {}) })}`
     : `${renderStatTiles(townData || {})}
 ${renderWhatThisMeans({ aiParagraph, fallback: aiParagraphFallback })}
 ${renderDataTable(townData || {})}
@@ -67,6 +77,7 @@ ${TRACKING_HEAD}
 ${nav}
 <main class="town-page-main">
 ${hero}
+${neighborsStrip}
 ${dataSection}
 ${aboutTown}
 ${schools}

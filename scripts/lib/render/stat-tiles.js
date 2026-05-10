@@ -4,10 +4,10 @@
 
 const TOOLTIPS = {
   medianSalePrice: 'Half of homes sold for more than this, half for less. The middle price.',
-  medianPpsf: 'How much buyers paid per square foot, typically. Useful for comparing different-sized homes.',
+  averageSalePrice: 'The mathematical average. When this is much higher than the median, a few high-end sales are pulling the average up.',
   homesSold: 'How many homes actually closed last month. Small numbers (under 10) get noisy.',
   saleToList: "Average ratio of sale price to asking price. 100% means sellers got asking. Below = buyers had room. Above = bidding wars.",
-  monthsOfSupply: "How long it would take to sell every listing if nothing new came on. Under 4 = seller's market. 4 to 6 = balanced. Over 6 = buyer's market."
+  medianDom: 'Median days a home sat on the market before going under contract. Lower = faster market.'
 };
 
 function fmtCurrency(n) {
@@ -46,9 +46,9 @@ function tile(label, valueHtml, trendHtml, tooltip, key) {
 export function renderStatTiles(d) {
   return `<section class="stat-tiles" aria-label="Headline market metrics">
 ${tile('Median Sale Price', fmtCurrency(d.medianSalePrice), arrow(d.medianSalePriceYoy), TOOLTIPS.medianSalePrice, 'price')}
-${tile('Median $/sqft', fmtCurrency(d.medianPpsf), arrow(d.medianPpsfYoy), TOOLTIPS.medianPpsf, 'ppsf')}
+${tile('Average Sale Price', fmtCurrency(d.averageSalePrice), arrow(d.averageSalePriceYoy), TOOLTIPS.averageSalePrice, 'avg')}
 ${tile('# of Sales', d.homesSold == null ? '—' : String(d.homesSold), arrow(d.homesSoldYoy), TOOLTIPS.homesSold, 'sales')}
 ${tile('Sale-to-List', fmtPct(d.saleToList), arrow(d.saleToListYoy), TOOLTIPS.saleToList, 'stl')}
-${tile('Months of Supply', fmtNum(d.monthsOfSupply), arrow(d.monthsOfSupplyYoy), TOOLTIPS.monthsOfSupply, 'mos')}
+${tile('Median Days on Market', d.medianDom == null ? '—' : String(Math.round(d.medianDom)), arrow(d.medianDomYoy), TOOLTIPS.medianDom, 'dom')}
 </section>`;
 }

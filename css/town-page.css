@@ -104,6 +104,37 @@ a { color: inherit; }
   letter-spacing: 0.04em;
 }
 
+/* ============== Neighbors strip ============== */
+.neighbors-strip {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--gray-light);
+  font-size: 13px;
+  color: var(--gray-mid);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  align-items: baseline;
+}
+.neighbors-label {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray-soft);
+  font-weight: 500;
+  margin-right: 4px;
+}
+.neighbors-links a {
+  color: var(--black);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--gray-light);
+  padding-bottom: 1px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.neighbors-links a:hover {
+  color: var(--red);
+  border-bottom-color: var(--red);
+}
+
 /* ============== Stat tiles ============== */
 .stat-tiles {
   display: grid;
@@ -360,7 +391,18 @@ a { color: inherit; }
 .school-group li {
   font-size: 14px;
   color: var(--black);
-  padding: 6px 0;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.school-name {
+  font-weight: 500;
+}
+.school-meta {
+  font-size: 12px;
+  color: var(--gray-mid);
+  letter-spacing: 0.02em;
 }
 
 /* ============== Videos / blogs ============== */
@@ -514,15 +556,22 @@ a { color: inherit; }
 
 /* ============== Sub-10 placeholder ============== */
 .sub10-placeholder {
-  padding: 48px 0;
-  border-bottom: 1px solid var(--gray-light);
+  padding: 40px 0 32px;
   max-width: 760px;
 }
+.sub10-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 500;
+  margin-bottom: 12px;
+}
 .sub10-placeholder h2 {
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 16px;
 }
-.sub10-placeholder p {
+.sub10-context {
   font-size: 15px;
   line-height: 1.8;
   color: var(--gray-mid);
@@ -550,9 +599,21 @@ a { color: inherit; }
   color: var(--black);
   font-weight: 500;
 }
-.sub10-form {
-  margin-top: 24px;
-  max-width: 480px;
+.videos-blogs-intro {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--gray-mid);
+  margin-bottom: 20px;
+  max-width: 720px;
+}
+
+.town-footer-methodology {
+  font-size: 11px;
+  color: var(--gray-soft);
+  font-style: italic;
+  max-width: 580px;
+  margin: 8px auto 6px;
+  line-height: 1.6;
 }
 
 /* ============== Town footer (page-level, not site footer) ============== */

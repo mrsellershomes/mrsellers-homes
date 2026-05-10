@@ -7,7 +7,7 @@ export function renderHero({ townName, townSlug, monthYear }) {
     <p class="town-hero-eyebrow">Local market report</p>
     <h1>${townName} Real Estate</h1>
     <p class="town-hero-sub">${monthYear}</p>
-    <p class="town-hero-attr">Updated monthly &middot; Data via Redfin &amp; NJ Department of Education</p>
+    <p class="town-hero-attr">Updated monthly &middot; Sales data direct from NJ MLS &middot; Schools data from NJ DOE</p>
   </div>
 </header>`;
 }

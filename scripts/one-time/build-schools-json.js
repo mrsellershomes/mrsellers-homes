@@ -116,10 +116,14 @@ for (const s of extracted.directory) {
     if (cityRaw) unmatched.add(cityRaw);
     continue;
   }
-  const code = String(s.SCHOOL_CODE);
-  const enrollment = extracted.enrollment[code] ?? 0;
-  const ela = extracted.ela[code];
-  const math = extracted.math[code];
+  // SchoolCode is district-internal, not statewide unique. The Python extractor
+  // built a compound "{DistrictCode}-{SchoolCode}" key (SCHOOL_KEY) that we use
+  // here for all per-school lookups - otherwise enrollment/proficiency from
+  // unrelated Bergen districts overwrites the value we want.
+  const key = s.SCHOOL_KEY;
+  const enrollment = extracted.enrollment[key] ?? 0;
+  const ela = extracted.ela[key];
+  const math = extracted.math[key];
 
   out[town.slug].schools.push({
     name: s.SCHOOL_NAME,

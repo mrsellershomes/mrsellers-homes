@@ -34,7 +34,8 @@ ${blogCards}
     : '';
 
   const heading = videoEmbeds
-    ? `  <h2>${townName} town guide</h2>`
+    ? `  <h2>${townName} town guide</h2>
+  <p class="videos-blogs-intro">A deeper read on what living in ${townName} actually feels like &mdash; the commute, the schools, the neighborhoods, and what living here actually costs in 2026.</p>`
     : `  <h2>From the ${townName} blog</h2>`;
 
   return `<section class="videos-blogs" aria-label="Tyler's content for ${townName}">

@@ -1,7 +1,12 @@
 // One-time test generator: builds /fort-lee-real-estate/index.html using
-// hardcoded April 2026 Redfin data so Tyler can review the entire page
-// design (hero, stats, AI paragraph slot, data table, property breakdown,
-// schools, video, CTAs) before we wire up the full Redfin pipeline.
+// REAL April 2026 NJMLS Custom Export data (computed from the 4 CSVs in
+// data/njmls/2026-04/) so Tyler can see the page as a research-heavy
+// visitor would.
+//
+// Fort Lee April 2026 reality:
+//   Single-Family: 1 sale ($1.34M, 24 DOM, 101.2% sale-to-list)
+//   Condo/Coop/Townhouse: 45 sales ($455K median, $591K avg, 98.2% S2L, 34 DOM)
+//   2-4 Family: 0 sales
 
 import { writeFileSync, mkdirSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -10,54 +15,62 @@ import { renderTownPage } from '../lib/render/page.js';
 const schools = JSON.parse(readFileSync(resolve('data/bergen-schools.json'), 'utf8'));
 const content = JSON.parse(readFileSync(resolve('data/towns-content.json'), 'utf8'));
 
-// Hardcoded Fort Lee data from the actual Redfin city tracker for March 2026
-// (the most recent month available at session time). All YoY/MoM are decimals
-// in source format - multiply by 100 for percent display.
 const ctx = {
   townName: 'Fort Lee',
   townSlug: 'fort-lee',
-  monthYear: 'March 2026',
+  monthYear: 'April 2026',
   canonicalUrl: 'https://mrsellers.homes/fort-lee-real-estate/',
-  metaDescription: 'Fort Lee real estate market for March 2026: median sale price, sales volume, days on market, and what it means for buyers and sellers right now.',
+  metaDescription: 'Fort Lee NJ real estate market for April 2026: condo and co-op activity, single-family context, school data, and an honest read from a Bergen County agent.',
   ogImageUrl: 'https://mrsellers.homes/assets/og/fort-lee.png',
-  townData: {
-    medianSalePrice: 390000, medianSalePriceMom: -0.0064, medianSalePriceYoy: -0.1024,
-    medianListPrice: 450000, medianListPriceMom: 0.149, medianListPriceYoy: 0.0135,
-    medianPpsf: 456, medianPpsfMom: -0.0242, medianPpsfYoy: 0.0209,
-    homesSold: 47, homesSoldMom: 0.237, homesSoldYoy: -0.06,
-    newListings: 80, newListingsMom: 0.818, newListingsYoy: 0.111,
-    pendingSales: 52, pendingSalesMom: 0.106, pendingSalesYoy: -0.071,
-    inventory: 233, inventoryMom: 0.079, inventoryYoy: 0.183,
-    monthsOfSupply: 5.0, monthsOfSupplyMom: -0.7, monthsOfSupplyYoy: 1.1,
-    medianDom: 122, medianDomMom: 1.0, medianDomYoy: 0.34,
-    saleToList: 0.992, saleToListMom: 0.01, saleToListYoy: 0.0035,
-    soldAboveList: 0.319, soldAboveListMom: 0.082, soldAboveListYoy: 0.099,
-    priceDrops: 0.107, priceDropsMom: 0.024, priceDropsYoy: 0.021,
-    offMarketInTwoWeeks: 0.404, offMarketInTwoWeeksMom: 0.085, offMarketInTwoWeeksYoy: 0.082
-  },
-  // Real Fort Lee March 2026 data, pulled from the cached Redfin city tracker.
-  // Single-Family had 0 sales in March 2026 (Fort Lee is condo-dominated; recent
-  // SF activity has been thin), so the SF card is suppressed.
-  // Multi-Family had 1 sale - too few to feature meaningfully, so suppressed
-  // until we have a 3-sale rolling threshold rule (added in Phase 2).
-  // Condo/Co-op had 40 sales - this is the dominant signal for Fort Lee, and
-  // explains why the All Residential median ($390K) sits below the SF/MF range:
-  // 40 of 47 closed sales were condos at median $355K, dragging the all-types
-  // middle down.
+
+  townData: {},
+
   propertyTypes: {
     singleFamily: null,
     multiFamily: null,
-    condo: { medianSalePrice: 355000, medianPpsf: 445, homesSold: 40 }
+    condo: {
+      medianSalePrice: 455000,
+      averageSalePrice: 590886,
+      homesSold: 45,
+      saleToList: 0.982
+    }
   },
-  aiParagraph: 'Fort Lee is sitting in a balanced spot right now. The market here is condo-heavy, and that pulls the median sale price down to about $390K because 40 of last month&rsquo;s 47 closings were condos. Inventory is up about 18% from a year ago and months of supply is around 5, which means buyers have a little breathing room and do not have to write panicked offers anymore.',
+
+  // Tyler-voice paragraph specific to Fort Lee April 2026. In production the
+  // AI generator writes this monthly; for tonight's preview it's hand-drafted
+  // so Tyler can see what the AI section should feel like at full quality.
+  aiParagraph: `April in Fort Lee was almost entirely a condo and co-op story &mdash; 45 closings versus a single SF closing. That ratio isn&rsquo;t unusual here. Fort Lee&rsquo;s housing stock skews heavily to Hudson River-view condo buildings (Plaza Towers, Mediterranean Towers, Atrium Palace, Hudson Lights, the older Towers complexes), so a typical month sees most volume on the condo side. Condos closed at a median of $455K with sellers getting 98.2% of asking on average &mdash; a balanced market where buyers are paying close to list but not chasing aggressively. The one SF closing went above asking at 101.2% S2L, which fits the broader pattern: when an SF home does come up in Fort Lee, the small inventory drives competitive offers, but the months where one comes up at all are the exception.`,
   aiParagraphFallback: false,
+
   schoolsData: schools['fort-lee'] || { schools: [], schoolCount: 0 },
-  schoolsSummary: 'Fort Lee public schools serve about 2,200 students across 6 schools, with state assessment results trending well above the New Jersey average in both math and reading.',
+  // Pass empty so the schools renderer auto-builds a numerically specific
+  // summary from the raw data (69% ELA / 72% Math vs state 52% / 40%).
+  schoolsSummary: '',
   content: content['fort-lee'] || { videos: [], blogs: [], aboutText: '' },
-  sub10: null
+
+  sub10: {
+    medianSalePrice: 1340000,
+    homesSold: 1,
+    saleToList: 1.012
+  },
+
+  // Geographically adjacent Fort Lee neighbors. In production this comes
+  // from a `neighbors` field in data/bergen-towns.json.
+  neighbors: [
+    { name: 'Cliffside Park', slug: 'cliffside-park' },
+    { name: 'Edgewater', slug: 'edgewater' },
+    { name: 'Englewood Cliffs', slug: 'englewood-cliffs' },
+    { name: 'Leonia', slug: 'leonia' },
+    { name: 'Palisades Park', slug: 'palisades-park' }
+  ]
 };
 
 const html = renderTownPage(ctx);
 mkdirSync(resolve('fort-lee-real-estate'), { recursive: true });
 writeFileSync(resolve('fort-lee-real-estate/index.html'), html);
 console.log('Wrote fort-lee-real-estate/index.html (' + html.length + ' bytes)');
+console.log('SF: 1 sale (sub-10 triggered)');
+console.log('Condo: 45 sales (card renders)');
+console.log('MF: 0 sales (card suppressed)');
+console.log('Neighbors strip: 5 nearby towns');
+console.log('AI commentary card: rendered with Fort Lee April voice paragraph');

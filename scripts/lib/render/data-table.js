@@ -1,20 +1,19 @@
 // Renders the full 13-row data table inside a <details> element so it's
 // collapsed by default on mobile, expanded by default on desktop (via CSS).
 
+// Metrics derivable from the NJMLS sold-export CSV. Inventory, pending sales,
+// new listings, months of supply, and price drops were all dropped because
+// they require active-listings data which the monthly export does not include.
+// $/sqft was dropped because NJMLS does not auto-populate building square
+// footage for residential listings (NJ home rule, 70+ municipal assessor systems).
 const ROWS = [
   { key: 'medianSalePrice', label: 'Median Sale Price', fmt: 'currency' },
-  { key: 'medianListPrice', label: 'Median List Price', fmt: 'currency' },
-  { key: 'medianPpsf', label: 'Median $/sqft', fmt: 'currency' },
+  { key: 'averageSalePrice', label: 'Average Sale Price', fmt: 'currency' },
+  { key: 'medianListPrice', label: 'Median Last List Price', fmt: 'currency' },
   { key: 'homesSold', label: 'Homes Sold', fmt: 'integer' },
-  { key: 'newListings', label: 'New Listings', fmt: 'integer' },
-  { key: 'pendingSales', label: 'Pending Sales', fmt: 'integer' },
-  { key: 'inventory', label: 'Inventory', fmt: 'integer' },
-  { key: 'monthsOfSupply', label: 'Months of Supply', fmt: 'decimal' },
   { key: 'medianDom', label: 'Median Days on Market', fmt: 'integer' },
-  { key: 'saleToList', label: 'Sale-to-List Ratio', fmt: 'percent' },
-  { key: 'soldAboveList', label: '% Sold Above List', fmt: 'percent' },
-  { key: 'priceDrops', label: '% with Price Drops', fmt: 'percent' },
-  { key: 'offMarketInTwoWeeks', label: 'Off Market in 2 Weeks', fmt: 'percent' }
+  { key: 'saleToList', label: 'Median Sale-to-List Ratio', fmt: 'percent' },
+  { key: 'soldAboveList', label: '% Sold Above Last List', fmt: 'percent' }
 ];
 
 function format(value, fmt) {

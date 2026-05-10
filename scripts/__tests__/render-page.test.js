@@ -41,19 +41,19 @@ test('renderStatTiles formats currency and percentages', () => {
   const html = renderStatTiles({
     medianSalePrice: 890000,
     medianSalePriceYoy: -0.02,
-    medianPpsf: 487,
-    medianPpsfYoy: 0.04,
+    averageSalePrice: 1100000,
+    averageSalePriceYoy: 0.04,
     homesSold: 47,
     homesSoldYoy: -0.06,
     saleToList: 0.992,
     saleToListYoy: 0,
-    monthsOfSupply: 5.0,
-    monthsOfSupplyYoy: 0.14
+    medianDom: 32,
+    medianDomYoy: 0.14
   });
   assert.ok(html.includes('$890,000'));
-  assert.ok(html.includes('$487'));
+  assert.ok(html.includes('$1,100,000'));
   assert.ok(html.includes('99.2%'));
-  assert.ok(html.includes('5.0'));
+  assert.ok(html.includes('Median Days on Market'));
   assert.ok(html.includes('aria-label'));
   assert.ok(html.includes('trend-down') && html.includes('trend-up') && html.includes('trend-flat'));
 });
@@ -77,21 +77,21 @@ test('renderWhatThisMeans includes fallback class when fallback=true', () => {
   assert.ok(html.includes('Test paragraph.'));
 });
 
-test('renderDataTable includes all 13 metrics', () => {
+test('renderDataTable includes all 7 metrics in new SF-led design', () => {
   const html = renderDataTable({ medianSalePrice: 890000, homesSold: 47 });
   assert.ok(html.includes('Median Sale Price'));
-  assert.ok(html.includes('Median List Price'));
-  assert.ok(html.includes('Median $/sqft'));
+  assert.ok(html.includes('Average Sale Price'));
+  assert.ok(html.includes('Median Last List Price'));
   assert.ok(html.includes('Homes Sold'));
-  assert.ok(html.includes('New Listings'));
-  assert.ok(html.includes('Pending Sales'));
-  assert.ok(html.includes('Inventory'));
-  assert.ok(html.includes('Months of Supply'));
   assert.ok(html.includes('Median Days on Market'));
-  assert.ok(html.includes('Sale-to-List Ratio'));
-  assert.ok(html.includes('% Sold Above List'));
-  assert.ok(html.includes('% with Price Drops'));
-  assert.ok(html.includes('Off Market in 2 Weeks'));
+  assert.ok(html.includes('Median Sale-to-List Ratio'));
+  assert.ok(html.includes('% Sold Above Last List'));
+  // These were dropped because the NJMLS export does not provide them:
+  assert.ok(!html.includes('Median $/sqft'));
+  assert.ok(!html.includes('Months of Supply'));
+  assert.ok(!html.includes('Inventory'));
+  assert.ok(!html.includes('Pending Sales'));
+  assert.ok(!html.includes('Price Drops'));
 });
 
 test('renderDataTable formats percent metrics as point deltas', () => {
@@ -183,22 +183,30 @@ test('renderCtas renders two forms with class lead-form', () => {
   assert.equal(matches, 2);
 });
 
-test('renderFooter shows month and towns link', () => {
-  const html = renderFooter({ monthYear: 'May 2026' });
-  assert.ok(html.includes('Last updated: May 2026'));
+test('renderFooter shows month, NJ MLS attribution, methodology note, and towns link', () => {
+  const html = renderFooter({ monthYear: 'April 2026' });
+  assert.ok(html.includes('Last updated: April 2026'));
   assert.ok(html.includes('href="/towns/"'));
-  assert.ok(html.includes('Redfin Data Center'));
+  // NJ MLS is the authoritative source - Redfin must NOT appear
+  assert.ok(html.includes('NJ MLS'));
+  assert.ok(!html.includes('Redfin'));
+  // Honest absence of $/sqft is a feature
+  assert.ok(html.includes('square footage'));
+  // Future-update guidance
+  assert.ok(html.includes('Next update'));
 });
 
-test('renderSub10Placeholder uses 3-month blend', () => {
+test('renderSub10Placeholder shows the actual SF activity', () => {
   const html = renderSub10Placeholder({
     townName: 'Teterboro',
     threeMonthBlend: { medianSalePrice: 500000, homesSold: 4, saleToList: 0.95 }
   });
-  assert.ok(html.includes('Teterboro had fewer than 10'));
+  assert.ok(html.includes('Teterboro'));
+  assert.ok(html.includes('4 homes')); // count rendered
   assert.ok(html.includes('$500,000'));
   assert.ok(html.includes('95.0%'));
-  assert.ok(html.includes('Low-Volume Town'));
+  // Inline form was removed - CTAs at bottom handle lead capture
+  assert.ok(!html.includes('class="lead-form'));
 });
 
 test('renderTownPage produces valid HTML with all sections', () => {
@@ -234,21 +242,28 @@ test('renderTownPage produces valid HTML with all sections', () => {
   assert.ok(html.includes('"@type":"RealEstateAgent"'));
 });
 
-test('renderTownPage replaces data sections with sub10 placeholder when triggered', () => {
+test('renderTownPage swaps stat tiles for sub10 placeholder when SF is thin', () => {
   const html = renderTownPage({
     townName: 'Teterboro', townSlug: 'teterboro', monthYear: 'May 2026',
     canonicalUrl: 'https://mrsellers.homes/teterboro-real-estate/',
     metaDescription: 'Teterboro market summary.',
     townData: {},
     propertyTypes: {},
-    aiParagraph: '',
+    aiParagraph: 'Test commentary on Teterboro April activity.',
     schoolsData: { schools: [], schoolCount: 0 },
     content: {},
     sub10: { medianSalePrice: 500000, homesSold: 4, saleToList: 0.95 }
   });
-  assert.ok(html.includes('Teterboro had fewer than 10'));
+  // Sub-10 placeholder section renders
+  assert.ok(html.includes('class="sub10-placeholder"'));
+  assert.ok(html.includes('Teterboro'));
+  // Stat tiles + data table are suppressed in sub-10 mode
   assert.ok(!html.includes('class="stat-tiles"'));
   assert.ok(!html.includes('class="data-table-section"'));
+  // BUT What This Means card stays visible - the visitor gets Tyler's
+  // interpretation regardless of headline volume.
+  assert.ok(html.includes('class="what-this-means'));
+  assert.ok(html.includes('Test commentary on Teterboro April activity.'));
 });
 
 test('renderMeta escapes HTML in description', () => {
