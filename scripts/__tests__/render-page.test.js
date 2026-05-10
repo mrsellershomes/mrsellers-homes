@@ -9,6 +9,9 @@ import { renderPropertyBreakdown } from '../lib/render/property-breakdown.js';
 import { renderAboutTown } from '../lib/render/about-town.js';
 import { renderSchools } from '../lib/render/schools.js';
 import { renderVideosBlogs } from '../lib/render/videos-blogs.js';
+import { renderCtas } from '../lib/render/ctas.js';
+import { renderFooter } from '../lib/render/footer.js';
+import { renderSub10Placeholder } from '../lib/render/sub10-placeholder.js';
 
 test('renderMeta includes town-specific title', () => {
   const html = renderMeta({
@@ -159,6 +162,42 @@ test('renderVideosBlogs embeds YouTube iframe', () => {
   const html = renderVideosBlogs({ townName: 'Fort Lee', videos: ['hgECvV24r9A'] });
   assert.ok(html.includes('https://www.youtube.com/embed/hgECvV24r9A'));
   assert.ok(html.includes('Fort Lee town guide'));
+});
+
+test('renderCtas wires correct FUB sources and tags', () => {
+  const html = renderCtas({ townName: 'Fort Lee' });
+  // Source uses real em-dash (matches existing project_crm.md FUB source convention)
+  assert.ok(html.includes('data-fub-source="MrSellers.homes — Fort Lee Real Estate Page (Buyer)"'));
+  assert.ok(html.includes('data-fub-source="MrSellers.homes — Fort Lee Real Estate Page (Seller)"'));
+  assert.ok(html.includes('data-fub-tags="Market Page Lead,Town: Fort Lee,Intent: Buyer"'));
+  assert.ok(html.includes('data-fub-tags="Market Page Lead,Town: Fort Lee,Intent: Seller"'));
+  assert.ok(html.includes('Been thinking about buying in Fort Lee?'));
+  assert.ok(html.includes('Been thinking about selling your home in Fort Lee?'));
+  assert.ok(html.includes('Honest feedback on the moves you'));
+});
+
+test('renderCtas renders two forms with class lead-form', () => {
+  const html = renderCtas({ townName: 'Fort Lee' });
+  const matches = (html.match(/class="lead-form"/g) || []).length;
+  assert.equal(matches, 2);
+});
+
+test('renderFooter shows month and towns link', () => {
+  const html = renderFooter({ monthYear: 'May 2026' });
+  assert.ok(html.includes('Last updated: May 2026'));
+  assert.ok(html.includes('href="/towns/"'));
+  assert.ok(html.includes('Redfin Data Center'));
+});
+
+test('renderSub10Placeholder uses 3-month blend', () => {
+  const html = renderSub10Placeholder({
+    townName: 'Teterboro',
+    threeMonthBlend: { medianSalePrice: 500000, homesSold: 4, saleToList: 0.95 }
+  });
+  assert.ok(html.includes('Teterboro had fewer than 10'));
+  assert.ok(html.includes('$500,000'));
+  assert.ok(html.includes('95.0%'));
+  assert.ok(html.includes('Low-Volume Town'));
 });
 
 test('renderMeta escapes HTML in description', () => {
