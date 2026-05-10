@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real Estate Glossary &mdash; What These Numbers Actually Mean | Tyler Sellers</title>
+  <meta name="description" content="The 13 housing market numbers on every Bergen County town page, explained in plain English. Median sale price, months of supply, sale-to-list ratio, and the rest. Written for someone who has already been thinking about a move." />
+  <link rel="canonical" href="https://mrsellers.homes/glossary/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red: #E2001A;
+      --red-dark: #b50015;
+      --black: #111111;
+      --gray-mid: #6b6b6b;
+      --gray-light: #e0e0e0;
+      --gray-bg: #f5f5f5;
+      --white: #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; color: var(--black); background: var(--white); -webkit-font-smoothing: antialiased; }
+
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 40px; border-bottom: 1px solid var(--gray-light); background: var(--white); position: sticky; top: 0; z-index: 100; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--black); text-decoration: none; }
+    .nav-logo span { font-weight: 400; opacity: 0.5; font-size: 11px; display: block; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 1px; }
+    .nav-links { display: flex; gap: 28px; font-size: 13px; color: var(--gray-mid); }
+    .nav-links a { color: inherit; text-decoration: none; cursor: pointer; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--red); }
+    .nav-links a.active { color: var(--red); }
+    .nav-cta { background: var(--red); color: var(--white); border: none; padding: 10px 22px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; cursor: pointer; border-radius: 2px; letter-spacing: 0.04em; transition: background 0.2s; text-decoration: none; }
+    .nav-cta:hover { background: var(--red-dark); }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--black); border-radius: 2px; }
+    .mobile-menu { display: none; position: fixed; top: 57px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--gray-light); z-index: 99; padding: 16px 20px; flex-direction: column; gap: 0; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: var(--black); text-decoration: none; font-size: 15px; padding: 14px 0; border-bottom: 0.5px solid var(--gray-light); font-weight: 400; }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu .mobile-cta { margin-top: 12px; background: var(--red); color: var(--white); text-align: center; padding: 14px; border-radius: 2px; font-weight: 500; font-size: 14px; letter-spacing: 0.04em; }
+
+    .red-bar { background: var(--red); color: var(--white); padding: 9px 40px; display: flex; align-items: center; justify-content: space-between; font-size: 12px; letter-spacing: 0.05em; }
+    .red-bar-item { display: flex; align-items: center; gap: 8px; opacity: 0.92; }
+    .red-bar-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.5); }
+
+    .glossary-hero { padding: 80px 40px 56px; border-bottom: 1px solid var(--gray-light); max-width: 880px; }
+    .hero-eyebrow { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; font-weight: 500; }
+    .hero-eyebrow::before { content: ''; display: block; width: 28px; height: 2px; background: var(--red); }
+    .hero-headline { font-family: 'Cormorant Garamond', serif; font-size: 52px; line-height: 1.08; font-weight: 500; margin-bottom: 24px; color: var(--black); }
+    .hero-headline em { font-style: italic; color: var(--red); }
+    .hero-sub { font-size: 16px; line-height: 1.8; color: var(--gray-mid); max-width: 640px; }
+    .hero-sub a { color: var(--black); text-decoration: underline; text-decoration-color: var(--red); text-underline-offset: 3px; }
+
+    .toc-bar { padding: 24px 40px; background: var(--gray-bg); border-bottom: 1px solid var(--gray-light); }
+    .toc-inner { display: flex; flex-wrap: wrap; gap: 8px 18px; max-width: 1100px; }
+    .toc-bar a { font-size: 12px; color: var(--gray-mid); text-decoration: none; padding: 4px 0; border-bottom: 1px dashed transparent; transition: color 0.15s, border-color 0.15s; }
+    .toc-bar a:hover { color: var(--red); border-bottom-color: var(--red); }
+
+    .definitions { padding: 40px 40px 80px; max-width: 760px; }
+    .definition { padding: 32px 0 36px; border-bottom: 1px solid var(--gray-light); scroll-margin-top: 80px; }
+    .definition:last-of-type { border-bottom: none; }
+    .definition-num { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--red); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 10px; }
+    .definition h2 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 500; color: var(--black); margin-bottom: 14px; line-height: 1.2; }
+    .definition p { font-size: 15px; line-height: 1.85; color: var(--gray-mid); margin-bottom: 14px; }
+    .definition p:last-child { margin-bottom: 0; }
+    .definition strong { color: var(--black); font-weight: 500; }
+
+    .closing { background: var(--black); color: var(--white); padding: 64px 40px; }
+    .closing-inner { max-width: 760px; }
+    .closing-eyebrow { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); margin-bottom: 18px; font-weight: 500; }
+    .closing h2 { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 500; line-height: 1.2; margin-bottom: 22px; color: var(--white); }
+    .closing h2 em { font-style: italic; color: var(--red); }
+    .closing p { font-size: 15px; line-height: 1.8; color: rgba(255,255,255,0.7); margin-bottom: 26px; max-width: 620px; }
+    .closing-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+    .btn-red { background: var(--red); color: var(--white); border: none; padding: 14px 28px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; border-radius: 2px; letter-spacing: 0.04em; transition: background 0.2s; text-decoration: none; display: inline-block; }
+    .btn-red:hover { background: var(--red-dark); }
+    .btn-outline-white { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,0.3); padding: 14px 28px; font-family: 'DM Sans', sans-serif; font-size: 14px; cursor: pointer; border-radius: 2px; text-decoration: none; display: inline-block; transition: border-color 0.2s; }
+    .btn-outline-white:hover { border-color: rgba(255,255,255,0.7); }
+
+    .footer { background: var(--black); color: rgba(255,255,255,0.45); padding: 32px 40px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; border-top: 1px solid rgba(255,255,255,0.08); flex-wrap: wrap; gap: 12px; }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; color: var(--white); }
+    .footer-red { color: var(--red); }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .nav { padding: 16px 20px; }
+      .red-bar { padding: 9px 20px; font-size: 11px; flex-wrap: wrap; justify-content: center; gap: 12px; }
+      .glossary-hero { padding: 56px 20px 40px; }
+      .hero-headline { font-size: 40px; }
+      .toc-bar { padding: 18px 20px; }
+      .definitions { padding: 32px 20px 56px; }
+      .definition h2 { font-size: 26px; }
+      .closing { padding: 48px 20px; }
+      .closing h2 { font-size: 28px; }
+      .footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/" class="nav-logo">
+      Mr. Sellers Homes
+      <span>Bergen County, NJ &middot; RE/MAX</span>
+    </a>
+    <div class="nav-links">
+      <a href="/#sell">Sell your home</a>
+      <a href="/#buy">Buy in Bergen County</a>
+      <a href="/#towns">Town directory</a>
+      <a href="/#content">Guides &amp; walkthroughs</a>
+      <a href="/about">About Tyler</a>
+    </div>
+    <a href="/#sell" class="nav-cta">Get your home&rsquo;s value</a>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/#sell" onclick="closeMenu()">Sell your home</a>
+    <a href="/#buy" onclick="closeMenu()">Buy in Bergen County</a>
+    <a href="/#towns" onclick="closeMenu()">Town directory</a>
+    <a href="/#content" onclick="closeMenu()">Guides &amp; walkthroughs</a>
+    <a href="/about" onclick="closeMenu()">About Tyler</a>
+    <a href="/#sell" class="mobile-cta" onclick="closeMenu()">Get your home&rsquo;s value</a>
+  </div>
+
+  <div class="red-bar">
+    <div class="red-bar-item"><span class="red-bar-dot"></span>Bergen County specialist &middot; all 70 municipalities</div>
+    <div class="red-bar-item"><span class="red-bar-dot"></span>Licensed since 2019</div>
+    <div class="red-bar-item"><span class="red-bar-dot"></span>RE/MAX licensed agent</div>
+    <div class="red-bar-item"><span class="red-bar-dot"></span>tyler@mrsellers.homes</div>
+  </div>
+
+  <header class="glossary-hero">
+    <div class="hero-eyebrow">The glossary</div>
+    <h1 class="hero-headline">What these <em>numbers</em> actually mean</h1>
+    <p class="hero-sub">Every town page on this site shows the same set of housing market numbers. None of them are mysterious, but most of them get glossed over or misexplained. If you have been quietly studying the market and want a clear read on what each one really tells you, this is the page. The definitions below are written the way I would explain them to a client over coffee, not the way a textbook would.</p>
+  </header>
+
+  <nav class="toc-bar" aria-label="Glossary contents">
+    <div class="toc-inner">
+      <a href="#median-sale-price">Median Sale Price</a>
+      <a href="#median-list-price">Median List Price</a>
+      <a href="#median-ppsf">Median $/sqft</a>
+      <a href="#homes-sold"># of Sales</a>
+      <a href="#new-listings">New Listings</a>
+      <a href="#pending-sales">Pending Sales</a>
+      <a href="#inventory">Inventory</a>
+      <a href="#months-of-supply">Months of Supply</a>
+      <a href="#days-on-market">Median Days on Market</a>
+      <a href="#sale-to-list">Sale-to-List Ratio</a>
+      <a href="#sold-above-list">% Sold Above List</a>
+      <a href="#price-drops">% with Price Drops</a>
+      <a href="#off-market-2-weeks">Off Market in 2 Weeks</a>
+    </div>
+  </nav>
+
+  <main class="definitions">
+
+    <section id="median-sale-price" class="definition">
+      <div class="definition-num">01</div>
+      <h2>Median Sale Price</h2>
+      <p>Half the homes that closed sold for more than this number, half sold for less. The median is the middle, not the average, which matters in real estate because one $5 million sale will not pull the median sideways the way it would skew an average.</p>
+      <p>When you see "median sale price up 8% year-over-year," you are seeing where the middle of the market settled, not where one outlier closed. <strong>This is the headline number, but it is not the whole story</strong>. A town can have a flat median while individual homes are wildly outpacing or trailing the market.</p>
+    </section>
+
+    <section id="median-list-price" class="definition">
+      <div class="definition-num">02</div>
+      <h2>Median List Price</h2>
+      <p>The middle asking price of homes that came on the market, before anyone made an offer. Same idea as median sale price, but for what sellers wanted instead of what they got.</p>
+      <p>The gap between median list and median sale tells you how realistic local pricing has been. <strong>When list prices run well above sale prices, sellers are still anchored to last year.</strong> When the two are close, the market has caught up to where sellers are.</p>
+    </section>
+
+    <section id="median-ppsf" class="definition">
+      <div class="definition-num">03</div>
+      <h2>Median $/sqft</h2>
+      <p>Sale price divided by square footage. The reason this matters more than median sale price for comparing different houses is obvious once you see it: a 4,000 square foot colonial and an 1,800 square foot cape are different things, even on the same block.</p>
+      <p>Price per foot strips out size so you can actually compare apples to apples across homes, blocks, and neighborhoods. <strong>If you are weighing two similar homes in different parts of town, this is the number to lean on.</strong></p>
+    </section>
+
+    <section id="homes-sold" class="definition">
+      <div class="definition-num">04</div>
+      <h2># of Sales</h2>
+      <p>How many homes actually closed in the month. Bergen towns range from a few hundred sales (Hackensack, Fort Lee) down to under five (Rockleigh, Teterboro).</p>
+      <p>Below ten sales, the data starts to wobble. <strong>A single luxury closing can move medians by 20% in a small-volume town</strong>, and at that point you are not seeing a trend, you are seeing one transaction. On the small towns we hide the misleading data and show a three-month blend instead.</p>
+    </section>
+
+    <section id="new-listings" class="definition">
+      <div class="definition-num">05</div>
+      <h2>New Listings</h2>
+      <p>Homes that came on the market during the period. This is one of the strongest leading indicators in the data.</p>
+      <p>When new listings spike, supply is loosening and buyers get more choice. <strong>When new listings collapse, sellers are sitting on their hands and competition for whatever is available heats up fast.</strong> Watching this number against sales tells you whether the market is in flow or in friction.</p>
+    </section>
+
+    <section id="pending-sales" class="definition">
+      <div class="definition-num">06</div>
+      <h2>Pending Sales</h2>
+      <p>Homes that went under contract during the period. They have not closed yet and might not for another 30 to 60 days, but they tell you what closings will look like soon.</p>
+      <p><strong>Strong pending sales now means strong closed sales next month.</strong> If pendings drop sharply, expect closed-sale numbers to follow. This is the metric that catches turning points before the median sale price does.</p>
+    </section>
+
+    <section id="inventory" class="definition">
+      <div class="definition-num">07</div>
+      <h2>Inventory</h2>
+      <p>How many active listings exist on the last day of the period. This is a snapshot, not a flow number.</p>
+      <p>When inventory grows, homes are sitting longer and the buyer side is gaining leverage. When it shrinks, sellers are in control. <strong>Compared against new listings, inventory tells you whether homes are coming on faster than they are selling, or the other way around.</strong></p>
+    </section>
+
+    <section id="months-of-supply" class="definition">
+      <div class="definition-num">08</div>
+      <h2>Months of Supply</h2>
+      <p>Inventory divided by the current sales pace. If 50 homes are listed and 25 sell per month, that is 2 months of supply. The cleanest single read on whether a market favors buyers or sellers.</p>
+      <p><strong>Under 4 months is a seller&rsquo;s market</strong> with bidding wars, fast offers, and sellers in control. <strong>4 to 6 months is balanced.</strong> <strong>Over 6 months is a buyer&rsquo;s market</strong> with patient buyers, motivated sellers, and room to negotiate. Most Bergen towns sit between 2 and 5 most of the year.</p>
+    </section>
+
+    <section id="days-on-market" class="definition">
+      <div class="definition-num">09</div>
+      <h2>Median Days on Market</h2>
+      <p>How long the typical home spent on the market before going under contract. Useful, but with one big caveat.</p>
+      <p>This metric gets noisy in towns with mixed inventory. <strong>A tear-down or a stale luxury condo that lingers 200 days will pull the number up even when normal homes are flying off in two weeks.</strong> I trust it more for reading trends month to month than for evaluating any single absolute number.</p>
+    </section>
+
+    <section id="sale-to-list" class="definition">
+      <div class="definition-num">10</div>
+      <h2>Sale-to-List Ratio</h2>
+      <p>The average of (sale price divided by list price) across closed homes. 100% means the typical home sold at asking. 102% means buyers paid 2% over on average, which is competitive. 97% means sellers gave up 3% on average, which is room to negotiate.</p>
+      <p>This is the metric I quote most often in actual conversations because it answers the question buyers and sellers actually ask: "did people pay asking, or not?" <strong>It excludes outliers more than 50% off list, which keeps tear-down sales from pulling it around.</strong></p>
+    </section>
+
+    <section id="sold-above-list" class="definition">
+      <div class="definition-num">11</div>
+      <h2>% Sold Above List</h2>
+      <p>Share of closed homes that went above asking. A different metric than sale-to-list because it is binary: did they pay over, or did they not.</p>
+      <p>When 60% of homes go above list, you are writing your strongest offer up front or you are losing. <strong>When it is 20%, asking the seller to come down is a reasonable conversation.</strong> Pair this with sale-to-list ratio to read negotiation conditions accurately.</p>
+    </section>
+
+    <section id="price-drops" class="definition">
+      <div class="definition-num">12</div>
+      <h2>% with Price Drops</h2>
+      <p>Share of active listings that have reduced their asking price below original. This is a gauge of seller pain.</p>
+      <p><strong>When a quarter of listings have dropped, plenty of sellers mispriced and are coming back to reality.</strong> When it is 5%, sellers are confident and pricing is working out of the gate. A rising price-drop share is often the first crack in a hot market.</p>
+    </section>
+
+    <section id="off-market-2-weeks" class="definition">
+      <div class="definition-num">13</div>
+      <h2>Off Market in 2 Weeks</h2>
+      <p>Share of homes that went under contract within 14 days of listing. Closely related to months of supply, but more granular for hot stretches.</p>
+      <p>When over 50% sell in two weeks, the well-priced homes barely give buyers time to schedule a second showing. <strong>When it is under 20%, plenty of homes sit long enough for buyers to think, sleep on it, and come back.</strong> This is the metric that tells you whether your weekend is going to be panicked or paced.</p>
+    </section>
+
+  </main>
+
+  <section class="closing">
+    <div class="closing-inner">
+      <p class="closing-eyebrow">Reading the data, in context</p>
+      <h2>The numbers tell a story. <em>Your specific situation</em> tells a different one.</h2>
+      <p>These metrics describe what the average is doing. They do not describe what your home, your block, or the house you are watching is doing. If you have been working through a move and want a real read on what these numbers mean for your specific situation, send me a note. You will get an honest read, not a pitch.</p>
+      <div class="closing-actions">
+        <a href="/#towns" class="btn-red">See the town directory</a>
+        <a href="/about" class="btn-outline-white">About Tyler</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">Mr. Sellers Homes</div>
+    <div><span class="footer-red">tyler@mrsellers.homes</span> &middot; Bergen County, NJ &middot; RE/MAX Licensed Agent</div>
+    <div>&copy; 2026 Tyler Sellers</div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    function closeMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
+    }
+  </script>
+
+</body>
+</html>
