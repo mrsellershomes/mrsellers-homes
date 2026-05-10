@@ -5,6 +5,10 @@ import { renderHero } from '../lib/render/hero.js';
 import { renderStatTiles } from '../lib/render/stat-tiles.js';
 import { renderWhatThisMeans } from '../lib/render/what-this-means.js';
 import { renderDataTable } from '../lib/render/data-table.js';
+import { renderPropertyBreakdown } from '../lib/render/property-breakdown.js';
+import { renderAboutTown } from '../lib/render/about-town.js';
+import { renderSchools } from '../lib/render/schools.js';
+import { renderVideosBlogs } from '../lib/render/videos-blogs.js';
 
 test('renderMeta includes town-specific title', () => {
   const html = renderMeta({
@@ -90,6 +94,71 @@ test('renderDataTable formats percent metrics as point deltas', () => {
   const html = renderDataTable({ saleToList: 0.992, saleToListYoy: 0.04 });
   assert.ok(html.includes('99.2%'));
   assert.ok(html.includes('4 pts'));
+});
+
+test('renderPropertyBreakdown shows only provided types', () => {
+  const html = renderPropertyBreakdown({
+    townName: 'Fort Lee',
+    monthYear: 'May 2026',
+    singleFamily: { medianSalePrice: 1400000, medianPpsf: 542, homesSold: 12 },
+    multiFamily: null,
+    condo: { medianSalePrice: 600000, medianPpsf: 450, homesSold: 25 }
+  });
+  assert.ok(html.includes('Single-Family in Fort Lee'));
+  assert.ok(html.includes('Condo / Co-op in Fort Lee'));
+  assert.ok(!html.includes('Multi-Family'));
+});
+
+test('renderPropertyBreakdown returns empty when no types', () => {
+  assert.equal(renderPropertyBreakdown({ townName: 'Fort Lee', monthYear: 'May 2026' }), '');
+});
+
+test('renderAboutTown returns empty when no text', () => {
+  assert.equal(renderAboutTown({ townName: 'Fort Lee', aboutText: '' }), '');
+  assert.equal(renderAboutTown({ townName: 'Fort Lee', aboutText: '   ' }), '');
+});
+
+test('renderAboutTown splits on blank lines into paragraphs', () => {
+  const html = renderAboutTown({
+    townName: 'Fort Lee',
+    aboutText: 'Paragraph one.\n\nParagraph two.'
+  });
+  assert.ok(html.includes('<p>Paragraph one.</p>'));
+  assert.ok(html.includes('<p>Paragraph two.</p>'));
+});
+
+test('renderSchools returns empty when no schools', () => {
+  assert.equal(renderSchools({ townName: 'Rockleigh', schoolsData: { schools: [], schoolCount: 0 } }), '');
+});
+
+test('renderSchools groups schools by band', () => {
+  const html = renderSchools({
+    townName: 'Fort Lee',
+    schoolsData: {
+      schoolCount: 3,
+      schools: [
+        { name: 'School No. 1', band: 'Elementary' },
+        { name: 'Lewis F. Cole Middle School', band: 'Middle' },
+        { name: 'Fort Lee High School', band: 'High' }
+      ]
+    },
+    summarySentence: 'Test summary.'
+  });
+  assert.ok(html.includes('Elementary (PK-4)'));
+  assert.ok(html.includes('Middle (5-8)'));
+  assert.ok(html.includes('High (9-12)'));
+  assert.ok(html.includes('Test summary.'));
+});
+
+test('renderVideosBlogs returns empty when no content', () => {
+  assert.equal(renderVideosBlogs({ townName: 'Fort Lee' }), '');
+  assert.equal(renderVideosBlogs({ townName: 'Fort Lee', videos: [], blogs: [] }), '');
+});
+
+test('renderVideosBlogs embeds YouTube iframe', () => {
+  const html = renderVideosBlogs({ townName: 'Fort Lee', videos: ['hgECvV24r9A'] });
+  assert.ok(html.includes('https://www.youtube.com/embed/hgECvV24r9A'));
+  assert.ok(html.includes('Fort Lee town guide'));
 });
 
 test('renderMeta escapes HTML in description', () => {
