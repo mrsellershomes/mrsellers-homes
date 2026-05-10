@@ -1,6 +1,7 @@
-// Renders the optional Tyler video + blog section. Each part is conditional;
-// if both are empty, the whole section is hidden. New content is added by
-// editing data/towns-content.json - no rebuild structure changes needed.
+// Renders the optional Tyler video and blog section. Each part is
+// conditional; if both are empty, the whole section is hidden. New content
+// is added by editing data/towns-content.json. No rebuild structure
+// changes are needed.
 
 function titleCase(slug) {
   return slug
@@ -35,7 +36,7 @@ ${blogCards}
 
   const heading = videoEmbeds
     ? `  <h2>${townName} town guide</h2>
-  <p class="videos-blogs-intro">A deeper read on what living in ${townName} actually feels like &mdash; the commute, the schools, the neighborhoods, and what living here actually costs in 2026.</p>`
+  <p class="videos-blogs-intro">A deeper read on what living in ${townName} actually feels like. Tyler walks through the commute, the schools, the neighborhoods, and what living here actually costs in 2026.</p>`
     : `  <h2>From the ${townName} blog</h2>`;
 
   return `<section class="videos-blogs" aria-label="Tyler's content for ${townName}">

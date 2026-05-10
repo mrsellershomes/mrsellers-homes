@@ -11,17 +11,17 @@ const TOOLTIPS = {
 };
 
 function fmtCurrency(n) {
-  if (n == null || isNaN(n)) return '—';
+  if (n == null || isNaN(n)) return 'N/A';
   return '$' + Math.round(n).toLocaleString();
 }
 
 function fmtPct(n, digits = 1) {
-  if (n == null || isNaN(n)) return '—';
+  if (n == null || isNaN(n)) return 'N/A';
   return (n * 100).toFixed(digits) + '%';
 }
 
 function fmtNum(n, digits = 1) {
-  if (n == null || isNaN(n)) return '—';
+  if (n == null || isNaN(n)) return 'N/A';
   return Number(n).toFixed(digits);
 }
 
@@ -47,8 +47,8 @@ export function renderStatTiles(d) {
   return `<section class="stat-tiles" aria-label="Headline market metrics">
 ${tile('Median Sale Price', fmtCurrency(d.medianSalePrice), arrow(d.medianSalePriceYoy), TOOLTIPS.medianSalePrice, 'price')}
 ${tile('Average Sale Price', fmtCurrency(d.averageSalePrice), arrow(d.averageSalePriceYoy), TOOLTIPS.averageSalePrice, 'avg')}
-${tile('# of Sales', d.homesSold == null ? '—' : String(d.homesSold), arrow(d.homesSoldYoy), TOOLTIPS.homesSold, 'sales')}
+${tile('# of Sales', d.homesSold == null ? 'N/A' : String(d.homesSold), arrow(d.homesSoldYoy), TOOLTIPS.homesSold, 'sales')}
 ${tile('Sale-to-List', fmtPct(d.saleToList), arrow(d.saleToListYoy), TOOLTIPS.saleToList, 'stl')}
-${tile('Median Days on Market', d.medianDom == null ? '—' : String(Math.round(d.medianDom)), arrow(d.medianDomYoy), TOOLTIPS.medianDom, 'dom')}
+${tile('Median Days on Market', d.medianDom == null ? 'N/A' : String(Math.round(d.medianDom)), arrow(d.medianDomYoy), TOOLTIPS.medianDom, 'dom')}
 </section>`;
 }

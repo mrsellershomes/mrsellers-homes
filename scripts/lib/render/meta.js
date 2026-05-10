@@ -27,7 +27,8 @@ function escapeAttr(s) {
 }
 
 export function renderMeta({ townName, townSlug, monthYear, metaDescription, canonicalUrl, ogImageUrl }) {
-  const title = `${townName} Real Estate Market Report &mdash; ${monthYear} | Tyler Sellers`;
+  const title = `${townName} Real Estate Market Report for ${monthYear} | Tyler Sellers`;
+  const headline = `${townName} Real Estate Market Report for ${monthYear}`;
   const today = new Date().toISOString().slice(0, 10);
   const ogImage = ogImageUrl || `https://mrsellers.homes/assets/og/${townSlug}.png`;
 
@@ -37,7 +38,7 @@ export function renderMeta({ townName, townSlug, monthYear, metaDescription, can
       TYLER_AGENT,
       {
         '@type': 'Article',
-        headline: `${townName} Real Estate Market Report — ${monthYear}`,
+        headline,
         author: { '@id': TYLER_AGENT['@id'] },
         publisher: { '@id': TYLER_AGENT['@id'] },
         datePublished: today,
@@ -51,7 +52,7 @@ export function renderMeta({ townName, townSlug, monthYear, metaDescription, can
   return `<title>${title}</title>
 <meta name="description" content="${escapeAttr(metaDescription)}">
 <link rel="canonical" href="${escapeAttr(canonicalUrl)}">
-<meta property="og:title" content="${escapeAttr(`${townName} Real Estate Market Report — ${monthYear}`)}">
+<meta property="og:title" content="${escapeAttr(headline)}">
 <meta property="og:description" content="${escapeAttr(metaDescription)}">
 <meta property="og:url" content="${escapeAttr(canonicalUrl)}">
 <meta property="og:image" content="${escapeAttr(ogImage)}">

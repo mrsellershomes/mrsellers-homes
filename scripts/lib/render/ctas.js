@@ -14,8 +14,11 @@ function escapeAttr(s) {
 }
 
 export function renderCtas({ townName }) {
-  const sourceBuyer = `MrSellers.homes — ${townName} Real Estate Page (Buyer)`;
-  const sourceSeller = `MrSellers.homes — ${townName} Real Estate Page (Seller)`;
+  // FUB source identifiers use a vertical-bar separator instead of an
+  // em-dash. The bar is unambiguous as a delimiter and keeps source strings
+  // pure ASCII per Tyler's voice rules.
+  const sourceBuyer = `MrSellers.homes | ${townName} Real Estate Page | Buyer`;
+  const sourceSeller = `MrSellers.homes | ${townName} Real Estate Page | Seller`;
   const tagsBuyer = `Market Page Lead,Town: ${townName},Intent: Buyer`;
   const tagsSeller = `Market Page Lead,Town: ${townName},Intent: Seller`;
 
@@ -41,7 +44,7 @@ export function renderCtas({ townName }) {
       <label class="form-row"><span class="form-label">Name</span><input type="text" name="name" autocomplete="name" required></label>
       <label class="form-row"><span class="form-label">Email</span><input type="email" name="email" autocomplete="email" required></label>
       <label class="form-row"><span class="form-label">Address of home in ${townName}</span><input type="text" name="address" autocomplete="street-address" required></label>
-      <label class="form-row"><span class="form-label">What&rsquo;s prompting the question?</span><textarea name="message" rows="3" placeholder="Timing, life change, just curious - whatever it is."></textarea></label>
+      <label class="form-row"><span class="form-label">What&rsquo;s prompting the question?</span><textarea name="message" rows="3" placeholder="Timing, life change, curiosity, anything is fine."></textarea></label>
       <button type="submit" class="btn-red">Send</button>
       <p class="form-status" role="status" aria-live="polite"></p>
     </form>

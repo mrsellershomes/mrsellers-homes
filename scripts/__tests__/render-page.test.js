@@ -14,7 +14,7 @@ import { renderFooter } from '../lib/render/footer.js';
 import { renderSub10Placeholder } from '../lib/render/sub10-placeholder.js';
 import { renderTownPage } from '../lib/render/page.js';
 
-test('renderMeta includes town-specific title', () => {
+test('renderMeta includes town-specific title without em-dash separators', () => {
   const html = renderMeta({
     townName: 'Fort Lee',
     townSlug: 'fort-lee',
@@ -22,7 +22,10 @@ test('renderMeta includes town-specific title', () => {
     metaDescription: 'Fort Lee market summary for May 2026.',
     canonicalUrl: 'https://mrsellers.homes/fort-lee-real-estate/'
   });
-  assert.ok(html.includes('Fort Lee Real Estate Market Report &mdash; May 2026'));
+  assert.ok(html.includes('Fort Lee Real Estate Market Report for May 2026'));
+  // No em-dash in title or any meta content
+  assert.ok(!html.includes('&mdash;'));
+  assert.ok(!html.includes('—'));
   assert.ok(html.includes('rel="canonical" href="https://mrsellers.homes/fort-lee-real-estate/"'));
   assert.ok(html.includes('"@type":"RealEstateAgent"'));
   assert.ok(html.includes('"@type":"Article"'));
@@ -58,11 +61,14 @@ test('renderStatTiles formats currency and percentages', () => {
   assert.ok(html.includes('trend-down') && html.includes('trend-up') && html.includes('trend-flat'));
 });
 
-test('renderStatTiles renders em-dash for missing values', () => {
+test('renderStatTiles renders N/A placeholder for missing values, never an em-dash', () => {
   const html = renderStatTiles({});
-  // 5 stat tiles, each with a missing value, should render em-dash placeholders
-  const dashes = (html.match(/—/g) || []).length;
-  assert.ok(dashes >= 5);
+  // Should NOT contain any em-dashes anywhere (per the no-em-dash rule)
+  assert.ok(!html.includes('—'));
+  assert.ok(!html.includes('&mdash;'));
+  // Five tiles, each with a missing value, should render N/A
+  const naCount = (html.match(/N\/A/g) || []).length;
+  assert.ok(naCount >= 5, `expected at least 5 N/A placeholders, got ${naCount}`);
 });
 
 test('renderWhatThisMeans returns empty string with no paragraph', () => {
@@ -165,16 +171,20 @@ test('renderVideosBlogs embeds YouTube iframe', () => {
   assert.ok(html.includes('Fort Lee town guide'));
 });
 
-test('renderCtas wires correct FUB sources and tags', () => {
+test('renderCtas wires correct FUB sources (vertical-bar separator) and tags', () => {
   const html = renderCtas({ townName: 'Fort Lee' });
-  // Source uses real em-dash (matches existing project_crm.md FUB source convention)
-  assert.ok(html.includes('data-fub-source="MrSellers.homes — Fort Lee Real Estate Page (Buyer)"'));
-  assert.ok(html.includes('data-fub-source="MrSellers.homes — Fort Lee Real Estate Page (Seller)"'));
+  // FUB source identifiers use a vertical-bar separator instead of an em-dash
+  // per the no-em-dashes rule. The bar is unambiguous and pure ASCII.
+  assert.ok(html.includes('data-fub-source="MrSellers.homes | Fort Lee Real Estate Page | Buyer"'));
+  assert.ok(html.includes('data-fub-source="MrSellers.homes | Fort Lee Real Estate Page | Seller"'));
   assert.ok(html.includes('data-fub-tags="Market Page Lead,Town: Fort Lee,Intent: Buyer"'));
   assert.ok(html.includes('data-fub-tags="Market Page Lead,Town: Fort Lee,Intent: Seller"'));
   assert.ok(html.includes('Been thinking about buying in Fort Lee?'));
   assert.ok(html.includes('Been thinking about selling your home in Fort Lee?'));
   assert.ok(html.includes('Honest feedback on the moves you'));
+  // No em-dashes anywhere in the rendered CTAs
+  assert.ok(!html.includes('—'));
+  assert.ok(!html.includes('&mdash;'));
 });
 
 test('renderCtas renders two forms with class lead-form', () => {

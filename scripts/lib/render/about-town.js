@@ -1,6 +1,6 @@
 // Renders the "About [Town]" section with Tyler's locally relevant text.
-// Returns empty string when no aboutText exists - section is hidden entirely
-// rather than showing a "coming soon" placeholder.
+// Returns empty string when no aboutText exists. The section is hidden
+// entirely rather than showing a "coming soon" placeholder.
 
 export function renderAboutTown({ townName, aboutText }) {
   if (!aboutText || aboutText.trim() === '') return '';

@@ -17,7 +17,7 @@ const ROWS = [
 ];
 
 function format(value, fmt) {
-  if (value == null || isNaN(value)) return '—';
+  if (value == null || isNaN(value)) return 'N/A';
   if (fmt === 'currency') return '$' + Math.round(value).toLocaleString();
   if (fmt === 'integer') return Math.round(value).toLocaleString();
   if (fmt === 'decimal') return Number(value).toFixed(1);
@@ -26,7 +26,7 @@ function format(value, fmt) {
 }
 
 function deltaCell(value, fmt) {
-  if (value == null || isNaN(value)) return '<span class="trend-flat">—</span>';
+  if (value == null || isNaN(value)) return '<span class="trend-flat">N/A</span>';
   if (Math.abs(value) < 0.005) return '<span class="trend-flat">flat</span>';
   const isUp = value > 0;
   const cls = isUp ? 'trend-up' : 'trend-down';

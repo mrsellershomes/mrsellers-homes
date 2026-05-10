@@ -1,5 +1,6 @@
-// Renders the global site navigation - matches the nav block from
-// index.html, about.html, etc. so town pages feel like part of the site.
+// Renders the global site navigation. Matches the nav block from
+// index.html, about.html, and similar pages so town pages feel like part
+// of the same site.
 
 export function renderSiteNav() {
   return `<nav class="nav">
@@ -53,5 +54,31 @@ export function renderMobileMenuScript() {
     function closeMenu() {
       document.getElementById('mobileMenu').classList.remove('open');
     }
+
+    // Silhouette lightbox: click the small map in the hero to open a
+    // full-screen view of the same SVG. Click anywhere (including on the
+    // map) to dismiss. Esc key also closes for keyboard users.
+    (function () {
+      var trigger = document.querySelector('[data-silhouette-trigger]');
+      var modal = document.getElementById('silhouetteModal');
+      if (!trigger || !modal) return;
+
+      function openModal() {
+        modal.removeAttribute('hidden');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('silhouette-modal-open');
+      }
+      function closeModal() {
+        modal.setAttribute('hidden', '');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('silhouette-modal-open');
+      }
+
+      trigger.addEventListener('click', openModal);
+      modal.addEventListener('click', closeModal);
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !modal.hasAttribute('hidden')) closeModal();
+      });
+    })();
   </script>`;
 }

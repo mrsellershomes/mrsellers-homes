@@ -6,14 +6,15 @@
 // NJMLS Custom Export on the 5th of each month (per the Calendar reminder),
 // then the GitHub Action publishes within minutes.
 function nextUpdateLabel(currentMonthYear) {
-  // currentMonthYear like "April 2026" - we want next month's "5th of [next month]"
+  // currentMonthYear is something like "April 2026". We want the 5th of
+  // the month that is two months ahead because the data covers month N
+  // and the next refresh covers month N+1, pulled from MLS on the 5th
+  // of month N+2.
   const [monthName, year] = currentMonthYear.split(' ');
   const months = ['January', 'February', 'March', 'April', 'May', 'June',
                   'July', 'August', 'September', 'October', 'November', 'December'];
   const idx = months.indexOf(monthName);
   if (idx === -1) return 'Next update around the 5th of next month';
-  // The data covers month N, the next refresh covers month N+1, which is
-  // pulled from MLS on the 5th of month N+2.
   const refreshMonthIdx = (idx + 2) % 12;
   const refreshYear = idx + 2 > 11 ? Number(year) + 1 : Number(year);
   return `Next update around the 5th of ${months[refreshMonthIdx]} ${refreshYear}`;

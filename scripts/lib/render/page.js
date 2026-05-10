@@ -1,8 +1,9 @@
 // The page composer. Pulls every section renderer together into a single
 // HTML string for one town page. Conditional rendering happens here:
-//   - sub10 placeholder replaces stat tiles + data table + property breakdown
-//   - about-town, schools, videos-blogs each render-or-hide based on data
-// Tracking codes (Google Analytics, MS Clarity) match index.html / about.html.
+// the sub10 placeholder swaps in for stat tiles and data table when
+// single-family volume is too thin; about-town, schools, and videos-blogs
+// each render or hide based on whether their data exists.
+// Tracking codes (Google Analytics, MS Clarity) match index.html and about.html.
 
 import { renderMeta } from './meta.js';
 import { renderHero } from './hero.js';
@@ -40,11 +41,11 @@ export function renderTownPage(ctx) {
   const neighborsStrip = renderNeighbors({ townName, neighbors });
 
   // When SF volume is too thin for a meaningful headline (sub-10 trigger),
-  // we replace the stat tiles + data table with the sub-10 placeholder.
-  // We KEEP the AI commentary card and the property breakdown - both still
-  // matter to the visitor. A condo-heavy town like Fort Lee in a thin SF
-  // month should still feel like a substantive page that interprets the
-  // data, not a dead end.
+  // we replace the stat tiles and data table with the sub-10 placeholder.
+  // We keep the AI commentary card and the property breakdown because both
+  // still matter to the visitor. A condo-heavy town like Fort Lee in a
+  // thin SF month should still feel like a substantive page that
+  // interprets the data, not a dead end.
   const dataSection = sub10
     ? `${renderSub10Placeholder({ townName, threeMonthBlend: sub10 })}
 ${renderWhatThisMeans({ aiParagraph, fallback: aiParagraphFallback })}
