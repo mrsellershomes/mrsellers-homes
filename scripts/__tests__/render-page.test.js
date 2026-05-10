@@ -12,6 +12,7 @@ import { renderVideosBlogs } from '../lib/render/videos-blogs.js';
 import { renderCtas } from '../lib/render/ctas.js';
 import { renderFooter } from '../lib/render/footer.js';
 import { renderSub10Placeholder } from '../lib/render/sub10-placeholder.js';
+import { renderTownPage } from '../lib/render/page.js';
 
 test('renderMeta includes town-specific title', () => {
   const html = renderMeta({
@@ -198,6 +199,56 @@ test('renderSub10Placeholder uses 3-month blend', () => {
   assert.ok(html.includes('$500,000'));
   assert.ok(html.includes('95.0%'));
   assert.ok(html.includes('Low-Volume Town'));
+});
+
+test('renderTownPage produces valid HTML with all sections', () => {
+  const html = renderTownPage({
+    townName: 'Fort Lee', townSlug: 'fort-lee', monthYear: 'May 2026',
+    canonicalUrl: 'https://mrsellers.homes/fort-lee-real-estate/',
+    metaDescription: 'Fort Lee market summary.',
+    ogImageUrl: 'https://mrsellers.homes/assets/og/fort-lee.png',
+    townData: {
+      medianSalePrice: 890000,
+      medianPpsf: 487,
+      homesSold: 47,
+      saleToList: 0.992,
+      monthsOfSupply: 5.0
+    },
+    propertyTypes: { singleFamily: { medianSalePrice: 1400000, medianPpsf: 542, homesSold: 12 } },
+    aiParagraph: 'Fort Lee is sitting in a balanced spot right now.',
+    aiParagraphFallback: false,
+    schoolsData: { schools: [], schoolCount: 0 },
+    schoolsSummary: '',
+    content: { videos: [], blogs: [], aboutText: '' },
+    sub10: null
+  });
+  assert.ok(html.startsWith('<!DOCTYPE html>'));
+  assert.ok(html.includes('<html lang="en">'));
+  assert.ok(html.includes('Fort Lee Real Estate'));
+  assert.ok(html.includes('$890,000'));
+  assert.ok(html.includes('What this means right now'));
+  assert.ok(html.includes('class="town-ctas"'));
+  assert.ok(html.includes('/css/town-page.css'));
+  assert.ok(html.includes('/js/fub-submit.js'));
+  // Schema.org markup present
+  assert.ok(html.includes('"@type":"RealEstateAgent"'));
+});
+
+test('renderTownPage replaces data sections with sub10 placeholder when triggered', () => {
+  const html = renderTownPage({
+    townName: 'Teterboro', townSlug: 'teterboro', monthYear: 'May 2026',
+    canonicalUrl: 'https://mrsellers.homes/teterboro-real-estate/',
+    metaDescription: 'Teterboro market summary.',
+    townData: {},
+    propertyTypes: {},
+    aiParagraph: '',
+    schoolsData: { schools: [], schoolCount: 0 },
+    content: {},
+    sub10: { medianSalePrice: 500000, homesSold: 4, saleToList: 0.95 }
+  });
+  assert.ok(html.includes('Teterboro had fewer than 10'));
+  assert.ok(!html.includes('class="stat-tiles"'));
+  assert.ok(!html.includes('class="data-table-section"'));
 });
 
 test('renderMeta escapes HTML in description', () => {

@@ -1,0 +1,644 @@
+/* Town real estate page styles
+ * Matches the brand language of index.html / about.html / glossary/index.html:
+ * red #E2001A, Cormorant Garamond display, DM Sans body, sticky nav,
+ * red bar under nav, dark footer.
+ *
+ * Mobile-first below 900px (single column, full-width tiles, collapsed table).
+ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --red: #E2001A;
+  --red-dark: #b50015;
+  --black: #111111;
+  --gray-mid: #6b6b6b;
+  --gray-soft: #999999;
+  --gray-light: #e0e0e0;
+  --gray-bg: #f5f5f5;
+  --gray-bg-2: #fafafa;
+  --white: #ffffff;
+}
+
+html { scroll-behavior: smooth; }
+body.town-page {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--black);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+a { color: inherit; }
+
+/* ============== Global nav (matches about.html / index.html) ============== */
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 40px; border-bottom: 1px solid var(--gray-light); background: var(--white); position: sticky; top: 0; z-index: 100; }
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--black); text-decoration: none; }
+.nav-logo span { font-weight: 400; opacity: 0.5; font-size: 11px; display: block; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 1px; }
+.nav-links { display: flex; gap: 28px; font-size: 13px; color: var(--gray-mid); }
+.nav-links a { color: inherit; text-decoration: none; cursor: pointer; transition: color 0.2s; }
+.nav-links a:hover { color: var(--red); }
+.nav-links a.active { color: var(--red); }
+.nav-cta { background: var(--red); color: var(--white); border: none; padding: 10px 22px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; cursor: pointer; border-radius: 2px; letter-spacing: 0.04em; transition: background 0.2s; text-decoration: none; }
+.nav-cta:hover { background: var(--red-dark); }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--black); border-radius: 2px; }
+.mobile-menu { display: none; position: fixed; top: 57px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--gray-light); z-index: 99; padding: 16px 20px; flex-direction: column; gap: 0; }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { color: var(--black); text-decoration: none; font-size: 15px; padding: 14px 0; border-bottom: 0.5px solid var(--gray-light); font-weight: 400; }
+.mobile-menu a:last-child { border-bottom: none; }
+.mobile-menu .mobile-cta { margin-top: 12px; background: var(--red); color: var(--white); text-align: center; padding: 14px; border-radius: 2px; font-weight: 500; font-size: 14px; letter-spacing: 0.04em; }
+.red-bar { background: var(--red); color: var(--white); padding: 9px 40px; display: flex; align-items: center; justify-content: space-between; font-size: 12px; letter-spacing: 0.05em; }
+.red-bar-item { display: flex; align-items: center; gap: 8px; opacity: 0.92; }
+.red-bar-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.5); }
+
+/* ============== Page main wrapper ============== */
+.town-page-main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ============== Hero ============== */
+.town-hero {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 56px 0 40px;
+  border-bottom: 1px solid var(--gray-light);
+}
+.town-silhouette {
+  width: 140px;
+  height: 140px;
+  display: block;
+  background: var(--gray-bg);
+  border-radius: 4px;
+  padding: 4px;
+}
+.town-hero-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.town-hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 1.05;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+.town-hero-sub {
+  font-size: 16px;
+  color: var(--gray-mid);
+  margin-bottom: 16px;
+}
+.town-hero-attr {
+  font-size: 12px;
+  color: var(--gray-soft);
+  letter-spacing: 0.04em;
+}
+
+/* ============== Stat tiles ============== */
+.stat-tiles {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  padding: 40px 0;
+  border-bottom: 1px solid var(--gray-light);
+}
+.stat-tile {
+  background: var(--gray-bg-2);
+  border: 1px solid var(--gray-light);
+  border-radius: 4px;
+  padding: 22px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.stat-tile-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+.stat-tile-label {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+  font-weight: 500;
+  line-height: 1.3;
+}
+.stat-tile-info {
+  background: transparent;
+  border: 1px solid var(--gray-light);
+  color: var(--gray-mid);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: help;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+}
+.stat-tile-info:hover { border-color: var(--red); color: var(--red); }
+.stat-tile-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--black);
+  line-height: 1.1;
+}
+.stat-tile-trend {
+  font-size: 12px;
+  color: var(--gray-mid);
+  font-weight: 500;
+}
+.trend-up { color: var(--red); }
+.trend-down { color: var(--gray-soft); }
+.trend-flat { color: var(--gray-soft); font-style: italic; }
+
+/* Make Median Sale Price the lead tile with bigger value */
+.stat-tile[data-tile="price"] .stat-tile-value { font-size: 40px; }
+
+/* ============== What this means ============== */
+.what-this-means {
+  background: #fdfaf3;
+  border-left: 3px solid var(--red);
+  padding: 28px 32px;
+  margin: 40px 0;
+  border-radius: 0 4px 4px 0;
+}
+.what-this-means.fallback {
+  background: var(--gray-bg-2);
+  border-left-color: var(--gray-soft);
+}
+.what-this-means-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.what-this-means.fallback .what-this-means-eyebrow { color: var(--gray-soft); }
+.what-this-means-body {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--black);
+}
+
+/* ============== Data table ============== */
+.data-table-section {
+  padding: 8px 0 40px;
+  border-bottom: 1px solid var(--gray-light);
+}
+.data-table-details summary {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.data-table-details summary::-webkit-details-marker { display: none; }
+.data-table-details summary::before {
+  content: '+';
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--red);
+  width: 16px;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+.data-table-details[open] summary::before { content: '−'; }
+.data-table-summary-text {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+  font-weight: 500;
+}
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 14px;
+}
+.data-table thead th {
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-soft);
+  font-weight: 500;
+  padding: 12px 16px 10px;
+  border-bottom: 1px solid var(--gray-light);
+}
+.data-table thead th:not(:first-child) { text-align: right; }
+.data-table tbody th {
+  text-align: left;
+  font-weight: 400;
+  color: var(--black);
+  padding: 12px 16px;
+  border-bottom: 0.5px solid var(--gray-light);
+}
+.data-table tbody td {
+  text-align: right;
+  padding: 12px 16px;
+  border-bottom: 0.5px solid var(--gray-light);
+  color: var(--black);
+}
+.data-table tbody tr:hover { background: var(--gray-bg-2); }
+.data-cell-current { font-weight: 500; }
+
+/* ============== Property type breakdown ============== */
+.property-breakdown { padding: 40px 0; border-bottom: 1px solid var(--gray-light); }
+.property-breakdown h2,
+.about-town h2,
+.schools-section h2,
+.videos-blogs h2,
+.town-ctas h2,
+.sub10-placeholder h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--black);
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+.property-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+.property-card {
+  background: var(--gray-bg-2);
+  border: 1px solid var(--gray-light);
+  border-radius: 4px;
+  padding: 22px 24px;
+}
+.property-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--black);
+  margin-bottom: 4px;
+}
+.property-card-period {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-soft);
+  margin-bottom: 16px;
+}
+.property-card-stats { list-style: none; }
+.property-card-stats li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 0.5px solid var(--gray-light);
+  font-size: 14px;
+}
+.property-card-stats li:last-child { border-bottom: none; }
+.property-card-stat-label { color: var(--gray-mid); }
+.property-card-stat-value { color: var(--black); font-weight: 500; }
+
+/* ============== About town ============== */
+.about-town { padding: 40px 0; border-bottom: 1px solid var(--gray-light); }
+.about-town p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--gray-mid);
+  margin-bottom: 16px;
+  max-width: 760px;
+}
+.about-town p:last-child { margin-bottom: 0; }
+
+/* ============== Schools ============== */
+.schools-section { padding: 40px 0; border-bottom: 1px solid var(--gray-light); }
+.schools-summary {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--gray-mid);
+  margin-bottom: 24px;
+  max-width: 760px;
+  font-style: italic;
+}
+.school-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+.school-group h3 {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 500;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--gray-light);
+}
+.school-group ul { list-style: none; }
+.school-group li {
+  font-size: 14px;
+  color: var(--black);
+  padding: 6px 0;
+}
+
+/* ============== Videos / blogs ============== */
+.videos-blogs { padding: 40px 0; border-bottom: 1px solid var(--gray-light); }
+.video-embed {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 24px;
+  background: var(--black);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.blog-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+.blog-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  border: 1px solid var(--gray-light);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--black);
+  transition: border-color 0.15s;
+}
+.blog-card:hover { border-color: var(--red); }
+.blog-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+.blog-card-arrow { color: var(--red); font-size: 18px; }
+
+/* ============== CTAs ============== */
+.town-ctas {
+  padding: 56px 0;
+  border-bottom: 1px solid var(--gray-light);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.cta-card {
+  background: var(--gray-bg-2);
+  border: 1px solid var(--gray-light);
+  border-radius: 4px;
+  padding: 32px 32px 28px;
+  display: flex;
+  flex-direction: column;
+}
+.cta-card.cta-seller {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+.cta-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.cta-card h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.cta-card.cta-seller h2 { color: var(--white); }
+.cta-body {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--gray-mid);
+  margin-bottom: 20px;
+}
+.cta-card.cta-seller .cta-body { color: rgba(255,255,255,0.65); }
+
+/* ============== Lead forms (used by CTAs and sub10) ============== */
+.lead-form { display: flex; flex-direction: column; gap: 14px; }
+.form-row { display: flex; flex-direction: column; gap: 4px; }
+.form-label {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+  font-weight: 500;
+}
+.cta-card.cta-seller .form-label { color: rgba(255,255,255,0.55); }
+.form-optional { letter-spacing: 0; text-transform: none; font-size: 11px; color: var(--gray-soft); }
+.lead-form input,
+.lead-form textarea {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  padding: 10px 12px;
+  border: 1px solid var(--gray-light);
+  border-radius: 2px;
+  background: var(--white);
+  color: var(--black);
+  width: 100%;
+  resize: vertical;
+}
+.lead-form input:focus,
+.lead-form textarea:focus { outline: none; border-color: var(--red); }
+.cta-card.cta-seller .lead-form input,
+.cta-card.cta-seller .lead-form textarea {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.15);
+  color: var(--white);
+}
+.cta-card.cta-seller .lead-form input::placeholder,
+.cta-card.cta-seller .lead-form textarea::placeholder { color: rgba(255,255,255,0.35); }
+.btn-red {
+  background: var(--red);
+  color: var(--white);
+  border: none;
+  padding: 12px 22px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 2px;
+  letter-spacing: 0.04em;
+  transition: background 0.2s;
+  align-self: flex-start;
+}
+.btn-red:hover { background: var(--red-dark); }
+.btn-red:disabled { opacity: 0.6; cursor: wait; }
+.form-status {
+  font-size: 13px;
+  margin-top: 4px;
+  min-height: 1em;
+}
+.form-status[data-status="success"] { color: #2a9d4f; }
+.form-status[data-status="error"] { color: var(--red); }
+.form-status[data-status="sending"] { color: var(--gray-mid); }
+.cta-card.cta-seller .form-status[data-status="success"] { color: #5fd47e; }
+
+/* ============== Sub-10 placeholder ============== */
+.sub10-placeholder {
+  padding: 48px 0;
+  border-bottom: 1px solid var(--gray-light);
+  max-width: 760px;
+}
+.sub10-placeholder h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+.sub10-placeholder p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--gray-mid);
+  margin-bottom: 16px;
+}
+.three-month-blend {
+  list-style: none;
+  background: var(--gray-bg-2);
+  border-left: 3px solid var(--red);
+  padding: 20px 24px;
+  margin: 20px 0;
+}
+.three-month-blend li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 8px 0;
+  border-bottom: 0.5px solid var(--gray-light);
+}
+.three-month-blend li:last-child { border-bottom: none; }
+.blend-label { font-size: 13px; color: var(--gray-mid); }
+.blend-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  color: var(--black);
+  font-weight: 500;
+}
+.sub10-form {
+  margin-top: 24px;
+  max-width: 480px;
+}
+
+/* ============== Town footer (page-level, not site footer) ============== */
+.town-footer {
+  padding: 32px 0;
+  text-align: center;
+  font-size: 12px;
+  color: var(--gray-soft);
+}
+.town-footer p { margin-bottom: 6px; }
+.town-footer a { color: var(--red); text-decoration: none; border-bottom: 1px dotted var(--red); }
+.town-footer a:hover { color: var(--red-dark); }
+.town-footer-towns a { font-weight: 500; }
+
+/* ============== Site footer (matches about.html) ============== */
+.footer { background: var(--black); color: rgba(255,255,255,0.45); padding: 32px 40px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; border-top: 1px solid rgba(255,255,255,0.08); flex-wrap: wrap; gap: 12px; }
+.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; color: var(--white); }
+.footer-red { color: var(--red); }
+
+/* ============== Mobile (under 900px) ============== */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .nav-cta { display: none; }
+  .hamburger { display: flex; }
+  .nav { padding: 16px 20px; }
+  .red-bar { padding: 9px 20px; font-size: 11px; flex-wrap: wrap; justify-content: center; gap: 12px; }
+  .town-page-main { padding: 0 20px; }
+
+  .town-hero {
+    grid-template-columns: 80px 1fr;
+    gap: 18px;
+    padding: 36px 0 28px;
+  }
+  .town-silhouette { width: 80px; height: 80px; }
+  .town-hero h1 { font-size: 40px; }
+  .town-hero-sub { font-size: 14px; }
+
+  .stat-tiles {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 28px 0;
+  }
+  .stat-tile[data-tile="price"] {
+    grid-column: 1 / -1;
+  }
+  .stat-tile[data-tile="price"] .stat-tile-value { font-size: 36px; }
+  .stat-tile-value { font-size: 26px; }
+
+  .what-this-means {
+    padding: 22px 22px 22px 24px;
+    margin: 28px 0;
+  }
+  .what-this-means-body { font-size: 18px; }
+
+  .data-table-details:not([open]) summary { padding: 14px 0; }
+  .data-table { font-size: 13px; }
+  .data-table thead th,
+  .data-table tbody th,
+  .data-table tbody td { padding: 10px 8px; }
+
+  .property-breakdown,
+  .about-town,
+  .schools-section,
+  .videos-blogs { padding: 32px 0; }
+
+  .town-ctas {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 40px 0;
+  }
+  .cta-card { padding: 24px 22px; }
+  .cta-card h2 { font-size: 24px; }
+
+  .property-breakdown h2,
+  .about-town h2,
+  .schools-section h2,
+  .videos-blogs h2,
+  .town-ctas h2,
+  .sub10-placeholder h2 { font-size: 26px; }
+
+  .footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+  .stat-tile { padding: 18px 16px 16px; }
+  .stat-tile-value { font-size: 24px; }
+  .stat-tile[data-tile="price"] .stat-tile-value { font-size: 32px; }
+  .town-hero h1 { font-size: 34px; }
+}
