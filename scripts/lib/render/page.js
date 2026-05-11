@@ -46,14 +46,15 @@ export function renderTownPage(ctx) {
   // still matter to the visitor. A condo-heavy town like Fort Lee in a
   // thin SF month should still feel like a substantive page that
   // interprets the data, not a dead end.
+  const periodLabel = ctx.periodLabel || `the last 6 months ending ${monthYear}`;
   const dataSection = sub10
-    ? `${renderSub10Placeholder({ townName, threeMonthBlend: sub10 })}
+    ? `${renderSub10Placeholder({ townName, threeMonthBlend: sub10, periodLabel })}
 ${renderWhatThisMeans({ aiParagraph, fallback: aiParagraphFallback })}
-${renderPropertyBreakdown({ townName, monthYear, ...(propertyTypes || {}) })}`
+${renderPropertyBreakdown({ townName, monthYear: periodLabel, ...(propertyTypes || {}) })}`
     : `${renderStatTiles(townData || {})}
 ${renderWhatThisMeans({ aiParagraph, fallback: aiParagraphFallback })}
 ${renderDataTable(townData || {})}
-${renderPropertyBreakdown({ townName, monthYear, ...(propertyTypes || {}) })}`;
+${renderPropertyBreakdown({ townName, monthYear: periodLabel, ...(propertyTypes || {}) })}`;
 
   const aboutTown = renderAboutTown({ townName, aboutText: content?.aboutText || '' });
   const schools = renderSchools({ townName, schoolsData, summarySentence: schoolsSummary });

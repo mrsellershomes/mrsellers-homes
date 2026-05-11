@@ -1,76 +1,93 @@
 // One-time test generator: builds /fort-lee-real-estate/index.html using
-// REAL April 2026 NJMLS Custom Export data (computed from the 4 CSVs in
-// data/njmls/2026-04/) so Tyler can see the page as a research-heavy
-// visitor would.
-//
-// Fort Lee April 2026 reality:
-//   Single-Family: 1 sale ($1.34M, 24 DOM, 101.2% sale-to-list)
-//   Condo/Coop/Townhouse: 45 sales ($455K median, $591K avg, 98.2% S2L, 34 DOM)
-//   2-4 Family: 0 sales
+// the REAL 6-month-rolling pipeline (data/njmls/*/*.csv -> normalize ->
+// aggregate -> render). This is the production data path for Fort Lee
+// specifically so Tyler can review production-quality output before we
+// generate all 70 town pages in Phase 2.
 
 import { writeFileSync, mkdirSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { renderTownPage } from '../lib/render/page.js';
+import { readAllCsvs, dedupeByMls, monthYearLabel, buildPeriodLabel } from '../lib/njmls-csv.js';
+import { aggregateTownData } from '../lib/town-data.js';
 
 const schools = JSON.parse(readFileSync(resolve('data/bergen-schools.json'), 'utf8'));
 const content = JSON.parse(readFileSync(resolve('data/towns-content.json'), 'utf8'));
+const towns = JSON.parse(readFileSync(resolve('data/bergen-towns.json'), 'utf8'));
+
+console.log('Reading all NJMLS CSVs from data/njmls/...');
+const { rows: rawRows, monthFolders } = readAllCsvs(resolve('data/njmls'));
+const rows = dedupeByMls(rawRows);
+console.log(`Loaded ${rawRows.length} raw rows, ${rows.length} after MLS-# dedupe`);
+console.log(`Window: ${buildPeriodLabel(monthFolders)} (${monthFolders.length} months)`);
+
+const latestMonth = monthFolders[monthFolders.length - 1];
+const monthYear = monthYearLabel(latestMonth);
+const periodLabel = `the last ${monthFolders.length} months ending ${monthYear}`;
+
+console.log('Aggregating per-town stats...');
+const aggregate = aggregateTownData(rows, towns);
+
+const fortLee = aggregate['fort-lee'];
+if (!fortLee) {
+  console.error('No Fort Lee data computed - check that NJMLS exports include Fort Lee rows.');
+  process.exit(1);
+}
+
+console.log('Fort Lee:');
+console.log('  Single-family closings (6 mo):', fortLee.propertyTypes.singleFamily?.homesSold ?? (fortLee.sub10?.homesSold ?? 0));
+console.log('  Condo closings (6 mo):       ', fortLee.propertyTypes.condo?.homesSold ?? 0);
+console.log('  Multi-family closings (6 mo):', fortLee.propertyTypes.multiFamily?.homesSold ?? 0);
+console.log('  Sub-10 triggered?            ', !!fortLee.sub10);
+
+const town = towns.find(t => t.slug === 'fort-lee');
+
+// Tyler-voice "What this means" paragraph. In production, this is what the
+// Claude API generates monthly from the aggregated stats. For now it is
+// hand-drafted from the actual computed numbers so Tyler can see what the
+// AI section should feel like at full quality.
+const sf = fortLee.propertyTypes.singleFamily;
+const condo = fortLee.propertyTypes.condo;
+const sfCount = sf?.homesSold ?? fortLee.sub10?.homesSold ?? 0;
+const condoCount = condo?.homesSold ?? 0;
+
+let aiParagraph;
+if (sf && condo) {
+  aiParagraph = `Over the last 6 months in Fort Lee, ${condoCount} condo and co-op closings dominated the activity versus ${sfCount} single-family closings. That ratio is typical for Fort Lee, where the housing stock is heavily weighted toward Hudson River-view buildings like Plaza Towers, Mediterranean Towers, Atrium Palace, and Hudson Lights. The condo market is the everyday market here. Single-family inventory is sparse, and when an SF home does come up it tends to draw competitive offers, but the volume is too thin for a typical buyer to count on month-to-month availability.`;
+} else if (condo && !sf) {
+  aiParagraph = `Over the last 6 months in Fort Lee, ${condoCount} condo and co-op closings carried the market. Single-family activity was too thin over this window to feature as a headline stat, which is typical for Fort Lee: the housing stock is heavily weighted toward Hudson River-view buildings like Plaza Towers, Mediterranean Towers, Atrium Palace, and Hudson Lights. The condo and co-op market is the everyday market here.`;
+} else {
+  aiParagraph = '';
+}
+
+// Geographic neighbors for the comparison strip.
+const neighbors = [
+  { name: 'Cliffside Park', slug: 'cliffside-park' },
+  { name: 'Edgewater', slug: 'edgewater' },
+  { name: 'Englewood Cliffs', slug: 'englewood-cliffs' },
+  { name: 'Leonia', slug: 'leonia' },
+  { name: 'Palisades Park', slug: 'palisades-park' }
+];
 
 const ctx = {
-  townName: 'Fort Lee',
-  townSlug: 'fort-lee',
-  monthYear: 'April 2026',
-  canonicalUrl: 'https://mrsellers.homes/fort-lee-real-estate/',
-  metaDescription: 'Fort Lee NJ real estate market for April 2026: condo and co-op activity, single-family context, school data, and an honest read from a Bergen County agent.',
-  ogImageUrl: 'https://mrsellers.homes/assets/og/fort-lee.png',
-
-  townData: {},
-
-  propertyTypes: {
-    singleFamily: null,
-    multiFamily: null,
-    condo: {
-      medianSalePrice: 455000,
-      averageSalePrice: 590886,
-      homesSold: 45,
-      saleToList: 0.982
-    }
-  },
-
-  // Tyler-voice paragraph specific to Fort Lee April 2026. In production the
-  // AI generator writes this monthly; for tonight's preview it's hand-drafted
-  // so Tyler can see what the AI section should feel like at full quality.
-  aiParagraph: `April in Fort Lee was almost entirely a condo and co-op story. There were 45 condo closings versus a single SF closing. That ratio is not unusual here. Fort Lee&rsquo;s housing stock skews heavily to Hudson River-view condo buildings like Plaza Towers, Mediterranean Towers, Atrium Palace, Hudson Lights, and the older Towers complexes, so a typical month sees most of the volume on the condo side. Condos closed at a median of $455K with sellers getting 98.2% of asking on average. That is a balanced market where buyers are paying close to list but are not chasing aggressively. The one SF closing went above asking at 101.2% sale-to-list, which fits the broader pattern: when an SF home does come up in Fort Lee, the small inventory drives competitive offers, but the months where one comes up at all are the exception.`,
+  townName: town.name,
+  townSlug: town.slug,
+  monthYear,
+  periodLabel,
+  canonicalUrl: `https://mrsellers.homes/${town.pageSlug}/`,
+  metaDescription: `${town.name} NJ real estate market for the last 6 months: condo, single-family, and multi-family activity with school data and an honest read from a Bergen County agent.`,
+  ogImageUrl: `https://mrsellers.homes/assets/og/${town.slug}.png`,
+  townData: fortLee.townData,
+  propertyTypes: fortLee.propertyTypes,
+  aiParagraph,
   aiParagraphFallback: false,
-
-  schoolsData: schools['fort-lee'] || { schools: [], schoolCount: 0 },
-  // Pass empty so the schools renderer auto-builds a numerically specific
-  // summary from the raw data (69% ELA / 72% Math vs state 52% / 40%).
+  schoolsData: schools[town.slug] || { schools: [], schoolCount: 0 },
   schoolsSummary: '',
-  content: content['fort-lee'] || { videos: [], blogs: [], aboutText: '' },
-
-  sub10: {
-    medianSalePrice: 1340000,
-    homesSold: 1,
-    saleToList: 1.012
-  },
-
-  // Geographically adjacent Fort Lee neighbors. In production this comes
-  // from a `neighbors` field in data/bergen-towns.json.
-  neighbors: [
-    { name: 'Cliffside Park', slug: 'cliffside-park' },
-    { name: 'Edgewater', slug: 'edgewater' },
-    { name: 'Englewood Cliffs', slug: 'englewood-cliffs' },
-    { name: 'Leonia', slug: 'leonia' },
-    { name: 'Palisades Park', slug: 'palisades-park' }
-  ]
+  content: content[town.slug] || { videos: [], blogs: [], aboutText: '' },
+  sub10: fortLee.sub10,
+  neighbors
 };
 
 const html = renderTownPage(ctx);
 mkdirSync(resolve('fort-lee-real-estate'), { recursive: true });
 writeFileSync(resolve('fort-lee-real-estate/index.html'), html);
-console.log('Wrote fort-lee-real-estate/index.html (' + html.length + ' bytes)');
-console.log('SF: 1 sale (sub-10 triggered)');
-console.log('Condo: 45 sales (card renders)');
-console.log('MF: 0 sales (card suppressed)');
-console.log('Neighbors strip: 5 nearby towns');
-console.log('AI commentary card: rendered with Fort Lee April voice paragraph');
+console.log(`Wrote fort-lee-real-estate/index.html (${html.length} bytes)`);

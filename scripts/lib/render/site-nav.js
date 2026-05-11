@@ -80,5 +80,41 @@ export function renderMobileMenuScript() {
         if (e.key === 'Escape' && !modal.hasAttribute('hidden')) closeModal();
       });
     })();
+
+    // Stat-tile tooltips: each "?" button toggles a small popover with a
+    // plain-English explanation. Click anywhere else, or press Esc, to close.
+    (function () {
+      var triggers = document.querySelectorAll('[data-tooltip-trigger]');
+      if (triggers.length === 0) return;
+
+      function closeAll() {
+        document.querySelectorAll('.stat-tile-tooltip').forEach(function (t) {
+          t.setAttribute('hidden', '');
+        });
+      }
+
+      triggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var wrapper = trigger.parentNode;
+          var tooltip = wrapper.querySelector('.stat-tile-tooltip');
+          if (!tooltip) return;
+          var wasHidden = tooltip.hasAttribute('hidden');
+          closeAll();
+          if (wasHidden) tooltip.removeAttribute('hidden');
+        });
+      });
+
+      document.addEventListener('click', function (e) {
+        // If the click is inside a tooltip itself, leave it open. Otherwise close.
+        if (e.target.closest && e.target.closest('.stat-tile-tooltip')) return;
+        if (e.target.matches && e.target.matches('[data-tooltip-trigger]')) return;
+        closeAll();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeAll();
+      });
+    })();
   </script>`;
 }

@@ -31,11 +31,10 @@ test('renderMeta includes town-specific title without em-dash separators', () =>
   assert.ok(html.includes('"@type":"Article"'));
 });
 
-test('renderHero includes town name and silhouette ref', () => {
+test('renderHero includes town name, silhouette ref, and consolidated subhead', () => {
   const html = renderHero({ townName: 'Fort Lee', townSlug: 'fort-lee', monthYear: 'May 2026' });
   assert.ok(html.includes('<h1>Fort Lee Real Estate</h1>'));
-  assert.ok(html.includes('Local market report'));
-  assert.ok(html.includes('May 2026'));
+  assert.ok(html.includes('Local Market Report for the Last Six Months Ending May 2026'));
   assert.ok(html.includes('/assets/silhouettes/fort-lee.svg'));
   assert.ok(html.includes('aria-label'));
 });
@@ -83,27 +82,38 @@ test('renderWhatThisMeans includes fallback class when fallback=true', () => {
   assert.ok(html.includes('Test paragraph.'));
 });
 
-test('renderDataTable includes all 7 metrics in new SF-led design', () => {
-  const html = renderDataTable({ medianSalePrice: 890000, homesSold: 47 });
-  assert.ok(html.includes('Median Sale Price'));
-  assert.ok(html.includes('Average Sale Price'));
-  assert.ok(html.includes('Median Last List Price'));
-  assert.ok(html.includes('Homes Sold'));
-  assert.ok(html.includes('Median Days on Market'));
-  assert.ok(html.includes('Median Sale-to-List Ratio'));
-  assert.ok(html.includes('% Sold Above Last List'));
-  // These were dropped because the NJMLS export does not provide them:
-  assert.ok(!html.includes('Median $/sqft'));
-  assert.ok(!html.includes('Months of Supply'));
-  assert.ok(!html.includes('Inventory'));
-  assert.ok(!html.includes('Pending Sales'));
-  assert.ok(!html.includes('Price Drops'));
+test('renderDataTable shows the metrics that have data and skips the rest', () => {
+  const html = renderDataTable({
+    medianSalePrice: 890000,
+    averageSalePrice: 1100000,
+    medianListPrice: 925000,
+    homesSold: 47,
+    medianDom: 32,
+    fastestSaleDays: 4,
+    saleToList: 0.992,
+    soldAboveList: 0.30,
+    lowestSale: 550000,
+    highestSale: 3200000
+  });
+  assert.ok(html.includes('Median sale price'));
+  assert.ok(html.includes('Average sale price'));
+  assert.ok(html.includes('Median last list price'));
+  assert.ok(html.includes('Single-family closings (last 6 months)'));
+  assert.ok(html.includes('Median days on market'));
+  assert.ok(html.includes('Fastest sale (days on market)'));
+  assert.ok(html.includes('Median sale-to-list ratio'));
+  assert.ok(html.includes('Share of sales that went above list'));
+  assert.ok(html.includes('Lowest single-family sale'));
+  assert.ok(html.includes('Highest single-family sale'));
 });
 
-test('renderDataTable formats percent metrics as point deltas', () => {
-  const html = renderDataTable({ saleToList: 0.992, saleToListYoy: 0.04 });
+test('renderDataTable formats percent values with one decimal place', () => {
+  const html = renderDataTable({ saleToList: 0.992 });
   assert.ok(html.includes('99.2%'));
-  assert.ok(html.includes('4 pts'));
+});
+
+test('renderDataTable returns empty when no metrics have data', () => {
+  assert.equal(renderDataTable({}), '');
 });
 
 test('renderPropertyBreakdown shows only provided types', () => {
@@ -209,10 +219,12 @@ test('renderFooter shows month, NJ MLS attribution, methodology note, and towns 
 test('renderSub10Placeholder shows the actual SF activity', () => {
   const html = renderSub10Placeholder({
     townName: 'Teterboro',
-    threeMonthBlend: { medianSalePrice: 500000, homesSold: 4, saleToList: 0.95 }
+    threeMonthBlend: { medianSalePrice: 500000, homesSold: 4, saleToList: 0.95 },
+    periodLabel: 'the last 6 months ending April 2026'
   });
   assert.ok(html.includes('Teterboro'));
-  assert.ok(html.includes('4 homes')); // count rendered
+  // Count appears in the heading text "4 single-family homes" and in the list
+  assert.ok(html.includes('4 single-family homes') || html.includes('>4<'));
   assert.ok(html.includes('$500,000'));
   assert.ok(html.includes('95.0%'));
   // Inline form was removed - CTAs at bottom handle lead capture

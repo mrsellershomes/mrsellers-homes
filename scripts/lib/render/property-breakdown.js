@@ -1,6 +1,13 @@
-// Renders the per-property-type breakdown cards (single-family, multi-family,
-// condo). Each type only renders if data is provided; section returns empty
-// string if no types qualify.
+// Renders per-property-type cards. Each card shows 8 metrics computed
+// over the 6-month rolling window:
+//   1. Median sale price
+//   2. Average sale price
+//   3. Sold (last 6 months) - the count
+//   4. Median sale-to-list ratio
+//   5. Lowest sale (bolded - range info)
+//   6. Highest sale (bolded - range info)
+//   7. % of sales over asking
+//   8. Fastest sale (lowest DOM)
 
 function fmtCurrency(n) {
   if (n == null || isNaN(n)) return 'N/A';
@@ -12,24 +19,28 @@ function fmtPct(n, digits = 1) {
   return (n * 100).toFixed(digits) + '%';
 }
 
-function card(typeLabel, townName, monthYear, d) {
+function fmtDays(n) {
+  if (n == null || isNaN(n)) return 'N/A';
+  return Math.round(n) + (Math.round(n) === 1 ? ' day' : ' days');
+}
+
+function card(typeLabel, townName, periodLabel, d) {
   return `<article class="property-card">
   <h3>${typeLabel} in ${townName}</h3>
-  <p class="property-card-period">${monthYear}</p>
+  <p class="property-card-period">${periodLabel}</p>
   <ul class="property-card-stats">
     <li><span class="property-card-stat-label">Median sale price</span><span class="property-card-stat-value">${fmtCurrency(d.medianSalePrice)}</span></li>
     <li><span class="property-card-stat-label">Average sale price</span><span class="property-card-stat-value">${fmtCurrency(d.averageSalePrice)}</span></li>
-    <li><span class="property-card-stat-label">Sold this month</span><span class="property-card-stat-value">${d.homesSold ?? 'N/A'}</span></li>
+    <li><span class="property-card-stat-label">Sold (last 6 months)</span><span class="property-card-stat-value">${d.homesSold ?? 'N/A'}</span></li>
     <li><span class="property-card-stat-label">Median sale-to-list</span><span class="property-card-stat-value">${fmtPct(d.saleToList)}</span></li>
+    <li class="property-card-stat-highlight"><span class="property-card-stat-label">Lowest sale</span><span class="property-card-stat-value">${fmtCurrency(d.lowestSale)}</span></li>
+    <li class="property-card-stat-highlight"><span class="property-card-stat-label">Highest sale</span><span class="property-card-stat-value">${fmtCurrency(d.highestSale)}</span></li>
+    <li><span class="property-card-stat-label">% sold over asking</span><span class="property-card-stat-value">${fmtPct(d.percentOverAsking, 0)}</span></li>
+    <li><span class="property-card-stat-label">Fastest sale</span><span class="property-card-stat-value">${fmtDays(d.fastestSaleDays)}</span></li>
   </ul>
 </article>`;
 }
 
-// Compose a heading that's honest about what's actually in the section.
-// "By property type" implies more content when only one card renders. A
-// research-heavy visitor reading "By property type" expects multiple
-// types, and silence on the others reads as missing data rather than as
-// an intentional design choice.
 function headingFor(types) {
   if (types.length === 0) return null;
   if (types.length === 3) return 'By property type';

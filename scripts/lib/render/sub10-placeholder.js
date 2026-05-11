@@ -13,18 +13,23 @@ function fmtPct(n, digits = 1) {
   return (n * 100).toFixed(digits) + '%';
 }
 
-export function renderSub10Placeholder({ townName, threeMonthBlend }) {
+export function renderSub10Placeholder({ townName, threeMonthBlend, periodLabel }) {
   const blend = threeMonthBlend || {};
-  const count = blend.homesSold ?? null;
-  // Plain-English number
-  const countWord = count === 1 ? 'one' : count === 0 ? 'zero' : count == null ? 'fewer than 10' : String(count);
+  const count = blend.homesSold ?? 0;
+  const countWord = count === 0
+    ? 'no'
+    : count === 1
+      ? 'one'
+      : String(count);
+  const homesNoun = count === 1 ? 'home' : 'homes';
+  const period = periodLabel || 'the last 6 months';
 
   return `<section class="sub10-placeholder" aria-label="Single-family activity for ${townName}">
-  <p class="sub10-eyebrow">Single-family in ${townName}, April 2026</p>
-  <h2>Only ${countWord} ${count === 1 ? 'home' : 'homes'} closed last month.</h2>
-  <p class="sub10-context">In ${townName}, single-family closings happen sporadically. One month is not a trend, and a single luxury sale would swing any median calculation. Rather than show data that would misrepresent the market, here is what the single-family activity actually was.</p>
+  <p class="sub10-eyebrow">Single-family in ${townName}, ${period}</p>
+  <h2>${countWord.charAt(0).toUpperCase() + countWord.slice(1)} single-family ${homesNoun} closed in the last 6 months.</h2>
+  <p class="sub10-context">In ${townName}, single-family closings happen sporadically. Six months of data is not enough to compute meaningful medians, and a single luxury sale would swing any number we showed. Rather than present data that would misrepresent the market, here is what the activity actually was.</p>
   <ul class="three-month-blend" aria-label="Single-family activity">
-    <li><span class="blend-label">Single-family closings</span><span class="blend-value">${count ?? 'N/A'}</span></li>
+    <li><span class="blend-label">Single-family closings</span><span class="blend-value">${count}</span></li>
     <li><span class="blend-label">Median sale price</span><span class="blend-value">${fmtCurrency(blend.medianSalePrice)}</span></li>
     <li><span class="blend-label">Sale-to-list ratio</span><span class="blend-value">${blend.saleToList != null ? fmtPct(blend.saleToList) + (blend.saleToList > 1 ? ' (sold over asking)' : blend.saleToList < 1 ? ' (sold under asking)' : ' (sold at asking)') : 'N/A'}</span></li>
   </ul>
