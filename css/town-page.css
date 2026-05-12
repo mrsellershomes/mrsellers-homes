@@ -369,8 +369,45 @@ body.silhouette-modal-open {
   height: auto;
   display: block;
 }
-.price-bar rect { transition: fill 0.15s; }
-.price-bar:hover rect { fill: var(--red-dark); }
+.price-bar { cursor: crosshair; }
+.price-bar-fill { transition: fill 0.15s; pointer-events: none; }
+.price-bar-count { pointer-events: none; }
+.price-bar:hover .price-bar-fill { fill: var(--red-dark); }
+
+/* Floating chart tooltip that follows the cursor over histogram bars.
+   Positioned just above the cursor by JS (see site-nav.js inline script)
+   so it does not cover the cursor or extend onto neighboring charts. */
+.chart-tooltip {
+  position: fixed;
+  z-index: 9999;
+  background: var(--black);
+  color: var(--white);
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.3;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1px;
+  pointer-events: none;
+  max-width: 200px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.chart-tooltip[hidden] { display: none; }
+.chart-tooltip-primary {
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+}
+.chart-tooltip-secondary {
+  color: rgba(255,255,255,0.78);
+  font-size: 11px;
+  text-align: center;
+}
 
 .price-distribution-compact {
   margin-top: 16px;

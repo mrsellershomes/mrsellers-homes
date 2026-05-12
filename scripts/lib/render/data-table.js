@@ -9,17 +9,18 @@
 // table for no signal. Once the site has been running for 12+ months and we
 // have a deep enough archive, we can reintroduce the comparison columns.
 
+// Lowest and Highest sale are intentionally NOT in this table - those values
+// already appear prominently on the Single-Family card (in the headline-context
+// "Range $X to $Y" line). Showing them in two places creates noise.
 const ROWS = [
   { key: 'medianSalePrice', label: 'Median sale price', fmt: 'currency' },
   { key: 'averageSalePrice', label: 'Average sale price', fmt: 'currency' },
   { key: 'medianListPrice', label: 'Median last list price', fmt: 'currency' },
-  { key: 'homesSold', label: 'Single-family closings (last 6 months)', fmt: 'integer' },
+  { key: 'homesSold', label: 'Single-family closings', fmt: 'integer' },
   { key: 'medianDom', label: 'Median days on market', fmt: 'days' },
   { key: 'fastestSaleDays', label: 'Fastest sale (days on market)', fmt: 'days' },
   { key: 'saleToList', label: 'Median sale-to-list ratio', fmt: 'percent' },
-  { key: 'soldAboveList', label: 'Share of sales that went above list', fmt: 'percent' },
-  { key: 'lowestSale', label: 'Lowest single-family sale', fmt: 'currency' },
-  { key: 'highestSale', label: 'Highest single-family sale', fmt: 'currency' }
+  { key: 'soldAboveList', label: 'Share of sales that went above list', fmt: 'percent' }
 ];
 
 function format(value, fmt) {

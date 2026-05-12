@@ -104,6 +104,10 @@ ${ctas}
 ${townFooter}
 </main>
 ${siteFooter}
+<div class="chart-tooltip" role="tooltip" hidden>
+  <span class="chart-tooltip-primary"></span>
+  <span class="chart-tooltip-secondary"></span>
+</div>
 ${mobileMenu}
 <script src="/js/fub-submit.js"></script>
 </body>

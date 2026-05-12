@@ -34,7 +34,7 @@ test('renderMeta includes town-specific title without em-dash separators', () =>
 test('renderHero includes town name, silhouette ref, and consolidated subhead', () => {
   const html = renderHero({ townName: 'Fort Lee', townSlug: 'fort-lee', monthYear: 'May 2026' });
   assert.ok(html.includes('<h1>Fort Lee Real Estate</h1>'));
-  assert.ok(html.includes('Local Market Report for the Last Six Months Ending May 2026'));
+  assert.ok(html.includes('Local market report for the last 6 months ending May 2026'));
   assert.ok(html.includes('/assets/silhouettes/fort-lee.svg'));
   assert.ok(html.includes('aria-label'));
 });
@@ -91,20 +91,20 @@ test('renderDataTable shows the metrics that have data and skips the rest', () =
     medianDom: 32,
     fastestSaleDays: 4,
     saleToList: 0.992,
-    soldAboveList: 0.30,
-    lowestSale: 550000,
-    highestSale: 3200000
+    soldAboveList: 0.30
   });
   assert.ok(html.includes('Median sale price'));
   assert.ok(html.includes('Average sale price'));
   assert.ok(html.includes('Median last list price'));
-  assert.ok(html.includes('Single-family closings (last 6 months)'));
+  assert.ok(html.includes('Single-family closings'));
   assert.ok(html.includes('Median days on market'));
   assert.ok(html.includes('Fastest sale (days on market)'));
   assert.ok(html.includes('Median sale-to-list ratio'));
   assert.ok(html.includes('Share of sales that went above list'));
-  assert.ok(html.includes('Lowest single-family sale'));
-  assert.ok(html.includes('Highest single-family sale'));
+  // Lowest and Highest sale are intentionally NOT in the data table -
+  // they appear in the Single-Family card range line instead.
+  assert.ok(!html.includes('Lowest single-family sale'));
+  assert.ok(!html.includes('Highest single-family sale'));
 });
 
 test('renderDataTable formats percent values with one decimal place', () => {
@@ -116,7 +116,7 @@ test('renderDataTable returns empty when no metrics have data', () => {
   assert.equal(renderDataTable({}), '');
 });
 
-test('renderPropertyBreakdown shows only provided types', () => {
+test('renderPropertyBreakdown intentionally omits Single-Family (covered by page headline) and renders other provided types', () => {
   const html = renderPropertyBreakdown({
     townName: 'Fort Lee',
     monthYear: 'May 2026',
@@ -125,8 +125,11 @@ test('renderPropertyBreakdown shows only provided types', () => {
     condoTownhouse: { medianSalePrice: 600000, homesSold: 25 },
     coop: { medianSalePrice: 250000, homesSold: 30 }
   });
-  // Each type renders its own card; type label appears in the h3.
-  assert.ok(html.includes('<h3>Single-Family</h3>'));
+  // Single-Family is intentionally NOT rendered here because the page
+  // headline (stat tiles + wide histogram + AI commentary + data table)
+  // already covers SF four times above. The "What else is moving"
+  // section is for everything other than SF.
+  assert.ok(!html.includes('<h3>Single-Family</h3>'));
   assert.ok(html.includes('<h3>Condo &amp; Townhouse</h3>') || html.includes('<h3>Condo & Townhouse</h3>'));
   assert.ok(html.includes('<h3>Co-op</h3>'));
   assert.ok(!html.includes('Multi-Family'));

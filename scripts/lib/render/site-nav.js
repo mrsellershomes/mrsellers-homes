@@ -116,5 +116,59 @@ export function renderMobileMenuScript() {
         if (e.key === 'Escape') closeAll();
       });
     })();
+
+    // Histogram bar tooltips: hovering anywhere over a price bucket's
+    // vertical column (the invisible full-height hit area) shows a small
+    // floating tooltip near the cursor with the range and count. Works
+    // across all charts on the page via a single global mousemove handler.
+    (function () {
+      var tooltip = document.querySelector('.chart-tooltip');
+      if (!tooltip) return;
+      var primaryEl = tooltip.querySelector('.chart-tooltip-primary');
+      var secondaryEl = tooltip.querySelector('.chart-tooltip-secondary');
+      var currentBar = null;
+
+      function showFor(bar, x, y) {
+        var primary = bar.getAttribute('data-tooltip-primary') || '';
+        var secondary = bar.getAttribute('data-tooltip-secondary') || '';
+        primaryEl.textContent = primary;
+        secondaryEl.textContent = secondary;
+        tooltip.removeAttribute('hidden');
+        // Center horizontally on cursor, float just above so the cursor
+        // does not cover the tooltip text. Falls back to below the cursor
+        // only when there is no room above.
+        var pad = 10;
+        var ttW = tooltip.offsetWidth || 160;
+        var ttH = tooltip.offsetHeight || 38;
+        var left = x - (ttW / 2);
+        var top = y - ttH - pad;
+        // Clamp horizontally to viewport
+        if (left < 8) left = 8;
+        if (left + ttW > window.innerWidth - 8) left = window.innerWidth - ttW - 8;
+        // If no room above, place below cursor instead
+        if (top < 8) top = y + pad;
+        tooltip.style.left = left + 'px';
+        tooltip.style.top = top + 'px';
+      }
+
+      function hide() {
+        tooltip.setAttribute('hidden', '');
+        currentBar = null;
+      }
+
+      document.addEventListener('mousemove', function (e) {
+        var target = e.target;
+        if (!target || !target.closest) return;
+        var bar = target.closest('.price-bar');
+        if (bar) {
+          currentBar = bar;
+          showFor(bar, e.clientX, e.clientY);
+        } else if (currentBar) {
+          hide();
+        }
+      });
+
+      document.addEventListener('mouseleave', hide);
+    })();
   </script>`;
 }

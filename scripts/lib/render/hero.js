@@ -12,7 +12,7 @@ export function renderHero({ townName, townSlug, monthYear }) {
   </button>
   <div class="town-hero-text">
     <h1>${townName} Real Estate</h1>
-    <p class="town-hero-sub">Local Market Report for the Last Six Months Ending ${monthYear}</p>
+    <p class="town-hero-sub">Local market report for the last 6 months ending ${monthYear}</p>
     <p class="town-hero-attr">Updated monthly. Sales data from NJ MLS. School data from NJ DOE.</p>
   </div>
 </header>

@@ -97,21 +97,35 @@ export function renderPriceDistribution({ prices, townName, propertyTypeLabel, v
     const x = padding.left + i * (barWidth + barGap) + (barGap / 2);
     const h = (b.count / maxCount) * chartH;
     const y = H - padding.bottom - h;
-    const labelMid = b.lo + (b.hi - b.lo) / 2;
     const rangeLabel = b.isLast
       ? `${fmtPrice(b.lo)}+`
       : `${fmtPrice(b.lo)}-${fmtPrice(b.hi)}`;
-    const pct = totalSales > 0 ? Math.round((b.count / totalSales) * 100) : 0;
-    const titleText = `${rangeLabel}: ${b.count} ${b.count === 1 ? 'sale' : 'sales'} (${pct}%)`;
-    return { x, y, w: barWidth, h, count: b.count, rangeLabel, titleText, lo: b.lo, hi: b.hi, pct };
+    const saleNoun = b.count === 1 ? 'sale' : 'sales';
+    const titleText = `${rangeLabel}: ${b.count} ${saleNoun}`;
+    const tooltipPrimary = rangeLabel;
+    const tooltipSecondary = `${b.count} ${saleNoun}`;
+    return { x, y, w: barWidth, h, count: b.count, rangeLabel, titleText, tooltipPrimary, tooltipSecondary, lo: b.lo, hi: b.hi };
   });
 
+  // Each bar group includes an invisible "hit area" rectangle spanning the
+  // full chart height for the bucket so the entire vertical column triggers
+  // the hover tooltip (not just the colored bar at the bottom). Bars with
+  // very low counts would otherwise have a tiny hit target. The visible
+  // colored rect renders on top with pointer-events: none so the hit area
+  // captures all hover events.
+  // Each bar group uses aria-label (not <title>) for accessibility. <title>
+  // triggers the browser's slow native tooltip on hover which duplicated
+  // our custom floating tooltip. aria-label provides the same info to
+  // screen readers without the native tooltip side-effect.
+  const chartTop = padding.top;
   const barEls = bars.map(bar => {
     const countLabelY = bar.h > 18 ? bar.y + 14 : bar.y - 6;
     const countLabelFill = bar.h > 18 ? '#FFFFFF' : '#111111';
-    return `<g class="price-bar"><title>${bar.titleText}</title>
-      <rect x="${bar.x.toFixed(1)}" y="${bar.y.toFixed(1)}" width="${bar.w.toFixed(1)}" height="${bar.h.toFixed(1)}" rx="2" fill="#E2001A"></rect>
-      ${bar.count > 0 ? `<text x="${(bar.x + bar.w / 2).toFixed(1)}" y="${countLabelY.toFixed(1)}" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="${isCompact ? 11 : 12}" font-weight="700" fill="${countLabelFill}">${bar.count}</text>` : ''}
+    const dataAttrs = `data-tooltip-primary="${bar.tooltipPrimary}" data-tooltip-secondary="${bar.tooltipSecondary}"`;
+    return `<g class="price-bar" role="img" aria-label="${bar.titleText}" ${dataAttrs}>
+      <rect class="price-bar-hit" x="${bar.x.toFixed(1)}" y="${chartTop}" width="${bar.w.toFixed(1)}" height="${(H - padding.bottom - chartTop).toFixed(1)}" fill="transparent"></rect>
+      <rect class="price-bar-fill" x="${bar.x.toFixed(1)}" y="${bar.y.toFixed(1)}" width="${bar.w.toFixed(1)}" height="${bar.h.toFixed(1)}" rx="2" fill="#E2001A"></rect>
+      ${bar.count > 0 ? `<text class="price-bar-count" x="${(bar.x + bar.w / 2).toFixed(1)}" y="${countLabelY.toFixed(1)}" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="${isCompact ? 11 : 12}" font-weight="700" fill="${countLabelFill}">${bar.count}</text>` : ''}
     </g>`;
   }).join('');
 
@@ -156,10 +170,20 @@ export function renderPriceDistribution({ prices, townName, propertyTypeLabel, v
 
   const axis = `<line x1="${padding.left}" y1="${axisY}" x2="${W - padding.right}" y2="${axisY}" stroke="#e0e0e0" stroke-width="1"></line>`;
 
+  // Faint dashed horizontal line at the max-count height so the reader can
+  // visually anchor the tallest bar(s) and gauge other bars relative to it.
+  const maxLineY = H - padding.bottom - chartH;
+  const maxLine = `<line x1="${padding.left}" y1="${maxLineY.toFixed(1)}" x2="${W - padding.right}" y2="${maxLineY.toFixed(1)}" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="3 4"></line>
+    <text x="${(W - padding.right + 2).toFixed(1)}" y="${(maxLineY + 4).toFixed(1)}" text-anchor="start" font-family="DM Sans, sans-serif" font-size="${tickFontSize}" font-weight="500" fill="#999999">${maxCount}</text>`;
+
   const ariaLabel = `Price distribution of ${totalSales} ${propertyTypeLabel.toLowerCase()} sales in ${townName} over the last 6 months`;
 
+  // role="img" + aria-label provides screen-reader access without rendering
+  // a native browser <title> tooltip on hover.
+  // Render order: max-line first (behind bars), then bars on top, then
+  // axis and labels last for full readability.
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${ariaLabel}" class="price-distribution-svg">
-    <title>${ariaLabel}</title>
+    ${maxLine}
     ${axis}
     ${barEls}
     ${xLabels}

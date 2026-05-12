@@ -84,7 +84,7 @@ function card(typeLabel, townName, periodLabel, d, opts = {}) {
 </article>`;
 }
 
-const CONDO_TOWNHOUSE_NOTE = 'Includes apartment-style condos, fee-simple townhouses, and new-construction side-by-side duplexes (which agents sometimes list as either type).';
+const CONDO_TOWNHOUSE_NOTE = 'Includes apartment-style condos, townhouse complexes, and new-construction side-by-side duplexes.';
 const COOP_NOTE = 'Co-ops are share ownership rather than fee-simple, with board approval and stricter financing requirements. Lower prices, but a different product than condos.';
 
 // Build an Oxford-comma list of building names.
@@ -105,15 +105,19 @@ function buildNote(baseNote, townName, buildings, label) {
 }
 
 export function renderPropertyBreakdown({ townName, monthYear, singleFamily, multiFamily, condoTownhouse, coop, notableBuildings = {} }) {
+  // Note: Single-Family is intentionally NOT rendered here. SF is the page
+  // headline (stat tiles + wide histogram + AI commentary + data table all
+  // cover it). The "What else is moving" section is for everything OTHER
+  // than single-family. Including an SF card here would duplicate data the
+  // visitor has already seen four times above. The singleFamily parameter
+  // is still accepted for API consistency.
+  void singleFamily;
   const cards = [];
-  if (singleFamily) {
-    cards.push(card('Single-Family', townName, monthYear, singleFamily, { includeHistogram: false }));
-  }
   if (multiFamily) {
     cards.push(card('Multi-Family (2-4 unit)', townName, monthYear, multiFamily));
   }
   if (condoTownhouse) {
-    const note = buildNote(CONDO_TOWNHOUSE_NOTE, townName, notableBuildings.condoTownhouse, 'condo and townhouse buildings');
+    const note = buildNote(CONDO_TOWNHOUSE_NOTE, townName, notableBuildings.condoTownhouse, 'condo buildings');
     cards.push(card('Condo & Townhouse', townName, monthYear, condoTownhouse, { note }));
   }
   if (coop) {

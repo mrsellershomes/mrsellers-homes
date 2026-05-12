@@ -42,6 +42,11 @@ function arrow(yoy) {
 }
 
 function tile(label, valueHtml, trendHtml, tooltip, key) {
+  // Only render the trend row when there is actual trend content. Empty
+  // trend HTML would leave phantom whitespace at the bottom of each tile.
+  const trendBlock = trendHtml
+    ? `<div class="stat-tile-trend">${trendHtml}</div>`
+    : '';
   return `<div class="stat-tile" data-tile="${key}">
   <div class="stat-tile-header">
     <span class="stat-tile-label">${label}</span>
@@ -51,7 +56,7 @@ function tile(label, valueHtml, trendHtml, tooltip, key) {
     </span>
   </div>
   <div class="stat-tile-value">${valueHtml}</div>
-  <div class="stat-tile-trend">${trendHtml}</div>
+  ${trendBlock}
 </div>`;
 }
 
