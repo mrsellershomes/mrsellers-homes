@@ -131,7 +131,27 @@
     ],
     "blogs": [],
     "aboutText": "",
-    "multiFamily": true
+    "multiFamily": true,
+    "notableBuildings": {
+      "coop": [
+        "Horizon House",
+        "The Plaza",
+        "Mediterranean Towers North and West",
+        "Linwood Park",
+        "Century Tower",
+        "The Colony"
+      ],
+      "condoTownhouse": [
+        "Buckingham",
+        "Royal Buckingham",
+        "Atrium Palace",
+        "Mediterranean South",
+        "River Ridge",
+        "The Palisades",
+        "Westgate",
+        "Whiteman House"
+      ]
+    }
   },
   "franklin-lakes": {
     "videos": [],

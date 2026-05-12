@@ -120,13 +120,18 @@ test('renderPropertyBreakdown shows only provided types', () => {
   const html = renderPropertyBreakdown({
     townName: 'Fort Lee',
     monthYear: 'May 2026',
-    singleFamily: { medianSalePrice: 1400000, medianPpsf: 542, homesSold: 12 },
+    singleFamily: { medianSalePrice: 1400000, homesSold: 12 },
     multiFamily: null,
-    condo: { medianSalePrice: 600000, medianPpsf: 450, homesSold: 25 }
+    condoTownhouse: { medianSalePrice: 600000, homesSold: 25 },
+    coop: { medianSalePrice: 250000, homesSold: 30 }
   });
-  assert.ok(html.includes('Single-Family in Fort Lee'));
-  assert.ok(html.includes('Condo / Co-op in Fort Lee'));
+  // Each type renders its own card; type label appears in the h3.
+  assert.ok(html.includes('<h3>Single-Family</h3>'));
+  assert.ok(html.includes('<h3>Condo &amp; Townhouse</h3>') || html.includes('<h3>Condo & Townhouse</h3>'));
+  assert.ok(html.includes('<h3>Co-op</h3>'));
   assert.ok(!html.includes('Multi-Family'));
+  // Town name appears in section header / aria-label
+  assert.ok(html.includes('Fort Lee'));
 });
 
 test('renderPropertyBreakdown returns empty when no types', () => {

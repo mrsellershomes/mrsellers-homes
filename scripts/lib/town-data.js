@@ -17,8 +17,14 @@
 //   medianSalePrice, averageSalePrice, homesSold, saleToList,
 //   lowestSale, highestSale, percentOverAsking, fastestSaleDays, medianDom
 
-const MIN_SF_HEADLINE = 10;          // SF below this -> sub10 placeholder
-const MIN_SECONDARY_TYPE = 10;        // MF/Condo below this -> card hidden
+// Per-type thresholds, applied to 6-month rolling totals. A property type
+// must have at least this many closings over the window to render its card
+// or drive the page headline. Spec: "maximum coverage - any property type
+// with at least one sale every couple of months gets a card." Visitors can
+// see the underlying sale count on each card and judge sample reliability
+// for themselves.
+const MIN_SF_HEADLINE = 3;            // SF below this -> sub-threshold placeholder
+const MIN_SECONDARY_TYPE = 3;         // MF/Condo+TH/Co-op below this -> card hidden
 
 // Data-quality filter: rows where the sold-to-list ratio is outside this
 // band are excluded from analysis. These are almost always NJMLS data entry
@@ -100,7 +106,10 @@ function buildStats(rows) {
     percentOverAsking: pctOver,
     soldAboveList: pctOver,
     fastestSaleDays: fastestSaleDays(rows),
-    medianDom: median(rows.map(r => r.dom).filter(d => d != null && d >= 0))
+    medianDom: median(rows.map(r => r.dom).filter(d => d != null && d >= 0)),
+    // Raw sold prices passed through so the price-distribution histogram
+    // can bucket them for visualization. Not used by any other renderer.
+    salePrices: rows.map(r => r.soldPrice).filter(p => p != null)
   };
 }
 
@@ -127,6 +136,21 @@ function groupByTown(rows) {
 }
 
 /**
+ * Within the NJMLS Condo Coop Townhouse category (Cat=CCT), the actual
+ * Style field distinguishes apartment-style condos, fee-simple townhouses,
+ * and co-ops. We combine Condo and Townhouse into one bucket because
+ * agents inconsistently classify new-construction side-by-side duplexes
+ * between the two labels in Bergen County. Co-op is reliably classified
+ * by agents and represents a fundamentally different ownership structure
+ * (board approval, share ownership), so it gets its own card.
+ */
+function classifyCCT(row) {
+  const style = (row.style || '').trim();
+  if (style === 'Co-op' || style === 'Coop' || style === 'CO-OP') return 'coop';
+  return 'condo-townhouse'; // Condo, TWNHS, anything else within CCT
+}
+
+/**
  * Aggregate raw normalized rows into the per-town shape that the renderers
  * expect. `towns` is data/bergen-towns.json contents.
  */
@@ -138,7 +162,9 @@ export function aggregateTownData(rows, towns) {
     const townRows = byTown.get(town.name) || [];
     const sfRows = townRows.filter(r => r.propertyType === 'single-family');
     const mfRows = townRows.filter(r => r.propertyType === 'multi-family');
-    const condoRows = townRows.filter(r => r.propertyType === 'condo');
+    const cctRows = townRows.filter(r => r.propertyType === 'condo');
+    const condoTownhouseRows = cctRows.filter(r => classifyCCT(r) === 'condo-townhouse');
+    const coopRows = cctRows.filter(r => classifyCCT(r) === 'coop');
 
     const sfHasHeadline = sfRows.length >= MIN_SF_HEADLINE;
 
@@ -149,12 +175,19 @@ export function aggregateTownData(rows, towns) {
       propertyTypes: {
         singleFamily: sfHasHeadline ? buildStats(sfRows) : null,
         multiFamily: mfRows.length >= MIN_SECONDARY_TYPE ? buildStats(mfRows) : null,
-        condo: condoRows.length >= MIN_SECONDARY_TYPE ? buildStats(condoRows) : null
+        condoTownhouse: condoTownhouseRows.length >= MIN_SECONDARY_TYPE ? buildStats(condoTownhouseRows) : null,
+        coop: coopRows.length >= MIN_SECONDARY_TYPE ? buildStats(coopRows) : null
       },
-      // When SF is thin, drive the sub10 placeholder with whatever SF data
-      // we do have (even if it is 1-9 sales over 6 months). When SF > 0 = a
-      // story to tell. When SF == 0, sub10 carries zeros and the page calls
-      // it out honestly.
+      // Raw counts always exposed for diagnostic/logging - so the script
+      // never reports "0 sales" when sales exist but fall below threshold.
+      rawCounts: {
+        singleFamily: sfRows.length,
+        multiFamily: mfRows.length,
+        condoTownhouse: condoTownhouseRows.length,
+        coop: coopRows.length
+      },
+      // When SF is thin, drive the sub-threshold placeholder with whatever
+      // SF data we do have (even if it is 1-5 sales over 6 months).
       sub10: sfHasHeadline ? null : buildStats(sfRows)
     };
   }

@@ -18,6 +18,7 @@ import { renderCtas } from './ctas.js';
 import { renderFooter } from './footer.js';
 import { renderSub10Placeholder } from './sub10-placeholder.js';
 import { renderNeighbors } from './neighbors.js';
+import { renderPriceDistribution } from './price-distribution.js';
 import { renderSiteNav, renderSiteFooter, renderMobileMenuScript } from './site-nav.js';
 
 const TRACKING_HEAD = `<script async src="https://www.googletagmanager.com/gtag/js?id=G-5VC5MDECPH"></script>
@@ -47,14 +48,29 @@ export function renderTownPage(ctx) {
   // thin SF month should still feel like a substantive page that
   // interprets the data, not a dead end.
   const periodLabel = ctx.periodLabel || `the last 6 months ending ${monthYear}`;
+  // Price distribution histogram for SF, placed between the stat tiles and
+  // the AI commentary. Buyers see the headline numbers, then the visual
+  // distribution, then Tyler's interpretation. Hidden in sub10 mode since
+  // we do not have enough SF sample to build a meaningful histogram.
+  const priceDist = !sub10 && townData?.salePrices?.length >= 3
+    ? renderPriceDistribution({
+        prices: townData.salePrices,
+        townName,
+        propertyTypeLabel: 'Single-family',
+        variant: 'wide'
+      })
+    : '';
+
+  const notableBuildings = content?.notableBuildings || {};
   const dataSection = sub10
     ? `${renderSub10Placeholder({ townName, threeMonthBlend: sub10, periodLabel })}
 ${renderWhatThisMeans({ aiParagraph, fallback: aiParagraphFallback })}
-${renderPropertyBreakdown({ townName, monthYear: periodLabel, ...(propertyTypes || {}) })}`
+${renderPropertyBreakdown({ townName, monthYear: periodLabel, notableBuildings, ...(propertyTypes || {}) })}`
     : `${renderStatTiles(townData || {})}
+${priceDist}
 ${renderWhatThisMeans({ aiParagraph, fallback: aiParagraphFallback })}
 ${renderDataTable(townData || {})}
-${renderPropertyBreakdown({ townName, monthYear: periodLabel, ...(propertyTypes || {}) })}`;
+${renderPropertyBreakdown({ townName, monthYear: periodLabel, notableBuildings, ...(propertyTypes || {}) })}`;
 
   const aboutTown = renderAboutTown({ townName, aboutText: content?.aboutText || '' });
   const schools = renderSchools({ townName, schoolsData, summarySentence: schoolsSummary });

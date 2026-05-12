@@ -339,6 +339,59 @@ body.silhouette-modal-open {
 /* Make Median Sale Price the lead tile with bigger value */
 .stat-tile[data-tile="price"] .stat-tile-value { font-size: 32px; }
 
+/* ============== Price distribution chart ============== */
+.price-distribution-wide {
+  padding: 36px 0 32px;
+  border-bottom: 1px solid var(--gray-light);
+}
+.price-distribution-header {
+  margin-bottom: 16px;
+  max-width: 720px;
+}
+.price-distribution-header h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  color: var(--black);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+.price-distribution-subhead {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--gray-mid);
+}
+.price-distribution-svg {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  display: block;
+}
+.price-bar rect { transition: fill 0.15s; }
+.price-bar:hover rect { fill: var(--red-dark); }
+
+.price-distribution-compact {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--gray-light);
+}
+.price-distribution-compact .price-distribution-caption {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.price-distribution-compact .price-distribution-svg {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
 /* ============== What this means ============== */
 .what-this-means {
   background: #fdfaf3;
@@ -439,7 +492,15 @@ body.silhouette-modal-open {
 .data-cell-current { font-weight: 700; }
 
 /* ============== Property type breakdown ============== */
-.property-breakdown { padding: 40px 0; border-bottom: 1px solid var(--gray-light); }
+.property-breakdown { padding: 48px 0 40px; border-bottom: 1px solid var(--gray-light); }
+.property-breakdown-head { margin-bottom: 28px; max-width: 720px; }
+.property-breakdown-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--gray-mid);
+  margin-top: 4px;
+}
 .property-breakdown h2,
 .about-town h2,
 .schools-section h2,
@@ -456,55 +517,106 @@ body.silhouette-modal-open {
 }
 .property-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
 }
 .property-card {
-  background: var(--gray-bg-2);
+  background: var(--white);
   border: 1px solid var(--gray-light);
-  border-radius: 4px;
-  padding: 22px 24px;
+  border-radius: 8px;
+  padding: 28px 28px 24px;
+  display: flex;
+  flex-direction: column;
 }
-.property-card h3 {
+.property-card-head {
+  margin-bottom: 18px;
+}
+.property-card-head h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+  margin-bottom: 6px;
+}
+.property-card-meta {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  color: var(--gray-soft);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.property-card-headline {
+  margin-bottom: 22px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--gray-light);
+}
+.property-card-headline-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.property-card-headline-value {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--black);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 10px;
+}
+.property-card-headline-context {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: var(--gray-mid);
+  font-variant-numeric: tabular-nums;
+}
+
+.property-card-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px 18px;
+  margin: 0;
+}
+.property-card-metrics .property-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.property-card-metrics dt {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+  font-weight: 600;
+  margin: 0;
+}
+.property-card-metrics dd {
   font-family: 'DM Sans', sans-serif;
   font-size: 17px;
   font-weight: 700;
-  letter-spacing: -0.005em;
   color: var(--black);
-  margin-bottom: 4px;
+  font-variant-numeric: tabular-nums;
+  margin: 0;
 }
-.property-card-period {
+
+.property-card-note {
   font-family: 'DM Sans', sans-serif;
   font-size: 12px;
+  line-height: 1.6;
   color: var(--gray-mid);
-  margin-bottom: 14px;
-}
-.property-card-stats { list-style: none; }
-.property-card-stats li {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 0;
-  border-bottom: 0.5px solid var(--gray-light);
-  font-size: 14px;
-}
-.property-card-stats li:last-child { border-bottom: none; }
-.property-card-stat-label {
-  font-family: 'DM Sans', sans-serif;
-  color: var(--gray-mid);
-}
-.property-card-stat-value {
-  font-family: 'DM Sans', sans-serif;
-  color: var(--black);
-  font-weight: 600;
-  font-variant-numeric: tabular-nums;
-}
-.property-card-stat-highlight .property-card-stat-value {
-  color: var(--red);
-  font-weight: 700;
-}
-.property-card-stat-highlight .property-card-stat-label {
-  color: var(--black);
-  font-weight: 500;
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid var(--gray-light);
+  font-style: normal;
 }
 
 /* ============== About town ============== */

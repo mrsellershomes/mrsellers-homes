@@ -33,11 +33,20 @@ if (!fortLee) {
   process.exit(1);
 }
 
-console.log('Fort Lee:');
-console.log('  Single-family closings (6 mo):', fortLee.propertyTypes.singleFamily?.homesSold ?? (fortLee.sub10?.homesSold ?? 0));
-console.log('  Condo closings (6 mo):       ', fortLee.propertyTypes.condo?.homesSold ?? 0);
-console.log('  Multi-family closings (6 mo):', fortLee.propertyTypes.multiFamily?.homesSold ?? 0);
-console.log('  Sub-10 triggered?            ', !!fortLee.sub10);
+// Show RAW counts so we never mislead about whether sales exist. The
+// "card rendered?" flag tells us if the card cleared the >=6 threshold.
+console.log('Fort Lee raw counts (6 mo):');
+const rc = fortLee.rawCounts;
+const pt = fortLee.propertyTypes;
+const fmt = (count, type) => {
+  const rendered = pt[type] ? 'card renders' : 'below threshold, card hidden';
+  return `${String(count).padStart(4)} (${rendered})`;
+};
+console.log(`  Single-family       : ${fmt(rc.singleFamily, 'singleFamily')}`);
+console.log(`  Multi-family        : ${fmt(rc.multiFamily, 'multiFamily')}`);
+console.log(`  Condo + Townhouse   : ${fmt(rc.condoTownhouse, 'condoTownhouse')}`);
+console.log(`  Co-op               : ${fmt(rc.coop, 'coop')}`);
+console.log(`  Sub-threshold SF?   : ${fortLee.sub10 ? 'YES (headline replaced with placeholder)' : 'NO'}`);
 
 const town = towns.find(t => t.slug === 'fort-lee');
 
@@ -46,18 +55,19 @@ const town = towns.find(t => t.slug === 'fort-lee');
 // hand-drafted from the actual computed numbers so Tyler can see what the
 // AI section should feel like at full quality.
 const sf = fortLee.propertyTypes.singleFamily;
-const condo = fortLee.propertyTypes.condo;
+const ct = fortLee.propertyTypes.condoTownhouse;
+const co = fortLee.propertyTypes.coop;
+const mf = fortLee.propertyTypes.multiFamily;
 const sfCount = sf?.homesSold ?? fortLee.sub10?.homesSold ?? 0;
-const condoCount = condo?.homesSold ?? 0;
+const ctCount = ct?.homesSold ?? 0;
+const coCount = co?.homesSold ?? 0;
+const mfCount = mf?.homesSold ?? 0;
 
-let aiParagraph;
-if (sf && condo) {
-  aiParagraph = `Over the last 6 months in Fort Lee, ${condoCount} condo and co-op closings dominated the activity versus ${sfCount} single-family closings. That ratio is typical for Fort Lee, where the housing stock is heavily weighted toward Hudson River-view buildings like Plaza Towers, Mediterranean Towers, Atrium Palace, and Hudson Lights. The condo market is the everyday market here. Single-family inventory is sparse, and when an SF home does come up it tends to draw competitive offers, but the volume is too thin for a typical buyer to count on month-to-month availability.`;
-} else if (condo && !sf) {
-  aiParagraph = `Over the last 6 months in Fort Lee, ${condoCount} condo and co-op closings carried the market. Single-family activity was too thin over this window to feature as a headline stat, which is typical for Fort Lee: the housing stock is heavily weighted toward Hudson River-view buildings like Plaza Towers, Mediterranean Towers, Atrium Palace, and Hudson Lights. The condo and co-op market is the everyday market here.`;
-} else {
-  aiParagraph = '';
-}
+// Hand-drafted Tyler-voice paragraph for Fort Lee. In production the AI
+// generator writes this monthly from the aggregated stats; for tonight's
+// preview we hand-draft to show what the AI section should feel like at
+// full quality once we wire up Claude Haiku in Phase 3.
+const aiParagraph = `Over the last 6 months in Fort Lee, the market breaks into four distinct lanes. Co-ops carried the biggest entry-level volume (${coCount} closings at a median around $250K), driven by older buildings like Horizon House and The Plaza. Condos and townhouses combined were the largest attached-housing market (${ctCount} closings) with a wide price range from mid-$200K units up to luxury closings past $2M in buildings like Atrium Palace. Single-family is rare but exists (${sfCount} closings), with a median over $1M and homes that tend to draw strong offers when they come up. Multi-family had ${mfCount} closings, real activity but lower volume than the rest. If you are reading this and trying to figure out which lane fits you, that is the kind of conversation worth having directly.`;
 
 // Geographic neighbors for the comparison strip.
 const neighbors = [

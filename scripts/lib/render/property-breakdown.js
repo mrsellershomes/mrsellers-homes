@@ -1,17 +1,27 @@
-// Renders per-property-type cards. Each card shows 8 metrics computed
-// over the 6-month rolling window:
-//   1. Median sale price
-//   2. Average sale price
-//   3. Sold (last 6 months) - the count
-//   4. Median sale-to-list ratio
-//   5. Lowest sale (bolded - range info)
-//   6. Highest sale (bolded - range info)
-//   7. % of sales over asking
-//   8. Fastest sale (lowest DOM)
+// Renders per-property-type cards beneath the headline stat tiles.
+// Layout philosophy: each card should read like a small market brief, not
+// a spreadsheet row. The median sale price is the visual hero; everything
+// else supports it. Range and average are pulled inline with the headline
+// so the eye reads "median, context, secondary metrics, chart."
+
+import { renderPriceDistribution } from './price-distribution.js';
 
 function fmtCurrency(n) {
   if (n == null || isNaN(n)) return 'N/A';
   return '$' + Math.round(n).toLocaleString();
+}
+
+function fmtCurrencyShort(n) {
+  // Compact for inline contexts: $1.1M, $750K, $4.2M
+  if (n == null || isNaN(n)) return 'N/A';
+  if (n >= 1000000) {
+    const m = n / 1000000;
+    return '$' + (m === Math.floor(m) ? m.toFixed(0) : m.toFixed(1)) + 'M';
+  }
+  if (n >= 1000) {
+    return '$' + Math.round(n / 1000) + 'K';
+  }
+  return '$' + Math.round(n);
 }
 
 function fmtPct(n, digits = 1) {
@@ -21,52 +31,102 @@ function fmtPct(n, digits = 1) {
 
 function fmtDays(n) {
   if (n == null || isNaN(n)) return 'N/A';
-  return Math.round(n) + (Math.round(n) === 1 ? ' day' : ' days');
+  const d = Math.round(n);
+  return d + (d === 1 ? ' day' : ' days');
 }
 
-function card(typeLabel, townName, periodLabel, d) {
+function card(typeLabel, townName, periodLabel, d, opts = {}) {
+  const includeHistogram = opts.includeHistogram !== false;
+  const note = opts.note || '';
+
+  const histogram = (includeHistogram && d.salePrices && d.salePrices.length >= 3)
+    ? renderPriceDistribution({
+        prices: d.salePrices,
+        townName,
+        propertyTypeLabel: typeLabel,
+        variant: 'compact'
+      })
+    : '';
+
+  const noteHtml = note ? `<p class="property-card-note">${note}</p>` : '';
+
+  // Headline-context line: average and range pulled inline as supporting
+  // detail under the dominant median number. Short-form currency keeps it
+  // compact.
+  const headlineContext = `Average ${fmtCurrencyShort(d.averageSalePrice)} &middot; Range ${fmtCurrencyShort(d.lowestSale)} to ${fmtCurrencyShort(d.highestSale)}`;
+
   return `<article class="property-card">
-  <h3>${typeLabel} in ${townName}</h3>
-  <p class="property-card-period">${periodLabel}</p>
-  <ul class="property-card-stats">
-    <li><span class="property-card-stat-label">Median sale price</span><span class="property-card-stat-value">${fmtCurrency(d.medianSalePrice)}</span></li>
-    <li><span class="property-card-stat-label">Average sale price</span><span class="property-card-stat-value">${fmtCurrency(d.averageSalePrice)}</span></li>
-    <li><span class="property-card-stat-label">Sold (last 6 months)</span><span class="property-card-stat-value">${d.homesSold ?? 'N/A'}</span></li>
-    <li><span class="property-card-stat-label">Median sale-to-list</span><span class="property-card-stat-value">${fmtPct(d.saleToList)}</span></li>
-    <li class="property-card-stat-highlight"><span class="property-card-stat-label">Lowest sale</span><span class="property-card-stat-value">${fmtCurrency(d.lowestSale)}</span></li>
-    <li class="property-card-stat-highlight"><span class="property-card-stat-label">Highest sale</span><span class="property-card-stat-value">${fmtCurrency(d.highestSale)}</span></li>
-    <li><span class="property-card-stat-label">% sold over asking</span><span class="property-card-stat-value">${fmtPct(d.percentOverAsking, 0)}</span></li>
-    <li><span class="property-card-stat-label">Fastest sale</span><span class="property-card-stat-value">${fmtDays(d.fastestSaleDays)}</span></li>
-  </ul>
+  <header class="property-card-head">
+    <h3>${typeLabel}</h3>
+    <p class="property-card-meta">${periodLabel} &middot; ${d.homesSold ?? 0} ${d.homesSold === 1 ? 'closing' : 'closings'}</p>
+  </header>
+  <div class="property-card-headline">
+    <p class="property-card-headline-label">Median sale price</p>
+    <p class="property-card-headline-value">${fmtCurrency(d.medianSalePrice)}</p>
+    <p class="property-card-headline-context">${headlineContext}</p>
+  </div>
+  <dl class="property-card-metrics">
+    <div class="property-metric">
+      <dt>Sale-to-list</dt>
+      <dd>${fmtPct(d.saleToList)}</dd>
+    </div>
+    <div class="property-metric">
+      <dt>Sold over list</dt>
+      <dd>${fmtPct(d.percentOverAsking, 0)}</dd>
+    </div>
+    <div class="property-metric">
+      <dt>Fastest sale</dt>
+      <dd>${fmtDays(d.fastestSaleDays)}</dd>
+    </div>
+  </dl>
+  ${noteHtml}
+  ${histogram}
 </article>`;
 }
 
-function headingFor(types) {
-  if (types.length === 0) return null;
-  if (types.length === 3) return 'By property type';
-  if (types.length === 2) return `${types.join(' and ')} activity`;
-  return `${types[0]} activity`;
+const CONDO_TOWNHOUSE_NOTE = 'Includes apartment-style condos, fee-simple townhouses, and new-construction side-by-side duplexes (which agents sometimes list as either type).';
+const COOP_NOTE = 'Co-ops are share ownership rather than fee-simple, with board approval and stricter financing requirements. Lower prices, but a different product than condos.';
+
+// Build an Oxford-comma list of building names.
+function listJoin(items) {
+  if (!items || items.length === 0) return '';
+  if (items.length === 1) return items[0];
+  if (items.length === 2) return items.join(' and ');
+  return items.slice(0, -1).join(', ') + ', and ' + items[items.length - 1];
 }
 
-export function renderPropertyBreakdown({ townName, monthYear, singleFamily, multiFamily, condo }) {
+// Append a "Notable buildings include..." sentence to the base note when
+// Tyler has curated a list in towns-content.json under
+// notableBuildings.coop or notableBuildings.condoTownhouse.
+function buildNote(baseNote, townName, buildings, label) {
+  if (!buildings || buildings.length === 0) return baseNote;
+  const buildingsSentence = `Notable ${townName} ${label} include ${listJoin(buildings)}.`;
+  return baseNote ? `${baseNote} ${buildingsSentence}` : buildingsSentence;
+}
+
+export function renderPropertyBreakdown({ townName, monthYear, singleFamily, multiFamily, condoTownhouse, coop, notableBuildings = {} }) {
   const cards = [];
-  const labels = [];
   if (singleFamily) {
-    cards.push(card('Single-Family', townName, monthYear, singleFamily));
-    labels.push('Single-family');
+    cards.push(card('Single-Family', townName, monthYear, singleFamily, { includeHistogram: false }));
   }
   if (multiFamily) {
     cards.push(card('Multi-Family (2-4 unit)', townName, monthYear, multiFamily));
-    labels.push('Multi-family');
   }
-  if (condo) {
-    cards.push(card('Condo / Co-op', townName, monthYear, condo));
-    labels.push('Condo and co-op');
+  if (condoTownhouse) {
+    const note = buildNote(CONDO_TOWNHOUSE_NOTE, townName, notableBuildings.condoTownhouse, 'condo and townhouse buildings');
+    cards.push(card('Condo & Townhouse', townName, monthYear, condoTownhouse, { note }));
+  }
+  if (coop) {
+    const note = buildNote(COOP_NOTE, townName, notableBuildings.coop, 'co-op buildings');
+    cards.push(card('Co-op', townName, monthYear, coop, { note }));
   }
   if (cards.length === 0) return '';
-  const heading = headingFor(labels);
-  return `<section class="property-breakdown" aria-label="${heading} in ${townName}">
-  <h2>${heading} in ${townName}</h2>
+
+  return `<section class="property-breakdown" aria-label="${townName} market by property type">
+  <header class="property-breakdown-head">
+    <h2>What else is moving in ${townName}</h2>
+    <p class="property-breakdown-sub">Each property type tells its own story. The Single-Family card sets the headline above; these break down the rest of the market.</p>
+  </header>
   <div class="property-cards">${cards.join('')}</div>
 </section>`;
 }
