@@ -1,0 +1,21 @@
+{
+  "hash": "4fde40d3aedf2275",
+  "paragraph": "Alpine is a single-family market, period. In the last six months, only four homes sold across the entire town, which tells you everything you need to know about supply. The median sale price landed at $4,499,000, though the range is wild: one home closed at $970,000 while another fetched $6,580,000, so Alpine isn't monolithic even within its own ultra-luxury tier. Sellers are not dictating terms here. The sale-to-list ratio sits at 0.97, meaning homes are selling slightly below asking, and the median time on market runs 101 days. Only one of the four sales closed above asking price. This isn't a seller's market. What you're seeing instead is a market where inventory is so constrained that any realistic pricing will eventually find a buyer, but sellers can't assume they'll pull multiple offers or command premiums. If you're seriously considering Alpine, you're not shopping based on market temperature. You're shopping because the town itself matters to you. The real variable is finding the right property when so few ever come available.",
+  "fallback": false,
+  "reason": null,
+  "retried": true,
+  "firstDraft": "Alpine is a single-family market, period. In the last six months, only four homes sold across the entire town, which tells you everything you need to know about supply. The median sale price landed at $4,499,000, though the range is wild: one home closed at $970,000 while another fetched $6,580,000, so Alpine isn't monolithic even within its own ultra-luxury tier. Sellers are not dictating terms here. The sale-to-list ratio sits at 0.97, meaning homes are selling just slightly below asking, and the median time on market runs 101 days. Only one of the four sales closed above asking price. This isn't a seller's market. What you're seeing instead is a market where inventory is so constrained that any realistic pricing will eventually find a buyer, but sellers can't assume they'll pull multiple offers or command premiums. If you're seriously considering Alpine, you're not shopping based on market temperature. You're shopping because the town itself matters to you. The real variable is finding the right property when so few ever come available.",
+  "usage": {
+    "input_tokens": 3164,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 236,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:27:02.650Z"
+}

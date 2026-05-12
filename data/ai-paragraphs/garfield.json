@@ -1,0 +1,21 @@
+{
+  "hash": "82408cf011b5b637",
+  "paragraph": "Single-family homes in Garfield are moving in a real seller's market, with a median sale price of $550,000 and nearly 74 percent of homes selling above asking. The sale-to-list ratio sits at 1.04, and a median of 22 days on market tells you that priced-right homes are not sitting. Multi-family properties, by contrast, dominate the local market with 28 sales over six months at a median of $707,500. These are moving almost as fast as single-family homes, with a median of 23 days on market and about 71 percent selling above list price. The ratio here is 1.02, which is solid for a seller without being aggressive. Condos and townhouses are a smaller category at six sales with a median of $497,500, and they are not benefiting from the same momentum. Only about 17 percent of units sold above asking, the median days on market stretches to 55, and the sale-to-list ratio dips below 1.0 at 0.98. If you're drawn to Garfield, the single-family and multi-family tiers are where you'll see the most competition and the most discipline in pricing. Condos and townhouses require patience from both buyer and seller, and pricing matters more in that category if you want movement.",
+  "fallback": false,
+  "reason": null,
+  "retried": true,
+  "firstDraft": "Single-family homes in Garfield are moving in a real seller's market, with a median sale price of $550,000 and nearly 74 percent of homes selling above asking. The sale-to-list ratio sits at 1.04, and a median of 22 days on market tells you that priced-right homes are not sitting. Multi-family properties, by contrast, dominate the local market with 28 sales over six months at a median of $707,500. These are moving almost as fast as single-family homes, with a median of 23 days on market and about 71 percent selling above list price. The ratio here is 1.02, which is solid for a seller without being aggressive. Condos and townhouses are a smaller category at just six sales with a median of $497,500, and they are not benefiting from the same momentum. Only about 17 percent of units sold above asking, the median days on market stretches to 55, and the sale-to-list ratio dips below 1.0 at 0.98. If you're drawn to Garfield, the single-family and multi-family tiers are where you'll see the most competition and the most discipline in pricing. Condos and townhouses require patience from both buyer and seller, and pricing matters more in that category if you want movement.",
+  "usage": {
+    "input_tokens": 3821,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 299,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:28:37.022Z"
+}

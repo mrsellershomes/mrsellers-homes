@@ -1,0 +1,21 @@
+{
+  "hash": "a155825b262c400b",
+  "paragraph": "Hackensack's market breaks into four distinct property types, and the signals shift depending on which tier you're looking at. Single-family homes, with 30 sales at a median of $602,500, sit in competitive but balanced territory. The sale-to-list ratio is 1.01, only two-thirds of homes sell above asking, and the median days on market is 22, so priced homes are moving without frenzied competition. Multi-family properties, much smaller volume at 18 sales, show similar dynamics with a $802,500 median and slightly over half the homes selling above list price. Condos and townhouses are the real market here with 80 sales at a $320,000 median, moving steadily at exactly list price on average with a 29-day median days on market. This tier attracts the most consistent buyer interest, though the 32.5 percent above asking rate suggests selective appeal rather than across-the-board bidding wars. Co-ops round out the picture at the entry point with 10 sales and a $202,500 median, but the sale-to-list ratio of 0.99 and modest 30 percent above-asking rate indicate softer demand. If you're weighing these tiers, the single-family and multi-family markets reward reasonable pricing and patience, the condo market offers the steadiest throughput, and co-ops require more careful positioning to attract buyers.",
+  "fallback": false,
+  "reason": null,
+  "retried": true,
+  "firstDraft": "Hackensack's market breaks into four distinct property types, and the signals shift depending on which tier you're looking at. Single-family homes, with 30 sales at a median of $602,500, sit in competitive but balanced territory. The sale-to-list ratio is 1.01, only two-thirds of homes sell above asking, and the median days on market is 22, so priced homes are moving without frenzied competition. Multi-family properties, much smaller volume at 18 sales, show similar dynamics with a $802,500 median and just over half the homes selling above list price. Condos and townhouses are the real market here with 80 sales at a $320,000 median, moving steadily at exactly list price on average with a 29-day median days on market. This tier attracts the most consistent buyer interest, though the 32.5 percent above asking rate suggests selective appeal rather than across-the-board bidding wars. Co-ops round out the picture at the entry point with 10 sales and a $202,500 median, but the sale-to-list ratio of 0.99 and modest 30 percent above-asking rate indicate softer demand. If you're weighing these tiers, the single-family and multi-family markets reward reasonable pricing and patience, the condo market offers the steadiest throughput, and co-ops require more careful positioning to attract buyers.",
+  "usage": {
+    "input_tokens": 4400,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 317,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:28:48.387Z"
+}

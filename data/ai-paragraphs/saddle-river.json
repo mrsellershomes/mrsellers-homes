@@ -1,0 +1,21 @@
+{
+  "hash": "b772285a4360a330",
+  "paragraph": "Saddle River's single-family market is moving deliberately. Nineteen homes sold over six months at a median of $2,613,000, and the sale-to-list ratio of 0.98 tells you that sellers are pricing to the market, not above it. Median days on market sits at 81 days, which means homes aren't flying off the shelf, but the ones that are priced right and presented well are finding their buyers. Only about 10 percent of homes sold above asking, so this isn't a multiple-offer environment. You're looking at a buyer-friendly market where leverage exists for the right property at the right price. The range is wide, from $1,225,000 to $4,690,000, which reflects Saddle River's mix of Tudor Colonials, Georgians, and estates on substantial acreage. If you're considering a move here, the market rewards patience and precision. Overpriced homes linger. Well-positioned ones move within a reasonable window.",
+  "fallback": false,
+  "reason": null,
+  "retried": false,
+  "firstDraft": null,
+  "usage": {
+    "input_tokens": 2896,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 224,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:32:10.758Z"
+}

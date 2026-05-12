@@ -1,0 +1,21 @@
+{
+  "hash": "280d445047f240a6",
+  "paragraph": "North Arlington is a single-family and multi-family market with no condo or co-op tier. Single-family homes dominate the activity at 28 sales over six months with a median of $632,500. Sellers are dictating terms here: 68 percent of homes sold above asking, the sale-to-list ratio sits at 1.03, and the median time on market is 21.5 days. This is a real seller's market, and priced homes are moving. Multi-family properties, by contrast, are sparse with only nine sales at a median of $835,000. These homes are selling right at list price on average with a 1.0 ratio and a faster median of 15 days on market, suggesting less aggressive bidding competition but still solid velocity. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home or the rental income potential and investment profile of a multi-family property.",
+  "fallback": false,
+  "reason": null,
+  "retried": true,
+  "firstDraft": "North Arlington is a single-family and multi-family market with no condo or co-op tier. Single-family homes dominate the activity at 28 sales over six months with a median of $632,500. Sellers are dictating terms here: 68 percent of homes sold above asking, the sale-to-list ratio sits at 1.03, and the median time on market is just 21.5 days. This is a real seller's market, and priced homes are moving. Multi-family properties, by contrast, are sparse with only nine sales at a median of $835,000. These homes are selling right at list price on average with a 1.0 ratio and a faster median of 15 days on market, suggesting less aggressive bidding competition but still solid velocity. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home or the rental income potential and investment profile of a multi-family property.",
+  "usage": {
+    "input_tokens": 3488,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 220,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:30:11.027Z"
+}

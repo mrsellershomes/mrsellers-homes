@@ -1,0 +1,21 @@
+{
+  "hash": "b41e4bbe3a059b97",
+  "paragraph": "Moonachie's single-family market is exceptionally thin right now, with two sales over the last six months. The median sits at $667,500, and the sale-to-list ratio of 0.99 tells you that homes are selling right around asking price. One of those two sales closed in 11 days, the other took longer, which gives you a median days on market of 23. Half the homes sold above asking, half below, so there's no clear directional pressure either way. With such sparse volume, any single sale can shift the statistical picture, and you shouldn't read too much into month-to-month swings. If you're seriously considering Moonachie, talk to a local agent who tracks the handful of homes that do come on the market and can give you real-time insight into what's actually available and how fast it's moving.",
+  "fallback": false,
+  "reason": null,
+  "retried": true,
+  "firstDraft": "Moonachie's single-family market is exceptionally thin right now, with just two sales over the last six months. The median sits at $667,500, and the sale-to-list ratio of 0.99 tells you that homes are selling right around asking price. One of those two sales closed in 11 days, the other took longer, which gives you a median days on market of 23. Half the homes sold above asking, half below, so there's no clear directional pressure either way. With such sparse volume, any single sale can shift the statistical picture, and you shouldn't read too much into month-to-month swings. If you're seriously considering Moonachie, talk to a local agent who tracks the handful of homes that do come on the market and can give you real-time insight into what's actually available and how fast it's moving.",
+  "usage": {
+    "input_tokens": 3107,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 189,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:29:56.610Z"
+}

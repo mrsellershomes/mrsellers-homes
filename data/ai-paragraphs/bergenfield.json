@@ -1,0 +1,21 @@
+{
+  "hash": "413c4fb47ef620ef",
+  "paragraph": "The single-family market in Bergenfield is balanced and steady. Fifty-eight homes sold over the last six months at a median of $675,000, with a sale-to-list ratio of 1.00 and half the sales closing above asking. Median days on market sits at 33, which means priced homes are moving, but sellers aren't in a rush and neither are buyers. The range is wide, from $395,000 to $1,750,000, so neighborhoods and condition matter enormously here. Multi-family properties are sparse at five sales in the period, with a median of $755,000 and a slightly softer ratio of 0.99. The sample is too small to read as trend, but it suggests two to four unit buildings aren't commanding the premium single-family detached homes are. If you're looking at Bergenfield, the market is working in your favor if you're patient about timing and honest about condition. Sellers who price competitively are seeing steady interest. Those holding out for top dollar will wait longer.",
+  "fallback": false,
+  "reason": null,
+  "retried": true,
+  "firstDraft": "The single-family market in Bergenfield is balanced and steady. Fifty-eight homes sold over the last six months at a median of $675,000, with a sale-to-list ratio of 1.00 and half the sales closing above asking. Median days on market sits at 33, which means priced homes are moving, but sellers aren't in a rush and neither are buyers. The range is wide, from $395,000 to $1,750,000, so neighborhoods and condition matter enormously here. Multi-family properties are sparse at just five sales in the period, with a median of $755,000 and a slightly softer ratio of 0.99. The sample is too small to read as trend, but it suggests two to four unit buildings aren't commanding the premium single-family detached homes are. If you're looking at Bergenfield, the market is working in your favor if you're patient about timing and honest about condition. Sellers who price competitively are seeing steady interest. Those holding out for top dollar will wait longer.",
+  "usage": {
+    "input_tokens": 3626,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 233,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:27:07.830Z"
+}

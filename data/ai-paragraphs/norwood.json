@@ -1,0 +1,21 @@
+{
+  "hash": "4f3d8f60eddbc2de",
+  "paragraph": "The single-family market in Norwood is moving at a measured pace, with a median sale price of $915,000 against a median list price of $995,000. Sellers aren't dictating terms here, the sale-to-list ratio sits at 0.99 and about 35 percent of homes are selling above asking. Median days on market of 35 shows that priced homes are moving, but there's no urgency pushing buyers to overbid. The range is wide, from $639,000 to $2,380,000, which means neighborhood and condition matter enormously in how fast a home sells and what it ultimately brings. Condos and townhouses are trading at a median of $800,000 with a similar 43-day median on market. The sale-to-list ratio here is right at 1.0, which means list prices are landing accurately. About 36 percent of units are closing above asking, consistent with the single-family tier. The lower volume in this category, 11 sales versus 17 single-family, suggests a smaller pool but one that's pricing and selling with comparable discipline. If you're deciding between a single-family home and a condo in Norwood, the choice comes down to whether you want more space and grounds or a lower-maintenance property at comparable price points.",
+  "fallback": false,
+  "reason": null,
+  "retried": false,
+  "firstDraft": null,
+  "usage": {
+    "input_tokens": 3085,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 294,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:30:18.975Z"
+}

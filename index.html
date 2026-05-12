@@ -807,6 +807,17 @@
       ]}
     ];
 
+    // Every Bergen town now has a market report page at /<slug>-real-estate/.
+    // We compute the URL from the town name on the fly so the regions array
+    // does not need a per-town pageUrl entry.
+    function townPageUrl(name) {
+      const slug = name.toLowerCase()
+        .replace(/['']/g, '')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '');
+      return `/${slug}-real-estate/`;
+    }
+
     function renderDirectory(query) {
       const container = document.getElementById('townsDirectory');
       let html = ''; let anyResults = false;
@@ -820,12 +831,9 @@
           <div class="region-title">${region.name}</div>
           <div class="towns-grid">
             ${filtered.map(t => {
-              let action = '';
-              if (t.pageUrl) action = `onclick="window.location.href='${t.pageUrl}'"`;
-              else if (t.guideUrl) action = `onclick="window.open('${t.guideUrl}','_blank')"`;
-              else action = `onclick="prefillBuyerForm('${t.name}')"`;
+              const url = t.pageUrl || townPageUrl(t.name);
               return `
-              <div class="town-item" ${action}>
+              <div class="town-item" onclick="window.location.href='${url}'">
                 <div class="town-name">${t.name}</div>
                 <div class="town-badges">${t.guide ? '<span class="town-badge badge-guide">Guide</span>' : ''}</div>
               </div>`;

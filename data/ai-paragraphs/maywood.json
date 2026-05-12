@@ -1,0 +1,21 @@
+{
+  "hash": "9e1b8d76e054da28",
+  "paragraph": "Maywood's single-family market is moving fast right now. Eighteen homes sold over six months at a median of $720,000, and nearly 90 percent of them closed above asking. The sale-to-list ratio sits at 1.049, meaning sellers are getting paid for what they list, and the median time on market is 13 days. This is a real seller's market. Homes priced right are drawing multiple offers and moving quickly. The range runs from $505,000 to $885,000, so there's room across the board, but supply is tight and competition among buyers is real. If you're thinking about selling, this is the environment where your home's condition and price matter enormously. If you're buying, expect to move fast when you find the right place and be prepared for offers that might land above your opening bid.",
+  "fallback": false,
+  "reason": null,
+  "retried": true,
+  "firstDraft": "Maywood's single-family market is moving fast right now. Eighteen homes sold over six months at a median of $720,000, and nearly 90 percent of them closed above asking. The sale-to-list ratio sits at 1.049, meaning sellers are getting paid for what they list, and the median time on market is just 13 days. This is a real seller's market. Homes priced right are drawing multiple offers and moving quickly. The range runs from $505,000 to $885,000, so there's room across the board, but supply is tight and competition among buyers is real. If you're thinking about selling, this is the environment where your home's condition and price matter enormously. If you're buying, expect to move fast when you find the right place and be prepared for offers that might land above your opening bid.",
+  "usage": {
+    "input_tokens": 3198,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 186,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:29:38.527Z"
+}

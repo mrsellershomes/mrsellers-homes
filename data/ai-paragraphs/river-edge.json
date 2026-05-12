@@ -1,0 +1,21 @@
+{
+  "hash": "926a4c033e91d49e",
+  "paragraph": "Single-family homes dominate the River Edge market with 30 sales over six months at a median of $917,500, and this is a genuinely competitive but balanced market. Sellers are pricing homes with an expectation they will sit for a few weeks before finding the right buyer. The median days on market is 18.5, the sale-to-list ratio is right at 1.00, and only half the homes are selling above asking. This isn't a market where you need to write an offer sight unseen or expect multiple competing bids on every property. Priced homes are moving, but there is real room for negotiation if you do your homework on comps and condition. The price range itself is substantial, from $645,000 to $1,710,000, so location and condition matter as much as the current temperature of the market. Co-ops are present in much smaller volume with 3 sales at a median of $235,800, and they're moving more slowly at 28 median days on market. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or the lower price point of a co-op.",
+  "fallback": false,
+  "reason": null,
+  "retried": true,
+  "firstDraft": "Single-family homes dominate the River Edge market with 30 sales over six months at a median of $917,500, and this is a genuinely competitive but balanced market. Sellers are pricing homes with an expectation they will sit for a few weeks before finding the right buyer. The median days on market is 18.5, the sale-to-list ratio is right at 1.00, and only half the homes are selling above asking. This isn't a market where you need to write an offer sight unseen or expect multiple competing bids on every property. Priced homes are moving, but there is real room for negotiation if you do your homework on comps and condition. The price range itself is substantial, from $645,000 to $1,710,000, so location and condition matter as much as the current temperature of the market. Co-ops are present in much smaller volume with just 3 sales at a median of $235,800, and they're moving more slowly at 28 median days on market. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or the lower price point of a co-op.",
+  "usage": {
+    "input_tokens": 3510,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 264,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:31:36.590Z"
+}

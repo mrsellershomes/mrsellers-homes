@@ -1,0 +1,21 @@
+{
+  "hash": "02e4ea7a257075b2",
+  "paragraph": "Single-family homes in Allendale are moving in a real seller's market, with a median sale price of $1,048,000 and over 55 percent of homes selling above asking. The median days on market sits at 16, and the sale-to-list ratio holds steady at 1.03, meaning sellers are getting their price and buyers are competing for inventory. Condos and townhouses follow a similar pattern at a lower entry point. With 6 sales over six months and a median of $757,500, these units are moving at a median of 15.5 days on market, and 83 percent sold above asking. The ratio here is even stronger at 1.04, signaling that priced-right units in this tier attract multiple interest as well. If you're deciding between single-family and condo in Allendale, both tiers are moving decisively. The choice comes down to whether you want the space and grounds of a single-family home or the lower maintenance profile and price point of a condo or townhouse.",
+  "fallback": false,
+  "reason": null,
+  "retried": true,
+  "firstDraft": "Single-family homes in Allendale are moving in a real seller's market, with a median sale price of $1,048,000 and over 55 percent of homes selling above asking. The median days on market sits at 16, and the sale-to-list ratio holds steady at 1.03, meaning sellers are getting their price and buyers are competing for inventory. Condos and townhouses follow a similar pattern at a lower entry point. With 6 sales over six months and a median of $757,500, these units are moving just as fast at a median of 15.5 days on market, and 83 percent sold above asking. The ratio here is even stronger at 1.04, signaling that priced-right units in this tier attract multiple interest as well. If you're deciding between single-family and condo in Allendale, both tiers are moving decisively. The choice comes down to whether you want the space and grounds of a single-family home or the lower maintenance profile and price point of a condo or townhouse.",
+  "usage": {
+    "input_tokens": 3461,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 232,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:26:57.080Z"
+}

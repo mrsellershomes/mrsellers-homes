@@ -1,0 +1,21 @@
+{
+  "hash": "e8b91c686281e26a",
+  "paragraph": "Single-family homes in Old Tappan are moving at a one-to-one sale-to-list ratio with a median price of $1,200,000, and roughly 26 percent of sales are closing above asking. The median days on market sits at 51, which means homes aren't flying off the shelf, but they're not languishing either. You're in a balanced market where priced homes are moving, though sellers aren't seeing the kind of multiple offer competition that would push prices substantially higher. The range is wide, from $689,000 to $2,850,000, which reflects the diversity of the town's housing stock. Condos and townhouses tell a tighter story. Nine sales over six months at a median of $880,000, with 44 percent selling above asking and a median days on market of 28. This tier is moving faster than single-family, suggesting buyers are drawn to the lower price point and quicker turnover. Both property types are priced fairly relative to what's actually selling, which means there's no waiting game happening. If you're choosing between a single-family home and a condo or townhouse, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or the lower price point and faster sale cycle of a condo.",
+  "fallback": false,
+  "reason": null,
+  "retried": true,
+  "firstDraft": "Single-family homes in Old Tappan are moving at a one-to-one sale-to-list ratio with a median price of $1,200,000, and roughly 26 percent of sales are closing above asking. The median days on market sits at 51, which means homes aren't flying off the shelf, but they're not languishing either. You're in a balanced market where priced homes are moving, though sellers aren't seeing the kind of multiple offer competition that would push prices substantially higher. The range is wide, from $689,000 to $2,850,000, which reflects the diversity of the town's housing stock. Condos and townhouses tell a slightly tighter story. Nine sales over six months at a median of $880,000, with 44 percent selling above asking and a median days on market of just 28. This tier is moving faster than single-family, suggesting buyers are drawn to the lower price point and quicker turnover. Both property types are priced fairly relative to what's actually selling, which means there's no waiting game happening. If you're choosing between a single-family home and a condo or townhouse, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or the lower price point and faster sale cycle of a condo.",
+  "usage": {
+    "input_tokens": 3526,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 288,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:30:34.579Z"
+}

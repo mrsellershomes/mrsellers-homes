@@ -1,0 +1,21 @@
+{
+  "hash": "40db619eb9f59d1c",
+  "paragraph": "Single-family homes in Emerson are moving in a real seller's market. Over the last six months, 27 homes sold at a median of $845,000, and nearly 63 percent went above asking. The sale-to-list ratio sits at 1.02, and the median time on market is 20 days, which means priced homes are attracting multiple offers and sellers are dictating terms. The range runs from $520,000 to $1,240,000, so you'll find entry-level inventory alongside significant single-family properties. If you're shopping here, expect competitive bidding on anything reasonably priced and well-maintained. Sellers know the market favors them right now.",
+  "fallback": false,
+  "reason": null,
+  "retried": true,
+  "firstDraft": "Single-family homes in Emerson are moving in a real seller's market. Over the last six months, 27 homes sold at a median of $845,000, and nearly 63 percent went above asking. The sale-to-list ratio sits at 1.02, and the median time on market is just 20 days, which means priced homes are attracting multiple offers and sellers are dictating terms. The range runs from $520,000 to $1,240,000, so you'll find entry-level inventory alongside significant single-family properties. If you're shopping here, expect competitive bidding on anything reasonably priced and well-maintained. Sellers know the market favors them right now.",
+  "usage": {
+    "input_tokens": 3216,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 157,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:27:59.189Z"
+}

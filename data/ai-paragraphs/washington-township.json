@@ -1,0 +1,21 @@
+{
+  "hash": "ffadf2ab809d8c1d",
+  "paragraph": "Washington Township hasn't recorded any residential sales in the last six months. Without transaction data, there's no market temperature to read, no median price to anchor on, and no way to tell you whether buyers or sellers have the upper hand right now. This silence could mean very little inventory is moving, or it could mean the market here operates on a rhythm different from the standard reporting cycle. If you're seriously considering Washington Township, your next move is to talk directly with a local agent who can tell you what's actually listed, what's pending, and what recent sales look like when you pull back to a longer time window. The MLS data alone won't tell you what you need to know.",
+  "fallback": false,
+  "reason": null,
+  "retried": false,
+  "firstDraft": null,
+  "usage": {
+    "input_tokens": 2731,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 144,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:33:02.614Z"
+}

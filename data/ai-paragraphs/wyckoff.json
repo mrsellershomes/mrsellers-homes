@@ -1,0 +1,21 @@
+{
+  "hash": "385a4cd94e347e03",
+  "paragraph": "Wyckoff's single-family market is a real seller's market right now. Over the last six months, 44 homes sold at a median of $1,165,500, with nearly 59 percent selling above asking and a sale-to-list ratio of 1.02. The median days on market sits at 18, which means homes priced right are moving decisively and sellers are dictating terms in multiple offer situations. The range is wide, from $550,000 on the lower end to $3,295,000 at the top, so there's genuine inventory across price points even in a tight market. Condo and townhouse activity is minimal, with three sales over six months at a median of $950,000. These are too few transactions to read as a reliable signal of that tier's market temperature, but when they do move, they're following the single-family pattern of selling above asking and closing quickly. If you're looking in Wyckoff, understand that you're entering a seller's market where pricing competitively matters less than having a home that checks the boxes buyers want.",
+  "fallback": false,
+  "reason": null,
+  "retried": true,
+  "firstDraft": "Wyckoff's single-family market is a real seller's market right now. Over the last six months, 44 homes sold at a median of $1,165,500, with nearly 59 percent selling above asking and a sale-to-list ratio of 1.02. The median days on market sits at 18, which means homes priced right are moving decisively and sellers are dictating terms in multiple offer situations. The range is wide, from $550,000 on the lower end to $3,295,000 at the top, so there's genuine inventory across price points even in a tight market. Condo and townhouse activity is minimal, just three sales over six months at a median of $950,000. These are too few transactions to read as a reliable signal of that tier's market temperature, but when they do move, they're following the single-family pattern of selling above asking and closing quickly. If you're looking in Wyckoff, understand that you're entering a seller's market where pricing competitively matters less than having a home that checks the boxes buyers want.",
+  "usage": {
+    "input_tokens": 3590,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 240,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:33:30.193Z"
+}

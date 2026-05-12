@@ -1,0 +1,21 @@
+{
+  "hash": "b43c3b358808d9f2",
+  "paragraph": "Single-family homes dominate the Park Ridge market with 27 sales over six months at a median of $875,000. The sale-to-list ratio sits at 1.09 and over 85 percent of homes sold above asking, with a median of 18 days on market. This is a real seller's market where priced homes are moving briskly and many multiple offer situations are happening. The range is wide, from $605,000 to $1,700,000, which tells you that Park Ridge attracts different buyer profiles depending on the block and condition of the home. Condos and townhouses, by contrast, are a much thinner slice of volume with only 8 sales at a median of $482,500. Three-quarters of these sold above asking, though the median days on market of 19.5 suggests less consistent momentum than the single-family tier. The sales range here is extreme, from $279,000 to $1,610,000, which points to a category with real diversity in what gets listed and what buyers are chasing. If you're in Park Ridge, the single-family market is where the action is and where you'll face the most competition as a buyer. Condo and townhouse inventory is so sparse that if you find the right unit, you may have more breathing room to negotiate.",
+  "fallback": false,
+  "reason": null,
+  "retried": false,
+  "firstDraft": null,
+  "usage": {
+    "input_tokens": 3113,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 292,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:30:56.649Z"
+}

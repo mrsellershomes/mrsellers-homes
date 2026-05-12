@@ -457,6 +457,11 @@ body.silhouette-modal-open {
   line-height: 1.55;
   color: var(--black);
 }
+.what-this-means-body p + p { margin-top: 14px; }
+.what-this-means-body ul { margin: 12px 0 4px 0; padding-left: 0; list-style: none; }
+.what-this-means-body li { position: relative; padding-left: 22px; margin-bottom: 6px; }
+.what-this-means-body li::before { content: ''; position: absolute; left: 6px; top: 14px; width: 6px; height: 6px; border-radius: 50%; background: var(--red); }
+.what-this-means-body strong { font-weight: 600; }
 
 /* ============== Data table ============== */
 .data-table-section {

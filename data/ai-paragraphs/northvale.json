@@ -1,0 +1,21 @@
+{
+  "hash": "3a9cfc36e9b5f0f4",
+  "paragraph": "The single-family market in Northvale is moving at a balanced clip. Fifteen homes sold over the last six months with a median price of $825,000, and they're selling right at asking with a sale-to-list ratio of 1.00 and a median of 15 days on market. About 60 percent of homes are selling above asking, which means priced homes are moving, but this isn't a frenzied seller's market where everything gets multiple offers. The range is wide, from a low of $535,000 to a high of $1,490,000, so your experience really depends on where you're shopping in that spread. Buyers aren't getting major leverage here, but they're not getting steamrolled either. Sellers who price competitively will see steady interest; those who overshoot will sit. If you're looking at Northvale as your next home, the math is straightforward. Priced right, homes sell in a few weeks. Priced high, you'll wait longer and may not reach your number.",
+  "fallback": false,
+  "reason": null,
+  "retried": false,
+  "firstDraft": null,
+  "usage": {
+    "input_tokens": 2841,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 234,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:30:14.714Z"
+}

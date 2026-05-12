@@ -1,0 +1,21 @@
+{
+  "hash": "ac49c339444890bd",
+  "paragraph": "The single-family market in East Rutherford is tight and moving fast. Six homes sold over six months at a median of $760,000, and they're selling right at list price with a median of 17 and a half days on market. Half of them went above asking, which tells you that priced homes are moving and buyers are competing for inventory. Multi-family properties, by contrast, are even more sparse at only three sales, but they're selling well above list at a median of $990,000 and closing in about two weeks. Every multi-family home that sold went over asking, and the sale-to-list ratio of 1.12 shows real buyer demand in that category. The constraint here isn't market heat. It's volume. If you're looking in East Rutherford, you're working with a very limited pool of homes, which means pricing matters and condition matters more than it would in a higher-inventory market. You'll want to move decisively when the right property shows up.",
+  "fallback": false,
+  "reason": null,
+  "retried": true,
+  "firstDraft": "The single-family market in East Rutherford is tight and moving fast. Just six homes sold over six months at a median of $760,000, and they're selling right at list price with a median of 17 and a half days on market. Half of them went above asking, which tells you that priced homes are moving and buyers are competing for inventory. Multi-family properties, by contrast, are even more sparse at only three sales, but they're selling well above list at a median of $990,000 and closing in about two weeks. Every multi-family home that sold went over asking, and the sale-to-list ratio of 1.12 shows real buyer demand in that category. The constraint here isn't market heat. It's volume. If you're looking in East Rutherford, you're working with a very limited pool of homes, which means pricing matters and condition matters more than it would in a higher-inventory market. You'll want to move decisively when the right property shows up.",
+  "usage": {
+    "input_tokens": 3335,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 219,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:27:45.413Z"
+}

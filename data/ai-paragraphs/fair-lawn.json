@@ -1,0 +1,21 @@
+{
+  "hash": "a723ea78f6a32a93",
+  "paragraph": "Fair Lawn's single-family market is running hot right now. With 105 sales over six months at a median of $690,000, you're looking at a real seller's market. Two-thirds of homes are selling above asking, the median sale-to-list ratio sits at 1.04, and median days on market is 18. Sellers are dictating terms here, and priced homes are moving fast. The range is wide, from $427,000 on the low end to $1,467,300 at the top, which tells you the market is absorbing everything from starter homes to substantial properties. Condos and townhouses make a much smaller appearance with only 10 sales at a median of $394,000, roughly half the single-family price point. They're moving at a similar pace, 17.5 days on market median, with 60 percent selling above asking. The condo category is thin here, so if you're weighing single-family versus condo, supply will drive your decision more than market temperature. Both tiers are moving well for sellers right now. If you're comparing what Fair Lawn offers, it comes down to whether you want the space and grounds of a single-family home or the lower price point and low-maintenance lifestyle of a condo.",
+  "fallback": false,
+  "reason": null,
+  "retried": true,
+  "firstDraft": "Fair Lawn's single-family market is running hot right now. With 105 sales over six months at a median of $690,000, you're looking at a real seller's market. Two-thirds of homes are selling above asking, the median sale-to-list ratio sits at 1.04, and median days on market is just 18. Sellers are dictating terms here, and priced homes are moving fast. The range is wide, from $427,000 on the low end to $1,467,300 at the top, which tells you the market is absorbing everything from starter homes to substantial properties. Condos and townhouses make a much smaller appearance with only 10 sales at a median of $394,000, roughly half the single-family price point. They're moving at a similar pace, 17.5 days on market median, with 60 percent selling above asking. The condo category is thin here, so if you're weighing single-family versus condo, supply will drive your decision more than market temperature. Both tiers are moving well for sellers right now. If you're comparing what Fair Lawn offers, it comes down to whether you want the space and grounds of a single-family home or the lower price point and low-maintenance lifestyle of a condo.",
+  "usage": {
+    "input_tokens": 3944,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 283,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:28:14.596Z"
+}

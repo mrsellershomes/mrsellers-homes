@@ -1,0 +1,21 @@
+{
+  "hash": "297252d468f23364",
+  "paragraph": "Single-family homes dominate Ridgefield Park's market, with 25 sales over six months at a median of $595,000. Sellers are dictating terms here. Nearly half of homes sold above asking, the sale-to-list ratio sits at 1.0, and the median time on market is a brisk 33 days. This is a competitive but balanced market where priced homes are moving, though you'll occasionally see homes linger past 60 days if they're overpriced for their condition or location within town. Multi-family properties, though sparse at only five sales, show even stronger seller leverage with a median of $635,000, all five selling above list and a median days on market of 14 days. Condos and townhouses tell a different story. With only four sales at a median of $282,500 and a median days on market of 58 days, buyers may find leverage here. Co-ops sit at the lowest entry point with a median of $199,000 across three sales, moving in roughly a month, though the category is so small that any single sale skews the trend. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the lower price point of a condo or co-op, or the investment profile of a multi-family property.",
+  "fallback": false,
+  "reason": null,
+  "retried": true,
+  "firstDraft": "Single-family homes dominate Ridgefield Park's market, with 25 sales over six months at a median of $595,000. Sellers are dictating terms here. Nearly half of homes sold above asking, the sale-to-list ratio sits at 1.0, and the median time on market is a brisk 33 days. This is a competitive but balanced market where priced homes are moving, though you'll occasionally see homes linger past 60 days if they're overpriced for their condition or location within town. Multi-family properties, though sparse at only five sales, show even stronger seller leverage with a median of $635,000, all five selling above list and a median days on market of just 14 days. Condos and townhouses tell a different story. With only four sales at a median of $282,500 and a median days on market of 58 days, buyers may find leverage here. Co-ops sit at the lowest entry point with a median of $199,000 across three sales, moving in roughly a month, though the category is so small that any single sale skews the trend. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the lower price point of a condo or co-op, or the investment profile of a multi-family property.",
+  "usage": {
+    "input_tokens": 3838,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 302,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:31:18.817Z"
+}

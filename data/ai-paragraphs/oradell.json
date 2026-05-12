@@ -1,0 +1,21 @@
+{
+  "hash": "9ce387b53b055bd9",
+  "paragraph": "The single-family market in Oradell is a real seller's market. Twelve homes sold over six months at a median of $1,100,000, and 91 percent of them went for above asking price. The sale-to-list ratio sits at 1.08, meaning homes are selling for roughly eight percent above their listed prices. Median days on market is 12.5 days, which tells you that priced homes are moving fast and sellers are dictating terms. The range is wide, from $605,000 to $1,665,000, so the market rewards homes that are positioned correctly within their segment. If you're selling, this is the environment you want. If you're buying, you'll need to move decisively and be prepared to compete.",
+  "fallback": false,
+  "reason": null,
+  "retried": true,
+  "firstDraft": "The single-family market in Oradell is a real seller's market. Twelve homes sold over six months at a median of $1,100,000, and 91 percent of them went for above asking price. The sale-to-list ratio sits at 1.08, meaning homes are selling for roughly eight percent above their listed prices. Median days on market is just 12.5 days, which tells you that priced homes are moving fast and sellers are dictating terms. The range is wide, from $605,000 to $1,665,000, so the market rewards homes that are positioned correctly within their segment. If you're selling, this is the environment you want. If you're buying, you'll need to move decisively and be prepared to compete.",
+  "usage": {
+    "input_tokens": 3160,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 170,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:30:38.637Z"
+}

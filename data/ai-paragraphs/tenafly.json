@@ -1,0 +1,21 @@
+{
+  "hash": "0bc4f7c6ec78f632",
+  "paragraph": "The single-family market in Tenafly is competitive but not frenzied. Over the last six months, 54 homes sold at a median of $1,700,000, with about half selling above asking and a sale-to-list ratio right at market value. Median days on market sits at 21, which means priced homes are moving without excessive urgency on either side. You'll see the market spans a real range. From $750,000 on the low end to $4,185,000 at the top, there's inventory across multiple price bands. Sellers aren't overasking, and buyers with patience and realistic pricing expectations will find homes that sell in reasonable time. The condo and townhouse segment is too small to read clearly. Only three sales over six months at a median of $520,000 means if you're considering that category, you'll want to expand your search radius or stay flexible on timing. If you're buying in Tenafly, the single-family market is your real option, and it's straightforward. Homes priced fairly move within three weeks on average.",
+  "fallback": false,
+  "reason": null,
+  "retried": true,
+  "firstDraft": "The single-family market in Tenafly is competitive but not frenzied. Over the last six months, 54 homes sold at a median of $1,700,000, with about half selling above asking and a sale-to-list ratio right at market value. Median days on market sits at 21, which means priced homes are moving without excessive urgency on either side. You'll see the market spans a real range: from $750,000 on the low end to $4,185,000 at the top, so there's inventory across multiple price bands. Sellers aren't overasking, and buyers with patience and realistic pricing expectations will find homes that sell in reasonable time. The condo and townhouse segment is too small to read clearly—only three sales over six months at a median of $520,000—so if you're considering that category, you'll want to expand your search radius or stay flexible on timing. If you're buying in Tenafly, the single-family market is your real option, and it's straightforward: homes priced fairly move within three weeks on average.",
+  "usage": {
+    "input_tokens": 3590,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 241,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:32:36.401Z"
+}

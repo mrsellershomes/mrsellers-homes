@@ -2,3 +2,5 @@ node_modules/
 scripts/.cache/
 *.log
 .DS_Store
+.env
+.env.local

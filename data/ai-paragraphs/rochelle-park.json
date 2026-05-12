@@ -1,0 +1,21 @@
+{
+  "hash": "16ff763edaab5b7b",
+  "paragraph": "The single-family market in Rochelle Park is clearly where the volume is, with 22 sales over six months at a median of $654,000. Sellers are dictating terms here. Nearly 68 percent of homes sold above asking, the sale-to-list ratio sits at 1.02, and the median time on market is 18.5 days. This is a real seller's market, and many multiple offer situations are the norm rather than the exception. Priced competitively, homes move fast. The condo and townhouse tier is sparse by comparison with only five sales at a median of $450,000. That category is moving more slowly at a 43-day median, with less than half the sales clearing above list price. The sale-to-list ratio here is 0.99, which means buyers may find some leverage if they're patient and willing to negotiate. If you're weighing these two tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home in a seller-favored market, or the lower price point and potentially easier negotiation of a condo or townhouse.",
+  "fallback": false,
+  "reason": null,
+  "retried": true,
+  "firstDraft": "The single-family market in Rochelle Park is clearly where the volume is, with 22 sales over six months at a median of $654,000. Sellers are dictating terms here. Nearly 68 percent of homes sold above asking, the sale-to-list ratio sits at 1.02, and the median time on market is just 18.5 days. This is a real seller's market, and many multiple offer situations are the norm rather than the exception. Priced competitively, homes move fast. The condo and townhouse tier is sparse by comparison with only five sales at a median of $450,000. That category is moving more slowly at a 43-day median, with less than half the sales clearing above list price. The sale-to-list ratio here is 0.99, which means buyers may find some leverage if they're patient and willing to negotiate. If you're weighing these two tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home in a seller-favored market, or the lower price point and potentially easier negotiation of a condo or townhouse.",
+  "usage": {
+    "input_tokens": 3469,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 254,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:31:51.951Z"
+}

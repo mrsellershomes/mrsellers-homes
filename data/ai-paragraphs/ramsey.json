@@ -1,0 +1,21 @@
+{
+  "hash": "442a097735ed3d92",
+  "paragraph": "Single-family homes in Ramsey are moving in a real seller's market. Over the last six months, 52 homes sold at a median of $933,000, with over half going above asking and a sale-to-list ratio sitting at 1.01. Median days on market landed at 18, which tells you that priced-right homes are attracting multiple buyers and sellers don't have much incentive to negotiate hard. The range is wide, from $470,000 to $2,450,000, so price point matters less than condition and location in determining how fast a home moves. Condos and townhouses paint a different picture. Twenty-eight sales at a median of $590,000 show stronger buyer activity here, with 75 percent selling above asking and a median days on market of 12. The sale-to-list ratio of 1.06 means these homes are outperforming their list prices by a larger margin than single-family properties are. If you're shopping in Ramsey, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home, or the lower price point and faster pace of a condo or townhouse.",
+  "fallback": false,
+  "reason": null,
+  "retried": true,
+  "firstDraft": "Single-family homes in Ramsey are moving in a real seller's market. Over the last six months, 52 homes sold at a median of $933,000, with just over half going above asking and a sale-to-list ratio sitting at 1.01. Median days on market landed at 18, which tells you that priced-right homes are attracting multiple buyers and sellers don't have much incentive to negotiate hard. The range is wide, from $470,000 to $2,450,000, so price point matters less than condition and location in determining how fast a home moves. Condos and townhouses paint a different picture. Twenty-eight sales at a median of $590,000 show stronger buyer activity here, with 75 percent selling above asking and a median days on market of just 12. The sale-to-list ratio of 1.06 means these homes are outperforming their list prices by a larger margin than single-family properties are. If you're shopping in Ramsey, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home, or the lower price point and faster pace of a condo or townhouse.",
+  "usage": {
+    "input_tokens": 3767,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 265,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:31:02.156Z"
+}

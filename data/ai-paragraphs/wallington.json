@@ -1,0 +1,21 @@
+{
+  "hash": "4f4021bbc8f7f458",
+  "paragraph": "Wallington's single-family market sits at a median of $615,000 with modest seller leverage. About 29 percent of homes sold above asking, and the median time on market runs 44.5 days, which tells you that priced homes are moving but there is no urgency pushing buyers into bidding wars. The sale-to-list ratio of 0.997 confirms the equilibrium: sellers need to price competitively to get results, and buyers aren't feeling squeezed. Multi-family properties, by contrast, show real momentum at a median of $734,850 with 67 percent selling above asking and a sale-to-list ratio of 1.014. That two-family activity carries more heat than single-family, though the median days on market of 45.5 is comparable, meaning volume is there but the best properties still take time to attract the right buyer. If you're weighing single-family versus two-family, the deciding factor isn't market temperature. It's whether you want the space and grounds of a single-family home or the income potential and lower per-unit cost of a two-family property.",
+  "fallback": false,
+  "reason": null,
+  "retried": false,
+  "firstDraft": null,
+  "usage": {
+    "input_tokens": 3074,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 251,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:32:59.679Z"
+}

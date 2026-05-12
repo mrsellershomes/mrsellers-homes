@@ -1,0 +1,21 @@
+{
+  "hash": "1d1d809d8a7c27c6",
+  "paragraph": "The single-family market in Englewood Cliffs is a buyer's market right now. Over the last six months, homes sold at a median of $1,493,444 against a median list price of $1,568,950, which means the sale-to-list ratio is sitting at 0.949. Only 10 percent of homes sold above asking, and the median time on market is 33.5 days. That's real leverage for buyers who are patient and willing to let sellers come down to where the market actually is. The range is wide, from $999,000 up to $5,400,000, so pricing discipline matters. Homes that are realistically priced for the neighborhood are moving in a reasonable window. Homes that are overpriced are sitting. If you're looking in Englewood Cliffs right now, you're in a position to negotiate. Sellers need to be competitive, and you can afford to wait for the right property rather than overpaying out of fear you'll miss it.",
+  "fallback": false,
+  "reason": null,
+  "retried": false,
+  "firstDraft": null,
+  "usage": {
+    "input_tokens": 2891,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 225,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:28:08.519Z"
+}

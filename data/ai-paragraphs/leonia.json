@@ -1,0 +1,21 @@
+{
+  "hash": "6aa29db5c036a9cd",
+  "paragraph": "The single-family market in Leonia is moving at a measured pace with a median sale price of $912,500 and a sale-to-list ratio right at 1.01. Roughly half of homes are selling above asking, which tells you the market isn't frenzied but it isn't soft either. Median days on market sits at 28.5 days, suggesting priced homes are moving without urgency from either side. The range is wide, from $585,000 to $1,250,000, so location and condition matter more than macro market temperature here. By contrast, the condo and townhouse tier is quieter. Nine sales over six months at a median of $429,000 signals limited volume in this category. The sale-to-list ratio of 0.997 and only 11% of homes selling above asking suggest buyers have some leverage, though the median days on market of 35 days isn't slow enough to call it a buyer's market outright. If you're weighing where to focus, single-family is where the action is in Leonia right now, and it's balanced enough that pricing strategy matters more than speed.",
+  "fallback": false,
+  "reason": null,
+  "retried": false,
+  "firstDraft": null,
+  "usage": {
+    "input_tokens": 3087,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 255,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:29:09.178Z"
+}

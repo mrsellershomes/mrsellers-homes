@@ -1,0 +1,21 @@
+{
+  "hash": "e41f3620951ffeda",
+  "paragraph": "The single-family market in Closter is firmly buyer-friendly right now. With a median sale price of $1,175,000 and a median days on market of 30, homes are taking their time to find the right buyer. The sale-to-list ratio sits at 0.987, meaning homes are selling slightly below asking, and only about a third of sales close above list price. Sellers are pricing competitively because they need to in order to move inventory, and buyers have real leverage to negotiate. The market ranges from $700,000 entry points up to homes over $4.1 million, so there's genuine variety in what Closter offers depending on your budget and what you're looking for in a property. If you're shopping here, you're in a position where the right price and condition matter more than speed.",
+  "fallback": false,
+  "reason": null,
+  "retried": false,
+  "firstDraft": null,
+  "usage": {
+    "input_tokens": 2930,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 182,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:27:26.571Z"
+}

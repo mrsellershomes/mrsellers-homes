@@ -1,0 +1,21 @@
+{
+  "hash": "8e73d740cb09d6b5",
+  "paragraph": "The single-family market in Hasbrouck Heights is moving steadily, with 28 sales over six months at a median of $715,500. About 61 percent of homes sold above asking, and the sale-to-list ratio sits at 1.01, which tells you priced homes are moving without wild multiple-offer dynamics. The median days on market of 21 says homes that are listed right aren't sitting long, but they're also not flying off the shelf in two weeks. Multi-family properties are sparse here, only 3 sales in the same period at a median of $759,000, so don't read much into that tier. The real market is single-family, and it's the kind of competitive but balanced environment where good homes sell, pricing matters, and you're not caught in a frenzy.",
+  "fallback": false,
+  "reason": null,
+  "retried": false,
+  "firstDraft": null,
+  "usage": {
+    "input_tokens": 3085,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 182,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:28:54.775Z"
+}

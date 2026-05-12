@@ -1,0 +1,21 @@
+{
+  "hash": "c7019cf0accb40bc",
+  "paragraph": "The single-family market in Dumont is a real seller's market. Over the last six months, 43 homes sold at a median of $631,500, with nearly 68 percent of them closing above asking price. The sale-to-list ratio sits at 1.03, and the median time on market is 15 days, which means priced homes are moving fast and multiple offer situations are common. Sellers are dictating terms right now. Multi-family properties, though sparse at only five sales, are following the same pattern at a median of $820,000 and an 80 percent above-asking rate, suggesting strong demand across the board. If you're a buyer in Dumont, you'll need to come prepared with a competitive offer and realistic expectations about your negotiating position.",
+  "fallback": false,
+  "reason": null,
+  "retried": true,
+  "firstDraft": "The single-family market in Dumont is a real seller's market. Over the last six months, 43 homes sold at a median of $631,500, with nearly 68 percent of them closing above asking price. The sale-to-list ratio sits at 1.03, and the median time on market is just 15 days, which means priced homes are moving fast and multiple offer situations are common. Sellers are dictating terms right now. Multi-family properties, though sparse at only five sales, are following the same pattern at a median of $820,000 and an 80 percent above-asking rate, suggesting strong demand across the board. If you're a buyer in Dumont, you'll need to come prepared with a competitive offer and realistic expectations about your negotiating position.",
+  "usage": {
+    "input_tokens": 3490,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 175,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:27:40.089Z"
+}

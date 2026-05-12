@@ -1,0 +1,21 @@
+{
+  "hash": "540466603467651b",
+  "paragraph": "The single-family market in Lodi is moving with real momentum. Twenty-two homes sold over the last six months at a median of $626,388, with 72 percent selling above asking and a sale-to-list ratio of 1.03. The median days on market sits at 21, which signals competitive conditions without the extreme velocity of a true seller's market. Sellers are pricing thoughtfully and homes that hit the right price are attracting multiple offers. Multi-family properties, by contrast, show even stronger performance. Twenty sales at a median of $842,500, 75 percent selling above asking, and a 1.05 sale-to-list ratio point to a real seller's market where inventory is tight and buyers are competing hard. The median days on market of 33 suggests these properties sit longer while the right buyer emerges, but when priced correctly they command premium money. Condo and townhouse activity is minimal at three sales, so the sample is too small to draw reliable conclusions. If you're weighing Lodi, the single-family market offers competitive conditions where priced homes are moving, while multi-family properties are where sellers have genuine leverage.",
+  "fallback": false,
+  "reason": null,
+  "retried": true,
+  "firstDraft": "The single-family market in Lodi is moving with real momentum. Twenty-two homes sold over the last six months at a median of $626,388, with 72 percent selling above asking and a sale-to-list ratio of 1.03. The median days on market sits at 21, which signals competitive conditions without the extreme velocity of a true seller's market. Sellers are pricing thoughtfully and homes that hit the right price are attracting multiple offers. Multi-family properties, by contrast, show even stronger performance. Twenty sales at a median of $842,500, 75 percent selling above asking, and a 1.05 sale-to-list ratio point to a real seller's market where inventory is tight and buyers are competing hard. The median days on market of 33 suggests these properties sit a bit longer while the right buyer emerges, but when priced correctly they command premium money. Condo and townhouse activity is minimal at just three sales, so the sample is too small to draw reliable conclusions. If you're weighing Lodi, the single-family market offers competitive conditions where priced homes are moving, while multi-family properties are where sellers have genuine leverage.",
+  "usage": {
+    "input_tokens": 3717,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 256,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:29:20.825Z"
+}

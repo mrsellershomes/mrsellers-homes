@@ -1,0 +1,21 @@
+{
+  "hash": "83a479b109922f91",
+  "paragraph": "Single-family homes dominate the Lyndhurst market with 41 sales over six months at a median of $585,000, and this is a real seller's market. Homes are selling at a 1.00 sale-to-list ratio, but over 56 percent of them are closing above asking, with a median time on market of 26 days. That combination tells you sellers are pricing competitively and buyers are competing for the homes that hit the market right. The spread is wide, from $360,000 to $1,130,000, so neighborhood and condition matter tremendously in how fast a home moves and what it ultimately sells for. Multi-family properties, by contrast, run to a median of $840,000 across 21 sales, moving slightly faster at 21 days on market and with 57 percent selling above asking. Condo and townhouse inventory is thin at only 6 sales over the period, with a median of $377,500, though these units are moving briskly when they do list. If you're comparing what's available in Lyndhurst, single-family homes give you the most options and the most active market. You'll find real competition on well-priced homes, but patient sellers who understand their property's position can still get full value.",
+  "fallback": false,
+  "reason": null,
+  "retried": true,
+  "firstDraft": "Single-family homes dominate the Lyndhurst market with 41 sales over six months at a median of $585,000, and this is a real seller's market. Homes are selling just slightly above list at a 1.00 sale-to-list ratio, but over 56 percent of them are closing above asking, with a median time on market of 26 days. That combination tells you sellers are pricing competitively and buyers are competing for the homes that hit the market right. The spread is wide, from $360,000 to $1,130,000, so neighborhood and condition matter tremendously in how fast a home moves and what it ultimately sells for. Multi-family properties, by contrast, run to a median of $840,000 across 21 sales, moving slightly faster at 21 days on market and with 57 percent selling above asking. Condo and townhouse inventory is thin at only 6 sales over the period, with a median of $377,500, though these units are moving briskly when they do list. If you're comparing what's available in Lyndhurst, single-family homes give you the most options and the most active market. You'll find real competition on well-priced homes, but patient sellers who understand their property's position can still get full value.",
+  "usage": {
+    "input_tokens": 3885,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 286,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:29:26.922Z"
+}

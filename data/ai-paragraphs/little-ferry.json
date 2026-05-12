@@ -1,0 +1,21 @@
+{
+  "hash": "b0649ea75cc4144a",
+  "paragraph": "Single-family homes in Little Ferry are moving at a median of $610,000 with a sale-to-list ratio at 1.00, meaning homes are selling for asking price. About half the homes sold went above asking, and the median time on market sits at 41 days, which is a reasonable pace without urgency. Multi-family properties tell a different story. Nine sales at a median of $820,000 show stronger momentum, with 78 percent of homes selling above asking and a median days on market of 26. That's competitive territory, and the sale-to-list ratio of 1.035 confirms sellers have leverage on the right property. The condo and townhouse tier, by contrast, is the entry point at a median of $399,500. These move briskly, with a 19-day median on market and half the homes selling above asking. Volume is solid at 14 sales, and the ratio sits nearly flat at 1.00, so priced homes are moving without drama. The deciding factor isn't market temperature. It's whether you want the space and grounds of a single-family, the rental income potential of a multi-family, or the low-maintenance lifestyle and affordability of a condo or townhouse.",
+  "fallback": false,
+  "reason": null,
+  "retried": true,
+  "firstDraft": "Single-family homes in Little Ferry are moving at a median of $610,000 with a sale-to-list ratio right at 1.00, meaning homes are selling for roughly asking price. About half the homes sold went above asking, and the median time on market sits at 41 days, which is a reasonable pace without urgency. Multi-family properties tell a different story. Nine sales at a median of $820,000 show stronger momentum, with 78 percent of homes selling above asking and a median days on market of just 26. That's competitive territory, and the sale-to-list ratio of 1.035 confirms sellers have leverage on the right property. The condo and townhouse tier, by contrast, is the entry point at a median of $399,500. These move briskly, with a 19-day median on market and half the homes selling above asking. Volume is solid at 14 sales, and the ratio sits nearly flat at 1.00, so priced homes are moving without drama. The deciding factor isn't market temperature. It's whether you want the space and grounds of a single-family, the rental income potential of a multi-family, or the low-maintenance lifestyle and affordability of a condo or townhouse.",
+  "usage": {
+    "input_tokens": 3715,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 273,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:29:15.012Z"
+}

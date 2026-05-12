@@ -1,0 +1,21 @@
+{
+  "hash": "a5b06e1d2e568c79",
+  "paragraph": "The single-family market in Harrington Park is a real seller's market right now. Over the last six months, 12 homes sold with a median price of $1,024,500, and 83 percent of them went for more than asking. The sale-to-list ratio sits at 1.039, meaning homes are consistently fetching above list price, and the median days on market of 13.5 days tells you sellers can afford to be selective. Homes priced competitively are moving fast, with some closing in under a week. There's very little inventory here, which is working entirely in the seller's favor. If you're selling, you're in position to wait for a strong offer. If you're buying, you'll need to come prepared with a pre-approval, understand the local pricing, and be ready to move decisively on the right property because competition is real and homes aren't sitting around long.",
+  "fallback": false,
+  "reason": null,
+  "retried": false,
+  "firstDraft": null,
+  "usage": {
+    "input_tokens": 2848,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 201,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:28:51.940Z"
+}

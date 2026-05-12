@@ -1,0 +1,21 @@
+{
+  "hash": "20dcfc2f88a638a1",
+  "paragraph": "The single-family market in Hillsdale is moving with real momentum. Thirty-six homes sold over six months at a median of $862,500, with 61 percent of those sales closing above asking price and a sale-to-list ratio of 1.03. The median days on market sits at 15.5 days, which means priced homes are moving fast and sellers are dictating terms in many multiple-offer situations. You're looking at a genuine seller's market here, especially in the mid-range where inventory is tightest. The price spread from $510,000 to $1.75 million tells you Hillsdale pulls both entry-level and upper-bracket buyers, but it's the homes in the $750,000 to $1 million range that are seeing the most competitive activity. If you're selling, this is the time to list competitively and expect interest quickly. If you're buying, you'll need to move decisively and be prepared to compete on price and terms.",
+  "fallback": false,
+  "reason": null,
+  "retried": false,
+  "firstDraft": null,
+  "usage": {
+    "input_tokens": 2966,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 222,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:29:01.360Z"
+}

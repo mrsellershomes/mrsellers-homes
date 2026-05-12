@@ -1,0 +1,21 @@
+{
+  "hash": "4416e273b1b635d0",
+  "paragraph": "Carlstadt's market is almost entirely multifamily, with nine sales over six months at a median of $800,000. These buildings tend to sit in the $625,000 to $1,425,000 range, and the ratio tells you homes are selling slightly above asking at 1.04, which means sellers are getting their price but not dictating terms. Two-thirds of multifamily sales closed above list, and median days on market came in at 22, which puts this in competitive but balanced territory. Priced multifamily homes are moving, but there's no frenzy here. If you're looking at Carlstadt, you're really working with the multifamily inventory, and the spread in sales prices suggests these buildings vary considerably in what they deliver. The best positioned units will still draw some competition, but buyers aren't in a position where they're bidding against ten other offers.",
+  "fallback": false,
+  "reason": null,
+  "retried": true,
+  "firstDraft": "Carlstadt's market is almost entirely multifamily, with nine sales over six months at a median of $800,000. These buildings tend to sit in the $625,000 to $1,425,000 range, and the ratio tells you homes are selling just above asking at 1.04, which means sellers are getting their price but not dictating terms. Two-thirds of multifamily sales closed above list, and median days on market came in at 22, which puts this in competitive but balanced territory. Priced multifamily homes are moving, but there's no frenzy here. If you're looking at Carlstadt, you're really working with the multifamily inventory, and the spread in sales prices suggests these buildings vary considerably in what they deliver. The best positioned units will still draw some competition, but buyers aren't in a position where they're bidding against ten other offers.",
+  "usage": {
+    "input_tokens": 3322,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 196,
+    "service_tier": "standard",
+    "inference_geo": "not_available"
+  },
+  "generatedAt": "2026-05-12T18:27:16.087Z"
+}
