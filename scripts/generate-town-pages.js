@@ -21,6 +21,7 @@ import { renderTownPage } from './lib/render/page.js';
 import { readAllCsvs, dedupeByMls, monthYearLabel, buildPeriodLabel } from './lib/njmls-csv.js';
 import { aggregateTownData } from './lib/town-data.js';
 import { generateAiParagraph } from './lib/ai-explainer.js';
+import { buildSitemap } from './lib/sitemap.js';
 
 // Calibration set: three towns that exercise distinct property-type profiles
 // so Tyler can judge whether the voice holds across the variety of Bergen
@@ -201,6 +202,17 @@ async function main() {
       : 'api';
     const sub10Note = townAgg.sub10 ? ' [sub10]' : '';
     console.log(`  ${flags.dryRun ? 'WOULD WRITE' : 'wrote'} ${town.pageSlug}/index.html  ai=${tag}${sub10Note}`);
+  }
+
+  // Sitemap refresh: only rewrite when generating the full set, so a
+  // targeted --only run does not drop URLs from the sitemap.
+  const isFullRun = !flags.only && !flags.calibrate;
+  if (isFullRun && !flags.dryRun) {
+    const xml = buildSitemap(towns);
+    writeFileSync(resolve('sitemap.xml'), xml);
+    console.log(`Wrote sitemap.xml (${towns.length} town URLs + ${4} static pages)`);
+  } else if (isFullRun && flags.dryRun) {
+    console.log('Would write sitemap.xml (dry-run)');
   }
 
   console.log('\n--- Summary ---');
