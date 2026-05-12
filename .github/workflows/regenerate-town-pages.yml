@@ -53,7 +53,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A '*-real-estate/' sitemap.xml data/ai-paragraphs/
+          # Stage anything the regen produced. .gitignore prevents node_modules,
+          # .env, and *.log from being picked up here. If nothing changed
+          # (cache hits across the board), the diff check exits early.
+          git add -A
           if git diff --cached --quiet; then
             echo "No changes to commit. Pages already match the data."
             exit 0
