@@ -1,3 +1,15 @@
+import { toSlug } from './slug.js';
+
+// NJMLS agents sometimes use a different spelling than the official Bergen
+// County municipal name. These aliases map the NJMLS-side string to the
+// canonical bergen-towns.json name. Slug-based matching (below) handles
+// pure hyphen-vs-space differences automatically (e.g., "Wood Ridge" in
+// NJMLS vs "Wood-Ridge" official); this map covers cases where the names
+// genuinely differ.
+const TOWN_ALIASES = {
+  'Township of Washington': 'Washington Township'
+};
+
 // Aggregates raw NJMLS sale records into per-town, per-property-type stats
 // over the full window of data loaded (designed for a 6-month rolling window).
 //
@@ -114,7 +126,10 @@ function buildStats(rows) {
 }
 
 /**
- * Group rows by town name (case-sensitive, matches the NJMLS Town field).
+ * Group rows by town SLUG (not raw name), so NJMLS spellings that vary in
+ * hyphen vs. space (e.g., "Wood Ridge" vs "Wood-Ridge") map to the same
+ * bucket. Genuine name differences (e.g., "Township of Washington" vs
+ * "Washington Township") are handled by the TOWN_ALIASES table above.
  * Filters out implausible sales (likely data entry errors) before grouping.
  */
 function groupByTown(rows) {
@@ -126,8 +141,10 @@ function groupByTown(rows) {
       excluded++;
       continue;
     }
-    if (!m.has(r.town)) m.set(r.town, []);
-    m.get(r.town).push(r);
+    const canonical = TOWN_ALIASES[r.town] || r.town;
+    const key = toSlug(canonical);
+    if (!m.has(key)) m.set(key, []);
+    m.get(key).push(r);
   }
   if (excluded > 0) {
     console.warn(`town-data: excluded ${excluded} row(s) with implausible sold-to-list ratios (likely NJMLS data entry errors).`);
@@ -159,7 +176,7 @@ export function aggregateTownData(rows, towns) {
   const result = {};
 
   for (const town of towns) {
-    const townRows = byTown.get(town.name) || [];
+    const townRows = byTown.get(town.slug) || [];
     const sfRows = townRows.filter(r => r.propertyType === 'single-family');
     const mfRows = townRows.filter(r => r.propertyType === 'multi-family');
     const cctRows = townRows.filter(r => r.propertyType === 'condo');

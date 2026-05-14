@@ -1,21 +1,21 @@
 {
-  "hash": "ffadf2ab809d8c1d",
-  "paragraph": "Washington Township hasn't recorded any residential sales in the last six months. Without transaction data, there's no market temperature to read, no median price to anchor on, and no way to tell you whether buyers or sellers have the upper hand right now. This silence could mean very little inventory is moving, or it could mean the market here operates on a rhythm different from the standard reporting cycle. If you're seriously considering Washington Township, your next move is to talk directly with a local agent who can tell you what's actually listed, what's pending, and what recent sales look like when you pull back to a longer time window. The MLS data alone won't tell you what you need to know.",
+  "hash": "f9f351f5a6ba7f99",
+  "paragraph": "Washington Township's single-family market is running hot right now. Thirty-five homes sold over six months at a median of $805,000, and 74 percent of them went for over asking. The sale-to-list ratio sits at 1.07, which means sellers are getting their price and then some. Median days on market is 15, so if a home is priced right and in decent shape, you're looking at genuine competition from multiple buyers. By contrast, the condo and townhouse tier is smaller with only 8 sales at a median of $737,500, though the 87 percent above-asking rate tells you the same story: priced homes are moving fast and attracting real interest. If you're looking at Washington Township, expect to move decisively if you find something that works. Sellers know what they have, and in this market, the best properties won't wait long.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "Washington Township's single-family market is running hot right now. Thirty-five homes sold over six months at a median of $805,000, and 74 percent of them went for over asking. The sale-to-list ratio sits at 1.07, which means sellers are getting their price and then some. Median days on market is just 15, so if a home is priced right and in decent shape, you're looking at genuine competition from multiple buyers. By contrast, the condo and townhouse tier is smaller with only 8 sales at a median of $737,500, though the 87 percent above-asking rate tells you the same story: priced homes are moving fast and attracting real interest. If you're looking at Washington Township, expect to move decisively if you find something that works. Sellers know what they have, and in this market, the best properties won't wait long.",
   "usage": {
-    "input_tokens": 2731,
+    "input_tokens": 3489,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 144,
+    "output_tokens": 198,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-05-12T18:33:02.614Z"
+  "generatedAt": "2026-05-14T19:01:28.432Z"
 }
