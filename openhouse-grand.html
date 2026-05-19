@@ -249,8 +249,7 @@
     // === Open House Config — UPDATE THESE FOR EACH EVENT ===
     var OPEN_HOUSE = {
       address:     '561 Grand Avenue · Leonia, NJ 07605',     // shown in the page header
-      tag:         'Open House - 561 Grand Ave Leonia',       // info tag added to the FUB lead
-      sourceLabel: '561 Grand Ave Leonia',                    // appended to the FUB source
+      property:    '561 Grand Ave, Leonia',                   // canonical key — must match a PROPERTY_TO_AIRTABLE_TAG entry in forms-worker
       redirectUrl: ''                                         // empty = no redirect, stay on page
     };
     // =======================================================
@@ -258,39 +257,19 @@
     // Inject address into header
     document.getElementById('openHouseAddress').textContent = OPEN_HOUSE.address;
 
-    var FUB_API_KEY = 'fka_0E2H1dG5ch1zr3VepnlIt9Oczs5uXO3Fi8';
-    var FUB_API_URL = 'https://api.followupboss.com/v1/events';
+    var WORKER_URL = 'https://forms-worker.tyler-681.workers.dev/open-house';
 
-    function sendToFUB(data) {
-      var payload = {
-        source: 'MrSellers.homes — Open House Sign-In — ' + OPEN_HOUSE.sourceLabel,
-        system: 'MrSellersHomes Website',
-        type: 'Registration',
-        person: {}
-      };
-      if (data.name) {
-        var parts = data.name.trim().split(/\s+/);
-        payload.person.firstName = parts[0] || '';
-        payload.person.lastName = parts.slice(1).join(' ') || '';
-      }
-      if (data.email) payload.person.emails = [{ value: data.email }];
-      if (data.phone) payload.person.phones = [{ value: data.phone }];
-      var tags = ['open house visitor', OPEN_HOUSE.tag];
-      if (data.hasAgency) {
-        tags.push('has exclusive agency agreement');
-      } else {
-        tags.push('no exclusive agency agreement');
-        tags.push('buyer');
-      }
-      payload.person.tags = tags;
-
-      return fetch(FUB_API_URL, {
+    function sendToWorker(data) {
+      return fetch(WORKER_URL, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Basic ' + btoa(FUB_API_KEY + ':')
-        },
-        body: JSON.stringify(payload)
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          hasAgency: data.hasAgency,
+          property: OPEN_HOUSE.property
+        })
       });
     }
 
@@ -369,9 +348,11 @@
         }
       }
 
-      sendToFUB(data)
-        .then(showSuccess)
-        .catch(showSuccess); // never block the open-house flow
+      // Fire-and-forget the POST. Show success state immediately so the UX feels instant.
+      sendToWorker(data).catch(function(err) {
+        if (window.console && console.error) console.error('Worker POST failed:', err);
+      });
+      showSuccess();
     });
 
     function resetForm() {

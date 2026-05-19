@@ -316,8 +316,7 @@
   </div>
 
   <script>
-    var FUB_API_KEY = 'fka_0E2H1dG5ch1zr3VepnlIt9Oczs5uXO3Fi8';
-    var FUB_API_URL = 'https://api.followupboss.com/v1/events';
+    var WORKER_URL = 'https://forms-worker.tyler-681.workers.dev/lead';
     var selectedIntent = '';
 
     // Check for address parameter
@@ -380,28 +379,17 @@
       e.target.value = formatted;
     });
 
-    function sendToFUB(data) {
-      var payload = {
-        source: getSource(),
-        system: 'MrSellersHomes Website',
-        type: 'Registration',
-        person: {}
-      };
-
-      var parts = data.name.trim().split(/\s+/);
-      payload.person.firstName = parts[0] || '';
-      payload.person.lastName = parts.slice(1).join(' ') || '';
-      payload.person.emails = [{ value: data.email }];
-      payload.person.phones = [{ value: data.phone }];
-      payload.person.tags = [selectedIntent];
-
-      return fetch(FUB_API_URL, {
+    function sendToWorker(data) {
+      return fetch(WORKER_URL, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Basic ' + btoa(FUB_API_KEY + ':')
-        },
-        body: JSON.stringify(payload)
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          source: getSource(),
+          intent: selectedIntent  // 'Buyer' or 'Seller'
+        })
       });
     }
 
@@ -441,12 +429,11 @@
         email: emailEl.value
       };
 
-      sendToFUB(data).then(function() {
-        showSuccess();
-      }).catch(function() {
-        // Still show success — don't block the user experience
-        showSuccess();
+      // Fire-and-forget: show success immediately, Worker handles writes.
+      sendToWorker(data).catch(function(err) {
+        if (window.console && console.error) console.error('Worker POST failed:', err);
       });
+      showSuccess();
     });
 
     function showSuccess() {

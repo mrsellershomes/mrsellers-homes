@@ -1036,37 +1036,30 @@
       }
     })();
 
-    // Follow Up Boss API
-    var FUB_API_KEY = 'fka_0E2H1dG5ch1zr3VepnlIt9Oczs5uXO3Fi8';
-    var FUB_API_URL = 'https://api.followupboss.com/v1/events';
+    // Lead submission routes through forms-worker (writes to Airtable + mirrors to FUB).
+    var WORKER_URL = 'https://forms-worker.tyler-681.workers.dev/lead';
 
-    function sendToFUB(data, source) {
+    // Map go.html intent-pill values to the /lead endpoint's normalized intent.
+    var INTENT_MAP = {
+      'Buy a home': 'Buyer',
+      'Sell my home': 'Seller',
+      'Buy and sell': 'Buyer/Seller'
+    };
+
+    function sendToWorker(data, source) {
       var payload = {
-        source: source,
-        system: 'MrSellersHomes Landing Page',
-        type: 'Registration',
-        person: {}
+        name: data.name || '',
+        email: data.email || '',
+        source: source
       };
-      if (data.name) {
-        var parts = data.name.trim().split(/\s+/);
-        payload.person.firstName = parts[0] || '';
-        payload.person.lastName = parts.slice(1).join(' ') || '';
-      }
-      if (data.email) payload.person.emails = [{ value: data.email }];
-      if (data.phone) payload.person.phones = [{ value: data.phone }];
-      var tags = [];
-      if (data.intent === 'Buy a home') tags.push('buyer');
-      else if (data.intent === 'Sell my home') tags.push('seller');
-      else if (data.intent === 'Buy and sell') tags.push('buyer/seller');
-      else tags.push('buyer');
-      if (data.intent) tags.push('Intent: ' + data.intent);
-      payload.person.tags = tags;
-      return fetch(FUB_API_URL, {
+      if (data.phone) payload.phone = data.phone;
+      // Default to Buyer when intent isn't set yet (Step 1 of the booking flow
+      // has only name + email; intent is captured in Step 2).
+      payload.intent = data.intent ? (INTENT_MAP[data.intent] || 'Buyer') : 'Buyer';
+      if (data.intent) payload.context = { Intent: data.intent };
+      return fetch(WORKER_URL, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Basic ' + btoa(FUB_API_KEY + ':')
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       });
     }
@@ -1129,7 +1122,7 @@
         email: document.getElementById('book-email').value
       };
       // Fire and forget — don't block the UI on API response time
-      sendToFUB(bookData, 'go.MrSellers.homes — Landing Page').catch(function() {
+      sendToWorker(bookData, 'go.MrSellers.homes — Landing Page').catch(function() {
         console.warn('FUB step 1 submission failed');
       });
       trackEvent('generate_lead', { form_location: 'page' });
@@ -1171,7 +1164,7 @@
     function submitAndBook() {
       bookData.phone = document.getElementById('book-phone').value;
       bookData.intent = getIntentPillValue('book-intent-pills');
-      sendToFUB(bookData, 'go.MrSellers.homes — Landing Page (details)');
+      sendToWorker(bookData, 'go.MrSellers.homes — Landing Page (details)');
       trackEvent('calendar_click', { intent: bookData.intent, form_location: 'page' });
       if (bookData.intent) clarityTag('lead_intent', bookData.intent);
       window.open(GCAL_URL, '_blank');
@@ -1241,7 +1234,7 @@
         email: document.getElementById('m-book-email').value
       };
       // Fire and forget — advance immediately, don't block on API response
-      sendToFUB(mBookData, 'go.MrSellers.homes — Landing Page').catch(function() {
+      sendToWorker(mBookData, 'go.MrSellers.homes — Landing Page').catch(function() {
         console.warn('FUB modal step 1 submission failed');
       });
       trackEvent('generate_lead', { form_location: 'modal' });
@@ -1256,7 +1249,7 @@
     function mSubmitAndBook() {
       mBookData.phone = document.getElementById('m-book-phone').value;
       mBookData.intent = getIntentPillValue('m-book-intent-pills');
-      sendToFUB(mBookData, 'go.MrSellers.homes — Landing Page (details)');
+      sendToWorker(mBookData, 'go.MrSellers.homes — Landing Page (details)');
       trackEvent('calendar_click', { intent: mBookData.intent, form_location: 'modal' });
       if (mBookData.intent) clarityTag('lead_intent', mBookData.intent);
       window.open(GCAL_URL, '_blank');

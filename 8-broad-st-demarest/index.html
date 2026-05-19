@@ -1098,12 +1098,12 @@
       mapsApiKey: 'AIzaSyAuoWqBU_Cd6UsIbstNjZ_7GdRwaJdpmbY',
       houseCoords: { lat: 40.952857, lng: -73.960866 }, // 8 Broad St Demarest (Tyler-verified)
 
-      // Follow Up Boss
-      fub: {
-        apiKey: 'fka_0E2H1dG5ch1zr3VepnlIt9Oczs5uXO3Fi8',
-        apiUrl: 'https://api.followupboss.com/v1/events',
+      // Lead submission routes through forms-worker (writes to Airtable + mirrors to FUB).
+      submit: {
+        workerUrl: 'https://forms-worker.tyler-681.workers.dev/lead',
         source: 'Unbranded Listing Page - 8 Broad St',
-        tags: ['Buyer', 'Unbranded Site - 8 Broad St'],
+        intent: 'Buyer',
+        tags: ['Unbranded Site - 8 Broad St'],
         stage: 'A - Hot 1-3 Months'
       },
 
@@ -1362,30 +1362,22 @@
         emailErr.classList.remove('show');
       }
 
-      function sendToFUB(data) {
-        const parts = data.name.trim().split(/\s+/);
+      function sendToWorker(data) {
         const payload = {
-          source: CONFIG.fub.source,
-          system: 'MrSellersHomes Website',
-          type: 'Registration',
-          message: data.message || '8 Broad St — Request Details inquiry',
-          person: {
-            firstName: parts[0] || '',
-            lastName: parts.slice(1).join(' ') || '',
-            emails: [{ value: data.email }],
-            tags: CONFIG.fub.tags,
-            stage: CONFIG.fub.stage
-          }
+          name: data.name,
+          email: data.email,
+          source: CONFIG.submit.source,
+          intent: CONFIG.submit.intent,
+          tags: CONFIG.submit.tags,
+          stage: CONFIG.submit.stage,
+          message: data.message || '8 Broad St — Request Details inquiry'
         };
         if (data.phone && data.phone.replace(/\D/g, '').length >= 10) {
-          payload.person.phones = [{ value: data.phone }];
+          payload.phone = data.phone;
         }
-        return fetch(CONFIG.fub.apiUrl, {
+        return fetch(CONFIG.submit.workerUrl, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Basic ' + btoa(CONFIG.fub.apiKey + ':')
-          },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
         });
       }
@@ -1415,12 +1407,16 @@
         btn.textContent = 'Sending…';
         btn.disabled = true;
 
-        sendToFUB({
+        // Fire-and-forget: show success immediately, Worker handles writes.
+        sendToWorker({
           name: nameEl.value,
           email: emailEl.value,
           phone: phoneEl.value,
           message: msgEl.value
-        }).then(showSuccess).catch(showSuccess);
+        }).catch(function(err) {
+          if (window.console && console.error) console.error('Worker POST failed:', err);
+        });
+        showSuccess();
       });
     })();
 

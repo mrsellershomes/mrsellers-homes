@@ -1,21 +1,29 @@
-// Shared Follow Up Boss form submission script for town real estate pages.
+// Shared lead-form submission script for town real estate pages.
 // Auto-discovers any <form class="lead-form"> on the page and wires up:
 //   - phone-number formatting on inputs of type="tel"
 //   - basic name/email validation
-//   - submit handler that POSTs to FUB Events API with the source/tags
-//     declared on the form via data-fub-source and data-fub-tags attributes
+//   - submit handler that POSTs to the forms-worker Cloudflare Worker
+//     (which writes to Airtable as the source of truth and mirrors to FUB
+//     during transition)
 //   - success/error feedback in a sibling .form-status element
 //
-// FUB API key is the same one used across the rest of the site (stored
-// client-side per existing deployment pattern). Source and tags are unique
-// per town and per buyer/seller variant - they come from data-attributes
-// rendered into each town page by scripts/lib/render/ctas.js.
+// Source and tags are unique per town and per buyer/seller variant - they come
+// from data-fub-source / data-fub-tags attributes rendered into each town page
+// by scripts/lib/render/ctas.js. The attribute names kept "fub-" prefix for
+// compatibility; behavior now routes through the Worker.
 
 (function () {
   'use strict';
 
-  var FUB_API_KEY = 'fka_0E2H1dG5ch1zr3VepnlIt9Oczs5uXO3Fi8';
-  var FUB_API_URL = 'https://api.followupboss.com/v1/events';
+  var WORKER_URL = 'https://forms-worker.tyler-681.workers.dev/lead';
+
+  // Tags that indicate intent — extracted out of the data-fub-tags list and
+  // sent as the explicit `intent` field on the /lead payload.
+  var INTENT_MAP = {
+    'buyer': 'Buyer',
+    'seller': 'Seller',
+    'buyer/seller': 'Buyer/Seller'
+  };
 
   function formatPhone(input) {
     var digits = input.value.replace(/\D/g, '');
@@ -46,29 +54,28 @@
   function buildPayload(form, data) {
     var source = form.getAttribute('data-fub-source') || 'MrSellers.homes Lead Form';
     var tagsRaw = form.getAttribute('data-fub-tags') || '';
-    var tags = tagsRaw.split(',').map(function (t) { return t.trim(); }).filter(Boolean);
+    var rawList = tagsRaw.split(',').map(function (t) { return t.trim(); }).filter(Boolean);
 
-    var payload = {
-      source: source,
-      system: 'MrSellersHomes Website',
-      type: 'Registration',
-      person: { tags: tags }
-    };
-
-    if (data.name) {
-      var parts = data.name.trim().split(/\s+/);
-      payload.person.firstName = parts[0] || '';
-      payload.person.lastName = parts.slice(1).join(' ') || '';
+    var intent;
+    var tags = [];
+    for (var i = 0; i < rawList.length; i++) {
+      var lower = rawList[i].toLowerCase();
+      if (!intent && INTENT_MAP[lower]) {
+        intent = INTENT_MAP[lower];
+      } else {
+        tags.push(rawList[i]);
+      }
     }
-    if (data.email) payload.person.emails = [{ value: data.email }];
-    if (data.phone) payload.person.phones = [{ value: data.phone }];
 
-    // Free-form context goes into the event message field. Anything beyond
-    // name/email/phone is carried as a "message" so Tyler sees it in FUB.
-    var contextLines = [];
-    if (data.address) contextLines.push('Property address: ' + data.address);
-    if (data.message) contextLines.push(data.message);
-    if (contextLines.length > 0) payload.message = contextLines.join('\n\n');
+    var context = {};
+    if (data.address) context['Property'] = data.address;
+
+    var payload = { name: data.name || '', email: data.email || '', source: source };
+    if (data.phone) payload.phone = data.phone;
+    if (intent) payload.intent = intent;
+    if (tags.length > 0) payload.tags = tags;
+    if (Object.keys(context).length > 0) payload.context = context;
+    if (data.message) payload.message = data.message;
 
     return payload;
   }
@@ -114,25 +121,18 @@
       setStatus(form, 'sending', 'Sending...');
 
       var payload = buildPayload(form, data);
-      fetch(FUB_API_URL, {
+      // Fire-and-forget: show success immediately. Worker handles Airtable + FUB.
+      fetch(WORKER_URL, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Basic ' + btoa(FUB_API_KEY + ':')
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
-      }).then(function (res) {
-        if (!res.ok) throw new Error('FUB returned ' + res.status);
-        setStatus(form, 'success', "Got it. Tyler will read this and reply personally - usually within a few hours.");
-        trackGoogleAnalytics(payload.source);
-        // Reset form so user can submit a follow-up if they want.
-        form.reset();
       }).catch(function (err) {
-        setStatus(form, 'error', "Something glitched on our end. Email tyler@mrsellers.homes directly and I'll get back to you.");
-        if (window.console && console.error) console.error('FUB submit failed:', err);
-      }).then(function () {
-        if (btn) { btn.textContent = originalLabel; btn.disabled = false; }
+        if (window.console && console.error) console.error('Worker submit failed:', err);
       });
+      setStatus(form, 'success', "Got it. Tyler will read this and reply personally - usually within a few hours.");
+      trackGoogleAnalytics(payload.source);
+      form.reset();
+      if (btn) { btn.textContent = originalLabel; btn.disabled = false; }
     });
   }
 

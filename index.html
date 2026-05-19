@@ -847,40 +847,25 @@
 
     function filterTowns(q) { renderDirectory(q); }
 
-    // Follow Up Boss API
-    const FUB_API_KEY = 'fka_0E2H1dG5ch1zr3VepnlIt9Oczs5uXO3Fi8';
-    const FUB_API_URL = 'https://api.followupboss.com/v1/events';
+    // Lead submission routes through forms-worker (writes to Airtable + mirrors to FUB).
+    const WORKER_URL = 'https://forms-worker.tyler-681.workers.dev/lead';
 
-    async function sendToFUB(data, source) {
-      const payload = {
-        source: source,
-        system: 'MrSellersHomes Website',
-        type: 'Registration',
-        person: {}
-      };
-      if (data.name) {
-        const parts = data.name.trim().split(/\s+/);
-        payload.person.firstName = parts[0] || '';
-        payload.person.lastName = parts.slice(1).join(' ') || '';
-      }
-      if (data.email) payload.person.emails = [{ value: data.email }];
-      if (data.phone) payload.person.phones = [{ value: data.phone }];
-      const tags = [];
-      if (data.formType === 'seller') tags.push('seller');
-      if (data.formType === 'buyer') tags.push('buyer');
-      if (data.address) tags.push('Property: ' + data.address);
-      if (data.towns) tags.push('Towns: ' + data.towns);
-      if (data.budget) tags.push('Budget: ' + data.budget);
-      if (data.timeline) tags.push('Timeline: ' + data.timeline);
-      if (data.message) payload.person.description = data.message;
-      payload.person.tags = tags;
+    async function sendToWorker(data, source) {
+      const payload = { name: data.name || '', email: data.email || '', source: source };
+      if (data.phone) payload.phone = data.phone;
+      if (data.formType === 'seller') payload.intent = 'Seller';
+      else if (data.formType === 'buyer') payload.intent = 'Buyer';
+      const context = {};
+      if (data.address) context.Property = data.address;
+      if (data.towns) context.Towns = data.towns;
+      if (data.budget) context.Budget = data.budget;
+      if (data.timeline) context.Timeline = data.timeline;
+      if (Object.keys(context).length > 0) payload.context = context;
+      if (data.message) payload.message = data.message;
 
-      return fetch(FUB_API_URL, {
+      return fetch(WORKER_URL, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Basic ' + btoa(FUB_API_KEY + ':')
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       });
     }
@@ -949,7 +934,7 @@
       btn.textContent = 'Sending...'; btn.disabled = true;
       sellerData = { name: nameVal, email: emailVal, formType: 'seller' };
       try {
-        await sendToFUB(sellerData, 'MrSellers.homes — Seller Form');
+        await sendToWorker(sellerData, 'MrSellers.homes — Seller Form');
         document.getElementById('sellerStep1').style.display = 'none';
         document.getElementById('sellerStep2').style.display = 'block';
       } catch {
@@ -964,7 +949,7 @@
       sellerData.address = document.getElementById('address').value;
       sellerData.message = document.getElementById('message').value;
       try {
-        await sendToFUB(sellerData, 'MrSellers.homes — Seller Form (details)');
+        await sendToWorker(sellerData, 'MrSellers.homes — Seller Form (details)');
         document.getElementById('contactForm').style.display = 'none';
         document.getElementById('formSuccess').style.display = 'block';
       } catch {
@@ -994,7 +979,7 @@
       btn.textContent = 'Sending...'; btn.disabled = true;
       buyerData = { name: nameVal, email: emailVal, formType: 'buyer' };
       try {
-        await sendToFUB(buyerData, 'MrSellers.homes — Buyer Form');
+        await sendToWorker(buyerData, 'MrSellers.homes — Buyer Form');
         document.getElementById('buyerStep1').style.display = 'none';
         document.getElementById('buyerStep2').style.display = 'block';
         if (window._prefillTown) {
@@ -1014,7 +999,7 @@
       buyerData.budget = document.getElementById('buyer-budget').value;
       buyerData.timeline = document.getElementById('buyer-timeline').value;
       try {
-        await sendToFUB(buyerData, 'MrSellers.homes — Buyer Form (details)');
+        await sendToWorker(buyerData, 'MrSellers.homes — Buyer Form (details)');
         document.getElementById('buyerForm').style.display = 'none';
         document.getElementById('buyerFormSuccess').style.display = 'block';
       } catch {
