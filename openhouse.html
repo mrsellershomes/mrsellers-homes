@@ -241,8 +241,7 @@
     // === Open House Config — UPDATE THESE FOR EACH EVENT ===
     var OPEN_HOUSE = {
       address:     '8 Broad Street · Demarest, NJ',       // shown in the page header
-      tag:         'Open House - 8 Broad St Demarest',    // info tag added to the FUB lead
-      sourceLabel: '8 Broad St Demarest',                 // appended to the FUB source
+      property:    '8 Broad Street, Demarest',            // canonical key — must match a PROPERTY_TO_AIRTABLE_TAG entry in forms-worker
       redirectUrl: '/8-broad-st-demarest/'                // where visitors go after sign-in
     };
     // =======================================================
@@ -250,39 +249,19 @@
     // Inject address into header
     document.getElementById('openHouseAddress').textContent = OPEN_HOUSE.address;
 
-    var FUB_API_KEY = 'fka_0E2H1dG5ch1zr3VepnlIt9Oczs5uXO3Fi8';
-    var FUB_API_URL = 'https://api.followupboss.com/v1/events';
+    var WORKER_URL = 'https://forms-worker.tyler-681.workers.dev/open-house';
 
-    function sendToFUB(data) {
-      var payload = {
-        source: 'MrSellers.homes — Open House Sign-In — ' + OPEN_HOUSE.sourceLabel,
-        system: 'MrSellersHomes Website',
-        type: 'Registration',
-        person: {}
-      };
-      if (data.name) {
-        var parts = data.name.trim().split(/\s+/);
-        payload.person.firstName = parts[0] || '';
-        payload.person.lastName = parts.slice(1).join(' ') || '';
-      }
-      if (data.email) payload.person.emails = [{ value: data.email }];
-      if (data.phone) payload.person.phones = [{ value: data.phone }];
-      var tags = ['open house visitor', OPEN_HOUSE.tag];
-      if (data.hasAgency) {
-        tags.push('has exclusive agency agreement');
-      } else {
-        tags.push('no exclusive agency agreement');
-        tags.push('buyer');
-      }
-      payload.person.tags = tags;
-
-      return fetch(FUB_API_URL, {
+    function sendToWorker(data) {
+      return fetch(WORKER_URL, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Basic ' + btoa(FUB_API_KEY + ':')
-        },
-        body: JSON.stringify(payload)
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          hasAgency: data.hasAgency,
+          property: OPEN_HOUSE.property
+        })
       });
     }
 
@@ -359,7 +338,7 @@
         }, 2200);
       }
 
-      sendToFUB(data)
+      sendToWorker(data)
         .then(showSuccessAndRedirect)
         .catch(showSuccessAndRedirect); // never block the open-house flow
     });
