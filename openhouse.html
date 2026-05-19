@@ -338,9 +338,13 @@
         }, 2200);
       }
 
-      sendToWorker(data)
-        .then(showSuccessAndRedirect)
-        .catch(showSuccessAndRedirect); // never block the open-house flow
+      // Fire-and-forget the POST. Show success state immediately so the UX feels
+      // instant regardless of Worker round-trip time. The Worker keeps itself alive
+      // via ctx.waitUntil so the FUB mirror still completes after we return.
+      sendToWorker(data).catch(function(err) {
+        if (window.console && console.error) console.error('Worker POST failed:', err);
+      });
+      showSuccessAndRedirect();
     });
   </script>
 
