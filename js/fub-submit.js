@@ -100,7 +100,34 @@
     }
   }
 
+  // SMS opt-in disclosure required for A2P 10DLC. Injected dynamically under
+  // every form's submit button so all ~70 town-page forms stay in sync via
+  // this single source rather than per-page HTML duplication.
+  var SMS_DISCLOSURE_HTML =
+    'By submitting, you agree to receive text messages from Mr. Sellers Homes ' +
+    '(Tyler Sellers · RE/MAX Signature Homes) related to your real estate inquiry. ' +
+    'Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out or ' +
+    'HELP for help. See our <a href="/privacy" style="color:inherit;text-decoration:underline;">Privacy Policy</a>.';
+
+  function injectDisclosure(form) {
+    // Idempotent — skip if already present (rerun safety).
+    if (form.querySelector('.sms-consent')) return;
+    var btn = form.querySelector('button[type="submit"]');
+    if (!btn) return;
+    var p = document.createElement('p');
+    p.className = 'sms-consent';
+    p.setAttribute(
+      'style',
+      'font-size:12px;line-height:1.55;color:#6b6663;margin-top:14px;text-align:center;font-family:inherit;'
+    );
+    p.innerHTML = SMS_DISCLOSURE_HTML;
+    btn.insertAdjacentElement('afterend', p);
+  }
+
   function attachForm(form) {
+    // Inject SMS opt-in disclosure under the submit button
+    injectDisclosure(form);
+
     // Phone formatting
     var phoneInputs = form.querySelectorAll('input[type="tel"]');
     for (var i = 0; i < phoneInputs.length; i++) {
