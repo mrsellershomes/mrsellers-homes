@@ -581,7 +581,6 @@
             <div class="form-error-msg" id="seller-email-error">Please enter a valid email address</div>
           </div>
           <button type="submit" class="form-submit">Get my free home valuation &rarr;</button>
-          <p class="sms-consent" style="font-size:12px;line-height:1.55;color:#6b6663;margin-top:14px;text-align:center;font-family:inherit;">By submitting, you agree to receive text messages from Mr. Sellers Homes (Tyler Sellers &middot; RE/MAX Signature Homes) related to your real estate inquiry. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out or HELP for help. See our <a href="/privacy" style="color:inherit;text-decoration:underline;">Privacy Policy</a>.</p>
           <div class="form-social-proof">&ldquo;Tyler responded within 2 hours and gave me an honest number &mdash; not a padded one.&rdquo;</div>
           <div class="form-error-banner" id="sellerErrorBanner">Something went wrong &mdash; please try again or email tyler@mrsellers.homes</div>
         </div>
@@ -599,6 +598,10 @@
             <label for="message">Anything else I should know</label>
             <textarea id="message" name="message" placeholder="Timeline, situation, questions &mdash; anything helps..."></textarea>
           </div>
+          <label class="sms-consent" style="display:flex;align-items:flex-start;gap:8px;margin:14px 0;padding:10px 12px;background:#faf8f5;border:1px solid #e8e3da;border-radius:4px;font-size:11px;line-height:1.45;color:#6b6663;cursor:pointer;font-family:inherit;">
+            <input type="checkbox" name="smsConsent" id="seller-sms-consent" value="yes" style="margin-top:2px;flex-shrink:0;width:14px;height:14px;cursor:pointer;accent-color:#9C7E54;" />
+            <span><strong style="color:#111;font-weight:600;font-size:12px;display:block;margin-bottom:2px;">Text me real estate info from Mr. Sellers Homes.</strong>Recurring messages from Mr. Sellers Homes (Tyler Sellers, RE/MAX Signature Homes): showing confirmations, property updates, follow-ups. Frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See <a href="/privacy" style="color:#9C7E54;text-decoration:underline;">Privacy Policy</a>.</span>
+          </label>
           <button type="button" class="form-submit" onclick="submitSellerStep2()">Send additional details &rarr;</button>
           <button type="button" style="width:100%; background:none; border:none; color:var(--gray-mid); font-size:12px; padding:12px; cursor:pointer; font-family:'DM Sans',sans-serif;" onclick="skipSellerStep2()">Skip &mdash; just send my valuation request</button>
         </div>
@@ -680,7 +683,6 @@
             <div class="form-error-msg" id="buyer-email-error">Please enter a valid email address</div>
           </div>
           <button type="submit" class="form-submit" style="background:var(--black);">Start my Bergen County search &rarr;</button>
-          <p class="sms-consent" style="font-size:12px;line-height:1.55;color:#6b6663;margin-top:14px;text-align:center;font-family:inherit;">By submitting, you agree to receive text messages from Mr. Sellers Homes (Tyler Sellers &middot; RE/MAX Signature Homes) related to your real estate inquiry. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out or HELP for help. See our <a href="/privacy" style="color:inherit;text-decoration:underline;">Privacy Policy</a>.</p>
           <div class="form-social-proof">&ldquo;Tyler knew every town and matched us to one we never would have found on our own.&rdquo;</div>
           <div class="form-error-banner" id="buyerErrorBanner">Something went wrong &mdash; please try again or email tyler@mrsellers.homes</div>
         </div>
@@ -716,6 +718,10 @@
               <option>Just exploring for now</option>
             </select>
           </div>
+          <label class="sms-consent" style="display:flex;align-items:flex-start;gap:8px;margin:14px 0;padding:10px 12px;background:#faf8f5;border:1px solid #e8e3da;border-radius:4px;font-size:11px;line-height:1.45;color:#6b6663;cursor:pointer;font-family:inherit;">
+            <input type="checkbox" name="smsConsent" id="buyer-sms-consent" value="yes" style="margin-top:2px;flex-shrink:0;width:14px;height:14px;cursor:pointer;accent-color:#9C7E54;" />
+            <span><strong style="color:#111;font-weight:600;font-size:12px;display:block;margin-bottom:2px;">Text me real estate info from Mr. Sellers Homes.</strong>Recurring messages from Mr. Sellers Homes (Tyler Sellers, RE/MAX Signature Homes): showing confirmations, property updates, follow-ups. Frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See <a href="/privacy" style="color:#9C7E54;text-decoration:underline;">Privacy Policy</a>.</span>
+          </label>
           <button type="button" class="form-submit" style="background:var(--black);" onclick="submitBuyerStep2()">Send additional details &rarr;</button>
           <button type="button" style="width:100%; background:none; border:none; color:var(--gray-mid); font-size:12px; padding:12px; cursor:pointer; font-family:'DM Sans',sans-serif;" onclick="skipBuyerStep2()">Skip &mdash; just start my search</button>
         </div>
@@ -972,6 +978,7 @@
       sellerData.phone = document.getElementById('seller-phone').value;
       sellerData.address = document.getElementById('address').value;
       sellerData.message = document.getElementById('message').value;
+      sellerData.smsConsent = document.getElementById('seller-sms-consent').checked;
       try {
         await sendToWorker(sellerData, 'MrSellers.homes — Seller Form (details)');
         document.getElementById('contactForm').style.display = 'none';
@@ -1022,6 +1029,7 @@
       buyerData.towns = document.getElementById('buyer-towns').value;
       buyerData.budget = document.getElementById('buyer-budget').value;
       buyerData.timeline = document.getElementById('buyer-timeline').value;
+      buyerData.smsConsent = document.getElementById('buyer-sms-consent').checked;
       try {
         await sendToWorker(buyerData, 'MrSellers.homes — Buyer Form (details)');
         document.getElementById('buyerForm').style.display = 'none';
