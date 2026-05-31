@@ -1,48 +1,30 @@
 <!DOCTYPE html>
+<!--
+  go.html REDESIGN V2 — DRAFT, NOT DEPLOYED.
+  Editorial link-in-bio hub. Vanilla HTML + CSS, inline SVG icons, minimal JS. No Tailwind, no emoji.
+  Preserves all v1 destinations: card modals -> /go (paths 1-4) and /lead + Google Calendar (Path 5), PDF paths, /privacy, footer hrefs.
+  Backend dependency for Paths 1-4 (/go endpoint) is NOT built. Deploy only AFTER the 2026-05-31 open house.
+  Spec: docs/superpowers/specs/2026-05-30-go-leadmagnet-backend-spec.md
+  No-em-dash rule applied to all visible copy (overrides em dashes in the build prompt).
+-->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book a Free Strategy Call | Tyler Sellers | Bergen County NJ Real Estate</title>
-  <link rel="icon" type="image/png" sizes="512x512" href="favicon.png" />
-  <link rel="apple-touch-icon" href="favicon.png" />
-  <meta name="description" content="Book a free 30-minute real estate strategy session with Tyler Sellers. Bergen County's most transparent agent — honest pricing, hyper-local expertise, and zero pressure." />
+  <title>Tyler Sellers — Bergen County Real Estate</title>
+  <meta name="description" content="Free Bergen County buyer and seller guides, a no-hard-pull lender intro, ask a question, or book a strategy call with Tyler Sellers, RE/MAX Signature Homes." />
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Twitter (shared in DMs) -->
+  <meta property="og:title" content="Tyler Sellers — Bergen County Real Estate" />
+  <meta property="og:description" content="Free guides, a lender intro with no hard pull, or book a call. Pick what you need." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://go.mrsellers.homes/" />
-  <meta property="og:title" content="Book a Free Strategy Call | Tyler Sellers | Bergen County NJ" />
-  <meta property="og:description" content="Free 30-minute strategy session with Bergen County's most transparent agent. Honest pricing, hyper-local expertise, zero pressure." />
+  <meta property="og:url" content="https://mrsellers.homes/go" />
+  <!-- TODO Tyler: ideally a dedicated 1200x630 OG card with photo + name. Reusing the existing hero image for now. -->
   <meta property="og:image" content="https://media.base44.com/images/public/69c1bd8f6c9a0d59f49e9a47/3aace292f_Tyler_Sellers_Hero_PS.png" />
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Book a Free Strategy Call | Tyler Sellers | Bergen County NJ" />
-  <meta name="twitter:description" content="Free 30-minute strategy session with Bergen County's most transparent agent. Honest pricing, hyper-local expertise, zero pressure." />
-  <meta name="twitter:image" content="https://media.base44.com/images/public/69c1bd8f6c9a0d59f49e9a47/3aace292f_Tyler_Sellers_Hero_PS.png" />
-
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "RealEstateAgent",
-    "name": "Tyler Sellers — Mr. Sellers Homes",
-    "description": "Bergen County NJ real estate agent specializing in hyper-local expertise across all 70 municipalities.",
-    "url": "https://go.mrsellers.homes",
-    "telephone": "+1-201-308-0525",
-    "email": "tyler@mrsellers.homes",
-    "areaServed": {
-      "@type": "AdministrativeArea",
-      "name": "Bergen County, NJ"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "33"
-    }
-  }
-  </script>
+  <meta name="twitter:title" content="Tyler Sellers — Bergen County Real Estate" />
+  <meta name="twitter:description" content="Free guides, a lender intro with no hard pull, or book a call. Pick what you need." />
+  <link rel="icon" href="/favicon.ico" /> <!-- TODO Tyler: refined RE/MAX mark favicon -->
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5VC5MDECPH"></script>
@@ -52,1246 +34,465 @@
     gtag('js', new Date());
     gtag('config', 'G-5VC5MDECPH');
   </script>
-
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w1n2wmq26w");
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","w1n2wmq26w");
   </script>
-
-  <!-- Follow Up Boss Pixel -->
-  <script>
-    (function(w,i,d,g,e,t){w["WidgetTrackerObject"]=g;(w[g]=w[g]||function()
-    {(w[g].q=w[g].q||[]).push(arguments);}),(w[g].ds=1*new Date());(e="script"),
-    (t=d.createElement(e)),(e=d.getElementsByTagName(e)[0]);t.async=1;t.src=i;
-    e.parentNode.insertBefore(t,e);})
-    (window,"https://widgetbe.com/agent",document,"widgetTracker");
-    window.widgetTracker("create", "WT-HHUBDZCX");
-    window.widgetTracker("send", "pageview");
-  </script>
+  <!-- (Follow Up Boss pixel intentionally removed) -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Ubuntu:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#FF1200',
-            'primary-dark': '#cc0e00',
-          },
-          fontFamily: {
-            playfair: ['Playfair Display', 'serif'],
-            ubuntu: ['Ubuntu', 'sans-serif'],
-            sans: ['DM Sans', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <style>
-    html { scroll-behavior: smooth; }
-    body { -webkit-font-smoothing: antialiased; }
-    .mobile-br { display: none; }
-    @media (max-width: 768px) {
-      .mobile-br { display: block; }
+    :root{
+      --bone:#F4F1EA; --card:#FFFFFF; --ink:#161616; --ink-soft:#5C564B; --line:#E4DED2;
+      --red:#DC1C2E; --ink-dark:#121212; --on-dark:#EDE9E0; --on-dark-soft:#9A958C;
     }
-    /* FAQ accordion */
-    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; padding: 0 1.5rem; }
-    .faq-item.open .faq-answer { max-height: 300px; padding: 0 1.5rem 1.25rem; }
-    .faq-item.open .faq-arrow { transform: rotate(45deg); }
-    .faq-arrow { transition: transform 0.2s; }
-    /* Form error states */
-    .form-error { display: none; font-size: 0.6875rem; color: #FF1200; margin-top: 4px; }
-    .form-error.show { display: block; }
-    input.error, select.error { border-color: #FF1200 !important; }
-    /* Intent pill buttons */
-    .intent-pills { display: flex !important; flex-direction: row !important; gap: 6px; flex-wrap: nowrap; }
-    .intent-pill { flex: 1; padding: 8px 4px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 4px; font-size: 0.75rem; color: #555; cursor: pointer; text-align: center; transition: all 0.15s; }
-    .intent-pill:hover { border-color: #FF1200; color: #FF1200; }
-    .intent-pill.selected { background: #FF1200; border-color: #FF1200; color: white; font-weight: 500; }
+    *,*::before,*::after{ box-sizing:border-box; }
+    html{ -webkit-text-size-adjust:100%; }
+    body{ margin:0; background:var(--bone); color:var(--ink); font-family:"Inter",system-ui,sans-serif; line-height:1.5; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+    img{ max-width:100%; display:block; }
+    a{ color:inherit; }
+    .serif{ font-family:"Fraunces",Georgia,serif; }
+
+    .wrap{ max-width:1100px; margin:0 auto; padding:0 32px; }
+    .hub{ display:grid; grid-template-columns:360px 1fr; gap:48px; align-items:start; padding:48px 0 56px; }
+    .hub > *{ min-width:0; } /* prevent grid-item min-content blowout (mobile overflow fix) */
+    .rail{ position:sticky; top:48px; }
+
+    /* Identity */
+    .photo{ width:96px; height:96px; border-radius:50%; object-fit:cover; border:1px solid var(--line); }
+    .name{ font-size:34px; font-weight:600; letter-spacing:-0.01em; margin:16px 0 6px; line-height:1.1; }
+    .kicker{ color:var(--red); font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.12em; }
+    .valueprop{ color:var(--ink-soft); font-size:15px; margin:14px 0 0; max-width:34ch; }
+    .proof{ display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-top:16px; color:var(--ink-soft); font-size:13px; }
+    .proof .stars{ color:var(--red); letter-spacing:1px; }
+    .proof .dot{ color:var(--line); }
+    .proof a{ color:var(--ink); text-decoration:none; border-bottom:1px solid var(--line); }
+    .proof a:hover{ color:var(--red); border-color:var(--red); }
+    .social{ display:flex; gap:14px; margin-top:20px; }
+    .social a{ color:var(--ink-soft); transition:color .15s; }
+    .social a:hover{ color:var(--red); }
+
+    /* Right column */
+    .intro{ color:var(--ink-soft); font-size:15px; margin:0 0 24px; }
+    .group-label{ font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.12em; color:var(--ink-soft); margin:0 0 12px; }
+    .group + .group{ margin-top:28px; }
+    .stack{ display:flex; flex-direction:column; gap:12px; }
+
+    /* Video (rendered only if a real URL is set) */
+    .video{ position:relative; width:100%; aspect-ratio:16/9; border-radius:16px; overflow:hidden; background:#111; margin-bottom:24px; }
+    .video iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+
+    /* Cards */
+    .card{ display:flex; align-items:center; gap:16px; background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px; min-height:64px; text-decoration:none; color:var(--ink);
+           box-shadow:0 1px 2px rgba(0,0,0,.04); transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease; cursor:pointer; width:100%; text-align:left; font:inherit; }
+    .card:hover{ border-color:var(--red); box-shadow:0 12px 28px -14px rgba(22,22,22,.18); transform:translateY(-1px); }
+    .card:active{ transform:translateY(0); background:#fbf9f5; }
+    .card:focus-visible{ outline:2px solid var(--red); outline-offset:2px; }
+    .ico{ width:44px; height:44px; border-radius:50%; border:1px solid var(--line); background:var(--card); display:flex; align-items:center; justify-content:center; flex-shrink:0; color:var(--ink); }
+    .ico svg{ width:22px; height:22px; }
+    .card-body{ flex:1 1 auto; min-width:0; display:flex; flex-direction:column; }
+    .card-title{ font-size:16px; font-weight:600; color:var(--ink); line-height:1.25; overflow-wrap:break-word; }
+    .card-desc{ font-size:13px; color:var(--ink-soft); line-height:1.4; margin-top:4px; overflow-wrap:break-word; }
+    .tag-row{ margin:5px 0 2px; }
+    .badge{ display:inline-block; background:var(--red); color:#fff; font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:.06em; padding:2px 7px; border-radius:5px; }
+    .tag{ display:inline-block; border:1px solid var(--line); color:var(--ink-soft); font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:.06em; padding:2px 7px; border-radius:5px; }
+    .arrow{ flex-shrink:0; color:var(--ink-soft); display:flex; transition:transform .15s ease, color .15s ease; }
+    .card:hover .arrow{ color:var(--red); transform:translateX(4px); }
+
+    .talk{ margin-top:24px; font-size:14px; color:var(--ink-soft); }
+    .talk a{ color:var(--ink); font-weight:600; text-decoration:none; border-bottom:1px solid var(--red); }
+
+    /* Footer */
+    .footer{ background:var(--ink-dark); color:var(--on-dark-soft); margin-top:8px; }
+    .footer-inner{ max-width:1100px; margin:0 auto; padding:40px 32px; display:flex; flex-wrap:wrap; gap:32px; justify-content:space-between; }
+    .footer .fcol{ flex:1 1 260px; min-width:240px; }
+    .footer .brand{ font-family:"Fraunces",Georgia,serif; font-size:20px; font-weight:600; color:var(--on-dark); margin-bottom:8px; }
+    .footer a{ color:inherit; text-decoration:none; }
+    .footer .phone{ color:var(--on-dark); font-weight:600; font-size:15px; }
+    .eho{ display:flex; align-items:center; gap:8px; margin-bottom:12px; color:var(--on-dark); }
+    .eho span{ font-size:11px; text-transform:uppercase; letter-spacing:.08em; }
+    .footer .disc{ font-size:11px; color:#7c776e; line-height:1.55; margin:8px 0 12px; }
+    .footer .nav a{ margin-right:14px; font-size:12px; }
+
+    /* ===== Modals ===== */
+    .modal{ position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,.82); display:none; align-items:center; justify-content:center; padding:16px; }
+    .modal.open{ display:flex; }
+    .modal-card{ position:relative; background:#fff; border-radius:16px; width:100%; max-width:430px; max-height:92vh; overflow-y:auto; box-shadow:0 24px 60px rgba(0,0,0,.4); }
+    .modal-accent{ height:4px; background:var(--red); border-radius:16px 16px 0 0; }
+    .modal-pad{ padding:24px; }
+    .modal-close{ position:absolute; top:10px; right:10px; width:34px; height:34px; border:none; background:transparent; color:#9a9a9a; font-size:24px; line-height:1; cursor:pointer; border-radius:50%; }
+    .modal-close:hover{ background:#f3f3f3; color:#333; }
+    .modal-title{ font-family:"Fraunces",Georgia,serif; font-size:22px; font-weight:600; margin:0 0 6px; }
+    .modal-sub{ font-size:13.5px; color:var(--ink-soft); margin:0 0 16px; line-height:1.5; }
+    .field{ margin-bottom:12px; }
+    .field label{ display:block; font-size:10px; text-transform:uppercase; letter-spacing:.1em; color:var(--ink-soft); font-weight:600; margin-bottom:5px; }
+    .input{ width:100%; padding:11px 12px; background:#faf8f5; border:1px solid var(--line); border-radius:7px; font:inherit; font-size:14px; color:var(--ink); }
+    .input:focus{ outline:none; border-color:var(--red); }
+    textarea.input{ resize:vertical; }
+    .err{ display:none; font-size:11px; color:var(--red); margin-top:4px; }
+    .err.show{ display:block; }
+    .input.error{ border-color:var(--red); }
+    .btn{ width:100%; background:var(--red); color:#fff; border:none; padding:13px; font:inherit; font-size:14px; font-weight:600; border-radius:7px; cursor:pointer; }
+    .btn:hover{ background:#b8141f; }
+    .consent{ display:flex; align-items:flex-start; gap:8px; margin:12px 0; padding:10px 12px; background:#faf8f5; border:1px solid var(--line); border-radius:6px; font-size:11px; line-height:1.45; color:var(--ink-soft); cursor:pointer; }
+    .consent input{ margin-top:2px; flex-shrink:0; width:14px; height:14px; accent-color:var(--red); }
+    .fine{ font-size:11px; color:#9a958c; text-align:center; margin-top:8px; }
+    .success{ text-align:center; padding:6px 0; }
+    .success .check{ font-size:30px; color:var(--red); }
+    .success p{ font-size:14px; color:var(--ink); font-weight:500; margin:8px 0 14px; }
+    .dl-btn{ display:inline-block; width:100%; background:var(--red); color:#fff; padding:13px; font-size:14px; font-weight:600; border-radius:7px; text-decoration:none; }
+    .hidden{ display:none !important; }
+
+    @media (prefers-reduced-motion: reduce){
+      *{ transition:none !important; animation:none !important; }
+      .card:hover{ transform:none; } .card:hover .arrow{ transform:none; }
+    }
+
+    /* ===== Mobile ===== */
+    @media (max-width: 899px){
+      .wrap{ padding:0 20px; }
+      .hub{ grid-template-columns:1fr; gap:0; padding:28px 0 36px; }
+      .rail{ position:static; top:auto; text-align:center; }
+      .photo{ margin:0 auto; }
+      .valueprop{ margin-left:auto; margin-right:auto; }
+      .proof{ justify-content:center; }
+      .social{ justify-content:center; }
+      .intro{ text-align:center; margin-top:26px; }
+      .group:first-of-type{ margin-top:4px; }
+      .talk{ text-align:center; }
+      .footer-inner{ padding:32px 20px; gap:24px; }
+    }
   </style>
 </head>
-<body class="font-sans text-[#111111] bg-white leading-relaxed">
+<body>
   <noscript>
-    <div style="background:#FF1200;color:white;text-align:center;padding:12px 20px;font-family:sans-serif;font-size:14px;">
-      This page works best with JavaScript enabled. To book a call, please contact Tyler directly at <a href="tel:2013080525" style="color:white;font-weight:bold;">201-308-0525</a> or <a href="mailto:tyler@mrsellers.homes" style="color:white;font-weight:bold;">tyler@mrsellers.homes</a>.
+    <div style="background:var(--red);color:#fff;text-align:center;padding:12px 20px;font-size:14px;">
+      This page works best with JavaScript enabled. Reach Tyler at <a href="tel:2013080525" style="color:#fff;font-weight:bold;">201-308-0525</a> or <a href="mailto:tyler@mrsellers.homes" style="color:#fff;font-weight:bold;">tyler@mrsellers.homes</a>.
     </div>
   </noscript>
 
-  <!-- ============ NAV ============ -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
-    <div class="max-w-6xl mx-auto px-5 sm:px-6 py-1.5 sm:py-2 flex items-center justify-between">
-      <a href="#hero" class="no-underline flex items-center gap-2 sm:gap-3">
-        <img src="logo-mrsellers.svg" alt="Mr. Sellers Homes" class="h-7 sm:h-9" />
-        <img src="logo-remax.svg" alt="RE/MAX" class="h-6 sm:h-8" />
-      </a>
-      <a href="#bookform" onclick="openBookModal('nav'); return false;" class="bg-primary hover:bg-primary-dark text-white text-[11px] sm:text-sm font-medium px-3 sm:px-5 py-2 sm:py-2.5 rounded-sm transition-colors no-underline whitespace-nowrap">
-        Book your free call
-      </a>
-    </div>
-  </nav>
+  <div class="wrap">
+    <div class="hub">
 
-  <!-- ============ HERO ============ -->
-  <section class="relative min-h-[75vh] flex items-center overflow-hidden mt-[44px] sm:mt-[52px]" id="hero">
-    <!-- Background image -->
-    <div class="absolute inset-0 bg-cover bg-no-repeat" style="background-image: url('https://media.base44.com/images/public/69c1bd8f6c9a0d59f49e9a47/3aace292f_Tyler_Sellers_Hero_PS.png'); background-position: right top;"></div>
-    <!-- Overlay -->
-    <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(17,17,17,0.93) 0%, rgba(17,17,17,0.82) 40%, rgba(17,17,17,0.45) 62%, rgba(17,17,17,0.12) 100%), linear-gradient(to top, rgba(17,17,17,0.4) 0%, transparent 40%);"></div>
+      <!-- ===== Identity rail ===== -->
+      <aside class="rail">
+        <img class="photo" src="tyler-sellers.jpg" alt="Tyler Sellers, Bergen County real estate advisor" loading="lazy" />
+        <h1 class="name serif">Tyler Sellers</h1>
+        <div class="kicker">Bergen County Real Estate</div>
+        <p class="valueprop">Helping Bergen County families buy and sell with clarity. No pressure, no jargon.</p>
+        <div class="proof">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <a href="https://share.google/7XbQmAH8cAfASoF5r" target="_blank" rel="noopener"><strong>15</strong> five-star Google reviews</a>
+          <span class="dot">·</span><span>RE/MAX</span>
+          <span class="dot">·</span><span>Closter, NJ</span>
+        </div>
+        <div class="social">
+          <a href="https://www.tiktok.com/@tsellnj" target="_blank" rel="noopener" aria-label="TikTok"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.instagram.com/tsellnj" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0m0 5.84A6.16 6.16 0 1018.16 12 6.16 6.16 0 0012 5.84M12 16a4 4 0 110-8 4 4 0 010 8m6.41-11.85a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88"/></svg></a>
+          <a href="https://www.youtube.com/@bergencountyrealestate" target="_blank" rel="noopener" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 00.5 6.19 31.4 31.4 0 000 12a31.4 31.4 0 00.5 5.81 3.02 3.02 0 002.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 002.12-2.14A31.4 31.4 0 0024 12a31.4 31.4 0 00-.5-5.81M9.55 15.57V8.43L15.82 12z"/></svg></a>
+        </div>
+      </aside>
 
-    <div class="relative z-10 max-w-6xl mx-auto px-5 sm:px-6 pt-10 sm:pt-16 pb-10 w-full flex items-center gap-10 lg:gap-16">
+      <!-- ===== Right column ===== -->
+      <main>
+        <!-- Video module renders only if CONFIG.videoEmbedUrl is set (no placeholder). -->
+        <div class="video hidden" id="videoModule"></div>
 
-      <!-- Left: headline + CTA + stats -->
-      <div class="flex-1 min-w-0">
-        <!-- Eyebrow -->
-        <div class="flex items-center gap-2.5 mb-4">
-          <div class="w-7 h-0.5 bg-primary"></div>
-          <span class="text-primary text-[10px] sm:text-xs font-medium tracking-[0.18em] uppercase">Bergen County Real Estate</span>
-        </div>
+        <p class="intro">Buying, selling, or just have a question about the Bergen County market? Pick what you need below and I'll take it from there.</p>
 
-        <!-- Headline -->
-        <h1 class="font-playfair text-[clamp(32px,9vw,68px)] leading-[1.08] font-medium text-white mb-4 sm:mb-5">
-          Buy or Sell Your<br class="mobile-br"> Home <span class="font-ubuntu font-light text-[#FDA4AF]" style="font-size:0.92em;">Smarter</span>,<br class="mobile-br"> <span class="font-playfair italic font-semibold text-[#FB7185]">Faster</span>, and at a<br class="mobile-br"> <span class="font-playfair font-extrabold text-[#F43F5E]">Better Price</span>.
-        </h1>
-
-        <!-- Subheading -->
-        <p class="text-white/75 text-sm sm:text-[15px] leading-relaxed max-w-[440px] mb-5 sm:mb-7">
-          Hyper-local expertise across all 70 Bergen County municipalities.
-          Honest pricing. A concierge experience built around your timeline.
-        </p>
-
-        <!-- CTA -->
-        <a href="#bookform" onclick="openBookModal('hero'); return false;" class="inline-block bg-[#FF1200] hover:bg-primary-dark text-white px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-[15px] font-medium rounded-sm transition-colors no-underline tracking-wide">
-          Book your free strategy call &rarr;
-        </a>
-
-        <!-- Stats -->
-        <div class="flex gap-8 sm:gap-10 mt-5 sm:mt-10 pt-0 sm:pt-5">
-          <div class="text-center sm:text-left">
-            <div class="font-playfair text-2xl sm:text-4xl font-medium text-primary hero-stat-num">6+</div>
-            <div class="text-[9px] sm:text-[11px] text-white/60 tracking-wide mt-0.5">Years Active</div>
-          </div>
-          <div class="text-center sm:text-left">
-            <div class="font-playfair text-2xl sm:text-4xl font-medium text-primary hero-stat-num">33+</div>
-            <div class="text-[9px] sm:text-[11px] text-white/60 tracking-wide mt-0.5">Homes Sold</div>
-          </div>
-          <div class="text-center sm:text-left">
-            <div class="font-playfair text-2xl sm:text-4xl font-medium text-primary hero-stat-num">5M+</div>
-            <div class="text-[9px] sm:text-[11px] text-white/60 tracking-wide mt-0.5">Video Views</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right: testimonial card (desktop only) -->
-      <div class="hidden lg:block flex-shrink-0 w-[320px] self-end">
-        <div class="bg-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-6">
-          <div class="text-xs font-bold text-white mb-3 uppercase tracking-widest">Client Feedback</div>
-          <p class="text-white/85 text-sm leading-relaxed italic">
-            &ldquo;Tyler is fantastic, he goes above and beyond for his clients&hellip; Besides being my realtor, <strong class="text-white text-base">I feel I made a <span class="bg-yellow-300 text-black px-1 rounded">friend</span>.</strong>&rdquo;
-          </p>
-          <div class="flex items-center gap-3 mt-4">
-            <img src="https://media.base44.com/images/public/69c1bd8f6c9a0d59f49e9a47/0bfcf2099_generated_image.png" alt="Linda Rutledge" class="w-9 h-9 rounded-full object-cover" width="36" height="36" />
-            <div>
-              <div class="font-semibold text-white text-sm">Linda Rutledge</div>
-              <div class="text-white/50 text-xs">Bergen County, NJ</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ============ TESTIMONIALS 1 ============ -->
-  <section class="py-10 sm:py-14 bg-white">
-    <div class="max-w-6xl mx-auto px-5 sm:px-6">
-      <h2 class="font-playfair text-2xl md:text-3xl font-bold text-[#111] text-center mb-8">
-        Real People. Real Bergen County Results.
-      </h2>
-      <div class="grid md:grid-cols-3 gap-5">
-        <!-- Testimonial 1 -->
-        <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 flex flex-col">
-          <div class="font-ubuntu text-lg md:text-xl font-bold text-primary leading-tight mb-3">&ldquo;Purchased $11K under asking&rdquo;</div>
-          <div class="flex gap-0.5 mb-1.5 text-primary text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <div class="flex items-center gap-1 mb-3">
-            <span class="text-[10px] text-gray-400">Verified on</span>
-            <img src="https://media.base44.com/images/public/69c1bd8f6c9a0d59f49e9a47/561bd50a7_Zillow_id5aqCETJk_1.png" alt="Zillow" class="h-3 w-auto" loading="lazy" width="60" height="12" />
-          </div>
-          <p class="text-gray-500 text-sm leading-relaxed italic flex-1">
-            &ldquo;As a single mother, I was very nervous about buying my first home. Tyler explained the process and walked me through all the steps &mdash; I was able to purchase my home about $11k under asking!&rdquo;
-          </p>
-          <div class="mt-4">
-            <div class="font-semibold text-[#111] text-sm">Jessica Batista</div>
-            <div class="text-gray-400 text-xs">Hackensack, NJ</div>
-          </div>
-        </div>
-        <!-- Testimonial 2 -->
-        <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 flex flex-col">
-          <div class="font-ubuntu text-lg md:text-xl font-bold text-primary leading-tight mb-3">&ldquo;Multiple competing offers within days&rdquo;</div>
-          <div class="flex gap-0.5 mb-1.5 text-primary text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <div class="flex items-center gap-1 mb-3">
-            <span class="text-[10px] text-gray-400">Verified on</span>
-            <img src="https://media.base44.com/images/public/69c1bd8f6c9a0d59f49e9a47/561bd50a7_Zillow_id5aqCETJk_1.png" alt="Zillow" class="h-3 w-auto" loading="lazy" width="60" height="12" />
-          </div>
-          <p class="text-gray-500 text-sm leading-relaxed italic flex-1">
-            &ldquo;Tyler is the BEST realtor around! We had several competing offers above asking by the end of the first weekend. I would 100% recommend Tyler to anyone.&rdquo;
-          </p>
-          <div class="mt-4">
-            <div class="font-semibold text-[#111] text-sm">Jennifer Lynn-Bjorklund</div>
-            <div class="text-gray-400 text-xs">Morris Twp., NJ</div>
-          </div>
-        </div>
-        <!-- Testimonial 3 -->
-        <div class="bg-gray-50 border border-gray-200 rounded-lg p-5 flex flex-col">
-          <div class="font-ubuntu text-lg md:text-xl font-bold text-primary leading-tight mb-3">&ldquo;Toured 21 towns to find our home&rdquo;</div>
-          <div class="flex gap-0.5 mb-1.5 text-primary text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <div class="flex items-center gap-1 mb-3">
-            <span class="text-[10px] text-gray-400">Verified on</span>
-            <img src="https://media.base44.com/images/public/69c1bd8f6c9a0d59f49e9a47/561bd50a7_Zillow_id5aqCETJk_1.png" alt="Zillow" class="h-3 w-auto" loading="lazy" width="60" height="12" />
-          </div>
-          <p class="text-gray-500 text-sm leading-relaxed italic flex-1">
-            &ldquo;Tyler made this experience 10x easier. He showed the utmost patience, taking us to 21 different towns in Bergen County. We found a home we absolutely love.&rdquo;
-          </p>
-          <div class="mt-4">
-            <div class="font-semibold text-[#111] text-sm">Rashida Estevez</div>
-            <div class="text-gray-400 text-xs">Bogota, NJ</div>
-          </div>
-        </div>
-      </div>
-      <div class="flex justify-center mt-8">
-        <a href="#bookform" onclick="openBookModal('testimonials'); return false;" class="inline-flex items-center gap-2 bg-[#FF1200] hover:bg-primary-dark text-white font-medium text-sm px-8 py-3.5 rounded-sm transition-all no-underline shadow-lg">
-          Book Your Free Strategy Call
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PAIN POINTS / FLOW CHART ============ -->
-  <section class="py-12 sm:py-16 bg-gray-50">
-    <div class="max-w-5xl mx-auto px-5 sm:px-6 text-center">
-      <h2 class="font-playfair text-3xl md:text-4xl font-black text-[#0032A0] mb-5">The Hard Truth is...</h2>
-      <div class="flex flex-col items-center gap-1 mb-10">
-        <h3 class="text-2xl md:text-3xl font-bold text-[#124e78]">
-          Most <strong>Sellers</strong> <span class="font-playfair italic text-red-800 text-3xl md:text-4xl">Leave Thousands</span> on the Table
-        </h3>
-        <p class="font-playfair text-xl md:text-2xl font-bold text-[#124e78]">&amp;</p>
-        <h3 class="text-2xl md:text-3xl font-bold text-[#124e78]">
-          Most <strong>Buyers</strong> <span class="font-playfair italic text-red-800 text-3xl md:text-4xl">Pay More Than Necessary</span>
-        </h3>
-        <p class="font-playfair text-xl md:text-2xl font-bold text-[#124e78]">because of...</p>
-      </div>
-    </div>
-    <div class="max-w-6xl mx-auto px-5 sm:px-6">
-      <div class="grid md:grid-cols-3 gap-4">
-        <!-- Pain 1 -->
-        <div class="bg-white rounded-2xl p-6 sm:p-8 text-center flex flex-col items-center">
-          <div class="relative w-14 h-14 mb-5">
-            <div class="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            </div>
-            <div class="absolute -top-2 -right-2 w-7 h-7 bg-red-600 rounded-full flex items-center justify-center shadow-lg">
-              <span class="text-white font-extrabold text-sm leading-none">&times;</span>
-            </div>
-          </div>
-          <h3 class="font-playfair text-xl font-bold text-[#111] mb-3">Poorly Priced Listings</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Algorithms miss what makes your property unique. Sellers leave money on the table while buyers overpay.</p>
-        </div>
-        <!-- Pain 2 -->
-        <div class="bg-white rounded-2xl p-6 sm:p-8 text-center flex flex-col items-center">
-          <div class="relative w-14 h-14 mb-5">
-            <div class="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div class="absolute -top-2 -right-2 w-7 h-7 bg-red-600 rounded-full flex items-center justify-center shadow-lg">
-              <span class="text-white font-extrabold text-sm leading-none">&times;</span>
-            </div>
-          </div>
-          <h3 class="font-playfair text-xl font-bold text-[#111] mb-3">No Hyper-Local Insight</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Generic agents cover too wide an area to know your street, school zone, or commute. Missed opportunities cost you.</p>
-        </div>
-        <!-- Pain 3 -->
-        <div class="bg-white rounded-2xl p-6 sm:p-8 text-center flex flex-col items-center">
-          <div class="relative w-14 h-14 mb-5">
-            <div class="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-            </div>
-            <div class="absolute -top-2 -right-2 w-7 h-7 bg-red-600 rounded-full flex items-center justify-center shadow-lg">
-              <span class="text-white font-extrabold text-sm leading-none">&times;</span>
-            </div>
-          </div>
-          <h3 class="font-playfair text-xl font-bold text-[#111] mb-3">Weak Negotiation</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Without preparation and fast action, you lose leverage the moment offers come in. Most agents accept the first offer.</p>
-        </div>
-      </div>
-      <div class="flex justify-center mt-10">
-        <a href="#bookform" onclick="openBookModal('pain_points'); return false;" class="inline-flex items-center gap-2 bg-[#FF1200] hover:bg-primary-dark text-white font-medium text-sm px-8 py-3.5 rounded-sm transition-all no-underline shadow-lg">
-          Book Your Free Strategy Call
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ UVP1: PRICING INTELLIGENCE ============ -->
-  <section class="py-16 sm:py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-5 sm:px-6">
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        <!-- Left: Copy -->
-        <div>
-          <p class="text-primary font-medium text-xs uppercase tracking-[0.16em] mb-3">Pricing Intelligence</p>
-          <h2 class="font-playfair text-3xl md:text-4xl font-bold text-[#111] mb-4 leading-tight">
-            Don&rsquo;t Let Zillow Cost You Thousands
-          </h2>
-          <p class="text-gray-500 text-base leading-relaxed mb-5">
-            Zillow gives every unit in the same building the same estimate. Tyler prices based on what actually matters &mdash; views, floor level, street position, and micro-market conditions algorithms miss entirely.
-          </p>
-          <div class="bg-gray-50 border-l-[3px] border-primary p-4 mb-4">
-            <p class="text-sm text-gray-600 leading-relaxed"><strong class="text-[#111]">Same building. Same Zillow estimate. Wildly different real values.</strong> Only hyper-local expertise can tell the difference.</p>
-          </div>
-          <p class="flex items-center gap-2 text-sm text-[#111] font-medium">
-            <svg class="w-4 h-4 text-green-500 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            Priced home by home &mdash; not zip code by zip code.
-          </p>
-        </div>
-        <!-- Right: Comparison Table -->
-        <div>
-          <div class="bg-gray-50 rounded-xl p-4 sm:p-5 border border-gray-200">
-            <div class="grid grid-cols-3 text-[10px] font-semibold text-gray-400 uppercase tracking-wide mb-3 px-1">
-              <span>Property</span>
-              <span class="text-center">Zillow Says</span>
-              <span class="text-center">Actual Sale Price</span>
-            </div>
-            <!-- Row 1 -->
-            <div class="grid grid-cols-3 items-center bg-white rounded-lg px-3 sm:px-4 py-3 mb-2 border border-gray-200">
-              <div class="flex items-center gap-1.5">
-                <svg class="w-3.5 h-3.5 text-primary shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span class="text-[11px] sm:text-xs text-[#111] leading-tight">Better-positioned unit</span>
-              </div>
-              <div class="text-center text-xs sm:text-sm text-gray-400">~$875K</div>
-              <div class="text-center">
-                <span class="text-xs sm:text-sm font-bold text-[#111]">$970K</span>
-                <span class="block sm:inline sm:ml-1 bg-green-100 text-green-700 text-[9px] sm:text-[10px] font-semibold px-1.5 py-0.5 rounded-full mt-0.5 sm:mt-0">+$95K</span>
-              </div>
-            </div>
-            <!-- Row 2 -->
-            <div class="grid grid-cols-3 items-center bg-white rounded-lg px-3 sm:px-4 py-3 mb-2 border border-gray-200">
-              <div class="flex items-center gap-1.5">
-                <svg class="w-3.5 h-3.5 text-primary shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span class="text-[11px] sm:text-xs text-[#111] leading-tight">Less desirable unit</span>
-              </div>
-              <div class="text-center text-xs sm:text-sm text-gray-400">~$875K</div>
-              <div class="text-center">
-                <span class="text-xs sm:text-sm font-bold text-[#111]">$780K</span>
-                <span class="block sm:inline sm:ml-1 bg-red-100 text-red-700 text-[9px] sm:text-[10px] font-semibold px-1.5 py-0.5 rounded-full mt-0.5 sm:mt-0">-$95K</span>
-              </div>
-            </div>
-            <!-- Row 3 -->
-            <div class="grid grid-cols-3 items-center bg-white rounded-lg px-3 sm:px-4 py-3 border border-gray-200">
-              <div class="flex items-center gap-1.5">
-                <svg class="w-3.5 h-3.5 text-primary shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span class="text-[11px] sm:text-xs text-[#111] leading-tight">Hot-pocket entry home</span>
-              </div>
-              <div class="text-center text-xs sm:text-sm text-gray-400">~$975K</div>
-              <div class="text-center">
-                <span class="text-xs sm:text-sm font-bold text-[#111]">$1.33M</span>
-                <span class="block sm:inline sm:ml-1 bg-green-100 text-green-700 text-[9px] sm:text-[10px] font-semibold px-1.5 py-0.5 rounded-full mt-0.5 sm:mt-0">+$355K</span>
-              </div>
-            </div>
-            <p class="text-[11px] text-gray-400 text-center mt-3 italic">* Illustrative example based on Bergen County micro-market pricing</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ UVP2: MOST REALTORS vs TYLER ============ -->
-  <section class="py-16 sm:py-20 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-5 sm:px-6">
-      <div class="text-center mb-10">
-        <p class="text-primary font-medium text-xs uppercase tracking-[0.16em] mb-3">Market Strategy</p>
-        <h2 class="font-playfair text-3xl md:text-4xl font-bold text-[#111] leading-tight max-w-3xl mx-auto">
-          Your Agent Should Be Your Economist
-        </h2>
-        <p class="text-gray-500 text-base mt-4 max-w-2xl mx-auto leading-relaxed">
-          Most agents list and hope. Tyler analyzes rates, inventory, and demand &mdash; then prices accordingly.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
-        <!-- Most Realtors -->
-        <div class="bg-white border border-gray-200 rounded-xl p-6">
-          <div class="flex items-center gap-2 mb-5">
-            <div class="w-7 h-7 rounded-full bg-red-100 flex items-center justify-center">
-              <svg class="w-3.5 h-3.5 text-red-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            </div>
-            <h3 class="font-bold text-base text-[#111]">Most Realtors</h3>
-          </div>
-          <ul class="space-y-3">
-            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-red-400 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span class="text-sm text-gray-500">Yard sign + MLS listing</span></li>
-            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-red-400 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span class="text-sm text-gray-500">Gut-feel pricing</span></li>
-            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-red-400 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span class="text-sm text-gray-500">No macro-economic analysis</span></li>
-            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-red-400 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span class="text-sm text-gray-500">Ignore interest rate cycles</span></li>
-            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-red-400 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span class="text-sm text-gray-500">Miss inventory shift signals</span></li>
-          </ul>
-          <div class="mt-5 bg-red-50 rounded-lg px-4 py-3 flex items-center gap-2">
-            <svg class="w-4 h-4 text-red-500 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg>
-            <span class="text-xs text-red-700 font-semibold">Result: Wrong price. Longer days on market. Less money.</span>
-          </div>
-        </div>
-
-        <!-- Tyler's Approach -->
-        <div class="bg-[#111] rounded-xl p-6 text-white">
-          <div class="flex items-center gap-2 mb-5">
-            <div class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center">
-              <svg class="w-3.5 h-3.5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
-            <h3 class="font-bold text-base text-white">Tyler&rsquo;s Approach</h3>
-          </div>
-          <ul class="space-y-3">
-            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-green-400 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-sm text-white/85">Data-driven pricing strategy</span></li>
-            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-green-400 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-sm text-white/85">Real-time economic analysis</span></li>
-            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-green-400 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-sm text-white/85">Tracks interest rate &amp; inventory cycles</span></li>
-            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-green-400 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-sm text-white/85">Neighborhood-level demand signals</span></li>
-            <li class="flex items-center gap-3"><svg class="w-4 h-4 text-green-400 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span class="text-sm text-white/85">Priced right the first time</span></li>
-          </ul>
-          <div class="mt-5 bg-white/10 rounded-lg px-4 py-3 flex items-center gap-2">
-            <svg class="w-4 h-4 text-green-400 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-            <span class="text-xs text-white font-semibold">Result: Precision pricing. Faster sale. Maximum proceeds.</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="flex justify-center mt-10">
-        <a href="#bookform" onclick="openBookModal('comparison'); return false;" class="inline-flex items-center gap-2 bg-[#FF1200] hover:bg-primary-dark text-white font-medium text-sm px-8 py-3.5 rounded-sm transition-all no-underline shadow-lg">
-          Book Your Free Strategy Call
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ UVP3: TOTAL COMMITMENT ============ -->
-  <section class="py-16 sm:py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-5 sm:px-6">
-      <div class="mb-10">
-        <p class="text-primary font-medium text-xs uppercase tracking-[0.16em] mb-3">Total Commitment</p>
-        <h2 class="font-playfair text-3xl md:text-4xl font-bold text-[#111] mb-4 leading-tight">
-          Agent vs. True Advocate
-        </h2>
-        <p class="text-gray-500 text-base leading-relaxed max-w-2xl">
-          Most agents juggle 20-30 clients. Tyler limits his roster so every client gets his full attention, proactive communication, and relentless negotiation.
-        </p>
-      </div>
-
-      <!-- Commitment cards -->
-      <div class="space-y-3 mb-10 max-w-2xl">
-        <div class="flex items-start gap-4 bg-gray-50 border border-gray-200 rounded-lg p-4">
-          <div class="w-9 h-9 rounded-full bg-red-50 flex items-center justify-center shrink-0">
-            <svg class="w-4 h-4 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          </div>
-          <div>
-            <h4 class="font-bold text-sm text-[#111] mb-1">Same-Day Response</h4>
-            <p class="text-sm text-gray-500">Tyler picks up the phone. No assistants, no call centers &mdash; direct access from day one.</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-4 bg-gray-50 border border-gray-200 rounded-lg p-4">
-          <div class="w-9 h-9 rounded-full bg-red-50 flex items-center justify-center shrink-0">
-            <svg class="w-4 h-4 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          </div>
-          <div>
-            <h4 class="font-bold text-sm text-[#111] mb-1">Proactive Communication</h4>
-            <p class="text-sm text-gray-500">Weekly check-ins and real-time updates &mdash; you never have to wonder where things stand.</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-4 bg-gray-50 border border-gray-200 rounded-lg p-4">
-          <div class="w-9 h-9 rounded-full bg-red-50 flex items-center justify-center shrink-0">
-            <svg class="w-4 h-4 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <div>
-            <h4 class="font-bold text-sm text-[#111] mb-1">Relentless Negotiation</h4>
-            <p class="text-sm text-gray-500">Every deal treated like his own. $15K under asking in the 2024-2025 NJ market.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Agent load visual -->
-      <div class="grid md:grid-cols-2 gap-5">
-        <div class="bg-gray-50 border border-gray-200 rounded-xl p-5">
-          <div class="flex items-center gap-2 mb-4">
-            <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <span class="font-semibold text-sm text-gray-500">Typical Agent&rsquo;s Client Load</span>
-          </div>
-          <div class="flex flex-wrap gap-1.5">
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-            <div class="w-6 h-6 rounded-full bg-gray-200 border border-gray-300"></div>
-          </div>
-          <p class="text-xs text-gray-400 mt-3 italic">30 clients. Divided attention. Divided results.</p>
-        </div>
-
-        <div class="bg-[#111] rounded-xl p-5">
-          <div class="flex items-center gap-2 mb-4">
-            <svg class="w-5 h-5 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            <span class="font-semibold text-sm text-white">Tyler&rsquo;s Commitment to You</span>
-          </div>
-          <div class="flex gap-3 items-center">
-            <div class="w-16 h-16 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center">
-              <svg class="w-8 h-8 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            </div>
-            <div>
-              <p class="font-playfair text-white text-xl font-bold">You.</p>
-              <p class="text-white/70 text-sm">Tyler&rsquo;s full focus. Every call. Every offer. Every detail.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ TESTIMONIALS 2 (SOCIAL PROOF) ============ -->
-  <section class="py-12 sm:py-16" style="background-color: #111111;">
-    <div class="max-w-6xl mx-auto px-5 sm:px-6">
-      <h2 class="font-playfair text-2xl md:text-3xl font-bold text-white text-center mb-8 pt-2">
-        More Bergen County Success Stories
-      </h2>
-      <div class="grid md:grid-cols-3 gap-5">
-        <!-- Testimonial 4 -->
-        <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-5 flex flex-col">
-          <div class="font-ubuntu text-lg md:text-xl font-bold text-white leading-tight mb-3">&ldquo;Professionalism unlike any other agent&rdquo;</div>
-          <div class="flex gap-0.5 mb-1.5 text-primary text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <div class="flex items-center gap-1 mb-3">
-            <span class="text-[10px] text-white/60">Verified on</span>
-            <img src="https://media.base44.com/images/public/69c1bd8f6c9a0d59f49e9a47/561bd50a7_Zillow_id5aqCETJk_1.png" alt="Zillow" class="h-3 w-auto" loading="lazy" width="60" height="12" />
-          </div>
-          <p class="text-white/80 text-sm leading-relaxed italic flex-1">
-            &ldquo;I&rsquo;ve met with many agents but never met someone with the professionalism, expertise, and comfort level of Tyler. He was always available whenever I needed him.&rdquo;
-          </p>
-          <div class="mt-4">
-            <div class="font-semibold text-white text-sm">Jia Mohnani</div>
-            <div class="text-white/50 text-xs">Cliffside Park, NJ</div>
-          </div>
-        </div>
-        <!-- Testimonial 5 -->
-        <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-5 flex flex-col">
-          <div class="font-ubuntu text-lg md:text-xl font-bold text-white leading-tight mb-3">&ldquo;Secured home for $15K under asking&rdquo;</div>
-          <div class="flex gap-0.5 mb-1.5 text-primary text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <div class="flex items-center gap-1 mb-3">
-            <span class="text-[10px] text-white/60">Verified on</span>
-            <img src="https://media.base44.com/images/public/69c1bd8f6c9a0d59f49e9a47/561bd50a7_Zillow_id5aqCETJk_1.png" alt="Zillow" class="h-3 w-auto" loading="lazy" width="60" height="12" />
-          </div>
-          <p class="text-white/80 text-sm leading-relaxed italic flex-1">
-            &ldquo;He actually got us 15k UNDER asking, unheard of in today&rsquo;s NJ market! His negotiating and quick thinking got us our forever home.&rdquo;
-          </p>
-          <div class="mt-4">
-            <div class="font-semibold text-white text-sm">Claire Saal</div>
-            <div class="text-white/50 text-xs">Carlstadt, NJ</div>
-          </div>
-        </div>
-        <!-- Testimonial 6 -->
-        <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-5 flex flex-col">
-          <div class="font-ubuntu text-lg md:text-xl font-bold text-white leading-tight mb-3">&ldquo;Incredible, personable agent from day 1&rdquo;</div>
-          <div class="flex gap-0.5 mb-1.5 text-primary text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <div class="flex items-center gap-1 mb-3">
-            <span class="text-[10px] text-white/60">Verified on</span>
-            <img src="https://media.base44.com/images/public/69c1bd8f6c9a0d59f49e9a47/561bd50a7_Zillow_id5aqCETJk_1.png" alt="Zillow" class="h-3 w-auto" loading="lazy" width="60" height="12" />
-          </div>
-          <p class="text-white/80 text-sm leading-relaxed italic flex-1">
-            &ldquo;Tyler was an incredible, personable agent from day one. He totally respected our decisions every step of the way. I would recommend him to anyone.&rdquo;
-          </p>
-          <div class="mt-4">
-            <div class="font-semibold text-white text-sm">Marcela Callejas</div>
-            <div class="text-white/50 text-xs">Paramus, NJ</div>
-          </div>
-        </div>
-      </div>
-      <div class="flex justify-center mt-8 pb-2">
-        <a href="#bookform" onclick="openBookModal('social_proof'); return false;" class="inline-flex items-center gap-2 bg-[#FF1200] hover:bg-primary-dark text-white font-medium text-sm px-8 py-3.5 rounded-sm transition-all no-underline shadow-lg">
-          Book Your Free Strategy Call
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ WHY TYLER / STRENGTHS + WORKFLOW ============ -->
-  <section class="py-16 sm:py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-5 sm:px-6">
-
-      <!-- Strengths Header -->
-      <div class="text-center mb-12">
-        <p class="text-primary font-medium text-xs uppercase tracking-[0.16em] mb-3">Why Tyler Sellers</p>
-        <h2 class="font-playfair text-3xl md:text-4xl font-bold text-[#111] leading-tight max-w-2xl mx-auto">
-          Where Others Fall Short, Tyler Delivers
-        </h2>
-      </div>
-
-      <!-- Strength cards -->
-      <div class="grid md:grid-cols-3 gap-4 mb-20">
-        <div class="bg-gray-50 rounded-2xl p-6 sm:p-8 text-center flex flex-col items-center">
-          <div class="relative w-14 h-14 mb-5">
-            <div class="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center">
-              <svg class="w-7 h-7 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div class="absolute -top-2 -right-2 w-7 h-7 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
-              <svg class="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
-          </div>
-          <h3 class="font-playfair text-xl font-bold text-[#111] mb-3">Deep Local Insight</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Block-by-block Bergen County knowledge. Tyler spots opportunities and avoids costly mistakes generic agents miss.</p>
-        </div>
-        <div class="bg-gray-50 rounded-2xl p-6 sm:p-8 text-center flex flex-col items-center">
-          <div class="relative w-14 h-14 mb-5">
-            <div class="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center">
-              <svg class="w-7 h-7 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-            </div>
-            <div class="absolute -top-2 -right-2 w-7 h-7 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
-              <svg class="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
-          </div>
-          <h3 class="font-playfair text-xl font-bold text-[#111] mb-3">Data-Driven Pricing</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Real-time market data ensures your home is priced to maximize return &mdash; not a dollar left on the table.</p>
-        </div>
-        <div class="bg-gray-50 rounded-2xl p-6 sm:p-8 text-center flex flex-col items-center">
-          <div class="relative w-14 h-14 mb-5">
-            <div class="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center">
-              <svg class="w-7 h-7 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <div class="absolute -top-2 -right-2 w-7 h-7 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
-              <svg class="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
-          </div>
-          <h3 class="font-playfair text-xl font-bold text-[#111] mb-3">Masterful Negotiation</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Battle-tested tactics that protect your interests at every turn, securing the best possible outcome.</p>
-        </div>
-      </div>
-
-      <!-- Workflow Header -->
-      <div class="text-center mb-12">
-        <h2 class="font-playfair text-3xl md:text-4xl font-bold text-[#111]">Your Path to Closing</h2>
-        <p class="text-gray-500 text-base mt-4">A clear, step-by-step journey &mdash; guided by Tyler every single step.</p>
-      </div>
-
-      <!-- Workflow Steps -->
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
-        <div class="bg-gray-50 border border-gray-200 rounded-xl p-5">
-          <div class="flex items-center gap-3 mb-2">
-            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
-              <svg class="w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            </div>
-            <div class="text-xs font-semibold text-blue-600 uppercase tracking-widest">Step 1</div>
-          </div>
-          <h3 class="font-playfair text-lg font-bold text-[#111] mb-1">Free Strategy Call</h3>
-          <p class="text-sm text-gray-500">30-min discovery to discuss your goals and timeline.</p>
-        </div>
-        <div class="bg-gray-50 border border-gray-200 rounded-xl p-5">
-          <div class="flex items-center gap-3 mb-2">
-            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
-              <svg class="w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            </div>
-            <div class="text-xs font-semibold text-blue-600 uppercase tracking-widest">Step 2</div>
-          </div>
-          <h3 class="font-playfair text-lg font-bold text-[#111] mb-1">Market Analysis</h3>
-          <p class="text-sm text-gray-500">Custom report on neighborhoods and precise pricing.</p>
-        </div>
-        <div class="bg-gray-50 border border-gray-200 rounded-xl p-5">
-          <div class="flex items-center gap-3 mb-2">
-            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
-              <svg class="w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-            </div>
-            <div class="text-xs font-semibold text-blue-600 uppercase tracking-widest">Step 3</div>
-          </div>
-          <h3 class="font-playfair text-lg font-bold text-[#111] mb-1">Search or Listing</h3>
-          <p class="text-sm text-gray-500">Curated opportunities matched to your exact criteria.</p>
-        </div>
-        <div class="bg-gray-50 border border-gray-200 rounded-xl p-5">
-          <div class="flex items-center gap-3 mb-2">
-            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
-              <svg class="w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-            </div>
-            <div class="text-xs font-semibold text-blue-600 uppercase tracking-widest">Step 4</div>
-          </div>
-          <h3 class="font-playfair text-lg font-bold text-[#111] mb-1">Offer &amp; Negotiation</h3>
-          <p class="text-sm text-gray-500">Expert strategy to win the deal or maximize proceeds.</p>
-        </div>
-        <div class="bg-gray-50 border border-gray-200 rounded-xl p-5">
-          <div class="flex items-center gap-3 mb-2">
-            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
-              <svg class="w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
-            <div class="text-xs font-semibold text-blue-600 uppercase tracking-widest">Step 5</div>
-          </div>
-          <h3 class="font-playfair text-lg font-bold text-[#111] mb-1">Inspection &amp; Appraisal</h3>
-          <p class="text-sm text-gray-500">Full guidance through every due-diligence step.</p>
-        </div>
-        <div class="bg-gray-50 border border-gray-200 rounded-xl p-5">
-          <div class="flex items-center gap-3 mb-2">
-            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
-              <svg class="w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            </div>
-            <div class="text-xs font-semibold text-blue-600 uppercase tracking-widest">Step 6</div>
-          </div>
-          <h3 class="font-playfair text-lg font-bold text-[#111] mb-1">Closing</h3>
-          <p class="text-sm text-gray-500">Seamless final steps to the keys of your new home.</p>
-        </div>
-      </div>
-
-      <p class="text-gray-400 text-center text-sm mt-8">Every step guided by Tyler. Every milestone communicated clearly.</p>
-
-      <div class="flex justify-center mt-8">
-        <a href="#bookform" onclick="openBookModal('process'); return false;" class="inline-flex items-center gap-2 bg-[#FF1200] hover:bg-primary-dark text-white font-medium text-sm px-8 py-3.5 rounded-sm transition-all no-underline shadow-lg">
-          Book Your Free Strategy Call
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ FAQ ============ -->
-  <section class="py-16 sm:py-20 bg-gray-50">
-    <div class="max-w-3xl mx-auto px-5 sm:px-6">
-      <div class="text-center mb-10">
-        <h2 class="font-playfair text-3xl md:text-4xl font-bold text-[#111]">Frequently Asked Questions</h2>
-        <p class="text-gray-500 text-base mt-4">Everything you need to know before booking your call.</p>
-      </div>
-
-      <div class="space-y-3">
-        <div class="faq-item">
-          <button class="w-full flex items-center justify-between bg-white border border-gray-200 rounded-lg px-6 py-4 hover:bg-gray-50 transition-colors text-left cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-            <h3 class="font-semibold text-[#111] text-base pr-4">How long does the buying or selling process take?</h3>
-            <span class="faq-arrow text-gray-400 text-lg shrink-0">+</span>
-          </button>
-          <div class="faq-answer bg-white border border-t-0 border-gray-200 rounded-b-lg">
-            <p class="text-gray-500 text-base leading-relaxed">
-              Sellers typically go under contract within 1-2 weeks if priced correctly. Buyers can take 2-6 months depending on criteria. Tyler will give you a realistic timeline on your free call.
-            </p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="w-full flex items-center justify-between bg-white border border-gray-200 rounded-lg px-6 py-4 hover:bg-gray-50 transition-colors text-left cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-            <h3 class="font-semibold text-[#111] text-base pr-4">What makes Tyler different from other agents?</h3>
-            <span class="faq-arrow text-gray-400 text-lg shrink-0">+</span>
-          </button>
-          <div class="faq-answer bg-white border border-t-0 border-gray-200 rounded-b-lg">
-            <p class="text-gray-500 text-base leading-relaxed">
-              Tyler brings 6+ years of hyper-local Bergen County expertise, white-glove concierge service, and direct availability. Unlike agencies juggling dozens of clients, you get one dedicated expert focused on your outcome.
-            </p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="w-full flex items-center justify-between bg-white border border-gray-200 rounded-lg px-6 py-4 hover:bg-gray-50 transition-colors text-left cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-            <h3 class="font-semibold text-[#111] text-base pr-4">Are there any upfront fees?</h3>
-            <span class="faq-arrow text-gray-400 text-lg shrink-0">+</span>
-          </button>
-          <div class="faq-answer bg-white border border-t-0 border-gray-200 rounded-b-lg">
-            <p class="text-gray-500 text-base leading-relaxed">
-              No. The strategy call is completely free with zero obligation. If you work together, Tyler&rsquo;s commission is standard and only paid at closing &mdash; never upfront.
-            </p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="w-full flex items-center justify-between bg-white border border-gray-200 rounded-lg px-6 py-4 hover:bg-gray-50 transition-colors text-left cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-            <h3 class="font-semibold text-[#111] text-base pr-4">What areas does Tyler cover?</h3>
-            <span class="faq-arrow text-gray-400 text-lg shrink-0">+</span>
-          </button>
-          <div class="faq-answer bg-white border border-t-0 border-gray-200 rounded-b-lg">
-            <p class="text-gray-500 text-base leading-relaxed">
-              Tyler specializes in Bergen County, NJ &mdash; all 70 municipalities including Ridgewood, Tenafly, Paramus, Ho-Ho-Kus, Ramsey, and surrounding communities.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="flex justify-center mt-10">
-        <a href="#bookform" onclick="openBookModal('faq'); return false;" class="inline-flex items-center gap-2 bg-[#FF1200] hover:bg-primary-dark text-white font-medium text-sm px-8 py-3.5 rounded-sm transition-all no-underline shadow-lg">
-          Book Your Free Strategy Call
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ BOOKING FORM ============ -->
-  <section id="book" class="scroll-mt-[57px]">
-    <div class="grid md:grid-cols-2">
-      <!-- Left: Benefits -->
-      <div class="bg-[#111] text-white p-10 sm:p-12 lg:p-16">
-        <p class="text-primary font-medium text-xs uppercase tracking-[0.16em] mb-3 flex items-center gap-2">
-          <span>Free Strategy Call</span>
-          <span class="flex-1 h-px bg-white/12"></span>
-        </p>
-        <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-white leading-tight mb-4">
-          Claim Your Free 30-Minute Bergen County Strategy Session
-        </h2>
-        <p class="text-white/75 text-sm leading-relaxed mb-6">
-          No pressure. No obligation. Just a clear, expert roadmap for your next move.
-        </p>
-        <div class="space-y-4">
-          <div class="flex items-start gap-3 text-sm text-white/80">
-            <span class="text-primary font-bold shrink-0 mt-0.5">&#10003;</span>
-            Discover your home&rsquo;s real value or ideal buying range
-          </div>
-          <div class="flex items-start gap-3 text-sm text-white/80">
-            <span class="text-primary font-bold shrink-0 mt-0.5">&#10003;</span>
-            Get a custom Bergen County market report
-          </div>
-          <div class="flex items-start gap-3 text-sm text-white/80">
-            <span class="text-primary font-bold shrink-0 mt-0.5">&#10003;</span>
-            Walk away with a clear, no-pressure action plan
-          </div>
-          <div class="flex items-start gap-3 text-sm text-white/80">
-            <span class="text-primary font-bold shrink-0 mt-0.5">&#10003;</span>
-            Ask every question &mdash; zero sales pressure
-          </div>
-        </div>
-      </div>
-
-      <!-- Right: Form -->
-      <div id="bookform" class="p-10 sm:p-12 lg:p-16 scroll-mt-[57px]">
-        <div class="font-playfair text-2xl font-bold text-[#111] mb-2">Book your call with Tyler</div>
-        <p class="text-sm text-gray-500 mb-6 leading-relaxed">Fill in your details and Tyler will reach out within 24 hours.</p>
-
-        <form id="bookingForm">
-          <!-- Step 1: Name + Email -->
-          <div id="bookStep1">
-            <div class="mb-4">
-              <label for="book-name" class="block text-[10px] uppercase tracking-[0.1em] text-gray-500 mb-1.5 font-medium">Your name</label>
-              <input type="text" id="book-name" placeholder="First and last name" required autocomplete="name" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-sm text-sm text-[#111] focus:outline-none focus:border-primary transition-colors" />
-              <div class="form-error" id="book-name-error">Please enter your name</div>
-            </div>
-            <div class="mb-4">
-              <label for="book-email" class="block text-[10px] uppercase tracking-[0.1em] text-gray-500 mb-1.5 font-medium">Email</label>
-              <input type="email" id="book-email" placeholder="your@email.com" required autocomplete="email" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-sm text-sm text-[#111] focus:outline-none focus:border-primary transition-colors" />
-              <div class="form-error" id="book-email-error">Please enter a valid email address</div>
-            </div>
-            <button type="submit" class="w-full bg-[#FF1200] hover:bg-primary-dark text-white border-none p-3.5 text-sm font-medium cursor-pointer rounded-sm tracking-wide transition-colors mt-2">
-              Claim my free call &rarr;
+        <section class="group">
+          <div class="group-label">Free Guides</div>
+          <div class="stack">
+            <button class="card" type="button" onclick="openPath('buyer')">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span>
+              <span class="card-body">
+                <span class="card-title">The Bergen County Offer Playbook</span>
+                <span class="tag-row"><span class="badge">Free PDF</span></span>
+                <span class="card-desc">How to win the home you want, without overpaying.</span>
+              </span>
+              <span class="arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
             </button>
-            <p class="text-gray-500 text-xs text-center mt-3 italic">No pressure, no spam. Just a strategy session with Tyler. (5.0 Google Rating)</p>
-            <p class="text-gray-400 text-[11px] text-center mt-2">100% free &middot; No pressure &middot; No obligation</p>
-          </div>
-
-          <!-- Step 2: Phone + Intent -->
-          <div id="bookStep2" style="display:none;">
-            <p class="text-sm text-[#111] mb-4 font-medium">&#10003; You&rsquo;re in! Want a faster response?</p>
-            <div class="mb-4">
-              <label for="book-phone" class="block text-[10px] uppercase tracking-[0.1em] text-gray-500 mb-1.5 font-medium">Mobile (optional)</label>
-              <input type="tel" id="book-phone" placeholder="(201) 555-1234" oninput="formatPhoneInput(this)" maxlength="14" autocomplete="tel" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-sm text-sm text-[#111] focus:outline-none focus:border-primary transition-colors" />
-              <p class="text-gray-400 text-[11px] mt-1.5 italic">I usually text back within 15&ndash;30 minutes during normal hours. No automated bots, just me.</p>
-            </div>
-            <div class="mb-4">
-              <label class="block text-[10px] uppercase tracking-[0.1em] text-gray-500 mb-1.5 font-medium">I&rsquo;m looking to</label>
-              <div class="intent-pills flex flex-row flex-nowrap" id="book-intent-pills">
-                <button type="button" class="intent-pill" onclick="selectIntentPill('book-intent-pills', 'Buy a home', this)">Buy a home</button>
-                <button type="button" class="intent-pill" onclick="selectIntentPill('book-intent-pills', 'Sell my home', this)">Sell my home</button>
-                <button type="button" class="intent-pill" onclick="selectIntentPill('book-intent-pills', 'Buy and sell', this)">Buy &amp; sell</button>
-              </div>
-            </div>
-            <label class="sms-consent" style="display:flex;align-items:flex-start;gap:8px;margin:14px 0;padding:10px 12px;background:#faf8f5;border:1px solid #e8e3da;border-radius:4px;font-size:11px;line-height:1.45;color:#6b6663;cursor:pointer;font-family:inherit;">
-              <input type="checkbox" name="smsConsent" id="book-sms-consent" value="yes" style="margin-top:2px;flex-shrink:0;width:14px;height:14px;cursor:pointer;accent-color:#9C7E54;" />
-              <span><strong style="color:#111;font-weight:600;font-size:12px;display:block;margin-bottom:2px;">Text me real estate info from Mr. Sellers Homes.</strong>Recurring messages from Mr. Sellers Homes (Tyler Sellers, RE/MAX Signature Homes): showing confirmations, property updates, follow-ups. Frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See <a href="/privacy" style="color:#9C7E54;text-decoration:underline;">Privacy Policy</a>.</span>
-            </label>
-            <button type="button" class="w-full bg-[#FF1200] hover:bg-primary-dark text-white border-none p-3.5 text-sm font-medium cursor-pointer rounded-sm tracking-wide transition-colors" onclick="submitAndBook()">
-              Book my free call &rarr;
+            <button class="card" type="button" onclick="openPath('seller')">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></span>
+              <span class="card-body">
+                <span class="card-title">The Bergen County Seller's Prep List</span>
+                <span class="tag-row"><span class="badge">Free PDF</span></span>
+                <span class="card-desc">What actually adds value before you sell, and what's a waste.</span>
+              </span>
+              <span class="arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
             </button>
-            <p class="text-gray-400 text-[11px] text-center mt-2">Don&rsquo;t have time right now? No worries &mdash; Tyler will reach out within 24 hours.</p>
           </div>
-        </form>
+        </section>
 
-        <!-- Success state: Inline Calendar -->
-        <div id="bookSuccess" class="hidden">
-          <p class="text-sm text-[#111] font-medium mb-3">&#10003; Got it! Tyler will be in touch within 24 hours.</p>
-          <p class="text-gray-400 text-[11px] text-center mt-2">Didn&rsquo;t see the calendar? <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0XGi24Qj2qB_q7bOt4x-hq0UpJKq6VHv_8WrVLMkGJ1QeaBCuKVa7jx8LFKlQDzs-7NZIOroAH?gv=true" target="_blank" rel="noopener" class="text-primary underline">Click here to book a time</a>.</p>
-        </div>
-      </div>
+        <section class="group">
+          <div class="group-label">Let's Talk</div>
+          <div class="stack">
+            <button class="card" type="button" onclick="openPath('lender')">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg></span>
+              <span class="card-body">
+                <span class="card-title">Talk to a Lender</span>
+                <span class="tag-row"><span class="tag">No Hard Pull</span></span>
+                <span class="card-desc">Know your real budget. Zero impact on your credit.</span>
+              </span>
+              <span class="arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+            </button>
+            <button class="card" type="button" onclick="openPath('question')">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span>
+              <span class="card-body">
+                <span class="card-title">Ask a Real Estate Question</span>
+                <span class="card-desc">Anything on your mind. I'll personally reply.</span>
+              </span>
+              <span class="arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+            </button>
+            <button class="card" type="button" onclick="openBookModal('hub')">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg></span>
+              <span class="card-body">
+                <span class="card-title">Book a Strategy Call</span>
+                <span class="card-desc">Ready to make a move? Grab a one-on-one time.</span>
+              </span>
+              <span class="arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+            </button>
+          </div>
+        </section>
+
+        <!-- TODO Tyler: confirm direct number. Using your Quo business line (textable once A2P clears), not the brokerage main line. -->
+        <p class="talk">Prefer to talk? <a href="tel:2013080525">Call or text (201) 308-0525</a></p>
+      </main>
     </div>
-  </section>
+  </div>
 
-  <!-- ============ FOOTER (NJAC 11:5-6.1 compliant) ============ -->
-  <footer class="compliance-footer" style="background:#111;color:rgba(255,255,255,0.7);padding:40px 24px;font-family:'Inter',sans-serif;font-size:13px;line-height:1.7;border-top:1px solid rgba(255,255,255,0.08);">
-    <div style="max-width:920px;margin:0 auto;display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-start;">
-      <div style="flex:1 1 260px;min-width:240px;">
-        <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-weight:600;color:#fff;letter-spacing:0.01em;margin-bottom:8px;">RE/MAX Signature Homes</div>
-        <div style="color:rgba(255,255,255,0.65);margin-bottom:4px;">189 Homans Ave, Suite C</div>
-        <div style="color:rgba(255,255,255,0.65);margin-bottom:10px;">Closter, NJ 07624</div>
-        <div><a href="tel:+12016609933" style="color:#fff;text-decoration:none;font-weight:500;font-size:15px;">(201) 660-9933</a></div>
+  <!-- ===== Footer (NJAC 11:5-6.1 compliant, content verbatim) ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="fcol">
+        <div class="brand">RE/MAX Signature Homes</div>
+        <div>189 Homans Ave, Suite C</div>
+        <div style="margin-bottom:10px;">Closter, NJ 07624</div>
+        <div><a class="phone" href="tel:+12016609933">(201) 660-9933</a></div>
       </div>
-      <div style="flex:1 1 260px;min-width:240px;">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;color:rgba(255,255,255,0.85);">
-          <svg width="22" height="22" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6" aria-label="Equal Housing Opportunity" style="flex-shrink:0;">
+      <div class="fcol">
+        <div class="eho">
+          <svg width="22" height="22" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6" aria-label="Equal Housing Opportunity">
             <path d="M 50 15 L 90 50 L 78 50 L 78 85 L 22 85 L 22 50 L 10 50 Z"/>
             <text x="50" y="73" text-anchor="middle" font-family="Inter,sans-serif" font-size="32" font-weight="700" fill="currentColor" stroke="none">=</text>
           </svg>
-          <span style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;">Equal Housing Opportunity</span>
+          <span>Equal Housing Opportunity</span>
         </div>
-        <div style="color:rgba(255,255,255,0.65);margin-bottom:4px;">Tyler Sellers, Sales Associate</div>
-        <div style="color:rgba(255,255,255,0.65);margin-bottom:12px;">NJ Real Estate License #1973328</div>
-        <div style="font-size:11px;color:rgba(255,255,255,0.45);line-height:1.55;margin-bottom:14px;">mrsellers.homes is the website of Tyler Sellers, Sales Associate at RE/MAX Signature Homes. Each office is independently owned and operated.</div>
-        <div style="font-size:12px;color:rgba(255,255,255,0.55);">
-          <a href="/" style="color:inherit;text-decoration:none;margin-right:14px;">Home</a>
-          <a href="/about" style="color:inherit;text-decoration:none;margin-right:14px;">About</a>
-          <a href="/privacy" style="color:inherit;text-decoration:none;">Privacy</a>
+        <div>Tyler Sellers, Sales Associate</div>
+        <div style="margin-bottom:10px;">NJ Real Estate License #1973328</div>
+        <div class="disc">mrsellers.homes is the website of Tyler Sellers, Sales Associate at RE/MAX Signature Homes. Each office is independently owned and operated.</div>
+        <div class="nav">
+          <a href="/">Home</a><a href="/about">About</a><a href="/privacy">Privacy</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- ============ BOOK MODAL ============ -->
-  <div id="bookModal" style="display:none;" class="fixed inset-0 z-[9999] bg-black/85 backdrop-blur-sm flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Book a free strategy call">
-    <div class="relative bg-white rounded-xl w-full max-w-md shadow-2xl max-h-[92vh] flex flex-col" style="-webkit-transform:translateZ(0);transform:translateZ(0);">
-      <!-- Close button -->
-      <button type="button" onclick="closeBookModal()" aria-label="Close" class="absolute top-3 right-3 w-9 h-9 flex items-center justify-center rounded-full hover:bg-gray-100 text-gray-400 hover:text-gray-700 transition-colors z-10" style="font-size:1.5rem;line-height:1;border:none;background:transparent;cursor:pointer;">&times;</button>
-      <!-- Red accent bar -->
-      <div class="h-1 bg-[#FF1200] w-full rounded-t-2xl sm:rounded-t-xl flex-shrink-0"></div>
-      <!-- Form area -->
-      <div class="p-5 sm:p-10 overflow-y-auto">
-        <div class="font-playfair text-xl sm:text-2xl font-bold text-[#111] mb-1">Book your call with Tyler</div>
-        <p id="mSubtitle" class="text-sm text-gray-500 mb-4 leading-relaxed">Fill in your details and Tyler will reach out within 24 hours.</p>
-
-        <form id="mBookingForm">
-          <!-- Step 1: Name + Email -->
-          <div id="mStep1">
-            <div class="mb-3">
-              <label for="m-book-name" class="block text-[10px] uppercase tracking-[0.1em] text-gray-500 mb-1 font-medium">Your name</label>
-              <input type="text" id="m-book-name" placeholder="First and last name" required autocomplete="name" class="w-full p-2.5 bg-gray-50 border border-gray-200 rounded-sm text-sm text-[#111] focus:outline-none focus:border-primary transition-colors" />
-              <div class="form-error" id="m-book-name-error">Please enter your name</div>
-            </div>
-            <div class="mb-3">
-              <label for="m-book-email" class="block text-[10px] uppercase tracking-[0.1em] text-gray-500 mb-1 font-medium">Email</label>
-              <input type="email" id="m-book-email" placeholder="your@email.com" required autocomplete="email" class="w-full p-2.5 bg-gray-50 border border-gray-200 rounded-sm text-sm text-[#111] focus:outline-none focus:border-primary transition-colors" />
-              <div class="form-error" id="m-book-email-error">Please enter a valid email address</div>
-            </div>
-            <button type="submit" class="w-full bg-[#FF1200] hover:bg-primary-dark text-white border-none p-3 text-sm font-medium cursor-pointer rounded-sm tracking-wide transition-colors mt-1">
-              Claim my free call &rarr;
-            </button>
-            <p class="text-gray-500 text-xs text-center mt-2 italic">No pressure, no spam. Just a strategy session with Tyler. (5.0 Google Rating)</p>
-            <p class="text-gray-400 text-[11px] text-center mt-1">100% free &middot; No pressure &middot; No obligation</p>
+  <!-- ===== Path modal (Paths 1-4) ===== -->
+  <div class="modal" id="pathModal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button type="button" class="modal-close" onclick="closePath()" aria-label="Close">&times;</button>
+      <div class="modal-accent"></div>
+      <div class="modal-pad">
+        <h2 class="modal-title" id="pmTitle"></h2>
+        <p class="modal-sub" id="pmSubtitle"></p>
+        <form id="pathForm" novalidate>
+          <div class="field">
+            <label for="pm-name">Your name</label>
+            <input class="input" type="text" id="pm-name" placeholder="First and last name" autocomplete="name" />
+            <div class="err" id="pm-name-error">Please enter your name</div>
           </div>
-
-          <!-- Step 2: Phone + Intent -->
-          <div id="mStep2" style="display:none;">
-            <p class="text-sm text-[#111] mb-3 font-medium">&#10003; You&rsquo;re in! Want a faster response?</p>
-            <div class="mb-3">
-              <label for="m-book-phone" class="block text-[10px] uppercase tracking-[0.1em] text-gray-500 mb-1 font-medium">Mobile (optional)</label>
-              <input type="tel" id="m-book-phone" placeholder="(201) 555-1234" oninput="formatPhoneInput(this)" maxlength="14" autocomplete="tel" class="w-full p-2.5 bg-gray-50 border border-gray-200 rounded-sm text-sm text-[#111] focus:outline-none focus:border-primary transition-colors" />
-              <p class="text-gray-400 text-[11px] mt-1 italic">I usually text back within 15&ndash;30 minutes during normal hours. No automated bots, just me.</p>
-            </div>
-            <div class="mb-3">
-              <label class="block text-[10px] uppercase tracking-[0.1em] text-gray-500 mb-1 font-medium">I&rsquo;m looking to</label>
-              <div class="intent-pills flex flex-row flex-nowrap" id="m-book-intent-pills">
-                <button type="button" class="intent-pill" onclick="selectIntentPill('m-book-intent-pills', 'Buy a home', this)">Buy a home</button>
-                <button type="button" class="intent-pill" onclick="selectIntentPill('m-book-intent-pills', 'Sell my home', this)">Sell my home</button>
-                <button type="button" class="intent-pill" onclick="selectIntentPill('m-book-intent-pills', 'Buy and sell', this)">Buy &amp; sell</button>
-              </div>
-            </div>
-            <label class="sms-consent" style="display:flex;align-items:flex-start;gap:8px;margin:14px 0;padding:10px 12px;background:#faf8f5;border:1px solid #e8e3da;border-radius:4px;font-size:11px;line-height:1.45;color:#6b6663;cursor:pointer;font-family:inherit;">
-              <input type="checkbox" name="smsConsent" id="m-book-sms-consent" value="yes" style="margin-top:2px;flex-shrink:0;width:14px;height:14px;cursor:pointer;accent-color:#9C7E54;" />
-              <span><strong style="color:#111;font-weight:600;font-size:12px;display:block;margin-bottom:2px;">Text me real estate info from Mr. Sellers Homes.</strong>Recurring messages from Mr. Sellers Homes (Tyler Sellers, RE/MAX Signature Homes): showing confirmations, property updates, follow-ups. Frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See <a href="/privacy" style="color:#9C7E54;text-decoration:underline;">Privacy Policy</a>.</span>
-            </label>
-            <button type="button" class="w-full bg-[#FF1200] hover:bg-primary-dark text-white border-none p-3 text-sm font-medium cursor-pointer rounded-sm tracking-wide transition-colors" onclick="mSubmitAndBook()">
-              Book my free call &rarr;
-            </button>
-            <p class="text-gray-400 text-[11px] text-center mt-2">Don&rsquo;t have time right now? No worries &mdash; Tyler will reach out within 24 hours.</p>
+          <div class="field">
+            <label for="pm-email">Email</label>
+            <input class="input" type="email" id="pm-email" placeholder="your@email.com" autocomplete="email" inputmode="email" />
+            <div class="err" id="pm-email-error">Please enter a valid email address</div>
           </div>
+          <div class="field hidden" id="pm-phone-wrap">
+            <label for="pm-phone">Mobile phone</label>
+            <input class="input" type="tel" id="pm-phone" placeholder="(201) 555-1234" oninput="formatPhone(this)" maxlength="14" autocomplete="tel" inputmode="tel" />
+            <div class="err" id="pm-phone-error">Please enter a valid phone number</div>
+          </div>
+          <div class="field hidden" id="pm-question-wrap">
+            <label for="pm-question">Your question</label>
+            <textarea class="input" id="pm-question" rows="4" placeholder="Ask me anything about buying, selling, or the Bergen County market."></textarea>
+            <div class="err" id="pm-question-error">Please type your question</div>
+          </div>
+          <label class="consent hidden" id="pm-consent-wrap">
+            <input type="checkbox" id="pm-sms-consent" value="yes" />
+            <span><strong style="color:#161616;font-weight:600;font-size:12px;display:block;margin-bottom:2px;">Text me real estate info from Mr. Sellers Homes.</strong>Recurring messages from Mr. Sellers Homes (Tyler Sellers, RE/MAX Signature Homes): showing confirmations, property updates, follow-ups. Frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See <a href="/privacy" style="color:var(--red);text-decoration:underline;">Privacy Policy</a>.</span>
+          </label>
+          <button type="submit" class="btn" id="pm-submit">Submit</button>
+          <p class="fine">No spam. Your info goes straight to Tyler.</p>
         </form>
-
-        <!-- Success state -->
-        <div id="mSuccess" class="hidden">
-          <p class="text-sm text-[#111] font-medium mb-3">&#10003; Got it! Tyler will be in touch within 24 hours.</p>
-          <p class="text-gray-400 text-[11px] text-center mt-2">Didn&rsquo;t see the calendar? <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0XGi24Qj2qB_q7bOt4x-hq0UpJKq6VHv_8WrVLMkGJ1QeaBCuKVa7jx8LFKlQDzs-7NZIOroAH?gv=true" target="_blank" rel="noopener" class="text-primary underline">Click here to book a time</a>.</p>
+        <div class="success hidden" id="pmSuccess">
+          <div class="check">&#10003;</div>
+          <p id="pmSuccessMsg"></p>
+          <a id="pmDownload" class="dl-btn hidden" href="#" target="_blank" rel="noopener">Download your PDF &rarr;</a>
+          <p class="fine" id="pmSuccessNote"></p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ============ SCRIPTS ============ -->
+  <!-- ===== Book modal (Path 5, preserved 2-step + Google Calendar) ===== -->
+  <div class="modal" id="bookModal" role="dialog" aria-modal="true" aria-label="Book a strategy call">
+    <div class="modal-card">
+      <button type="button" class="modal-close" onclick="closeBookModal()" aria-label="Close">&times;</button>
+      <div class="modal-accent"></div>
+      <div class="modal-pad">
+        <h2 class="modal-title">Book your call with Tyler</h2>
+        <p class="modal-sub">Fill in your details and grab a time. Tyler reaches out within 24 hours.</p>
+        <form id="bookForm" novalidate>
+          <div id="bookStep1">
+            <div class="field">
+              <label for="b-name">Your name</label>
+              <input class="input" type="text" id="b-name" placeholder="First and last name" autocomplete="name" />
+              <div class="err" id="b-name-error">Please enter your name</div>
+            </div>
+            <div class="field">
+              <label for="b-email">Email</label>
+              <input class="input" type="email" id="b-email" placeholder="your@email.com" autocomplete="email" inputmode="email" />
+              <div class="err" id="b-email-error">Please enter a valid email address</div>
+            </div>
+            <button type="submit" class="btn">Claim my free call &rarr;</button>
+            <p class="fine">100% free. No pressure. No obligation.</p>
+          </div>
+          <div id="bookStep2" class="hidden">
+            <p style="font-size:14px;color:#161616;font-weight:500;margin:0 0 12px;">&#10003; You are in. Want a faster response?</p>
+            <div class="field">
+              <label for="b-phone">Mobile (optional)</label>
+              <input class="input" type="tel" id="b-phone" placeholder="(201) 555-1234" oninput="formatPhone(this)" maxlength="14" autocomplete="tel" inputmode="tel" />
+            </div>
+            <label class="consent">
+              <input type="checkbox" id="b-sms-consent" value="yes" />
+              <span><strong style="color:#161616;font-weight:600;font-size:12px;display:block;margin-bottom:2px;">Text me real estate info from Mr. Sellers Homes.</strong>Recurring messages from Mr. Sellers Homes (Tyler Sellers, RE/MAX Signature Homes): showing confirmations, property updates, follow-ups. Frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See <a href="/privacy" style="color:var(--red);text-decoration:underline;">Privacy Policy</a>.</span>
+            </label>
+            <button type="button" class="btn" onclick="bookSubmitStep2()">Book my free call &rarr;</button>
+          </div>
+        </form>
+        <div id="bookSuccess" class="success hidden">
+          <p>&#10003; Got it. Grab a time below and Tyler will be in touch within 24 hours.</p>
+          <a class="dl-btn" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0XGi24Qj2qB_q7bOt4x-hq0UpJKq6VHv_8WrVLMkGJ1QeaBCuKVa7jx8LFKlQDzs-7NZIOroAH?gv=true" target="_blank" rel="noopener">Pick a time &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Scripts (minimal) ===== -->
   <script>
-    // Lock hero height on mobile to prevent resize on scroll
-    (function() {
-      if (window.innerWidth <= 768) {
-        var hero = document.getElementById('hero');
-        if (hero) {
-          var h = window.innerHeight - 44 - 50;
-          hero.style.minHeight = h + 'px';
-          hero.style.maxHeight = h + 'px';
-          // Pin background to right center on mobile
-          var bg = hero.querySelector('[style*="background-image"]');
-          if (bg) bg.style.backgroundPosition = 'right center';
-        }
-        // Make stat numbers white on mobile
-        document.querySelectorAll('.hero-stat-num').forEach(function(el) {
-          el.style.color = '#ffffff';
-        });
+    var CONFIG = {
+      goEndpoint:   'https://forms-worker.tyler-681.workers.dev/go',   // PENDING: not deployed until after the open house
+      leadEndpoint: 'https://forms-worker.tyler-681.workers.dev/lead', // Path 5 booking (existing, unchanged)
+      videoEmbedUrl: '', // set a real 1-min video embed URL to show the video module; empty = module hidden
+      pdfs: { buyer:'/downloads/bergen-county-offer-playbook.pdf', seller:'/downloads/bergen-county-seller-prep-list.pdf' }
+    };
+
+    // Video: render ONLY if a real URL exists (no placeholder ever).
+    (function(){
+      if (CONFIG.videoEmbedUrl && CONFIG.videoEmbedUrl.trim()){
+        var m=document.getElementById('videoModule');
+        var f=document.createElement('iframe'); f.src=CONFIG.videoEmbedUrl; f.allow='encrypted-media'; f.allowFullscreen=true; f.loading='lazy';
+        m.appendChild(f); m.classList.remove('hidden');
       }
     })();
 
-    // Lead submission routes through forms-worker (writes to Airtable + mirrors to FUB).
-    var WORKER_URL = 'https://forms-worker.tyler-681.workers.dev/lead';
+    function formatPhone(el){ var d=el.value.replace(/\D/g,'').slice(0,10);
+      if(d.length>=7) el.value='('+d.slice(0,3)+') '+d.slice(3,6)+'-'+d.slice(6);
+      else if(d.length>=4) el.value='('+d.slice(0,3)+') '+d.slice(3);
+      else if(d.length>0) el.value='('+d; }
+    function validEmail(v){ return /^\S+@\S+\.\S+$/.test((v||'').trim()); }
+    function showErr(id,s){ var e=document.getElementById(id); if(e) e.classList.toggle('show',s); }
+    function track(n,p){ try{ gtag('event',n,p||{}); }catch(e){} }
 
-    // Map go.html intent-pill values to the /lead endpoint's normalized intent.
-    var INTENT_MAP = {
-      'Buy a home': 'Buyer',
-      'Sell my home': 'Seller',
-      'Buy and sell': 'Buyer/Seller'
+    var PATHS = {
+      buyer:{ title:'The Bergen County Offer Playbook', subtitle:'How to win a house without blindly overpaying. Tell me where to send it.', fields:['name','email'], submit:'Send me the playbook', success:'Your playbook is ready. It is also on its way to your inbox.', pdf:'buyer', note:'You are now on my Bergen County buyer list. Unsubscribe anytime.' },
+      seller:{ title:"The Bergen County Seller's Prep List", subtitle:'What actually adds value before you sell, and what is a waste. Tell me where to send it.', fields:['name','email'], submit:'Send me the prep list', success:'Your prep list is ready. It is also on its way to your inbox.', pdf:'seller', note:'You are now on my Bergen County seller list. Unsubscribe anytime.' },
+      lender:{ title:'Talk to a Lender (No Hard Pull)', subtitle:'Talk to a lender for free without doing a hard credit pull. Zero impact on your credit score. You must have access to your credit score in your online banking account for this option.', fields:['name','email','phone'], submit:'Connect me with a lender', success:'Got it. I will connect you with a trusted lender shortly.', note:'No hard pull. No obligation.' },
+      question:{ title:'Ask a Real Estate Question', subtitle:'Anything about buying, selling, or the Bergen County market. I will personally reply.', fields:['name','email','question'], submit:'Send my question', success:'Thanks. Your question came straight to me and I will reply personally.', note:'' }
     };
+    var currentPath=null;
 
-    function sendToWorker(data, source) {
-      var payload = {
-        name: data.name || '',
-        email: data.email || '',
-        source: source
-      };
-      if (data.phone) payload.phone = data.phone;
-      // Default to Buyer when intent isn't set yet (Step 1 of the booking flow
-      // has only name + email; intent is captured in Step 2).
-      payload.intent = data.intent ? (INTENT_MAP[data.intent] || 'Buyer') : 'Buyer';
-      if (data.intent) payload.context = { Intent: data.intent };
-      return fetch(WORKER_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
+    function openPath(key){
+      currentPath=key; var p=PATHS[key];
+      document.getElementById('pmTitle').textContent=p.title;
+      document.getElementById('pmSubtitle').textContent=p.subtitle;
+      document.getElementById('pm-submit').textContent=p.submit;
+      var phone=p.fields.indexOf('phone')>=0, q=p.fields.indexOf('question')>=0;
+      document.getElementById('pm-phone-wrap').classList.toggle('hidden',!phone);
+      document.getElementById('pm-question-wrap').classList.toggle('hidden',!q);
+      document.getElementById('pm-consent-wrap').classList.toggle('hidden',!phone); // TCPA box only with phone
+      document.getElementById('pathForm').classList.remove('hidden');
+      document.getElementById('pmSuccess').classList.add('hidden');
+      ['pm-name','pm-email','pm-phone','pm-question'].forEach(function(id){ var el=document.getElementById(id); if(el) el.value=''; });
+      var c=document.getElementById('pm-sms-consent'); if(c) c.checked=false;
+      document.getElementById('pathModal').classList.add('open'); document.body.style.overflow='hidden';
+      track('path_open',{path:key});
     }
+    function closePath(){ document.getElementById('pathModal').classList.remove('open'); document.body.style.overflow=''; }
+    document.getElementById('pathModal').addEventListener('click',function(e){ if(e.target===this) closePath(); });
 
-    // Form validation
-    // Auto-strips a leading country code "1" so people who type +1 or 1
-    // before their 10-digit number don't lose the last digit. NANP area
-    // codes never start with 1.
-    function formatPhoneInput(input) {
-      var digits = input.value.replace(/\D/g, '');
-      if (digits.length >= 4 && digits.charAt(0) === '1') {
-        digits = digits.substring(1);
-      }
-      digits = digits.substring(0, 10);
-      if (digits.length === 0) { input.value = ''; return; }
-      if (digits.length <= 3) { input.value = '(' + digits; }
-      else if (digits.length <= 6) { input.value = '(' + digits.substring(0,3) + ') ' + digits.substring(3); }
-      else { input.value = '(' + digits.substring(0,3) + ') ' + digits.substring(3,6) + '-' + digits.substring(6); }
-    }
-
-    function validateField(input, errorId) {
-      var error = document.getElementById(errorId);
-      if (!input.value.trim()) {
-        input.classList.add('error');
-        error.classList.add('show');
-        return false;
-      }
-      if (input.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) {
-        input.classList.add('error');
-        error.classList.add('show');
-        return false;
-      }
-      input.classList.remove('error');
-      error.classList.remove('show');
-      return true;
-    }
-
-    // Clear errors on input
-    document.getElementById('book-name').addEventListener('input', function() {
-      this.classList.remove('error');
-      document.getElementById('book-name-error').classList.remove('show');
-    });
-    document.getElementById('book-email').addEventListener('input', function() {
-      this.classList.remove('error');
-      document.getElementById('book-email-error').classList.remove('show');
+    document.getElementById('pathForm').addEventListener('submit',function(e){
+      e.preventDefault(); var p=PATHS[currentPath];
+      var name=document.getElementById('pm-name').value.trim();
+      var email=document.getElementById('pm-email').value.trim();
+      var phone=document.getElementById('pm-phone').value.trim();
+      var question=document.getElementById('pm-question').value.trim();
+      var ok=true;
+      showErr('pm-name-error',!name); if(!name) ok=false;
+      showErr('pm-email-error',!validEmail(email)); if(!validEmail(email)) ok=false;
+      if(p.fields.indexOf('phone')>=0){ var pd=phone.replace(/\D/g,''); showErr('pm-phone-error',pd.length<10); if(pd.length<10) ok=false; }
+      if(p.fields.indexOf('question')>=0){ showErr('pm-question-error',!question); if(!question) ok=false; }
+      if(!ok) return;
+      var payload={ path:currentPath, name:name, email:email, source:'go.html - '+p.title, capturedAt:new Date().toISOString() };
+      if(p.fields.indexOf('phone')>=0){ payload.phone=phone; payload.smsConsent=document.getElementById('pm-sms-consent').checked; }
+      if(p.fields.indexOf('question')>=0){ payload.question=question; }
+      fetch(CONFIG.goEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(function(err){ console.warn('go submit',err); });
+      document.getElementById('pathForm').classList.add('hidden');
+      document.getElementById('pmSuccessMsg').textContent=p.success;
+      var dl=document.getElementById('pmDownload');
+      if(p.pdf){ dl.href=CONFIG.pdfs[p.pdf]; dl.classList.remove('hidden'); } else { dl.classList.add('hidden'); }
+      document.getElementById('pmSuccessNote').textContent=p.note||'';
+      document.getElementById('pmSuccess').classList.remove('hidden');
+      track('path_submit',{path:currentPath});
     });
 
-    // Step 1 submit
-    var bookData = {};
-    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    function openBookModal(src){
+      document.getElementById('bookStep1').classList.remove('hidden');
+      document.getElementById('bookStep2').classList.add('hidden');
+      document.getElementById('bookSuccess').classList.add('hidden');
+      document.getElementById('bookForm').classList.remove('hidden');
+      ['b-name','b-email','b-phone'].forEach(function(id){ document.getElementById(id).value=''; });
+      document.getElementById('b-sms-consent').checked=false;
+      document.getElementById('bookModal').classList.add('open'); document.body.style.overflow='hidden';
+      track('book_open',{src:src||'unknown'});
+    }
+    function closeBookModal(){ document.getElementById('bookModal').classList.remove('open'); document.body.style.overflow=''; }
+    document.getElementById('bookModal').addEventListener('click',function(e){ if(e.target===this) closeBookModal(); });
+    document.getElementById('bookForm').addEventListener('submit',function(e){
       e.preventDefault();
-      var nameValid = validateField(document.getElementById('book-name'), 'book-name-error');
-      var emailValid = validateField(document.getElementById('book-email'), 'book-email-error');
-      if (!nameValid || !emailValid) return;
-
-      var btn = document.querySelector('#bookStep1 button[type="submit"]');
-      btn.disabled = true;
-      bookData = {
-        name: document.getElementById('book-name').value,
-        email: document.getElementById('book-email').value
-      };
-      // Fire and forget — don't block the UI on API response time
-      sendToWorker(bookData, 'go.MrSellers.homes — Landing Page').catch(function() {
-        console.warn('FUB step 1 submission failed');
-      });
-      trackEvent('generate_lead', { form_location: 'page' });
-      clarityTag('lead_captured', 'true');
-      document.getElementById('bookStep1').style.display = 'none';
-      document.getElementById('bookStep2').style.display = 'block';
-      var subtitle = document.querySelector('#bookform .text-gray-500.mb-6');
-      if (subtitle) subtitle.style.display = 'none';
+      var name=document.getElementById('b-name').value.trim(), email=document.getElementById('b-email').value.trim();
+      var ok=true; showErr('b-name-error',!name); if(!name) ok=false;
+      showErr('b-email-error',!validEmail(email)); if(!validEmail(email)) ok=false;
+      if(!ok) return;
+      fetch(CONFIG.leadEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:name,email:email,source:'go.html - Book a Call',intent:'Book a Call',stage:'A - Hot 1-3 Months'})}).catch(function(err){ console.warn('book1',err); });
+      document.getElementById('bookStep1').classList.add('hidden');
+      document.getElementById('bookStep2').classList.remove('hidden');
+      track('book_step1',{});
     });
-
-    // ---- INTENT PILLS ----
-    function selectIntentPill(groupId, value, btn) {
-      var group = document.getElementById(groupId);
-      group.querySelectorAll('.intent-pill').forEach(function(p) { p.classList.remove('selected'); });
-      btn.classList.add('selected');
-      group.dataset.value = value;
-    }
-    function getIntentPillValue(groupId) {
-      return document.getElementById(groupId).dataset.value || '';
-    }
-    function resetIntentPills(groupId) {
-      var group = document.getElementById(groupId);
-      group.querySelectorAll('.intent-pill').forEach(function(p) { p.classList.remove('selected'); });
-      group.dataset.value = '';
-    }
-
-    // ---- TRACKING HELPERS ----
-    function trackEvent(name, params) {
-      if (typeof gtag !== 'undefined') gtag('event', name, params || {});
-    }
-    function clarityTag(key, val) {
-      if (typeof clarity !== 'undefined') clarity('set', key, String(val));
-    }
-    var mLeadCaptured = false;
-
-    // Step 2 submit
-    var GCAL_URL = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0XGi24Qj2qB_q7bOt4x-hq0UpJKq6VHv_8WrVLMkGJ1QeaBCuKVa7jx8LFKlQDzs-7NZIOroAH?gv=true';
-
-    function submitAndBook() {
-      bookData.phone = document.getElementById('book-phone').value;
-      bookData.intent = getIntentPillValue('book-intent-pills');
-      bookData.smsConsent = document.getElementById('book-sms-consent').checked;
-      sendToWorker(bookData, 'go.MrSellers.homes — Landing Page (details)');
-      trackEvent('calendar_click', { intent: bookData.intent, form_location: 'page' });
-      if (bookData.intent) clarityTag('lead_intent', bookData.intent);
-      window.open(GCAL_URL, '_blank');
-      document.getElementById('bookingForm').style.display = 'none';
+    function bookSubmitStep2(){
+      var name=document.getElementById('b-name').value.trim(), email=document.getElementById('b-email').value.trim();
+      var phone=document.getElementById('b-phone').value.trim(), consent=document.getElementById('b-sms-consent').checked;
+      if(phone){ fetch(CONFIG.leadEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:name,email:email,phone:phone,smsConsent:consent,source:'go.html - Book a Call',intent:'Book a Call'})}).catch(function(err){ console.warn('book2',err); }); }
+      document.getElementById('bookForm').classList.add('hidden');
       document.getElementById('bookSuccess').classList.remove('hidden');
+      track('book_submit',{});
     }
-
-    // ---- MODAL ----
-    function openBookModal(source) {
-      trackEvent('modal_open', { cta_location: source || 'unknown' });
-      clarityTag('modal_source', source || 'unknown');
-      mLeadCaptured = false;
-      // Reset to step 1
-      document.getElementById('mStep1').style.display = 'block';
-      document.getElementById('mStep2').style.display = 'none';
-      document.getElementById('mSuccess').classList.add('hidden');
-      document.getElementById('mBookingForm').style.display = '';
-      document.getElementById('mSubtitle').style.display = 'block';
-      var mBtn = document.querySelector('#mStep1 button[type="submit"]');
-      if (mBtn) { mBtn.textContent = 'Claim my free call \u2192'; mBtn.disabled = false; }
-      // Clear fields
-      ['m-book-name','m-book-email','m-book-phone'].forEach(function(id) {
-        var el = document.getElementById(id); if (el) el.value = '';
-      });
-      resetIntentPills('m-book-intent-pills');
-      // Show modal — use body scroll lock to fix Safari fixed-modal click offset bug
-      var scrollY = window.scrollY;
-      document.body.style.position = 'fixed';
-      document.body.style.top = '-' + scrollY + 'px';
-      document.body.style.width = '100%';
-      document.body.dataset.scrollY = scrollY;
-      document.getElementById('bookModal').style.display = 'flex';
-    }
-
-    function closeBookModal() {
-      if (!mLeadCaptured) trackEvent('modal_abandon');
-      document.getElementById('bookModal').style.display = 'none';
-      var scrollY = parseInt(document.body.dataset.scrollY || '0');
-      document.body.style.position = '';
-      document.body.style.top = '';
-      document.body.style.width = '';
-      window.scrollTo(0, scrollY);
-    }
-
-    // Close on backdrop click
-    document.getElementById('bookModal').addEventListener('click', function(e) {
-      if (e.target === this) closeBookModal();
-    });
-
-    // Close on Escape
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeBookModal();
-    });
-
-    // Modal Step 1 submit
-    var mBookData = {};
-    document.getElementById('mBookingForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      var nameValid = validateField(document.getElementById('m-book-name'), 'm-book-name-error');
-      var emailValid = validateField(document.getElementById('m-book-email'), 'm-book-email-error');
-      if (!nameValid || !emailValid) return;
-
-      var btn = document.querySelector('#mStep1 button[type="submit"]');
-      btn.disabled = true;
-      mBookData = {
-        name: document.getElementById('m-book-name').value,
-        email: document.getElementById('m-book-email').value
-      };
-      // Fire and forget — advance immediately, don't block on API response
-      sendToWorker(mBookData, 'go.MrSellers.homes — Landing Page').catch(function() {
-        console.warn('FUB modal step 1 submission failed');
-      });
-      trackEvent('generate_lead', { form_location: 'modal' });
-      clarityTag('lead_captured', 'true');
-      mLeadCaptured = true;
-      document.getElementById('mStep1').style.display = 'none';
-      document.getElementById('mStep2').style.display = 'block';
-      document.getElementById('mSubtitle').style.display = 'none';
-    });
-
-    // Modal Step 2 submit
-    function mSubmitAndBook() {
-      mBookData.phone = document.getElementById('m-book-phone').value;
-      mBookData.intent = getIntentPillValue('m-book-intent-pills');
-      mBookData.smsConsent = document.getElementById('m-book-sms-consent').checked;
-      sendToWorker(mBookData, 'go.MrSellers.homes — Landing Page (details)');
-      trackEvent('calendar_click', { intent: mBookData.intent, form_location: 'modal' });
-      if (mBookData.intent) clarityTag('lead_intent', mBookData.intent);
-      window.open(GCAL_URL, '_blank');
-      document.getElementById('mBookingForm').style.display = 'none';
-      document.getElementById('mSuccess').classList.remove('hidden');
-    }
-
-    // Clear modal errors on input
-    document.getElementById('m-book-name').addEventListener('input', function() {
-      this.classList.remove('error');
-      document.getElementById('m-book-name-error').classList.remove('show');
-    });
-    document.getElementById('m-book-email').addEventListener('input', function() {
-      this.classList.remove('error');
-      document.getElementById('m-book-email-error').classList.remove('show');
-    });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ closePath(); closeBookModal(); } });
   </script>
-
 </body>
 </html>
