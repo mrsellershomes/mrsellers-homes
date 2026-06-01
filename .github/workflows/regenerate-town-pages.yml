@@ -61,5 +61,9 @@ jobs:
             echo "No changes to commit. Pages already match the data."
             exit 0
           fi
-          git commit -m "chore(town-pages): monthly regeneration [skip ci]"
+          # Do NOT add [skip ci]: Cloudflare Pages honors it and would skip the
+          # deploy, leaving regenerated pages committed but never published. The
+          # push-trigger paths filter (data/njmls/** only) already prevents this
+          # commit (*-real-estate/, sitemap, ai-paragraphs) from re-triggering us.
+          git commit -m "chore(town-pages): monthly regeneration"
           git push origin main
