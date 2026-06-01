@@ -1,21 +1,21 @@
 {
-  "hash": "fd34bab0820503be",
-  "paragraph": "The single-family market in Saddle Brook is moving steadily, with 29 sales over the last six months at a median of $650,000. Sellers are seeing results, with about 62 percent of homes selling above asking and a sale-to-list ratio of 1.01, which means list prices are holding up. Median days on market sits at 22, indicating homes priced right are attracting attention without sitting around. The range is substantial, from $444,000 to $1,220,000, so condition and location matter more than any town-wide price ceiling. Multi-family properties are sparse at three sales with a median of $740,000, but they've moved faster and stronger, with two-thirds selling above asking and a median of 28 days on market. The condo and townhouse tier offers the entry point at $437,000 median, with eight sales moving briskly at a median of 18.5 days on market and 62.5 percent selling above asking. If you're weighing single-family against condo, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or the lower price point and low-maintenance lifestyle of a condo.",
+  "hash": "207204dc37a179c8",
+  "paragraph": "Single-family homes in Saddle Brook are moving in a real seller's market. The median sale price sits at $650,000 on a median list price of $640,000, and 67.6% of homes are selling above asking. The median days on market of 17 means priced inventory isn't sitting around, and the sale-to-list ratio of 1.017 confirms sellers are holding their ground and getting paid for it. You're looking at 37 sales over seven months, which is solid volume for a town this size. Multi-family properties at a $760,000 median are fewer and slower, with only four sales and a 40.5-day median days on market, suggesting that particular segment is buyer-friendly by comparison. Condos and townhouses occupy the entry point at $437,000 median, moving briskly with a 67.6% sale-to-list ratio and an 18.5-day median days on market. That's ten sales in seven months across what's likely a limited inventory of units. If you're weighing single-family against the lower price point of a condo or townhouse, understand that Saddle Brook's single-family market is competitive and sellers know it. The condo tier gives you a real alternative if you want to stay in town at a substantially lower entry price without sacrificing market speed.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "The single-family market in Saddle Brook is moving steadily, with 29 sales over the last six months at a median of $650,000. Sellers are seeing results, with about 62 percent of homes selling above asking and a sale-to-list ratio of 1.01, which means list prices are holding up. Median days on market sits at 22, indicating homes priced right are attracting attention without sitting around. The range is substantial, from $444,000 to $1,220,000, so condition and location matter more than any town-wide price ceiling. Multi-family properties are sparse, just three sales at a median of $740,000, but they've moved faster and stronger, with two-thirds selling above asking and a median of 28 days on market. The condo and townhouse tier offers the entry point at $437,000 median, with eight sales moving briskly at a median of 18.5 days on market and 62.5 percent selling above asking. If you're weighing single-family against condo, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or the lower price point and low-maintenance lifestyle of a condo.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3722,
+    "input_tokens": 3345,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 274,
+    "output_tokens": 299,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-05-12T18:32:07.456Z"
+  "generatedAt": "2026-06-01T14:42:15.294Z"
 }

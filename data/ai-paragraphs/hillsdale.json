@@ -1,21 +1,21 @@
 {
-  "hash": "20dcfc2f88a638a1",
-  "paragraph": "The single-family market in Hillsdale is moving with real momentum. Thirty-six homes sold over six months at a median of $862,500, with 61 percent of those sales closing above asking price and a sale-to-list ratio of 1.03. The median days on market sits at 15.5 days, which means priced homes are moving fast and sellers are dictating terms in many multiple-offer situations. You're looking at a genuine seller's market here, especially in the mid-range where inventory is tightest. The price spread from $510,000 to $1.75 million tells you Hillsdale pulls both entry-level and upper-bracket buyers, but it's the homes in the $750,000 to $1 million range that are seeing the most competitive activity. If you're selling, this is the time to list competitively and expect interest quickly. If you're buying, you'll need to move decisively and be prepared to compete on price and terms.",
+  "hash": "8d6c2d786ff49f6e",
+  "paragraph": "The single-family market in Hillsdale is active and seller-friendly right now. Over 44 sales in the last seven months, the median sits at $875,000 with a sale-to-list ratio of 1.035, meaning homes are closing slightly above asking on average. More than 63 percent of sales went over list price, and the median days on market is a tight 15.5 days. This isn't a frenzy, but it's a real seller's market where priced homes are moving and multiple offers show up consistently. Buyers who want to compete here need to come prepared with clean offers and realistic expectations about what asking price actually means. The price range is genuinely wide, from $510,000 on the low end to $1.75 million, so Hillsdale accommodates both entry-level and serious money in single-family form. If you're looking in Hillsdale, understand that inventory will dictate your timing more than market conditions. Homes priced fairly for the neighborhood won't linger.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 2966,
+    "input_tokens": 3010,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 222,
+    "output_tokens": 230,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-05-12T18:29:01.360Z"
+  "generatedAt": "2026-06-01T14:39:09.595Z"
 }

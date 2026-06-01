@@ -1,21 +1,21 @@
 {
-  "hash": "f97d6d70d2d36ca1",
-  "paragraph": "Glen Rock is a single-family market, and the data shows a real seller's market. The median sale price is $1,100,000 on a median list price of $967,500, which means 64 percent of homes sold above asking and the sale-to-list ratio sits at 1.06. Median days on market is 13 days, and the fastest homes are moving in under a week. You're seeing multiple offer situations here. Sellers who price competitively are dictating terms. The range is broad, from $650,000 to $2,425,000, so the market isn't monolithic, but the trajectory is consistent across the price spectrum. If you're selling, you have leverage right now. If you're buying, you need to be prepared to move fast on the homes that fit your criteria, because the best properties aren't sitting long.",
+  "hash": "16a6cec93d1b4b25",
+  "paragraph": "Glen Rock is a single-family market, and it's running hot right now. Sixty-three homes sold over the last seven months with a median price of $1,150,000, and the numbers tell you exactly what's happening: homes are selling 6.8% above asking on average, roughly 68% of sales close above list price, and the median days on market is twelve days. That's a real seller's market. Sellers are dictating terms, multiple offer situations are common, and if you're coming in with a competitive offer on the right property, you're going to face some real competition. List prices range from $650,000 on the low end to over $2.4 million at the top, so Glen Rock has depth across the market. The speed and consistency of these sales mean you need to be ready to move fast if you find something that checks your boxes. The market isn't waiting for the indecisive.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "Glen Rock is a single-family market, and the data shows a real seller's market. The median sale price is $1,100,000 on a median list price of $967,500, which means 64 percent of homes sold above asking and the sale-to-list ratio sits at 1.06. Median days on market is just 13 days, and the fastest homes are moving in under a week. You're seeing multiple offer situations here. Sellers who price competitively are dictating terms. The range is broad, from $650,000 to $2,425,000, so the market isn't monolithic, but the trajectory is consistent across the price spectrum. If you're selling, you have leverage right now. If you're buying, you need to be prepared to move fast on the homes that fit your criteria, because the best properties aren't sitting long.",
+  "firstDraft": "Glen Rock is a single-family market, and it's running hot right now. Sixty-three homes sold over the last seven months with a median price of $1,150,000, and the numbers tell you exactly what's happening: homes are selling 6.8% above asking on average, roughly 68% of sales close above list price, and the median days on market is just twelve days. That's a real seller's market. Sellers are dictating terms, multiple offer situations are common, and if you're coming in with a competitive offer on the right property, you're going to face some real competition. List prices range from $650,000 on the low end to over $2.4 million at the top, so Glen Rock has depth across the market. The speed and consistency of these sales mean you need to be ready to move fast if you find something that checks your boxes. The market isn't waiting for the indecisive.",
   "usage": {
-    "input_tokens": 3377,
+    "input_tokens": 3477,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 191,
+    "output_tokens": 203,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-05-12T18:28:41.553Z"
+  "generatedAt": "2026-06-01T14:38:48.116Z"
 }

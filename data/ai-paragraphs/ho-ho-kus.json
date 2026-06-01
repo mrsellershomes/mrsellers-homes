@@ -1,21 +1,21 @@
 {
-  "hash": "b40c9c68e05717a9",
-  "paragraph": "Ho-Ho-Kus is a single-family market, and the data shows a balanced competitive environment where priced homes are moving steadily. The median sale price is $1,297,500 against a median list price of $1,285,000, with a sale-to-list ratio sitting right at 1.0 and about 42 percent of homes selling above asking. Median days on market of 24.5 days reflects neither urgency nor stagnation, which tells you that sellers who price correctly find buyers without extended waits, while overpriced homes will sit. The spread in the market is real, with sales ranging from $785,000 to $4,950,000, so your competition depends heavily on where you're positioned in that range. Twenty-four homes sold over six months is a modest volume for a town this size, which means inventory is spare and each listing gets genuine attention. If you're selling, you'll want to price competitively to avoid becoming one of the homes that lingers. If you're buying, you have some leverage on homes that aren't moving quickly, though the best locations and conditions will still draw multiple offers.",
+  "hash": "415be8ab9ecc7b5c",
+  "paragraph": "Ho-Ho-Kus is a single-family market through and through. Over the last seven months, 29 detached homes sold at a median of $1,330,000, with a sale-to-list ratio of 1.0 and 41 percent of homes selling above asking. The median time on market was 24 days. This is a competitive but balanced market. Homes that are priced right and presented well move steadily, but sellers can't assume they'll get multiple offers or a bidding war. The price range is wide, from $785,000 to $4,950,000, which reflects the town's variety of lot sizes and home conditions rather than any real stratification by neighborhood. If you're selling, pricing competitively to your actual market value matters more than anchoring to an aspirational number. If you're buying, you'll have room to negotiate on most homes, and the best-positioned properties will still draw competition. The 24-day median tells you homes aren't sitting on the market for months, but they're also not disappearing in a week.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "Ho-Ho-Kus is a single-family market through and through. Over the last seven months, 29 detached homes sold at a median of $1,330,000, with a sale-to-list ratio of 1.0 and 41 percent of homes selling above asking. The median time on market was 24 days. This is a competitive but balanced market. Homes that are priced right and presented well move steadily, but sellers can't assume they'll get multiple offers or a bidding war. The price range is wide—from $785,000 to $4,950,000—which reflects the town's variety of lot sizes and home conditions rather than any real stratification by neighborhood. If you're selling, pricing competitively to your actual market value matters more than anchoring to an aspirational number. If you're buying, you'll have room to negotiate on most homes, and the best-positioned properties will still draw competition. The 24-day median tells you homes aren't sitting on the market for months, but they're also not disappearing in a week.",
   "usage": {
-    "input_tokens": 2919,
+    "input_tokens": 3269,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 253,
+    "output_tokens": 239,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-05-12T18:29:05.490Z"
+  "generatedAt": "2026-06-01T14:39:14.808Z"
 }

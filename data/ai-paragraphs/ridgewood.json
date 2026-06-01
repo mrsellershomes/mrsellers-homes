@@ -1,21 +1,21 @@
 {
-  "hash": "1e4de5d4ab4397fe",
-  "paragraph": "Ridgewood is almost entirely a single-family market, with 78 homes sold over the last six months at a median of $1,182,500. This is a real seller's market. Seventy-three percent of homes sold above asking, the sale-to-list ratio is sitting at 1.054, and the median time on market is 13 days. Sellers are dictating terms, and priced homes are moving quickly. The range is wide, from $620,000 to $4,325,000, which tells you the market absorbs everything from entry-level single-family buys to significant estates. Condos and townhouses barely register here with three sales at a median of $599,000, so if you're house hunting in Ridgewood, you're shopping single-family. The decisive question isn't market heat. It's whether you can find the home you want at a price you're willing to pay in this competitive environment where the best properties don't stay on the market long.",
+  "hash": "d0e57268927d2711",
+  "paragraph": "Ridgewood's single-family market is running hot. The median sale price is $1,225,000, and homes are selling well above asking with 75.5 percent of sales closing above list price and a median days on market of 12. The sale-to-list ratio sits at 1.06, which means sellers are getting their price or better in most cases, and many multiple offer situations are happening. Inventory is moving quickly enough that you're seeing homes sell in under two weeks regularly. The range is broad, from $620,000 to $4,325,000, so there's genuine diversity in what Ridgewood single-family offers depending on which neighborhood and lot size you're targeting. If you're looking to sell, this is a real seller's market where pricing competitively still nets you strong terms. If you're buying, you'll need to be prepared to move fast and potentially compete for the homes that are truly right for you. Condos and townhouses exist in Ridgewood but in minimal volume, with three sales over seven months at a median of $599,000. This is a single-family town through and through.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "Ridgewood is almost entirely a single-family market, with 78 homes sold over the last six months at a median of $1,182,500. This is a real seller's market. Seventy-three percent of homes sold above asking, the sale-to-list ratio is sitting at 1.054, and the median time on market is just 13 days. Sellers are dictating terms, and priced homes are moving quickly. The range is wide, from $620,000 to $4,325,000, which tells you the market absorbs everything from entry-level single-family buys to significant estates. Condos and townhouses barely register here with just three sales at a median of $599,000, so if you're house hunting in Ridgewood, you're shopping single-family. The decisive question isn't market heat. It's whether you can find the home you want at a price you're willing to pay in this competitive environment where the best properties don't stay on the market long.",
+  "firstDraft": "Ridgewood's single-family market is running hot. The median sale price is $1,225,000, and homes are selling well above asking with 75.5 percent of sales closing above list price and a median days on market of just 12. The sale-to-list ratio sits at 1.06, which means sellers are getting their price or better in most cases, and many multiple offer situations are happening. Inventory is moving quickly enough that you're seeing homes sell in under two weeks regularly. The range is broad, from $620,000 to $4,325,000, so there's genuine diversity in what Ridgewood single-family offers depending on which neighborhood and lot size you're targeting. If you're looking to sell, this is a real seller's market where pricing competitively still nets you strong terms. If you're buying, you'll need to be prepared to move fast and potentially compete for the homes that are truly right for you. Condos and townhouses exist in Ridgewood but in minimal volume, just three sales over seven months at a median of $599,000. This is a single-family town through and through.",
   "usage": {
-    "input_tokens": 3771,
+    "input_tokens": 3913,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 222,
+    "output_tokens": 251,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-05-12T18:31:24.769Z"
+  "generatedAt": "2026-06-01T14:41:36.038Z"
 }

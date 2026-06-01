@@ -1,21 +1,21 @@
 {
-  "hash": "9ce387b53b055bd9",
-  "paragraph": "The single-family market in Oradell is a real seller's market. Twelve homes sold over six months at a median of $1,100,000, and 91 percent of them went for above asking price. The sale-to-list ratio sits at 1.08, meaning homes are selling for roughly eight percent above their listed prices. Median days on market is 12.5 days, which tells you that priced homes are moving fast and sellers are dictating terms. The range is wide, from $605,000 to $1,665,000, so the market rewards homes that are positioned correctly within their segment. If you're selling, this is the environment you want. If you're buying, you'll need to move decisively and be prepared to compete.",
+  "hash": "c9c6eee28c0871fb",
+  "paragraph": "Single-family homes dominate Oradell, with 17 sales over seven months at a median of $1,050,000. The sale-to-list ratio sits at 1.11, meaning homes are selling above asking, and the median days on market of 13 tells you this is a real seller's market. About 88 percent of homes sold above list price, and sellers are dictating terms here. The range runs wide, from $605,000 to $1,665,000, so pricing matters enormously depending on condition and lot size. Homes that are priced right move fast. There's very little condo or townhouse activity in this market, so you're essentially looking at single-family only. If you're considering Oradell, understand that you're competing in an environment where multiple offer situations are common and inventory is tight. Sellers know what they have.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "The single-family market in Oradell is a real seller's market. Twelve homes sold over six months at a median of $1,100,000, and 91 percent of them went for above asking price. The sale-to-list ratio sits at 1.08, meaning homes are selling for roughly eight percent above their listed prices. Median days on market is just 12.5 days, which tells you that priced homes are moving fast and sellers are dictating terms. The range is wide, from $605,000 to $1,665,000, so the market rewards homes that are positioned correctly within their segment. If you're selling, this is the environment you want. If you're buying, you'll need to move decisively and be prepared to compete.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3160,
+    "input_tokens": 2874,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 170,
+    "output_tokens": 195,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-05-12T18:30:38.637Z"
+  "generatedAt": "2026-06-01T14:40:40.046Z"
 }

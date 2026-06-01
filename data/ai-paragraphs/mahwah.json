@@ -1,21 +1,21 @@
 {
-  "hash": "b35300f1317b2826",
-  "paragraph": "Single-family homes in Mahwah are moving in a real seller's market, with 58 percent of homes selling above asking and a median sale-to-list ratio of 1.04. The median price sits at $938,000, and homes are spending a median of 22 days on market before going under contract. Condos and townhouses tell a different story with stronger velocity. They're the volume tier at 86 sales over six months with a median of $488,000, moving even faster at 15 days on market and 67 percent selling above asking. The condo-townhouse sale-to-list ratio of 1.02 shows steady, competitive demand without the waiting game you're seeing in single-family. If you're weighing tiers, the choice here comes down to what you need. Single-family offers space and grounds but requires patience and competitive bidding. Condos and townhouses move faster with lower entry prices, though they come with HOA fees and shared walls. The market isn't favoring one over the other in terms of heat. It's rewarding prepared buyers in both categories who know their budget and move quickly.",
+  "hash": "874b218a59c2f068",
+  "paragraph": "The single-family market in Mahwah is moving with real momentum. Fifty homes sold over the last seven months at a median of $1.1 million, and 52 percent of them went above asking. The median days on market sits at 22, and the sale-to-list ratio of 1.01 confirms that priced homes are selling at or above their asking price consistently. Sellers are dictating terms here, though you'll find a wide range in the market, from properties under $200,000 to the occasional sale north of $2.6 million, which reflects Mahwah's diversity of neighborhoods and lot sizes. By contrast, the condo and townhouse market is considerably hotter. With 104 sales at a median of $500,000 and 68 percent selling above asking, buyers face real competition. The median days on market of 14.5 days and a sale-to-list ratio of 1.02 tell you that multiple offer situations are common here. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home or the lower price point and lower-maintenance lifestyle of a condo or townhouse.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "The single-family market in Mahwah is moving with real momentum. Fifty homes sold over the last seven months at a median of $1.1 million, and 52 percent of them went above asking. The median days on market sits at 22, and the sale-to-list ratio of 1.01 confirms that priced homes are selling at or above their asking price consistently. Sellers are dictating terms here, though you'll find a wide range in the market, from properties under $200,000 to the occasional sale north of $2.6 million, which reflects Mahwah's diversity of neighborhoods and lot sizes. By contrast, the condo and townhouse market is considerably hotter. With 104 sales at a median of $500,000 and 68 percent selling above asking, buyers face real competition. The median days on market of just 14.5 days and a sale-to-list ratio of 1.02 tell you that multiple offer situations are common here. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home or the lower price point and lower-maintenance lifestyle of a condo or townhouse.",
   "usage": {
-    "input_tokens": 3601,
+    "input_tokens": 4149,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 253,
+    "output_tokens": 270,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-05-12T18:29:33.950Z"
+  "generatedAt": "2026-06-01T14:39:43.082Z"
 }

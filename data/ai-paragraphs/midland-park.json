@@ -1,21 +1,21 @@
 {
-  "hash": "b1acaa242a6c763b",
-  "paragraph": "The single-family market in Midland Park is moving briskly right now. Over the last six months, 22 homes sold at a median of $671,500, with a sale-to-list ratio of 1.04 and about 77 percent of homes selling above asking. Median days on market sits at 16, which is genuinely quick for the Bergen County market. Sellers are dictating terms here, and homes priced right are drawing multiple offers. The price range runs from $460,000 to over $1.08 million, so there is real variety in the inventory, but the velocity is consistent across it. This is a real seller's market in the single-family tier, which means if you're considering a move to Midland Park, you'll want to act decisively once you find the right house.",
+  "hash": "bf3f58431a87acba",
+  "paragraph": "The single-family market in Midland Park is moving briskly. Over the last seven months, 26 homes sold at a median of $660,000, and the data shows a real seller's market. Homes are selling above asking over 73 percent of the time, the sale-to-list ratio sits at 1.04, and the median time on market is 16 days. Sellers are dictating terms here. If you're looking at a well-priced home, you're likely to face competition. The range is fairly broad, from $460,000 at the low end to $1,089,000 at the top, which means the market is capturing everything from entry-level buyers to those hunting for premium single-family properties. The fastest sales close in about a week, though that's the outlier. The more typical story is that a home listed at the right price moves within two or three weeks. If you're selling, you have leverage. If you're buying, you'll need to move decisively when you find the right property.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "The single-family market in Midland Park is moving briskly right now. Over the last six months, 22 homes sold at a median of $671,500, with a sale-to-list ratio of 1.04 and about 77 percent of homes selling above asking. Median days on market sits at 16, which is genuinely quick for the Bergen County market. Sellers are dictating terms here, and homes priced right are drawing multiple offers. The price range runs from $460,000 to just over $1.08 million, so there is real variety in the inventory, but the velocity is consistent across it. This is a real seller's market in the single-family tier, which means if you're considering a move to Midland Park, you'll want to act decisively once you find the right house.",
+  "firstDraft": "The single-family market in Midland Park is moving briskly. Over the last seven months, 26 homes sold at a median of $660,000, and the data shows a real seller's market. Homes are selling above asking over 73 percent of the time, the sale-to-list ratio sits at 1.04, and the median time on market is just 16 days. Sellers are dictating terms here. If you're looking at a well-priced home, you're likely to face competition. The range is fairly broad, from $460,000 at the low end to $1,089,000 at the top, which means the market is capturing everything from entry-level buyers to those hunting for premium single-family properties. The fastest sales close in about a week, though that's the outlier. The more typical story is that a home listed at the right price moves within two or three weeks. If you're selling, you have leverage. If you're buying, you'll need to move decisively when you find the right property.",
   "usage": {
-    "input_tokens": 3217,
+    "input_tokens": 3284,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 184,
+    "output_tokens": 231,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-05-12T18:29:42.764Z"
+  "generatedAt": "2026-06-01T14:39:54.215Z"
 }

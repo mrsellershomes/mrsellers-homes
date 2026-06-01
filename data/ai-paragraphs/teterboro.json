@@ -1,6 +1,6 @@
 {
-  "hash": "ffadf2ab809d8c1d",
-  "paragraph": "Teterboro doesn't have any recorded sales in the last six months ending April 2026. This doesn't mean the town is inactive, it means the market is extremely tight. Teterboro is small, zoned heavily for industrial and commercial use, and residential inventory turns over infrequently. If you're looking here, you're likely either waiting for a specific property to come on the market or you know exactly what you want and when it will be available. The absence of recent sales data makes it hard to read current pricing or velocity, so if you do find something, lean on a local agent who knows the town's micro-market and can help you price realistically against comparable sales from the last year or two rather than the last six months.",
+  "hash": "1c30888e90cbc126",
+  "paragraph": "There is no measurable sales activity in Teterboro over the last seven months. Without transaction data, market conditions cannot be assessed. If you are considering a move to Teterboro or have a property there, reach out directly to discuss what is happening locally right now.",
   "fallback": false,
   "reason": null,
   "retried": false,
@@ -13,9 +13,9 @@
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 160,
+    "output_tokens": 60,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-05-12T18:32:41.165Z"
+  "generatedAt": "2026-06-01T14:42:42.956Z"
 }

@@ -1,21 +1,21 @@
 {
-  "hash": "7c38b15d1e6d9fad",
-  "paragraph": "Waldwick's single-family market is moving briskly with 36 sales over six months at a median of $650,000. Sellers are dictating terms here. Nearly 78 percent of homes sold above asking, the sale-to-list ratio sits at 1.05, and the median days on market is 13.5 days. This is a real seller's market where priced homes don't linger. The range runs from $360,000 to $970,000, so there's room across the bracket, but inventory is tight enough that competition shows up quickly on anything reasonably positioned. Condos and townhouses trail at a median of $554,950 with 6 sales, posting a 1.03 ratio and an 18.5-day median, which tracks competitive but not quite as frenzied as the single-family tier. Multi-family properties are too sparse to read as a meaningful market segment. If you're in Waldwick, single-family is the volume play and the one where you'll feel the seller advantage most directly.",
+  "hash": "95aa095d40bff024",
+  "paragraph": "The single-family market in Waldwick is a real seller's market. With a median sale price of $652,500 and a sale-to-list ratio of 1.06, homes are closing above asking over 80 percent of the time and moving fast at a median of 13 days on market. Sellers can expect competitive bidding on well-priced inventory. Condo and townhouse activity is lighter at six sales over seven months with a median of $554,950, but these properties are also selling above asking and moving quickly at a median of 18.5 days on market. Multi-family homes sit at $1,025,000 median with only four sales in the period, suggesting sparse inventory in this category and longer time on market at 26 days. If you're looking in Waldwick, the single-family tier is where the volume and momentum are. Prices are firm and inventory moves without sitting. Condos and townhouses offer a lower price entry point, though selection is limited. Multi-family is a niche category with minimal activity.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "Waldwick's single-family market is moving briskly with 36 sales over six months at a median of $650,000. Sellers are dictating terms here. Nearly 78 percent of homes sold above asking, the sale-to-list ratio sits at 1.05, and the median days on market is just 13.5 days. This is a real seller's market where priced homes don't linger. The range runs from $360,000 to $970,000, so there's room across the bracket, but inventory is tight enough that competition shows up quickly on anything reasonably positioned. Condos and townhouses trail at a median of $554,950 with 6 sales, posting a 1.03 ratio and a 18.5-day median, which tracks competitive but not quite as frenzied as the single-family tier. Multi-family properties are too sparse to read as a meaningful market segment. If you're in Waldwick, single-family is the volume play and the one where you'll feel the seller advantage most directly.",
+  "firstDraft": "The single-family market in Waldwick is a real seller's market. With a median sale price of $652,500 and a sale-to-list ratio of 1.06, homes are closing above asking over 80 percent of the time and moving fast at a median of 13 days on market. Sellers can expect competitive bidding on well-priced inventory. Condo and townhouse activity is lighter at just six sales over seven months with a median of $554,950, but these properties are also selling above asking and moving quickly at a median of 18.5 days on market. Multi-family homes sit at $1,025,000 median with only four sales in the period, suggesting sparse inventory in this category and longer time on market at 26 days. If you're looking in Waldwick, the single-family tier is where the volume and momentum are. Prices are firm and inventory moves without sitting. Condos and townhouses offer a lower price entry point, though selection is limited. Multi-family is a niche category with minimal activity.",
   "usage": {
-    "input_tokens": 3711,
+    "input_tokens": 3746,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 235,
+    "output_tokens": 234,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-05-12T18:32:55.790Z"
+  "generatedAt": "2026-06-01T14:42:56.664Z"
 }

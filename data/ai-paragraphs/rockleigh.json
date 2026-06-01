@@ -1,21 +1,21 @@
 {
-  "hash": "ffadf2ab809d8c1d",
-  "paragraph": "Rockleigh had no recorded sales across any property type in the last six months ending April 2026. This isn't unusual for a very small town with limited housing inventory and turnover, but it also means there's no current market data to work with. If you're looking to buy or sell here, you'll want to work with a local agent who can pull comparable sales from the broader Bergen County market and understand what similar properties in nearby towns are doing. The lack of activity doesn't mean the market is frozen, only that sample sizes this small can swing dramatically month to month. Reach out directly if you're seriously considering a move to Rockleigh.",
+  "hash": "1c30888e90cbc126",
+  "paragraph": "Rockleigh has no recorded sales activity over the last seven months ending May 2026, which means there's not enough market data to draw any reliable conclusions about pricing, days on market, or buyer competition right now. This isn't unusual for a smaller Bergen County town with limited residential inventory. If you're actively looking to buy or sell here, you'll want to talk directly with a local agent who can pull recent comparable sales from neighboring towns and give you a real sense of where Rockleigh properties stand relative to similar homes in the immediate area. The absence of sales data doesn't mean the market is frozen, only that the sample size is too small to report on meaningfully.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "Rockleigh has no recorded sales activity over the last seven months ending May 2026, which means there's not enough market data to draw any reliable conclusions about pricing, days on market, or buyer competition right now. This isn't unusual for a smaller Bergen County town with limited residential inventory. If you're actively looking to buy or sell here, you'll want to talk directly with a local agent who can pull recent comparable sales from neighboring towns and give you a real sense of where Rockleigh properties stand relative to similar homes in the immediate area. The absence of sales data doesn't mean the market is frozen, just that the sample size is too small to report on meaningfully.",
   "usage": {
-    "input_tokens": 2735,
+    "input_tokens": 3023,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 140,
+    "output_tokens": 144,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-05-12T18:31:54.299Z"
+  "generatedAt": "2026-06-01T14:42:03.011Z"
 }

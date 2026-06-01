@@ -1,21 +1,21 @@
 {
-  "hash": "14d3efa1957e6b61",
-  "paragraph": "The condo and townhouse market dominates Palisades Park's activity with 32 sales over six months at a median of $960,000, and these homes are moving decisively. The median days on market sits at 27.5 days, nearly 40 percent of homes sell above asking, and the sale-to-list ratio of 0.986 shows buyers are willing to compete for priced inventory. This is a competitive but balanced market where the best homes still draw multiple interest. Single-family homes are sparse in this town, with only 8 sales at a median of $840,000. The sale-to-list ratio dips to 0.976 and median days on market stretches to 56 days, meaning sellers need to price competitively if they want to move inventory quickly. Multi-family properties round out the market at a median of $1,239,000 across 7 sales, with similar pricing discipline required at a 0.973 ratio and 59-day median. If you're weighing property types here, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the low-maintenance lifestyle of a condo, or the rental income potential of a multi-family investment.",
+  "hash": "029f6c8b7f69dd0d",
+  "paragraph": "Single-family homes in Palisades Park are moving slower than the other tiers, with a median sale price of $840,000 and a median days on market of 56. The sale-to-list ratio sits at 0.98, and only 12.5 percent of homes sold above asking, which tells you sellers need to price competitively to attract a buyer's attention. Multi-family properties, by contrast, are the strongest performers with 12 sales at a median of $1,274,500 and a median days on market of 29.5 days. The sale-to-list ratio here is nearly even at 0.99, and 25 percent sold above asking, suggesting that well-priced inventory in this category does draw genuine competition. Condos and townhouses represent the real volume in Palisades Park with 36 sales over the period at a median of $972,500. The median days on market is 26, the ratio is 0.99, and 27.8 percent sold above asking, which means the best-priced units in this category are moving solidly. If you're weighing which tier makes sense, it comes down to what you're looking for. Single-family homes here reward patience and a realistic price; multi-family properties and condos reward speed if you're ready to move.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "Single-family homes in Palisades Park are moving slower than the other tiers, with a median sale price of $840,000 and a median days on market of 56. The sale-to-list ratio sits at 0.98, and only 12.5 percent of homes sold above asking, which tells you sellers need to price competitively to attract a buyer's attention. Multi-family properties, by contrast, are the strongest performers with 12 sales at a median of $1,274,500 and a median days on market of just 29.5 days. The sale-to-list ratio here is nearly even at 0.99, and 25 percent sold above asking, suggesting that well-priced inventory in this category does draw genuine competition. Condos and townhouses represent the real volume in Palisades Park with 36 sales over the period at a median of $972,500. The median days on market is 26, the ratio is 0.99, and 27.8 percent sold above asking, which means the best-priced units in this category are moving solidly. If you're weighing which tier makes sense, it comes down to what you're looking for. Single-family homes here reward patience and a realistic price; multi-family properties and condos reward speed if you're ready to move.",
   "usage": {
-    "input_tokens": 3333,
+    "input_tokens": 3846,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 278,
+    "output_tokens": 296,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-05-12T18:30:47.992Z"
+  "generatedAt": "2026-06-01T14:40:48.942Z"
 }

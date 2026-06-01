@@ -1,21 +1,10 @@
 {
-  "hash": "ede985291606728e",
-  "paragraph": "The single-family market in Bogota is moving at a steady clip with 30 homes sold over the last six months at a median of $627,500. Sellers are dictating terms here. Two-thirds of homes are selling above asking, the sale-to-list ratio sits at 1.03, and the median time on market is a tight 21.5 days. This is a real seller's market, though not so frenzied that every property needs multiple offers. Homes priced right are moving fast, and there's enough inventory turnover that you'll see consistent opportunity if you're ready to move. The range is fairly wide, from $320,000 up to $875,000, so Bogota is drawing buyers across multiple price points, not just at the entry level. If you're shopping here, the advantage goes to sellers, but it's not a situation where you need to waive inspection or offer significantly over asking to be competitive. Price the home where it belongs and buyers will respond.",
-  "fallback": false,
-  "reason": null,
-  "retried": false,
-  "firstDraft": null,
-  "usage": {
-    "input_tokens": 2927,
-    "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
-    "cache_creation": {
-      "ephemeral_5m_input_tokens": 0,
-      "ephemeral_1h_input_tokens": 0
-    },
-    "output_tokens": 219,
-    "service_tier": "standard",
-    "inference_geo": "not_available"
-  },
-  "generatedAt": "2026-05-12T18:27:11.519Z"
+  "hash": "416150d8f6aa196f",
+  "paragraph": "Over the last 7 months ending May 2026, Bogota had 34 single-family closings at a median around $628K. Homes sold at 103% of list on a median of 22 days on market. If you are weighing a move here and want a read that goes deeper than the public stats, that is the kind of conversation worth having directly.",
+  "fallback": true,
+  "reason": "post-validation rejected after retry: contains \"just\" as a softener",
+  "firstDraft": "Bogota's single-family market is running hot right now. You're seeing a real seller's market with 68 percent of homes selling above asking, a sale-to-list ratio of 1.027, and a median time on market of just 21.5 days. The median sale price sits at $627,500, which means sellers are getting what they're asking for and often more, particularly on well-maintained homes in desirable locations within town. Homes are moving fast enough that if you find a property you like, hesitation can cost you. Multiple offers aren't uncommon at this price point, so you'll want to be prepared to move decisively when something hits the market. The floor is lower than you might expect—the range spans from $320,000 to $875,000—so there's real variety depending on condition, lot size, and location. This is a market where pricing matters less than execution. A home priced right sells in three weeks. One priced even moderately high can linger. If you're shopping in Bogota right now, understand that you're competing in an environment where sellers hold the advantage, which means your offer strategy and financing certainty are going to matter more than the asking price itself.",
+  "rejectedDraft": "Bogota's single-family market is running hot right now. You're seeing a real seller's market with 68 percent of homes selling above asking, a sale-to-list ratio of 1.027, and a median time on market of just 21.5 days. The median sale price sits at $627,500, which means sellers are getting what they're asking for and often more, particularly on well-maintained homes in desirable locations within town. Homes are moving fast enough that if you find a property you like, hesitation can cost you. Multiple offers aren't uncommon at this price point, so you'll want to be prepared to move decisively when something hits the market. The floor is lower than you might expect. The range spans from $320,000 to $875,000, so there's real variety depending on condition, lot size, and location. This is a market where pricing matters less than execution. A home priced right sells in three weeks. One priced even moderately high can linger. If you're shopping in Bogota right now, understand that you're competing in an environment where sellers hold the advantage, which means your offer strategy and financing certainty are going to matter more than the asking price itself.",
+  "retried": true,
+  "generatedAt": "2026-06-01T14:37:15.225Z"
 }

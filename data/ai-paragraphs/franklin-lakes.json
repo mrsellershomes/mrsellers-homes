@@ -1,21 +1,21 @@
 {
-  "hash": "01649cab5b78835e",
-  "paragraph": "Franklin Lakes is a single-family market, and the data reflects a competitive but balanced environment rather than a seller's market. The median sale price is $1,775,000 against a median list price of $1,749,000, with a sale-to-list ratio of 0.985 and about 38 percent of homes selling above asking. Median days on market sits at 25, which means priced homes are moving without the urgency of a frenzied market. You'll see a real range here, from $650,000 to $4,850,000, which tells you the town contains everything from entry-level properties to substantial estates. Sellers are pricing carefully and waiting for the right buyer rather than competing on speed, which is a rational position when inventory is selective and your buyer pool is quality-conscious. If you're considering Franklin Lakes, the deciding factor isn't market temperature. It's whether the space, grounds, and neighborhood character of a single-family home in this price tier aligns with what you're looking for.",
+  "hash": "f33bf3749b3bff6b",
+  "paragraph": "Franklin Lakes is a single-family market, and it is solidly balanced right now. The median sale price sits at $1,675,000 against a median list price of $1,699,000, which means the sale-to-list ratio is holding steady at 0.98, and roughly a third of homes are selling above asking. The median days on market at twenty days tells you that priced homes are moving, but sellers aren't in a rush to cut prices either. You'll see the occasional multiple offer situation, especially on homes under $1.5 million where there's real buyer traffic, but homes above that threshold tend to sit a bit longer and require more strategic pricing. The range of inventory is wide, from $650,000 to $4.85 million, so Franklin Lakes accommodates everything from someone upgrading into the market to buyers chasing the highest-end teardowns and estates. If you're buying here, the deciding factor isn't whether it's a seller's market or a buyer's market. It's whether the home, lot, and school assignment align with what you're looking for at the price point you're targeting.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "Franklin Lakes is a single-family market, and it is solidly balanced right now. The median sale price sits at $1,675,000 against a median list price of $1,699,000, which means the sale-to-list ratio is holding steady at 0.98, and just over a third of homes are selling above asking. The median days on market at twenty days tells you that priced homes are moving, but sellers aren't in a rush to cut prices either. You'll see the occasional multiple offer situation, especially on homes under $1.5 million where there's real buyer traffic, but homes above that threshold tend to sit a bit longer and require more strategic pricing. The range of inventory is wide, from $650,000 to $4.85 million, so Franklin Lakes accommodates everything from someone upgrading into the market to buyers chasing the highest-end teardowns and estates. If you're buying here, the deciding factor isn't whether it's a seller's market or a buyer's market. It's whether the home, lot, and school assignment align with what you're looking for at the price point you're targeting.",
   "usage": {
-    "input_tokens": 3035,
+    "input_tokens": 3650,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 225,
+    "output_tokens": 245,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-05-12T18:28:31.206Z"
+  "generatedAt": "2026-06-01T14:38:38.420Z"
 }

@@ -1,21 +1,21 @@
 {
-  "hash": "385a4cd94e347e03",
-  "paragraph": "Wyckoff's single-family market is a real seller's market right now. Over the last six months, 44 homes sold at a median of $1,165,500, with nearly 59 percent selling above asking and a sale-to-list ratio of 1.02. The median days on market sits at 18, which means homes priced right are moving decisively and sellers are dictating terms in multiple offer situations. The range is wide, from $550,000 on the lower end to $3,295,000 at the top, so there's genuine inventory across price points even in a tight market. Condo and townhouse activity is minimal, with three sales over six months at a median of $950,000. These are too few transactions to read as a reliable signal of that tier's market temperature, but when they do move, they're following the single-family pattern of selling above asking and closing quickly. If you're looking in Wyckoff, understand that you're entering a seller's market where pricing competitively matters less than having a home that checks the boxes buyers want.",
+  "hash": "2253940024966fd5",
+  "paragraph": "The single-family market in Wyckoff is a real seller's market. With a median sale price of $1,173,500 against a median list price of $1,012,000, homes are selling 3.9 percent above asking on average, and 62.5 percent of sales close above list price. The median time on market sits at 17.5 days, which is tight. The sale-to-list ratio of 1.04 confirms that pricing discipline pays here. Sellers who list competitively are seeing multiple offers and seeing homes move fast. You'll see everything from $550,000 entry points to $3.3 million estates, so Wyckoff's single-family inventory spans a real range. The condo and townhouse category is too thin to read as a meaningful market segment. Three sales over seven months at a median of $950,000 tell you the tier exists but that single-family dominance in Wyckoff is near total. If you're house hunting here, understand that you're competing in a seller's market where homes listed right are attracting serious buyer attention within days. Pricing matters, but so does condition and location, because the buyers showing up have choices and capital.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "Wyckoff's single-family market is a real seller's market right now. Over the last six months, 44 homes sold at a median of $1,165,500, with nearly 59 percent selling above asking and a sale-to-list ratio of 1.02. The median days on market sits at 18, which means homes priced right are moving decisively and sellers are dictating terms in multiple offer situations. The range is wide, from $550,000 on the lower end to $3,295,000 at the top, so there's genuine inventory across price points even in a tight market. Condo and townhouse activity is minimal, just three sales over six months at a median of $950,000. These are too few transactions to read as a reliable signal of that tier's market temperature, but when they do move, they're following the single-family pattern of selling above asking and closing quickly. If you're looking in Wyckoff, understand that you're entering a seller's market where pricing competitively matters less than having a home that checks the boxes buyers want.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3590,
+    "input_tokens": 3264,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 240,
+    "output_tokens": 269,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-05-12T18:33:30.193Z"
+  "generatedAt": "2026-06-01T14:43:44.211Z"
 }

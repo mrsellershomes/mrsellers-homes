@@ -1,21 +1,21 @@
 {
-  "hash": "ac49c339444890bd",
-  "paragraph": "The single-family market in East Rutherford is tight and moving fast. Six homes sold over six months at a median of $760,000, and they're selling right at list price with a median of 17 and a half days on market. Half of them went above asking, which tells you that priced homes are moving and buyers are competing for inventory. Multi-family properties, by contrast, are even more sparse at only three sales, but they're selling well above list at a median of $990,000 and closing in about two weeks. Every multi-family home that sold went over asking, and the sale-to-list ratio of 1.12 shows real buyer demand in that category. The constraint here isn't market heat. It's volume. If you're looking in East Rutherford, you're working with a very limited pool of homes, which means pricing matters and condition matters more than it would in a higher-inventory market. You'll want to move decisively when the right property shows up.",
+  "hash": "bb48d5f48af632a1",
+  "paragraph": "Single-family homes in East Rutherford are moving at a median of $750,000 with a sale-to-list ratio of 1.00 and a median days on market of 17, which means sellers are getting their asking price and homes are leaving the market at a steady clip. About 57 percent of single-family sales close above list, a sign that priced homes are moving and buyers are willing to compete for the right property. Multi-family properties, by contrast, tell a stronger story. The median sits at $990,000 with every sale closing above asking and a sale-to-list ratio of 1.12, putting this category firmly in a seller's market. Days on market average 15, suggesting real demand and limited inventory. Condo and townhouse inventory rounds out the market at a median of $560,000 with a ratio of 1.00 and a median of 24 days on market. One-third of these units sold above asking, indicating that while the category is steady, it lacks the heat of the multi-family tier. If you're weighing East Rutherford, the multi-family segment is where sellers hold the advantage right now, while single-family and condo inventory are moving at a balanced pace.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "The single-family market in East Rutherford is tight and moving fast. Just six homes sold over six months at a median of $760,000, and they're selling right at list price with a median of 17 and a half days on market. Half of them went above asking, which tells you that priced homes are moving and buyers are competing for inventory. Multi-family properties, by contrast, are even more sparse at only three sales, but they're selling well above list at a median of $990,000 and closing in about two weeks. Every multi-family home that sold went over asking, and the sale-to-list ratio of 1.12 shows real buyer demand in that category. The constraint here isn't market heat. It's volume. If you're looking in East Rutherford, you're working with a very limited pool of homes, which means pricing matters and condition matters more than it would in a higher-inventory market. You'll want to move decisively when the right property shows up.",
+  "firstDraft": "Single-family homes in East Rutherford are moving at a median of $750,000 with a sale-to-list ratio of 1.00 and a median days on market of 17, which means sellers are getting their asking price and homes are leaving the market at a steady clip. About 57 percent of single-family sales close above list, a sign that priced homes are moving and buyers are willing to compete for the right property. Multi-family properties, by contrast, tell a stronger story. The median sits at $990,000 with every sale closing above asking and a sale-to-list ratio of 1.12, putting this category firmly in a seller's market. Days on market average just 15, suggesting real demand and limited inventory. Condo and townhouse inventory rounds out the market at a median of $560,000 with a ratio of 1.00 and a median of 24 days on market. One-third of these units sold above asking, indicating that while the category is steady, it lacks the heat of the multi-family tier. If you're weighing East Rutherford, the multi-family segment is where sellers hold the advantage right now, while single-family and condo inventory are moving at a balanced pace.",
   "usage": {
-    "input_tokens": 3335,
+    "input_tokens": 3576,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 219,
+    "output_tokens": 275,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-05-12T18:27:45.413Z"
+  "generatedAt": "2026-06-01T14:37:53.394Z"
 }

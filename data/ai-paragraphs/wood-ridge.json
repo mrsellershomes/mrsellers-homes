@@ -1,21 +1,21 @@
 {
-  "hash": "26396c3ef0694608",
-  "paragraph": "Wood-Ridge has two active property tiers, and they're telling different stories. Single-family homes, at a median of $755,500, are moving on a buyer-friendly timeline with a median of 39.5 days on market and a sale-to-list ratio below 1.0. Only about 32 percent of homes sold above asking, which means sellers need to price competitively if they want to move inventory. By contrast, the condo and townhouse market is notably hotter. At a median of $715,500, these units are spending 25 days on market and closing at a 1.015 ratio, with nearly 59 percent selling above list price. This is a real difference in momentum between the two tiers. If you're comparing them, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home where you'll have time to find the right buyer, or the low-maintenance lifestyle of a condo or townhouse where priced units are drawing multiple interest and moving faster.",
+  "hash": "980b0efc52de9f01",
+  "paragraph": "Wood-Ridge's single-family market sits at a median of $750,000 with 25 sales over seven months, and the sale-to-list ratio of 0.99 combined with a median of 38 days on market tells you sellers need to price competitively to move inventory. Only 32 percent of homes sold above asking, which means buyers have some leverage if they're patient and selective. The condo and townhouse tier is noticeably stronger, with 26 sales at a median of $715,500 and a sale-to-list ratio of 1.01. Here you're seeing 61 percent of homes sell above list price and a median of 24.5 days on market, which signals real buyer interest and multiple offer situations on the best units. If you're deciding between the two tiers, the single-family market rewards smart pricing and patience on the seller side, while condos and townhouses are drawing faster action from buyers who know what they want. For a buyer, single-family homes give you more negotiating room if you're willing to wait, but condo inventory is moving briskly enough that you'll need to move quickly when you find the right one.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "Wood-Ridge has two active property tiers, and they're telling different stories. Single-family homes, at a median of $755,500, are moving on a buyer-friendly timeline with a median of 39.5 days on market and a sale-to-list ratio just under 1.0. Only about 32 percent of homes sold above asking, which means sellers need to price competitively if they want to move inventory. By contrast, the condo and townhouse market is notably hotter. At a median of $715,500, these units are spending just 25 days on market and closing at a 1.015 ratio, with nearly 59 percent selling above list price. This is a real difference in momentum between the two tiers. If you're comparing them, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home where you'll have time to find the right buyer, or the low-maintenance lifestyle of a condo or townhouse where priced units are drawing multiple interest and moving faster.",
+  "firstDraft": "Wood-Ridge's single-family market sits at a median of $750,000 with 25 sales over seven months, and the sale-to-list ratio of 0.99 combined with a median of 38 days on market tells you sellers need to price competitively to move inventory. Only 32 percent of homes sold above asking, which means buyers have some leverage if they're patient and selective. The condo and townhouse tier is noticeably stronger, with 26 sales at a median of $715,500 and a sale-to-list ratio of 1.01. Here you're seeing 61 percent of homes sell above list price and a median of just 24.5 days on market, which signals real buyer interest and multiple offer situations on the best units. If you're deciding between the two tiers, the single-family market rewards smart pricing and patience on the seller side, while condos and townhouses are drawing faster action from buyers who know what they want. For a buyer, single-family homes give you more negotiating room if you're willing to wait, but condo inventory is moving briskly enough that you'll want to move quickly when you find the right one.",
   "usage": {
-    "input_tokens": 3541,
+    "input_tokens": 3594,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 230,
+    "output_tokens": 262,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-05-14T19:01:33.621Z"
+  "generatedAt": "2026-06-01T14:43:29.537Z"
 }

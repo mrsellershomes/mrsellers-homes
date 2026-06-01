@@ -1,21 +1,21 @@
 {
-  "hash": "16ff763edaab5b7b",
-  "paragraph": "The single-family market in Rochelle Park is clearly where the volume is, with 22 sales over six months at a median of $654,000. Sellers are dictating terms here. Nearly 68 percent of homes sold above asking, the sale-to-list ratio sits at 1.02, and the median time on market is 18.5 days. This is a real seller's market, and many multiple offer situations are the norm rather than the exception. Priced competitively, homes move fast. The condo and townhouse tier is sparse by comparison with only five sales at a median of $450,000. That category is moving more slowly at a 43-day median, with less than half the sales clearing above list price. The sale-to-list ratio here is 0.99, which means buyers may find some leverage if they're patient and willing to negotiate. If you're weighing these two tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home in a seller-favored market, or the lower price point and potentially easier negotiation of a condo or townhouse.",
+  "hash": "e96c75a6a44770e2",
+  "paragraph": "Rochelle Park's single-family market is where the volume is, with 27 homes sold over the past seven months at a median of $660,000. Sellers are dictating terms here. Nearly 74 percent of homes sold above asking, the sale-to-list ratio sits at 1.02, and the median time on market is 16 days. This is a real seller's market, and multiple offer situations are common on well-priced homes. By contrast, the condo and townhouse tier is sparse with only six sales at a median of $480,000. That category moved more slowly, with a median of 28.5 days on market and one-third of homes selling above list price. The sale-to-list ratio dipped below asking at 0.99, which suggests buyers may find some leverage if they're willing to look at this smaller pool. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home or the low-maintenance lifestyle of a condo.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "The single-family market in Rochelle Park is clearly where the volume is, with 22 sales over six months at a median of $654,000. Sellers are dictating terms here. Nearly 68 percent of homes sold above asking, the sale-to-list ratio sits at 1.02, and the median time on market is just 18.5 days. This is a real seller's market, and many multiple offer situations are the norm rather than the exception. Priced competitively, homes move fast. The condo and townhouse tier is sparse by comparison with only five sales at a median of $450,000. That category is moving more slowly at a 43-day median, with less than half the sales clearing above list price. The sale-to-list ratio here is 0.99, which means buyers may find some leverage if they're patient and willing to negotiate. If you're weighing these two tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home in a seller-favored market, or the lower price point and potentially easier negotiation of a condo or townhouse.",
+  "firstDraft": "Rochelle Park's single-family market is where the volume is, with 27 homes sold over the past seven months at a median of $660,000. Sellers are dictating terms here. Nearly 74 percent of homes sold above asking, the sale-to-list ratio sits at 1.02, and the median time on market is just 16 days. This is a real seller's market, and multiple offer situations are common on well-priced homes. By contrast, the condo and townhouse tier is sparse with only six sales at a median of $480,000. That category moved more slowly, with a median of 28.5 days on market and just a third of homes selling above list price. The sale-to-list ratio dipped below asking at 0.99, which suggests buyers may find some leverage if they're willing to look at this smaller pool. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home or the low-maintenance lifestyle of a condo.",
   "usage": {
-    "input_tokens": 3469,
+    "input_tokens": 3489,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 254,
+    "output_tokens": 234,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-05-12T18:31:51.951Z"
+  "generatedAt": "2026-06-01T14:41:54.091Z"
 }

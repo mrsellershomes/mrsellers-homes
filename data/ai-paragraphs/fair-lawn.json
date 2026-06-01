@@ -1,21 +1,21 @@
 {
-  "hash": "a723ea78f6a32a93",
-  "paragraph": "Fair Lawn's single-family market is running hot right now. With 105 sales over six months at a median of $690,000, you're looking at a real seller's market. Two-thirds of homes are selling above asking, the median sale-to-list ratio sits at 1.04, and median days on market is 18. Sellers are dictating terms here, and priced homes are moving fast. The range is wide, from $427,000 on the low end to $1,467,300 at the top, which tells you the market is absorbing everything from starter homes to substantial properties. Condos and townhouses make a much smaller appearance with only 10 sales at a median of $394,000, roughly half the single-family price point. They're moving at a similar pace, 17.5 days on market median, with 60 percent selling above asking. The condo category is thin here, so if you're weighing single-family versus condo, supply will drive your decision more than market temperature. Both tiers are moving well for sellers right now. If you're comparing what Fair Lawn offers, it comes down to whether you want the space and grounds of a single-family home or the lower price point and low-maintenance lifestyle of a condo.",
+  "hash": "22bf46e8f9c028fe",
+  "paragraph": "Fair Lawn's single-family market is genuinely competitive, with 126 sales over seven months at a median of $700,000. About 65 percent of homes sold above asking, and the median days on market sits at 18, which tells you that priced homes are moving and sellers are dictating terms in many cases. The sale-to-list ratio of 1.035 confirms this. It's a real seller's market for single-family properties. The condo and townhouse category is sparse by comparison, with 14 sales at a median of $394,000. These units are moving at the same pace, 18 days on market, and 71 percent sold above asking, which means the competitive pressure applies here too. If you're hunting in Fair Lawn, you're entering a market where inventory is limited and buyer competition is genuine. Priced competitively, homes will draw multiple offers. If you're not prepared to move fast and think critically about what you're willing to pay, you'll watch properties disappear.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "Fair Lawn's single-family market is running hot right now. With 105 sales over six months at a median of $690,000, you're looking at a real seller's market. Two-thirds of homes are selling above asking, the median sale-to-list ratio sits at 1.04, and median days on market is just 18. Sellers are dictating terms here, and priced homes are moving fast. The range is wide, from $427,000 on the low end to $1,467,300 at the top, which tells you the market is absorbing everything from starter homes to substantial properties. Condos and townhouses make a much smaller appearance with only 10 sales at a median of $394,000, roughly half the single-family price point. They're moving at a similar pace, 17.5 days on market median, with 60 percent selling above asking. The condo category is thin here, so if you're weighing single-family versus condo, supply will drive your decision more than market temperature. Both tiers are moving well for sellers right now. If you're comparing what Fair Lawn offers, it comes down to whether you want the space and grounds of a single-family home or the lower price point and low-maintenance lifestyle of a condo.",
+  "firstDraft": "Fair Lawn's single-family market is genuinely competitive, with 126 sales over seven months at a median of $700,000. About 65 percent of homes sold above asking, and the median days on market sits at 18, which tells you that priced homes are moving and sellers are dictating terms in many cases. The sale-to-list ratio of 1.035 confirms this. It's a real seller's market for single-family properties. The condo and townhouse category is sparse by comparison, with just 14 sales at a median of $394,000. These units are moving just as quickly, at 18 days on market, and 71 percent sold above asking, which means the competitive pressure applies here too. If you're hunting in Fair Lawn, you're entering a market where inventory is limited and buyer competition is genuine. Priced competitively, homes will draw multiple offers. If you're not prepared to move fast and think critically about what you're willing to pay, you'll watch properties disappear.",
   "usage": {
-    "input_tokens": 3944,
+    "input_tokens": 4027,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 283,
+    "output_tokens": 226,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-05-12T18:28:14.596Z"
+  "generatedAt": "2026-06-01T14:38:21.587Z"
 }

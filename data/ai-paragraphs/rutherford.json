@@ -1,21 +1,21 @@
 {
-  "hash": "8f5e8e4c714dc591",
-  "paragraph": "Single-family homes in Rutherford are moving at a median of $815,000 with a sale-to-list ratio of 1.0 and roughly 46 percent of homes selling above asking. The median days on market of 31 suggests a competitive but balanced environment where priced homes are moving without extreme urgency. Multi-family properties sit higher at a $897,500 median and take longer to sell at 51.5 days on market, though they are still hitting asking price targets. Condos and townhouses offer a distinct entry point at $347,000 median with 29 percent above asking and a 32.5-day median, indicating steady but unhurried sales activity. Co-ops round out the bottom tier at $202,550 median with only four sales over six months, making this category too thin to characterize with confidence. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home, the income potential of a multi-family property, the low-maintenance lifestyle of a condo or townhouse, or the lower price point of a co-op.",
+  "hash": "6dbc5c6d46148a3b",
+  "paragraph": "Single-family homes in Rutherford are moving at a near-perfect 1.00 sale-to-list ratio with half the homes selling above asking and a median of 24.5 days on market, which tells you this is a competitive but balanced market where priced homes are moving steadily. The median sits at $858,000 with a range from $525,000 to $1,600,000, giving you genuine variety depending on neighborhood and condition. Multi-family properties follow a similar pattern at a $897,500 median, though they linger slightly longer at 51.5 days on market, suggesting buyers are more selective when comparing two-unit investments. Condos and townhouses occupy a distinctly different price tier at $349,000 median with a 29-day pace and a sale-to-list ratio right at 1.00, making them the entry point for buyers who want lower carrying costs and no land maintenance. Co-ops sit at the bottom with a $202,550 median and only six sales over the seven-month window, indicating limited inventory in this category. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the investment potential of a multi-family, the low-maintenance lifestyle of a condo, or the lower price point of a co-op.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 3619,
+    "input_tokens": 3689,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 256,
+    "output_tokens": 302,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-05-12T18:31:58.443Z"
+  "generatedAt": "2026-06-01T14:42:10.441Z"
 }

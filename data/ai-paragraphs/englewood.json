@@ -1,21 +1,21 @@
 {
-  "hash": "83145381987b2e59",
-  "paragraph": "The single-family market in Englewood is a real seller's market. With a median sale price of $765,000, 46% of homes selling above asking, and a median of 37 days on market, sellers are dictating terms and many homes are drawing multiple offers. The sale-to-list ratio sits at 1.0, meaning homes that are priced fairly are moving at or above list price, while anything overpriced sits longer. The spread is wide, from $440,000 to $4,040,000, so your experience depends entirely on which segment you're targeting. Condos and townhouses run considerably leaner at a $457,500 median with 28 sales over six months. They're moving faster than single-families, with a 22-day median on market, and 54% are selling above asking. This tier offers buyers entry-level pricing and lower maintenance compared to a detached home. Multi-family properties are sparse at four sales, with a $675,450 median, but they've sold above list in 75% of cases. If you're deciding between tiers, it comes down to what you need: the space and grounds of a single-family, the low-maintenance lifestyle of a condo, or the investment potential of a multi-family building.",
+  "hash": "a86a25c26950f0a1",
+  "paragraph": "The single-family market in Englewood is competitive but not frenzied. Fifty-three homes sold over seven months at a median of $760,000, with a sale-to-list ratio at 1.0 and about 47 percent of homes moving above asking. Median days on market sits at 33, which means priced homes are moving, but sellers aren't dictating terms. The price range is wide, from $440,000 to $4,040,000, so neighborhood and condition matter enormously. By contrast, condos and townhouses are tighter and faster. Thirty units sold at a median of $493,750 with a median of 21.5 days on market and 53 percent selling above asking. This tier is drawing real interest from buyers looking for lower entry points without the single-family maintenance load. Multi-family buildings are sparse in Englewood, with only five sales over the period, but they're moving quickly at a median of $585,000 and 19 days on market. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the low-maintenance lifestyle of a condo or townhouse, or the cash flow potential and financing flexibility of a multi-family investment.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "The single-family market in Englewood is a real seller's market. With a median sale price of $765,000, 46% of homes selling above asking, and a median of 37 days on market, sellers are dictating terms and many homes are drawing multiple offers. The sale-to-list ratio sits right at 1.0, meaning homes that are priced fairly are moving at or above list price, while anything overpriced sits longer. The spread is wide, from $440,000 to $4,040,000, so your experience depends entirely on which segment you're targeting. Condos and townhouses run considerably leaner at a $457,500 median with 28 sales over six months. They're moving faster than single-families, with a 22-day median on market, and 54% are selling above asking. This tier offers buyers entry-level pricing and lower maintenance compared to a detached home. Multi-family properties are sparse at just four sales, with a $675,450 median, but they've sold above list in 75% of cases. If you're deciding between tiers, it comes down to what you need: the space and grounds of a single-family, the low-maintenance lifestyle of a condo, or the investment potential of a multi-family building.",
+  "firstDraft": "The single-family market in Englewood is competitive but not frenzied. Fifty-three homes sold over seven months at a median of $760,000, with a sale-to-list ratio right at 1.0 and about 47 percent of homes moving above asking. Median days on market sits at 33, which means priced homes are moving, but sellers aren't dictating terms. The price range is wide, from $440,000 to $4,040,000, so neighborhood and condition matter enormously. By contrast, condos and townhouses are tighter and faster. Thirty units sold at a median of $493,750 with a median of just 21.5 days on market and 53 percent selling above asking. This tier is drawing real interest from buyers looking for lower entry points without the single-family maintenance load. Multi-family buildings are sparse in Englewood, only five sales over the period, but they're moving quickly at a median of $585,000 and 19 days on market. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the low-maintenance lifestyle of a condo or townhouse, or the cash flow potential and financing flexibility of a multi-family investment.",
   "usage": {
-    "input_tokens": 3942,
+    "input_tokens": 3989,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 283,
+    "output_tokens": 286,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-05-12T18:28:05.436Z"
+  "generatedAt": "2026-06-01T14:38:10.669Z"
 }

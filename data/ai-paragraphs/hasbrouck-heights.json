@@ -1,21 +1,21 @@
 {
-  "hash": "8e73d740cb09d6b5",
-  "paragraph": "The single-family market in Hasbrouck Heights is moving steadily, with 28 sales over six months at a median of $715,500. About 61 percent of homes sold above asking, and the sale-to-list ratio sits at 1.01, which tells you priced homes are moving without wild multiple-offer dynamics. The median days on market of 21 says homes that are listed right aren't sitting long, but they're also not flying off the shelf in two weeks. Multi-family properties are sparse here, only 3 sales in the same period at a median of $759,000, so don't read much into that tier. The real market is single-family, and it's the kind of competitive but balanced environment where good homes sell, pricing matters, and you're not caught in a frenzy.",
+  "hash": "8bf6733155a795fe",
+  "paragraph": "The single-family market in Hasbrouck Heights is a real seller's market right now. Over the last seven months, 31 homes sold at a median of $725,000, with nearly 58 percent selling above asking and a sale-to-list ratio of 1.01. Median days on market sits at 21, which means priced homes are moving without sitting around. You're seeing multiple offer situations on well-presented properties, and sellers aren't under pressure to discount. The range is wide, from $360,000 to $980,000, so there's genuine diversity in what's available, but the speed and the ratio tell you that decent homes in this town are drawing real competition. Multi-family properties are too sparse in this market to read any meaningful pattern, with only three sales over seven months, so if you're looking at a two-to-four unit building, treat each one as a unique negotiation rather than a market condition. If you're looking at Hasbrouck Heights as a place to live, you're entering a market where you'll need to move decisively on the right property and price competitively if you want to sell down the line.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 3085,
+    "input_tokens": 3105,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 182,
+    "output_tokens": 254,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-05-12T18:28:54.775Z"
+  "generatedAt": "2026-06-01T14:39:01.487Z"
 }
