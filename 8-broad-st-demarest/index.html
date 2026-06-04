@@ -57,7 +57,7 @@
       --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
       --section-pad-desktop: 120px;
-      --section-pad-mobile: 72px;
+      --section-pad-mobile: 56px;
       --container-max: 1280px;
       --text-max: 680px;
     }
@@ -569,8 +569,11 @@
       padding: 48px 24px;
     }
     @media (max-width: 640px) {
-      .plan-tab { padding: 10px 14px; font-size: 11px; }
-      .plan-viewer { padding: 16px; }
+      .plan-tabs { width: 100%; }
+      .plan-tab { flex: 1; padding: 13px 8px; font-size: 11px; text-align: center; }
+      .plan-toggle { width: 100%; justify-content: center; }
+      .plan-toggle button { flex: 1; padding: 11px 8px; text-align: center; }
+      .plan-viewer { padding: 12px; min-height: 280px; }
     }
 
     /* ======= Map ======= */
@@ -810,31 +813,27 @@
     </div>
   </section>
 
-  <!-- ============ 3. STORY ============ -->
-  <section class="story reveal">
-    <div class="container-narrow">
-      <span class="eyebrow">The Home</span>
-      <h2>Pure Luxury on the East Hill</h2>
-      <p>Enter into pure luxury on a quiet dead-end street in the East Hill of Demarest. Minutes to New York City via the George Washington Bridge and moments from nearby parks, this new-construction modern colonial offers 4,140 square feet above grade plus 1,510 square feet of finished lower-level space on a 0.319-acre lot. With hundreds of thousands in post-construction upgrades, the home features a variance-approved extra-wide driveway leading to a 3-car garage, stone-accented exterior, and Andersen windows throughout. Walnut-stained oak floors anchor the main level, where a chef's kitchen showcases Statuario quartz, Sub-Zero, Wolf, and a Cove dishwasher alongside a walk-in pantry. Every plumbing fixture is House of Rohl — burnished gold in the kitchen, polished chrome in each bath. A gas fireplace, kitchen island, paver patio, and fully fenced yard make entertaining effortless, while a first-floor junior suite offers multigenerational flexibility. Upstairs, the primary suite features dual walk-in closets, cove lighting, motorized shades, and a spa bath, joined by two junior suites, a fifth bedroom, and a hall bath. The radiant-heated lower level adds a rec room, home gym, wet-bar rough-in, bonus room, and a full bath.</p>
-    </div>
-  </section>
-
-  <!-- ============ 4. PULL QUOTE ============ -->
-  <section class="pullquote">
-    <blockquote>
-      Premium appliances, designer fixtures, smart-home infrastructure, and the expanded driveway were selected and installed by the owner — not standard builder options.
-    </blockquote>
-  </section>
-
-  <!-- ============ 5. VIDEO (conditional, rendered by JS) ============ -->
-  <section class="video-section" id="videoSection" style="display:none;">
+  <!-- ============ 3. FLOOR PLANS (surfaced near top for fast scanning) ============ -->
+  <section class="plans">
     <div class="container">
-      <span class="eyebrow">Walk the Home</span>
-      <div class="video-wrap" id="videoWrap"></div>
+      <span class="eyebrow" style="text-align:center; display:block;">Floor Plans</span>
+      <h2>The Layout</h2>
+      <div class="plan-controls">
+        <div class="plan-tabs" role="tablist">
+          <button class="plan-tab active" data-floor="main">Main Floor</button>
+          <button class="plan-tab" data-floor="upper">Upper</button>
+          <button class="plan-tab" data-floor="lower">Lower Level</button>
+        </div>
+        <div class="plan-toggle" id="planToggle">
+          <button data-view="3d" class="active">3D · staged</button>
+          <button data-view="2d">2D · with dimensions</button>
+        </div>
+      </div>
+      <div class="plan-viewer" id="planViewer"></div>
     </div>
   </section>
 
-  <!-- ============ 6. GALLERY ============ -->
+  <!-- ============ 4. GALLERY ============ -->
   <section class="gallery" id="gallery">
     <div class="container">
       <span class="eyebrow" style="text-align:center; display:block;">Gallery</span>
@@ -987,6 +986,28 @@
     </div>
   </section>
 
+  <!-- ============ 6. STORY (long description) ============ -->
+  <section class="story reveal">
+    <div class="container-narrow">
+      <span class="eyebrow">The Home</span>
+      <h2>Pure Luxury on the East Hill</h2>
+      <p>Built in 2023 and barely lived in, this East Hill of Demarest home sits on a quiet dead-end street and is finished to a standard most rebuilds never reach. Minutes to NYC via the GWB, close to parks, and in a top-rated district feeding Northern Valley Regional High School at Demarest, it offers the upside of recent construction without the wait: current systems, a transferable warranty, and the heavy lifting already done.</p>
+      <p>The quality is specified, not value-engineered, and it shows the moment you walk in. Oak floors in a walnut stain run throughout, lit by Ethan Allen chandeliers in the foyer and dining room and a foyer fixture that lowers on a motorized winch. The gourmet kitchen is the centerpiece: Statuario quartz, a Wolf range and microwave, a Sub-Zero refrigerator, a Cove dishwasher, a wine refrigerator, and a walk-in pantry, with House of Rohl fixtures in burnished gold and an island that seats three. Andersen windows and a stone-veneer exterior carry the same finish outside.</p>
+      <p>The main level lives easy. A gas fireplace anchors the living space, a junior suite offers multigenerational or guest flexibility, and a powder room completes the floor. Out back, a paver patio opens to a wide, fully fenced yard with professional landscaping and weekly maintenance already in place, so the grounds stay handsome without your weekends.</p>
+      <p>Upstairs, the primary suite is a genuine retreat: two walk-in closets, custom LED cove lighting, motorized shades, a private water closet, and a spa bath with a sapphire-glass shower, a soaking tub, a dual quartz vanity, and porcelain tile, all on its own dedicated AC zone. Two more junior suites, a fifth bedroom, and a hall bath complete the level, along with a dedicated second-floor laundry room with a sink and high-end washer and dryer.</p>
+      <p>The finished lower level adds 1,510 square feet of radiant-heated, porcelain-tiled living space: a rec room, a home gym (equipment negotiable), a bonus room, a full bath, and direct garage access. A permitted wet-bar rough-in is already in place and positioned, ready to finish to your own taste.</p>
+      <p>This home was built to be easy to own. A full smart-home and security package is already installed: eight PTZ exterior cameras with monitoring, Ring floodlights and doorbell, three MyQ smart garage openers with cameras, a six-zone Wi-Fi sprinkler, central vacuum, and an alarm with optional police-department integration. The mechanicals are just as serious: three-zone AC, forced hot air with radiant heat below, a Generac-ready transfer switch, whole-house water filtration and softening, reverse-osmosis drinking water, a 50-amp EV charger with wiring for a second, and a Timberline 30-year roof with metal accents.</p>
+      <p>The home sits on a wide, fully fenced lot with a variance-approved expanded paver driveway to the 3-car garage, 2025 taxes of $41,441, and no HOA. Recent construction, hundreds of thousands already invested, 7 years left on a transferable builder warranty, and nothing left but to move in.</p>
+    </div>
+  </section>
+
+  <!-- ============ 7. PULL QUOTE ============ -->
+  <section class="pullquote">
+    <blockquote>
+      Premium appliances, designer fixtures, smart-home infrastructure, and the expanded driveway were selected and installed by the owner — not standard builder options.
+    </blockquote>
+  </section>
+
   <!-- ============ 8. ROOM DIMENSIONS ============ -->
   <section class="dimensions">
     <div class="container">
@@ -1003,23 +1024,11 @@
     </div>
   </section>
 
-  <!-- ============ 9. FLOOR PLANS ============ -->
-  <section class="plans">
+  <!-- ============ 9. VIDEO (conditional, rendered by JS) ============ -->
+  <section class="video-section" id="videoSection" style="display:none;">
     <div class="container">
-      <span class="eyebrow" style="text-align:center; display:block;">Floor Plans</span>
-      <h2>The Layout</h2>
-      <div class="plan-controls">
-        <div class="plan-tabs" role="tablist">
-          <button class="plan-tab active" data-floor="main">Main Floor</button>
-          <button class="plan-tab" data-floor="upper">Upper</button>
-          <button class="plan-tab" data-floor="lower">Lower Level</button>
-        </div>
-        <div class="plan-toggle" id="planToggle">
-          <button data-view="3d" class="active">3D · staged</button>
-          <button data-view="2d">2D · with dimensions</button>
-        </div>
-      </div>
-      <div class="plan-viewer" id="planViewer"></div>
+      <span class="eyebrow">Walk the Home</span>
+      <div class="video-wrap" id="videoWrap"></div>
     </div>
   </section>
 
@@ -1060,7 +1069,7 @@
           <textarea id="message" name="message" placeholder="Anything specific you'd like to know?"></textarea>
         </div>
         <button type="submit" class="submit-btn" id="submitBtn">Request Details</button>
-        <p class="sms-consent" style="font-size:12px;line-height:1.55;color:#6b6663;margin-top:14px;text-align:center;font-family:inherit;">By submitting, you agree to receive text messages from Mr. Sellers Homes (Tyler Sellers &middot; RE/MAX Signature Homes) related to your real estate inquiry. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out or HELP for help. See our <a href="/privacy" style="color:inherit;text-decoration:underline;">Privacy Policy</a>.</p>
+        <p class="sms-consent" style="font-size:12px;line-height:1.55;color:#6b6663;margin-top:14px;text-align:center;font-family:inherit;">By submitting, you agree to receive text messages related to your inquiry about this property. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out or HELP for help. See our <a href="/privacy" style="color:inherit;text-decoration:underline;">Privacy Policy</a>.</p>
       </form>
 
       <div class="form-success" id="formSuccess">
@@ -1070,33 +1079,17 @@
     </div>
   </section>
 
-  <!-- ============ 12. FOOTER ============ -->
-  <footer class="compliance-footer" style="background:#111;color:rgba(255,255,255,0.7);padding:40px 24px;font-family:'Inter',sans-serif;font-size:13px;line-height:1.7;border-top:1px solid rgba(255,255,255,0.08);">
-    <div style="max-width:920px;margin:0 auto;display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-start;">
-      <div style="flex:1 1 260px;min-width:240px;">
-        <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-weight:600;color:#fff;letter-spacing:0.01em;margin-bottom:8px;">RE/MAX Signature Homes</div>
-        <div style="color:rgba(255,255,255,0.65);margin-bottom:4px;">189 Homans Ave, Suite C</div>
-        <div style="color:rgba(255,255,255,0.65);margin-bottom:10px;">Closter, NJ 07624</div>
-        <div><a href="tel:+12016609933" style="color:#fff;text-decoration:none;font-weight:500;font-size:15px;">(201) 660-9933</a></div>
+  <!-- ============ 12. FOOTER (unbranded) ============ -->
+  <footer style="background:#111;color:rgba(255,255,255,0.55);padding:32px 24px;font-family:'DM Sans',sans-serif;font-size:12px;line-height:1.7;border-top:1px solid rgba(255,255,255,0.08);text-align:center;">
+    <div style="max-width:920px;margin:0 auto;">
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:10px;color:rgba(255,255,255,0.7);">
+        <svg width="20" height="20" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6" aria-label="Equal Housing Opportunity" style="flex-shrink:0;">
+          <path d="M 50 15 L 90 50 L 78 50 L 78 85 L 22 85 L 22 50 L 10 50 Z"/>
+          <text x="50" y="73" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="32" font-weight="700" fill="currentColor" stroke="none">=</text>
+        </svg>
+        <span style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;">Equal Housing Opportunity</span>
       </div>
-      <div style="flex:1 1 260px;min-width:240px;">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;color:rgba(255,255,255,0.85);">
-          <svg width="22" height="22" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6" aria-label="Equal Housing Opportunity" style="flex-shrink:0;">
-            <path d="M 50 15 L 90 50 L 78 50 L 78 85 L 22 85 L 22 50 L 10 50 Z"/>
-            <text x="50" y="73" text-anchor="middle" font-family="Inter,sans-serif" font-size="32" font-weight="700" fill="currentColor" stroke="none">=</text>
-          </svg>
-          <span style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;">Equal Housing Opportunity</span>
-        </div>
-        <div style="color:rgba(255,255,255,0.65);margin-bottom:4px;">Tyler Sellers, Sales Associate</div>
-        <div style="color:rgba(255,255,255,0.65);margin-bottom:12px;">NJ Real Estate License #1973328</div>
-        <div style="font-size:11px;color:rgba(255,255,255,0.45);margin-bottom:6px;">Listing MLS# 26012810</div>
-        <div style="font-size:11px;color:rgba(255,255,255,0.45);line-height:1.55;margin-bottom:14px;">mrsellers.homes is the website of Tyler Sellers, Sales Associate at RE/MAX Signature Homes. Each office is independently owned and operated.</div>
-        <div style="font-size:12px;color:rgba(255,255,255,0.55);">
-          <a href="/" style="color:inherit;text-decoration:none;margin-right:14px;">Home</a>
-          <a href="/about" style="color:inherit;text-decoration:none;margin-right:14px;">About</a>
-          <a href="/privacy" style="color:inherit;text-decoration:none;">Privacy</a>
-        </div>
-      </div>
+      <div style="font-size:11px;color:rgba(255,255,255,0.4);">Listing MLS# 26012810</div>
     </div>
   </footer>
 
@@ -1121,7 +1114,7 @@
 
       // Google Maps
       mapsApiKey: 'AIzaSyAuoWqBU_Cd6UsIbstNjZ_7GdRwaJdpmbY',
-      houseCoords: { lat: 40.952857, lng: -73.960866 }, // 8 Broad St Demarest (Tyler-verified)
+      houseCoords: { lat: 40.952857, lng: -73.960866 }, // 8 Broad St Demarest (verified)
 
       // Lead submission routes through forms-worker (writes to Airtable + mirrors to FUB).
       submit: {
