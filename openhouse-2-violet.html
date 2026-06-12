@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Open House Sign-In | Mr. Sellers Homes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8f8f8;
+      color: #111;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      width: 100%;
+      max-width: 420px;
+      padding: 32px 24px;
+    }
+    .logo-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .logo-bar img { height: 36px; width: auto; }
+    .header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 6px;
+    }
+    .header p {
+      font-size: 13px;
+      color: #888;
+      line-height: 1.5;
+    }
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #666;
+      margin-bottom: 6px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 14px 14px;
+      border: 1.5px solid #e0e0e0;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      color: #111;
+      background: #fafafa;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .form-group input:focus {
+      outline: none;
+      border-color: #FF1200;
+      background: #fff;
+    }
+    .form-group input::placeholder { color: #bbb; }
+    .optional-tag {
+      font-weight: 400;
+      text-transform: none;
+      letter-spacing: 0;
+      color: #aaa;
+      font-size: 10px;
+    }
+    .agency-group {
+      margin-bottom: 20px;
+      padding: 14px 16px;
+      background: #f5f5f5;
+      border-radius: 8px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      cursor: pointer;
+    }
+    .agency-group input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      accent-color: #FF1200;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .agency-group label {
+      font-size: 13px;
+      color: #444;
+      line-height: 1.5;
+      cursor: pointer;
+    }
+    .agency-group label strong {
+      color: #111;
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 16px;
+      background: #FF1200;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      letter-spacing: 0.02em;
+    }
+    .submit-btn:hover { background: #e00f00; }
+    .submit-btn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    .success-state {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .success-state .check {
+      width: 60px;
+      height: 60px;
+      background: #e8f5e9;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .success-state .check svg {
+      width: 30px;
+      height: 30px;
+      color: #2e7d32;
+    }
+    .success-state h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .success-state p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.5;
+    }
+    .powered {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 11px;
+      color: #bbb;
+    }
+    .error-msg {
+      display: none;
+      font-size: 11px;
+      color: #FF1200;
+      margin-top: 4px;
+    }
+    .error-msg.show { display: block; }
+    .form-group input.error { border-color: #FF1200; }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="logo-bar">
+      <img src="mrsellershomes-logo.svg" alt="Mr. Sellers Homes" />
+      <img src="remax-balloon.svg" alt="RE/MAX" />
+    </div>
+
+    <div class="header">
+      <h1>Welcome to the Open House</h1>
+      <p id="openHouseAddress" style="font-family:'Playfair Display',serif; font-size:15px; font-weight:500; color:#111; margin-bottom:4px;"></p>
+      <p id="signInSubtext">Please sign in below. It only takes 10 seconds.</p>
+    </div>
+
+    <form id="signInForm">
+      <div class="form-group">
+        <label for="oh-name">Full Name <span style="color:#FF1200;">*</span></label>
+        <input type="text" id="oh-name" placeholder="First and last name" required autocomplete="name" />
+        <div class="error-msg" id="oh-name-error">Please enter your name</div>
+      </div>
+
+      <div class="form-group">
+        <label for="oh-email">Email Address <span style="color:#FF1200;">*</span></label>
+        <input type="email" id="oh-email" placeholder="your@email.com" required autocomplete="email" inputmode="email" />
+        <div class="error-msg" id="oh-email-error">Please enter a valid email</div>
+      </div>
+
+      <div class="form-group">
+        <label for="oh-phone">Phone <span style="color:#FF1200;">*</span></label>
+        <input type="tel" id="oh-phone" placeholder="(201) 555-1234" autocomplete="tel" inputmode="tel" required />
+        <div class="error-msg" id="oh-phone-error">Please enter your phone number</div>
+      </div>
+
+      <div class="agency-group">
+        <input type="checkbox" id="oh-agency" />
+        <label for="oh-agency">I have an <strong>Exclusive Agency Agreement</strong> signed with another buyer&rsquo;s agent.</label>
+      </div>
+
+      <label class="sms-consent" style="display:flex;align-items:flex-start;gap:8px;margin:14px 0;padding:10px 12px;background:#faf8f5;border:1px solid #e8e3da;border-radius:4px;font-size:11px;line-height:1.45;color:#6b6663;cursor:pointer;font-family:inherit;">
+        <input type="checkbox" name="smsConsent" id="oh-sms-consent" value="yes" style="margin-top:2px;flex-shrink:0;width:14px;height:14px;cursor:pointer;accent-color:#9C7E54;" />
+        <span><strong style="color:#111;font-weight:600;font-size:12px;display:block;margin-bottom:2px;">Text me real estate info from Mr. Sellers Homes.</strong>Recurring messages from Mr. Sellers Homes (Tyler Sellers, RE/MAX Signature Homes): showing confirmations, property updates, follow-ups. Frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See <a href="/privacy" style="color:#9C7E54;text-decoration:underline;">Privacy Policy</a>.</span>
+      </label>
+      <button type="submit" class="submit-btn">Sign In &rarr;</button>
+    </form>
+
+    <div class="success-state" id="successState">
+      <div class="check">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h2>You&rsquo;re signed in!</h2>
+      <p>Thanks for stopping by. Enjoy the tour &mdash; Tyler will follow up with you soon.</p>
+      <p style="font-size:12px; color:#888; margin-top:14px;">Taking you to the virtual tour&hellip;</p>
+    </div>
+
+    <div class="powered" style="margin-top:24px;font-size:11px;line-height:1.55;color:#888;text-align:center;">
+      <div style="font-weight:600;color:#444;margin-bottom:2px;">RE/MAX Signature Homes</div>
+      <div>189 Homans Ave, Suite C &middot; Closter, NJ 07624</div>
+      <div><a href="tel:+12016609933" style="color:#444;text-decoration:none;font-weight:500;">(201) 660-9933</a></div>
+      <div style="margin-top:8px;color:#aaa;">Tyler Sellers, Sales Associate &middot; NJ License #1973328</div>
+      <div style="margin-top:6px;font-size:10px;color:#aaa;"><a href="/privacy" style="color:inherit;text-decoration:underline;">Privacy Policy</a> &middot; Equal Housing Opportunity</div>
+    </div>
+  </div>
+
+  <script>
+    // === Open House Config — UPDATE THESE FOR EACH EVENT ===
+    var OPEN_HOUSE = {
+      address:     '2 Violet Court · Bergenfield, NJ',      // shown in the page header
+      property:    '2 Violet Court, Bergenfield',           // canonical key — must match a PROPERTY_TO_AIRTABLE_TAG entry in forms-worker
+      redirectUrl: '/'                                      // no 2 Violet listing page yet — land on the homepage after sign-in
+    };
+    // =======================================================
+
+    // Inject address into header
+    document.getElementById('openHouseAddress').textContent = OPEN_HOUSE.address;
+
+    var WORKER_URL = 'https://forms-worker.tyler-681.workers.dev/open-house';
+
+    function sendToWorker(data) {
+      return fetch(WORKER_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          hasAgency: data.hasAgency,
+          property: OPEN_HOUSE.property
+        })
+      });
+    }
+
+    // Auto-format phone number as (XXX) XXX-XXXX
+    // Auto-strips a leading country code "1" so people who type +1 or 1
+    // before their 10-digit number don't lose the last digit.
+    document.getElementById('oh-phone').addEventListener('input', function(e) {
+      var digits = e.target.value.replace(/\D/g, '');
+      // NANP area codes never start with 1, so any "1" followed by 3+ more
+      // digits is either a country code or a typo — strip it.
+      if (digits.length >= 4 && digits.charAt(0) === '1') {
+        digits = digits.substring(1);
+      }
+      // Cap at 10 digits
+      digits = digits.substring(0, 10);
+
+      var formatted = '';
+      if (digits.length === 0) {
+        formatted = '';
+      } else if (digits.length <= 3) {
+        formatted = '(' + digits;
+      } else if (digits.length <= 6) {
+        formatted = '(' + digits.substring(0, 3) + ') ' + digits.substring(3);
+      } else {
+        formatted = '(' + digits.substring(0, 3) + ') ' + digits.substring(3, 6) + '-' + digits.substring(6);
+      }
+      e.target.value = formatted;
+    });
+
+    document.getElementById('signInForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      var nameEl = document.getElementById('oh-name');
+      var emailEl = document.getElementById('oh-email');
+      var phoneEl = document.getElementById('oh-phone');
+      var nameErr = document.getElementById('oh-name-error');
+      var emailErr = document.getElementById('oh-email-error');
+      var phoneErr = document.getElementById('oh-phone-error');
+      var valid = true;
+
+      nameEl.classList.remove('error'); nameErr.classList.remove('show');
+      emailEl.classList.remove('error'); emailErr.classList.remove('show');
+      phoneEl.classList.remove('error'); phoneErr.classList.remove('show');
+
+      if (!nameEl.value.trim()) {
+        nameEl.classList.add('error'); nameErr.classList.add('show'); valid = false;
+      }
+      if (!emailEl.value.trim() || !emailEl.value.includes('@')) {
+        emailEl.classList.add('error'); emailErr.classList.add('show'); valid = false;
+      }
+      if (!phoneEl.value.trim()) {
+        phoneEl.classList.add('error'); phoneErr.classList.add('show'); valid = false;
+      }
+      if (!valid) return;
+
+      var btn = document.querySelector('.submit-btn');
+      btn.textContent = 'Signing in...';
+      btn.disabled = true;
+
+      var data = {
+        name: nameEl.value,
+        email: emailEl.value,
+        phone: document.getElementById('oh-phone').value,
+        hasAgency: document.getElementById('oh-agency').checked,
+        smsConsent: document.getElementById('oh-sms-consent').checked
+      };
+
+      function showSuccessAndRedirect() {
+        document.getElementById('signInForm').style.display = 'none';
+        document.getElementById('signInSubtext').style.display = 'none';
+        document.getElementById('openHouseAddress').style.display = 'none';
+        document.getElementById('successState').style.display = 'block';
+        setTimeout(function() {
+          window.location.href = OPEN_HOUSE.redirectUrl;
+        }, 1200);
+      }
+
+      // Fire-and-forget the POST. Show success state immediately so the UX feels
+      // instant regardless of Worker round-trip time. The Worker keeps itself alive
+      // via ctx.waitUntil so the FUB mirror still completes after we return.
+      sendToWorker(data).catch(function(err) {
+        if (window.console && console.error) console.error('Worker POST failed:', err);
+      });
+      showSuccessAndRedirect();
+    });
+  </script>
+
+</body>
+</html>
