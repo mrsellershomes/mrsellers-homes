@@ -1,21 +1,21 @@
 {
-  "hash": "a2236e614c853bea",
-  "paragraph": "The single-family market in Bergenfield is competitive but not frenzied. Sixty-seven homes sold over seven months at a median of $675,000, with a sale-to-list ratio of 1.005 and a median of 29 days on market. About 55 percent of homes sold above asking, which signals that priced homes are moving, though sellers aren't dictating terms across the board. The range is substantial, from $395,000 on the low end to $1.75 million at the top, reflecting a town with real diversity in what's available. Multi-family properties are sparse by comparison, with only six sales at a median of $807,500 and a sale-to-list ratio of 0.98. These moved a bit more slowly at a median of 33.5 days, and only a third sold above asking, suggesting buyers have a bit more leverage in that category. If you're looking at Bergenfield, the deciding factor comes down to whether you want the space and grounds of a single-family home or the potential rental income and investment angle of a multi-family property.",
+  "hash": "95c60a5d0922c117",
+  "paragraph": "The single-family market in Bergenfield is a real seller's market. Seventy-nine homes sold over the last eight months at a median of $700,000, with over 60 percent selling above asking and a sale-to-list ratio of 1.01. Homes are moving in 25 days on the median, and many multiple offer situations are happening, especially in the $650,000 to $800,000 range where the bulk of inventory clusters. Sellers are dictating terms and don't need to price aggressively to move a home. Multi-family properties, a much smaller segment with eight sales at a median of $737,500, sit near list price with a ratio of 0.99 and a median of 22 days on market. The category is too thin to call a separate market, but it shows that when a two or three-family property does list, it attracts attention. A handful of condo or townhouse sales round out the market, but volume is negligible. If you're buying in Bergenfield right now, you're stepping into a competitive situation. Single-family homes priced right will draw multiple offers, and you'll need to be ready to move fast and possibly offer above asking if you find something you want.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "The single-family market in Bergenfield is a real seller's market. Seventy-nine homes sold over the last eight months at a median of $700,000, with over 60 percent selling above asking and a sale-to-list ratio of 1.01. Homes are moving in 25 days on the median, and many multiple offer situations are happening, especially in the $650,000 to $800,000 range where the bulk of inventory clusters. Sellers are dictating terms and don't need to price aggressively to move a home. Multi-family properties, a much smaller segment with just eight sales at a median of $737,500, sit at nearly list price with a ratio of 0.99 and a median of 22 days on market. The category is too thin to call a separate market, but it shows that when a two or three-family property does list, it attracts attention. A handful of condo or townhouse sales round out the market, but volume is negligible. If you're buying in Bergenfield right now, you're stepping into a competitive situation. Single-family homes priced right will draw multiple offers, and you'll need to be ready to move fast and possibly offer above asking if you find something you want.",
   "usage": {
-    "input_tokens": 3322,
+    "input_tokens": 3809,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 248,
+    "output_tokens": 277,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:37:09.439Z"
+  "generatedAt": "2026-07-05T18:15:08.023Z"
 }

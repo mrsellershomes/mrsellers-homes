@@ -1,21 +1,21 @@
 {
-  "hash": "207204dc37a179c8",
-  "paragraph": "Single-family homes in Saddle Brook are moving in a real seller's market. The median sale price sits at $650,000 on a median list price of $640,000, and 67.6% of homes are selling above asking. The median days on market of 17 means priced inventory isn't sitting around, and the sale-to-list ratio of 1.017 confirms sellers are holding their ground and getting paid for it. You're looking at 37 sales over seven months, which is solid volume for a town this size. Multi-family properties at a $760,000 median are fewer and slower, with only four sales and a 40.5-day median days on market, suggesting that particular segment is buyer-friendly by comparison. Condos and townhouses occupy the entry point at $437,000 median, moving briskly with a 67.6% sale-to-list ratio and an 18.5-day median days on market. That's ten sales in seven months across what's likely a limited inventory of units. If you're weighing single-family against the lower price point of a condo or townhouse, understand that Saddle Brook's single-family market is competitive and sellers know it. The condo tier gives you a real alternative if you want to stay in town at a substantially lower entry price without sacrificing market speed.",
+  "hash": "f94c4a587f4ca2c8",
+  "paragraph": "Single-family homes in Saddle Brook are moving in a real seller's market, with a median sale price of $637,000 and over 65 percent of homes selling above asking. The median days on market sits at 17, and the sale-to-list ratio of 1.016 tells you that priced homes are getting their list price or better. Forty-three sales over eight months signals steady volume for a single-family market, and the range from $444,000 to $1.22 million means there's decent variety across price points. Multi-family properties are sparse at four sales, with a median of $760,000 and a longer median days on market of 40.5, suggesting sellers here are willing to wait rather than price aggressively to move fast. Condos and townhouses form a smaller but active tier at ten sales, median $437,000, with 60 percent selling above list and a 18.5-day median days on market that mirrors the single-family pace. If you're deciding between tiers, the real question is whether you want the space and grounds of a single-family home in what's clearly a seller's market, the larger footprint and potential rental income of a multi-family property, or the lower entry point and simpler maintenance profile of a condo or townhouse.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 3345,
+    "input_tokens": 3374,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 299,
+    "output_tokens": 291,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:42:15.294Z"
+  "generatedAt": "2026-07-05T18:20:03.701Z"
 }

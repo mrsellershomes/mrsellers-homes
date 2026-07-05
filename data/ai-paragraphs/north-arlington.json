@@ -1,21 +1,21 @@
 {
-  "hash": "2841205d89812e3e",
-  "paragraph": "North Arlington's single-family market is straightforward and competitive right now. Thirty-one homes sold over the last seven months at a median of $630,000, with a sale-to-list ratio of 1.03 and roughly 68 percent of homes selling above asking. Median days on market sits at 20, which means priced homes are moving without excessive wait time. The spread runs from $460,000 to $1,155,000, so you'll find entry points at the lower end and some higher-end properties that command real money. Multi-family properties, a smaller segment with 10 sales, show median pricing of $842,500 and a 1.0 sale-to-list ratio, which indicates buyers are holding the line on price. The multi-family market isn't as heated as single-family, but homes are still moving in under 16 days on average. If you're looking in North Arlington, the market is competitive but not frenzied. Sellers who price realistically will move their homes, and buyers with flexibility on timing or property type will find options at multiple price points.",
+  "hash": "f6fbe8a10dcb7a2f",
+  "paragraph": "Single-family homes in North Arlington are moving in a real seller's market. The median sale price sits at $638,500 against a median list price of $599,000, meaning homes are selling at a sale-to-list ratio of 1.04 and 72.5 percent of sales are closing above asking. The median days on market of 16.5 days tells you buyers aren't sitting around waiting for the next opportunity. Forty sales over eight months shows steady volume for a town this size, and the range from $460,000 to $1,155,000 gives you flexibility depending on what kind of space and condition you're after. Multi-family properties follow a similar rhythm. Fourteen sales at a median of $812,500 land at a 1.02 sale-to-list ratio with half the sales above asking and a matching 16.5-day median on market. These homes sit between the single-family tier and the upper end of the price spectrum, giving you the option of income potential or multi-generational living. If you're shopping in North Arlington, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home or the income and flexibility of a multi-family property.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "Single-family homes in North Arlington are moving in a real seller's market. The median sale price sits at $638,500 against a median list price of $599,000, meaning homes are selling at a sale-to-list ratio of 1.04 and 72.5 percent of sales are closing above asking. The median days on market of just 16.5 days tells you buyers aren't sitting around waiting for the next opportunity. Forty sales over eight months shows steady volume for a town this size, and the range from $460,000 to $1,155,000 gives you flexibility depending on what kind of space and condition you're after. Multi-family properties follow a similar rhythm. Fourteen sales at a median of $812,500 land at a 1.02 sale-to-list ratio with half the sales above asking and a matching 16.5-day median on market. These homes sit between the single-family tier and the upper end of the price spectrum, giving you the option of income potential or multi-generational living. If you're shopping in North Arlington, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home or the income and flexibility of a multi-family property.",
   "usage": {
-    "input_tokens": 3125,
+    "input_tokens": 3612,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 245,
+    "output_tokens": 274,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:40:11.299Z"
+  "generatedAt": "2026-07-05T18:18:17.254Z"
 }

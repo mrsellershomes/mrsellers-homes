@@ -1,21 +1,21 @@
 {
-  "hash": "5368743db0fbbec1",
-  "paragraph": "New Milford's single-family market is moving at a real seller's pace right now. Fifty-three homes sold over seven months at a median of $680,000, with over 56 percent selling above asking and a sale-to-list ratio of 1.01. The median days on market of 14 tells you priced homes aren't lingering. You're looking at a competitive but not frenzied market where sellers can afford to wait for the right offer rather than chase volume with aggressive pricing. The range is wide, from $501,000 to $1,900,000, which reflects New Milford's mix of smaller starter homes and larger estates on the same market. If you're buying here, the homes that arrive on the market in good condition will draw interest quickly. Pricing below asking to manufacture urgency isn't the local play. Come in at market value or slightly above it for the home you want, understand you might be one of several offers, and be ready to move when the right property hits.",
+  "hash": "bceae6d13a514252",
+  "paragraph": "New Milford's single-family market is moving at a real seller's pace. Sixty homes sold over eight months at a median of $673,500, with 56.7 percent selling above asking and a median days on market of 14.5 days. The sale-to-list ratio sits at 1.01, meaning homes are hitting their list price or slightly above it. Priced homes are moving, and sellers aren't under pressure to discount. The range tells you the market is broad: you'll find homes under $550,000 and others well over $1.6 million, though the bulk of activity clusters in the $600,000 to $750,000 band. This is a competitive market, not a frenzy, but it favors sellers who price accurately from the start. Buyers looking at New Milford need to come prepared to move quickly on the right property. Homes that hit the market at a fair number relative to comparable sales don't sit long.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "New Milford's single-family market is moving at a real seller's pace right now. Fifty-three homes sold over seven months at a median of $680,000, with just over 56 percent selling above asking and a sale-to-list ratio of 1.01. The median days on market of 14 tells you priced homes aren't lingering. You're looking at a competitive but not frenzied market where sellers can afford to wait for the right offer rather than chase volume with aggressive pricing. The range is wide, from $501,000 to $1,900,000, which reflects New Milford's mix of smaller starter homes and larger estates on the same market. If you're buying here, the homes that arrive on the market in good condition will draw interest quickly. Pricing below asking to manufacture urgency isn't the local play. Come in at market value or slightly above it for the home you want, understand you might be one of several offers, and be ready to move when the right property hits.",
+  "firstDraft": "New Milford's single-family market is moving at a real seller's pace. Sixty homes sold over eight months at a median of $673,500, with 56.7 percent selling above asking and a median days on market of just 14.5 days. The sale-to-list ratio sits at 1.01, meaning homes are hitting their list price or slightly above it. Priced homes are moving, and sellers aren't under pressure to discount. The range tells you the market is broad: you'll find homes under $550,000 and others well over $1.6 million, though the bulk of activity clusters in the $600,000 to $750,000 band. This is a competitive market, not a frenzy, but it favors sellers who price accurately from the start. Buyers looking at New Milford need to come prepared to move quickly on the right property. Homes that hit the market at a fair number relative to comparable sales don't sit long.",
   "usage": {
-    "input_tokens": 3417,
+    "input_tokens": 3452,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 222,
+    "output_tokens": 217,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:40:07.809Z"
+  "generatedAt": "2026-07-05T18:18:10.403Z"
 }

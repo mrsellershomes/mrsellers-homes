@@ -1,21 +1,21 @@
 {
-  "hash": "60e8a2aeb303986a",
-  "paragraph": "Englewood Cliffs is a single-family market, and the data tells you what's really happening here. With a median sale price of $1,500,000 against a median list price of $1,688,888, homes are selling at a 5 percent discount to asking. Only about 9 percent of homes sell above list, and the median time on market is 34 days. This isn't a seller's market. Sellers are pricing optimistically and waiting longer than they should for the right offer, while buyers have some room to negotiate. The range is wide, from $999,000 up to $5,400,000, which reflects the genuine diversity of the neighborhood rather than a distressed market at either end. If you're selling, you'll want to price competitively to your actual comparable sales, not your aspirational list price. If you're buying, you're in a position to make a reasonable offer and see how it lands. The market is moving, but it's moving on buyer terms.",
+  "hash": "b44cda716cc2e678",
+  "paragraph": "Englewood Cliffs is a single-family market. Twenty-eight homes sold over the last eight months at a median of $1,787,500, with a sale-to-list ratio of 0.96 and a median time on market of 37 days. About 18 percent of homes sold above asking, which tells you that buyers are finding room to negotiate and sellers aren't in a position to push back hard on price. The range here is wide, from under a million to $5.4 million, which reflects the town's geography and lot sizes more than any market segmentation. Homes priced appropriately for their condition and location are moving. Homes sitting longer than that median tend to be either priced above what the market will bear or waiting for a specific buyer profile. This is a buyer-friendly environment relative to what you'd see in neighboring high-demand towns. If you're shopping in Englewood Cliffs, the lever is yours. Price your home competitively if you need to move on a timeline, or hold and wait if you can afford to find the right buyer.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "Englewood Cliffs is a single-family market, and the data tells you what's really happening here. With a median sale price of $1,500,000 against a median list price of $1,688,888, homes are selling at a 5 percent discount to asking. Only about 9 percent of homes sell above list, and the median time on market is 34 days. This isn't a seller's market. Sellers are pricing optimistically and waiting longer than they should for the right offer, while buyers have some room to negotiate. The range is wide—from $999,000 up to $5,400,000—which reflects the genuine diversity of the neighborhood rather than a distressed market at either end. If you're selling, you'll want to price competitively to your actual comparable sales, not your aspirational list price. If you're buying, you're in a position to make a reasonable offer and see how it lands. The market is moving, but it's moving on buyer terms.",
+  "firstDraft": "Englewood Cliffs is a single-family market. Twenty-eight homes sold over the last eight months at a median of $1,787,500, with a sale-to-list ratio of 0.96 and a median time on market of 37 days. About 18 percent of homes sold above asking, which tells you that buyers are finding some room to negotiate and sellers aren't in a position to push back hard on price. The range here is wide, from just under a million to $5.4 million, which reflects the town's geography and lot sizes more than any market segmentation. Homes priced appropriately for their condition and location are moving. Homes sitting longer than that median tend to be either priced above what the market will bear or waiting for a specific buyer profile. This is a buyer-friendly environment relative to what you'd see in neighboring high-demand towns. If you're shopping in Englewood Cliffs, the lever is yours. Price your home competitively if you need to move on a timeline, or hold and wait if you can afford to find the right buyer.",
   "usage": {
-    "input_tokens": 3224,
+    "input_tokens": 3334,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 221,
+    "output_tokens": 239,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:38:16.514Z"
+  "generatedAt": "2026-07-05T18:16:13.436Z"
 }

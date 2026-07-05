@@ -1,21 +1,21 @@
 {
-  "hash": "674cb671c6c038d3",
-  "paragraph": "The Ramsey single-family market is running hot right now. Fifty-three homes sold over seven months at a median of $940,000, with over half of those sales closing above asking price and a median days on market of 17 days. The sale-to-list ratio sitting at 1.02 confirms that sellers are dictating terms here, particularly on homes priced competitively in the $800,000 to $1.2 million range where you'll see multiple offer situations. By contrast, the condo and townhouse market is even stronger, with 31 sales at a median of $590,000 and nearly 78 percent of homes selling above list price. These properties are moving faster, spending a median of 12 days on market before going under contract. The sale-to-list ratio of 1.06 and the speed at which inventory turns over suggest condo buyers are facing real competition. If you're weighing a single-family home against a condo in Ramsey, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or the lower maintenance lifestyle and entry point of a condo.",
+  "hash": "69ed9df40b393109",
+  "paragraph": "The single-family market in Ramsey is a real seller's market right now. Sixty-three homes sold over eight months at a median of $940,000, with 55 percent of them closing above asking and a median days on market of 16. The sale-to-list ratio sits at 1.03, meaning sellers are getting their price and then some. Multiple offer situations are common here, especially in the $900,000 to $1.2 million range where the inventory moves fastest. Condos and townhouses are moving even faster. Thirty-five sales at a median of $605,000, 71 percent above asking, and a median days on market of 12 days tells you that buyers are competing for these units too. The sale-to-list ratio of 1.06 is the strongest metric across both tiers. If you're comparing between single-family and condo here, market heat isn't the deciding factor. It's whether you want the space and grounds of a single-family, or the lower price point and low-maintenance lifestyle of a condo. Both are moving briskly in this market.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "The Ramsey single-family market is running hot right now. Fifty-three homes sold over seven months at a median of $940,000, with over half of those sales closing above asking price and a median days on market of just 17 days. The sale-to-list ratio sitting at 1.02 confirms that sellers are dictating terms here, particularly on homes priced competitively in the $800,000 to $1.2 million range where you'll see multiple offer situations. By contrast, the condo and townhouse market is even stronger, with 31 sales at a median of $590,000 and nearly 78 percent of homes selling above list price. These properties are moving faster, spending a median of just 12 days on market before going under contract. The sale-to-list ratio of 1.06 and the speed at which inventory turns over suggest condo buyers are facing real competition. If you're weighing a single-family home against a condo in Ramsey, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or the lower maintenance lifestyle and entry point of a condo.",
+  "firstDraft": "The single-family market in Ramsey is a real seller's market right now. Sixty-three homes sold over eight months at a median of $940,000, with 55 percent of them closing above asking and a median days on market of just 16. The sale-to-list ratio sits at 1.03, meaning sellers are getting their price and then some. Multiple offer situations are common here, especially in the $900,000 to $1.2 million range where the inventory moves fastest. Condos and townhouses are moving even faster. Thirty-five sales at a median of $605,000, 71 percent above asking, and a median days on market of 12 days tells you that buyers are competing for these units too. The sale-to-list ratio of 1.06 is the strongest metric across both tiers. If you're comparing between single-family and condo here, market heat isn't the deciding factor. It's whether you want the space and grounds of a single-family, or the lower price point and low-maintenance lifestyle of a condo. Both are moving briskly in this market.",
   "usage": {
-    "input_tokens": 3791,
+    "input_tokens": 3854,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 257,
+    "output_tokens": 249,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:41:09.712Z"
+  "generatedAt": "2026-07-05T18:19:07.346Z"
 }

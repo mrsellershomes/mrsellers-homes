@@ -1,21 +1,21 @@
 {
-  "hash": "613e03e2b82d1eca",
-  "paragraph": "Single-family homes are the clear anchor of the Park Ridge market, with 32 sales over seven months at a median price of $912,500. Sellers are dictating terms here. The sale-to-list ratio sits at 1.09, 84 percent of homes sell above asking, and the median time on market is only 18 days. That's a real seller's market. The range runs wide, from $605,000 to $1.7 million, which tells you the town has genuinely mixed inventory rather than a narrow band. Multi-family properties, a small category with 3 sales, sit at a $934,000 median and are moving with similar speed and seller advantage. Condos and townhouses are a secondary tier with 10 sales at a $482,500 median, though the wide price spread from $279,000 to $1.61 million suggests you're looking at a heterogeneous category that may include everything from modest attached units to premium properties. The sale-to-list ratio here is nearly flat at 1.01, and 80 percent of units sold above list, so the competitive pressure is lighter than the single-family market but still real. If you're weighing Park Ridge, the single-family market is tight and fast-moving. You'll need to move decisively and be prepared for competition. Condos and townhouses offer more time to decide and fewer bidding wars, but inventory there is sparse too.",
+  "hash": "ac307adc36b03302",
+  "paragraph": "Single-family homes dominate Park Ridge's market with 40 sales over eight months at a median of $923,875. Sellers are dictating terms here: 87.5 percent of homes sold above asking, the sale-to-list ratio sits at 1.09, and the median time on market is 16 days. This is a real seller's market, and homes priced competitively are moving fast. Multi-family properties are extremely sparse with only four sales at a $923,000 median, making this tier essentially a niche play when it does surface. Condos and townhouses sit at a lower price point with a $485,000 median across 12 sales, though the category shows wide range from $279,000 to $1,610,000 depending on unit type and condition. Three-quarters of these sold above asking, though the sale-to-list ratio of 1.01 and 18-day median suggest less urgency than the single-family market. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home in a seller's market, or the lower price point and potentially lower maintenance of a condo or townhouse.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "Single-family homes are the clear anchor of the Park Ridge market, with 32 sales over seven months at a median price of $912,500. Sellers are dictating terms here. The sale-to-list ratio sits at 1.09, 84 percent of homes sell above asking, and the median time on market is only 18 days. That's a real seller's market. The range runs wide, from $605,000 to $1.7 million, which tells you the town has genuinely mixed inventory rather than a narrow band. Multi-family properties, a small category with just 3 sales, sit at a $934,000 median and are moving with similar speed and seller advantage. Condos and townhouses are a secondary tier with 10 sales at a $482,500 median, though the wide price spread (from $279,000 to $1.61 million) suggests you're looking at a heterogeneous category that may include everything from modest attached units to premium properties. The sale-to-list ratio here is nearly flat at 1.01, and 80 percent of units sold above list, so the competitive pressure is lighter than the single-family market but still real. If you're weighing Park Ridge, the single-family market is tight and fast-moving. You'll need to move decisively and be prepared for competition. Condos and townhouses offer more time to decide and fewer bidding wars, but inventory there is sparse too.",
+  "firstDraft": "Single-family homes dominate Park Ridge's market with 40 sales over eight months at a median of $923,875. Sellers are dictating terms here: 87.5 percent of homes sold above asking, the sale-to-list ratio sits at 1.09, and the median time on market is just 16 days. This is a real seller's market, and homes priced competitively are moving fast. Multi-family properties are extremely sparse with only four sales at a $923,000 median, making this tier essentially a niche play when it does surface. Condos and townhouses sit at a lower price point with a $485,000 median across 12 sales, though the category shows wide range from $279,000 to $1,610,000 depending on unit type and condition. Three-quarters of these sold above asking, though the sale-to-list ratio of 1.01 and 18-day median suggest less urgency than the single-family market. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home in a seller's market, or the lower price point and potentially lower maintenance of a condo or townhouse.",
   "usage": {
-    "input_tokens": 3771,
+    "input_tokens": 3784,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 321,
+    "output_tokens": 274,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:41:03.182Z"
+  "generatedAt": "2026-07-05T18:19:00.592Z"
 }

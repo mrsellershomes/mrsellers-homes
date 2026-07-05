@@ -1,21 +1,21 @@
 {
-  "hash": "242b9f1203fd1b8a",
-  "paragraph": "The single-family market in Maywood is moving briskly. With a median sale price of $715,000 and a sale-to-list ratio of 1.048, homes that are priced right are selling above asking, and the median days on market sits at 13 days. Over the last seven months, 22 single-family homes sold, with 91 percent of them going for more than their list price. That's competitive but not frenzied. Sellers aren't dictating terms the way they do in truly hot markets, but they're also not desperate to move fast. If your home is in good condition and realistically priced, you'll draw attention. The range of sales speaks to a fairly diverse inventory. Homes are selling anywhere from $505,000 to $885,000, so there's room for different buyer profiles and different neighborhoods within town. Inventory is small, which means less choice for buyers, but it also means less time on market for sellers who know what they have.",
+  "hash": "23cc35c4e875718c",
+  "paragraph": "Maywood's single-family market is moving with real momentum. Twenty-seven homes sold over eight months at a median of $725,000, and nearly 95% of them closed above asking. The sale-to-list ratio is sitting at 1.048, which means sellers are getting their price and then some. Median days on market of 13 tells you that priced-right homes aren't lingering, and when something is positioned competitively, it can be gone in a week or less. This is a genuine seller's market where multiple offer situations are common and negotiating power tilts heavily toward the listing side. The price range is broad, from $505,000 to $1,250,000, so there's room to move depending on what you're looking for, but don't expect to find many deals or test the waters with a lowball offer. If you're a buyer in Maywood right now, you'll need to be ready to move quickly on something you like and price accordingly from day one.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "The single-family market in Maywood is moving briskly. With a median sale price of $715,000 and a sale-to-list ratio of 1.048, homes that are priced right are selling above asking, and the median days on market sits at just 13 days. Over the last seven months, 22 single-family homes sold, with 91 percent of them going for more than their list price. That's competitive but not frenzied. Sellers aren't dictating terms the way they do in truly hot markets, but they're also not desperate to move fast. If your home is in good condition and realistically priced, you'll draw attention. The range of sales speaks to a fairly diverse inventory. Homes are selling anywhere from $505,000 to $885,000, so there's room for different buyer profiles and different neighborhoods within town. Inventory is small, which means less choice for buyers, but it also means less time on market for sellers who know what they have.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3249,
+    "input_tokens": 2911,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 220,
+    "output_tokens": 221,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:39:49.336Z"
+  "generatedAt": "2026-07-05T18:17:46.660Z"
 }

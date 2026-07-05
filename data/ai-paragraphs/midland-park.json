@@ -1,21 +1,21 @@
 {
-  "hash": "bf3f58431a87acba",
-  "paragraph": "The single-family market in Midland Park is moving briskly. Over the last seven months, 26 homes sold at a median of $660,000, and the data shows a real seller's market. Homes are selling above asking over 73 percent of the time, the sale-to-list ratio sits at 1.04, and the median time on market is 16 days. Sellers are dictating terms here. If you're looking at a well-priced home, you're likely to face competition. The range is fairly broad, from $460,000 at the low end to $1,089,000 at the top, which means the market is capturing everything from entry-level buyers to those hunting for premium single-family properties. The fastest sales close in about a week, though that's the outlier. The more typical story is that a home listed at the right price moves within two or three weeks. If you're selling, you have leverage. If you're buying, you'll need to move decisively when you find the right property.",
+  "hash": "d97e7401a6eb0568",
+  "paragraph": "Midland Park right now is a real seller's market for single-family homes. You've got a median sale price of $670,000 on a list price around $649,000, which means three-quarters of homes are selling above asking, and the sale-to-list ratio sits at 1.05. Homes are moving fast too, with a median of 14 days on market. This is the kind of environment where sellers are dictating terms, multiple offer situations are common, and if you're buying, you need to be ready to move decisively. The supply is lean, which keeps pressure on buyers. If you're selling, you can price thoughtfully and let the market work in your favor. If you're buying, you'll need to be realistic about what you can afford to offer above list and prepared to make a strong move quickly on the right property.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "The single-family market in Midland Park is moving briskly. Over the last seven months, 26 homes sold at a median of $660,000, and the data shows a real seller's market. Homes are selling above asking over 73 percent of the time, the sale-to-list ratio sits at 1.04, and the median time on market is just 16 days. Sellers are dictating terms here. If you're looking at a well-priced home, you're likely to face competition. The range is fairly broad, from $460,000 at the low end to $1,089,000 at the top, which means the market is capturing everything from entry-level buyers to those hunting for premium single-family properties. The fastest sales close in about a week, though that's the outlier. The more typical story is that a home listed at the right price moves within two or three weeks. If you're selling, you have leverage. If you're buying, you'll need to move decisively when you find the right property.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3284,
+    "input_tokens": 2946,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 231,
+    "output_tokens": 187,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:39:54.215Z"
+  "generatedAt": "2026-07-05T18:17:50.212Z"
 }

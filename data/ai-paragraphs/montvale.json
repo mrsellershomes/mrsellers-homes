@@ -1,21 +1,21 @@
 {
-  "hash": "cb155a0f72438bbf",
-  "paragraph": "Single-family homes in Montvale are moving fast and selling above asking, with a median price of $1,275,000 and a median days on market of 12 days. Sellers are dictating terms in many situations, with 76 percent of homes going above list price and a sale-to-list ratio of 1.05. The range is wide, from $350,000 to nearly $2.7 million, which speaks to the town's mix of older, smaller properties and newer construction or larger homes on expanded lots. Condos and townhouses are a smaller segment at 11 sales over the period with a median of $840,000. These are moving with comparable speed, showing a median days on market of 14 days and 82 percent selling above asking. The sale-to-list ratio here is also strong at 1.04, signaling that priced homes are moving decisively. If you're comparing the two tiers, the deciding factor isn't market heat. Both are competitive. It's whether you want the space and grounds of a single-family home or the lower price point and low-maintenance lifestyle of a condo.",
+  "hash": "0f86ac83415f228d",
+  "paragraph": "The single-family market in Montvale is a real seller's market. With a median sale price of $1,300,000 against a median list price of $1,212,500, homes are selling at a 3.4 percent premium to asking, and 75 percent of sales are closing above list price. The median days on market sits at 12 days, which tells you that priced homes are moving fast and sellers are dictating terms. The sale-to-list ratio of 1.034 confirms that homes are getting their price without sitting. By contrast, the condo and townhouse tier is moving at a similar pace with a median of $840,000, a 3.4 percent sale-to-list ratio, and 80 percent of sales over asking, though with a median days on market of 14 days. This category is substantially smaller, with 15 sales against 28 single-family transactions, so the competitive dynamics are tighter. Both tiers show that Montvale buyers are ready to act and multiple offer situations are common. If you're comparing these two property types, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home or the low-maintenance lifestyle of a condo or townhouse.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "Single-family homes in Montvale are moving fast and selling above asking, with a median price of $1,275,000 and a median days on market of just 12 days. Sellers are dictating terms in many situations, with 76 percent of homes going above list price and a sale-to-list ratio of 1.05. The range is wide, from $350,000 to nearly $2.7 million, which speaks to the town's mix of older, smaller properties and newer construction or larger homes on expanded lots. Condos and townhouses are a smaller segment at 11 sales over the period with a median of $840,000. These are moving just as quickly, with a median days on market of 14 days and 82 percent selling above asking. The sale-to-list ratio here is also strong at 1.04, signaling that priced homes are moving decisively. If you're comparing the two tiers, the deciding factor isn't market heat. Both are competitive. It's whether you want the space and grounds of a single-family home or the lower price point and low-maintenance lifestyle of a condo.",
+  "firstDraft": "The single-family market in Montvale is a real seller's market. With a median sale price of $1,300,000 against a median list price of $1,212,500, homes are selling at a 3.4 percent premium to asking, and 75 percent of sales are closing above list price. The median days on market sits at just 12 days, which tells you that priced homes are moving fast and sellers are dictating terms. The sale-to-list ratio of 1.034 confirms that homes are getting their price without sitting. By contrast, the condo and townhouse tier is moving at a similar pace with a median of $840,000, a 3.4 percent sale-to-list ratio, and 80 percent of sales over asking, though with a median days on market of 14 days. This category is substantially smaller, with 15 sales against 28 single-family transactions, so the competitive dynamics are tighter. Both tiers show that Montvale buyers are ready to act and multiple offer situations are common. If you're comparing these two property types, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home or the low-maintenance lifestyle of a condo or townhouse.",
   "usage": {
-    "input_tokens": 3524,
+    "input_tokens": 3591,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 254,
+    "output_tokens": 283,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:39:59.637Z"
+  "generatedAt": "2026-07-05T18:17:59.172Z"
 }

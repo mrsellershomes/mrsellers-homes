@@ -1,21 +1,21 @@
 {
-  "hash": "63398c724c38b340",
-  "paragraph": "The condo and townhouse market in Cliffside Park is the real volume, with 82 sales over seven months at a median of $562,750. This is a competitive but balanced market where priced homes are moving, though about a quarter of sales close above asking. Single-family homes are sparse, with only 18 sales at a median of $850,000. The sale-to-list ratio sits below 1.0 and median days on market is around 22, which means sellers are okay with waiting for the right buyer rather than pricing competitively to sell fast. Multi-family properties, though a small sample at 9 sales, median at $825,000 and show slightly stronger buyer demand with a full 1.0 sale-to-list ratio and 44 percent closing above asking. Co-ops represent the entry point at a median of $275,000 across 7 sales, but the median days on market of 58 signals that co-op buyers are taking their time, and not all of them are aware going in that board approval and financing restrictions come with the territory. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the low-maintenance lifestyle of a condo, or the lower price point of a co-op.",
+  "hash": "d35b5fd977c26807",
+  "paragraph": "The condo and townhouse market is where Cliffside Park's volume lives, with 101 sales over eight months at a median of $620,000. Homes are selling at about 99 percent of asking price with a median of 30 days on market, a balanced rhythm where priced homes are moving without urgency. Single-family homes, by contrast, are sparse at 20 sales with a median of $850,000. They sit right at asking with a 24-day median and one in four selling above list, which means sellers are okay with waiting for the right buyer rather than pricing competitively to move fast. Multi-family properties occupy a narrow middle ground at ten sales and $812,500 median, tracking almost identically to single-family in terms of seller patience and buyer interest. Co-ops are the entry point at eight sales and a $277,500 median, though they take longer to sell with a 49-day median, which reflects the financing and board approval friction that comes with share ownership. The real decision here isn't which market tier is hotter. It's whether you want the space and grounds of a single-family, the low-maintenance lifestyle and walkability of a condo, or the lower price point of a co-op.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "The condo and townhouse market in Cliffside Park is the real volume, with 82 sales over seven months at a median of $562,750. This is a competitive but balanced market where priced homes are moving, though about a quarter of sales close above asking. Single-family homes are sparse, with only 18 sales at a median of $850,000. The sale-to-list ratio sits just under 1.0 and median days on market is around 22, which means sellers are okay with waiting for the right buyer rather than pricing competitively to sell fast. Multi-family properties, though a small sample at 9 sales, median at $825,000 and show slightly stronger buyer demand with a full 1.0 sale-to-list ratio and 44 percent closing above asking. Co-ops represent the entry point at a median of $275,000 across just 7 sales, but the median days on market of 58 signals that co-op buyers are taking their time, and not all of them are aware going in that board approval and financing restrictions come with the territory. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the low-maintenance lifestyle of a condo, or the lower price point of a co-op.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 4324,
+    "input_tokens": 3969,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 294,
+    "output_tokens": 276,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:37:25.806Z"
+  "generatedAt": "2026-07-05T18:15:22.125Z"
 }

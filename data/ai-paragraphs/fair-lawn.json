@@ -1,21 +1,21 @@
 {
-  "hash": "22bf46e8f9c028fe",
-  "paragraph": "Fair Lawn's single-family market is genuinely competitive, with 126 sales over seven months at a median of $700,000. About 65 percent of homes sold above asking, and the median days on market sits at 18, which tells you that priced homes are moving and sellers are dictating terms in many cases. The sale-to-list ratio of 1.035 confirms this. It's a real seller's market for single-family properties. The condo and townhouse category is sparse by comparison, with 14 sales at a median of $394,000. These units are moving at the same pace, 18 days on market, and 71 percent sold above asking, which means the competitive pressure applies here too. If you're hunting in Fair Lawn, you're entering a market where inventory is limited and buyer competition is genuine. Priced competitively, homes will draw multiple offers. If you're not prepared to move fast and think critically about what you're willing to pay, you'll watch properties disappear.",
+  "hash": "6f35e6cc0c0a1821",
+  "paragraph": "The single-family market in Fair Lawn is decisively seller-favored right now. With 152 sales over the last eight months at a median of $717,500, homes are selling at nearly 3.7 percent above list price on average, and 65 percent of sales close above asking. The median days on market sits at 18, which means priced homes are moving quickly. This is a real seller's market, and if you're listing, you have room to price strategically without fear of languishing. The condo and townhouse tier is much thinner with only 16 sales at a median of $394,000, but the data here tells the same story: three-quarters of units sell above list, and the median days on market runs under 17 days. Supply across both tiers is tight, which means serious buyers need to move decisively when the right property shows up. Sellers understand the market is in their favor, so underpriced inventory moves fast and overpriced homes sit. You'll want your offer prepared and your financing locked before you make an offer.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "Fair Lawn's single-family market is genuinely competitive, with 126 sales over seven months at a median of $700,000. About 65 percent of homes sold above asking, and the median days on market sits at 18, which tells you that priced homes are moving and sellers are dictating terms in many cases. The sale-to-list ratio of 1.035 confirms this. It's a real seller's market for single-family properties. The condo and townhouse category is sparse by comparison, with just 14 sales at a median of $394,000. These units are moving just as quickly, at 18 days on market, and 71 percent sold above asking, which means the competitive pressure applies here too. If you're hunting in Fair Lawn, you're entering a market where inventory is limited and buyer competition is genuine. Priced competitively, homes will draw multiple offers. If you're not prepared to move fast and think critically about what you're willing to pay, you'll watch properties disappear.",
+  "firstDraft": "The single-family market in Fair Lawn is decisively seller-favored right now. With 152 sales over the last eight months at a median of $717,500, homes are selling at nearly 3.7 percent above list price on average, and 65 percent of sales close above asking. The median days on market sits at 18, which means priced homes are moving quickly. This is a real seller's market, and if you're listing, you have room to price strategically without fear of languishing. The condo and townhouse tier is much thinner with only 16 sales at a median of $394,000, but the data here tells the same story: three-quarters of units sell above list, and the median days on market runs just under 17 days. Supply across both tiers is tight, which means serious buyers need to move decisively when the right property shows up. If you're considering Fair Lawn, expect competition on anything priced competitively. Sellers understand the market is in their favor, so underpriced inventory moves fast and overpriced homes sit. You'll want your offer prepared and your financing locked before you make an offer.",
   "usage": {
-    "input_tokens": 4027,
+    "input_tokens": 4196,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 226,
+    "output_tokens": 236,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:38:21.587Z"
+  "generatedAt": "2026-07-05T18:16:19.586Z"
 }
