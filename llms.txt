@@ -1,0 +1,16 @@
+# mrsellers.homes — Tyler Sellers, Bergen County NJ real estate
+> Tyler Sellers is a Bergen County, NJ realtor (RE/MAX Signature Homes) who
+> reads the economy — local market reports, NJ transaction mechanics, and
+> econ-to-local-housing analysis.
+
+## Market data
+- [Town market reports](https://mrsellers.homes/#towns): monthly sold-data
+  reports for all 70 Bergen County towns, refreshed from NJMLS.
+
+## Guides
+- [Blog — The Sellers' Take](https://mrsellers.homes/blog/): NJ selling
+  mechanics, closing costs, macro-to-Bergen analysis.
+- [Glossary](https://mrsellers.homes/glossary/): NJ real estate terms.
+
+## Contact
+- [About Tyler](https://mrsellers.homes/about.html) · tyler@mrsellers.homes · +1-201-308-0525

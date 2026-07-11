@@ -22,6 +22,7 @@ import { readAllCsvs, dedupeByMls, monthYearLabel, buildPeriodLabel } from './li
 import { aggregateTownData } from './lib/town-data.js';
 import { generateAiParagraph } from './lib/ai-explainer.js';
 import { buildSitemap } from './lib/sitemap.js';
+import { loadPosts } from './lib/blog-posts.js';
 
 // Calibration set: three towns that exercise distinct property-type profiles
 // so Tyler can judge whether the voice holds across the variety of Bergen
@@ -208,7 +209,9 @@ async function main() {
   // targeted --only run does not drop URLs from the sitemap.
   const isFullRun = !flags.only && !flags.calibrate;
   if (isFullRun && !flags.dryRun) {
-    const xml = buildSitemap(towns);
+    let posts = [];
+    try { posts = loadPosts(resolve('content/blog')); } catch { /* no blog content yet */ }
+    const xml = buildSitemap(towns, posts);
     writeFileSync(resolve('sitemap.xml'), xml);
     console.log(`Wrote sitemap.xml (${towns.length} town URLs + ${4} static pages)`);
   } else if (isFullRun && flags.dryRun) {

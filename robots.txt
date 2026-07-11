@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://mrsellers.homes/sitemap.xml
+
+# LLM-facing site guide: https://mrsellers.homes/llms.txt

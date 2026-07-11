@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "type": "module",
   "private": true,
-  "engines": { "node": ">=22.0.0" },
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "test": "node --test 'scripts/__tests__/**/*.test.js'",
     "generate": "node scripts/generate-town-pages.js",
     "generate:dry": "node scripts/generate-town-pages.js --dry-run",
     "build:silhouettes": "node scripts/one-time/build-silhouettes.js",
     "build:schools": "node scripts/one-time/build-schools-json.js",
-    "seed:content": "node scripts/one-time/seed-towns-content.js"
+    "seed:content": "node scripts/one-time/seed-towns-content.js",
+    "generate:blog": "node scripts/generate-blog.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.30.0"
