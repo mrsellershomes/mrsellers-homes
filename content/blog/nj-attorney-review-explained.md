@@ -3,7 +3,7 @@ title: What Attorney Review Actually Means in NJ
 description: New Jersey gives both sides a 3-business-day escape hatch after signing. Here's how attorney review really works, what it costs, and where deals die.
 date: 2026-07-11
 tags: selling, buying, contracts
-faq: How long is attorney review in New Jersey? | Three business days, starting the day after both parties receive the fully signed contract. Saturdays, Sundays, and legal holidays don't count. It extends automatically if either attorney disapproves the contract and negotiations continue. ; Can a seller back out during attorney review in NJ? | Yes. Either side can walk during attorney review for almost any reason, with no penalty. Once review ends, the contract is binding and backing out gets expensive. ; Do I need a lawyer to sell a house in New Jersey? | Legally no, practically yes in North Jersey. Nearly every Bergen County deal uses attorneys on both sides, and a typical seller pays about $1,750 to $2,000 for full representation through closing.
+faq: How long is attorney review in New Jersey? | Three business days, starting the day after both parties receive the fully signed contract. Saturdays, Sundays, and legal holidays don't count. It extends automatically if either attorney disapproves the contract and negotiations continue. ; Can a seller back out during attorney review in NJ? | Yes. Either side can walk during attorney review for any reason, with no penalty. Once review ends, the contract is binding and backing out gets expensive. ; Do I need a lawyer to sell a house in New Jersey? | Legally no, practically yes in North Jersey. Nearly every Bergen County deal uses attorneys on both sides, and a typical seller pays between $1,750 and $2,250 for full representation through closing.
 ---
 You accepted an offer on your house. Congratulations, and also, not so fast. In New Jersey, a signed contract isn't binding yet. Both sides get a built-in escape hatch called attorney review, and it's where more North Jersey deals wobble than anywhere except inspections.
 
@@ -19,7 +19,7 @@ One thing most sellers don't realize: once an attorney disapproves within the wi
 
 ## What either side can do during review
 
-- Walk away. Completely. For almost any reason, with no penalty.
+- Walk away. Completely. For any reason, with no penalty.
 - Renegotiate price or terms. Yes, even after signatures.
 - Fix dates, deposit schedules, and inclusions (that chandelier you meant to keep, this is when it gets handled).
 
@@ -27,7 +27,7 @@ That cuts both ways. Your buyer can vanish on day 2 because they found a house t
 
 ## What it costs
 
-A typical Bergen County seller pays about **$1,750 to $2,000** for an attorney to handle review through closing. Buyers pay in the same range. Against a median Bergen sale price, it's the cheapest insurance in the entire transaction.
+A typical Bergen County seller pays between **$1,750 and $2,250** for an attorney to handle review through closing. Buyers pay in the same range. Against a median Bergen sale price, it's the cheapest insurance in the entire transaction.
 
 ## Where deals actually die
 
