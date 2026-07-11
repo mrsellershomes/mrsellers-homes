@@ -1,21 +1,21 @@
 {
-  "hash": "37f760e8fae20bd8",
-  "paragraph": "Single-family homes dominate Ridgefield Park's market, with 29 sales over seven months at a median of $620,000. About 55 percent of homes sold above asking, and the sale-to-list ratio sits at 1.01, which signals a competitive but balanced market where priced homes are moving without frenzied bidding wars. Median days on market is 33, giving buyers and sellers realistic time to negotiate. Multi-family properties are sparse in volume but show stronger seller momentum, with all five homes selling above list at a median of $635,000 and a median of 14 days on market. Condos and townhouses trail significantly in both volume and days on market, sitting at four sales with a 58-day median, suggesting this tier moves more slowly and buyers may find some leverage if they're shopping in this category. Co-ops round out the market at the entry point with three sales at a median of $199,000, though the sample size is too small to read reliable directional signals. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the rental income potential of a multi-family, the lower price point of a condo, or the lowest entry cost of a co-op.",
+  "hash": "4267f90a774383f0",
+  "paragraph": "Single-family homes dominate Ridgefield Park's market with 32 sales over eight months at a median of $625,000. Sellers are getting their ask or better, with 59 percent of homes selling above list and a sale-to-list ratio of 1.01, though median days on market sits at 35 days, which means priced homes are moving but not frantically. Multi-family properties tell a different story. Only seven sales, but they're selling faster and hotter. The median is $680,000, with 86 percent going over asking and a median of 14 days on market. This is a real seller's market for the multi-family tier, driven by limited inventory and strong buyer interest. Condos and townhouses are sparse with five sales at a median of $295,000. These sit longer at 49 days on market and only 40 percent sold above list, signaling that buyers have more room to negotiate in this category. Co-ops round out the market at an entry point of $177,250, though the sample is tiny at four sales. If you're weighing options in Ridgefield Park, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or multi-family property, or the lower price point of a condo or co-op.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "Single-family homes dominate Ridgefield Park's market, with 29 sales over seven months at a median of $620,000. About 55 percent of homes sold above asking, and the sale-to-list ratio sits at 1.01, which signals a competitive but balanced market where priced homes are moving without frenzied bidding wars. Median days on market is 33, giving buyers and sellers realistic time to negotiate. Multi-family properties are sparse in volume but show stronger seller momentum, with all five homes selling above list at a median of $635,000 and a median of just 14 days on market. Condos and townhouses trail significantly in both volume and days on market, sitting at four sales with a 58-day median, suggesting this tier moves more slowly and buyers may find some leverage if they're shopping in this category. Co-ops round out the market at the entry point with three sales at a median of $199,000, though the sample size is too small to read reliable directional signals. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the rental income potential of a multi-family, the lower price point of a condo, or the lowest entry cost of a co-op.",
+  "firstDraft": "Single-family homes dominate Ridgefield Park's market with 32 sales over eight months at a median of $625,000. Sellers are getting their ask or better, with 59 percent of homes selling above list and a sale-to-list ratio of 1.01, though median days on market sits at 35 days, which means priced homes are moving but not frantically. Multi-family properties tell a different story. Only seven sales, but they're selling faster and hotter. The median is $680,000, with 86 percent going over asking and a median of just 14 days on market. This is a real seller's market for the multi-family tier, driven by limited inventory and strong buyer interest. Condos and townhouses are sparse with just five sales at a median of $295,000. These sit longer at 49 days on market and only 40 percent sold above list, signaling that buyers have more room to negotiate in this category. Co-ops round out the market at an entry point of $177,250, though the sample is tiny at four sales. If you're weighing options in Ridgefield Park, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or multi-family property, or the lower price point of a condo or co-op.",
   "usage": {
-    "input_tokens": 3862,
+    "input_tokens": 3908,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 285,
+    "output_tokens": 296,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:41:24.960Z"
+  "generatedAt": "2026-07-05T18:19:22.219Z"
 }

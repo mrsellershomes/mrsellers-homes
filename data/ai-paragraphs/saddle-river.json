@@ -1,21 +1,21 @@
 {
-  "hash": "6989a9b71d900aab",
-  "paragraph": "Saddle River's single-family market is where the activity is, with 24 sales over seven months at a median price of $2,677,750. The sale-to-list ratio sits at 0.98, meaning homes are selling slightly under asking price on average, and the median time on market is 53.5 days. Only about 12 percent of homes sold above list, which tells you that sellers are pricing to move rather than testing the market at inflated numbers. You're looking at a buyer-friendly environment where properties in the $1.2 million to $4.6 million range are moving, but not without time and thought. Homes that are competitively priced and in good condition will draw interest, but sellers can't expect bidding wars. The sparse inventory of higher-end single-family homes means each listing gets attention from serious buyers, but the market rewards realistic pricing and honest condition disclosure. If you're looking to move in Saddle River, your edge as a seller isn't in overasking. It's in presenting a property that doesn't need negotiation because it's priced right from day one.",
+  "hash": "ac89583e0ca53ca2",
+  "paragraph": "Saddle River is a single-family market, period. Twenty-nine homes sold over the last eight months at a median of $2,742,500, with a sale-to-list ratio of 0.97 and a median of 41 days on market. Only about 14 percent of homes sold above asking, which tells you this isn't a frenzied seller's market. Buyers have some leverage here. Homes priced competitively are moving, but there's no rush, and sellers who overshoot their ask are sitting longer than they might like. The range is wide, from $1,225,000 to $5,612,500, so what \"fair market value\" means depends entirely on condition, lot size, and location within the township. If you're shopping in Saddle River, you're shopping for a single-family home on meaningful land. The market will reward you for pricing honestly and punish you for holding out, so know your home's actual position before you list.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "Saddle River's single-family market is where the activity is, with 24 sales over seven months at a median price of $2,677,750. The sale-to-list ratio sits at 0.98, meaning homes are selling just under asking price on average, and the median time on market is 53.5 days. Only about 12 percent of homes sold above list, which tells you that sellers are pricing to move rather than testing the market at inflated numbers. You're looking at a buyer-friendly environment where properties in the $1.2 million to $4.6 million range are moving, but not without time and thought. Homes that are competitively priced and in good condition will draw interest, but sellers can't expect bidding wars. The sparse inventory of higher-end single-family homes means each listing gets attention from serious buyers, but the market rewards realistic pricing and honest condition disclosure. If you're looking to move in Saddle River, your edge as a seller isn't in overasking. It's in presenting a property that doesn't need negotiation because it's priced right from day one.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3307,
+    "input_tokens": 2955,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 248,
+    "output_tokens": 220,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:42:20.532Z"
+  "generatedAt": "2026-07-05T18:20:07.728Z"
 }

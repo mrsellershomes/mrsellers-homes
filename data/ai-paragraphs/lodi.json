@@ -1,21 +1,21 @@
 {
-  "hash": "f19b12e599501c5a",
-  "paragraph": "Single-family homes in Lodi are moving in a real seller's market, with a median sale price of $626,388 and three quarters of homes selling above asking. The sale-to-list ratio sits at 1.02, and median days on market is a tight 21 days, which tells you that priced homes are finding buyers quickly. Multi-family properties are even stronger, with 23 sales at a median of $835,000 and 78 percent of them closing above list price. Those homes are taking longer to move at a 33-day median, but when they do sell, they're commanding serious money. The condo and townhouse category is too thin to read meaningfully at only 3 sales, though all three sold above asking. If you're shopping in Lodi, understand that single-family and multi-family inventory is moving in a competitive market where sellers have leverage. Pricing your home right matters if you want it to move predictably, and if you're buying, you should expect multiple-offer situations on the properties that hit the market well-positioned.",
+  "hash": "25f5141949e41a99",
+  "paragraph": "Single-family homes dominate Lodi's market, with 33 sales over eight months at a median of $610,000. Sellers are okay with waiting for the right buyer rather pricing competitively to move fast. Nearly 79 percent of homes sold above asking, and the sale-to-list ratio sits at 1.02, meaning homes are consistently fetching their price or slightly better. Median days on market is 21, which gives you time to find the right property without frantic bidding. Multi-family properties, by contrast, represent a meaningful secondary market with 25 sales at a median of $850,000. These properties move a bit slower at 33 days on market, and while 80 percent sold above asking, the higher sale-to-list ratio of 1.05 suggests sellers are pricing more aggressively upfront. The condo and townhouse category is too thin to call a market, with only three sales over the period. If you're looking at Lodi, the single-family inventory is where the volume is, and you'll find the market competitive but not frenzied.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "Single-family homes in Lodi are moving in a real seller's market, with a median sale price of $626,388 and three quarters of homes selling above asking. The sale-to-list ratio sits at 1.02, and median days on market is a tight 21 days, which tells you that priced homes are finding buyers quickly. Multi-family properties are even stronger, with 23 sales at a median of $835,000 and 78 percent of them closing above list price. Those homes are taking longer to move (33-day median), but when they do sell, they're commanding serious money. The condo and townhouse category is too thin to read meaningfully at just 3 sales, though all three sold above asking. If you're shopping in Lodi, understand that single-family and multi-family inventory is moving in a competitive market where sellers have leverage. Pricing your home right matters if you want it to move predictably, and if you're buying, you should expect multiple-offer situations on the properties that hit the market well-positioned.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3739,
+    "input_tokens": 3391,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 237,
+    "output_tokens": 245,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:39:30.927Z"
+  "generatedAt": "2026-07-05T18:17:30.783Z"
 }

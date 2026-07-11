@@ -1,21 +1,21 @@
 {
-  "hash": "9c5f80a258916256",
-  "paragraph": "The single-family market in Upper Saddle River is competitive but not frenzied. You're looking at a median sale price of $1,550,444 against a median list price of $1,494,500, with a sale-to-list ratio right at 1.0 and a median days on market of 36. About 44 percent of homes sold above asking, which tells you that priced homes are moving, but this isn't a seller's market where multiple offers are the norm. The range is wide, from $840,000 to $4.8 million across 48 sales, so the market really does serve different buyer needs depending on where in that spectrum you're looking. Median days on market of 36 suggests homes that are priced right don't linger, but they also aren't disappearing in a week. If you're considering Upper Saddle River, the math supports pricing competitively. Sellers who list close to true market value have a real shot at drawing genuine interest and closing near or above their ask. The condo and townhouse tier is extremely small, with only three sales over seven months at a median of $1,200,000, so single-family dominates what's available and what you'll be choosing from.",
+  "hash": "6afe06bfa1ab7cee",
+  "paragraph": "Single-family homes dominate Upper Saddle River's market with 67 sales over eight months at a median of $1,585,888. Sellers are dictating terms here. Nearly half of homes are selling above asking, the sale-to-list ratio sits at 1.0, and the median days on market of 19 shows homes are moving decisively. You're seeing everything from $825,000 to $5,325,000 across the inventory, which tells you the market spans genuine entry-level all the way to high-end estates, and that breadth is intact. Condos and townhouses are sparse, with three sales in the period at a median of $1,200,000. With a median days on market of 40 and a sale-to-list ratio below 1.0, these units are moving slower than single-family homes and sellers may need to price more competitively if they want speed. The gap between the two tiers in pace and buyer appetite is real. If you're in Upper Saddle River, the single-family market is where the volume and momentum are. Condos will require patience or a more aggressive pricing strategy to move.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "Single-family homes dominate Upper Saddle River's market with 67 sales over eight months at a median of $1,585,888. Sellers are dictating terms here. Nearly half of homes are selling above asking, the sale-to-list ratio sits right at 1.0, and the median days on market of 19 shows homes are moving decisively. You're seeing everything from $825,000 to $5,325,000 across the inventory, which tells you the market spans genuine entry-level all the way to high-end estates, and that breadth is intact. Condos and townhouses are sparse, just three sales in the period at a median of $1,200,000. With a median days on market of 40 and a sale-to-list ratio under 1.0, these units are moving slower than single-family homes and sellers may need to price more competitively if they want speed. The gap between the two tiers in pace and buyer appetite is real. If you're in Upper Saddle River, the single-family market is where the volume and momentum are. Condos will require patience or a more aggressive pricing strategy to move.",
   "usage": {
-    "input_tokens": 3240,
+    "input_tokens": 3766,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 276,
+    "output_tokens": 259,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:42:51.302Z"
+  "generatedAt": "2026-07-05T18:20:32.634Z"
 }

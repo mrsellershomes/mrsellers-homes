@@ -1,21 +1,21 @@
 {
-  "hash": "8915b3e83ea3a7bd",
-  "paragraph": "The Edgewater market right now is dominated by condos and townhouses, which accounted for 88 sales over the last seven months at a median of $629,050. These units are moving steadily, with a median of 33 days on market and a sale-to-list ratio of 0.987, meaning priced homes are selling close to ask. About 26 percent sold above listing price, so there is some competition for the best units, but buyers aren't facing a seller's market. Single-family homes are sparse in Edgewater, with only 5 sales in the period and a median of $999,999. The ratio of 0.978 and median days on market of 91 tell you that sellers here need to be realistic about pricing if they want to move inventory. Multi-family properties, a small segment with 3 sales, sit at a median of $1,200,000 and are moving faster than single-family at 20 days on market, though the sample is too small to draw reliable conclusions. If you're focused on Edgewater, the condo and townhouse tier is where the volume and liquidity are. Single-family and multi-family properties tend to linger longer and require sellers to be disciplined on price.",
+  "hash": "f84bc76e075681bc",
+  "paragraph": "Edgewater's market is dominated by condos and townhouses, which moved 99 units over eight months at a median of $628,000. These homes are priced to sell, sitting right at list value with a sale-to-list ratio of 0.99 and a median of 31 days on market. About a quarter of them sold above asking, which tells you that the best-priced units draw real interest, but there's no bidding frenzy here. Single-family homes are sparse, with only five sales in the period and a median of $999,999. They're sitting longer, averaging 91 days on market and selling below list at a 0.98 ratio, which means sellers in this tier are okay with waiting for the right buyer rather than pricing aggressively. Multi-family properties form a small middle tier with three sales at $1,200,000 median and notably faster movement at 20 days on market. If you're looking in Edgewater, the math is straightforward. Condos and townhouses are where the liquidity is, priced to move without heavy competition. Single-family homes require patience from both sides. The deciding factor isn't market heat. It's whether you want the move-it price point and quick absorption of a condo, or the space and grounds of a single-family home.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 3604,
+    "input_tokens": 3663,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 280,
+    "output_tokens": 296,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:37:57.693Z"
+  "generatedAt": "2026-07-05T18:15:52.735Z"
 }

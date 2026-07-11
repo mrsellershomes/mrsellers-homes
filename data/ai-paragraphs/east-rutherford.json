@@ -1,21 +1,21 @@
 {
-  "hash": "bb48d5f48af632a1",
-  "paragraph": "Single-family homes in East Rutherford are moving at a median of $750,000 with a sale-to-list ratio of 1.00 and a median days on market of 17, which means sellers are getting their asking price and homes are leaving the market at a steady clip. About 57 percent of single-family sales close above list, a sign that priced homes are moving and buyers are willing to compete for the right property. Multi-family properties, by contrast, tell a stronger story. The median sits at $990,000 with every sale closing above asking and a sale-to-list ratio of 1.12, putting this category firmly in a seller's market. Days on market average 15, suggesting real demand and limited inventory. Condo and townhouse inventory rounds out the market at a median of $560,000 with a ratio of 1.00 and a median of 24 days on market. One-third of these units sold above asking, indicating that while the category is steady, it lacks the heat of the multi-family tier. If you're weighing East Rutherford, the multi-family segment is where sellers hold the advantage right now, while single-family and condo inventory are moving at a balanced pace.",
+  "hash": "855016d7267c3a71",
+  "paragraph": "The single-family market in East Rutherford is moving briskly, with nine sales over eight months at a median of $750,000. Two-thirds of homes sold above asking, and the median days on market sits at 17, which tells you sellers are pricing within reach and buyers are responding quickly. The sale-to-list ratio of 1.01 confirms homes are fetching what they're listed for without bidding wars, though patience still matters. Multi-family properties are a different story. Only three sales in the period, but all three went above asking at a median of $990,000, with a median days on market of 15 days. That's a real seller's market for the few multi-family homes that hit the market. Condos and townhouses comprise the bulk of activity with six sales at a median of $557,500. They're moving steadily at 25.5 days on market, and two-thirds sold above asking as well, though the sale-to-list ratio of 1.01 suggests homes priced right are finding their buyers without drama. If you're looking at East Rutherford, the deciding factor isn't market temperature. It's whether you want the space and grounds of a single-family, the rental income potential of a multi-family property, or the lower price point and lower maintenance of a condo or townhouse.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "Single-family homes in East Rutherford are moving at a median of $750,000 with a sale-to-list ratio of 1.00 and a median days on market of 17, which means sellers are getting their asking price and homes are leaving the market at a steady clip. About 57 percent of single-family sales close above list, a sign that priced homes are moving and buyers are willing to compete for the right property. Multi-family properties, by contrast, tell a stronger story. The median sits at $990,000 with every sale closing above asking and a sale-to-list ratio of 1.12, putting this category firmly in a seller's market. Days on market average just 15, suggesting real demand and limited inventory. Condo and townhouse inventory rounds out the market at a median of $560,000 with a ratio of 1.00 and a median of 24 days on market. One-third of these units sold above asking, indicating that while the category is steady, it lacks the heat of the multi-family tier. If you're weighing East Rutherford, the multi-family segment is where sellers hold the advantage right now, while single-family and condo inventory are moving at a balanced pace.",
+  "firstDraft": "The single-family market in East Rutherford is moving briskly, with nine sales over eight months at a median of $750,000. Two-thirds of homes sold above asking, and the median days on market sits at 17, which tells you sellers are pricing within reach and buyers are responding quickly. The sale-to-list ratio of 1.01 confirms homes are fetching what they're listed for without bidding wars, though patience still matters. Multi-family properties are a different story. Only three sales in the period, but all three went above asking at a median of $990,000, with a median days on market of just 15 days. That's a real seller's market for the few multi-family homes that hit the market. Condos and townhouses comprise the bulk of activity with six sales at a median of $557,500. They're moving steadily at 25.5 days on market, and two-thirds sold above asking as well, though the sale-to-list ratio of 1.01 suggests homes priced right are finding their buyers without drama. If you're looking at East Rutherford, the deciding factor isn't market temperature. It's whether you want the space and grounds of a single-family, the rental income potential of a multi-family property, or the lower price point and lower maintenance of a condo or townhouse.",
   "usage": {
-    "input_tokens": 3576,
+    "input_tokens": 3640,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 275,
+    "output_tokens": 299,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:37:53.394Z"
+  "generatedAt": "2026-07-05T18:15:47.531Z"
 }

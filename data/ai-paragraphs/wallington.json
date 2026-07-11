@@ -1,21 +1,21 @@
 {
-  "hash": "e46f4b460aa51f3f",
-  "paragraph": "Wallington's single-family market is showing buyer leverage. The median sale price sits at $684,250 against a median list price of $709,000, and the sale-to-list ratio of 0.997 means homes are selling slightly below asking. With a median of nearly 40 days on market and only 28 percent of sales closing above list, sellers need to price competitively to move inventory. That said, the market has real range, from homes in the $430,000s to one that hit $1,275,000, so the conditions depend heavily on what you're actually selling or buying. Multi-family properties, by contrast, are performing differently. Fourteen sales over seven months at a median of $755,000 show solid activity, and 64 percent of multi-family sales closed above asking with a sale-to-list ratio of 1.015, which signals stronger buyer interest in that category. The median days on market for multi-family sits at 45 days, comparable to single-family timeline but with noticeably better price momentum. If you're weighing the two, the data suggests multi-family units are attracting more aggressive competition right now, while single-family homes require careful pricing to sell without extended holding periods.",
+  "hash": "ebde3f6e9c58df45",
+  "paragraph": "Wallington's single-family market is moving at a measured pace. The median sale price is $684,250 against a median list price of $709,000, which means homes are selling slightly under asking at a sale-to-list ratio of 0.997. About 28 percent of homes sold above list, but that's balanced against many that came in below, and the median time on market sits at 39.5 days. This isn't a market where sellers are dictating terms. Homes that are priced competitively and in good condition will draw interest, but overpriced inventory can linger. Multi-family properties tell a different story. With 16 sales at a median of $762,500 and 69 percent of those homes selling above asking, multi-family is clearly the hotter segment. The sale-to-list ratio here hits 1.016, and days on market average 38, which means investors and owner-occupants are competing for limited supply. If you're weighing Wallington, understand that single-family homes require realistic pricing to move, while multi-family properties are fetching stronger numbers and facing real competition from buyers.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "Wallington's single-family market is showing buyer leverage. The median sale price sits at $684,250 against a median list price of $709,000, and the sale-to-list ratio of 0.997 means homes are selling just under asking. With a median of nearly 40 days on market and only 28 percent of sales closing above list, sellers need to price competitively to move inventory. That said, the market has real range, from homes in the $430,000s to one that hit $1,275,000, so the conditions depend heavily on what you're actually selling or buying. Multi-family properties, by contrast, are performing differently. Fourteen sales over seven months at a median of $755,000 show solid activity, and 64 percent of multi-family sales closed above asking with a sale-to-list ratio of 1.015, which signals stronger buyer interest in that category. The median days on market for multi-family sits at 45 days, comparable to single-family timeline but with noticeably better price momentum. If you're weighing the two, the data suggests multi-family units are attracting more aggressive competition right now, while single-family homes require careful pricing to sell without extended holding periods.",
+  "firstDraft": "Wallington's single-family market is moving at a measured pace. The median sale price is $684,250 against a median list price of $709,000, which means homes are selling just under asking at a sale-to-list ratio of 0.997. About 28 percent of homes sold above list, but that's balanced against many that came in below, and the median time on market sits at 39.5 days. This isn't a market where sellers are dictating terms. Homes that are priced competitively and in good condition will draw interest, but overpriced inventory can linger. Multi-family properties tell a different story. With 16 sales at a median of $762,500 and 69 percent of those homes selling above asking, multi-family is clearly the hotter segment. The sale-to-list ratio here hits 1.016, and days on market average 38, which means investors and owner-occupants are competing for limited supply. If you're weighing Wallington, understand that single-family homes require realistic pricing to move, while multi-family properties are fetching stronger numbers and facing real competition from buyers.",
   "usage": {
-    "input_tokens": 3530,
+    "input_tokens": 3508,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 274,
+    "output_tokens": 255,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:43:03.053Z"
+  "generatedAt": "2026-07-05T18:20:43.505Z"
 }

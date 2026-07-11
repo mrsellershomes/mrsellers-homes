@@ -1,21 +1,21 @@
 {
-  "hash": "bd3db17fc82d6b41",
-  "paragraph": "The single-family market in Leonia is competitive but not frenzied. With 22 homes sold over seven months at a median price of $867,500, you're seeing about half the homes close above asking and a sale-to-list ratio barely above 1.0. Median days on market sit at 23, which means priced homes are moving, but sellers aren't in a rush and buyers have some room to negotiate if they find the right property. The price range is wide, from $585,000 to $2.2 million, so the market isn't one story. Condos and townhouses are thinner on the ground at ten sales over the same period with a median of $509,500. They're taking longer to sell, with a median of 44.5 days on market and only 10 percent closing above asking. The sale-to-list ratio dips to 0.99, which tells you buyers may find leverage in this category if they're willing to wait for the right unit. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home or the lower price point and lower-maintenance lifestyle of a condo.",
+  "hash": "9b50cf34b62a8dfc",
+  "paragraph": "Single-family homes in Leonia are moving in a real seller's market, with a median sale price of $867,500 and nearly two-thirds of homes selling above asking. The sale-to-list ratio sits at 1.02, and homes are spending a median of 21 days on market, which means priced-right inventory doesn't linger. You're looking at a range from $570,000 to $2.2 million, so the town draws everything from first-time buyers to people trading up significantly. Condos and townhouses, by contrast, tell a different story. With 11 sales at a median of $460,000, this tier is moving much more slowly at 53 days on market, and most sales are landing right at list price rather than above it. Only about 9 percent of condo sales went over asking, which suggests sellers in this category need to price competitively to attract serious interest. If you're choosing between single-family and condo in Leonia, the single-family market is hotter and more seller-favorable, while condos are offering buyers more negotiating room and lower entry prices.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "The single-family market in Leonia is competitive but not frenzied. With 22 homes sold over seven months at a median price of $867,500, you're seeing about half the homes close above asking and a sale-to-list ratio just barely above 1.0. Median days on market sit at 23, which means priced homes are moving, but sellers aren't in a rush and buyers have some room to negotiate if they find the right property. The price range is wide, from $585,000 to $2.2 million, so the market isn't one story. Condos and townhouses are thinner on the ground at just ten sales over the same period with a median of $509,500. They're taking longer to sell, with a median of 44.5 days on market and only 10 percent closing above asking. The sale-to-list ratio dips to 0.99, which tells you buyers may find leverage in this category if they're willing to wait for the right unit. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home or the lower price point and lower-maintenance lifestyle of a condo.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3508,
+    "input_tokens": 3137,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 269,
+    "output_tokens": 252,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:39:20.717Z"
+  "generatedAt": "2026-07-05T18:17:21.586Z"
 }

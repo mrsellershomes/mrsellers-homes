@@ -1,21 +1,21 @@
 {
-  "hash": "415be8ab9ecc7b5c",
-  "paragraph": "Ho-Ho-Kus is a single-family market through and through. Over the last seven months, 29 detached homes sold at a median of $1,330,000, with a sale-to-list ratio of 1.0 and 41 percent of homes selling above asking. The median time on market was 24 days. This is a competitive but balanced market. Homes that are priced right and presented well move steadily, but sellers can't assume they'll get multiple offers or a bidding war. The price range is wide, from $785,000 to $4,950,000, which reflects the town's variety of lot sizes and home conditions rather than any real stratification by neighborhood. If you're selling, pricing competitively to your actual market value matters more than anchoring to an aspirational number. If you're buying, you'll have room to negotiate on most homes, and the best-positioned properties will still draw competition. The 24-day median tells you homes aren't sitting on the market for months, but they're also not disappearing in a week.",
+  "hash": "eabf96377c257fa9",
+  "paragraph": "Ho-Ho-Kus is a single-family market, and it's running hot. Over the last eight months, 40 homes sold at a median of $1,412,500 with a sale-to-list ratio holding at 1.0 and nearly 48 percent of sales closing above asking price. Median days on market sits at 18, which means priced homes are moving decisively and sellers are dictating terms in many multiple offer situations. The range is wide, from $785,000 to $4,950,000, which reflects the mix of properties across the township, but the real story is velocity and pricing power. Homes that are competitively priced relative to condition and location are not sitting. If you're in the market here, understand that you'll need to move quickly on anything that fits your criteria and be prepared for competition on the homes that matter most to you.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "Ho-Ho-Kus is a single-family market through and through. Over the last seven months, 29 detached homes sold at a median of $1,330,000, with a sale-to-list ratio of 1.0 and 41 percent of homes selling above asking. The median time on market was 24 days. This is a competitive but balanced market. Homes that are priced right and presented well move steadily, but sellers can't assume they'll get multiple offers or a bidding war. The price range is wide—from $785,000 to $4,950,000—which reflects the town's variety of lot sizes and home conditions rather than any real stratification by neighborhood. If you're selling, pricing competitively to your actual market value matters more than anchoring to an aspirational number. If you're buying, you'll have room to negotiate on most homes, and the best-positioned properties will still draw competition. The 24-day median tells you homes aren't sitting on the market for months, but they're also not disappearing in a week.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3269,
+    "input_tokens": 3000,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 239,
+    "output_tokens": 197,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:39:14.808Z"
+  "generatedAt": "2026-07-05T18:17:17.287Z"
 }

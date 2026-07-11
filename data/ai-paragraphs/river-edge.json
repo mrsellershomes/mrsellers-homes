@@ -1,21 +1,21 @@
 {
-  "hash": "a7c16df28c7e7334",
-  "paragraph": "Single-family homes dominate River Edge with 34 sales over seven months at a median of $939,500, and the market here is competitive but not frenzied. Half the homes sold above asking, the sale-to-list ratio sits right at 1.00, and the median time on market is a brisk 18.5 days, which means priced homes are moving but sellers aren't dictating terms. You'll see a wide range, from $645,000 to $1,750,000, so neighborhood and condition matter as much as the price tag. Condos and townhouses are a minimal category with only 3 sales at a median of $721,000, though both the sale-to-list ratio of 1.09 and median days on market of 12 suggest these units are moving faster than single-family homes when they do come available. Co-ops round out the market at the entry point with 3 sales at a median of $235,800, and here the ratio dropped to 0.95, meaning homes took longer to sell and the rare sale closed slightly below asking. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the low-maintenance lifestyle of a condo, or the lower price point of a co-op.",
+  "hash": "7e4bb6ea123fb87c",
+  "paragraph": "The single-family market in River Edge is moving briskly. Forty-one homes sold over eight months at a median of $905,000, with about half fetching above asking and a median days on market of 18. The sale-to-list ratio sits at 1.0, meaning homes are hitting their target price consistently. This is a real seller's market where priced homes are moving and many multiple offer situations are common. Condos and townhouses occupy a smaller slice with three sales, but the data points to similar momentum: a median of $721,000, two of three homes over asking, and a median days on market of 12. Co-ops are at the entry point with a median of $235,800 across three sales, though the sample is small and the sale-to-list ratio dipped slightly below list price. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the low-maintenance lifestyle of a condo, or the lower price point of a co-op.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "The single-family market in River Edge is moving briskly. Forty-one homes sold over eight months at a median of $905,000, with about half fetching above asking and a median days on market of 18. The sale-to-list ratio sits right at 1.0, meaning homes are hitting their target price consistently. This is a real seller's market where priced homes are moving and many multiple offer situations are common. Condos and townhouses occupy a smaller slice with just three sales, but the data points to similar momentum: a median of $721,000, two of three homes over asking, and a median days on market of 12. Co-ops are at the entry point with a median of $235,800 across three sales, though the sample is small and the sale-to-list ratio dipped slightly below list price. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the low-maintenance lifestyle of a condo, or the lower price point of a co-op.",
   "usage": {
-    "input_tokens": 3307,
+    "input_tokens": 3731,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 295,
+    "output_tokens": 235,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:41:43.376Z"
+  "generatedAt": "2026-07-05T18:19:35.049Z"
 }

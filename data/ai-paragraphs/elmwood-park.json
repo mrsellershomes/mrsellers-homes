@@ -1,21 +1,21 @@
 {
-  "hash": "449553aa34bbb282",
-  "paragraph": "Single-family homes in Elmwood Park are moving in a real seller's market. Forty sales over seven months at a median of $630,000 tell you that priced-right homes are getting multiple offers. Fifty-seven percent of homes sold above asking, the median days on market sits at nineteen and a half, and the sale-to-list ratio is running at 1.01. Sellers are dictating terms here, and you'll see homes hit contract quickly if they're positioned correctly. Multi-family properties, by contrast, are even hotter. Nineteen sales at a median of $865,000 show strong investor and owner-occupant demand, with eighty-four percent selling above list and a sale-to-list ratio of 1.06. These homes are moving in eighteen to nineteen days on average. Condo and townhouse inventory is sparse in this market, with only four sales at a median of $454,500, though the ratio and days on market suggest balanced pricing when units do come available. If you're looking in Elmwood Park, the single-family market is where most activity is, and you'll need a competitive offer to win. Multi-family properties are moving faster and commanding stronger appreciation over asking.",
+  "hash": "a4b40ab155589be6",
+  "paragraph": "Single-family homes in Elmwood Park are moving in a real seller's market, with a median sale price of $625,000 and 61 percent of homes selling above asking. The sale-to-list ratio sits at 1.013, and median days on market is 19, which means priced homes are getting multiple offers and sellers are dictating terms. Multi-family properties, by contrast, are even hotter. Twenty sales over eight months landed at a median of $850,000, with 85 percent selling over asking and a sale-to-list ratio of 1.059. These are moving fast and commanding real premiums. The condo and townhouse tier is minimal here with only five sales at a median of $439,000, too thin to call a market. If you're between single-family and multi-family, the deciding factor isn't market temperature. It's whether you want the space and grounds of a single-family home or the potential rental income and leverage of a multi-family property. Both are moving, but multi-family is seeing stronger upside per dollar.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 3404,
+    "input_tokens": 3459,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 270,
+    "output_tokens": 237,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:38:01.845Z"
+  "generatedAt": "2026-07-05T18:15:56.432Z"
 }

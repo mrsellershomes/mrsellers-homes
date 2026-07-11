@@ -1,21 +1,21 @@
 {
-  "hash": "f9dad97e1d428fc4",
-  "paragraph": "Single-family homes in Garfield are moving briskly with a median sale price of $557,500 and a median days on market of 19, which signals a competitive but balanced market where priced homes are moving steadily. About 75 percent of homes are selling above asking, and the sale-to-list ratio sits at 1.037, confirming that sellers aren't overasking; they're getting their asking price or slightly better when the home is positioned right. Multi-family properties, by contrast, represent the larger share of volume with 35 sales at a median of $710,000 over the same period. They're tracking almost identically to single-family in terms of pace and ratio, with 74 percent selling above list and a 19-day median days on market, suggesting consistent buyer demand across both tiers. Condos and townhouses are a much smaller segment with only six sales at a median of $497,500, and they're showing different dynamics. The sale-to-list ratio dips to 0.978, only 17 percent sold above asking, and median days on market stretches to 55.5, which tells you that buyers have more leverage in this category and sellers need to price competitively to move inventory. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the income potential or larger footprint of a multi-family, or the entry price of a condo or townhouse.",
+  "hash": "3b57214a37a2ab58",
+  "paragraph": "Single-family homes in Garfield are moving briskly, with a median sale price of $550,000 and a median days on market of 19. About 76 percent of homes are selling above asking, and the sale-to-list ratio sits at 1.04, which tells you sellers are pricing reasonably and buyers are competing. This is a real seller's market for single-family properties. Multi-family buildings, by contrast, dominate the volume with 40 sales over the period at a median of $734,500. The ratio there is also 1.03 with 75 percent above asking and a median of 18.5 days on market, so the competitive dynamic is equally strong. Condos and townhouses represent a smaller slice with 11 sales at a median of $520,000, and here the market reads differently. The sale-to-list ratio dips to 0.99, only 27 percent sold above asking, and the median days on market stretches to 46. Buyers have more leverage in this category, and you'll want to price carefully if you're listing. The deciding factor isn't market heat across the board. It's whether you're drawn to the single-family space and grounds, the income potential of a multi-family building, or the lower price point and simpler maintenance of a condo or townhouse.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "Single-family homes in Garfield are moving briskly, with a median sale price of $550,000 and a median days on market of 19. About 76 percent of homes are selling above asking, and the sale-to-list ratio sits at 1.04, which tells you sellers are pricing reasonably and buyers are competing. This is a real seller's market for single-family properties. Multi-family buildings, by contrast, dominate the volume with 40 sales over the period at a median of $734,500. The ratio there is also 1.03 with 75 percent above asking and a median of 18.5 days on market, so the competitive dynamic is just as strong. Condos and townhouses represent a smaller slice with 11 sales at a median of $520,000, and here the market reads differently. The sale-to-list ratio dips to 0.99, only 27 percent sold above asking, and the median days on market stretches to 46. Buyers have more leverage in this category, and you'll want to price carefully if you're listing. The deciding factor isn't market heat across the board. It's whether you're drawn to the single-family space and grounds, the income potential of a multi-family building, or the lower price point and simpler maintenance of a condo or townhouse.",
   "usage": {
-    "input_tokens": 3451,
+    "input_tokens": 3944,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 330,
+    "output_tokens": 299,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:38:44.125Z"
+  "generatedAt": "2026-07-05T18:16:44.771Z"
 }

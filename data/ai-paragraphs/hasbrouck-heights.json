@@ -1,21 +1,21 @@
 {
-  "hash": "8bf6733155a795fe",
-  "paragraph": "The single-family market in Hasbrouck Heights is a real seller's market right now. Over the last seven months, 31 homes sold at a median of $725,000, with nearly 58 percent selling above asking and a sale-to-list ratio of 1.01. Median days on market sits at 21, which means priced homes are moving without sitting around. You're seeing multiple offer situations on well-presented properties, and sellers aren't under pressure to discount. The range is wide, from $360,000 to $980,000, so there's genuine diversity in what's available, but the speed and the ratio tell you that decent homes in this town are drawing real competition. Multi-family properties are too sparse in this market to read any meaningful pattern, with only three sales over seven months, so if you're looking at a two-to-four unit building, treat each one as a unique negotiation rather than a market condition. If you're looking at Hasbrouck Heights as a place to live, you're entering a market where you'll need to move decisively on the right property and price competitively if you want to sell down the line.",
+  "hash": "74fba7c50ded15af",
+  "paragraph": "The single-family market in Hasbrouck Heights is moving steadily, with 38 sales over eight months at a median of $732,500. Homes are selling above list price about 60 percent of the time, and the sale-to-list ratio sits at 1.02, which means sellers who price competitively are getting their asking price or close to it. The median days on market is 20.5, fast enough to suggest that priced homes are moving without extended waiting periods. You'll see some real range in the data. Sales span from $360,000 to $980,000, which reflects the genuine diversity of the housing stock. Multi-family properties like duplexes and small apartment buildings are sparse here, with only three sales in the period, so they don't move the needle on overall market character. If you're looking at single-family homes in Hasbrouck Heights, the takeaway is straightforward. Price realistically and you'll find a buyer in three weeks or so. Overpriced homes will sit, which is true everywhere, but the bulk of the inventory is pricing itself into a reasonable rhythm.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "The single-family market in Hasbrouck Heights is moving steadily, with 38 sales over eight months at a median of $732,500. Homes are selling above list price about 60 percent of the time, and the sale-to-list ratio sits at 1.02, which means sellers who price competitively are getting their asking price or close to it. The median days on market is 20.5, fast enough to suggest that priced homes are moving without extended waiting periods. You'll see some real range in the data—sales span from $360,000 to $980,000—which reflects the genuine diversity of the housing stock. Multi-family properties like duplexes and small apartment buildings are sparse here, with only three sales in the period, so they don't move the needle on overall market character. If you're looking at single-family homes in Hasbrouck Heights, the takeaway is straightforward: price realistically and you'll find a buyer in three weeks or so. Overpriced homes will sit, which is true everywhere, but the bulk of the inventory is pricing itself into a reasonable rhythm.",
   "usage": {
-    "input_tokens": 3105,
+    "input_tokens": 3474,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 254,
+    "output_tokens": 247,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:39:01.487Z"
+  "generatedAt": "2026-07-05T18:17:05.107Z"
 }

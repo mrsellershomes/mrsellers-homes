@@ -1,21 +1,21 @@
 {
-  "hash": "10ed45605a9ba22c",
-  "paragraph": "South Hackensack's market is defined almost entirely by multi-family properties, where five sales over seven months landed at a median of $755,500. The sale-to-list ratio of 1.04 and median days on market of 18 tell you sellers are pricing reasonably and homes are moving without extended waits. One sale closed above $970,000, but the floor was $625,000, so the range reflects real variation in unit count, condition, and location within town. The sub-10-unit segment, which represents two of those five sales, moved even faster at a median of 10.5 days on market and a ratio of 1.05, suggesting smaller multi-family buildings attract focused buyer attention. You're looking at a market where priced homes are moving and buyers aren't finding much leverage to negotiate down. If you're considering multi-family as an investment or owner-occupant play in Bergen County, South Hackensack deserves a close look, but you'll want to move decisively once you find the right building.",
+  "hash": "b2fddff40076c2c5",
+  "paragraph": "South Hackensack is a multifamily market, and the numbers show real strength. Five sales over eight months at a median of $755,500, with a sale-to-list ratio of 1.04 and a median of 18 days on market. One sale landed in 12 days, and all five closed above asking price. This is a seller's market, plain and simple. Buyers looking at multifamily properties here need to come in prepared to move fast and price competitively, because homes that hit the market correctly are drawing solid interest. The range runs from $625,000 to $970,000, which tells you there's real variety in the stock even in a small sample. If you're looking at the sub-10-unit segment specifically, the pace tightens considerably, with a median of 10.5 days on market and two sales both closing well above list. That's an even tighter seller's market for smaller multifamily properties. The takeaway is straightforward: if you're buying multifamily in South Hackensack right now, you're negotiating from a position of weakness. Price it right and be ready to act.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "South Hackensack is a multifamily market, and the numbers show real strength. Five sales over eight months at a median of $755,500, with a sale-to-list ratio of 1.04 and a median of 18 days on market. One sale landed in 12 days, and all five closed above asking price. This is a seller's market, plain and simple. Buyers looking at multifamily properties here need to come in prepared to move fast and price competitively, because homes that hit the market correctly are drawing solid interest. The range runs from $625,000 to $970,000, which tells you there's real variety in the stock even in a small sample. If you're looking at the sub-10-unit segment specifically, the pace tightens considerably, with a median of just 10.5 days on market and two sales both closing well above list. That's an even tighter seller's market for smaller multifamily properties. The takeaway is straightforward: if you're buying multifamily in South Hackensack right now, you're negotiating from a position of weakness. Price it right and be ready to act.",
   "usage": {
-    "input_tokens": 2949,
+    "input_tokens": 3349,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 229,
+    "output_tokens": 255,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:42:24.542Z"
+  "generatedAt": "2026-07-05T18:20:13.468Z"
 }

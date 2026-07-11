@@ -1,21 +1,21 @@
 {
-  "hash": "52fc828abb8a0a4c",
-  "paragraph": "Single-family homes in Oakland are moving in a real seller's market. Fifty-one homes sold over the last seven months at a median of $700,000, with 61 percent selling above asking and a median of 17 days on market. The sale-to-list ratio of 1.04 confirms sellers are getting their price, which means homes priced competitively are drawing multiple offers and moving fast. If you're shopping here, don't expect much negotiating room on homes that are listed right. The condo and townhouse tier is sparse at five sales over the same period, with a median of $990,040. These units sold at asking price with no premium, suggesting less competition in that category, though the sample size is too small to call it a real trend. For most buyers in Oakland, you're working within the single-family market where inventory moves quickly and sellers hold the advantage.",
+  "hash": "088db9f7162d1a2c",
+  "paragraph": "Oakland's single-family market is moving steadily with 65 sales over eight months at a median of $700,000. Sellers are dictating terms here. Over 63 percent of homes sold above asking, the sale-to-list ratio sits at 1.04, and the median time on market is 16 days. This is a real seller's market, and many listings are seeing multiple offer situations. The price range runs from the $280,000s into the $2 million range, so Oakland attracts a broad buyer base, but what you'll notice is that priced homes at the lower and mid-range are moving fast. Condos and townhouses represent a thin slice of activity with only 5 sales in the same period at a median of $990,040. These units hit list price on average and took 18 days on market, suggesting a more measured pace. If you're shopping in Oakland, the single-family tier is where the action is. Your decision comes down to whether you want the space and grounds of a single-family home in a seller's market where speed and pricing matter, or the low-maintenance profile of a condo if you can find one.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "Single-family homes in Oakland are moving in a real seller's market. Fifty-one homes sold over the last seven months at a median of $700,000, with 61 percent selling above asking and a median of just 17 days on market. The sale-to-list ratio of 1.04 confirms sellers are getting their price, which means homes priced competitively are drawing multiple offers and moving fast. If you're shopping here, don't expect much negotiating room on homes that are listed right. The condo and townhouse tier is sparse at five sales over the same period, with a median of $990,040. These units sat at asking price with no premium, suggesting less competition in that category, though the sample size is too small to call it a real trend. For most buyers in Oakland, you're working within the single-family market where inventory moves quickly and sellers hold the advantage.",
+  "firstDraft": "Oakland's single-family market is moving steadily with 65 sales over eight months at a median of $700,000. Sellers are dictating terms here. Over 63 percent of homes sold above asking, the sale-to-list ratio sits at 1.04, and the median time on market is just 16 days. This is a real seller's market, and many listings are seeing multiple offer situations. The price range runs from the $280,000s into the $2 million range, so Oakland attracts a broad buyer base, but what you'll notice is that priced homes at the lower and mid-range are moving fast. Condos and townhouses represent a thin slice of activity with only 5 sales in the same period at a median of $990,040. These units hit list price on average and took 18 days on market, suggesting a more measured pace. If you're shopping in Oakland, the single-family tier is where the action is. Your decision comes down to whether you want the space and grounds of a single-family home in a seller's market where speed and pricing matter, or the low-maintenance profile of a condo if you can find one.",
   "usage": {
-    "input_tokens": 3544,
+    "input_tokens": 3679,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 195,
+    "output_tokens": 257,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:40:28.275Z"
+  "generatedAt": "2026-07-05T18:18:31.321Z"
 }

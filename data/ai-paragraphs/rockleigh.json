@@ -1,21 +1,21 @@
 {
-  "hash": "1c30888e90cbc126",
-  "paragraph": "Rockleigh has no recorded sales activity over the last seven months ending May 2026, which means there's not enough market data to draw any reliable conclusions about pricing, days on market, or buyer competition right now. This isn't unusual for a smaller Bergen County town with limited residential inventory. If you're actively looking to buy or sell here, you'll want to talk directly with a local agent who can pull recent comparable sales from neighboring towns and give you a real sense of where Rockleigh properties stand relative to similar homes in the immediate area. The absence of sales data doesn't mean the market is frozen, only that the sample size is too small to report on meaningfully.",
+  "hash": "e26b1ccbf7b2ebc1",
+  "paragraph": "Rockleigh's market right now is defined by extreme scarcity. Over the last eight months, only one single-family home sold, a $2,830,000 property that sat for 30 days on market before closing at asking price. That single data point tells you everything you need to know: there is almost no inventory, and when a home does appear, it is priced to sell at value rather than above it. This isn't a hot market. It's a market where homes almost never come available. If you are looking in Rockleigh, you are competing for information and early access far more than you are competing against other buyers at the negotiating table. Work with someone who knows the township well and can alert you the moment a listing hits. Pricing your own home competitively matters enormously here because buyers have nowhere else to go, but they also will not overpay for the privilege of buying into a town with virtually no turnover.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "Rockleigh has no recorded sales activity over the last seven months ending May 2026, which means there's not enough market data to draw any reliable conclusions about pricing, days on market, or buyer competition right now. This isn't unusual for a smaller Bergen County town with limited residential inventory. If you're actively looking to buy or sell here, you'll want to talk directly with a local agent who can pull recent comparable sales from neighboring towns and give you a real sense of where Rockleigh properties stand relative to similar homes in the immediate area. The absence of sales data doesn't mean the market is frozen, just that the sample size is too small to report on meaningfully.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3023,
+    "input_tokens": 2770,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 144,
+    "output_tokens": 206,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-06-01T14:42:03.011Z"
+  "generatedAt": "2026-07-05T18:19:51.812Z"
 }
