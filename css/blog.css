@@ -34,6 +34,10 @@ body.blog-page { background: var(--bg); color: var(--ink); font-family: var(--sa
   .blog-page .nav-links, .blog-page .nav-cta { display: flex; }
   .blog-page .hamburger { display: none; }
 }
+.blog-page .red-bar { background: var(--red); color: #fff; padding: 9px 40px; display: flex; align-items: center; justify-content: space-between; font-size: 12px; letter-spacing: 0.05em; }
+.blog-page .red-bar-item { display: flex; align-items: center; gap: 8px; opacity: 0.92; }
+.blog-page .red-bar-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.5); }
+@media (max-width: 880px) { .blog-page .red-bar { padding: 9px 20px; font-size: 11px; flex-wrap: wrap; justify-content: center; gap: 12px; } }
 
 /* --- Layout --- */
 .blog-main { max-width: 720px; margin: 0 auto; padding: 40px 20px 72px; }
