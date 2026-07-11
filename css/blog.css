@@ -1,0 +1,84 @@
+/* Blog pages — The Sellers' Take. Matches the site system: light shell,
+   Cormorant Garamond display, DM Sans body, brand red #E2001A. Mobile-first. */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --red: #E2001A;
+  --ink: #1a1a1a;
+  --ink-soft: #444;
+  --ink-faint: #767676;
+  --rule: #e6e2dc;
+  --bg: #fdfcfa;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'DM Sans', -apple-system, sans-serif;
+}
+
+body.blog-page { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.7; }
+
+/* --- Nav (matches town-page nav rules) --- */
+.blog-page .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 24px; border-bottom: 1px solid var(--rule); background: #fff; }
+.blog-page .nav-logo { font-family: var(--serif); font-size: 22px; font-weight: 600; color: var(--ink); text-decoration: none; line-height: 1.2; }
+.blog-page .nav-logo span { display: block; font-family: var(--sans); font-size: 11px; font-weight: 400; color: var(--ink-faint); letter-spacing: 0.04em; }
+.blog-page .nav-links { display: none; gap: 22px; }
+.blog-page .nav-links a { color: var(--ink-soft); text-decoration: none; font-size: 14px; }
+.blog-page .nav-links a:hover { color: var(--red); }
+.blog-page .nav-cta { display: none; background: var(--red); color: #fff; text-decoration: none; font-size: 14px; font-weight: 500; padding: 10px 18px; border-radius: 4px; white-space: nowrap; }
+.blog-page .hamburger { display: flex; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+.blog-page .hamburger span { width: 22px; height: 2px; background: var(--ink); display: block; }
+.blog-page .mobile-menu { display: none; flex-direction: column; background: #fff; border-bottom: 1px solid var(--rule); padding: 12px 24px 20px; }
+.blog-page .mobile-menu.open { display: flex; }
+.blog-page .mobile-menu a { padding: 10px 0; color: var(--ink); text-decoration: none; font-size: 16px; border-bottom: 1px solid var(--rule); }
+.blog-page .mobile-menu .mobile-cta { color: var(--red); font-weight: 600; border-bottom: none; }
+@media (min-width: 880px) {
+  .blog-page .nav-links, .blog-page .nav-cta { display: flex; }
+  .blog-page .hamburger { display: none; }
+}
+
+/* --- Layout --- */
+.blog-main { max-width: 720px; margin: 0 auto; padding: 40px 20px 72px; }
+@media (min-width: 720px) { .blog-main { padding: 56px 24px 96px; } }
+
+/* --- Index --- */
+.blog-header h1 { font-family: var(--serif); font-size: clamp(34px, 6vw, 48px); font-weight: 600; line-height: 1.1; }
+.blog-header p { margin-top: 12px; color: var(--ink-soft); max-width: 56ch; }
+.post-cards { margin-top: 40px; display: grid; gap: 18px; }
+.post-card { display: block; text-decoration: none; color: inherit; background: #fff; border: 1px solid var(--rule); border-radius: 8px; padding: 22px 24px; transition: border-color 0.15s; }
+.post-card:hover { border-color: var(--red); }
+.post-card-date { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-faint); }
+.post-card h2 { font-family: var(--serif); font-size: 26px; font-weight: 600; line-height: 1.2; margin-top: 6px; }
+.post-card-desc { margin-top: 8px; color: var(--ink-soft); font-size: 15px; }
+.post-card-arrow { display: inline-block; margin-top: 12px; color: var(--red); font-size: 14px; font-weight: 500; }
+
+/* --- Post --- */
+.post-eyebrow a { color: var(--red); text-decoration: none; font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; }
+.post h1 { font-family: var(--serif); font-size: clamp(32px, 6vw, 46px); font-weight: 600; line-height: 1.12; margin-top: 10px; }
+.post-meta { margin-top: 12px; color: var(--ink-faint); font-size: 14px; }
+.post-source { margin-top: 16px; padding: 12px 16px; background: #fff; border-left: 3px solid var(--red); font-size: 14px; color: var(--ink-soft); }
+.post-source a { color: var(--red); }
+.post-body { margin-top: 28px; }
+.post-body p { margin-bottom: 18px; }
+.post-body h3 { font-family: var(--serif); font-size: 27px; font-weight: 600; line-height: 1.25; margin: 34px 0 12px; }
+.post-body ul { margin: 0 0 18px 22px; }
+.post-body li { margin-bottom: 8px; }
+.post-body strong { font-weight: 600; }
+
+/* --- FAQ --- */
+.post-faq { margin-top: 48px; border-top: 1px solid var(--rule); padding-top: 32px; }
+.post-faq h2 { font-family: var(--serif); font-size: 30px; font-weight: 600; }
+.post-faq-item { margin-top: 22px; }
+.post-faq-item h3 { font-size: 17px; font-weight: 600; font-family: var(--sans); }
+.post-faq-item p { margin-top: 6px; color: var(--ink-soft); }
+
+/* --- CTA --- */
+.post-cta { margin-top: 48px; background: #fff; border: 1px solid var(--rule); border-radius: 8px; padding: 28px 24px; }
+.post-cta h2 { font-family: var(--serif); font-size: 28px; font-weight: 600; line-height: 1.2; }
+.post-cta > p { margin-top: 10px; color: var(--ink-soft); font-size: 15px; }
+.lead-form { margin-top: 18px; display: grid; gap: 14px; }
+.form-row { display: block; }
+.form-label { display: block; font-size: 13px; font-weight: 500; margin-bottom: 5px; color: var(--ink-soft); }
+.lead-form input, .lead-form textarea { width: 100%; padding: 11px 12px; border: 1px solid #d8d3cb; border-radius: 5px; font-family: var(--sans); font-size: 16px; background: var(--bg); }
+.lead-form input:focus, .lead-form textarea:focus { outline: 2px solid var(--red); outline-offset: -1px; border-color: transparent; }
+.btn-red { background: var(--red); color: #fff; border: none; border-radius: 5px; padding: 13px 22px; font-family: var(--sans); font-size: 16px; font-weight: 500; cursor: pointer; }
+.btn-red:hover { background: #c30016; }
+.form-status { font-size: 14px; color: var(--ink-soft); min-height: 1em; }

@@ -1,24 +1,7 @@
 // Renders the <head> meta tags for a town real estate page: title, description,
 // canonical, OpenGraph, Twitter card, and JSON-LD structured data.
 
-const TYLER_AGENT = {
-  '@type': 'RealEstateAgent',
-  '@id': 'https://mrsellers.homes/#agent',
-  name: 'Tyler Sellers',
-  url: 'https://mrsellers.homes',
-  email: 'tyler@mrsellers.homes',
-  telephone: '+1-201-308-0525',
-  worksFor: {
-    '@type': 'LocalBusiness',
-    name: 'RE/MAX',
-    address: {
-      '@type': 'PostalAddress',
-      addressRegion: 'NJ',
-      addressLocality: 'Tenafly',
-      addressCountry: 'US'
-    }
-  }
-};
+import { TYLER_AGENT } from './agent-entity.js';
 
 function escapeAttr(s) {
   return String(s ?? '').replace(/[&<>"']/g, c => (
