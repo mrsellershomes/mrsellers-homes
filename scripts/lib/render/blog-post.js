@@ -75,7 +75,7 @@ export function renderBlogPost(post) {
   const schema = buildSchema(post, canonicalUrl);
   const body = renderBlocks(parseMarkdownSubset(post.body));
   const sourceBlock = post.sourceUrl
-    ? `  <p class="post-source">Riffing on reporting from <a href="${escapeAttr(post.sourceUrl)}" rel="nofollow noopener" target="_blank">${escapeHtml(post.sourceName || 'the original article')}</a> &mdash; the Bergen County read is mine.</p>`
+    ? `  <p class="post-source">Riffing on reporting from <a href="${escapeAttr(post.sourceUrl)}" rel="nofollow noopener" target="_blank">${escapeHtml(post.sourceName || 'the original article')}</a>. The Bergen County read is mine.</p>`
     : '';
 
   return `<!DOCTYPE html>

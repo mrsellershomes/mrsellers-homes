@@ -39,7 +39,7 @@ export function renderBlogIndex(posts) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Sellers&rsquo; Take &mdash; Blog | Tyler Sellers</title>
+<title>The Sellers&rsquo; Take Blog | Tyler Sellers</title>
 <meta name="description" content="NJ selling mechanics, Bergen County market reads, and what the economy actually means for your house. By Tyler Sellers.">
 <link rel="canonical" href="${escapeAttr(canonicalUrl)}">
 <script type="application/ld+json">${JSON.stringify(schema)}</script>
@@ -53,7 +53,7 @@ ${renderSiteNav()}
 <main class="blog-main">
   <header class="blog-header">
     <h1>The Sellers&rsquo; Take</h1>
-    <p>The economy, translated to Bergen County real estate. No hype, no scare headlines &mdash; what the numbers actually mean if you own (or want to own) a home here.</p>
+    <p>The economy, translated to Bergen County real estate. No hype, no scare headlines. Just what the numbers actually mean if you own (or want to own) a home here.</p>
   </header>
   <section class="post-cards" aria-label="All posts">
 ${cards}
