@@ -37,6 +37,9 @@
   }
 
   function wire(form) {
+    // Native constraint validation would block the step-1 submit event while
+    // step-2 required fields are hidden; we validate in JS instead.
+    form.noValidate = true;
     var step2Visible = false;
     var phone = form.querySelector('input[name=phone]');
     var consentWrap = form.querySelector('.af-consent');
