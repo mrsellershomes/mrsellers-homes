@@ -10,7 +10,7 @@ export function renderSiteNav() {
     </a>
     <div class="nav-links">
       <a href="/#sell">Sell your home</a>
-      <a href="/#buy">Buy in Bergen County</a>
+      <a href="/buy/">Buy in Bergen County</a>
       <a href="/#towns">Town directory</a>
       <a href="/#content">Guides &amp; walkthroughs</a>
       <a href="/about">About Tyler</a>
@@ -23,7 +23,7 @@ export function renderSiteNav() {
 
   <div class="mobile-menu" id="mobileMenu">
     <a href="/#sell" onclick="closeMenu()">Sell your home</a>
-    <a href="/#buy" onclick="closeMenu()">Buy in Bergen County</a>
+    <a href="/buy/" onclick="closeMenu()">Buy in Bergen County</a>
     <a href="/#towns" onclick="closeMenu()">Town directory</a>
     <a href="/#content" onclick="closeMenu()">Guides &amp; walkthroughs</a>
     <a href="/about" onclick="closeMenu()">About Tyler</a>
