@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  go.html REDESIGN V2 — DRAFT, NOT DEPLOYED.
+  go.html REDESIGN V2: DRAFT, NOT DEPLOYED.
   Editorial link-in-bio hub. Vanilla HTML + CSS, inline SVG icons, minimal JS. No Tailwind, no emoji.
   Preserves all v1 destinations: card modals -> /go (paths 1-4) and /lead + Google Calendar (Path 5), PDF paths, /privacy, footer hrefs.
   Backend dependency for Paths 1-4 (/go endpoint) is NOT built. Deploy only AFTER the 2026-05-31 open house.
@@ -11,18 +11,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tyler Sellers — Bergen County Real Estate</title>
+  <title>Tyler Sellers: Bergen County Real Estate</title>
   <meta name="description" content="Free Bergen County buyer and seller guides, a no-hard-pull lender intro, ask a question, or book a strategy call with Tyler Sellers, RE/MAX Signature Homes." />
 
   <!-- Open Graph / Twitter (shared in DMs) -->
-  <meta property="og:title" content="Tyler Sellers — Bergen County Real Estate" />
+  <meta property="og:title" content="Tyler Sellers: Bergen County Real Estate" />
   <meta property="og:description" content="Free guides, a lender intro with no hard pull, or book a call. Pick what you need." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mrsellers.homes/go" />
   <!-- TODO Tyler: ideally a dedicated 1200x630 OG card with photo + name. Reusing the existing hero image for now. -->
   <meta property="og:image" content="https://media.base44.com/images/public/69c1bd8f6c9a0d59f49e9a47/3aace292f_Tyler_Sellers_Hero_PS.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Tyler Sellers — Bergen County Real Estate" />
+  <meta name="twitter:title" content="Tyler Sellers: Bergen County Real Estate" />
   <meta name="twitter:description" content="Free guides, a lender intro with no hard pull, or book a call. Pick what you need." />
   <link rel="icon" href="/favicon.ico" /> <!-- TODO Tyler: refined RE/MAX mark favicon -->
 
@@ -44,19 +44,19 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
 
   <style>
     :root{
-      --bone:#F4F1EA; --card:#FFFFFF; --ink:#161616; --ink-soft:#5C564B; --line:#E4DED2;
-      --red:#DC1C2E; --ink-dark:#121212; --on-dark:#EDE9E0; --on-dark-soft:#9A958C;
+      --bone:#fdfcfa; --card:#FFFFFF; --ink:#161616; --ink-soft:#5C564B; --line:#e6e2dc;
+      --red:#E2001A; --ink-dark:#121212; --on-dark:#EDE9E0; --on-dark-soft:#9A958C;
     }
     *,*::before,*::after{ box-sizing:border-box; }
     html{ -webkit-text-size-adjust:100%; }
-    body{ margin:0; background:var(--bone); color:var(--ink); font-family:"Inter",system-ui,sans-serif; line-height:1.5; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+    body{ margin:0; background:var(--bone); color:var(--ink); font-family:'DM Sans',system-ui,sans-serif; line-height:1.5; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
     img{ max-width:100%; display:block; }
     a{ color:inherit; }
-    .serif{ font-family:"Fraunces",Georgia,serif; }
+    .serif{ font-family:'Cormorant Garamond',Georgia,serif; }
 
     .wrap{ max-width:1100px; margin:0 auto; padding:0 32px; }
     .hub{ display:grid; grid-template-columns:360px 1fr; gap:48px; align-items:start; padding:48px 0 56px; }
@@ -111,7 +111,7 @@
     .footer{ background:var(--ink-dark); color:var(--on-dark-soft); margin-top:8px; }
     .footer-inner{ max-width:1100px; margin:0 auto; padding:40px 32px; display:flex; flex-wrap:wrap; gap:32px; justify-content:space-between; }
     .footer .fcol{ flex:1 1 260px; min-width:240px; }
-    .footer .brand{ font-family:"Fraunces",Georgia,serif; font-size:20px; font-weight:600; color:var(--on-dark); margin-bottom:8px; }
+    .footer .brand{ font-family:'Cormorant Garamond',Georgia,serif; font-size:20px; font-weight:600; color:var(--on-dark); margin-bottom:8px; }
     .footer a{ color:inherit; text-decoration:none; }
     .footer .phone{ color:var(--on-dark); font-weight:600; font-size:15px; }
     .eho{ display:flex; align-items:center; gap:8px; margin-bottom:12px; color:var(--on-dark); }
@@ -127,7 +127,7 @@
     .modal-pad{ padding:24px; }
     .modal-close{ position:absolute; top:10px; right:10px; width:34px; height:34px; border:none; background:transparent; color:#9a9a9a; font-size:24px; line-height:1; cursor:pointer; border-radius:50%; }
     .modal-close:hover{ background:#f3f3f3; color:#333; }
-    .modal-title{ font-family:"Fraunces",Georgia,serif; font-size:22px; font-weight:600; margin:0 0 6px; }
+    .modal-title{ font-family:'Cormorant Garamond',Georgia,serif; font-size:22px; font-weight:600; margin:0 0 6px; }
     .modal-sub{ font-size:13.5px; color:var(--ink-soft); margin:0 0 16px; line-height:1.5; }
     .field{ margin-bottom:12px; }
     .field label{ display:block; font-size:10px; text-transform:uppercase; letter-spacing:.1em; color:var(--ink-soft); font-weight:600; margin-bottom:5px; }
@@ -275,7 +275,7 @@
         <div class="eho">
           <svg width="22" height="22" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6" aria-label="Equal Housing Opportunity">
             <path d="M 50 15 L 90 50 L 78 50 L 78 85 L 22 85 L 22 50 L 10 50 Z"/>
-            <text x="50" y="73" text-anchor="middle" font-family="Inter,sans-serif" font-size="32" font-weight="700" fill="currentColor" stroke="none">=</text>
+            <text x="50" y="73" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="32" font-weight="700" fill="currentColor" stroke="none">=</text>
           </svg>
           <span>Equal Housing Opportunity</span>
         </div>
