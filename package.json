@@ -14,7 +14,8 @@
     "build:schools": "node scripts/one-time/build-schools-json.js",
     "seed:content": "node scripts/one-time/seed-towns-content.js",
     "generate:blog": "node scripts/generate-blog.js",
-    "build:css": "tailwindcss -c tailwind.config.js -i css/src/site.css -o css/site.css --minify"
+    "build:css": "tailwindcss -c tailwind.config.js -i css/src/site.css -o css/site.css --minify",
+    "generate:towns-index": "node scripts/generate-towns-index.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.30.0"
