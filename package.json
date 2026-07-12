@@ -13,12 +13,14 @@
     "build:silhouettes": "node scripts/one-time/build-silhouettes.js",
     "build:schools": "node scripts/one-time/build-schools-json.js",
     "seed:content": "node scripts/one-time/seed-towns-content.js",
-    "generate:blog": "node scripts/generate-blog.js"
+    "generate:blog": "node scripts/generate-blog.js",
+    "build:css": "tailwindcss -c tailwind.config.js -i css/src/site.css -o css/site.css --minify"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.30.0"
   },
   "devDependencies": {
-    "@resvg/resvg-js": "^2.6.0"
+    "@resvg/resvg-js": "^2.6.0",
+    "tailwindcss": "^3.4.0"
   }
 }
