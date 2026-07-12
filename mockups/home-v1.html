@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MOCKUP v1 — The Honest Advisor | Mr. Sellers Homes</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: { brand: '#E2001A', ink: '#1a1a1a', cream: '#fdfcfa', rule: '#e6e2dc' },
+    fontFamily: { serif: ['"Cormorant Garamond"', 'Georgia', 'serif'], sans: ['"DM Sans"', 'sans-serif'] }
+  }}
+}
+</script>
+</head>
+<body class="bg-cream text-ink font-sans antialiased">
+
+<!-- MOCKUP BANNER -->
+<div class="bg-ink text-white text-center text-xs py-1.5 tracking-widest uppercase">Mockup v9: mobile nav (not live)</div>
+
+<!-- Nav -->
+<nav class="flex items-center justify-between px-5 md:px-10 py-4 bg-white border-b border-rule">
+  <a href="#" class="font-serif text-xl md:text-2xl font-semibold leading-tight whitespace-nowrap">Mr. Sellers Homes
+    <span class="block font-sans text-[11px] font-normal text-neutral-500 tracking-wide">Bergen County, NJ &middot; RE/MAX</span>
+  </a>
+  <div class="hidden md:flex items-center gap-6 text-sm text-neutral-600">
+    <a href="#" class="hover:text-brand">Town directory</a>
+    <a href="#" class="hover:text-brand">The Sellers&rsquo; Take</a>
+    <a href="#" class="hover:text-brand">About Tyler</a>
+  </div>
+  <div class="flex items-center gap-2">
+    <a href="#value" class="bg-brand text-white text-xs md:text-sm font-medium px-3 md:px-4 py-2.5 rounded whitespace-nowrap hover:bg-[#c30016]">What&rsquo;s my home worth?</a>
+    <button onclick="document.getElementById('mmenu').classList.toggle('hidden')" aria-label="Menu" class="md:hidden p-2">
+      <span class="block w-5 h-0.5 bg-ink mb-1"></span><span class="block w-5 h-0.5 bg-ink mb-1"></span><span class="block w-5 h-0.5 bg-ink"></span>
+    </button>
+  </div>
+</nav>
+<div id="mmenu" class="hidden md:hidden bg-white border-b border-rule px-5 py-2">
+  <a href="#" class="block py-3 border-b border-rule text-ink">Town directory</a>
+  <a href="#" class="block py-3 border-b border-rule text-ink">The Sellers&rsquo; Take</a>
+  <a href="#" class="block py-3 text-ink">About Tyler</a>
+</div>
+
+<!-- Red trust bar -->
+<div class="bg-brand text-white text-[11px] md:text-xs tracking-wide py-2 px-5 flex flex-wrap justify-center gap-x-6 gap-y-1">
+  <span>All 70 Bergen County towns, tracked monthly</span>
+  <span class="hidden sm:inline">Licensed since 2019</span>
+  <span>Every answer backed by closed MLS sales</span>
+</div>
+
+<!-- HERO: one job, the address ask -->
+<header id="value" class="max-w-3xl mx-auto px-5 pt-14 md:pt-20 pb-12 text-center">
+  <p class="text-brand text-xs md:text-sm font-medium tracking-[0.15em] uppercase mb-4">Tyler Sellers &middot; RE/MAX &middot; Bergen County</p>
+  <h1 class="font-serif font-semibold leading-[1.08] text-[clamp(38px,6vw,58px)] max-w-2xl mx-auto">Sell your home in today&rsquo;s market?<br>Or wait it out?</h1>
+  <p class="mt-5 text-neutral-600 text-base md:text-lg max-w-xl mx-auto">Send your address and get a number from someone who&rsquo;s been inside the houses yours will be compared to.</p>
+
+  <!-- Address-first form: ONE field visible -->
+  <form class="mt-8 flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+    <input type="text" placeholder="Enter your home address" class="flex-1 border border-neutral-300 bg-white rounded-md px-4 py-4 text-base focus:outline-brand" autocomplete="street-address">
+    <button type="submit" class="bg-brand text-white font-medium rounded-md px-7 py-4 text-base hover:bg-[#c30016]">What&rsquo;s it worth?</button>
+  </form>
+  <p class="mt-3 text-xs text-neutral-500">Tyler answers personally within one business day. If waiting is smarter, that&rsquo;s the answer you get.</p>
+</header>
+
+<!-- Proof strip: real numbers -->
+<section class="border-y border-rule bg-white">
+  <div class="max-w-4xl mx-auto grid grid-cols-3 divide-x divide-rule text-center">
+    <div class="py-6 px-2"><p class="font-serif text-3xl md:text-4xl font-semibold">70</p><p class="text-xs md:text-sm text-neutral-500 mt-1">towns tracked monthly</p></div>
+    <div class="py-6 px-2"><p class="font-serif text-3xl md:text-4xl font-semibold">$100K+</p><p class="text-xs md:text-sm text-neutral-500 mt-1">over list, real winning bids</p></div>
+    <div class="py-6 px-2"><p class="font-serif text-3xl md:text-4xl font-semibold">1 day</p><p class="text-xs md:text-sm text-neutral-500 mt-1">to a personal answer from Tyler</p></div>
+  </div>
+</section>
+
+<!-- Why me: the economy angle, short -->
+<section class="bg-[#f5f0e8]">
+  <div class="max-w-3xl mx-auto px-5 py-14 md:py-20">
+  <h2 class="font-serif text-3xl md:text-4xl font-semibold leading-tight">The market decides your price.<br>I make sure you&rsquo;re not surprised by it.</h2>
+  <p class="mt-4 text-neutral-600 leading-relaxed">Rates, inventory, and the wider economy set your number before a buyer ever walks in. I publish what I see monthly, town by town. Check my homework before you trust me with your house.</p>
+  <div class="mt-6 flex flex-wrap gap-3">
+    <a href="#" class="border border-ink rounded px-5 py-3 text-sm font-medium hover:border-brand hover:text-brand">Read your town&rsquo;s market report</a>
+    <a href="#" class="border border-ink rounded px-5 py-3 text-sm font-medium hover:border-brand hover:text-brand">The Sellers&rsquo; Take blog</a>
+  </div>
+  </div>
+</section>
+
+<!-- Buyer lane: present, secondary -->
+<section class="bg-white border-y border-rule">
+  <div class="max-w-3xl mx-auto px-5 py-10 md:flex items-center justify-between gap-8">
+    <div>
+      <h3 class="font-serif text-2xl font-semibold">Buying in Bergen County?<br>Get answers before you get pressured.</h3>
+      <p class="text-neutral-600 text-sm mt-1">What you can actually afford here, which towns fit, whether waiting serves you. Answers first. Then comes the hunt.</p>
+    </div>
+    <a href="#" class="inline-block mt-4 md:mt-0 text-brand font-medium text-sm whitespace-nowrap">Ask your first question &rarr;</a>
+  </div>
+</section>
+
+<!-- Final CTA repeat -->
+<section class="bg-ink text-white">
+  <div class="max-w-3xl mx-auto px-5 py-16 md:py-20 text-center">
+  <h2 class="font-serif text-3xl md:text-4xl font-semibold">Want to run the math on your own house?</h2>
+  <form class="mt-6 flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+    <input type="text" placeholder="Enter your home address" class="flex-1 border border-neutral-300 bg-white rounded-md px-4 py-4 text-base focus:outline-brand">
+    <button type="submit" class="bg-brand text-white font-medium rounded-md px-7 py-4 text-base hover:bg-[#c30016]">What&rsquo;s it worth?</button>
+  </form>
+  <p class="mt-3 text-xs text-white/50">Answered personally by Tyler within one business day.</p>
+  </div>
+</section>
+
+<!-- Sticky mobile CTA -->
+<div class="fixed bottom-0 inset-x-0 md:hidden bg-white/95 backdrop-blur border-t border-rule p-3 z-50">
+  <a href="#value" class="block bg-brand text-white text-center font-medium rounded-md py-3.5">What&rsquo;s my home worth?</a>
+</div>
+<div class="h-20 md:hidden"></div>
+
+<!-- Compliance footer placeholder -->
+<footer class="bg-[#111] text-white/70 text-xs py-8 text-center">RE/MAX Signature Homes compliance footer (unchanged, renders here)</footer>
+
+</body>
+</html>
