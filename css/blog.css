@@ -66,6 +66,13 @@ body.blog-page { background: var(--bg); color: var(--ink); font-family: var(--sa
 .post-body ul { margin: 0 0 18px 22px; }
 .post-body li { margin-bottom: 8px; }
 .post-body strong { font-weight: 600; }
+.post-body em { font-style: italic; }
+.post-body .table-wrap { overflow-x: auto; margin: 0 0 22px; }
+.post-body table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; }
+.post-body th { font-weight: 600; text-align: left; padding: 10px 14px; border-bottom: 2px solid var(--ink); white-space: nowrap; }
+.post-body td { padding: 9px 14px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.post-body tbody tr:nth-child(even) { background: #f7f4ef; }
+.post-body tr:last-child td { border-bottom: 2px solid var(--rule); }
 
 /* --- FAQ --- */
 .post-faq { margin-top: 48px; border-top: 1px solid var(--rule); padding-top: 32px; }

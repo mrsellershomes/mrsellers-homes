@@ -7,6 +7,8 @@
 //   ## Subheading        -> <h3>
 //   - bullet item        -> <li> wrapped in <ul>
 //   **bold inline**      -> <strong>
+//   *italic inline*      -> <em>
+//   | a | b | pipe rows  -> <table> (first row = header; |---| separator row skipped)
 //   blank line           -> paragraph break
 //   plain line           -> <p>
 
@@ -15,7 +17,9 @@ export function escapeHtml(s) {
 }
 
 export function inline(s) {
-  return escapeHtml(s).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  return escapeHtml(s)
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*([^*]+)\*/g, '<em>$1</em>');
 }
 
 export function parseMarkdownSubset(text) {
@@ -33,6 +37,17 @@ export function parseMarkdownSubset(text) {
     if (line.startsWith('## ')) {
       flush();
       blocks.push({ type: 'h3', content: line.slice(3).trim() });
+      continue;
+    }
+    if (line.startsWith('|') && line.endsWith('|')) {
+      const cells = line.slice(1, -1).split('|').map(c => c.trim());
+      if (cells.every(c => /^:?-{3,}:?$/.test(c))) continue; // separator row
+      if (!buffer || buffer.type !== 'table') {
+        flush();
+        buffer = { type: 'table', header: cells, rows: [] };
+      } else {
+        buffer.rows.push(cells);
+      }
       continue;
     }
     if (line.startsWith('- ')) {
@@ -61,6 +76,11 @@ export function renderBlocks(blocks, indent = '  ') {
     if (b.type === 'ul') {
       const items = b.items.map(i => `${indent}  <li>${inline(i)}</li>`).join('\n');
       return `${indent}<ul>\n${items}\n${indent}</ul>`;
+    }
+    if (b.type === 'table') {
+      const head = b.header.map(c => `<th>${inline(c)}</th>`).join('');
+      const rows = b.rows.map(r => `${indent}    <tr>${r.map(c => `<td>${inline(c)}</td>`).join('')}</tr>`).join('\n');
+      return `${indent}<div class="table-wrap">\n${indent}  <table>\n${indent}    <thead><tr>${head}</tr></thead>\n${indent}    <tbody>\n${rows}\n${indent}    </tbody>\n${indent}  </table>\n${indent}</div>`;
     }
     return '';
   }).join('\n');
