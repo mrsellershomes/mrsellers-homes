@@ -11,7 +11,7 @@ export default {
         rule: '#e6e2dc'
       },
       fontFamily: {
-        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        serif: ['"Playfair Display"', 'Georgia', 'serif'],
         sans: ['"DM Sans"', 'sans-serif']
       }
     }

@@ -45,7 +45,7 @@ export function renderSiteFooter() {
   return `<footer class="compliance-footer" style="background:#111;color:rgba(255,255,255,0.7);padding:40px 24px;font-family:'Inter','DM Sans',sans-serif;font-size:13px;line-height:1.7;border-top:1px solid rgba(255,255,255,0.08);">
     <div style="max-width:920px;margin:0 auto;display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-start;">
       <div style="flex:1 1 260px;min-width:240px;">
-        <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-weight:600;color:#fff;letter-spacing:0.01em;margin-bottom:8px;">RE/MAX Signature Homes</div>
+        <div style="font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:600;color:#fff;letter-spacing:0.01em;margin-bottom:8px;">RE/MAX Signature Homes</div>
         <div style="color:rgba(255,255,255,0.65);margin-bottom:4px;">189 Homans Ave, Suite C</div>
         <div style="color:rgba(255,255,255,0.65);margin-bottom:10px;">Closter, NJ 07624</div>
         <div><a href="tel:+12016609933" style="color:#fff;text-decoration:none;font-weight:500;font-size:15px;">(201) 660-9933</a></div>

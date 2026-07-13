@@ -54,7 +54,7 @@ ${FONTS_HEAD}
 ${TRACKING_HEAD}
 <style>
 .towns-main { max-width: 1000px; margin: 0 auto; padding: 40px 20px 72px; }
-.towns-head h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(32px, 6vw, 46px); font-weight: 600; line-height: 1.1; }
+.towns-head h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(32px, 6vw, 46px); font-weight: 600; line-height: 1.1; }
 .towns-head p { margin-top: 10px; color: #555; max-width: 60ch; }
 .town-filter { margin-top: 24px; width: 100%; max-width: 420px; padding: 13px 16px; font-size: 16px; border: 1px solid #d8d3cb; border-radius: 6px; background: #fff; font-family: 'DM Sans', sans-serif; }
 .town-filter:focus { outline: 2px solid #E2001A; outline-offset: -1px; }
@@ -63,7 +63,7 @@ ${TRACKING_HEAD}
 .map-wrap svg { width: 100%; height: auto; }
 .map-hint { font-size: 12px; color: #767676; text-align: center; margin-top: 6px; }
 .letter-group { margin-bottom: 22px; }
-.letter-head { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 600; color: #E2001A; border-bottom: 1px solid #e6e2dc; padding-bottom: 4px; margin-bottom: 10px; }
+.letter-head { font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: 600; color: #E2001A; border-bottom: 1px solid #e6e2dc; padding-bottom: 4px; margin-bottom: 10px; }
 .letter-towns { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 6px; }
 .town-link { display: block; padding: 9px 12px; text-decoration: none; color: #1a1a1a; background: #fff; border: 1px solid #e6e2dc; border-radius: 6px; font-size: 15px; }
 .town-link:hover { border-color: #E2001A; color: #E2001A; }

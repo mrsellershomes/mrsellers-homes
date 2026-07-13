@@ -1,5 +1,5 @@
 /* Blog pages — The Sellers' Take. Matches the site system: light shell,
-   Cormorant Garamond display, DM Sans body, brand red #E2001A. Mobile-first. */
+   Playfair Display display, DM Sans body, brand red #E2001A. Mobile-first. */
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -10,7 +10,7 @@
   --ink-faint: #767676;
   --rule: #e6e2dc;
   --bg: #fdfcfa;
-  --serif: 'Cormorant Garamond', Georgia, serif;
+  --serif: 'Playfair Display', Georgia, serif;
   --sans: 'DM Sans', -apple-system, sans-serif;
 }
 

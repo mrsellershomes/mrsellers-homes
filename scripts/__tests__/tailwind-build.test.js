@@ -7,5 +7,5 @@ test('compiled site.css exists and contains brand tokens', () => {
   const css = readFileSync('css/site.css', 'utf8');
   assert.match(css, /\.bg-brand/);
   assert.match(css, /#E2001A|#e2001a/i);
-  assert.match(css, /Cormorant Garamond/);
+  assert.match(css, /Playfair Display/);
 });
