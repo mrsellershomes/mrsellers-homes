@@ -288,7 +288,7 @@
 
 <!-- Market tape: quiet stats line (replaces the heavy red band) -->
 <div class="border-b border-rule bg-cream">
-  <div class="max-w-5xl mx-auto grid grid-cols-2 gap-x-3 gap-y-1.5 justify-items-start px-4 py-2.5 text-[11.5px] text-neutral-600 md:flex md:flex-wrap md:items-center md:justify-center md:gap-x-7 md:gap-y-1 md:text-[12.5px]">
+  <div class="max-w-5xl mx-auto grid grid-cols-2 gap-x-6 gap-y-1.5 justify-items-start px-4 py-2.5 text-[11px] text-neutral-600 md:flex md:flex-wrap md:items-center md:justify-center md:gap-x-7 md:gap-y-1 md:text-[12.5px]">
     <span class="flex items-center gap-1.5 whitespace-nowrap"><span class="w-[5px] h-[5px] rounded-full bg-brand shrink-0"></span><span><strong class="text-ink font-semibold">70 towns</strong> tracked monthly</span></span>
     <span class="flex items-center gap-1.5 whitespace-nowrap"><span class="w-[5px] h-[5px] rounded-full bg-brand shrink-0"></span><span><strong class="text-ink font-semibold">$100K+</strong> over-list bids</span></span>
     <a href="https://share.google/7XbQmAH8cAfASoF5r" target="_blank" rel="noopener" class="flex items-center gap-1.5 whitespace-nowrap hover:text-ink"><span class="w-[5px] h-[5px] rounded-full bg-brand shrink-0"></span><span class="underline decoration-neutral-300 underline-offset-2"><strong class="text-ink font-semibold">15</strong> five-star reviews</span></a>
@@ -299,9 +299,9 @@
 <!-- HERO: split layout, address ask on the left, portrait on the right -->
 <header id="sell" class="max-w-6xl mx-auto px-6 pt-12 md:pt-16 pb-14 grid gap-10 md:grid-cols-[7fr_5fr] md:gap-14 items-center">
   <div class="text-center md:text-left">
-    <p class="text-brand text-xs md:text-sm font-medium tracking-[0.15em] uppercase mb-4">Tyler Sellers &middot; RE/MAX &middot; Bergen County</p>
+    <p class="text-brand text-[11px] md:text-sm font-medium tracking-[0.09em] md:tracking-[0.15em] uppercase mb-4 whitespace-nowrap">Tyler Sellers &middot; RE/MAX &middot; Bergen County</p>
     <h1 class="font-serif font-semibold leading-[1.08] text-[clamp(34px,4.4vw,52px)]">Sell your home in <span class="whitespace-nowrap">today&rsquo;s market?</span><br>Or wait it out?</h1>
-    <p class="mt-5 text-neutral-600 text-base md:text-lg max-w-xl mx-auto md:mx-0">Get a price from someone who&rsquo;s been inside the houses yours will be compared to.</p>
+    <p class="mt-5 text-neutral-600 text-base md:text-lg max-w-xl mx-auto md:mx-0">Get a price from someone who&rsquo;s been inside the houses yours will be compared&nbsp;to.</p>
 
     <!-- Address-first form: ONE field visible -->
     <form class="af-form max-w-xl mx-auto md:mx-0 mt-8" data-af-source="MrSellers.homes | Homepage | Seller (address-first)">
@@ -485,11 +485,89 @@
 </section>
 
 
-<!-- Sticky mobile CTA -->
-<div class="fixed bottom-0 inset-x-0 md:hidden bg-white/95 backdrop-blur border-t border-rule p-3 z-50">
-  <a href="#sell" class="block bg-brand text-white text-center font-medium rounded-md py-3.5">What&rsquo;s my home worth?</a>
+<!-- Sticky mobile CTA: hidden until the reader scrolls deep (towns section), opens the contact sheet -->
+<div id="stickyCta" class="fixed bottom-0 inset-x-0 md:hidden bg-white/95 backdrop-blur border-t border-rule p-3 z-40 hidden">
+  <button type="button" onclick="openSheet()" class="block w-full bg-brand text-white text-center font-medium rounded-md py-3.5">What&rsquo;s my home worth?</button>
 </div>
-<div class="h-20 md:hidden"></div>
+
+<!-- Contact sheet overlay -->
+<div id="sheetBackdrop" class="fixed inset-0 bg-black/40 z-50 hidden" onclick="closeSheet()"></div>
+<div id="contactSheet" class="fixed bottom-0 inset-x-0 z-50 hidden bg-white rounded-t-2xl shadow-2xl p-5 pb-7 max-h-[85vh] overflow-y-auto" role="dialog" aria-modal="true" aria-label="Contact Tyler">
+  <div class="flex items-center justify-between mb-1">
+    <p class="font-serif text-xl font-semibold text-ink">Reach Tyler</p>
+    <button type="button" onclick="closeSheet()" aria-label="Close" class="text-neutral-500 text-2xl leading-none px-2 py-1">&times;</button>
+  </div>
+  <p class="text-sm text-neutral-600 mb-4">Send your address for a personalized number, or just call or text.</p>
+  <form class="af-form" data-af-source="MrSellers.homes | Homepage | Seller (sticky sheet)">
+    <div class="flex flex-col gap-3">
+      <input type="text" name="address" placeholder="Enter your home address" autocomplete="street-address" class="border border-neutral-300 bg-white text-ink rounded-md px-4 py-3.5 text-base focus:outline-brand">
+      <button type="submit" class="af-step1-btn bg-brand text-white font-medium rounded-md px-7 py-3.5 text-base">What&rsquo;s it worth?</button>
+    </div>
+    <div class="af-step2 hidden mt-3 grid gap-3 text-left">
+      <input type="text" name="name" placeholder="Name" autocomplete="name" class="border border-neutral-300 bg-white text-ink rounded-md px-4 py-3">
+      <input type="email" name="email" placeholder="Email" autocomplete="email" class="border border-neutral-300 bg-white text-ink rounded-md px-4 py-3">
+      <input type="tel" name="phone" placeholder="Phone (optional, for a faster answer)" autocomplete="tel" class="border border-neutral-300 bg-white text-ink rounded-md px-4 py-3">
+      <label class="af-consent hidden flex items-start gap-2 text-[11px] leading-snug text-neutral-600 bg-white border border-rule rounded p-3 cursor-pointer">
+        <input type="checkbox" name="smsConsent" value="yes" class="mt-0.5 shrink-0 accent-[#E2001A]">
+        <span><strong class="block text-ink text-xs font-semibold mb-0.5">Text me real estate info from Mr. Sellers Homes.</strong>Recurring messages from Mr. Sellers Homes (Tyler Sellers, RE/MAX Signature Homes): showing confirmations, property updates, follow-ups. Frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See <a href="/privacy" class="text-brand underline">Privacy Policy</a>.</span>
+      </label>
+      <button type="submit" class="bg-brand text-white font-medium rounded-md px-7 py-3.5">Send it to Tyler</button>
+    </div>
+    <p class="form-status text-sm text-neutral-500 mt-2" role="status" aria-live="polite"></p>
+  </form>
+  <div class="grid grid-cols-2 gap-3 mt-4">
+    <a href="tel:+12013080525" class="border border-ink text-ink text-center font-medium rounded-md py-3 text-sm">Call Tyler</a>
+    <a href="sms:+12013080525" class="border border-ink text-ink text-center font-medium rounded-md py-3 text-sm">Text Tyler</a>
+  </div>
+</div>
+
+<script>
+// Contact sheet + deferred sticky bar. Defensive by design: every element
+// lookup is null-guarded, the reveal is a one-way latch (no flicker), and
+// if IntersectionObserver is missing the bar simply appears after a scroll
+// fallback. No dependency on any other script; safe if markup changes.
+(function () {
+  'use strict';
+  var sheet = document.getElementById('contactSheet');
+  var backdrop = document.getElementById('sheetBackdrop');
+  var bar = document.getElementById('stickyCta');
+
+  window.openSheet = function () {
+    if (!sheet || !backdrop) return;
+    sheet.classList.remove('hidden');
+    backdrop.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  };
+  window.closeSheet = function () {
+    if (!sheet || !backdrop) return;
+    sheet.classList.add('hidden');
+    backdrop.classList.add('hidden');
+    document.body.style.overflow = '';
+  };
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') window.closeSheet();
+  });
+
+  // Reveal the bar once the reader reaches the towns directory (deep scroll).
+  // Plain scroll math on purpose: works in every browser, no observer APIs.
+  if (!bar) return;
+  var target = document.getElementById('towns');
+  var revealed = false;
+  function check() {
+    if (revealed) return;
+    var threshold = target
+      ? target.getBoundingClientRect().top + window.scrollY - window.innerHeight * 0.8
+      : window.innerHeight * 2; // no towns section: show after ~2 screens
+    if (window.scrollY >= threshold) {
+      revealed = true;
+      bar.classList.remove('hidden');
+      window.removeEventListener('scroll', check);
+    }
+  }
+  window.addEventListener('scroll', check, { passive: true });
+  check();
+})();
+</script>
 
 
 <footer class="compliance-footer" style="background:#111;color:rgba(255,255,255,0.7);padding:40px 24px;font-family:'Inter','DM Sans',sans-serif;font-size:13px;line-height:1.7;border-top:1px solid rgba(255,255,255,0.08);">
