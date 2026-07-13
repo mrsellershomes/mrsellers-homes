@@ -25,7 +25,7 @@ test('homepage hero copy is the locked v9 copy, no em dashes', () => {
   const s = html();
   assert.match(s, /Sell your home in today&rsquo;s market\?/);
   assert.match(s, /Or wait it out\?/);
-  assert.match(s, /been inside the houses yours will be compared(&nbsp;| )to/);
+  assert.match(s, /been inside(<br[^>]*>)?(&nbsp;| )the houses yours will be compared(&nbsp;| )to/);
   assert.match(s, /Want to run the math on your own house\?/);
   assert.doesNotMatch(s, /—|&mdash;/);
 });
