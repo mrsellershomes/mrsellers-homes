@@ -286,53 +286,61 @@
   <a href="/about" class="block py-3 text-ink">About Tyler</a>
 </div>
 
-<!-- Red trust bar -->
-<div class="bg-brand text-white text-[11px] md:text-xs tracking-wide py-2 px-5 flex flex-wrap justify-center gap-x-6 gap-y-1">
-  <span>All 70 Bergen County towns, tracked monthly</span>
-  <a href="https://share.google/7XbQmAH8cAfASoF5r" target="_blank" rel="noopener" class="underline decoration-white/40 underline-offset-2 hover:decoration-white">15 five-star Google reviews</a>
-  <span>Every answer backed by closed MLS sales</span>
+<!-- Market tape: quiet stats line (replaces the heavy red band) -->
+<div class="border-b border-rule bg-cream">
+  <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-center gap-x-7 gap-y-1 px-4 py-2.5 text-[12.5px] text-neutral-600">
+    <span class="flex items-center gap-2 whitespace-nowrap"><span class="w-[5px] h-[5px] rounded-full bg-brand"></span><strong class="text-ink font-semibold">70 towns</strong>&nbsp;tracked monthly</span>
+    <span class="flex items-center gap-2 whitespace-nowrap"><span class="w-[5px] h-[5px] rounded-full bg-brand"></span><strong class="text-ink font-semibold">$100K+</strong>&nbsp;over-list winning bids</span>
+    <a href="https://share.google/7XbQmAH8cAfASoF5r" target="_blank" rel="noopener" class="flex items-center gap-2 whitespace-nowrap hover:text-ink"><span class="w-[5px] h-[5px] rounded-full bg-brand"></span><span class="underline decoration-neutral-300 underline-offset-2"><strong class="text-ink font-semibold">15</strong> five-star Google reviews</span></a>
+    <span class="flex items-center gap-2 whitespace-nowrap"><span class="w-[5px] h-[5px] rounded-full bg-brand"></span>answered personally in&nbsp;<strong class="text-ink font-semibold">1 day</strong></span>
+  </div>
 </div>
 
-<!-- HERO: one job, the address ask -->
-<header id="sell" class="max-w-4xl mx-auto px-5 pt-14 md:pt-20 pb-12 text-center">
-  <img src="/tyler-sellers.jpg" alt="Tyler Sellers, Bergen County realtor" class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover mx-auto mb-4 border-2 border-white shadow-md">
-  <p class="text-brand text-xs md:text-sm font-medium tracking-[0.15em] uppercase mb-4">Tyler Sellers &middot; RE/MAX &middot; Bergen County</p>
-  <h1 class="font-serif font-semibold leading-[1.08] text-[clamp(34px,4.2vw,50px)] max-w-4xl mx-auto">Sell your home in <span class="whitespace-nowrap">today&rsquo;s market?</span><br>Or wait it out?</h1>
-  <p class="mt-5 text-neutral-600 text-base md:text-lg max-w-xl mx-auto">Send your address and get a number from someone who&rsquo;s been inside the houses yours will be compared to.</p>
+<!-- HERO: split layout, address ask on the left, portrait on the right -->
+<header id="sell" class="max-w-6xl mx-auto px-6 pt-12 md:pt-16 pb-14 grid gap-10 md:grid-cols-[7fr_5fr] md:gap-14 items-center">
+  <div class="text-center md:text-left">
+    <p class="text-brand text-xs md:text-sm font-medium tracking-[0.15em] uppercase mb-4">Tyler Sellers &middot; RE/MAX &middot; Bergen County</p>
+    <h1 class="font-serif font-semibold leading-[1.08] text-[clamp(34px,4.4vw,52px)]">Sell your home in <span class="whitespace-nowrap">today&rsquo;s market?</span><br>Or wait it out?</h1>
+    <p class="mt-5 text-neutral-600 text-base md:text-lg max-w-xl mx-auto md:mx-0">Send your address and get a number from someone who&rsquo;s been inside the houses yours will be compared to.</p>
 
-  <!-- Address-first form: ONE field visible -->
-  <form class="af-form max-w-xl mx-auto mt-8" data-af-source="MrSellers.homes | Homepage | Seller (address-first)">
-    <div class="flex flex-col sm:flex-row gap-3">
-      <input type="text" name="address" placeholder="Enter your home address" autocomplete="street-address" class="flex-1 border border-neutral-300 bg-white text-ink rounded-md px-4 py-4 text-base focus:outline-brand">
-      <button type="submit" class="af-step1-btn bg-brand text-white font-medium rounded-md px-7 py-4 text-base hover:bg-[#c30016]">What&rsquo;s it worth?</button>
+    <!-- Address-first form: ONE field visible -->
+    <form class="af-form max-w-xl mx-auto md:mx-0 mt-8" data-af-source="MrSellers.homes | Homepage | Seller (address-first)">
+      <div class="flex flex-col sm:flex-row gap-3">
+        <input type="text" name="address" placeholder="Enter your home address" autocomplete="street-address" class="flex-1 border border-neutral-300 bg-white text-ink rounded-md px-4 py-4 text-base focus:outline-brand">
+        <button type="submit" class="af-step1-btn bg-brand text-white font-medium rounded-md px-7 py-4 text-base hover:bg-[#c30016]">What&rsquo;s it worth?</button>
+      </div>
+      <div class="af-step2 hidden mt-4 grid gap-3 text-left">
+        <input type="text" name="name" placeholder="Name" autocomplete="name" required class="border border-neutral-300 bg-white text-ink rounded-md px-4 py-3">
+        <input type="email" name="email" placeholder="Email" autocomplete="email" required class="border border-neutral-300 bg-white text-ink rounded-md px-4 py-3">
+        <input type="tel" name="phone" placeholder="Phone (optional, for a faster answer)" autocomplete="tel" class="border border-neutral-300 bg-white text-ink rounded-md px-4 py-3">
+        <label class="af-consent hidden flex items-start gap-2 text-[11px] leading-snug text-neutral-600 bg-white border border-rule rounded p-3 cursor-pointer">
+          <input type="checkbox" name="smsConsent" value="yes" class="mt-0.5 shrink-0 accent-[#E2001A]">
+          <span><strong class="block text-ink text-xs font-semibold mb-0.5">Text me real estate info from Mr. Sellers Homes.</strong>Recurring messages from Mr. Sellers Homes (Tyler Sellers, RE/MAX Signature Homes): showing confirmations, property updates, follow-ups. Frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See <a href="/privacy" class="text-brand underline">Privacy Policy</a>.</span>
+        </label>
+        <button type="submit" class="bg-brand text-white font-medium rounded-md px-7 py-3.5 hover:bg-[#c30016]">Send it to Tyler</button>
+      </div>
+      <p class="form-status text-sm text-neutral-500 mt-2" role="status" aria-live="polite"></p>
+    </form>
+    <p class="mt-3 text-xs text-neutral-500">Tyler answers personally within one business day. If waiting is smarter, that&rsquo;s the answer you get.</p>
+    <p class="mt-2 text-sm text-neutral-600">Prefer to talk? <a href="tel:+12013080525" class="text-brand font-medium">Call or text (201) 308-0525</a></p>
+  </div>
+
+  <!-- Portrait: framed profile, not floating avatar -->
+  <div class="max-w-[360px] mx-auto md:max-w-none w-full">
+    <div class="relative">
+      <img src="/tyler-sellers.jpg" alt="Tyler Sellers, Bergen County realtor" class="relative z-10 w-full rounded-lg object-cover shadow-sm">
+      <div class="absolute rounded-lg border-2 border-brand z-0" style="inset:14px -14px -14px 14px"></div>
     </div>
-    <div class="af-step2 hidden mt-4 grid gap-3 text-left">
-      <input type="text" name="name" placeholder="Name" autocomplete="name" required class="border border-neutral-300 bg-white text-ink rounded-md px-4 py-3">
-      <input type="email" name="email" placeholder="Email" autocomplete="email" required class="border border-neutral-300 bg-white text-ink rounded-md px-4 py-3">
-      <input type="tel" name="phone" placeholder="Phone (optional, for a faster answer)" autocomplete="tel" class="border border-neutral-300 bg-white text-ink rounded-md px-4 py-3">
-      <label class="af-consent hidden flex items-start gap-2 text-[11px] leading-snug text-neutral-600 bg-white border border-rule rounded p-3 cursor-pointer">
-        <input type="checkbox" name="smsConsent" value="yes" class="mt-0.5 shrink-0 accent-[#E2001A]">
-        <span><strong class="block text-ink text-xs font-semibold mb-0.5">Text me real estate info from Mr. Sellers Homes.</strong>Recurring messages from Mr. Sellers Homes (Tyler Sellers, RE/MAX Signature Homes): showing confirmations, property updates, follow-ups. Frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See <a href="/privacy" class="text-brand underline">Privacy Policy</a>.</span>
-      </label>
-      <button type="submit" class="bg-brand text-white font-medium rounded-md px-7 py-3.5 hover:bg-[#c30016]">Send it to Tyler</button>
-    </div>
-    <p class="form-status text-sm text-neutral-500 mt-2" role="status" aria-live="polite"></p>
-  </form>
-  <p class="mt-3 text-xs text-neutral-500">Tyler answers personally within one business day. If waiting is smarter, that&rsquo;s the answer you get.</p>
-  <p class="mt-2 text-sm text-neutral-600">Prefer to talk? <a href="tel:+12013080525" class="text-brand font-medium">Call or text (201) 308-0525</a></p>
-  <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto text-left">
-    <div class="flex gap-3"><span class="font-serif text-2xl font-semibold text-brand leading-none">1</span><p class="text-sm text-neutral-600">Send your address. That&rsquo;s the whole first step.</p></div>
-    <div class="flex gap-3"><span class="font-serif text-2xl font-semibold text-brand leading-none">2</span><p class="text-sm text-neutral-600">Tyler personally runs your comps against real closed sales. No algorithm.</p></div>
-    <div class="flex gap-3"><span class="font-serif text-2xl font-semibold text-brand leading-none">3</span><p class="text-sm text-neutral-600">You get the number and the timing read within a day. No obligation, no follow-up circus.</p></div>
+    <p class="mt-7 text-sm text-neutral-600 leading-snug text-center md:text-left"><strong class="block font-serif text-lg text-ink font-semibold mb-0.5">Tyler Sellers</strong>Bergen County born and based. Reads the economy so you don&rsquo;t have to guess.</p>
   </div>
 </header>
 
-<!-- Proof strip: real numbers -->
+<!-- How it works: 3 steps (process, distinct from the stat tape) -->
 <section class="border-y border-rule bg-white">
-  <div class="max-w-4xl mx-auto grid grid-cols-3 divide-x divide-rule text-center">
-    <div class="py-6 px-2"><p class="font-serif text-3xl md:text-4xl font-semibold">70</p><p class="text-xs md:text-sm text-neutral-500 mt-1">towns tracked monthly</p></div>
-    <div class="py-6 px-2"><p class="font-serif text-3xl md:text-4xl font-semibold">$100K+</p><p class="text-xs md:text-sm text-neutral-500 mt-1">over list, real winning bids</p></div>
-    <div class="py-6 px-2"><p class="font-serif text-3xl md:text-4xl font-semibold">1 day</p><p class="text-xs md:text-sm text-neutral-500 mt-1">to a personal answer from Tyler</p></div>
+  <div class="max-w-4xl mx-auto grid gap-6 sm:grid-cols-3 px-6 py-10">
+    <div class="flex gap-3"><span class="font-serif text-2xl font-semibold text-brand leading-none">1</span><p class="text-sm text-neutral-600">Send your address. That&rsquo;s the whole first step.</p></div>
+    <div class="flex gap-3"><span class="font-serif text-2xl font-semibold text-brand leading-none">2</span><p class="text-sm text-neutral-600">Tyler personally runs your comps against real closed sales. No algorithm.</p></div>
+    <div class="flex gap-3"><span class="font-serif text-2xl font-semibold text-brand leading-none">3</span><p class="text-sm text-neutral-600">You get the number and the timing read within a day. No obligation, no follow-up circus.</p></div>
   </div>
 </section>
 
