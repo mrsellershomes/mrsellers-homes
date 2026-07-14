@@ -18,6 +18,8 @@ export function escapeHtml(s) {
 
 export function inline(s) {
   return escapeHtml(s)
+    .replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+|\/[^)\s]*)\)/g, (m, text, href) =>
+      `<a href="${href.replace(/"/g, '&quot;')}">${text}</a>`)
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
     .replace(/\*([^*]+)\*/g, '<em>$1</em>');
 }
