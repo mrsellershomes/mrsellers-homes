@@ -17,9 +17,9 @@ Two terms, defined once. Your **assessment** is the value the town puts on your 
 
 If you're in one of the 36 towns below, yes, it already happened for tax year 2026. The state and county lists match exactly, all 36 towns, zero discrepancies. If your town isn't here, check the 2027 list further down. 24 more towns are in that pipeline.
 
-How to read the table: the **general rate** is dollars of tax per $100 of assessed value. The **effective rate** is your taxes as a percentage of true market value, which makes it the number a buyer can actually use. The last column is that effective rate applied to $1,000,000 of purchase price. Scale it to your price. These are 2025 certified rates, and I'll swap in the 2026 rates the day they publish.
+How to read the table: the **general rate** is dollars of tax per $100 of assessed value. The **effective rate** is your taxes as a percentage of true market value, which makes it the number a buyer can actually use. The last column is that effective rate applied to $1,000,000 of purchase price, rounded to the nearest $100. Scale it to your price. These are 2025 certified rates, and I'll swap in the 2026 rates the day they publish.
 
-| Town | What's happening | 2025 general rate | 2025 effective rate | Rough buyer estimate (per $1M of price) |
+| Town | What's happening | 2025 general rate | 2025 effective rate | Rough bill on $1M |
 |---|---|---|---|---|
 | Allendale | Reassessment | 2.030 | 1.971 | ~$19,700/yr |
 | Carlstadt | Reassessment | 1.705 | 1.681 | ~$16,800/yr |
