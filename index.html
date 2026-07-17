@@ -370,26 +370,24 @@
 
   <section class="section" id="towns">
     <div class="section-label">Bergen County town directory</div>
-    <div class="town-intro">
+    <div style="display:grid;gap:32px;align-items:center;" class="towns-teaser">
       <div>
         <h2 class="section-title">Every town in Bergen County: explored.</h2>
-        <p style="font-size:15px; color:var(--gray-mid); line-height:1.75; margin-top:14px;">
-          Commute times, school ratings, housing stock, food, parks, and my honest take
-          on what living there actually feels like. Towns marked with a Guide badge have a full video tour.
+        <p style="font-size:15px; color:var(--gray-mid); line-height:1.75; margin-top:14px; max-width:520px;">
+          Monthly market reports for all 70 towns, built from real closed sales, plus my honest take on what living there actually feels like.
         </p>
-      </div>
-      <div>
-        <div class="town-search">
+        <div class="town-search" style="margin-top:22px; max-width:420px; position:relative;">
           <span class="town-search-icon">&#9906;</span>
-          <input type="text" id="townSearch" placeholder="Search a Bergen County town..." oninput="filterTowns(this.value)" />
-        </div>
-        <div class="legend">
-          <div class="legend-item"><span class="town-badge badge-guide">Guide</span>&nbsp;Video guide available</div>
+          <input type="text" id="townSearch" placeholder="Type your town..." oninput="suggestTowns(this.value)" autocomplete="off" />
+          <div id="townSuggest" style="position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid var(--gray-light);border-top:none;border-radius:0 0 6px 6px;z-index:30;display:none;box-shadow:0 8px 20px rgba(0,0,0,0.07);"></div>
         </div>
       </div>
+      <a href="/towns/" style="display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--gray-light);border-radius:10px;padding:20px 22px;max-width:420px;">
+        <img src="/assets/bergen-county-map.svg" alt="Clickable map of all 70 Bergen County towns" style="width:100%;max-height:300px;object-fit:contain;" loading="lazy">
+        <span style="display:inline-block;margin-top:14px;color:#E2001A;font-size:15px;font-weight:500;">Browse all 70 towns on the county map &rarr;</span>
+      </a>
     </div>
-    <p style="margin:0 0 18px;"><a href="/towns/" style="color:#E2001A;font-weight:500;text-decoration:none;font-size:15px;">Browse all 70 towns on the county map &rarr;</a></p>
-    <div id="townsDirectory"></div>
+    <style>@media (min-width:880px){ .towns-teaser{ grid-template-columns: 1fr 1fr; } }</style>
   </section>
 
   <section class="section" id="content">
@@ -427,43 +425,14 @@
       .home-blog-date{font-size:12px;color:#767676;white-space:nowrap;}
       .home-blog-title{font-size:15px;font-weight:500;}
     </style>
-    <div class="content-grid">
-      <div class="content-card" onclick="window.open('https://www.youtube.com/watch?v=QJA87GXY4Y4','_blank')" style="cursor:pointer;">
-        <div class="content-type">Bergen County overview &middot; YouTube</div>
-        <div class="content-title">A fresh perspective on Bergen County: all 6 sections unpacked so you know exactly where to focus your search</div>
-        <div class="content-desc">Southwest, Southeast, Central, Northern Valley, Pascack Valley, and Northwest: what each region feels like, costs, and who it&rsquo;s best for.</div>
-        <div class="content-arrow">&#8594;</div>
+    <div class="home-blog" style="margin-top:8px;">
+      <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:600;margin-bottom:14px;">Town guides and walkthroughs on YouTube</h3>
+      <div style="display:grid;gap:10px;">
+        <a class="home-blog-card" href="https://www.youtube.com/watch?v=QJA87GXY4Y4" target="_blank" rel="noopener"><span class="home-blog-date">County overview</span><span class="home-blog-title">A fresh perspective on Bergen County: all 6 sections unpacked</span></a>
+        <a class="home-blog-card" href="https://www.youtube.com/watch?v=hgECvV24r9A" target="_blank" rel="noopener"><span class="home-blog-date">21K views</span><span class="home-blog-title">10 things to know before moving to Fort Lee, NJ</span></a>
+        <a class="home-blog-card" href="https://www.youtube.com/watch?v=OBA-PoC5fN8" target="_blank" rel="noopener"><span class="home-blog-date">6.3K views</span><span class="home-blog-title">The 7 most affordable towns in Bergen County</span></a>
       </div>
-      <div class="content-card" onclick="window.open('https://www.youtube.com/watch?v=hgECvV24r9A','_blank')" style="cursor:pointer;">
-        <div class="content-type">Town guide &middot; YouTube &middot; 21K views</div>
-        <div class="content-title">10 things to know before moving to Fort Lee, NJ: Bergen County&rsquo;s most-watched town guide</div>
-        <div class="content-desc">The GWB commute, Hudson Lights, the restaurant scene, school districts, and what Fort Lee living actually costs in 2025.</div>
-        <div class="content-arrow">&#8594;</div>
-      </div>
-      <div class="content-card" onclick="window.open('https://www.youtube.com/watch?v=OBA-PoC5fN8','_blank')" style="cursor:pointer;">
-        <div class="content-type">Buyer education &middot; YouTube &middot; 6.3K views</div>
-        <div class="content-title">The 7 most affordable towns in Bergen County: and why they&rsquo;re better than their price tag suggests</div>
-        <div class="content-desc">Median prices under $500K, solid NYC commutes, and real inventory. If you think Bergen County is out of reach, watch this first.</div>
-        <div class="content-arrow">&#8594;</div>
-      </div>
-      <div class="content-card" onclick="window.open('https://www.youtube.com/watch?v=oAgDr9P0E7s','_blank')" style="cursor:pointer;">
-        <div class="content-type">NYC commuters &middot; YouTube &middot; 5.2K views</div>
-        <div class="content-title">3 incredible NYC commuter towns in Bergen County: 25 minutes to Midtown with space to breathe</div>
-        <div class="content-desc">The towns NYC transplants keep choosing, why the commute works, and what you actually get for your money compared to the city.</div>
-        <div class="content-arrow">&#8594;</div>
-      </div>
-      <div class="content-card" onclick="window.open('https://www.youtube.com/watch?v=QYzn4SaLf0Q','_blank')" style="cursor:pointer;">
-        <div class="content-type">Step-by-step guide &middot; YouTube</div>
-        <div class="content-title">How to buy a house in New Jersey: a complete step-by-step guide for first-time buyers</div>
-        <div class="content-desc">From pre-approval to closing day, everything you need to know about the NJ homebuying process explained in plain English.</div>
-        <div class="content-arrow">&#8594;</div>
-      </div>
-      <div class="content-card" onclick="window.open('https://www.youtube.com/watch?v=aX46CJASNps','_blank')" style="cursor:pointer;">
-        <div class="content-type">Market update &middot; YouTube &middot; 2025</div>
-        <div class="content-title">Is Bergen County still a hot market in 2025?: honest real estate update with real numbers</div>
-        <div class="content-desc">Inventory levels, pricing trends, and what buyers and sellers should expect in the current Bergen County market.</div>
-        <div class="content-arrow">&#8594;</div>
-      </div>
+      <a href="https://www.youtube.com/@bergencountyrealestate" target="_blank" rel="noopener" style="display:inline-block;margin-top:12px;color:#E2001A;font-size:14px;font-weight:500;text-decoration:none;">More on YouTube &rarr;</a>
     </div>
   </section>
 
@@ -670,35 +639,30 @@
       return `/${slug}-real-estate/`;
     }
 
-    function renderDirectory(query) {
-      const container = document.getElementById('townsDirectory');
-      let html = ''; let anyResults = false;
-      regions.forEach(region => {
-        const filtered = query
-          ? region.towns.filter(t => t.name.toLowerCase().includes(query.toLowerCase()))
-          : region.towns;
-        if (!filtered.length) return;
-        anyResults = true;
-        html += `<div class="region-block">
-          <div class="region-title">${region.name}</div>
-          <div class="towns-grid">
-            ${filtered.map(t => {
-              const url = t.pageUrl || townPageUrl(t.name);
-              return `
-              <div class="town-item" onclick="window.location.href='${url}'">
-                <div class="town-name">${t.name}</div>
-                <div class="town-badges">${t.guide ? '<span class="town-badge badge-guide">Guide</span>' : ''}</div>
-              </div>`;
-            }).join('')}
-          </div>
-        </div>`;
-      });
-      if (!anyResults) html = '<p style="color:var(--gray-mid);font-size:14px;padding:24px 0;">No towns found.</p>';
-      container.innerHTML = html;
-    }
+    var allTowns = [];
+    regions.forEach(function (r) { r.towns.forEach(function (t) { allTowns.push(t); }); });
+    allTowns.sort(function (a, b) { return a.name.localeCompare(b.name); });
 
-    function filterTowns(q) { renderDirectory(q); }
-    renderDirectory();
+    function suggestTowns(q) {
+      var box = document.getElementById('townSuggest');
+      if (!box) return;
+      q = (q || '').trim().toLowerCase();
+      if (!q) { box.style.display = 'none'; box.innerHTML = ''; return; }
+      var hits = allTowns.filter(function (t) { return t.name.toLowerCase().indexOf(q) !== -1; }).slice(0, 6);
+      if (!hits.length) {
+        box.innerHTML = '<div style="padding:12px 14px;font-size:14px;color:var(--gray-mid);">No Bergen County town by that name.</div>';
+      } else {
+        box.innerHTML = hits.map(function (t) {
+          var url = t.pageUrl || townPageUrl(t.name);
+          return '<a href="' + url + '" style="display:block;padding:11px 14px;font-size:15px;color:var(--black);text-decoration:none;border-top:1px solid var(--gray-light);">' + t.name + '</a>';
+        }).join('');
+      }
+      box.style.display = 'block';
+    }
+    document.addEventListener('click', function (e) {
+      var box = document.getElementById('townSuggest');
+      if (box && !e.target.closest('.town-search')) { box.style.display = 'none'; }
+    });
   </script>
 <script src="/js/fub-submit.js"></script>
 <script src="/js/address-first.js"></script>
