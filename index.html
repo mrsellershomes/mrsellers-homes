@@ -75,7 +75,7 @@
     .hero-badge span { color: var(--gray-mid); font-size: 11px; }
 
     /* SECTIONS */
-    .section { padding: 72px 40px; border-bottom: 1px solid var(--gray-light); }
+    .section { padding: 56px 0; border-bottom: 1px solid var(--gray-light); }
     .section-label { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); margin-bottom: 36px; display: flex; align-items: center; gap: 10px; font-weight: 500; }
     .section-label::after { content: ''; flex: 1; height: 1px; background: var(--gray-light); }
     .section-title { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 500; line-height: 1.15; color: var(--black); }
@@ -222,7 +222,7 @@
       .hero-left { padding: 40px 20px; border-right: none; border-bottom: 1px solid var(--gray-light); }
       .hero-right { height: 420px; max-height: 420px; }
       .hero-headline { font-size: 38px; }
-      .section { padding: 48px 20px; }
+      .section { padding: 48px 0; }
       .why-grid { grid-template-columns: 1fr; gap: 32px; }
       .promise-grid { grid-template-columns: 1fr; }
       .reviews-grid { grid-template-columns: 1fr; }
@@ -297,7 +297,7 @@
 </div>
 
 <!-- HERO: split layout, address ask on the left, portrait on the right -->
-<header id="sell" class="max-w-6xl mx-auto px-6 pt-12 md:pt-16 pb-6 md:pb-14 grid gap-8 md:grid-cols-[8fr_4fr] md:gap-12 items-center">
+<header id="sell" class="max-w-6xl mx-auto px-6 pt-12 md:pt-16 pb-6 md:pb-10 grid gap-8 md:grid-cols-[8fr_4fr] md:gap-12 items-center">
   <div class="text-center md:text-left">
     <p class="text-brand text-[11px] md:text-sm font-medium tracking-[0.09em] md:tracking-[0.15em] uppercase mb-4 whitespace-nowrap">Tyler Sellers &middot; RE/MAX &middot; Bergen County</p>
     <h1 class="font-serif font-semibold leading-[1.08] text-[clamp(34px,4.4vw,52px)]">Sell your home in <span class="whitespace-nowrap">today&rsquo;s market?</span><br>Or wait it out?</h1>
@@ -328,7 +328,7 @@
   <!-- Portrait: framed profile, not floating avatar -->
   <div class="max-w-[360px] mx-auto md:max-w-[300px] w-full">
     <div class="relative">
-      <img src="/tyler-sellers.jpg" alt="Tyler Sellers, Bergen County realtor" class="relative z-10 w-full rounded-lg object-cover shadow-sm">
+      <img src="/tyler-sellers.jpg" alt="Tyler Sellers, Bergen County realtor" class="relative z-10 w-full rounded-lg object-cover shadow-sm" style="-webkit-mask-image:linear-gradient(to bottom,black 88%,transparent 100%);mask-image:linear-gradient(to bottom,black 88%,transparent 100%);">
       <div class="absolute rounded-lg border-2 border-brand z-0" style="inset:14px -14px -14px 14px"></div>
     </div>
     <p class="mt-5 md:mt-7 text-sm text-neutral-600 leading-snug text-center md:text-left"><strong class="block font-serif text-lg text-ink font-semibold mb-0.5">Tyler Sellers</strong>Bergen County born and based. Reads the economy and the local housing market so you don&rsquo;t have to guess.</p>
@@ -337,7 +337,7 @@
 
 <!-- How it works: 3 steps (process, distinct from the stat tape) -->
 <section class="border-y border-rule bg-white">
-  <div class="max-w-4xl mx-auto grid gap-4 sm:gap-6 sm:grid-cols-3 px-6 py-7 md:py-10">
+  <div class="max-w-6xl mx-auto grid gap-4 sm:gap-6 sm:grid-cols-3 px-6 py-7 md:py-8">
     <div class="flex gap-3"><span class="font-serif text-2xl font-semibold text-brand leading-none">1</span><p class="text-sm text-neutral-600"><strong class="block text-ink font-semibold">Enter your address.</strong>It really is that simple.</p></div>
     <div class="flex gap-3"><span class="font-serif text-2xl font-semibold text-brand leading-none">2</span><p class="text-sm text-neutral-600"><strong class="block text-ink font-semibold">Tyler does the research.</strong>Real analysis based on recent local sales, never an algorithm.</p></div>
     <div class="flex gap-3"><span class="font-serif text-2xl font-semibold text-brand leading-none">3</span><p class="text-sm text-neutral-600"><strong class="block text-ink font-semibold">Get your home&rsquo;s value.</strong>Delivered within a day. No obligation, no annoying sales calls.</p></div>
@@ -346,9 +346,9 @@
 
 <!-- Why me: the economy angle, short -->
 <section class="bg-[#f5f0e8]">
-  <div class="max-w-3xl mx-auto px-5 pt-12 pb-10 md:py-20">
+  <div class="max-w-6xl mx-auto px-6 pt-12 pb-10 md:py-16">
   <h2 class="font-serif text-[clamp(24px,6.8vw,30px)] md:text-4xl font-semibold leading-tight">The market decides your price.<br>I make sure you&rsquo;re not surprised by it.</h2>
-  <p class="mt-4 text-neutral-600 leading-relaxed">Rates, inventory, and the economy set your number before a buyer ever walks in. I publish what I see monthly, town by town. Check my homework before you trust me with your house.</p>
+  <p class="mt-4 text-neutral-600 leading-relaxed max-w-[60ch]">Rates, inventory, and the economy set your number before a buyer ever walks in. I publish what I see monthly, town by town. Check my homework before you trust me with your house.</p>
   <div class="mt-6 flex flex-col sm:flex-row gap-3">
     <a href="#towns" class="border border-ink rounded px-5 py-3 text-sm font-medium text-center sm:text-left hover:border-brand hover:text-brand">Read your town&rsquo;s market report</a>
     <a href="/blog/" class="border border-ink rounded px-5 py-3 text-sm font-medium text-center sm:text-left hover:border-brand hover:text-brand">The Sellers&rsquo; Take blog</a>
@@ -358,7 +358,7 @@
 
 <!-- Buyer lane: present, secondary -->
 <section class="bg-white border-y border-rule" id="buy">
-  <div class="max-w-3xl mx-auto px-5 py-10 md:flex items-center justify-between gap-8">
+  <div class="max-w-6xl mx-auto px-6 py-10 md:flex items-center justify-between gap-8">
     <div>
       <h3 class="font-serif text-[clamp(20px,5.9vw,24px)] md:text-2xl font-semibold leading-snug">Buying in <span class="whitespace-nowrap">Bergen County?</span><br>Get answers before you get pressured.</h3>
       <p class="text-neutral-600 text-sm mt-1">What you can actually afford here, which towns fit, whether waiting serves you. Answers first. Then comes the hunt.</p>
@@ -369,6 +369,7 @@
 
 
   <section class="section" id="towns">
+    <div class="max-w-6xl mx-auto px-6">
     <div class="section-label">Bergen County town directory</div>
     <div style="display:grid;gap:32px;align-items:center;" class="towns-teaser">
       <div>
@@ -376,21 +377,26 @@
         <p style="font-size:15px; color:var(--gray-mid); line-height:1.75; margin-top:14px; max-width:520px;">
           Monthly market reports for all 70 towns, built from real closed sales, plus my honest take on what living there actually feels like.
         </p>
-        <div class="town-search" style="margin-top:22px; max-width:420px; position:relative;">
+
+      </div>
+      <div style="background:#fff;border:1px solid var(--gray-light);border-radius:10px;padding:18px 20px;max-width:440px;">
+        <div class="town-search" style="position:relative;margin-bottom:14px;">
           <span class="town-search-icon">&#9906;</span>
           <input type="text" id="townSearch" placeholder="Type your town..." oninput="suggestTowns(this.value)" autocomplete="off" />
           <div id="townSuggest" style="position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid var(--gray-light);border-top:none;border-radius:0 0 6px 6px;z-index:30;display:none;box-shadow:0 8px 20px rgba(0,0,0,0.07);"></div>
         </div>
+        <a href="/towns/" style="display:block;text-decoration:none;color:inherit;">
+          <img src="/assets/bergen-county-map.svg" alt="Clickable map of all 70 Bergen County towns" style="width:100%;max-height:280px;object-fit:contain;" loading="lazy">
+          <span style="display:inline-block;margin-top:12px;color:#E2001A;font-size:15px;font-weight:500;">Browse all 70 towns on the county map &rarr;</span>
+        </a>
       </div>
-      <a href="/towns/" style="display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--gray-light);border-radius:10px;padding:20px 22px;max-width:420px;">
-        <img src="/assets/bergen-county-map.svg" alt="Clickable map of all 70 Bergen County towns" style="width:100%;max-height:300px;object-fit:contain;" loading="lazy">
-        <span style="display:inline-block;margin-top:14px;color:#E2001A;font-size:15px;font-weight:500;">Browse all 70 towns on the county map &rarr;</span>
-      </a>
     </div>
     <style>@media (min-width:880px){ .towns-teaser{ grid-template-columns: 1fr 1fr; } }</style>
+    </div>
   </section>
 
   <section class="section" id="content">
+    <div class="max-w-6xl mx-auto px-6">
     <div class="section-label">Bergen County knowledge</div>
     <div style="margin-bottom:32px;">
       <h2 class="section-title">Every town. Every school. Every street.</h2>
@@ -406,14 +412,17 @@
   <a class="home-blog-card" href="/blog/bergen-county-property-tax-revaluations-2026/">
     <span class="home-blog-date">2026-07-14</span>
     <span class="home-blog-title">Bergen County 2026 Property Tax Revaluations: Every Town on the List (and What It Means for Your Bill)</span>
+    <span class="home-blog-arrow">&rarr;</span>
   </a>
   <a class="home-blog-card" href="/blog/bergen-county-seller-closing-costs-2026/">
     <span class="home-blog-date">2026-07-13</span>
     <span class="home-blog-title">Bergen County Seller Closing Costs 2026: Every Line Item</span>
+    <span class="home-blog-arrow">&rarr;</span>
   </a>
   <a class="home-blog-card" href="/blog/nj-attorney-review-explained/">
     <span class="home-blog-date">2026-07-11</span>
     <span class="home-blog-title">What Attorney Review Actually Means in NJ</span>
+    <span class="home-blog-arrow">&rarr;</span>
   </a>
 <!-- blog-latest:end -->
       </div>
@@ -424,23 +433,26 @@
       .home-blog-card:hover{border-color:#E2001A;}
       .home-blog-date{font-size:12px;color:#767676;white-space:nowrap;}
       .home-blog-title{font-size:15px;font-weight:500;}
+      .home-blog-arrow{margin-left:auto;color:#1a1a1a;font-size:16px;flex-shrink:0;align-self:center;}
+      .home-blog-card:hover .home-blog-arrow{color:#E2001A;}
     </style>
     <div class="home-blog" style="margin-top:8px;">
       <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:600;margin-bottom:14px;">Town guides and walkthroughs on YouTube</h3>
       <div style="display:grid;gap:10px;">
-        <a class="home-blog-card" href="https://www.youtube.com/watch?v=QJA87GXY4Y4" target="_blank" rel="noopener"><span class="home-blog-date">County overview</span><span class="home-blog-title">A fresh perspective on Bergen County: all 6 sections unpacked</span></a>
-        <a class="home-blog-card" href="https://www.youtube.com/watch?v=hgECvV24r9A" target="_blank" rel="noopener"><span class="home-blog-date">21K views</span><span class="home-blog-title">10 things to know before moving to Fort Lee, NJ</span></a>
-        <a class="home-blog-card" href="https://www.youtube.com/watch?v=OBA-PoC5fN8" target="_blank" rel="noopener"><span class="home-blog-date">6.3K views</span><span class="home-blog-title">The 7 most affordable towns in Bergen County</span></a>
+        <a class="home-blog-card" href="https://www.youtube.com/watch?v=QJA87GXY4Y4" target="_blank" rel="noopener"><span class="home-blog-date">County overview</span><span class="home-blog-title">A fresh perspective on Bergen County: all 6 sections unpacked</span><span class="home-blog-arrow">&rarr;</span></a>
+        <a class="home-blog-card" href="https://www.youtube.com/watch?v=hgECvV24r9A" target="_blank" rel="noopener"><span class="home-blog-date">21K views</span><span class="home-blog-title">10 things to know before moving to Fort Lee, NJ</span><span class="home-blog-arrow">&rarr;</span></a>
+        <a class="home-blog-card" href="https://www.youtube.com/watch?v=OBA-PoC5fN8" target="_blank" rel="noopener"><span class="home-blog-date">6.3K views</span><span class="home-blog-title">The 7 most affordable towns in Bergen County</span><span class="home-blog-arrow">&rarr;</span></a>
       </div>
       <a href="https://www.youtube.com/@bergencountyrealestate" target="_blank" rel="noopener" style="display:inline-block;margin-top:12px;color:#E2001A;font-size:14px;font-weight:500;text-decoration:none;">More on YouTube &rarr;</a>
     </div>
+  </div>
   </section>
 
 <!-- Final CTA repeat -->
 <section class="bg-ink text-white">
-  <div class="max-w-3xl mx-auto px-5 py-16 md:py-20 text-center">
+  <div class="max-w-6xl mx-auto px-6 py-16 md:py-20 text-left">
   <h2 class="font-serif text-3xl md:text-4xl font-semibold">Want to run the math on your own house?</h2>
-  <form class="af-form max-w-xl mx-auto mt-8" data-af-source="MrSellers.homes | Homepage | Seller (footer)">
+  <form class="af-form max-w-xl mt-8" data-af-source="MrSellers.homes | Homepage | Seller (footer)">
     <div class="flex flex-col sm:flex-row gap-3">
       <input type="text" name="address" placeholder="Enter your home address" autocomplete="street-address" class="flex-1 border border-neutral-300 bg-white text-ink rounded-md px-4 py-4 text-base focus:outline-brand">
       <button type="submit" class="af-step1-btn bg-brand text-white font-medium rounded-md px-7 py-4 text-base hover:bg-[#c30016]">What&rsquo;s it worth?</button>

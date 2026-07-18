@@ -54,6 +54,7 @@ function updateHomepageModule(outDir, posts, dryRun) {
   const cards = posts.slice(0, 3).map(p => `  <a class="home-blog-card" href="/blog/${p.slug}/">
     <span class="home-blog-date">${p.date}</span>
     <span class="home-blog-title">${p.title.replace(/&/g, '&amp;').replace(/</g, '&lt;')}</span>
+    <span class="home-blog-arrow">&rarr;</span>
   </a>`).join('\n');
   const next = home.slice(0, s + START.length) + '\n' + cards + '\n' + home.slice(e);
   if (!dryRun) writeFileSync(homePath, next);

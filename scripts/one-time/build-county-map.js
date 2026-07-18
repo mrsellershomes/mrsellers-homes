@@ -109,7 +109,7 @@ const shapes = geo.features.map(f => {
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VIEWBOX_W} ${VIEWBOX_H}" role="img" aria-label="Clickable map of all 70 Bergen County towns">
 <style>
-.town-shape { fill: #f5f0e8; stroke: #ffffff; stroke-width: 1.2; transition: fill 0.12s; cursor: pointer; }
+.town-shape { fill: #e9e0cf; stroke: #ffffff; stroke-width: 1.2; transition: fill 0.12s; cursor: pointer; }
 a:hover .town-shape, a:focus .town-shape { fill: #E2001A; }
 </style>
 ${shapes}
