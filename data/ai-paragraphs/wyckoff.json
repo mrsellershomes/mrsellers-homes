@@ -1,21 +1,21 @@
 {
-  "hash": "41a49ed8757fa1d2",
-  "paragraph": "Wyckoff's single-family market is a real seller's market right now. With 75 sales over eight months at a median of $1,275,000, homes are moving fast, many in multiple offer situations. The sale-to-list ratio sits at 1.04, meaning homes are selling above asking more than six out of ten times, and the median days on market is 14. Sellers are dictating terms here, and anything priced competitively will draw serious interest. The condo and townhouse market, by contrast, is sparse with only six sales at a median of $951,400, which makes month-to-month movement harder to read, but the data shows similar seller-friendly conditions: homes selling above asking about two-thirds of the time and moving in roughly two weeks. If you're looking at Wyckoff, understand that single-family is where the volume and liquidity are. The condo tier exists but remains a niche category. The single-family market rewards priced homes with speed and competition, so if you're selling, price accordingly to asking price expectations. If you're buying, you'll need to move decisively and be prepared for multiple offers on anything that hits the market in move-in condition.",
+  "hash": "648f9e201aa06082",
+  "paragraph": "Wyckoff is solidly a single-family market. Fifty-one homes sold over six months at a median of $1,315,000, and this is a real seller's market. Nearly 59 percent of homes sold above asking, the sale-to-list ratio sits at 1.0375, and the median days on market is fourteen. Sellers are dictating terms, and homes priced right are moving fast. You'll see sales cycle through in under three weeks on average, with the quickest deals closing in six days. There's enough range in the market to matter. The low end dips below $600,000, while the high end reaches $3.3 million, so you're not locked into a narrow price band. A small condo and townhouse segment exists with five sales at a median of $952,800, but the volume is thin enough that single-family is really the story here. If you're house hunting in Wyckoff right now, understand that competition is real. The homes that hit the market properly priced don't stay available long, and buyers without a firm offer ready when they find the right property are going to lose out to someone who does.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "Wyckoff's single-family market is a real seller's market right now. With 75 sales over eight months at a median of $1,275,000, homes are moving fast, many in multiple offer situations. The sale-to-list ratio sits at 1.04, meaning homes are selling above asking more than six out of ten times, and the median days on market is just 14. Sellers are dictating terms here, and anything priced competitively will draw serious interest. The condo and townhouse market, by contrast, is sparse with only six sales at a median of $951,400, which makes month-to-month movement harder to read, but the data shows similar seller-friendly conditions: homes selling above asking about two-thirds of the time and moving in roughly two weeks. If you're looking at Wyckoff, understand that single-family is where the volume and liquidity are. The condo tier exists but remains a niche category. The single-family market rewards priced homes with speed and competition, so if you're selling, price accordingly to the ask. If you're buying, you'll need to move decisively and be prepared for multiple offers on anything that hits the market in move-in condition.",
+  "firstDraft": "Wyckoff is solidly a single-family market. Fifty-one homes sold over six months at a median of $1,315,000, and this is a real seller's market. Nearly 59 percent of homes sold above asking, the sale-to-list ratio sits at 1.0375, and the median days on market is just fourteen. Sellers are dictating terms, and homes priced right are moving fast. You'll see sales cycle through in under three weeks on average, with the quickest deals closing in six days. There's enough range in the market to matter. The low end dips below $600,000, while the high end reaches $3.3 million, so you're not locked into a narrow price band. A small condo and townhouse segment exists with five sales at a median of $952,800, but the volume is thin enough that single-family is really the story here. If you're house hunting in Wyckoff right now, understand that competition is real. The homes that hit the market properly priced don't stay available long, and buyers without a firm offer ready when they find the right property are going to lose out to someone who does.",
   "usage": {
-    "input_tokens": 3810,
+    "input_tokens": 3651,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 268,
+    "output_tokens": 257,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:21:08.559Z"
+  "generatedAt": "2026-07-19T15:28:45.063Z"
 }

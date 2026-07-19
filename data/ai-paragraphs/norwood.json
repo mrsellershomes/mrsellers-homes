@@ -1,21 +1,21 @@
 {
-  "hash": "82778ea5466027c2",
-  "paragraph": "Single-family homes in Norwood are moving at a median price of $916,550 with a sale-to-list ratio of 0.99 and a median of 25.5 days on market. About 41 percent of homes sold above asking, which means priced homes are moving and sellers aren't necessarily waiting months for the perfect offer. The spread between median and average sale price tells you the market includes everything from $600,000 starter homes to high-end properties over $3.8 million, so your competition depends heavily on where you're looking within that range. Condos and townhouses are smaller in volume with 12 sales over eight months at a median of $737,500, slightly above the median list price and a full 1.0 sale-to-list ratio. Median days on market sits at 32.5, a touch slower than single-family, which suggests these units require a bit more patience to sell even when priced fairly. If you're deciding between tiers, the single-family market offers more inventory and tighter timing, while condos give you a lower entry point and the option of a smaller footprint.",
+  "hash": "d3652edfa3a64f75",
+  "paragraph": "The single-family market in Norwood is competitive but not frenzied, with 26 homes sold over the last six months at a median of $928,500. Sellers are seeing modest success getting their asking prices, with about 46 percent of homes selling above list and a sale-to-list ratio right around 1.0. Median days on market sits at 20, which means priced homes are moving, but there is no urgency pushing buyers to waive inspections or overbid. The range is wide, from $600,000 on the low end to nearly $3.8 million at the top, so the market is genuinely stratified by neighborhood and condition. Condos and townhouses are lighter on volume with 7 sales at a median of $800,000, tracking nearly at asking price with a 28 percent sell-above rate and an 18-day median time on market. The buyer considering Norwood right now has leverage to negotiate, especially if the home needs work or sits in a less competitive pocket. You're not racing against multiple offers on most properties, and sellers know it.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "The single-family market in Norwood is competitive but not frenzied, with 26 homes sold over the last six months at a median of $928,500. Sellers are seeing modest success getting their asking prices, with about 46 percent of homes selling above list and a sale-to-list ratio right around 1.0. Median days on market sits at 20, which means priced homes are moving, but there is no urgency pushing buyers to waive inspections or overbid. The range is wide, from $600,000 on the low end to nearly $3.8 million at the top, so the market is genuinely stratified by neighborhood and condition. Condos and townhouses are lighter on volume with just 7 sales at a median of $800,000, tracking nearly at asking price with a 28 percent sell-above rate and an 18-day median time on market. The buyer considering Norwood right now has leverage to negotiate, especially if the home needs work or sits in a less competitive pocket. You're not racing against multiple offers on most properties, and sellers know it.",
   "usage": {
-    "input_tokens": 3161,
+    "input_tokens": 3499,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 253,
+    "output_tokens": 246,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:18:24.904Z"
+  "generatedAt": "2026-07-19T15:26:08.816Z"
 }

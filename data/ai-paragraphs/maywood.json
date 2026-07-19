@@ -1,21 +1,21 @@
 {
-  "hash": "23cc35c4e875718c",
-  "paragraph": "Maywood's single-family market is moving with real momentum. Twenty-seven homes sold over eight months at a median of $725,000, and nearly 95% of them closed above asking. The sale-to-list ratio is sitting at 1.048, which means sellers are getting their price and then some. Median days on market of 13 tells you that priced-right homes aren't lingering, and when something is positioned competitively, it can be gone in a week or less. This is a genuine seller's market where multiple offer situations are common and negotiating power tilts heavily toward the listing side. The price range is broad, from $505,000 to $1,250,000, so there's room to move depending on what you're looking for, but don't expect to find many deals or test the waters with a lowball offer. If you're a buyer in Maywood right now, you'll need to be ready to move quickly on something you like and price accordingly from day one.",
+  "hash": "2571d006f6743c29",
+  "paragraph": "The single-family market in Maywood is moving briskly. Over the last six months, 21 homes sold at a median price of $750,000, and the vast majority of them closed above asking. The sale-to-list ratio sits at 1.048, and the median time on market is 13 days. That's a competitive market where priced homes are moving and sellers have some leverage. The range tells you something useful: the lowest sale was $529,000 and the highest was $1,250,000, which means there's real variety in what Maywood offers depending on what block you're on and what condition you're willing to accept. Roughly 95 percent of the homes that sold went above their list price, which signals that either sellers are pricing with restraint or the inventory is tight enough that buyers are willing to bid up for the right property. If you're looking at single-family homes in Bergen County and you've narrowed it to Maywood, the market conditions are straightforward: homes that are competitively priced will draw interest and move quickly, but you'll need to be ready to move fast yourself if you find something you want.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "The single-family market in Maywood is moving briskly. Over the last six months, 21 homes sold at a median price of $750,000, and the vast majority of them closed above asking. The sale-to-list ratio sits at 1.048, and the median time on market is just 13 days. That's a competitive market where priced homes are moving and sellers have some leverage. The range tells you something useful: the lowest sale was $529,000 and the highest was $1,250,000, which means there's real variety in what Maywood offers depending on what block you're on and what condition you're willing to accept. Roughly 95 percent of the homes that sold went above their list price, which signals that either sellers are pricing with restraint or the inventory is tight enough that buyers are willing to bid up for the right property. If you're looking at single-family homes in Bergen County and you've narrowed it to Maywood, the market conditions are straightforward: homes that are competitively priced will draw interest and move quickly, but you'll need to be ready to move fast yourself if you find something you want.",
   "usage": {
-    "input_tokens": 2911,
+    "input_tokens": 3281,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 221,
+    "output_tokens": 255,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:17:46.660Z"
+  "generatedAt": "2026-07-19T15:25:35.752Z"
 }

@@ -1,21 +1,21 @@
 {
-  "hash": "3473e54d7e9c9557",
-  "paragraph": "Washington Township's single-family market is where the volume is, with 47 sales over eight months at a median of $820,000. Sellers are dictating terms here, with homes selling at a sale-to-list ratio of 1.08 and over 72 percent of sales closing above asking price. The median days on market sits at 14 days, which means priced homes are moving fast and multiple offer situations are common. You'll see the range climb toward $1.7 million at the high end, but the bulk of activity clusters in the $750,000 to $900,000 band. Condo and townhouse inventory is sparse by comparison, with only 10 sales at a median of $737,500. These units are priced competitively relative to single-family homes on a per-dollar basis, and while the sale-to-list ratio is healthy at 1.02, the median days on market runs longer at 21 or 22 days. If you're deciding between property types in Washington Township, it comes down to what you want: the space and grounds of a single-family home, or the lower maintenance profile of a condo or townhouse. The single-family market won't wait for you, so if that's your target, pricing realistically from day one matters.",
+  "hash": "dee773b22d959056",
+  "paragraph": "Single-family homes dominate Washington Township's market with 35 sales over six months at a median of $850,000, and this is a real seller's market. Homes are selling above asking over 77 percent of the time, the sale-to-list ratio sits at 1.09, and the median time on market is 14 days. Sellers are dictating terms here, and if your home is priced right and in move-in condition, you'll likely see multiple offers. The range is wide, from $540,000 to $1.71 million, which tells you the township spans everything from solid starter homes to significant estate properties. Condos and townhouses are a smaller slice with 8 sales at a median of $742,500, also moving fast at 14 days on market with 88 percent selling above asking. The sale-to-list ratio of 1.05 confirms this tier is competitive as well. If you're deciding between a single-family home and a condo in Washington Township, the market heat isn't the differentiator. It's whether you want the space and grounds of a single-family or the low-maintenance lifestyle of a condo.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "Washington Township's single-family market is where the volume is, with 47 sales over eight months at a median of $820,000. Sellers are dictating terms here, with homes selling at a sale-to-list ratio of 1.08 and over 72 percent of sales closing above asking price. The median days on market sits at just 14 days, which means priced homes are moving fast and multiple offer situations are common. You'll see the range climb toward $1.7 million at the high end, but the bulk of activity clusters in the $750,000 to $900,000 band. Condo and townhouse inventory is sparse by comparison, with only 10 sales at a median of $737,500. These units are priced competitively relative to single-family homes on a per-dollar basis, and while the sale-to-list ratio is healthy at 1.02, the median days on market runs longer at 21 or 22 days. If you're deciding between property types in Washington Township, it comes down to what you want: the space and grounds of a single-family home, or the lower maintenance profile of a condo or townhouse. The single-family market won't wait for you, so if that's your target, pricing realistically from day one matters.",
+  "firstDraft": "Single-family homes dominate Washington Township's market with 35 sales over six months at a median of $850,000, and this is a real seller's market. Homes are selling above asking over 77 percent of the time, the sale-to-list ratio sits at 1.09, and the median time on market is just 14 days. Sellers are dictating terms here, and if your home is priced right and in move-in condition, you'll likely see multiple offers. The range is wide, from $540,000 to $1.71 million, which tells you the township spans everything from solid starter homes to significant estate properties. Condos and townhouses are a smaller slice with 8 sales at a median of $742,500, also moving fast at 14 days on market with 88 percent selling above asking. The sale-to-list ratio of 1.05 confirms this tier is competitive as well. If you're deciding between a single-family home and a condo in Washington Township, the market heat isn't the differentiator. It's whether you want the space and grounds of a single-family or the lower maintenance profile of a condo.",
   "usage": {
-    "input_tokens": 3657,
+    "input_tokens": 3557,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 288,
+    "output_tokens": 262,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:20:50.545Z"
+  "generatedAt": "2026-07-19T15:28:23.259Z"
 }

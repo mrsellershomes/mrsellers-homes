@@ -1,21 +1,21 @@
 {
-  "hash": "51f37aaa83ff2f93",
-  "paragraph": "Westwood is a single-family market with a small condo and townhouse tier sitting below it. The single-family market is moving fast, with 29 sales over eight months at a median of $713,000. Sellers are dictating terms here: nearly 80 percent of homes sold above asking, the sale-to-list ratio sits at 1.06, and the median time on market is 14 days. This is a real seller's market. Multiple offer situations are common, and if you're not prepared to move quickly on the right property, you'll likely miss it. The condo and townhouse category, by contrast, is softer. Seven sales at a median of $381,000 show much lighter volume, a sale-to-list ratio at 1.0, and only 43 percent selling above asking. Median days on market of 17 days remains reasonably quick, but the pricing power and urgency are nowhere near the single-family tier. If you're comparing the two, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home, where you'll face real competition, or the lower price point and potentially easier negotiating position of a condo or townhouse.",
+  "hash": "cdb4688db3f6b561",
+  "paragraph": "Single-family homes in Westwood are moving fast and selling well above asking. The median price sits at $750,000 with a sale-to-list ratio of 1.09, meaning homes are fetching roughly 9 percent above list price on average. Nearly 90 percent of homes sold above asking, and the median days on market of 12 tells you sellers are dictating terms here. Seventeen sales over six months shows steady volume for a town this size. By contrast, the condo and townhouse tier is quieter with only six sales at a median of $390,500, though homes still sell slightly above list at a 1.01 ratio. That smaller volume means less room to cherry-pick, so if a condo catches your eye and fits your timeline, don't assume you have endless negotiating power. If you're comparing the two tiers in Westwood, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home or the low-maintenance lifestyle and lower price point of a condo.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "Westwood is a single-family market with a small condo and townhouse tier sitting below it. The single-family market is moving fast, with 29 sales over eight months at a median of $713,000. Sellers are dictating terms here: nearly 80 percent of homes sold above asking, the sale-to-list ratio sits at 1.06, and the median time on market is just 14 days. This is a real seller's market. Multiple offer situations are common, and if you're not prepared to move quickly on the right property, you'll likely miss it. The condo and townhouse category, by contrast, is softer. Seven sales at a median of $381,000 show much lighter volume, a sale-to-list ratio right at 1.0, and only 43 percent selling above asking. Median days on market of 17 days is still reasonably quick, but the pricing power and urgency are nowhere near the single-family tier. If you're comparing the two, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home, where you'll face real competition, or the lower price point and potentially easier negotiating position of a condo or townhouse.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3536,
+    "input_tokens": 3050,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 272,
+    "output_tokens": 232,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:20:56.021Z"
+  "generatedAt": "2026-07-19T15:28:27.201Z"
 }

@@ -1,21 +1,21 @@
 {
-  "hash": "a4319363c895b741",
-  "paragraph": "Single-family homes dominate the Rochelle Park market, with 30 sales over the last eight months at a median of $660,000. About 73 percent of homes sold above asking, and the median days on market sits at 15.5, which puts this in competitive but balanced territory. Sellers aren't dictating terms, but priced homes are moving steadily, and you'll see multiple offer situations on well-maintained properties. The sale-to-list ratio of 1.02 confirms homes are hitting or slightly exceeding their list price. Multi-family properties are sparse, with only three sales at a median of $750,000, so this category isn't a meaningful part of the local market. Condos and townhouses, by contrast, move slower. Six sales at a median of $480,000 over eight months, with a median days on market of 28.5 and a sale-to-list ratio near parity at 0.99. Only one third sold above asking, which signals that buyers have more room to negotiate in this tier. If you're focused on Rochelle Park, the single-family market is where the activity is, and it's competitive enough that you'll want to move decisively on anything that meets your criteria.",
+  "hash": "c6c89e457cbc7395",
+  "paragraph": "The single-family market in Rochelle Park is moving decisively in sellers' favor. Eighteen homes sold over six months at a median of $680,000, and the vast majority are closing above asking, with a sale-to-list ratio of 1.053 and a median of 11 days on market. Nearly 89 percent of sales exceeded list price, which signals real competition among buyers when a home hits the market. Prices range from $560,000 to $1,170,000, giving the market some breadth, though the median sits solidly in the mid-range. The speed of sales and frequency of above-asking results tells you that sellers are dictating terms here. Homes priced competitively aren't sitting around. If you're selling, you're in a position to be selective. If you're buying in Rochelle Park, you'll need to move decisively and come prepared to compete.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "Single-family homes dominate the Rochelle Park market, with 30 sales over the last eight months at a median of $660,000. About 73 percent of homes sold above asking, and the median days on market sits at 15.5, which puts this in competitive but balanced territory. Sellers aren't dictating terms, but priced homes are moving steadily, and you'll see multiple offer situations on well-maintained properties. The sale-to-list ratio of 1.02 confirms homes are hitting or slightly exceeding their list price. Multi-family properties are sparse, with only three sales at a median of $750,000, so this category isn't a meaningful part of the local market. Condos and townhouses, by contrast, move slower. Six sales at a median of $480,000 over eight months, with a median days on market of 28.5 and a sale-to-list ratio just under parity at 0.99. Only one third sold above asking, which signals that buyers have more room to negotiate in this tier. If you're focused on Rochelle Park, the single-family market is where the activity is, and it's competitive enough that you'll want to move decisively on anything that meets your criteria.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3729,
+    "input_tokens": 2871,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 274,
+    "output_tokens": 202,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:19:47.989Z"
+  "generatedAt": "2026-07-19T15:27:27.134Z"
 }

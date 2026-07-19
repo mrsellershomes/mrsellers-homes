@@ -1,21 +1,21 @@
 {
-  "hash": "e30774593e1e9ee4",
-  "paragraph": "Single-family homes dominate Oradell's market, with 29 sales over eight months at a median of $1,025,000. Sellers are dictating terms here. The sale-to-list ratio sits at 1.11, nearly 90 percent of homes sell above asking, and the median days on market clocks in at 13 days. This is a real seller's market, and many multiple offer situations are the norm rather than the exception. Homes priced right move fast; the fastest sale closed in five days. The range is wide, from $605,000 up to $1,665,000, which means you'll find entry points if you're flexible on condition or lot size, but don't expect much negotiating room once you find something in move-in condition. The condo and townhouse market is too thin to read reliably. Only three sales in eight months tells you supply is sparse and buyer interest is limited in this category. If you're looking in Oradell, you're shopping for single-family homes, and you should know going in that you'll be competing for them.",
+  "hash": "3c185534168c6d3e",
+  "paragraph": "Oradell is a single-family market almost entirely. Twenty-five homes sold over the past six months at a median of $1,025,000 against a median list price of $945,000, and sellers are dictating terms. The sale-to-list ratio sits at 1.11, nearly 9 in 10 homes are selling above asking, and the median time on market is 13 days. This is a real seller's market where priced homes move fast and multiple offer situations are common. The price range runs from $740,000 to $1,665,000, so there is some variety in what you can find, but inventory is sparse enough that if you see something that fits what you want, you're competing for it. If you're thinking about selling, you have leverage. If you're buying, you'll need to be prepared to move quickly and understand that negotiating below asking is not the dynamic right now.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "Single-family homes dominate Oradell's market, with 29 sales over eight months at a median of $1,025,000. Sellers are dictating terms here. The sale-to-list ratio sits at 1.11, nearly 90 percent of homes sell above asking, and the median days on market clocks in at just 13 days. This is a real seller's market, and many multiple offer situations are the norm rather than the exception. Homes priced right move fast; the fastest sale closed in five days. The range is wide, from $605,000 up to $1,665,000, which means you'll find entry points if you're flexible on condition or lot size, but don't expect much negotiating room once you find something in move-in condition. The condo and townhouse market is too thin to read reliably. Only three sales in eight months tells you supply is sparse and buyer interest is limited in this category. If you're looking in Oradell, you're shopping for single-family homes, and you should know going in that you'll be competing for them.",
+  "firstDraft": "Oradell is a single-family market almost entirely. Twenty-five homes sold over the past six months at a median of $1,025,000 against a median list price of $945,000, and sellers are dictating terms. The sale-to-list ratio sits at 1.11, nearly 9 in 10 homes are selling above asking, and the median time on market is just 13 days. This is a real seller's market where priced homes move fast and multiple offer situations are common. The price range runs from $740,000 to $1,665,000, so there is some variety in what you can find, but inventory is sparse enough that if you see something that fits what you want, you're competing for it. If you're thinking about selling, you have leverage. If you're buying, you'll need to be prepared to move quickly and understand that negotiating below asking is not the dynamic right now.",
   "usage": {
-    "input_tokens": 3515,
+    "input_tokens": 3256,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 243,
+    "output_tokens": 205,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:18:43.185Z"
+  "generatedAt": "2026-07-19T15:26:26.514Z"
 }

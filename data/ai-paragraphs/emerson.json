@@ -1,21 +1,21 @@
 {
-  "hash": "d8315e13a01f2e76",
-  "paragraph": "Emerson's single-family market is running hot right now. Thirty-five homes sold over the last eight months at a median of $825,000, with nearly two-thirds of them closing above asking price. The sale-to-list ratio sits at 1.03, meaning homes are fetching their price or better, and the median time on market is 16 days. That's a real seller's market. Sellers aren't under pressure to discount, and you're seeing multiple offer situations on homes that are priced right. The range is broad, from $520,000 to $1,240,000, so there's inventory across price points, but the speed at which homes are moving tells you that if you're shopping here, you need to be ready to move fast and you're probably going to face competition. If you're selling, you have leverage right now. If you're buying, you'll want to get your financing lined up and know exactly what you're looking for before you tour.",
+  "hash": "a266718225d4ec18",
+  "paragraph": "The single-family market in Emerson is competitive but not frenzied. Over the last six months, 20 homes sold at a median of $855,000, with a sale-to-list ratio of 1.015 and a median of 18 days on market. Sixty percent of homes sold above asking, which signals genuine buyer interest when inventory is lean, but the price range tells the real story: homes span from $520,000 to $1,240,000, meaning Emerson pulls from multiple buyer tiers. Priced homes are moving, and you'll see some multiple offer situations on well-positioned properties, but sellers can't afford to overprice and wait indefinitely. The market rewards realistic listing strategy. If you're hunting here, focus on condition and location over hoping for bidding wars. This is a place where your realtor's pricing instinct and your flexibility on timing matter more than market momentum.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "Emerson's single-family market is running hot right now. Thirty-five homes sold over the last eight months at a median of $825,000, with nearly two-thirds of them closing above asking price. The sale-to-list ratio sits at 1.03, meaning homes are fetching their price or better, and the median time on market is just 16 days. That's a real seller's market. Sellers aren't under pressure to discount, and you're seeing multiple offer situations on homes that are priced right. The range is broad, from $520,000 to $1,240,000, so there's inventory across price points, but the speed at which homes are moving tells you that if you're shopping here, you need to be ready to move fast and you're probably going to face competition. If you're selling, you have leverage right now. If you're buying, you'll want to get your financing lined up and know exactly what you're looking for before you tour.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3317,
+    "input_tokens": 2867,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 215,
+    "output_tokens": 203,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:16:01.530Z"
+  "generatedAt": "2026-07-19T15:23:27.621Z"
 }

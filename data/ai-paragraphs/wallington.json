@@ -1,21 +1,21 @@
 {
-  "hash": "ebde3f6e9c58df45",
-  "paragraph": "Wallington's single-family market is moving at a measured pace. The median sale price is $684,250 against a median list price of $709,000, which means homes are selling slightly under asking at a sale-to-list ratio of 0.997. About 28 percent of homes sold above list, but that's balanced against many that came in below, and the median time on market sits at 39.5 days. This isn't a market where sellers are dictating terms. Homes that are priced competitively and in good condition will draw interest, but overpriced inventory can linger. Multi-family properties tell a different story. With 16 sales at a median of $762,500 and 69 percent of those homes selling above asking, multi-family is clearly the hotter segment. The sale-to-list ratio here hits 1.016, and days on market average 38, which means investors and owner-occupants are competing for limited supply. If you're weighing Wallington, understand that single-family homes require realistic pricing to move, while multi-family properties are fetching stronger numbers and facing real competition from buyers.",
+  "hash": "28e3ae29130da8c9",
+  "paragraph": "The single-family market in Wallington is showing buyer-friendly signals across the board. Median price is $729,900 on a sale-to-list ratio of 0.99, meaning homes are selling slightly below asking, and the median days on market sits at 38. Only 20 percent of homes sold above list price, which tells you that sellers who price competitively are moving inventory, but there's no urgency pushing buyers to overpay. The range is real though, from $430,000 to $1,275,000, so neighborhood and condition matter significantly. Multi-family properties tell a different story. Ten sales over six months hit a median of $782,500, and here the ratio jumps to 1.04 with 70 percent of homes selling above asking and a median days on market of 18.5. That's a competitive tier where priced homes are moving and buyers are competing for the right property. If you're looking at Wallington, the single-family market gives you room to negotiate and time to be selective, while multi-family moves faster and demands you be ready when you find the right building.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "Wallington's single-family market is moving at a measured pace. The median sale price is $684,250 against a median list price of $709,000, which means homes are selling just under asking at a sale-to-list ratio of 0.997. About 28 percent of homes sold above list, but that's balanced against many that came in below, and the median time on market sits at 39.5 days. This isn't a market where sellers are dictating terms. Homes that are priced competitively and in good condition will draw interest, but overpriced inventory can linger. Multi-family properties tell a different story. With 16 sales at a median of $762,500 and 69 percent of those homes selling above asking, multi-family is clearly the hotter segment. The sale-to-list ratio here hits 1.016, and days on market average 38, which means investors and owner-occupants are competing for limited supply. If you're weighing Wallington, understand that single-family homes require realistic pricing to move, while multi-family properties are fetching stronger numbers and facing real competition from buyers.",
+  "firstDraft": "The single-family market in Wallington is showing buyer-friendly signals across the board. Median price is $729,900 on a sale-to-list ratio of 0.99, meaning homes are selling just slightly below asking, and the median days on market sits at 38. Only 20 percent of homes sold above list price, which tells you that sellers who price competitively are moving inventory, but there's no urgency pushing buyers to overpay. The range is real though, from $430,000 to $1,275,000, so neighborhood and condition matter significantly. Multi-family properties tell a different story. Ten sales over six months hit a median of $782,500, and here the ratio jumps to 1.04 with 70 percent of homes selling above asking and a median days on market of just 18.5. That's a competitive tier where priced homes are moving and buyers are competing for the right property. If you're looking at Wallington, the single-family market gives you room to negotiate and time to be selective, while multi-family moves faster and demands you be ready when you find the right building.",
   "usage": {
-    "input_tokens": 3508,
+    "input_tokens": 3439,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 255,
+    "output_tokens": 250,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:20:43.505Z"
+  "generatedAt": "2026-07-19T15:28:17.518Z"
 }

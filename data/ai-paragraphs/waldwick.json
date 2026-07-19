@@ -1,21 +1,21 @@
 {
-  "hash": "f50494a59df030b5",
-  "paragraph": "Waldwick's single-family market is where the real volume is, with 50 sales over eight months at a median of $662,500. Sellers are dictating terms here. The sale-to-list ratio sits at 1.08, 82 percent of homes are selling above asking, and the median days on market is 12. This is a real seller's market, and priced homes are moving fast. Condo and townhouse activity is lighter at seven sales with a median of $560,000, but these properties are also moving above list at a 1.05 ratio and a median of 18 days on market, so the competitive pressure is real across both tiers. Multi-family investment properties have seen minimal activity with four sales over the period, a median of $1,025,000, and a median of 26 days on market that lags the other categories. If you're a single-family buyer in Waldwick, you'll need to come prepared with competitive offers and realistic expectations on price. If condos or townhouses appeal to you, they're moving, but inventory is sparse and competition is still present.",
+  "hash": "4b1518edbc094fc3",
+  "paragraph": "The single-family market in Waldwick is a real seller's market, with 37 homes selling over the last six months at a median of $685,000. Homes are selling above list 89 percent of the time, the sale-to-list ratio sits at 1.09, and the median time on market is 13 days. Sellers are dictating terms here, and you'll see multiple offer situations on anything priced right. The condo and townhouse tier is smaller with 6 sales at a median of $562,500, but the fundamentals are equally strong: 83 percent of units sold above asking, a 1.05 sale-to-list ratio, and an 18-day median days on market. Multi-family properties are sparse, with 4 sales at a median of $1,025,000 over the period, and they sit in more balanced territory with a 0.98 sale-to-list ratio and a 26-day median. If you're looking at Waldwick, the single-family and condo markets are both moving fast enough that you'll need to be ready to act. The multi-family category is too thin to call a reliable pattern.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "Waldwick's single-family market is where the real volume is, with 50 sales over eight months at a median of $662,500. Sellers are dictating terms here. The sale-to-list ratio sits at 1.08, 82 percent of homes are selling above asking, and the median days on market is just 12. This is a real seller's market, and priced homes are moving fast. Condo and townhouse activity is lighter at seven sales with a median of $560,000, but these properties are also moving above list at a 1.05 ratio and a median of 18 days on market, so the competitive pressure is real across both tiers. Multi-family investment properties have seen minimal activity with just four sales over the period, a median of $1,025,000, and a slightly slower median of 26 days on market. If you're a single-family buyer in Waldwick, you'll need to come prepared with competitive offers and realistic expectations on price. If condos or townhouses appeal to you, they're moving, but inventory is sparse and competition is still present.",
+  "firstDraft": "The single-family market in Waldwick is a real seller's market, with 37 homes selling over the last six months at a median of $685,000. Homes are selling above list 89 percent of the time, the sale-to-list ratio sits at 1.09, and the median time on market is just 13 days. Sellers are dictating terms here, and you'll see multiple offer situations on anything priced right. The condo and townhouse tier is smaller with only 6 sales at a median of $562,500, but the fundamentals are just as strong: 83 percent of units sold above asking, a 1.05 sale-to-list ratio, and a 18-day median days on market. Multi-family properties are sparse, with just 4 sales at a median of $1,025,000 over the period, and they sit in more balanced territory with a 0.98 sale-to-list ratio and a 26-day median. If you're looking at Waldwick, the single-family and condo markets are both moving fast enough that you'll need to be ready to act. The multi-family category is too thin to call a reliable pattern.",
   "usage": {
-    "input_tokens": 3783,
+    "input_tokens": 3752,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 248,
+    "output_tokens": 266,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:20:37.716Z"
+  "generatedAt": "2026-07-19T15:28:10.751Z"
 }

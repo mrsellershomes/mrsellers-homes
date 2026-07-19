@@ -1,21 +1,21 @@
 {
-  "hash": "75452a11420ff816",
-  "paragraph": "The single-family market in Hillsdale is a real seller's market. Fifty-two homes sold over eight months at a median of $870,000, with 67 percent of them closing above asking price and a sale-to-list ratio of 1.045. Median days on market sits at 14 days, which means priced homes are moving fast and sellers are dictating terms. The range spans from $510,000 to $1,750,000, so there's genuine variety in the inventory, but the velocity at the median is what matters here. Buyers looking at Hillsdale are facing multiple offer situations on well-priced properties and will need to move decisively. The condo and townhouse tier is sparse with only three sales over the period, making it difficult to read as a meaningful market segment. If you're shopping in Hillsdale, you're really evaluating single-family homes, and you should expect competition from other buyers and sellers who know their pricing power.",
+  "hash": "185b0dd7f86dfad2",
+  "paragraph": "Hillsdale is a single-family market, and it's a real seller's market right now. Thirty-eight homes sold over six months at a median of $875,000, with 71 percent of them closing above asking price and a median sale-to-list ratio of 1.05. Homes are moving fast, with a median of 14.5 days on market. Many multiple offer situations are happening here, especially on well-priced inventory. Sellers are dictating terms, which means if you're looking to buy, you'll need to move decisively and come prepared. The spread runs wide, from $510,000 to $1,415,000, so there's activity across price points, but the best homes are getting competed for hard. If you're selling, this is your window to price strategically and let the market work for you. If you're buying, understand that patience comes at a cost in this environment.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "The single-family market in Hillsdale is a real seller's market. Fifty-two homes sold over eight months at a median of $870,000, with 67 percent of them closing above asking price and a sale-to-list ratio of 1.045. Median days on market sits at just 14 days, which means priced homes are moving fast and sellers are dictating terms. The range spans from $510,000 to $1,750,000, so there's genuine variety in the inventory, but the velocity at the median is what matters here. Buyers looking at Hillsdale are facing multiple offer situations on well-priced properties and will need to move decisively. The condo and townhouse tier is sparse with only three sales over the period, making it difficult to read as a meaningful market segment. If you're shopping in Hillsdale, you're really evaluating single-family homes, and you should expect competition from other buyers and sellers who know their pricing power.",
+  "firstDraft": "Hillsdale is a single-family market, and it's a real seller's market right now. Thirty-eight homes sold over six months at a median of $875,000, with 71 percent of them closing above asking price and a median sale-to-list ratio of 1.05. Homes are moving fast, with a median of just 14.5 days on market. Many multiple offer situations are happening here, especially on well-priced inventory. Sellers are dictating terms, which means if you're looking to buy, you'll need to move decisively and come prepared. The spread runs wide, from $510,000 to $1,415,000, so there's activity across price points, but the best homes are getting competed for hard. If you're selling, this is your window to price strategically and let the market work for you. If you're buying, understand that patience comes at a cost in this environment.",
   "usage": {
-    "input_tokens": 3591,
+    "input_tokens": 3330,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 218,
+    "output_tokens": 205,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:17:14.038Z"
+  "generatedAt": "2026-07-19T15:24:50.172Z"
 }

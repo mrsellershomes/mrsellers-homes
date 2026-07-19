@@ -1,21 +1,21 @@
 {
-  "hash": "b564f1e42154925e",
-  "paragraph": "Woodcliff Lake is a single-family market, with 36 homes sold over the last eight months at a median of $1,275,000. Sellers are getting their asking price or better, with roughly 61 percent of homes selling above list and a sale-to-list ratio sitting at 1.01. The median time on market is 14.5 days, which means priced homes are moving decisively. This isn't a frenzy, but it's solidly competitive. Buyers looking here need to be ready to move quickly on the right property and should expect to bid above asking if they find something that fits their criteria. The range is broad, from $210,000 to $2,225,000, which reflects the variety of inventory available across the township. If you're considering Woodcliff Lake, treat it as a seller-favoring market where preparation and speed matter.",
+  "hash": "4daf3a329d3dd442",
+  "paragraph": "Woodcliff Lake is a single-family market through and through. Twenty-six homes sold over six months at a median of $1,357,500, and the data tells a straightforward story: sellers are dictating terms here. Sixty-one percent of homes sold above asking, the sale-to-list ratio sits at 1.01, and the median time on market is 11.5 days. When a home hits the market priced right, multiple offers follow quickly. The range is wide, from $210,000 to $2,200,000, but the bulk of activity clusters around the $1.2 million to $1.6 million band. Condo and townhouse inventory is sparse at only seven sales, and those are moving differently. The median there is $1,320,000, but only 14 percent sold above asking and the median days on market stretched to 27 days. The sale-to-list ratio dipped to 0.98, meaning sellers are accepting slightly below list on average. If you're looking in Woodcliff Lake, the single-family market is the real game, and it's moving fast enough that you'll need to be ready when the right property appears.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "Woodcliff Lake is a single-family market through and through. Twenty-six homes sold over six months at a median of $1,357,500, and the data tells a straightforward story: sellers are dictating terms here. Sixty-one percent of homes sold above asking, the sale-to-list ratio sits at 1.01, and the median time on market is just 11.5 days. When a home hits the market priced right, multiple offers follow quickly. The range is wide, from $210,000 to $2,200,000, but the bulk of activity clusters around the $1.2 million to $1.6 million band. Condo and townhouse inventory is sparse at only seven sales, and those are moving differently. The median there is $1,320,000, but only 14 percent sold above asking and the median days on market stretched to 27 days. The sale-to-list ratio dipped to 0.98, meaning sellers are accepting slightly below list on average. If you're looking in Woodcliff Lake, the single-family market is the real game, and it's moving fast enough that you'll need to be ready when the right property appears.",
   "usage": {
-    "input_tokens": 3198,
+    "input_tokens": 3555,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 197,
+    "output_tokens": 267,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:21:02.529Z"
+  "generatedAt": "2026-07-19T15:28:38.961Z"
 }

@@ -1,6 +1,6 @@
 {
-  "hash": "ab8d475de060cf51",
-  "paragraph": "Teterboro doesn't have enough closed sales over the last eight months to produce a meaningful market snapshot. With zero transactions recorded across all property types, there's no reliable data on pricing, pace, or seller behavior to report. If you're tracking this market, the absence of activity itself is the signal: either inventory is extremely tight, or the local market operates differently than the surrounding Bergen County towns we're able to track. Your best move is to reach out directly to an agent with recent ground-level knowledge of what's actually listing and selling in Teterboro right now, because the numbers can't tell the story yet.",
+  "hash": "9e77b94a619f8bf9",
+  "paragraph": "There's no meaningful market activity to report in Teterboro over the last six months. Zero sales across all property types means the market data is empty, and any analysis would be speculation rather than fact. If you're considering a move to Teterboro or tracking the local real estate landscape, check back in a few months when transaction volume returns. In the meantime, reach out directly if you have specific questions about the town or want to discuss your timeline and needs.",
   "fallback": false,
   "reason": null,
   "retried": false,
@@ -13,9 +13,9 @@
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 132,
+    "output_tokens": 100,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:20:26.759Z"
+  "generatedAt": "2026-07-19T15:28:01.034Z"
 }

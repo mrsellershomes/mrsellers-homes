@@ -1,21 +1,21 @@
 {
-  "hash": "eabf96377c257fa9",
-  "paragraph": "Ho-Ho-Kus is a single-family market, and it's running hot. Over the last eight months, 40 homes sold at a median of $1,412,500 with a sale-to-list ratio holding at 1.0 and nearly 48 percent of sales closing above asking price. Median days on market sits at 18, which means priced homes are moving decisively and sellers are dictating terms in many multiple offer situations. The range is wide, from $785,000 to $4,950,000, which reflects the mix of properties across the township, but the real story is velocity and pricing power. Homes that are competitively priced relative to condition and location are not sitting. If you're in the market here, understand that you'll need to move quickly on anything that fits your criteria and be prepared for competition on the homes that matter most to you.",
+  "hash": "3d1a7d4a26218bd4",
+  "paragraph": "Ho-Ho-Kus is a single-family market through and through, with 31 homes sold over the last six months at a median price of $1,525,000. The sale-to-list ratio sits at 1.0, and nearly half of all homes sold above asking, which tells you this is a real seller's market where priced homes are moving quickly. The median days on market is 17, and many multiple offer situations aren't uncommon here. The price spread is wide, ranging from $810,000 to $4,950,000, so you're not dealing with a narrow band of inventory. Instead, you're looking at a town where condition, lot size, and renovation status create genuine separation between properties at different points in that range. Sellers aren't overasking to probe the market. They're pricing strategically and getting their price within a couple of weeks, which means you need to know what you want before you see it. If you're shopping in Ho-Ho-Kus, the work is understanding where in that $810,000 to nearly $5 million spectrum you belong, then moving decisively when the right property surfaces.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "Ho-Ho-Kus is a single-family market through and through, with 31 homes sold over the last six months at a median price of $1,525,000. The sale-to-list ratio sits at 1.0, and nearly half of all homes sold above asking, which tells you this is a real seller's market where priced homes are moving quickly. The median days on market is just 17, and many multiple offer situations aren't uncommon here. The price spread is wide, ranging from $810,000 to $4,950,000, so you're not dealing with a narrow band of inventory. Instead, you're looking at a town where condition, lot size, and renovation status create genuine separation between properties at different points in that range. Sellers aren't overasking to probe the market. They're pricing strategically and getting their price within a couple of weeks, which means you need to know what you want before you see it. If you're shopping in Ho-Ho-Kus, the work is understanding where in that $810,000 to nearly $5 million spectrum you belong, then moving decisively when the right property surfaces.",
   "usage": {
-    "input_tokens": 3000,
+    "input_tokens": 3360,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 197,
+    "output_tokens": 253,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:17:17.287Z"
+  "generatedAt": "2026-07-19T15:24:55.680Z"
 }

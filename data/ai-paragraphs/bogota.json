@@ -1,21 +1,21 @@
 {
-  "hash": "30e518cce668ab28",
-  "paragraph": "Bogota's single-family market is where the activity is, with 39 homes sold over the last eight months at a median of $630,000. Two-thirds of homes are selling above list price, and the sale-to-list ratio sits at 1.025, which tells you sellers are getting their asking price or close to it. Median days on market runs 21 days, so priced homes are moving without excessive wait time. This is a competitive but balanced market. You're not in a frenzied multiple-offer situation on every listing, but a well-priced home in good condition isn't sitting long either. The price range is wide, from $320,000 to $875,000, which means Bogota draws buyers across different budget bands and life stages. If you're looking here, the deciding factor is straightforward: you want the space and grounds of a single-family home, and the market conditions let you shop without the pressure of a real seller's market.",
+  "hash": "06f7465d97c9f4b5",
+  "paragraph": "The single-family market in Bogota is a real seller's market. Over the last six months, 23 homes sold at a median price of $643,000, with nearly two-thirds selling above asking and a sale-to-list ratio of 1.024. Median days on market of 21 days tells you homes priced right are moving quickly, and multiple offer situations are common. Sellers have leverage here. The range is broad, from $320,000 to $800,000, which means the market rewards precision in pricing. Overprice even slightly and you'll sit. Price competitively and you're likely to see competing offers. If you're buying in Bogota, you're entering a competitive market where the best homes draw real interest fast. If you're selling, condition and pricing are everything, but the data shows that when both are right, you'll get the price you're asking for and likely a bit more.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 2970,
+    "input_tokens": 2885,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 215,
+    "output_tokens": 205,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:15:11.723Z"
+  "generatedAt": "2026-07-19T15:22:25.355Z"
 }

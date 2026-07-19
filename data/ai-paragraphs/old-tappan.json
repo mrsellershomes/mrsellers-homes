@@ -1,21 +1,21 @@
 {
-  "hash": "7bb239f8a97ee46f",
-  "paragraph": "Single-family homes in Old Tappan are moving at a median price of $1,395,000 with a sale-to-list ratio of 1.0 and a median of 41 days on market, which puts this in competitive but balanced territory. About 37 percent of homes are selling above asking, which means priced homes are moving, but sellers aren't dictating terms across the board. The range is wide, from $689,000 to $2,850,000, so condition and location matter a lot in how fast a home sells and what it ultimately fetches. Condos and townhouses, by contrast, are tighter and faster. Eleven sales over eight months landed at a median of $880,000 with a median of 15 days on market and 45 percent selling above asking. This tier is genuinely competitive, and the best positioned homes will draw multiple offers. If you're weighing single-family versus condo in Old Tappan, the trade-off isn't market heat. It's whether you want the space and grounds of a single-family home or the low-maintenance lifestyle and faster turnover of a condo.",
+  "hash": "80a8a355d9f151d8",
+  "paragraph": "Single-family homes in Old Tappan sit at a median of $1,490,000 with a sale-to-list ratio right at 1.0 and a median of 33 days on market. About 44 percent of homes sold above asking, which signals a competitive but balanced market rather than a frenzied one. Sellers aren't forced to underprice to move inventory, and buyers who come in with realistic offers aren't facing constant multiple-offer situations. The range is wide, from $689,000 to $2,850,000, which reflects the genuine variety of stock in the town. Condos and townhouses move faster, with a median of 14.5 days on market and a median price of $905,000. Half sold above asking here as well, and the sale-to-list ratio sits slightly above 1.0, putting this tier in genuinely competitive territory where a well-priced home draws quick attention. The condo tier had eight sales over six months, so the sample is smaller, but the velocity is real. If you're weighing single-family versus condo in Old Tappan, the market heat isn't the differentiator. It's whether you want the space and grounds of a single-family home or the low-maintenance lifestyle of a condo.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "Single-family homes in Old Tappan are moving at a median price of $1,395,000 with a sale-to-list ratio of 1.0 and a median of 41 days on market, which puts this in competitive but balanced territory. About 37 percent of homes are selling above asking, which means priced homes are moving, but sellers aren't dictating terms across the board. The range is wide, from $689,000 to $2,850,000, so condition and location matter a lot in how fast a home sells and what it ultimately fetches. Condos and townhouses, by contrast, are tighter and faster. Eleven sales over eight months landed at a median of $880,000 with a median of just 15 days on market and 45 percent selling above asking. This tier is genuinely competitive, and the best positioned homes will draw multiple offers. If you're weighing single-family versus condo in Old Tappan, the trade-off isn't market heat. It's whether you want the space and grounds of a single-family home or the low-maintenance lifestyle and faster turnover of a condo.",
+  "firstDraft": "Single-family homes in Old Tappan sit at a median of $1,490,000 with a sale-to-list ratio right at 1.0 and a median of 33 days on market. About 44 percent of homes sold above asking, which signals a competitive but balanced market rather than a frenzied one. Sellers aren't forced to underprice to move inventory, and buyers who come in with realistic offers aren't facing constant multiple-offer situations. The range is wide, from $689,000 to $2,850,000, which reflects the genuine variety of stock in the town. Condos and townhouses move faster, with a median of 14.5 days on market and a median price of $905,000. Half sold above asking here as well, and the sale-to-list ratio sits just above 1.0, putting this tier in genuinely competitive territory where a well-priced home draws quick attention. The condo tier had just eight sales over six months, so the sample is smaller, but the velocity is real. If you're weighing single-family versus condo in Old Tappan, the market heat isn't the differentiator. It's whether you want the space and grounds of a single-family home or the low-maintenance lifestyle of a condo.",
   "usage": {
-    "input_tokens": 3550,
+    "input_tokens": 3508,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 256,
+    "output_tokens": 288,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:18:36.893Z"
+  "generatedAt": "2026-07-19T15:26:20.597Z"
 }

@@ -112,15 +112,23 @@ function readCsv(path) {
  * Returns { rows, monthFolders } where monthFolders is the sorted list
  * of YYYY-MM folder names found (used for labeling the page period).
  */
-export function readAllCsvs(rootDir) {
+// The site's stats are a ROLLING 6-MONTH WINDOW by design: only the latest
+// six YYYY-MM folders are read, no matter how many exist on disk. Older
+// folders can stay as archive; they simply stop counting.
+const WINDOW_MONTHS = 6;
+
+export function readAllCsvs(rootDir, windowMonths = WINDOW_MONTHS) {
   const root = resolve(rootDir);
   const all = [];
-  const monthFolders = [];
-  for (const sub of readdirSync(root).sort()) {
+  const allFolders = readdirSync(root)
+    .filter(sub => /^\d{4}-\d{2}$/.test(sub) && statSync(join(root, sub)).isDirectory())
+    .sort();
+  const monthFolders = allFolders.slice(-windowMonths);
+  if (allFolders.length > monthFolders.length) {
+    console.log(`Rolling window: using ${monthFolders.length} of ${allFolders.length} month folders (${monthFolders[0]}..${monthFolders[monthFolders.length - 1]}).`);
+  }
+  for (const sub of monthFolders) {
     const subPath = join(root, sub);
-    if (!statSync(subPath).isDirectory()) continue;
-    if (!/^\d{4}-\d{2}$/.test(sub)) continue; // only YYYY-MM folders
-    monthFolders.push(sub);
     for (const f of readdirSync(subPath)) {
       if (!f.endsWith('.csv')) continue;
       all.push(...readCsv(join(subPath, f)));

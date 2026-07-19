@@ -1,21 +1,21 @@
 {
-  "hash": "9b50cf34b62a8dfc",
-  "paragraph": "Single-family homes in Leonia are moving in a real seller's market, with a median sale price of $867,500 and nearly two-thirds of homes selling above asking. The sale-to-list ratio sits at 1.02, and homes are spending a median of 21 days on market, which means priced-right inventory doesn't linger. You're looking at a range from $570,000 to $2.2 million, so the town draws everything from first-time buyers to people trading up significantly. Condos and townhouses, by contrast, tell a different story. With 11 sales at a median of $460,000, this tier is moving much more slowly at 53 days on market, and most sales are landing right at list price rather than above it. Only about 9 percent of condo sales went over asking, which suggests sellers in this category need to price competitively to attract serious interest. If you're choosing between single-family and condo in Leonia, the single-family market is hotter and more seller-favorable, while condos are offering buyers more negotiating room and lower entry prices.",
+  "hash": "57dcc937f45be01a",
+  "paragraph": "The single-family market in Leonia is a real seller's market. The median sits at $825,000 with a sale-to-list ratio of 1.04 and nearly 69 percent of homes selling above asking. Median days on market runs 16 days, which means priced homes are moving decisively and sellers are dictating terms. You'll see everything from $570,000 starter homes to $2.2 million properties, so there's genuine range here, but the story across that spectrum is the same: buyers are competing and patience doesn't pay off. Condos and townhouses, by contrast, sit in buyer-friendly territory. Only 7 sales in the period at a median of $590,000, with no homes selling above asking and a median days on market of 54 days. The sale-to-list ratio falls below 1.0 at 0.992, which signals that sellers need to price competitively to move inventory. This is a smaller segment of the Leonia market, and it's moving slower and requiring more realistic pricing than the single-family tier. If you're deciding between a single-family home and a condo or townhouse in Leonia, the single-family side offers no negotiating room right now. Condos and townhouses give you room to make an offer and ask questions, but you'll need to find the right property because volume is thin.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "The single-family market in Leonia is a real seller's market. The median sits at $825,000 with a sale-to-list ratio of 1.04 and nearly 69 percent of homes selling above asking. Median days on market runs just 16 days, which means priced homes are moving decisively and sellers are dictating terms. You'll see everything from $570,000 starter homes to $2.2 million properties, so there's genuine range here, but the story across that spectrum is the same: buyers are competing and patience doesn't pay off. Condos and townhouses, by contrast, sit in buyer-friendly territory. Only 7 sales in the period at a median of $590,000, with no homes selling above asking and a median days on market of 54 days. The sale-to-list ratio dips below 1.0 at 0.992, which signals that sellers need to price competitively to move inventory. This is a much smaller segment of the Leonia market, and it's moving slower and requiring more realistic pricing than the single-family tier. If you're deciding between a single-family home and a condo or townhouse in Leonia, the single-family side offers no negotiating room right now. Condos and townhouses give you room to make an offer and ask questions, but you'll need to find the right property because volume is thin.",
   "usage": {
-    "input_tokens": 3137,
+    "input_tokens": 3518,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 252,
+    "output_tokens": 310,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:17:21.586Z"
+  "generatedAt": "2026-07-19T15:25:09.487Z"
 }

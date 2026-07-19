@@ -1,21 +1,21 @@
 {
-  "hash": "f84bc76e075681bc",
-  "paragraph": "Edgewater's market is dominated by condos and townhouses, which moved 99 units over eight months at a median of $628,000. These homes are priced to sell, sitting right at list value with a sale-to-list ratio of 0.99 and a median of 31 days on market. About a quarter of them sold above asking, which tells you that the best-priced units draw real interest, but there's no bidding frenzy here. Single-family homes are sparse, with only five sales in the period and a median of $999,999. They're sitting longer, averaging 91 days on market and selling below list at a 0.98 ratio, which means sellers in this tier are okay with waiting for the right buyer rather than pricing aggressively. Multi-family properties form a small middle tier with three sales at $1,200,000 median and notably faster movement at 20 days on market. If you're looking in Edgewater, the math is straightforward. Condos and townhouses are where the liquidity is, priced to move without heavy competition. Single-family homes require patience from both sides. The deciding factor isn't market heat. It's whether you want the move-it price point and quick absorption of a condo, or the space and grounds of a single-family home.",
+  "hash": "f3b4821b121e68bc",
+  "paragraph": "Single-family homes in Edgewater are sparse, with only four sales in the last six months. The median sits at $992,499.50, and these homes are taking a median of 91 days on market. With a sale-to-list ratio of 0.98 and only 25 percent selling above asking, sellers aren't commanding premiums here. The range is wide, from $830,000 to $1,750,000, which reflects the reality that Edgewater's single-family stock is small and varied. Condos and townhouses tell a completely different story. This tier dominates the market with 72 sales at a median of $617,500, moving much faster at a 35.5-day median. The sale-to-list ratio of 0.99 and 22 percent selling above asking point to a balanced, competitive market where priced homes are moving steadily. The price spread here is also wide, from $265,000 to $2,069,000, which means you're working with genuine variety in unit size, location within town, and amenities. If you're weighing Edgewater, the single-family market is thin enough that availability becomes the real constraint. The condo market is where the actual volume and liquidity sit.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 3663,
+    "input_tokens": 3337,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 296,
+    "output_tokens": 284,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:15:52.735Z"
+  "generatedAt": "2026-07-19T15:23:18.929Z"
 }

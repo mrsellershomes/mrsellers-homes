@@ -1,21 +1,21 @@
 {
-  "hash": "3f019a3f780fefe6",
-  "paragraph": "Carlstadt's market is dominated by multi-family properties, which sold 12 units over eight months at a median of $800,000 against a list median of $762,450. Two-thirds of multi-family sales closed above asking, and the sale-to-list ratio sits at 1.047, signaling a real seller's market where buyers are competing and properties are moving in a median of 23.5 days on market. Single-family homes are sparse here, four sales in the same period at a median of $637,500, and they're not seeing the same momentum. The ratio dropped to 0.993, only one in four closed above asking, and median days on market stretched to 31.5 days. If you're looking at Carlstadt, the multi-family tier is where the action is. Sellers are dictating terms, and you'll need to move decisively if a property catches your eye. Single-family buyers, by contrast, have more breathing room to negotiate and time to make a decision, though the slim inventory means you're competing for whatever does hit the market.",
+  "hash": "fc2bf33d6cb7f16e",
+  "paragraph": "Carlstadt's market is dominated by multi-family properties, which accounted for 9 sales over six months at a median price of $800,000. These homes are moving faster and fetching real competition. The sale-to-list ratio sits above 1.05, meaning roughly two-thirds of multi-family sales are closing above asking price, and the median days on market is 22. This is a real seller's market for anyone holding a two, three, or four-unit property. Single-family homes, by contrast, are sparse in Carlstadt. Only 3 sold in the period at a median of $640,000, and they're taking longer to move. The median days on market is 32, and none sold above asking. The ratio sits narrowly below 1.0, which tells you sellers in this tier need to price competitively to attract serious buyers. If you're a seller, your property type matters enormously here. Multi-family investors and owner-occupants of two to four-unit buildings are in a position of strength. Single-family sellers are in a buyer's market by comparison and should expect to negotiate.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "Carlstadt's market is dominated by multi-family properties, which sold 12 units over eight months at a median of $800,000 against a list median of $762,450. Two-thirds of multi-family sales closed above asking, and the sale-to-list ratio sits at 1.047, signaling a real seller's market where buyers are competing and properties are moving in a median of 23.5 days on market. Single-family homes are sparse here, just four sales in the same period at a median of $637,500, and they're not seeing the same momentum. The ratio dropped to 0.993, only one in four closed above asking, and median days on market stretched to 31.5 days. If you're looking at Carlstadt, the multi-family tier is where the action is. Sellers are dictating terms, and you'll need to move decisively if a property catches your eye. Single-family buyers, by contrast, have more breathing room to negotiate and time to make a decision, though the slim inventory means you're competing for whatever does hit the market.",
+  "firstDraft": "Carlstadt's market is dominated by multi-family properties, which accounted for 9 sales over six months at a median price of $800,000. These homes are moving faster and fetching real competition. The sale-to-list ratio sits above 1.05, meaning roughly two-thirds of multi-family sales are closing above asking price, and the median days on market is just 22. This is a real seller's market for anyone holding a two, three, or four-unit property. Single-family homes, by contrast, are sparse in Carlstadt. Only 3 sold in the period at a median of $640,000, and they're taking longer to move. The median days on market is 32, and none sold above asking. The ratio sits just under 1.0, which tells you sellers in this tier need to price competitively to attract serious buyers. If you're a seller, your property type matters enormously here. Multi-family investors and owner-occupants of two to four-unit buildings are in a position of strength. Single-family sellers are in a buyer's market by comparison and should expect to negotiate.",
   "usage": {
-    "input_tokens": 3396,
+    "input_tokens": 3385,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 240,
+    "output_tokens": 248,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:15:16.906Z"
+  "generatedAt": "2026-07-19T15:22:33.555Z"
 }

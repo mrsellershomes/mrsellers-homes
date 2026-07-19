@@ -1,21 +1,21 @@
 {
-  "hash": "2789ac8c8e0177bc",
-  "paragraph": "Single-family homes dominate Dumont's market, with 62 sales over eight months at a median of $642,500. This is a real seller's market. Homes are selling above asking about 73 percent of the time, the sale-to-list ratio sits at 1.03, and the median days on market is 13.5 days. Sellers are dictating terms, and many multiple offer situations are happening on well-priced inventory. Multi-family properties are sparse but move similarly, with nine sales at a median of $775,000 and a 20-day median days on market. The small volume makes it harder to call a firm trend, but the sale-to-list ratio of 1.05 and two-thirds of sales above asking suggest multi-family sellers also have leverage. If you're shopping in Dumont right now, you're entering a competitive market where timing and pricing matter enormously. Homes that hit the market right are moving fast.",
+  "hash": "202a0a5edb105be7",
+  "paragraph": "Dumont's single-family market is moving in a real seller's market right now. Forty-two homes sold over the last six months at a median of $647,500, with 76 percent of them closing above asking price. The sale-to-list ratio sits at 1.05, and the median time on market is 14 days. Sellers are dictating terms here, and homes that are priced right are seeing multiple offers. Multi-family properties, though sparse with only seven sales, show a similar pattern at a median of $765,000, also with 71 percent closing above asking and a median of 18 days on market. If you're thinking about selling, this is the environment to be in. If you're buying, you'll need to come prepared with a competitive offer and realistic expectations about price. The market isn't waiting for fence-sitters, and the homes that sit around for 30 or 40 days are usually the ones with a real pricing or condition issue.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "Single-family homes dominate Dumont's market, with 62 sales over eight months at a median of $642,500. This is a real seller's market. Homes are selling above asking about 73 percent of the time, the sale-to-list ratio sits at 1.03, and the median days on market is just 13.5 days. Sellers are dictating terms, and many multiple offer situations are happening on well-priced inventory. Multi-family properties are sparse but move similarly, with nine sales at a median of $775,000 and a 20-day median days on market. The small volume makes it harder to call a firm trend, but the sale-to-list ratio of 1.05 and two-thirds of sales above asking suggest multi-family sellers also have leverage. If you're shopping in Dumont right now, you're entering a competitive market where timing and pricing matter enormously. Homes that hit the market right are moving fast.",
+  "firstDraft": "Dumont's single-family market is moving in a real seller's market right now. Forty-two homes sold over the last six months at a median of $647,500, with 76 percent of them closing above asking price. The sale-to-list ratio sits at 1.05, and the median time on market is just 14 days. Sellers are dictating terms here, and homes that are priced right are seeing multiple offers. Multi-family properties, though sparse with only seven sales, show a similar pattern at a median of $765,000, also with 71 percent closing above asking and a median of 18 days on market. If you're thinking about selling, this is the environment to be in. If you're buying, you'll need to come prepared with a competitive offer and realistic expectations about price. The market isn't waiting for fence-sitters, and the homes that sit around for 30 or 40 days are usually the ones with a real pricing or condition issue.",
   "usage": {
-    "input_tokens": 3663,
+    "input_tokens": 3552,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 216,
+    "output_tokens": 219,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:15:41.805Z"
+  "generatedAt": "2026-07-19T15:23:06.256Z"
 }

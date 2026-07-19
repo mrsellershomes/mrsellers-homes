@@ -1,21 +1,21 @@
 {
-  "hash": "169e7a5296663e47",
-  "paragraph": "Harrington Park's single-family market is a real seller's market right now. The median sale price sits at $1,056,500 against a median list price of $965,000, which means 80 percent of homes are selling above asking and the sale-to-list ratio is running at 1.05. Homes are moving fast too, with a median of 13 days on market. That velocity and the consistent stream of above-asking sales tells you that sellers who price competitively are dictating terms here. The sample is tight at 20 sales over eight months, but the data is clear: you're not getting much negotiating room on a well-priced home. If you're thinking about listing, the window favors you. If you're a buyer, you'll want to show up ready to move quickly and prepared to offer above list on anything that fits what you're looking for.",
+  "hash": "e013a5cc74a581bf",
+  "paragraph": "Harrington Park is a single-family market, and it's a real seller's market right now. The median sale price is $1,066,500 against a median list price of $965,000, which means homes are selling at a 6.3 percent premium on average, with 83 percent of sales closing above asking. Median days on market sits at 13 days, and multiple offer situations are common enough that sellers are dictating terms rather than pricing aggressively to move fast. The range is wide, from $715,000 to $1,550,000, so a home's condition and location within town matter enormously to how quickly it sells and what it fetches. If you're in the market to sell, you're in a strong position right now. If you're buying, you'll need to move decisively on homes that meet your criteria, because the best properties aren't staying on the market long.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "Harrington Park's single-family market is a real seller's market right now. The median sale price sits at $1,056,500 against a median list price of $965,000, which means 80 percent of homes are selling above asking and the sale-to-list ratio is running at 1.05. Homes are moving fast too, with a median of just 13 days on market. That velocity and the consistent stream of above-asking sales tells you that sellers who price competitively are dictating terms here. The sample is tight, just 20 sales over eight months, but the data is clear: you're not getting much negotiating room on a well-priced home. If you're thinking about listing, the window favors you. If you're a buyer, you'll want to show up ready to move quickly and prepared to offer above list on anything that fits what you're looking for.",
+  "firstDraft": "Harrington Park is a single-family market, and it's a real seller's market right now. The median sale price is $1,066,500 against a median list price of $965,000, which means homes are selling at a 6.3 percent premium on average, with 83 percent of sales closing above asking. Median days on market sits at just 13 days, and multiple offer situations are common enough that sellers are dictating terms rather than pricing aggressively to move fast. The range is wide, from $715,000 to $1,550,000, so a home's condition and location within town matter enormously to how quickly it sells and what it fetches. If you're in the market to sell, you're in a strong position right now. If you're buying, you'll need to move decisively on homes that meet your criteria, because the best properties aren't staying on the market long.",
   "usage": {
-    "input_tokens": 3219,
+    "input_tokens": 3222,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 197,
+    "output_tokens": 202,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:16:59.628Z"
+  "generatedAt": "2026-07-19T15:24:37.151Z"
 }

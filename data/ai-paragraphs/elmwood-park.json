@@ -1,21 +1,21 @@
 {
-  "hash": "a4b40ab155589be6",
-  "paragraph": "Single-family homes in Elmwood Park are moving in a real seller's market, with a median sale price of $625,000 and 61 percent of homes selling above asking. The sale-to-list ratio sits at 1.013, and median days on market is 19, which means priced homes are getting multiple offers and sellers are dictating terms. Multi-family properties, by contrast, are even hotter. Twenty sales over eight months landed at a median of $850,000, with 85 percent selling over asking and a sale-to-list ratio of 1.059. These are moving fast and commanding real premiums. The condo and townhouse tier is minimal here with only five sales at a median of $439,000, too thin to call a market. If you're between single-family and multi-family, the deciding factor isn't market temperature. It's whether you want the space and grounds of a single-family home or the potential rental income and leverage of a multi-family property. Both are moving, but multi-family is seeing stronger upside per dollar.",
+  "hash": "dafed8e2d7f7390d",
+  "paragraph": "Single-family homes in Elmwood Park are moving in a real seller's market, with a median sale price of $621,500 and nearly 64 percent of homes selling above asking. The sale-to-list ratio sits at 1.02, and the median time on market is under 20 days, which tells you that priced homes are attracting multiple offers and sellers are dictating terms. Multi-family properties are even hotter, with a median of $899,500, a 92 percent rate above asking, and an 18-day median time on market. This tier is narrower in volume but moves decisively when it hits the market. Condo and townhouse inventory is sparse with only five sales over six months at a median of $439,000, though these units are also selling near asking and moving quickly. If you're looking to buy here, understand that you're entering a competitive environment across all property types. Single-family homes offer the most activity and the most choices, but you'll need to be prepared to move fast and price accordingly if you're selling.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "Single-family homes in Elmwood Park are moving in a real seller's market, with a median sale price of $621,500 and nearly 64 percent of homes selling above asking. The sale-to-list ratio sits at 1.02, and the median time on market is just under 20 days, which tells you that priced homes are attracting multiple offers and sellers are dictating terms. Multi-family properties are even hotter, with a median of $899,500, a 92 percent rate above asking, and an 18-day median time on market. This tier is narrower in volume but moves decisively when it hits the market. Condo and townhouse inventory is sparse with only five sales over six months at a median of $439,000, though these units are also selling near asking and moving quickly. If you're looking to buy here, understand that you're entering a competitive environment across all property types. Single-family homes offer the most activity and the most choices, but you'll need to be prepared to move fast and price accordingly if you're selling.",
   "usage": {
-    "input_tokens": 3459,
+    "input_tokens": 3746,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 237,
+    "output_tokens": 234,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:15:56.432Z"
+  "generatedAt": "2026-07-19T15:23:23.970Z"
 }

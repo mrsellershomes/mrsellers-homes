@@ -1,21 +1,21 @@
 {
-  "hash": "ac89583e0ca53ca2",
-  "paragraph": "Saddle River is a single-family market, period. Twenty-nine homes sold over the last eight months at a median of $2,742,500, with a sale-to-list ratio of 0.97 and a median of 41 days on market. Only about 14 percent of homes sold above asking, which tells you this isn't a frenzied seller's market. Buyers have some leverage here. Homes priced competitively are moving, but there's no rush, and sellers who overshoot their ask are sitting longer than they might like. The range is wide, from $1,225,000 to $5,612,500, so what \"fair market value\" means depends entirely on condition, lot size, and location within the township. If you're shopping in Saddle River, you're shopping for a single-family home on meaningful land. The market will reward you for pricing honestly and punish you for holding out, so know your home's actual position before you list.",
+  "hash": "d7193f14af388e15",
+  "paragraph": "Saddle River is a single-family market, and it's a buyer's market right now. The median sale price is $2,895,000, but homes are selling at a sale-to-list ratio of 0.95, meaning sellers are accepting roughly 5 percent below asking on average. Median days on market is 33, which gives you time to think through your offer without competing in multiple-offer situations. Only about 11 percent of homes sold above list price, so this isn't a market where you need to overpay to win. The range is wide, from $1,225,000 to $5,612,500, which tells you that Saddle River's lot sizes and home configurations vary considerably even within this affluent town. If you're seriously looking here, you have leverage. Sellers need to price competitively and be ready to negotiate, because inventory moves slowly and buyers aren't rushing. The best homes will still draw some competition, but you're not facing the frenzied bidding wars you might encounter in neighboring towns closer to the Hudson River waterfront. Price right, and your offer will get real attention.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 2955,
+    "input_tokens": 2895,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 220,
+    "output_tokens": 248,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:20:07.728Z"
+  "generatedAt": "2026-07-19T15:27:47.103Z"
 }

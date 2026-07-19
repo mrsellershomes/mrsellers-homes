@@ -1,21 +1,21 @@
 {
-  "hash": "6bb9e75ae747e2c0",
-  "paragraph": "Single-family homes dominate Rutherford's market, with 67 sales over eight months at a median of $851,000. Sellers are in a real seller's market here. Over half the homes sold above asking, the sale-to-list ratio sits at 1.01, and the median time on market is 19 days. You're looking at multiple offer situations on priced homes, which means you'll need to move decisively if you find something you want. Multi-family properties run a distant second with 13 sales at a median of $900,000, performing similarly to single-family in terms of ratio and percent over asking, though they sit on market longer at a 41-day median. Condos and townhouses, by contrast, trade at a lower price point with 18 sales at $382,000 median, and here the market softens noticeably. Only 28 percent sold above asking, and homes are taking 27 days to move. Co-ops sit at the entry level with 7 sales at $195,100 median, though the small volume makes month-to-month patterns less reliable. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or multi-family property, the low-maintenance lifestyle of a condo or townhouse, or the lower price point of a co-op.",
+  "hash": "f8d605011bb4706b",
+  "paragraph": "Single-family homes in Rutherford are moving in a real seller's market, with a median sale price of $815,000, a sale-to-list ratio of 1.01, and a median of 19 days on market. Over half of homes sold above asking, and sellers are dictating terms in many multiple offer situations. The multi-family tier sits at a median of $940,000 across 10 sales, but these properties move much more slowly at 82 days on market, which tells you that two-to-four unit buildings require patience and the right buyer profile. By contrast, condos and townhouses trade at a median of $415,000 with faster velocity, though the sale-to-list ratio of 0.99 and only 31 percent sold above asking suggest buyers have more leverage here than in single-family. Co-ops anchor the entry point at $186,500 but move slowly at a 53-day median, reflecting the financing and board approval friction that comes with share ownership. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home, the investment potential of a multi-family building, the low-maintenance lifestyle of a condo, or the lower price point of a co-op.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "Single-family homes dominate Rutherford's market, with 67 sales over eight months at a median of $851,000. Sellers are in a real seller's market here. Over half the homes sold above asking, the sale-to-list ratio sits at 1.01, and the median time on market is just 19 days. You're looking at multiple offer situations on priced homes, which means you'll need to move decisively if you find something you want. Multi-family properties run a distant second with 13 sales at a median of $900,000, performing similarly to single-family in terms of ratio and percent over asking, though they sit on market longer at a 41-day median. Condos and townhouses, by contrast, trade at a lower price point with 18 sales at $382,000 median, and here the market softens noticeably. Only 28 percent sold above asking, and homes are taking 27 days to move. Co-ops sit at the entry level with 7 sales at $195,100 median, though the small volume makes month-to-month patterns less reliable. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or multi-family property, the lower maintenance of a condo or townhouse, or the lower price point of a co-op.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 4271,
+    "input_tokens": 3659,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 310,
+    "output_tokens": 287,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:19:58.860Z"
+  "generatedAt": "2026-07-19T15:27:36.864Z"
 }

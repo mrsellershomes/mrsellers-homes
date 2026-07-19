@@ -1,21 +1,21 @@
 {
-  "hash": "d97e7401a6eb0568",
-  "paragraph": "Midland Park right now is a real seller's market for single-family homes. You've got a median sale price of $670,000 on a list price around $649,000, which means three-quarters of homes are selling above asking, and the sale-to-list ratio sits at 1.05. Homes are moving fast too, with a median of 14 days on market. This is the kind of environment where sellers are dictating terms, multiple offer situations are common, and if you're buying, you need to be ready to move decisively. The supply is lean, which keeps pressure on buyers. If you're selling, you can price thoughtfully and let the market work in your favor. If you're buying, you'll need to be realistic about what you can afford to offer above list and prepared to make a strong move quickly on the right property.",
+  "hash": "582716a7dc85a101",
+  "paragraph": "The single-family market in Midland Park is a real seller's market right now. Over the last six months, 26 homes sold at a median of $695,000, with nearly 73 percent selling above asking and a sale-to-list ratio of 1.06. Median days on market sits at 13.5 days, meaning priced-right homes are moving fast and sellers are dictating terms. The range runs from $460,000 to $1,150,000, so you'll find everything from entry-level properties to significant homes depending on what you're hunting for. If you're a seller, this is the environment you want. If you're a buyer, you'll need to be prepared to move quickly and possibly bid above asking on the homes that fit your needs.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "The single-family market in Midland Park is a real seller's market right now. Over the last six months, 26 homes sold at a median of $695,000, with nearly 73 percent selling above asking and a sale-to-list ratio of 1.06. Median days on market sits at just 13.5 days, meaning priced-right homes are moving fast and sellers are dictating terms. The range runs from $460,000 to $1,150,000, so you'll find everything from entry-level properties to significant homes depending on what you're hunting for. If you're a seller, this is the environment you want. If you're a buyer, you'll need to be prepared to move quickly and possibly bid above asking on the homes that fit your needs.",
   "usage": {
-    "input_tokens": 2946,
+    "input_tokens": 3232,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 187,
+    "output_tokens": 174,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:17:50.212Z"
+  "generatedAt": "2026-07-19T15:25:42.018Z"
 }

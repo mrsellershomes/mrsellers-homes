@@ -1,21 +1,21 @@
 {
-  "hash": "b44cda716cc2e678",
-  "paragraph": "Englewood Cliffs is a single-family market. Twenty-eight homes sold over the last eight months at a median of $1,787,500, with a sale-to-list ratio of 0.96 and a median time on market of 37 days. About 18 percent of homes sold above asking, which tells you that buyers are finding room to negotiate and sellers aren't in a position to push back hard on price. The range here is wide, from under a million to $5.4 million, which reflects the town's geography and lot sizes more than any market segmentation. Homes priced appropriately for their condition and location are moving. Homes sitting longer than that median tend to be either priced above what the market will bear or waiting for a specific buyer profile. This is a buyer-friendly environment relative to what you'd see in neighboring high-demand towns. If you're shopping in Englewood Cliffs, the lever is yours. Price your home competitively if you need to move on a timeline, or hold and wait if you can afford to find the right buyer.",
+  "hash": "87526b63a1c48546",
+  "paragraph": "Englewood Cliffs is a single-family market, and it's playing by buyer rules right now. With 18 sales over six months at a median of $2,250,000, inventory is moving but not fast. The sale-to-list ratio sits at 0.96, meaning homes are selling below asking on average, and the median days on market of 43.5 days tells you sellers aren't getting multiple offers or commanding premiums. Only about 17 percent of homes sold above list price, which is the opposite of a seller's market. The price range is wide, from $999,000 to $5,400,000, so you're seeing everything from mid-range estates to high-end properties in the same town. What this means for you is straightforward: if you're selling, you'll need to price competitively and be realistic about timing. If you're buying, the leverage is yours. Homes aren't sitting for months, so there's still reasonable interest, but you're not walking into a bidding war either. The best homes will draw some competition, but priced homes are moving at or slightly below asking. This is a buyer-friendly market in a town where price and condition matter more than how fast your agent can push you to the table.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "Englewood Cliffs is a single-family market. Twenty-eight homes sold over the last eight months at a median of $1,787,500, with a sale-to-list ratio of 0.96 and a median time on market of 37 days. About 18 percent of homes sold above asking, which tells you that buyers are finding some room to negotiate and sellers aren't in a position to push back hard on price. The range here is wide, from just under a million to $5.4 million, which reflects the town's geography and lot sizes more than any market segmentation. Homes priced appropriately for their condition and location are moving. Homes sitting longer than that median tend to be either priced above what the market will bear or waiting for a specific buyer profile. This is a buyer-friendly environment relative to what you'd see in neighboring high-demand towns. If you're shopping in Englewood Cliffs, the lever is yours. Price your home competitively if you need to move on a timeline, or hold and wait if you can afford to find the right buyer.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3334,
+    "input_tokens": 2894,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 239,
+    "output_tokens": 277,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:16:13.436Z"
+  "generatedAt": "2026-07-19T15:23:38.543Z"
 }

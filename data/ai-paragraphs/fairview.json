@@ -1,21 +1,21 @@
 {
-  "hash": "ab9d1360af2996bc",
-  "paragraph": "Single-family homes in Fairview are moving at a median of $615,000 with a sale-to-list ratio right at 1.0 and a median of 20 days on market. About 45 percent of homes sell above asking, which signals a competitive but balanced market where priced homes are moving without the frenzy of a true seller's market. Multi-family properties tell a different story. The median sits at $830,000, and two-thirds of sales are closing above list price with a sale-to-list ratio of 1.03. The median time on market is 22 days, putting multi-family in genuinely competitive territory where sellers have real leverage. Condos and townhouses lag behind both tiers, with a median of $537,500 and a sale-to-list ratio of 0.98. Only 12.5 percent sell above asking, and the median days on market stretches to 34.5 days, signaling that buyers have more room to negotiate in this segment. If you're weighing single-family against multi-family, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home or the potential for rental income and appreciation that multi-family offers. Condo and townhouse buyers benefit from the slower pace to be selective.",
+  "hash": "dda18e5326b727be",
+  "paragraph": "Fairview's single-family market is moving at a measured pace with 8 sales over six months at a median of $617,500. Homes are selling slightly under asking at a 0.97 sale-to-list ratio, with a median of 22 days on market. Only about 37 percent are fetching over asking, which tells you sellers need to price competitively to move inventory. Multi-family properties, by contrast, are the real strength here. Twelve sales landed at a median of $817,500, and buyers are actively bidding these properties up, with 75 percent selling above asking and a sale-to-list ratio of 1.04. The median days on market of 20.5 reflects genuine buyer interest in the two to three unit space. Condos and townhouses sit at the lower price point with 7 sales at a median of $545,000, but they're spending more time on the market, averaging 34 days. Only 14 percent are crossing the finish line above asking, and they're selling at a 0.98 ratio, suggesting buyer caution in this tier. If you're comparing property types in Fairview, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or multi-family investment, or the lower price point of a condo or townhouse.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "Fairview's single-family market is moving at a measured pace with 8 sales over six months at a median of $617,500. Homes are selling just under asking at a 0.97 sale-to-list ratio, with a median of 22 days on market. Only about 37 percent are fetching over asking, which tells you sellers need to price competitively to move inventory. Multi-family properties, by contrast, are the real strength here. Twelve sales landed at a median of $817,500, and buyers are actively bidding these properties up, with 75 percent selling above asking and a sale-to-list ratio of 1.04. The median days on market of 20.5 reflects genuine buyer interest in the two to three unit space. Condos and townhouses sit at the lower price point with 7 sales at a median of $545,000, but they're spending more time on the market, averaging 34 days. Only 14 percent are crossing the finish line above asking, and they're selling at a 0.98 ratio, suggesting buyer caution in this tier. If you're comparing property types in Fairview, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or multi-family investment, or the lower price point of a condo or townhouse.",
   "usage": {
-    "input_tokens": 3263,
+    "input_tokens": 3674,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 294,
+    "output_tokens": 302,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:16:24.010Z"
+  "generatedAt": "2026-07-19T15:23:50.295Z"
 }

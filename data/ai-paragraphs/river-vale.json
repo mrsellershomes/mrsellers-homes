@@ -1,21 +1,21 @@
 {
-  "hash": "aceec512624f7432",
-  "paragraph": "The single-family market in River Vale is a real seller's market. With a median sale price of $1,125,000 against a median list price of $965,000, homes are selling at a 3.4% premium to asking, and 65% of sales are closing above list. Median days on market sits at 14 days, which means priced homes are moving fast and sellers are dictating terms. The sale-to-list ratio of 1.03 confirms this. Condos and townhouses tell a different story. They're selling at a median of $1,290,500, but the composition here is wide, ranging from $295,000 to nearly $1.9 million, which suggests a mixed inventory of both modest units and high-end properties. Only 32% of condo sales close above asking, and homes sit around 22 days on market, making this tier more balanced and less frenzied than single-family. If you're torn between tiers, the deciding factor isn't how fast the market moves. It's whether you want the space and grounds of a single-family home in a seller's market, or the lower entry point and potentially less competitive environment of a condo or townhouse.",
+  "hash": "3bf37f4fc3b4f4ff",
+  "paragraph": "River Vale's single-family market is where the volume and momentum are. Thirty-one homes sold over six months at a median of $1,195,000, and sellers are dictating terms. Over 64 percent of homes sold above asking, the sale-to-list ratio sits at 1.03, and the median time on market is 14 days. This is a real seller's market, with many multiple offer situations, especially for homes priced competitively in the $1 million to $1.5 million range. The spread is wide, from $580,000 to $3.4 million, so the market rewards sellers who price accurately for their home's actual condition and location within town. The condo and townhouse tier is much smaller at 18 sales over the same period with a median of $1,280,000, but it tells a different story. These homes sit longer, with a median of 24.5 days on market, and only 16 percent sold above asking. The sale-to-list ratio is exactly 1.0, meaning homes are selling at list price rather than over it. If you're deciding between single-family and condo in River Vale, the single-family market is moving fast and favors sellers willing to act. Condos need to be priced to attract a buyer right away rather than wait for multiple offers.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "The single-family market in River Vale is a real seller's market. With a median sale price of $1,125,000 against a median list price of $965,000, homes are selling at a 3.4% premium to asking, and 65% of sales are closing above list. Median days on market sits at just 14 days, which means priced homes are moving fast and sellers are dictating terms. The sale-to-list ratio of 1.03 confirms this. Condos and townhouses tell a different story. They're selling at a median of $1,290,500, but the composition here is wide, ranging from $295,000 to nearly $1.9 million, which suggests a mixed inventory of both modest units and high-end properties. Only 32% of condo sales close above asking, and homes sit around 22 days on market, making this tier more balanced and less frenzied than single-family. If you're torn between tiers, the deciding factor isn't how fast the market moves. It's whether you want the space and grounds of a single-family home in a seller's market, or the lower entry point and potentially less competitive environment of a condo or townhouse.",
+  "firstDraft": "River Vale's single-family market is where the volume and momentum are. Thirty-one homes sold over six months at a median of $1,195,000, and sellers are dictating terms. Over 64 percent of homes sold above asking, the sale-to-list ratio sits at 1.03, and the median time on market is just 14 days. This is a real seller's market, with many multiple offer situations, especially for homes priced competitively in the $1 million to $1.5 million range. The spread is wide, from $580,000 to $3.4 million, so the market rewards sellers who price accurately for their home's actual condition and location within town. The condo and townhouse tier is much smaller at 18 sales over the same period with a median of $1,280,000, but it tells a different story. These homes sit longer, with a median of 24.5 days on market, and only 16 percent sold above asking. The sale-to-list ratio is exactly 1.0, meaning homes are selling at list price rather than over it. If you're deciding between single-family and condo in River Vale, the single-family market is moving fast and favors sellers willing to act. Condos need to be priced to attract a buyer right away rather than wait for multiple offers.",
   "usage": {
-    "input_tokens": 3749,
+    "input_tokens": 3661,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 269,
+    "output_tokens": 300,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:19:41.286Z"
+  "generatedAt": "2026-07-19T15:27:23.629Z"
 }

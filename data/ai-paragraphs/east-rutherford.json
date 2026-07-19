@@ -1,21 +1,21 @@
 {
-  "hash": "855016d7267c3a71",
-  "paragraph": "The single-family market in East Rutherford is moving briskly, with nine sales over eight months at a median of $750,000. Two-thirds of homes sold above asking, and the median days on market sits at 17, which tells you sellers are pricing within reach and buyers are responding quickly. The sale-to-list ratio of 1.01 confirms homes are fetching what they're listed for without bidding wars, though patience still matters. Multi-family properties are a different story. Only three sales in the period, but all three went above asking at a median of $990,000, with a median days on market of 15 days. That's a real seller's market for the few multi-family homes that hit the market. Condos and townhouses comprise the bulk of activity with six sales at a median of $557,500. They're moving steadily at 25.5 days on market, and two-thirds sold above asking as well, though the sale-to-list ratio of 1.01 suggests homes priced right are finding their buyers without drama. If you're looking at East Rutherford, the deciding factor isn't market temperature. It's whether you want the space and grounds of a single-family, the rental income potential of a multi-family property, or the lower price point and lower maintenance of a condo or townhouse.",
+  "hash": "fe5cf37a3227bc13",
+  "paragraph": "The single-family market in East Rutherford is moving steadily with eight sales over six months at a median of $704,000. Sellers are seeing homes sell right around asking price, with a sale-to-list ratio of 1.01 and a median of 17.5 days on market. About 62 percent of homes sold above asking, which signals real buyer interest once a property is priced fairly. The range is wide, from $330,000 to $1.4 million, so neighborhoods and condition matter considerably. Condos and townhouses, by contrast, are more limited in volume with four sales at a median of $557,500. These homes are taking longer to move at a median of 29.5 days on market, though three out of four still sold above asking. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or the low-maintenance lifestyle of a condo.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "The single-family market in East Rutherford is moving briskly, with nine sales over eight months at a median of $750,000. Two-thirds of homes sold above asking, and the median days on market sits at 17, which tells you sellers are pricing within reach and buyers are responding quickly. The sale-to-list ratio of 1.01 confirms homes are fetching what they're listed for without bidding wars, though patience still matters. Multi-family properties are a different story. Only three sales in the period, but all three went above asking at a median of $990,000, with a median days on market of just 15 days. That's a real seller's market for the few multi-family homes that hit the market. Condos and townhouses comprise the bulk of activity with six sales at a median of $557,500. They're moving steadily at 25.5 days on market, and two-thirds sold above asking as well, though the sale-to-list ratio of 1.01 suggests homes priced right are finding their buyers without drama. If you're looking at East Rutherford, the deciding factor isn't market temperature. It's whether you want the space and grounds of a single-family, the rental income potential of a multi-family property, or the lower price point and lower maintenance of a condo or townhouse.",
+  "firstDraft": "The single-family market in East Rutherford is moving steadily with eight sales over six months at a median of $704,000. Sellers are seeing homes sell right around asking price, with a sale-to-list ratio of 1.01 and a median of 17.5 days on market. About 62 percent of homes sold above asking, which signals real buyer interest once a property is priced fairly. The range is wide, from $330,000 to $1.4 million, so neighborhoods and condition matter considerably. Condos and townhouses, by contrast, are more limited in volume with just four sales at a median of $557,500. These homes are taking longer to move at a median of 29.5 days on market, though three out of four still sold above asking. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or the low-maintenance lifestyle of a condo.",
   "usage": {
-    "input_tokens": 3640,
+    "input_tokens": 3344,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 299,
+    "output_tokens": 218,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:15:47.531Z"
+  "generatedAt": "2026-07-19T15:23:10.795Z"
 }

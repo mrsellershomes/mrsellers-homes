@@ -1,21 +1,21 @@
 {
-  "hash": "c03b6b91e37ec071",
-  "paragraph": "Hackensack's market breaks into four distinct property types, each with its own rhythm. Single-family homes are moving at a median of $630,000 with a 23.5-day median days on market and over 60 percent of sales closing above asking, which signals a competitive but balanced seller's market where priced homes are moving steadily. Multi-family properties sit higher at a $787,500 median and move even faster at 19 days on market, also with 60 percent selling above list, suggesting slightly tighter competition in this tier. Condos and townhouses are the real volume, with 105 sales over eight months at a $320,000 median. These properties tick at 28 days on market and only 35 percent over asking, making this the most buyer-friendly tier where you'll find the most inventory and negotiating room. Co-ops round out the market at a $200,000 median with 13 sales and a sale-to-list ratio below 1.0, meaning homes are selling slightly below asking. The deciding factor isn't market heat across tiers. It's whether you want the space and grounds of a single-family or multi-family property, the lower price point and smaller footprint of a condo, or the entry-level affordability of a co-op.",
+  "hash": "092f4f425c6f57a7",
+  "paragraph": "Hackensack's market breaks into tiers with distinctly different heat levels. Single-family homes, the smallest segment with 34 sales at a median of $642,500, sit in competitive but balanced territory. About half the homes sold above asking, and the median days on market is 30.5, which means priced homes are moving without the urgency of a true seller's market. Multi-family properties, by contrast, show real momentum with 12 sales at a median of $787,500. Two-thirds sold above list, the median sale-to-list ratio crossed 1.01, and homes moved in 19 days on market. This is a real seller's market for investment and multi-unit properties. Condos and townhouses represent the largest volume at 78 sales with a median of $323,500, but the dynamics here lean toward balance or slight buyer advantage. Roughly a third sold above asking, and the median days on market sits at 29.5. This tier has space to breathe. Co-ops round out the market at the lowest entry point, a median of $200,000, though the sample is small at only 7 sales. They come with board approval, financing restrictions, and resale friction that not every buyer is aware of going in. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the investment potential or rental income of a multi-family building, the affordability of a condo, or the lowest price point of a co-op.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "Hackensack's market breaks into tiers with distinctly different heat levels. Single-family homes, the smallest segment with 34 sales at a median of $642,500, sit in competitive but balanced territory. About half the homes sold above asking, and the median days on market is 30.5, which means priced homes are moving without the urgency of a true seller's market. Multi-family properties, by contrast, show real momentum with 12 sales at a median of $787,500. Two-thirds sold above list, the median sale-to-list ratio crossed 1.01, and homes moved in just 19 days on market. This is a real seller's market for investment and multi-unit properties. Condos and townhouses represent the largest volume at 78 sales with a median of $323,500, but the dynamics here lean toward balance or slight buyer advantage. Just under a third sold above asking, and the median days on market sits at 29.5. This tier has space to breathe. Co-ops round out the market at the lowest entry point, a median of $200,000, though the sample is small at only 7 sales. They come with board approval, financing restrictions, and resale friction that not every buyer is aware of going in. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the investment potential or rental income of a multi-family building, the affordability of a condo, or the lowest price point of a co-op.",
   "usage": {
-    "input_tokens": 4184,
+    "input_tokens": 4422,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 290,
+    "output_tokens": 342,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:16:54.312Z"
+  "generatedAt": "2026-07-19T15:24:31.867Z"
 }

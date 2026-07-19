@@ -1,21 +1,21 @@
 {
-  "hash": "d3558e7341759f26",
-  "paragraph": "Alpine's single-family market is genuinely sparse, with only seven homes sold over eight months. The median sits at $4,500,000, and the sale-to-list ratio of 0.96 combined with a median of 140 days on market tells you that sellers are pricing with patience and waiting for buyers who can move at that price point rather than racing to close. Only one home out of seven sold above asking, which underscores that this isn't a market where multiple offers are the norm. The range is wide, from $970,000 to $7,300,000, reflecting Alpine's genuine diversity in lot size and house condition across town. If you're selling, you're competing primarily on property quality and land rather than market momentum. If you're buying, you have time to be selective, but understand that the homes commanding these prices are selling because they represent something specific to Alpine buyers, not because the market is pushing them along.",
+  "hash": "b549df74a87d05e3",
+  "paragraph": "Alpine's single-family market is defined by scarcity and patience. Only five homes sold over the last six months, with a median price of $4.5 million and a sale-to-list ratio of 0.96, meaning homes are selling slightly below asking. The median time on market was 101 days, which tells you that even at the highest price points in Bergen County, sellers aren't moving inventory quickly. One home did close in 14 days, but that's an outlier. The range is wide, from $4 million to $7.3 million, reflecting the estate-lot variability typical of Alpine. With so few transactions, you're not in a market where momentum or seasonal patterns matter much. You're in a market where the right buyer for the right property eventually appears, and that can take time. If you're considering Alpine, expect to price competitively and be prepared for a longer holding period.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 2815,
+    "input_tokens": 2787,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 203,
+    "output_tokens": 201,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:15:02.353Z"
+  "generatedAt": "2026-07-19T15:22:15.266Z"
 }

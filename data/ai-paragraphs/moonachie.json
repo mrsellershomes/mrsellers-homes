@@ -1,21 +1,21 @@
 {
-  "hash": "9634e7d5c0aab9de",
-  "paragraph": "The single-family market in Moonachie is extremely sparse, with four sales over eight months at a median of $752,500. That thin volume makes month-to-month comparisons meaningless, but the data here does point to a buyer-friendly environment. The median sale-to-list ratio is 0.95, meaning homes are selling below asking on average, and the median days on market sits at 21.5 days. One quarter of the homes sold went for asking or above, which tells you that properly priced homes will still find a buyer, but sellers don't have the leverage to overprice. If you're looking in Moonachie, you'll need patience to find inventory, but when you do, you're negotiating from a position where pricing competitively matters. The range of sales from $585,000 to $780,000 shows there's genuine variety in what's available when homes do come to market.",
+  "hash": "b22c685a8f9f21bd",
+  "paragraph": "The single-family market in Moonachie is extremely sparse with only four sales over the past six months, making it difficult to draw strong conclusions from the data. The median sale price sits at $752,500 against a median list price of $789,500, putting the sale-to-list ratio at 0.95, which means homes are selling slightly below asking on average. About one quarter of homes sold above list, while the median time on market was 21.5 days. The price range varied considerably, from a low of $585,000 to a high of $780,000, reflecting the limited sample size and likely the wide variation in property condition and lot characteristics across these few transactions. With such minimal volume, you're not looking at a market with clear momentum in either direction. Rather, you're seeing isolated sales that may or may not reflect where the next home will land. If you're considering Moonachie, treat each listing on its own merits, price competitively relative to comparable sales, and be prepared for a slower process without the sense of urgency that higher-volume markets can create.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "The single-family market in Moonachie is extremely sparse, with just four sales over eight months at a median of $752,500. That thin volume makes month-to-month comparisons meaningless, but the data here does point to a buyer-friendly environment. The median sale-to-list ratio is 0.95, meaning homes are selling below asking on average, and the median days on market sits at 21.5 days. One quarter of the homes sold went for asking or above, which tells you that properly priced homes will still find a buyer, but sellers don't have the leverage to overprice. If you're looking in Moonachie, you'll need patience to find inventory, but when you do, you're negotiating from a position where pricing competitively matters. The range of sales from $585,000 to $780,000 shows there's genuine variety in what's available when homes do come to market.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3133,
+    "input_tokens": 2784,
     "cache_creation_input_tokens": 0,
     "cache_read_input_tokens": 0,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 204,
+    "output_tokens": 239,
     "service_tier": "standard",
     "inference_geo": "not_available"
   },
-  "generatedAt": "2026-07-05T18:18:04.559Z"
+  "generatedAt": "2026-07-19T15:25:50.663Z"
 }
