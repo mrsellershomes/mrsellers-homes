@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hero redesign: advisor + tape</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root { --red:#E2001A; --ink:#1a1a1a; --cream:#fdfcfa; --rule:#e6e2dc; }
+  body { background:var(--cream); color:var(--ink); font-family:'DM Sans',sans-serif; -webkit-font-smoothing:antialiased; }
+  .tag { background:var(--ink); color:#fff; text-align:center; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; padding:6px; }
+
+  /* Nav */
+  .nav { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 24px; background:#fff; border-bottom:1px solid var(--rule); }
+  .logo { font-family:'Playfair Display',Georgia,serif; font-size:22px; font-weight:600; color:var(--ink); text-decoration:none; line-height:1.15; white-space:nowrap; }
+  .logo span { display:block; font-family:'DM Sans',sans-serif; font-size:11px; font-weight:400; color:#767676; letter-spacing:0.04em; }
+  .navlinks { display:none; gap:24px; font-size:14px; }
+  .navlinks a { color:#555; text-decoration:none; }
+  .navlinks a:hover { color:var(--red); }
+  .navcta { display:none; background:var(--red); color:#fff; text-decoration:none; font-size:14px; font-weight:500; padding:10px 16px; border-radius:5px; white-space:nowrap; }
+  .burger { display:flex; flex-direction:column; gap:5px; background:none; border:none; padding:6px; }
+  .burger span { width:22px; height:2px; background:var(--ink); display:block; }
+  @media (min-width:880px){ .navlinks,.navcta{display:flex;} .burger{display:none;} }
+
+  /* The economist's tape — replaces the solid red band */
+  .tape { border-bottom:1px solid var(--rule); background:var(--cream); overflow:hidden; }
+  .tape-inner { display:flex; align-items:center; justify-content:center; gap:26px; padding:9px 16px; font-size:12.5px; color:#555; letter-spacing:0.02em; flex-wrap:wrap; }
+  .tape-item { display:flex; align-items:center; gap:8px; white-space:nowrap; }
+  .tape-dot { width:5px; height:5px; border-radius:50%; background:var(--red); flex-shrink:0; }
+  .tape-item strong { color:var(--ink); font-weight:600; }
+  .tape-item a { color:inherit; text-decoration:underline; text-decoration-color:#c9c2b8; text-underline-offset:2px; }
+
+  /* Split hero */
+  .hero { max-width:1120px; margin:0 auto; padding:48px 24px 56px; display:grid; gap:40px; align-items:center; }
+  @media (min-width:880px){ .hero { grid-template-columns:7fr 5fr; padding:72px 32px 80px; gap:56px; } }
+  .eyebrow { color:var(--red); font-size:12px; font-weight:500; letter-spacing:0.16em; text-transform:uppercase; margin-bottom:16px; }
+  h1 { font-family:'Playfair Display',Georgia,serif; font-weight:600; line-height:1.08; font-size:clamp(36px,4.6vw,56px); }
+  .sub { margin-top:18px; color:#555; font-size:17px; line-height:1.65; max-width:52ch; }
+  .form { margin-top:28px; display:flex; flex-direction:column; gap:10px; max-width:520px; }
+  @media (min-width:560px){ .form { flex-direction:row; } }
+  .inp { flex:1; border:1px solid #d8d3cb; background:#fff; border-radius:6px; padding:15px 16px; font-size:16px; font-family:'DM Sans',sans-serif; }
+  .inp:focus { outline:2px solid var(--red); outline-offset:-1px; }
+  .btn { background:var(--red); color:#fff; border:none; border-radius:6px; padding:15px 24px; font-size:16px; font-weight:500; font-family:'DM Sans',sans-serif; cursor:pointer; white-space:nowrap; }
+  .btn:hover { background:#c30016; }
+  .fine { margin-top:12px; font-size:12.5px; color:#767676; }
+  .fine strong { color:#555; font-weight:500; }
+  .talk { margin-top:6px; font-size:14px; color:#555; }
+  .talk a { color:var(--red); font-weight:500; text-decoration:none; }
+
+  /* Portrait column — magazine frame, not avatar bubble */
+  .portrait { max-width:400px; margin:0 auto; }
+  .frame { position:relative; }
+  .frame img { width:100%; display:block; border-radius:8px; position:relative; z-index:1; }
+  .frame::after { content:''; position:absolute; inset:14px -14px -14px 14px; border:2px solid var(--red); border-radius:8px; z-index:0; }
+  .caption { margin-top:26px; font-size:13px; color:#555; line-height:1.55; }
+  .caption strong { display:block; font-family:'Playfair Display',Georgia,serif; font-size:17px; color:var(--ink); font-weight:600; margin-bottom:2px; }
+  @media (max-width:879px){ .portrait { max-width:290px; } .hero { text-align:center; } .sub,.form { margin-left:auto; margin-right:auto; } .caption { text-align:center; } }
+</style>
+</head>
+<body>
+<div class="tag">Hero redesign mockup: advisor split + economist's tape (not live)</div>
+
+<nav class="nav">
+  <a href="#" class="logo">Mr. Sellers Homes<span>Bergen County, NJ &middot; RE/MAX</span></a>
+  <div class="navlinks">
+    <a href="#">Town directory</a><a href="#">Buying in Bergen County</a><a href="#">The Sellers&rsquo; Take</a><a href="#">About Tyler</a>
+  </div>
+  <a href="#" class="navcta">What&rsquo;s my home worth?</a>
+  <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- The economist's tape -->
+<div class="tape">
+  <div class="tape-inner">
+    <span class="tape-item"><span class="tape-dot"></span><strong>70 towns</strong>&nbsp;tracked monthly</span>
+    <span class="tape-item"><span class="tape-dot"></span><strong>$100K+</strong>&nbsp;over-list winning bids</span>
+    <span class="tape-item"><span class="tape-dot"></span><a href="#"><strong>15</strong> five-star Google reviews</a></span>
+    <span class="tape-item"><span class="tape-dot"></span>answered personally in <strong>1 day</strong></span>
+  </div>
+</div>
+
+<!-- Split hero -->
+<section class="hero">
+  <div>
+    <p class="eyebrow">Tyler Sellers &middot; RE/MAX &middot; Bergen County</p>
+    <h1>Sell your home in <span style="white-space:nowrap">today&rsquo;s market?</span><br>Or wait it out?</h1>
+    <p class="sub">Send your address and get a number from someone who&rsquo;s been inside the houses yours will be compared to.</p>
+    <form class="form">
+      <input class="inp" placeholder="Enter your home address">
+      <button class="btn" type="submit">What&rsquo;s it worth?</button>
+    </form>
+    <p class="fine">Tyler answers personally within one business day. <strong>If waiting is smarter, that&rsquo;s the answer you get.</strong></p>
+    <p class="talk">Prefer to talk? <a href="tel:+12013080525">Call or text (201) 308-0525</a></p>
+  </div>
+  <div class="portrait">
+    <div class="frame"><img src="https://mrsellers.homes/tyler-sellers.jpg" alt="Tyler Sellers, Bergen County realtor"></div>
+    <p class="caption"><strong>Tyler Sellers</strong>Bergen County born and based. Reads the economy so you don&rsquo;t have to guess.</p>
+  </div>
+</section>
+</body>
+</html>

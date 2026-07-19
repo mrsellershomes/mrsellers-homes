@@ -28,77 +28,87 @@
   <a href="#" class="font-serif text-xl md:text-2xl font-semibold leading-tight whitespace-nowrap">Mr. Sellers Homes
     <span class="block font-sans text-[11px] font-normal text-neutral-500 tracking-wide">Bergen County, NJ &middot; RE/MAX</span>
   </a>
-  <div class="hidden md:flex items-center gap-6 text-sm text-neutral-600">
+  <div class="hidden lg:flex items-center gap-7 text-[15px] text-neutral-600">
     <a href="/#towns" class="hover:text-brand">Town directory</a>
     <a href="/blog/" class="hover:text-brand">The Sellers&rsquo; Take</a>
     <a href="/about" class="hover:text-brand">About Tyler</a>
   </div>
   <div class="flex items-center gap-2">
     <a href="/#sell" class="bg-brand text-white text-xs md:text-sm font-medium px-3 md:px-4 py-2.5 rounded whitespace-nowrap hover:bg-[#c30016]">What&rsquo;s my home worth?</a>
-    <button onclick="document.getElementById('mmenu').classList.toggle('hidden')" aria-label="Menu" class="md:hidden p-2">
+    <button onclick="document.getElementById('mmenu').classList.toggle('hidden')" aria-label="Menu" class="lg:hidden p-2">
       <span class="block w-5 h-0.5 bg-ink mb-1"></span><span class="block w-5 h-0.5 bg-ink mb-1"></span><span class="block w-5 h-0.5 bg-ink"></span>
     </button>
   </div>
 </nav>
-<div id="mmenu" class="hidden md:hidden bg-white border-b border-rule px-5 py-2">
+<div id="mmenu" class="hidden lg:hidden bg-white border-b border-rule px-5 py-2">
   <a href="/#towns" class="block py-3 border-b border-rule text-ink">Town directory</a>
   <a href="/blog/" class="block py-3 border-b border-rule text-ink">The Sellers&rsquo; Take</a>
   <a href="/buy/" class="block py-3 border-b border-rule text-ink">Buying in Bergen County</a>
   <a href="/about" class="block py-3 text-ink">About Tyler</a>
 </div>
 
+<!-- Market tape: quiet stats line (replaces the heavy red band) -->
+<div class="border-b border-rule bg-cream">
+  <div class="grid grid-cols-2 gap-x-10 gap-y-1.5 justify-items-start w-fit mx-auto px-4 py-3 text-[12px] text-neutral-600 lg:w-auto lg:max-w-5xl lg:flex lg:flex-wrap lg:items-center lg:justify-center lg:gap-x-8 lg:gap-y-1 lg:text-[15px]">
+    <span class="flex items-center gap-1.5 whitespace-nowrap"><span class="w-[5px] h-[5px] rounded-full bg-brand shrink-0"></span><span><strong class="text-ink font-semibold">70 towns</strong> tracked monthly</span></span>
+    <span class="flex items-center gap-1.5 whitespace-nowrap"><span class="w-[5px] h-[5px] rounded-full bg-brand shrink-0"></span><span><strong class="text-ink font-semibold">$100K+</strong> over-list bids</span></span>
+    <a href="https://share.google/7XbQmAH8cAfASoF5r" target="_blank" rel="noopener" class="flex items-center gap-1.5 whitespace-nowrap hover:text-ink"><span class="w-[5px] h-[5px] rounded-full bg-brand shrink-0"></span><span class="underline decoration-neutral-300 underline-offset-2"><strong class="text-ink font-semibold">15</strong> five-star reviews</span></a>
+    <span class="flex items-center gap-1.5 whitespace-nowrap"><span class="w-[5px] h-[5px] rounded-full bg-brand shrink-0"></span><span><strong class="text-ink font-semibold">1-day</strong> personal answer</span></span>
+  </div>
+</div>
+
 
 <!-- HERO -->
-<header class="max-w-3xl mx-auto px-5 pt-14 md:pt-20 pb-12 text-center" id="value">
+<header class="max-w-6xl mx-auto px-6 pt-12 md:pt-16 pb-12 text-center md:text-left" id="value">
   <p class="text-brand text-xs md:text-sm font-medium tracking-[0.15em] uppercase mb-4">Tyler Sellers &middot; RE/MAX &middot; Bergen County</p>
-  <h1 class="font-serif font-semibold leading-[1.08] text-[clamp(36px,6vw,56px)] max-w-2xl mx-auto">Buying in Bergen County?<br>Get answers before you get pressured.</h1>
-  <p class="mt-5 text-neutral-600 text-base md:text-lg max-w-xl mx-auto">Tell me what you&rsquo;re weighing. You get straight answers on what you can afford here, which towns fit, and whether waiting serves you. Answers first. Then comes the hunt.</p>
-  <div class="mt-8"><form class="lead-form grid gap-3 max-w-xl mx-auto text-left" data-fub-source="MrSellers.homes | Buy Page | Buyer" data-fub-tags="Buy Page Lead,Intent: Buyer" novalidate>
+  <h1 class="font-serif font-semibold leading-[1.08] text-[clamp(34px,5vw,50px)] max-w-3xl md:max-w-none mx-auto md:mx-0">Buying in <span class="whitespace-nowrap">Bergen County?</span><br>Get answers before you get pressured.</h1>
+  <p class="mt-5 text-neutral-600 text-base md:text-[20px] md:leading-[34px] max-w-xl mx-auto md:mx-0">Tell me what you&rsquo;re weighing. You get straight answers on what you can afford here, which towns fit, and whether waiting serves you. Answers first. Then comes the hunt.</p>
+  <div class="mt-8 max-w-xl mx-auto md:mx-0"><form class="lead-form grid gap-3 max-w-xl mx-auto text-left" data-fub-source="MrSellers.homes | Buy Page | Buyer" data-fub-tags="Buy Page Lead,Intent: Buyer" novalidate>
       <label class="form-row"><span class="form-label block text-sm font-medium mb-1">Name</span><input type="text" name="name" autocomplete="name" required class="w-full border border-neutral-300 bg-white text-ink rounded-md px-4 py-3"></label>
       <label class="form-row"><span class="form-label block text-sm font-medium mb-1">Email</span><input type="email" name="email" autocomplete="email" required class="w-full border border-neutral-300 bg-white text-ink rounded-md px-4 py-3"></label>
       <label class="form-row"><span class="form-label block text-sm font-medium mb-1">What&rsquo;s the question you keep coming back to?</span><textarea name="message" rows="3" class="w-full border border-neutral-300 bg-white text-ink rounded-md px-4 py-3"></textarea></label>
       <button type="submit" class="btn-red bg-brand text-white font-medium rounded-md px-7 py-3.5 hover:bg-[#c30016]">Send it to Tyler</button>
       <p class="form-status text-sm text-neutral-500" role="status" aria-live="polite"></p>
     </form></div>
-  <p class="mt-3 text-xs text-neutral-500">Tyler answers personally within one business day. No listings blast, no sign-up drip.</p>
+  <p class="mt-3 text-[13px] md:text-[15px] text-neutral-500">Tyler answers personally within one business day. No listings blast, no sign-up drip.</p>
 </header>
 
 <!-- THREE ANSWERS -->
 <section class="bg-white border-y border-rule">
-  <div class="max-w-4xl mx-auto px-5 py-12 grid md:grid-cols-3 gap-8">
+  <div class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-8">
     <div>
       <h2 class="font-serif text-2xl font-semibold">What you can afford</h2>
-      <p class="mt-2 text-neutral-600 text-sm">The real monthly number at today&rsquo;s rates, not a portal&rsquo;s guess. Taxes change town to town here, and they change the answer.</p>
+      <p class="mt-2 text-neutral-600 text-sm md:text-[16px] md:leading-relaxed">The real monthly number at today&rsquo;s rates, not a portal&rsquo;s guess. Taxes change town to town here, and they change the answer.</p>
     </div>
     <div>
       <h2 class="font-serif text-2xl font-semibold">Which towns fit</h2>
-      <p class="mt-2 text-neutral-600 text-sm">Commute, schools, housing stock, and what living there actually feels like. 70 towns, and I track every one of them monthly.</p>
+      <p class="mt-2 text-neutral-600 text-sm md:text-[16px] md:leading-relaxed">Commute, schools, housing stock, and what living there actually feels like. 70 towns, and I track every one of them monthly.</p>
     </div>
     <div>
       <h2 class="font-serif text-2xl font-semibold">Whether to wait</h2>
-      <p class="mt-2 text-neutral-600 text-sm">Rates and inventory decide if waiting costs you or saves you. If waiting is your smarter move, that&rsquo;s the answer you get.</p>
+      <p class="mt-2 text-neutral-600 text-sm md:text-[16px] md:leading-relaxed">Rates and inventory decide if waiting costs you or saves you. If waiting is your smarter move, that&rsquo;s the answer you get.</p>
     </div>
   </div>
 </section>
 
 <!-- CHECK MY HOMEWORK -->
 <section class="bg-parchment">
-  <div class="max-w-3xl mx-auto px-5 py-14 md:py-20">
-    <h2 class="font-serif text-3xl md:text-4xl font-semibold leading-tight">Don&rsquo;t take my word for it.<br>Check my homework.</h2>
-    <p class="mt-4 text-neutral-600 leading-relaxed">Every month I publish what actually sold in all 70 Bergen County towns, with the closed sales to back it up. Read the towns you&rsquo;re considering before we ever talk.</p>
-    <div class="mt-6 flex flex-wrap gap-3">
-      <a href="/#towns" class="border border-ink rounded px-5 py-3 text-sm font-medium hover:border-brand hover:text-brand">Browse all 70 town reports</a>
-      <a href="/blog/" class="border border-ink rounded px-5 py-3 text-sm font-medium hover:border-brand hover:text-brand">The Sellers&rsquo; Take blog</a>
+  <div class="max-w-6xl mx-auto px-6 py-14 md:py-16">
+    <h2 class="font-serif text-3xl md:text-[44px] font-semibold leading-tight">Don&rsquo;t take my word for it.<br>Check my homework.</h2>
+    <p class="mt-5 text-neutral-600 text-[17px] md:text-[19px] md:leading-[32px] max-w-[60ch]">Every month I publish what actually sold in all 70 Bergen County towns, with the closed sales to back it up. Read the towns you&rsquo;re considering before we ever talk.</p>
+    <div class="mt-7 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+      <a href="/towns/" class="bg-ink text-white rounded px-6 py-3.5 text-[15px] font-medium text-center hover:bg-black w-full sm:w-auto">Browse all 70 town reports</a>
+      <a href="/blog/" class="text-[15px] font-medium text-neutral-600 hover:text-brand">The Sellers&rsquo; Take blog &rarr;</a>
     </div>
   </div>
 </section>
 
 <!-- FINAL CTA -->
 <section class="bg-ink text-white">
-  <div class="max-w-3xl mx-auto px-5 py-16 md:py-20 text-center">
+  <div class="max-w-6xl mx-auto px-6 py-16 md:py-20 text-left">
   <h2 class="font-serif text-3xl md:text-4xl font-semibold">Still circling the same question?</h2>
   <p class="mt-3 text-white/60 text-sm max-w-md mx-auto">Ask it. Worst case, you get a straight answer and keep looking on your own terms.</p>
-  <div class="mt-6"><form class="lead-form grid gap-3 max-w-xl mx-auto text-left" data-fub-source="MrSellers.homes | Buy Page | Buyer (footer)" data-fub-tags="Buy Page Lead,Intent: Buyer" novalidate>
+  <div class="mt-6 max-w-xl"><form class="lead-form grid gap-3 max-w-xl mx-auto text-left" data-fub-source="MrSellers.homes | Buy Page | Buyer (footer)" data-fub-tags="Buy Page Lead,Intent: Buyer" novalidate>
       <label class="form-row"><span class="form-label block text-sm font-medium mb-1">Name</span><input type="text" name="name" autocomplete="name" required class="w-full border border-neutral-300 bg-white text-ink rounded-md px-4 py-3"></label>
       <label class="form-row"><span class="form-label block text-sm font-medium mb-1">Email</span><input type="email" name="email" autocomplete="email" required class="w-full border border-neutral-300 bg-white text-ink rounded-md px-4 py-3"></label>
       <label class="form-row"><span class="form-label block text-sm font-medium mb-1">What&rsquo;s the question you keep coming back to?</span><textarea name="message" rows="3" class="w-full border border-neutral-300 bg-white text-ink rounded-md px-4 py-3"></textarea></label>
