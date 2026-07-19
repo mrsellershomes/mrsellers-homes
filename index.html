@@ -377,7 +377,7 @@
           <input type="text" id="townSearch" placeholder="Search any Bergen County town..." oninput="suggestTowns(this.value)" autocomplete="off" style="border:1px solid #e2dccf;border-radius:8px;padding:14px 16px 14px 40px;font-size:16px;" />
           <div id="townSuggest" style="position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid var(--gray-light);border-top:none;border-radius:0 0 8px 8px;z-index:30;display:none;box-shadow:0 8px 20px rgba(0,0,0,0.07);"></div>
         </div>
-        <p style="margin:8px 0 0;font-size:13px;color:#8a8478;">Or hover the map to preview a market.</p>
+        <p style="margin:8px 0 0;font-size:13px;color:#8a8478;"><span class="hint-hover">Or hover the map to preview a market.</span><span class="hint-touch hidden">Or tap a town to preview its market.</span></p>
         <p id="mapTownName" style="font-family:'Playfair Display',Georgia,serif;font-size:30px;font-weight:600;color:var(--black);text-align:center;margin:14px 0 2px;">Bergen County</p>
         <div id="countyMap" style="min-height:300px;">
           <a href="/towns/"><img src="/assets/bergen-county-map.svg" alt="Clickable map of all 70 Bergen County towns" style="width:100%;max-height:430px;object-fit:contain;" loading="lazy"></a>
@@ -720,10 +720,30 @@
         return r.text();
       }).then(function (svg) {
         holder.innerHTML = svg;
+        function isTouchUI() {
+          return window.__forceTouchUI || (window.matchMedia && window.matchMedia('(hover: none)').matches);
+        }
+        if (isTouchUI()) {
+          var hh = document.querySelector('.hint-hover'), ht = document.querySelector('.hint-touch');
+          if (hh) hh.classList.add('hidden');
+          if (ht) ht.classList.remove('hidden');
+        }
+        var selected = null;
         holder.querySelectorAll('a').forEach(function (a) {
           var href = a.getAttribute('href');
-          a.addEventListener('mouseenter', function () { showTown(href); });
-          a.addEventListener('mouseleave', reset);
+          // Hover preview (mouse users; harmless on touch)
+          a.addEventListener('mouseenter', function () { if (!isTouchUI()) showTown(href); });
+          a.addEventListener('mouseleave', function () { if (!isTouchUI() && !selected) reset(); });
+          // Touch: first tap previews and sticks; the CTA below navigates.
+          // Mouse: click passes through to the town page as normal.
+          a.addEventListener('click', function (e) {
+            if (!isTouchUI()) return;
+            e.preventDefault();
+            if (selected) selected.style.fill = '';
+            var shape = a.querySelector('.town-shape');
+            if (shape) { shape.style.fill = '#E2001A'; selected = shape; }
+            showTown(href);
+          });
         });
       }).catch(function () { /* static image remains */ });
     })();
