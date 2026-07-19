@@ -387,7 +387,8 @@
           <div><p id="msSold" style="font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:600;">Monthly</p><p id="msSoldL" style="font-size:12px;color:#8a8478;margin-top:1px;">data updates</p></div>
           <div><p id="msPct" style="font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:600;">Real</p><p id="msPctL" style="font-size:12px;color:#8a8478;margin-top:1px;">closed sales</p></div>
         </div>
-        <a id="mapCta" href="/towns/" style="display:block;text-align:center;margin-top:14px;color:#E2001A;font-size:15px;font-weight:500;text-decoration:none;">Browse all 70 towns &rarr;</a>
+        <p id="mapPeriod" style="text-align:center;font-size:12px;color:#8a8478;margin-top:8px;">Real NJMLS closed sales &middot; updated monthly</p>
+        <a id="mapCta" href="/towns/" style="display:block;text-align:center;margin-top:12px;color:#E2001A;font-size:15px;font-weight:500;text-decoration:none;">Browse all 70 towns &rarr;</a>
       </div>
     </div>
     <style>@media (min-width:880px){ .towns-teaser{ grid-template-columns: 1fr 1fr; } }</style>
@@ -689,7 +690,11 @@
       if (!holder || !window.fetch) return;
       var stats = null;
       fetch('/assets/town-stats.json').then(function (r) { return r.ok ? r.json() : null; }).then(function (j) {
-        if (j) stats = j.towns;
+        if (j) {
+          stats = j.towns;
+          var per = document.getElementById('mapPeriod');
+          if (per && j.period) per.textContent = 'Closed NJMLS sales, ' + j.period + '.';
+        }
       }).catch(function () {});
       function fmtMoney(n) {
         if (!n) return '\u2013';
