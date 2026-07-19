@@ -117,6 +117,7 @@ async function main() {
   if (flags.noAi) console.log('(no-ai mode: template fallback paragraphs)');
   if (flags.forceRegen) console.log('(force-regen mode: ignoring AI-paragraph cache)');
 
+  const townStats = {};
   const summary = {
     written: 0,
     aiFromApi: 0,
@@ -165,6 +166,13 @@ async function main() {
     else if (aiResult.fallback) summary.aiFallback++;
     else summary.aiFromApi++;
     if (townAgg.sub10) summary.sub10++;
+    // Feed the homepage's live map: sanctioned stats only (median, count, % of list)
+    townStats[town.pageSlug] = {
+      name: town.name,
+      median: townAgg.townData ? townAgg.townData.medianSalePrice : null,
+      sold: townAgg.townData ? townAgg.townData.homesSold : null,
+      pctList: townAgg.townData ? townAgg.townData.saleToList : null
+    };
 
     const ctx = {
       townName: town.name,
@@ -213,6 +221,8 @@ async function main() {
     try { posts = loadPosts(resolve('content/blog')); } catch { /* no blog content yet */ }
     const xml = buildSitemap(towns, posts);
     writeFileSync(resolve('sitemap.xml'), xml);
+    writeFileSync(resolve('assets/town-stats.json'), JSON.stringify({ period: periodLabel, towns: townStats }));
+    console.log(`Wrote assets/town-stats.json (${Object.keys(townStats).length} towns)`);
     console.log(`Wrote sitemap.xml (${towns.length} town URLs + ${4} static pages)`);
   } else if (isFullRun && flags.dryRun) {
     console.log('Would write sitemap.xml (dry-run)');

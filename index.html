@@ -371,27 +371,23 @@
         </p>
 
       </div>
-      <div style="position:relative;max-width:560px;justify-self:end;width:100%;">
-        <div style="position:relative;z-index:1;background:#fff;border:1px solid var(--gray-light);border-radius:10px;padding:20px 22px;">
-          <div class="town-search" style="position:relative;margin-bottom:12px;">
-            <span class="town-search-icon">&#9906;</span>
-            <input type="text" id="townSearch" placeholder="Type your town..." oninput="suggestTowns(this.value)" autocomplete="off" />
-            <div id="townSuggest" style="position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid var(--gray-light);border-top:none;border-radius:0 0 6px 6px;z-index:30;display:none;box-shadow:0 8px 20px rgba(0,0,0,0.07);"></div>
-          </div>
-          <div id="countyMap" style="min-height:300px;">
-            <a href="/towns/"><img src="/assets/bergen-county-map.svg" alt="Clickable map of all 70 Bergen County towns" style="width:100%;max-height:400px;object-fit:contain;" loading="lazy"></a>
-          </div>
-          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-top:10px;">
-            <span id="mapReadout" style="font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:18px;color:var(--gray-mid);min-height:24px;">Hover a town</span>
-            <a href="/towns/" style="color:#E2001A;font-size:15px;font-weight:500;text-decoration:none;white-space:nowrap;">All 70 towns &rarr;</a>
-          </div>
+      <div style="max-width:560px;justify-self:end;width:100%;background:#fff;border:1px solid var(--gray-light);border-radius:12px;padding:24px 26px 22px;box-shadow:0 10px 32px rgba(26,26,26,0.06);">
+        <div class="town-search" style="position:relative;">
+          <span class="town-search-icon">&#9906;</span>
+          <input type="text" id="townSearch" placeholder="Search any Bergen County town..." oninput="suggestTowns(this.value)" autocomplete="off" style="border:1px solid #e2dccf;border-radius:8px;padding:14px 16px 14px 40px;font-size:16px;" />
+          <div id="townSuggest" style="position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid var(--gray-light);border-top:none;border-radius:0 0 8px 8px;z-index:30;display:none;box-shadow:0 8px 20px rgba(0,0,0,0.07);"></div>
         </div>
-        <div style="position:absolute;inset:14px -14px -14px 14px;border:2px solid #E2001A;border-radius:10px;z-index:0;"></div>
-      </div>
-        <a href="/towns/" style="display:block;text-decoration:none;color:inherit;">
-          <img src="/assets/bergen-county-map.svg" alt="Clickable map of all 70 Bergen County towns" style="width:100%;max-height:400px;object-fit:contain;" loading="lazy">
-          <span style="display:inline-block;margin-top:12px;color:#E2001A;font-size:15px;font-weight:500;">Browse all 70 towns on the county map &rarr;</span>
-        </a>
+        <p style="margin:8px 0 0;font-size:13px;color:#8a8478;">Or hover the map to preview a market.</p>
+        <p id="mapTownName" style="font-family:'Playfair Display',Georgia,serif;font-size:30px;font-weight:600;color:var(--black);text-align:center;margin:14px 0 2px;">Bergen County</p>
+        <div id="countyMap" style="min-height:300px;">
+          <a href="/towns/"><img src="/assets/bergen-county-map.svg" alt="Clickable map of all 70 Bergen County towns" style="width:100%;max-height:430px;object-fit:contain;" loading="lazy"></a>
+        </div>
+        <div id="mapStats" style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:center;margin-top:10px;">
+          <div><p id="msMedian" style="font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:600;">70</p><p id="msMedianL" style="font-size:12px;color:#8a8478;margin-top:1px;">towns tracked</p></div>
+          <div><p id="msSold" style="font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:600;">Monthly</p><p id="msSoldL" style="font-size:12px;color:#8a8478;margin-top:1px;">data updates</p></div>
+          <div><p id="msPct" style="font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:600;">Real</p><p id="msPctL" style="font-size:12px;color:#8a8478;margin-top:1px;">closed sales</p></div>
+        </div>
+        <a id="mapCta" href="/towns/" style="display:block;text-align:center;margin-top:14px;color:#E2001A;font-size:15px;font-weight:500;text-decoration:none;">Browse all 70 towns &rarr;</a>
       </div>
     </div>
     <style>@media (min-width:880px){ .towns-teaser{ grid-template-columns: 1fr 1fr; } }</style>
@@ -685,22 +681,49 @@
       }
       box.style.display = 'block';
     }
-    // Live county map: swap the static image for the interactive SVG
-    // (hover = red + name readout, click = town report). Fails soft: if the
-    // fetch dies, the image and its /towns/ link keep working.
+    // Live county map: interactive SVG + real stats on hover, fed by
+    // assets/town-stats.json (regenerated with every monthly data run).
+    // Fails soft at every step: static image + generic stats remain.
     (function () {
       var holder = document.getElementById('countyMap');
       if (!holder || !window.fetch) return;
+      var stats = null;
+      fetch('/assets/town-stats.json').then(function (r) { return r.ok ? r.json() : null; }).then(function (j) {
+        if (j) stats = j.towns;
+      }).catch(function () {});
+      function fmtMoney(n) {
+        if (!n) return '\u2013';
+        return n >= 1e6 ? '$' + (n / 1e6).toFixed(2).replace(/0$/, '') + 'M' : '$' + Math.round(n / 1000) + 'K';
+      }
+      function setText(id, v) { var el = document.getElementById(id); if (el) el.textContent = v; }
+      function showTown(href) {
+        var t = stats && stats[href.replace(/\//g, '')];
+        if (!t) return;
+        setText('mapTownName', t.name);
+        setText('msMedian', fmtMoney(t.median)); setText('msMedianL', 'median sale price');
+        setText('msSold', t.sold != null ? t.sold : '\u2013'); setText('msSoldL', 'homes sold');
+        setText('msPct', t.pctList != null ? (t.pctList * 100).toFixed(1) + '%' : '\u2013'); setText('msPctL', 'of list price');
+        var cta = document.getElementById('mapCta');
+        if (cta) { cta.href = href; cta.textContent = t.name + ' market report \u2192'; }
+      }
+      function reset() {
+        setText('mapTownName', 'Bergen County');
+        setText('msMedian', '70'); setText('msMedianL', 'towns tracked');
+        setText('msSold', 'Monthly'); setText('msSoldL', 'data updates');
+        setText('msPct', 'Real'); setText('msPctL', 'closed sales');
+        var cta = document.getElementById('mapCta');
+        if (cta) { cta.href = '/towns/'; cta.textContent = 'Browse all 70 towns \u2192'; }
+      }
+      window.__showTownOnMap = showTown;
       fetch('/assets/bergen-county-map.svg').then(function (r) {
         if (!r.ok) throw new Error(r.status);
         return r.text();
       }).then(function (svg) {
         holder.innerHTML = svg;
-        var out = document.getElementById('mapReadout');
         holder.querySelectorAll('a').forEach(function (a) {
-          var name = (a.getAttribute('aria-label') || '').replace(' real estate market report', '');
-          a.addEventListener('mouseenter', function () { if (out) out.textContent = name + ' \u2192'; });
-          a.addEventListener('mouseleave', function () { if (out) out.textContent = 'Hover a town'; });
+          var href = a.getAttribute('href');
+          a.addEventListener('mouseenter', function () { showTown(href); });
+          a.addEventListener('mouseleave', reset);
         });
       }).catch(function () { /* static image remains */ });
     })();
@@ -709,6 +732,7 @@
     function highlightOnMap(href, on) {
       var el = document.querySelector('#countyMap a[href="' + href + '"] .town-shape');
       if (el) el.style.fill = on ? '#E2001A' : '';
+      if (on && window.__showTownOnMap) window.__showTownOnMap(href);
     }
 
     document.addEventListener('click', function (e) {
