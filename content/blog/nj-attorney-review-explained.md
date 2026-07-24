@@ -33,4 +33,6 @@ A typical Bergen County seller pays between **$1,750 and $2,250** for an attorne
 
 In my experience it's rarely the lawyers. Deals die in attorney review because one side used the window to keep shopping. The fix is speed: get the signed contract to both attorneys the same day, and push to conclude review fast. Every extra day of open review is a day your deal is optional.
 
+One more reason for speed: the moment review concludes, your inspection clock starts, and in Bergen County that should include a tank sweep within days. I cover [underground oil tanks in NJ](https://mrsellers.homes/blog/underground-oil-tanks-nj-sweeps-removal-costs/), the buried problem behind more inspection drama here than any other, in its own post.
+
 If you're getting ready to sell in Bergen County and want to know what your specific timeline looks like, from offer to review to closing, that's exactly the kind of question I'd rather you ask me before you sign than after.
