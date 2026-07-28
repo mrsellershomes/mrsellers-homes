@@ -127,6 +127,8 @@ That last line is the point of every settlement statement. Walk from your sale p
 
 Two final notes on closing: First, sellers routinely negotiate credits to buyers after inspection, commonly $2,000 to $5,000 on the deals I see, so leave room for that in your mental math. Second, commission is negotiable and varies by deal; the closings behind this page ran 4.47% to 5.0% all-in.
 
+The other half of this decision is the sale price itself. I wrote about [why there is no housing inventory in Bergen County](https://mrsellers.homes/blog/bergen-county-housing-inventory-lock-in-effect-2026/), which is what keeps pushing Bergen sale prices over asking, and [why your Bergen County Zestimate is wrong](https://mrsellers.homes/blog/are-zillow-zestimates-accurate-bergen-county-nj/) about the number most sellers start from.
+
 If you are thinking about selling in Bergen County and want your actual number, not a range, send me your address and mortgage balance. I will run this exact walk-down for your house. It takes me ten minutes and it is free.
 
 *Not legal or tax advice. RTF schedule per the NJ Division of Taxation; mansion tax tiers per the July 2025 law (A5804). Fee ranges observed on real closings; your numbers will vary. Confirm specifics with your attorney and CPA.*

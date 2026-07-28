@@ -92,6 +92,8 @@ Take your expected purchase price and multiply by the town's effective tax rate.
 
 What you should not use is the tax figure on the listing page. In a revaluation town that number describes the seller's old assessment under the old rate, and both just changed. I've watched buyers rule houses in or out over a listing-page tax number that was already obsolete. Run the effective-rate math instead, or send me the address and I'll run it for you.
 
+The listing-page tax number is not the only stale number buyers lean on. The value estimate on the same page has its own problems, which I cover in [why your Bergen County Zestimate is wrong](https://mrsellers.homes/blog/are-zillow-zestimates-accurate-bergen-county-nj/). And if you are wondering why there is so little to buy in these towns in the first place, that is [the lock-in effect](https://mrsellers.homes/blog/bergen-county-housing-inventory-lock-in-effect-2026/).
+
 One more place taxes show up: the closing table. Property taxes get prorated between buyer and seller by days of ownership, and in a reval year the proration math deserves a second look. I broke down every closing line item, prorations included, in my [Bergen County seller closing costs guide](https://mrsellers.homes/blog/bergen-county-seller-closing-costs-2026/).
 
 ## Can I still appeal my 2026 assessment?
