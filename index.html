@@ -238,25 +238,21 @@
       .hero-stats { gap: 24px; }
     }
 
-    /* STICKY MOBILE CTA: hidden by default, shown via JS on mobile after scroll */
-    .sticky-mobile-cta {
-      position: fixed; bottom: 50px; left: 0; right: 0; z-index: 98;
-      background: var(--red); padding: 12px 20px;
-      display: flex; align-items: center; justify-content: space-between;
-      box-shadow: 0 -2px 12px rgba(0,0,0,0.15);
-      transform: translateY(100%); transition: transform 0.3s ease;
-      pointer-events: none; opacity: 0;
+    /* STICKY TEXT PILL: mobile only, revealed by JS after ~a screen of scroll.
+       Replaces the old full-width sticky bar + contact sheet: one tap opens
+       Messages to the Quo line with the first line pre-typed. */
+    .text-pill {
+      position: fixed; bottom: 18px; right: 16px; z-index: 98;
+      display: flex; align-items: center; gap: 8px;
+      background: var(--red); color: var(--white);
+      font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500;
+      padding: 13px 19px; border-radius: 999px; text-decoration: none;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.22);
+      opacity: 0; transform: translateY(12px); pointer-events: none;
+      transition: opacity 0.25s ease, transform 0.25s ease;
     }
-    .sticky-mobile-cta.visible { transform: translateY(0); pointer-events: auto; opacity: 1; }
-    .sticky-mobile-cta a {
-      color: var(--white); text-decoration: none; font-size: 14px;
-      font-weight: 500; font-family: 'DM Sans', sans-serif;
-      letter-spacing: 0.04em;
-    }
-    .sticky-mobile-cta .sticky-close {
-      background: none; border: none; color: rgba(255,255,255,0.7);
-      font-size: 18px; cursor: pointer; padding: 0 0 0 12px;
-    }
+    .text-pill.visible { opacity: 1; transform: none; pointer-events: auto; }
+    @media (min-width: 768px) { .text-pill { display: none; } }
   </style>
 </head>
 <body class="bg-cream text-ink font-sans antialiased">
@@ -419,19 +415,19 @@
       <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:600;margin-bottom:14px;">The Sellers&rsquo; Take: latest from the blog</h3>
       <div style="display:grid;gap:10px;">
 <!-- blog-latest:start -->
+  <a class="home-blog-card" href="/blog/bergen-county-equalization-ratios-by-town-2026/">
+    <span class="home-blog-date">2026-08-06</span>
+    <span class="home-blog-title">Bergen County Equalization Ratios by Town: The 2026 Table</span>
+    <span class="home-blog-arrow">&rarr;</span>
+  </a>
+  <a class="home-blog-card" href="/blog/bergen-county-property-tax-appeal-20-minute-check/">
+    <span class="home-blog-date">2026-08-06</span>
+    <span class="home-blog-title">Bergen County Property Tax Appeal: How to Know in 20 Minutes If You Have a Case</span>
+    <span class="home-blog-arrow">&rarr;</span>
+  </a>
   <a class="home-blog-card" href="/blog/are-zillow-zestimates-accurate-bergen-county-nj/">
     <span class="home-blog-date">2026-07-28</span>
     <span class="home-blog-title">Are Zillow Zestimates Accurate in NJ? Why Your Bergen County Zestimate Is Wrong</span>
-    <span class="home-blog-arrow">&rarr;</span>
-  </a>
-  <a class="home-blog-card" href="/blog/bergen-county-housing-inventory-lock-in-effect-2026/">
-    <span class="home-blog-date">2026-07-28</span>
-    <span class="home-blog-title">Why There Is No Housing Inventory in Bergen County: The Lock-In Effect in 2026</span>
-    <span class="home-blog-arrow">&rarr;</span>
-  </a>
-  <a class="home-blog-card" href="/blog/underground-oil-tanks-nj-sweeps-removal-costs/">
-    <span class="home-blog-date">2026-07-24</span>
-    <span class="home-blog-title">Underground Oil Tanks in NJ: Costs, Tank Sweeps, and the Myths That Kill Deals</span>
     <span class="home-blog-arrow">&rarr;</span>
   </a>
 <!-- blog-latest:end -->
