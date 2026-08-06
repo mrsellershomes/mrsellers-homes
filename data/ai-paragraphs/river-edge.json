@@ -1,24 +1,24 @@
 {
-  "hash": "e7b6fa3f9aeab283",
-  "paragraph": "River Edge is a single-family town, plain and simple. Forty-one detached homes closed over six months at a median of $950,000, with a sale-to-list ratio of 1.00 and a median of 21 days on market. Nearly half sold above asking. That is competitive but not frenzied. Priced homes move, and the ones that sit are usually asking ahead of the comps. Sales ran from $590,000 to $1,900,000, so the median is your better guide than the range. Month to month, most windows carried four to seven closings, too thin to call a trend, and the medians swing on which homes happened to close. July brought 15 sales at $970,000, the volume peak you would expect in a Bergen County summer. If the usual seasonal arc holds, expect closings to thin through fall. Only two condo or townhouse sales registered here, not enough to read as a market.",
+  "hash": "32fea963abeb9162",
+  "paragraph": "River Edge is a single-family town, plain and simple. Forty-one detached homes sold over six months at a median of $950,000, with sales running from $590,000 up to $1,900,000, so the median is the number to anchor on. The typical sale is a four-bedroom colonial with two full baths. At a sale-to-list ratio of 1.00, roughly half of homes going above asking, and a median of 21 days on market, this is competitive but not frenzied. Well-priced homes move, and you should expect competition on the good ones. Month to month, the medians swing hard because most months only had four to seven closings, which is too thin to read as a trend. The clearer signal is July's 15 closings, right in line with the usual early-summer volume peak. Only two condo or townhouse sales closed in the same window, not enough to draw any conclusion from. If you want a condo alternative here, you will likely be looking at neighboring towns.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "River Edge is a single-family town, plain and simple. Forty-one detached homes closed over six months at a median of $950,000, with a sale-to-list ratio of 1.00 and a median of 21 days on market. Just under half sold above asking. That is competitive but not frenzied. Priced homes move, and the ones that sit are usually asking ahead of the comps. Sales ran from $590,000 to $1,900,000, so the median is your better guide than the range. Month to month, most windows carried four to seven closings, too thin to call a trend, and the medians swing on which homes happened to close. July brought 15 sales at $970,000, the volume peak you would expect in a Bergen County summer. If the usual seasonal arc holds, expect closings to thin through fall. Only two condo or townhouse sales registered here, not enough to read as a market.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 1819,
+    "input_tokens": 1474,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 324,
+    "output_tokens": 595,
     "output_tokens_details": {
-      "thinking_tokens": 50
+      "thinking_tokens": 301
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:45:34.403Z"
+  "generatedAt": "2026-08-06T19:51:19.425Z"
 }

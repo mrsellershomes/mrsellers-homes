@@ -1,24 +1,24 @@
 {
-  "hash": "73f926ebfb8532e0",
-  "paragraph": "Little Ferry's single-family market is the volume leader with 16 sales over six months at a median of $622,000, and the range is tight, $505,000 to $750,000, so the median is a genuinely useful number here rather than an average of extremes. The sale-to-list ratio sits essentially at asking, about 56 percent of homes cleared list, and the median days on market is 34. That's competitive but not frenzied. Priced homes move, and sellers who aim high are willing to wait. Condos and townhouses come in at a median of $294,500 across 13 sales, with a median of 19 days on market and a ratio slightly above list, so that tier turns faster than the houses do. Multi-family barely registers with 3 sales, and one of them sat 169 days, which is too thin to read as a trend. The same caution applies to the monthly numbers. Most months here close two to five homes, which is noise, not signal, so the six-month picture is the honest guide. If you're comparing tiers, the deciding factor is whether you want the space and yard of a single-family or the lower price point and lighter upkeep of a condo.",
+  "hash": "7dca9edea7a83669",
+  "paragraph": "Single-family is the core of Little Ferry with 16 sales over six months at a median of $622,000, mostly three and four-bedroom colonials and bi-levels with a few capes, two baths being typical. A little over half sold above asking and the median days on market was 34, so this is competitive but not frenzied. Well-priced homes are moving, and you should expect competition on the good ones without assuming every listing turns into a bidding war. Condos and townhouses are the second real tier, 13 sales at a median of $294,500, most of them one-bedroom, one-bath units. That tier is the tightest of the three: a median of 19 days on market and a sale-to-list ratio slightly above list. Two-families are a thin slice at three sales with a median of $611,000, and the 169-day median days on market there tells you those sellers waited for the right buyer rather than pricing to move fast. Monthly counts are too small to read a trend from, so anchor on the six-month numbers. If you're weighing tiers, the deciding factor isn't market heat. It's whether you want the space and yard of a single-family, the low-maintenance of a condo, or the rental income of a two-family.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "Single-family is the core of Little Ferry with 16 sales over six months at a median of $622,000, mostly three and four-bedroom colonials and bi-levels with a few capes, two baths being typical. Just over half sold above asking and the median days on market was 34, so this is competitive but not frenzied. Well-priced homes are moving, and you should expect competition on the good ones without assuming every listing turns into a bidding war. Condos and townhouses are the second real tier, 13 sales at a median of $294,500, most of them one-bedroom, one-bath units. That tier is the tightest of the three: a median of 19 days on market and a sale-to-list ratio slightly above list. Two-families are a thin slice at three sales with a median of $611,000, and the 169-day median days on market there tells you those sellers waited for the right buyer rather than pricing to move fast. Monthly counts are too small to read a trend from, so anchor on the six-month numbers. If you're weighing tiers, the deciding factor isn't market heat. It's whether you want the space and yard of a single-family, the low-maintenance of a condo, or the rental income of a two-family.",
   "usage": {
-    "input_tokens": 1658,
+    "input_tokens": 2491,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 672,
+    "output_tokens": 373,
     "output_tokens_details": {
-      "thinking_tokens": 318
+      "thinking_tokens": 0
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:41:25.890Z"
+  "generatedAt": "2026-08-06T19:46:10.537Z"
 }

@@ -1,24 +1,24 @@
 {
-  "hash": "4ecbfc9c37a08daf",
-  "paragraph": "Ramsey's single-family market carried 40 sales over six months at a median of $999,500, essentially right at the million mark, with a sale-to-list ratio of 1.018, 55 percent of homes selling above asking, and a median of 15 days on market. That is competitive, and well-priced homes are moving fast, though sellers are not getting the across-the-board premiums you see in a full frenzy. The range runs from $470,000 to $2,450,000, so the median is the better guide than the extremes. Condos and townhouses are the tighter tier, 23 sales at a median of $605,000, a sale-to-list ratio of 1.039, roughly 65 percent selling above asking, and a median of 12 days on market. That is a real seller's market, and buyers at that price point should expect multiple offer situations. On seasonality, single-family volume built steadily through spring into summer, and July was both the heaviest month at 12 closings and one of the strongest medians at $1,250,500, so Ramsey is showing no sign yet of the usual late-summer drift. The condo months are too thin individually to read a trend from, so use the six-month picture there. If you're weighing tiers, the deciding factor isn't market heat, since both are tight. It's whether you want the space and grounds of a single-family or the low-maintenance lifestyle of a townhouse or condo.",
+  "hash": "fc4acc2d73e8ee70",
+  "paragraph": "Ramsey's single-family market is the main event here, with 40 sales over six months at a median of $999,500, essentially right at the million mark. The typical sale is a four-bedroom colonial with two full baths, with ranches and split-levels filling in behind it, and closings ran from $470,000 up to $2,450,000, so the median is the number to anchor on. Homes are going in about 15 days, 55% closed above asking, and the sale-to-list ratio sits at 1.02. That is a competitive market, and you should expect competition on anything priced right. Single-family closings built from 6 in March to 10 in June and 12 in July, and the July median of $1,250,500 is the strongest of any month with real volume, so there is no sign of the usual late-summer softening yet. Condos and townhouses, by contrast, run 23 sales at a median of $605,000, mostly two-bedroom, two-bath townhouses. That tier is tighter than the houses: 65% sold above asking, a 1.04 ratio, and a 12-day median. Sellers are dictating terms there, and the monthly counts are too thin to read a trend inside it. If you're weighing the two, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or the low-maintenance setup of a townhouse.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 1662,
+    "input_tokens": 1862,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 1189,
+    "output_tokens": 1765,
     "output_tokens_details": {
-      "thinking_tokens": 753
+      "thinking_tokens": 1342
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:44:51.758Z"
+  "generatedAt": "2026-08-06T19:50:32.168Z"
 }

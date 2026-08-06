@@ -1,24 +1,24 @@
 {
-  "hash": "7dfdc86fdc0b9c1c",
-  "paragraph": "The single-family market in Carlstadt is thin, with three sales over six months at a median of $640,000 and nothing selling above asking. The sale-to-list ratio of 0.99 and a median of 32 days on market say sellers are okay with waiting for the right buyer rather than pricing to move fast, but three sales is too small a sample to build a case on. Multi-family is where the actual volume sits, ten sales at a median of $770,000, a sale-to-list ratio of 1.05, and 60 percent of them closing above list in a median of about 26 days. That is competitive without being frenzied. The range runs from $640,000 up to $1,425,000, so treat the median as your guide rather than the extremes. Buying a two or three family here usually means inheriting tenants, leases, and a different financing conversation than a single-family purchase, which not every buyer is aware of going in. The monthly data is too sparse to call a seasonal direction; if Carlstadt follows the usual Bergen arc, expect closings to taper through the fall. If you're weighing the two, the deciding factor is whether you want a house to yourself or rental income attached to it.",
+  "hash": "31e88cfe3d67af08",
+  "paragraph": "Carlstadt is a small market and the numbers reflect that. Detached single-family activity is sparse, with three sales over six months at a median of $640,000, a sale-to-list ratio slightly under asking, and a median of 32 days on market. Nothing sold above list. With a sample that small, and a range from $625,000 to $738,000, the median is the number to anchor on. Two-families are the real volume here, ten sales at a median of $770,000, and nine of the ten were two-family properties with a typical layout of four or five bedrooms across three full baths. That tier is competitive: 60 percent sold above asking, the sale-to-list ratio came in at 1.047, and the median was 25 days on market. Expect competition on the good ones. Prices ran from $640,000 to $1,425,000, so read individual comps carefully rather than the average. The monthly series is too thin to call a trend in either tier. If you're weighing the two, the deciding factor is whether you want the space and yard of a single-family or the rental income and tenant management that comes with a two-family.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "Carlstadt is a small market and the numbers reflect that. Detached single-family activity is sparse, with three sales over six months at a median of $640,000, a sale-to-list ratio just under asking, and a median of 32 days on market. Nothing sold above list. With a sample that small, and a range from $625,000 to $738,000, the median is the number to anchor on. Two-families are the real volume here, ten sales at a median of $770,000, and nine of the ten were two-family properties with a typical layout of four or five bedrooms across three full baths. That tier is competitive: 60 percent sold above asking, the sale-to-list ratio came in at 1.047, and the median was 25 days on market. Expect competition on the good ones. Prices ran from $640,000 to $1,425,000, so read individual comps carefully rather than the average. The monthly series is too thin to call a trend in either tier. If you're weighing the two, the deciding factor is whether you want the space and yard of a single-family or the rental income and tenant management that comes with a two-family.",
   "usage": {
-    "input_tokens": 1008,
+    "input_tokens": 1739,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 894,
+    "output_tokens": 340,
     "output_tokens_details": {
-      "thinking_tokens": 527
+      "thinking_tokens": 0
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:36:25.469Z"
+  "generatedAt": "2026-08-06T19:40:12.516Z"
 }

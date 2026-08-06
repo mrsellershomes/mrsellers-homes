@@ -1,24 +1,24 @@
 {
-  "hash": "2b338b458fe320e4",
-  "paragraph": "East Rutherford is a small-volume market, so read it in six-month terms rather than month to month. Nine single-family sales closed at a median of $750,000, with a sale-to-list ratio right at 1.00 and a median of 18 days on market. Slightly more than half sold above asking. That is competitive but not frenzied. Priced homes move quickly, and the ones that don't sit. The range ran from $330,000 to $1,400,000, so the median is the better guide than either end. Multi-family is the top of the market here at a median of $959,500 across four sales, all of them above list and moving in about two weeks, though four closings is a thin sample to build a conclusion on. Condos and townhouses came in at a median of $555,000 on five sales with a median of 27 days on market, the slowest tier of the three. No month in this window had more than three single-family closings, so there is no honest monthly trend to read. If the town follows the usual Bergen seasonal arc, expect closings and medians to ease through fall. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space of a single-family, the rental income of a multi-family, or the low-maintenance lifestyle of a condo.",
+  "hash": "a4b01ed9c2d337ea",
+  "paragraph": "East Rutherford is a small market, and the numbers reflect that. Nine single-family sales over six months at a median of $750,000, mostly three-bedroom colonials and bi-levels with two baths. Sale prices ran from $330,000 to $1,400,000, so the median is the number to anchor on. Slightly more than half sold above list with a sale-to-list ratio right at 1.00 and a median of 18 days on market. That is competitive but not frenzied. Well-priced homes move quickly here, and you should expect competition on the good ones. Two-families are the higher-priced tier, with four sales at a median of $959,500, all of them above asking and a median of 14 days on market. Four sales is a thin sample, but the demand for income property in this part of Bergen County is real. Condos and townhouses came in at five sales with a median of $555,000, typically two bedrooms and two baths, and a median of 27 days on market. Monthly closings never got above three in any single month, so there is no readable monthly trend here. Judge East Rutherford on the six-month picture, not month to month. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the rental income of a two-family, or the low-maintenance lifestyle of a condo.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "East Rutherford is a small-volume market, so read it in six-month terms rather than month to month. Nine single-family sales closed at a median of $750,000, with a sale-to-list ratio right at 1.00 and a median of 18 days on market. Just over half sold above asking. That is competitive but not frenzied. Priced homes move quickly, and the ones that don't sit. The range ran from $330,000 to $1,400,000, so the median is the better guide than either end. Multi-family is the top of the market here at a median of $959,500 across four sales, all of them above list and moving in about two weeks, though four closings is a thin sample to build a conclusion on. Condos and townhouses came in at a median of $555,000 on five sales with a median of 27 days on market, the slowest tier of the three. No month in this window had more than three single-family closings, so there is no honest monthly trend to read. If the town follows the usual Bergen seasonal arc, expect closings and medians to ease through fall. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space of a single-family, the rental income of a multi-family, or the low-maintenance lifestyle of a condo.",
+  "firstDraft": "East Rutherford is a small market, and the numbers reflect that. Nine single-family sales over six months at a median of $750,000, mostly three-bedroom colonials and bi-levels with two baths. Sale prices ran from $330,000 to $1,400,000, so the median is the number to anchor on. Just over half sold above list with a sale-to-list ratio right at 1.00 and a median of 18 days on market. That is competitive but not frenzied. Well-priced homes move quickly here, and you should expect competition on the good ones. Two-families are the higher-priced tier, with four sales at a median of $959,500, all of them above asking and a median of 14 days on market. Four sales is a thin sample, but the demand for income property in this part of Bergen County is real. Condos and townhouses came in at five sales with a median of $555,000, typically two bedrooms and two baths, and a median of 27 days on market. Monthly closings never got above three in any single month, so there is no readable monthly trend here. Judge East Rutherford on the six-month picture, not month to month. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the rental income of a two-family, or the low-maintenance lifestyle of a condo.",
   "usage": {
-    "input_tokens": 2054,
+    "input_tokens": 2355,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 387,
+    "output_tokens": 417,
     "output_tokens_details": {
       "thinking_tokens": 0
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:37:37.297Z"
+  "generatedAt": "2026-08-06T19:41:48.275Z"
 }

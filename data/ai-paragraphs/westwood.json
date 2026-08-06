@@ -1,24 +1,24 @@
 {
-  "hash": "b29cbe850f5d949b",
-  "paragraph": "Westwood's single-family market is where nearly all the action is, with 20 sales over six months at a median of $794,500 and a sale-to-list ratio of 1.11. Ninety percent of those homes sold above asking and the median time to contract was 10 days. That is a real seller's market, and buyers should expect multiple offer situations on anything well presented. Sales ran from $435,000 to $1,525,000, so the median is the better guide than either end. Condos and townhouses are a much smaller slice at 5 sales and a median of $381,000, moving in 12 days at a ratio slightly above list. Five closings is too thin to call a trend, but the pattern matches the houses: quick, at or above ask. On seasonality, the monthly counts are small enough that no single month proves much, though June and July both closed 5 single-family sales at medians of $799,000 and $875,000, which is strength holding into midsummer rather than the usual drift. If this town follows the normal arc, expect fall closings to come in softer. If you're weighing the two tiers, the deciding factor isn't market heat, since both are competitive. It's whether you want the space and grounds of a single-family or the low-maintenance lifestyle and lower price point of a condo.",
+  "hash": "0ec68697724a560b",
+  "paragraph": "Westwood's single-family market is the whole story here, and it is a real seller's market. Twenty sales over six months at a median of $794,500, a sale-to-list ratio of 1.11, 90 percent of homes closing above asking, and a median of 10 days on market. Multiple offer situations are the norm, not the exception. The typical sale is a three-bedroom, two-bath colonial, with some split-levels and capes mixed in, and the range runs from $435,000 to $1,525,000, so the median is the number to anchor on. Condos are a much smaller slice, five sales at a median of $381,000, mostly one-bedroom one-bath units, and they moved quickly too at 12 days. Five sales cannot carry a trend, so treat that tier as a price reference rather than a read on direction. On the monthly numbers, closings built into June and July and the last two months are printing medians at the high end of the six-month spread, which tracks the normal summer peak. If Westwood follows the usual arc, expect volume to taper modestly through fall. If you're deciding between tiers, it comes down to whether you want the space and grounds of a single-family or the low-maintenance, lower-price entry a condo gives you.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "Westwood's single-family market is where nearly all the action is, with 20 sales over six months at a median of $794,500 and a sale-to-list ratio of 1.11. Ninety percent of those homes sold above asking and the median time to contract was 10 days. That is a real seller's market, and buyers should expect multiple offer situations on anything well presented. Sales ran from $435,000 to $1,525,000, so the median is the better guide than either end. Condos and townhouses are a much smaller slice at 5 sales and a median of $381,000, moving in 12 days at a ratio just over list. Five closings is too thin to call a trend, but the pattern matches the houses: quick, at or above ask. On seasonality, the monthly counts are small enough that no single month proves much, though June and July both closed 5 single-family sales at medians of $799,000 and $875,000, which is strength holding into midsummer rather than the usual drift. If this town follows the normal arc, expect fall closings to come in softer. If you're weighing the two tiers, the deciding factor isn't market heat, since both are competitive. It's whether you want the space and grounds of a single-family or the low-maintenance lifestyle and lower price point of a condo.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 2009,
+    "input_tokens": 1604,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 397,
+    "output_tokens": 734,
     "output_tokens_details": {
-      "thinking_tokens": 0
+      "thinking_tokens": 346
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:48:23.873Z"
+  "generatedAt": "2026-08-06T19:54:39.750Z"
 }

@@ -1,24 +1,24 @@
 {
-  "hash": "ed23c6bae35f1830",
-  "paragraph": "Harrington Park is a single-family market and nothing else, with 23 sales over six months at a median of $999,999. The sale-to-list ratio is 1.0436, 78 percent of homes sold above asking, and the median days on market is 13. That is a real seller's market, with multiple offer situations behind a good share of those numbers. Sales ran from $700,000 to $2,175,000, so the median is the better guide than the ends. Monthly closings are too thin to read a trend from any single month, though volume did build into June and July the way Bergen County summers usually go. If the town follows the normal seasonal arc, expect fall closings to thin out and the median to drift with whatever mix happens to close.",
+  "hash": "32ad7e0f4d818841",
+  "paragraph": "Harrington Park is a single-family market, and right now it is a real seller's market. Twenty-three homes sold over six months at a median of $999,999, the sale-to-list ratio is 1.04, and roughly 78 percent of sales closed above asking with a median of 13 days on market. That combination produces multiple offer situations, and you should expect competition on anything well-presented. The typical sale is a four-bedroom, two-bath colonial or split-level. Prices ran from $700,000 to $2,175,000, so the median is the number to anchor on. Monthly counts are too thin to read a price trend, but volume built through spring into six June and seven July closings, which is the normal seasonal arc. If the usual pattern holds, closings taper modestly through fall and thin out in deep winter.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 1267,
+    "input_tokens": 1379,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 418,
+    "output_tokens": 445,
     "output_tokens_details": {
-      "thinking_tokens": 195
+      "thinking_tokens": 191
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:40:26.411Z"
+  "generatedAt": "2026-08-06T19:44:59.632Z"
 }

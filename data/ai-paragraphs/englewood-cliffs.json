@@ -1,24 +1,24 @@
 {
-  "hash": "8035cef62b15b62e",
-  "paragraph": "Englewood Cliffs is a single-family market and nothing else. Twenty-four homes sold over six months at a median of $2,250,000, with sales running from $999,000 to $5,400,000. That range is wide enough that the median is the better guide than the average. A sale-to-list ratio of 0.97, a quarter of homes going above asking, and a median of 37 days on market put this in competitive but not frenzied territory. Sellers here are generally okay with waiting for the right buyer rather than pricing to move fast. The monthly counts are too thin to read a trend from, though July brought 8 closings at a median of $2,025,500 against June's 5 at $3,300,000. That is a mix shift toward smaller homes on higher volume, not a drop in values. If the usual seasonal arc holds, expect activity to taper through fall.",
+  "hash": "03d83d5950a4a025",
+  "paragraph": "Englewood Cliffs is a single-family market and nothing else. Twenty-four sales over six months at a median of $2,250,000, mostly five-bedroom colonials with four full baths, plus a few contemporaries and split-levels. Prices ran from $999,000 to $5,400,000, so the median is the number to anchor on. The sale-to-list ratio of 0.97 and a 37-day median days on market tell you sellers here are okay with waiting for the right buyer rather than pricing to move fast, and only a quarter of homes went above asking. Buyers should still expect competition on the well-priced ones. Monthly counts are too thin to read a trend, but July brought 8 closings at a $2,025,500 median against June's 5 at $3,300,000, which is a mix shift toward smaller homes on higher volume, not a price drop. That volume timing tracks the normal summer closing peak.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 1287,
+    "input_tokens": 1398,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 552,
+    "output_tokens": 687,
     "output_tokens_details": {
-      "thinking_tokens": 282
+      "thinking_tokens": 395
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:38:50.392Z"
+  "generatedAt": "2026-08-06T19:42:56.771Z"
 }

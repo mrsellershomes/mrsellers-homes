@@ -1,24 +1,24 @@
 {
-  "hash": "24452b27dcc63136",
-  "paragraph": "Alpine is a single-tier market and a thin one. Five single-family sales over six months, median $4,500,000, with a range from $4,000,000 to over $7.3 million. The median is the better guide than any one sale here. Sale-to-list ratio came in at 0.96, nothing sold above asking, and the median days on market was 101. That is a buyer-friendly setup, and sellers at this level are generally okay with waiting for the right buyer rather than cutting price to move fast. Five closings across six months is too small a sample to read a monthly trend, so the seasonal arc that shapes most of Bergen County tells you little about Alpine. What matters more is your patience, your financing, and how narrow the buyer pool is for any given house at this price.",
+  "hash": "014e11a0244cabce",
+  "paragraph": "Alpine is a single-family market and a thin one, with five closings over six months at a median of $4,500,000. Sales ran from $4,000,000 to $7,300,000, so the median is the number to anchor on. The typical sale is a six-bedroom colonial with six full baths. The sale-to-list ratio came in at 0.96, nothing sold above asking, and the median days on market was 101, so buyers have room to negotiate here and sellers need to price with intent. That is normal at this price point. Five sales spread across three months is too small to read a monthly trend, so treat the six-month picture as the picture. If you are buying in Alpine, expect a long, deliberate process on both sides rather than competition on the good ones.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 886,
+    "input_tokens": 975,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 378,
+    "output_tokens": 352,
     "output_tokens_details": {
-      "thinking_tokens": 138
+      "thinking_tokens": 121
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:35:51.946Z"
+  "generatedAt": "2026-08-06T19:39:45.971Z"
 }

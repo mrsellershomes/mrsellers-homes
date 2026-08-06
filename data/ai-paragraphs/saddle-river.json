@@ -1,24 +1,24 @@
 {
-  "hash": "6ac653b62da9f638",
-  "paragraph": "Saddle River is a single-family market, with 18 detached sales over six months at a median of $2,760,000 and prices running from $1,160,000 to $5,612,500. That range is wide enough that the median is the better guide than the average. The sale-to-list ratio of 0.969 with 22 percent of homes selling above asking and a median of 31 days on market says competitive but not frenzied. Sellers here are generally okay with waiting for the right buyer rather than pricing to move fast, and buyers who come prepared have room to negotiate off list. Monthly counts are too thin to read a trend, one to five closings a month, so the July median of $1,892,500 on two sales is noise, not a signal. Only two condo or townhouse sales closed in the same window, so if attached housing is what you want, expect to wait for inventory. If this town follows the usual Bergen seasonal arc, expect activity to thin through fall, which historically favors the buyer willing to be patient.",
+  "hash": "d6f742f743de17d9",
+  "paragraph": "Saddle River is a single-tier market. Eighteen single-family sales over six months at a median of $2,760,000, and the typical sale is a five-bedroom colonial with four or five full baths. Prices ran from $1,160,000 to $5,612,500, so the median is the number to anchor on. The sale-to-list ratio sits at 0.97 with about 22 percent of homes going above asking and a median of 31 days on market. That means sellers here are generally okay with waiting for the right buyer rather than pricing to move fast, and you'll usually have room to negotiate. No month in the series had more than five closings, so the monthly medians are too thin to read as a trend. Work the six-month picture instead, and if the town follows the usual Bergen arc, expect closing volume to thin out in deep winter.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 1170,
+    "input_tokens": 1285,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 676,
+    "output_tokens": 579,
     "output_tokens_details": {
-      "thinking_tokens": 365
+      "thinking_tokens": 320
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:46:43.429Z"
+  "generatedAt": "2026-08-06T19:52:45.001Z"
 }

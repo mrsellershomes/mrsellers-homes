@@ -1,24 +1,24 @@
 {
-  "hash": "84725bef0ea5e207",
-  "paragraph": "Maywood is a single-family market, effectively one tier. Twenty-six sales over six months at a median of $750,000, with a sale-to-list ratio of 1.043 and a median of 14 days on market. More than 95 percent of homes sold above asking. That is a real seller's market, and multiple offer situations are the norm rather than the exception here. Sales ran from $600,000 to $1,250,000, and with that spread the median is the better guide than the top or bottom. Monthly medians bounced between $689,500 and $827,000, but with four to eight closings a month that is noise, not a trend. If Maywood follows the usual Bergen County seasonal arc, expect volume to thin through the fall while competition on well-prepared listings holds.",
+  "hash": "fe9b55b4f64d4cdf",
+  "paragraph": "Maywood is a single-family market and a real seller's market right now. Twenty-six homes sold over six months at a median of $750,000, the sale-to-list ratio is 1.04, and 96 percent of sales closed above asking with a median of 14 days on market. Sellers are dictating terms here, and buyers should expect competition on the good ones. The typical sale is a three-bedroom colonial or cape with two full baths, which is what keeps the median where it is. Sales ran from $600,000 to $1,250,000, so anchor on the median rather than the range. Monthly counts are too thin to read a price trend month to month, but closing volume built into July the way it usually does. If Maywood follows the normal seasonal arc, expect the pace to cool modestly through fall.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 1172,
+    "input_tokens": 1288,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 413,
+    "output_tokens": 431,
     "output_tokens_details": {
-      "thinking_tokens": 173
+      "thinking_tokens": 183
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:42:01.780Z"
+  "generatedAt": "2026-08-06T19:47:00.364Z"
 }

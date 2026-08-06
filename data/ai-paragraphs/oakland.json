@@ -1,24 +1,24 @@
 {
-  "hash": "73c0ce374f2b0383",
-  "paragraph": "Oakland is a single-family town, and the numbers are not subtle. 53 homes sold over six months at a median of $700,000, with a sale-to-list ratio of 1.06, about 72 percent closing above asking, and a median of 14 days on market. That is a real seller's market with many multiple offer situations. Sales ran from $284,888 to $2,065,000, so the median is a better guide than the average. Volume built into June and July at 14 and 12 closings, and the July median of $865,500 is the highest month of the run, so this market is still climbing into the summer peak. If Oakland follows the usual Bergen arc, expect medians to ease as fall closings come in. Condo and townhouse activity was two sales, too thin to read. Buy here for the space and grounds, and come prepared to move quickly.",
+  "hash": "03d9203aa6969f7c",
+  "paragraph": "Oakland is a single-family market, plain and simple. Fifty-three homes sold over six months at a median of $700,000 against a median list of $650,000, with a sale-to-list ratio of 1.06, roughly 72 percent closing above asking, and a median of 14 days on market. That is a real seller's market, and buyers should expect competition on the good ones. The typical sale is a three-bedroom with two full baths, mostly ranches, colonials, and capes. Sales ran from $284,888 to $2,065,000, so the median is the number to anchor on. The monthly series shows volume building into summer with 14 closings in June and 12 in July, and the July median of $865,500 is the highest reading since a thin March. That is a market tracking the normal summer peak, not softening. If Oakland follows the usual arc, expect the median to drift back down through fall while closings stay steady until deep winter thins them out.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 1409,
+    "input_tokens": 1524,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 863,
+    "output_tokens": 543,
     "output_tokens_details": {
-      "thinking_tokens": 602
+      "thinking_tokens": 250
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:43:26.255Z"
+  "generatedAt": "2026-08-06T19:48:47.678Z"
 }

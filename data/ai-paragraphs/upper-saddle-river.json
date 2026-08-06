@@ -1,24 +1,24 @@
 {
-  "hash": "c1483caaa79c0f92",
-  "paragraph": "Upper Saddle River is a single-family market and nothing else, with 54 detached sales over six months against two condo closings that are too few to read. The median sits at $1,688,750, and the sale-to-list ratio of exactly 1.00 with 48 percent of homes going above asking says competitive but not frenzied. Homes are moving quickly when priced right, with a median of 17.5 days on market and a fastest sale of 5 days. Sale prices run from $825,000 to $5,325,000, so the median is the better guide than the average here. On the monthly series, volume built through spring and peaked at 19 closings in June. The May median dropped to $1,352,500 as volume tripled, which is a mix shift toward smaller homes rather than a price decline, and July came back at $1,950,000 on 9 sales. That is resilience where a seasonal drift down would be normal. If the usual Bergen pattern holds, expect closings to thin out through fall while prices stay roughly where they are.",
+  "hash": "5c4090eed0af8579",
+  "paragraph": "Upper Saddle River is a single-family market, plainly. Fifty-four sales over six months at a median of $1,688,750, with a range from $825,000 up to $5,325,000, so the median is the number to anchor on. The typical sale is a five-bedroom colonial with three or four baths, and ranches make up a real share of the rest. The sale-to-list ratio landed at 1.00 with 48 percent of homes going above asking and a median of 17.5 days on market. Competitive but not frenzied, and well-priced homes are moving quickly. Volume climbed into June as you would expect, and the softer May and June medians came on that rising volume, which reads as a shift toward the lower end of the price range rather than falling values. July came back up at $1,950,000 on nine sales. Condos and townhouses barely register here, two closings in six months, so if you want low maintenance in this town you will be waiting on inventory rather than choosing from it.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 1473,
+    "input_tokens": 1588,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 666,
+    "output_tokens": 645,
     "output_tokens_details": {
-      "thinking_tokens": 348
+      "thinking_tokens": 342
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:47:37.918Z"
+  "generatedAt": "2026-08-06T19:53:52.954Z"
 }

@@ -1,24 +1,24 @@
 {
-  "hash": "d6cc0a6668241b89",
-  "paragraph": "South Hackensack is a small market, and the last six months produced exactly one recorded single-family sale. That home closed at $750,000 against a $699,000 list price in nine days, which works out to a sale-to-list ratio slightly under 1.08. One sale tells you a well-priced house here can move fast and draw a competitive bid. It does not tell you what the town's median is, and it cannot support any trend claim, seasonal or otherwise. There was no condo, townhouse, co-op, or multi-family activity to read at all. If you're buying or selling here, you'll want to widen the comparison set to neighboring Bergen County towns, because the local sample is too thin to price off of on its own.",
+  "hash": "492e3a30f5ee7510",
+  "paragraph": "South Hackensack is one of the smallest markets in Bergen County, and the last six months show it. One single-family closing, a three-bedroom, two-bath ranch that sold for $750,000 against a $699,000 list price in nine days. That is a 1.07 sale-to-list ratio and a fast contract, but one sale is not a market read. It tells you a well-priced house in this town can move quickly and above asking. It cannot tell you where values are heading. There were no condo, townhouse, co-op, or multi-family closings at all. With a single May closing in the series, there is no monthly trend to read here, so the honest approach is to widen your search and track the surrounding towns for pricing context. If you're waiting on South Hackensack specifically, plan on patience and be ready to move fast when inventory does appear, because you may only get a few chances a year.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "South Hackensack is a small market, and the last six months produced exactly one recorded single-family sale. That home closed at $750,000 against a $699,000 list price in nine days, which works out to a sale-to-list ratio just under 1.08. One sale tells you a well-priced house here can move fast and draw a competitive bid. It does not tell you what the town's median is, and it cannot support any trend claim, seasonal or otherwise. There was no condo, townhouse, co-op, or multi-family activity to read at all. If you're buying or selling here, you'll want to widen the comparison set to neighboring Bergen County towns, because the local sample is too thin to price off of on its own.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 1085,
+    "input_tokens": 744,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 221,
+    "output_tokens": 431,
     "output_tokens_details": {
-      "thinking_tokens": 0
+      "thinking_tokens": 160
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:46:51.772Z"
+  "generatedAt": "2026-08-06T19:52:54.262Z"
 }

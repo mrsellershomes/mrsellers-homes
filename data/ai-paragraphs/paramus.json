@@ -1,24 +1,24 @@
 {
-  "hash": "5f77b31567692616",
-  "paragraph": "Single-family is the Paramus market, with 105 sales over six months at a median of $1,085,000 and a sale-to-list ratio of 1.00. Slightly under half sold above asking with a median of 21 days on market, which is competitive but not frenzied. Priced homes are moving, and sellers are getting their number without giving much away. Sales ran from $625,000 to $3,500,000, so the median is the better guide than any single comparable. Condos and townhouses are a small but distinctly upper-end tier here, 19 sales at a median of $1,700,000, above the single-family median. That isn't the entry-level category some buyers expect it to be. Median days on market was 5, though only 3 of 19 went above asking, so speed is coming from product that's spoken for rather than bidding wars. Co-op activity was 4 sales at a median of $356,250, too thin to read as a trend. Monthly volume climbed steadily from 12 single-family closings in February to 26 in July while the median bounced between $910,000 and $1,650,000. That swing is mix, not values moving. If Paramus follows the usual seasonal arc, expect volume and medians to ease through fall.",
+  "hash": "3390b29b7355a9bf",
+  "paragraph": "Paramus single-family is the market here, with 105 sales over six months at a median of $1,085,000, mostly four-bedroom colonials with two baths, plus a steady supply of split-levels and ranches. Sales ran from $625,000 to $3,500,000, so the median is the number to anchor on. With a sale-to-list ratio of 1.00, about 48 percent of homes closing above asking, and a median of 21 days on market, this is competitive but not frenzied. Well-priced homes are moving, and you should expect competition on the good ones. Closing volume climbed every month from 12 in February to 26 in July, which is the normal build into peak summer, while the monthly median bounced between $910,000 and $1,650,000. That swing is mix, not values falling. Townhouses are the surprise tier: 19 sales at a median of $1,700,000, above the single-family median, with a median of 5 days on market. Downsizing into attached housing in Paramus is not a discount, it is a lifestyle trade. Co-ops are a footnote at four sales, mostly one-bedrooms, median $356,250, and they carry board approval and financing restrictions that not every buyer is aware of going in. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the low-maintenance newer townhouse, or the lower price point of a co-op.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "Single-family is the Paramus market, with 105 sales over six months at a median of $1,085,000 and a sale-to-list ratio of 1.00. Just under half sold above asking with a median of 21 days on market, which is competitive but not frenzied. Priced homes are moving, and sellers are getting their number without giving much away. Sales ran from $625,000 to $3,500,000, so the median is the better guide than any single comparable. Condos and townhouses are a small but distinctly upper-end tier here, 19 sales at a median of $1,700,000, above the single-family median. That isn't the entry-level category some buyers expect it to be. Median days on market was 5, though only 3 of 19 went above asking, so speed is coming from product that's spoken for rather than bidding wars. Co-op activity was 4 sales at a median of $356,250, too thin to read as a trend. Monthly volume climbed steadily from 12 single-family closings in February to 26 in July while the median bounced between $910,000 and $1,650,000. That swing is mix, not values moving. If Paramus follows the usual seasonal arc, expect volume and medians to ease through fall.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 2776,
+    "input_tokens": 2477,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 379,
+    "output_tokens": 974,
     "output_tokens_details": {
-      "thinking_tokens": 0
+      "thinking_tokens": 521
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:44:22.674Z"
+  "generatedAt": "2026-08-06T19:49:54.767Z"
 }

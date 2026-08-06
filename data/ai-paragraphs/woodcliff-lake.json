@@ -1,24 +1,24 @@
 {
-  "hash": "6d081c64b66350ce",
-  "paragraph": "Single-family is the market here: 27 sales over six months at a median of $1,270,000, a sale-to-list ratio of 1.02, two-thirds of homes closing above asking, and a median of 12 days on market. That is a real seller's market, with many multiple offer situations. Sale prices ran from $210,000 up to $2.2 million, so the range is unusually wide and the median is the better guide to what you'll actually compete for. Condos and townhouses are a small, tight tier: 8 sales at a median of $1,295,000, every one of them between $901,000 and $1,335,000, with a 0.98 sale-to-list ratio and 22 days on market. Attached housing here is not the entry point. It prices right alongside the houses, and sellers in that tier are more willing to wait for the right buyer. On seasonality, monthly closings run between one and seven, too thin to call a trend from any single month. Across the six months the medians bounce without a clear direction. If you're weighing the two tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or the low-maintenance lifestyle of a townhouse at a similar number.",
+  "hash": "4124d722b0366315",
+  "paragraph": "Woodcliff Lake's single-family market is the main event, with 27 sales over six months at a median of $1,270,000 and a sale-to-list ratio of 1.02. Two thirds of those homes sold above asking and the median time to contract was 12 days, so this is a real seller's market and you should expect multiple offer situations on anything well presented. The typical sale is a four-bedroom colonial with three full baths. Sales ran from $210,000 to $2,200,000, and with a spread that wide the median is the number to anchor on. Townhouses and condos are a small, distinct slice at 8 sales, and the median of $1,295,000 sits slightly above the single-family median, so this isn't the cheaper option here. Seven of the eight were townhouses, they took a median 22 days, and the ratio of 0.98 says buyers had a little more room to negotiate. Monthly counts are too thin to read a trend from, though volume built through June the way it usually does before deep winter thins things out. If you're comparing the two, the deciding factor isn't price. It's whether you want the space and grounds of a single-family or the low-maintenance setup of a townhouse.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 1542,
+    "input_tokens": 1743,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 600,
+    "output_tokens": 837,
     "output_tokens_details": {
-      "thinking_tokens": 223
+      "thinking_tokens": 463
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:48:47.344Z"
+  "generatedAt": "2026-08-06T19:55:07.454Z"
 }

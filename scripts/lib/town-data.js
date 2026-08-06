@@ -105,6 +105,21 @@ function fastestSaleDays(rows) {
   return doms.length === 0 ? null : Math.min(...doms);
 }
 
+// Top 3 Style values by frequency (e.g. "Cape Cod", "Colonial", "2 Fam").
+// Consumed only by the AI commentary prompt to characterize the housing stock.
+function topStyles(rows) {
+  const counts = new Map();
+  for (const r of rows) {
+    const s = (r.style || '').trim();
+    if (!s) continue;
+    counts.set(s, (counts.get(s) || 0) + 1);
+  }
+  return [...counts.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 3)
+    .map(([style, count]) => ({ style, count }));
+}
+
 function buildStats(rows) {
   const pctOver = percentOverAsking(rows);
   return {
@@ -119,6 +134,11 @@ function buildStats(rows) {
     soldAboveList: pctOver,
     fastestSaleDays: fastestSaleDays(rows),
     medianDom: median(rows.map(r => r.dom).filter(d => d != null && d >= 0)),
+    // Housing-stock shape for the AI commentary: typical size and the
+    // dominant styles help explain WHY the price level is what it is.
+    medianBedrooms: median(rows.map(r => r.bedrooms)),
+    medianFullBaths: median(rows.map(r => r.fullBaths)),
+    topStyles: topStyles(rows),
     // Raw sold prices passed through so the price-distribution histogram
     // can bucket them for visualization. Not used by any other renderer.
     salePrices: rows.map(r => r.soldPrice).filter(p => p != null)

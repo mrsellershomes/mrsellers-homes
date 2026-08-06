@@ -1,24 +1,24 @@
 {
-  "hash": "05324f9c17150833",
-  "paragraph": "Edgewater is a condo market with a small single-family tier attached. Six detached homes closed over six months at a median of roughly $1,100,000, with a sale-to-list ratio of 0.979 and a median 68.5 days on market. Only one of the six went above list. That's too few sales to build a trend on, but the read is that sellers of detached houses here are okay with waiting for the right buyer rather than pricing to move fast. Condos and townhouses are the actual market with 75 sales at a median of $625,000, a 0.988 sale-to-list ratio, 36 median days on market, and about 21 percent selling above asking. Competitive, not frenzied. Sales ran from $236,000 to $2,137,500, so the median is a much better guide than the $817,937 average, which the Hudson River waterfront high-rise sales pull upward. Monthly condo medians bounced between $580,000 and $745,000 on steady volume every month, and July closed at $649,000, above June. That's resilience rather than the usual late-summer drift. If Edgewater follows the normal seasonal arc, expect volume to thin through fall with pricing holding. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or the low-maintenance living of a condo.",
+  "hash": "1f7637ab9d778ada",
+  "paragraph": "Edgewater's single-family market is thin, with 6 sales over six months and a median a hair under $1.1 million on mostly three-bedroom colonials and contemporaries. Median days on market ran 68.5 and the sale-to-list ratio came in at 0.979, so sellers here are okay with waiting for the right buyer rather than pricing to move fast. Condos and townhouses are the real market, 75 sales at a median of $625,000, typically two bedrooms and two baths, with about a third of those closings being townhouses rather than stacked units. Sales ran from $236,000 to $2,137,500 because this tier covers both Hudson River waterfront buildings with views and older inland complexes off River Road, so the median is the number to anchor on. At 36 days and a 0.988 ratio, well-priced units are moving, and you should expect competition on the good ones. Monthly medians bounce with the mix rather than trending, and July closings held at 13 with a median of $649,000, which is resilience where a summer plateau would be normal. Deciding between tiers comes down to whether you want the space and grounds of a single-family or the low-maintenance waterfront living of a condo or townhouse.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 1763,
+    "input_tokens": 1967,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 1516,
+    "output_tokens": 1301,
     "output_tokens_details": {
-      "thinking_tokens": 1092
+      "thinking_tokens": 916
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:37:57.894Z"
+  "generatedAt": "2026-08-06T19:42:07.790Z"
 }

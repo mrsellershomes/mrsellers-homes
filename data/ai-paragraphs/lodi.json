@@ -1,24 +1,24 @@
 {
-  "hash": "7d8af4679b0128a5",
-  "paragraph": "Single-family is the base of the Lodi market with 27 sales over six months at a median of $625,000, and the spread runs from $130,000 to $905,000, so the median is the honest guide here rather than the range. Sale-to-list sits at 1.03 with roughly 85 percent of homes closing above asking and a median of 25 days on market. That is competitive but not frenzied. Priced homes are moving, and buyers should expect company on the good ones. Multi-family is the other real tier, 20 sales at a median of $885,500, with a 1.05 sale-to-list ratio and 22 days on market. These are the two- and three-family houses that let an owner live in one unit and rent the other, and they carry landlord obligations, different financing, and tenant turnover that not every buyer is aware of going in. Condos and townhouses barely register at 4 sales with a median of $471,500, too thin to draw conclusions from. Monthly counts run four to six closings, which is noise rather than trend, so the six-month picture is what to trust. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the rental income of a multi-family, or the lower price point of a condo.",
+  "hash": "a7e6f7b1942cb618",
+  "paragraph": "Single-family volume in Lodi is steady at 27 sales over six months with a median of $625,000, and the typical sale is a three-bedroom cape or colonial with two full baths. The sale-to-list ratio is 1.033 and 85 percent of homes sold above asking, with a median of 25 days on market. That is competitive, not frenzied. Well-priced homes are moving quickly and you should expect competition on the good ones. Sales ran from $130,000 to $905,000, so the median is the number to anchor on. Multi-family is the other real story here, with 20 sales at a median of $885,500, mostly two-families and a handful of three-families. Those trade above single-family prices in Lodi because buyers are underwriting rental income, and they come with tenants in place, stricter financing, and landlord responsibilities that not every buyer is aware of going in. Condos and townhouses barely register at four sales, median $471,500, too thin to draw conclusions from. Monthly closings sit at four to six all spring and summer, which is too small a sample to read a price trend month to month; if Lodi follows the usual arc, expect volume to taper modestly into fall and thin out in deep winter. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or the income and management work of a two-family.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 1741,
+    "input_tokens": 2038,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 915,
+    "output_tokens": 1046,
     "output_tokens_details": {
-      "thinking_tokens": 520
+      "thinking_tokens": 611
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:41:39.813Z"
+  "generatedAt": "2026-08-06T19:46:25.652Z"
 }

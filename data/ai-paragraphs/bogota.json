@@ -1,24 +1,24 @@
 {
-  "hash": "368f3e2cbfd0db05",
-  "paragraph": "Bogota is a single-family town, plain and simple. Twenty-three houses sold over six months at a median of $640,000, with a sale-to-list ratio of 1.0136 and 57 percent of homes going above asking. Median days on market was 21. That is competitive but not frenzied. Priced homes are moving, and buyers should expect company on the good ones without assuming every listing turns into a bidding war. Sales ran from $320,000 to $750,000, so the median is the better guide than the range. Monthly closings stayed in the low single digits, which is too thin to read a real trend. If Bogota follows the usual Bergen County seasonal arc, expect volume to ease through fall. There is essentially no condo or co-op activity here, so the decision isn't which tier. It's which street and how much house you need.",
+  "hash": "eb72250d1c5c57ab",
+  "paragraph": "Bogota is a single-family market, plain and simple. Twenty-three sales over six months at a median of $640,000, and the housing stock is remarkably uniform: 22 of those 23 were colonials, typically three bedrooms with two full baths. No condo or co-op activity to speak of, and only a couple of multi-family closings, so there is no second tier to compare against. The sale-to-list ratio of 1.01 with 57 percent of homes going above asking and a median 21 days on market puts this in competitive but not frenzied territory. Well-priced homes move, and you should expect competition on the good ones. Sales ran from $320,000 to $750,000, so the median is the number to anchor on. The monthly counts are too thin to read a trend from, but volume clustered in spring and early summer the way it usually does here, and if Bogota follows the normal arc, expect the market to quiet into deep winter.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 1249,
-    "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "input_tokens": 1340,
+    "cache_creation_input_tokens": 4589,
+    "cache_read_input_tokens": 0,
     "cache_creation": {
-      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 4589,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 431,
+    "output_tokens": 686,
     "output_tokens_details": {
-      "thinking_tokens": 171
+      "thinking_tokens": 395
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:36:12.724Z"
+  "generatedAt": "2026-08-06T19:39:11.480Z"
 }

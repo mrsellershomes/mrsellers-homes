@@ -1,24 +1,24 @@
 {
-  "hash": "bd95ce9cfec93753",
-  "paragraph": "Emerson is a single-family market and nothing else. Thirty-three houses sold over six months at a median of $845,000, against a median list of $815,000, with a sale-to-list ratio of 1.036, roughly 70 percent selling above asking, and a median of 16 days on market. That is a real seller's market, and multiple offer situations are common at this price point. The range runs from $520,000 to $1,240,000, so the median is the number to anchor on. Most individual months here are too thin to read on their own, but July closed 14 sales at a median of $845,000, right in line with the six-month figure, which is a healthy summer peak rather than a spike. If Emerson tracks the usual Bergen County seasonal arc, expect volume and medians to ease through fall. Buyers should come in ready to move fast and with clean terms, because 16 days does not leave room to think it over.",
+  "hash": "2811c01f4bb20871",
+  "paragraph": "Emerson is a single-family market, effectively all of it, with 33 sales over six months at a median of $845,000 against a median list of $815,000. The sale-to-list ratio is 1.036, roughly 70 percent of homes sold above asking, and the median days on market is 16. That is a real seller's market, and buyers should expect competition on the good ones. The typical sale is a four-bedroom colonial, ranch, or split-level with two full baths, and prices ran from $520,000 up to $1,240,000, so the median is the number to anchor on. Month to month, most of the sample is too thin to read, but volume built to 14 closings in July, which tracks the normal early-to-mid summer peak. If Emerson follows the usual arc, expect closings to taper through fall and thin out in deep winter.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 1308,
+    "input_tokens": 1419,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 522,
+    "output_tokens": 510,
     "output_tokens_details": {
-      "thinking_tokens": 242
+      "thinking_tokens": 251
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:38:25.532Z"
+  "generatedAt": "2026-08-06T19:42:32.264Z"
 }

@@ -1,24 +1,24 @@
 {
-  "hash": "b32a6bcaae6307e2",
-  "paragraph": "Norwood's single-family market carried the period with 29 sales at a median of $942,000, and the spread runs wide, from $600,000 up to $3,827,752, so the median is the better guide than the average of $1,226,284. The sale-to-list ratio landed right at 1.00 with roughly 48 percent of homes going above asking and a median of 18 days on market. That is competitive but not frenzied. Priced homes are moving quickly, and sellers are generally getting their number without a bidding war being the default. Condos and townhouses are a small slice here, 6 sales at a median of $835,000, ranging from $335,000 to $1,030,000, with a similar 17 days on market. Six sales is too thin to read a trend from, so treat that tier as a handful of individual transactions rather than a market. On the seasonal arc, volume built the way it usually does, peaking at 10 single-family closings in June, and the median dipped that same month to $884,500 while volume rose, which points to a shift toward smaller homes in the mix rather than falling values. If Norwood follows the usual pattern, expect closings to thin through fall.",
+  "hash": "67316948fbd508e6",
+  "paragraph": "Norwood's single-family market is the whole story here, with 29 sales over six months at a median of $942,000. The typical sale is a four-bedroom colonial with two full baths, though ranches show up regularly too. Sale prices run from $600,000 to over $3.8 million, so the median is the number to anchor on. Nearly half the homes sold above list and the median days on market is 18, which means competitive but not frenzied. Buyers should expect competition on the good ones and be ready to move within a week or two of a listing hitting. The monthly numbers track the usual seasonal arc: closings built through spring and peaked at 10 in June, and while the June median dropped to $884,500 on that higher volume, that reflects a mix shift toward smaller homes rather than values falling. July came back to $1,177,500 on four sales. Condos and townhouses are thin at six sales, median $835,000, mostly three-bedroom townhouses with a couple of smaller condo units pulling the low end down to $335,000. That sample is too small to read a trend. If you're comparing tiers, the deciding factor is whether you want the space and grounds of a single-family or the low-maintenance setup of a townhouse, and in Norwood the townhouse option is limited enough that you may wait for inventory.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 1509,
+    "input_tokens": 1711,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 714,
+    "output_tokens": 974,
     "output_tokens_details": {
-      "thinking_tokens": 352
+      "thinking_tokens": 563
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:43:13.991Z"
+  "generatedAt": "2026-08-06T19:48:37.800Z"
 }

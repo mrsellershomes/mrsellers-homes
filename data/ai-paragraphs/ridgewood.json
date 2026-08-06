@@ -1,24 +1,24 @@
 {
-  "hash": "732146e791ac9f11",
-  "paragraph": "Ridgewood is a real seller's market and the numbers are not subtle about it. 106 single-family sales over six months at a median of $1,598,750, a sale-to-list ratio of 1.14, roughly 76 percent of homes closing above asking, and a median of 10 days on market. Multiple offer situations are the norm here, not the exception. The range runs from $680,000 to $4,750,000, so a single median hides a lot: you are competing in a different market at $900,000 than at $2,500,000, and both tiers are moving fast. Volume climbed every month from 5 closings in February to 33 in July, which is the normal spring build in Bergen County running its full course. Medians bounced with the mix rather than trending cleanly, and July's $1,585,000 coming in under June's $1,900,000 on higher volume reflects more entry-level and mid-range houses closing, not softening values. Multi-family is thin at 5 sales with a median of $1,300,000, and condo and townhouse activity, at 3 sales, is too small to read as a trend. If you are buying here, the practical decision is not whether the market is competitive. It is how much house you want to stretch for and how fast you can be ready to move.",
+  "hash": "836232607fdd04cf",
+  "paragraph": "Ridgewood is a single-family town, and the numbers there are about as one-sided as they get in Bergen County. 106 sales over six months at a median of $1,598,750, a sale-to-list ratio of 1.135, 76 percent of homes closing above asking, and a median of 10 days on market. That is a real seller's market with multiple offer situations as the norm, not the exception. The typical sale is a four-bedroom colonial with two full baths, and colonials account for the overwhelming majority of closings, with a handful of capes and split-levels filling in the lower end. Sales ran from $680,000 to $4,750,000, so the median is the number to anchor on. Volume climbed every month from 5 in February to 33 in July, which tracks the normal seasonal arc, and the monthly medians bounced between $900,000 and $1,900,000 on mix rather than any real price move. July's median came in below June's on far more closings, which points to more entry-level and mid-range product clearing, not softening values. Multi-family is thin at 5 sales, median $1,300,000, mostly two-families, with a longer 31 days on market. Condo and townhouse activity is almost nonexistent at 3 sales. If you want low-maintenance ownership here, expect to wait for inventory rather than shop it.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 2169,
-    "cache_creation_input_tokens": 3976,
-    "cache_read_input_tokens": 0,
+    "input_tokens": 2462,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
-      "ephemeral_5m_input_tokens": 3976,
+      "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 719,
+    "output_tokens": 716,
     "output_tokens_details": {
-      "thinking_tokens": 331
+      "thinking_tokens": 298
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:35:00.545Z"
+  "generatedAt": "2026-08-06T19:51:09.235Z"
 }

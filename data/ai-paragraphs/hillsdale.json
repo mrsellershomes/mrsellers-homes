@@ -1,24 +1,24 @@
 {
-  "hash": "8e6763d6df94d555",
-  "paragraph": "Hillsdale is a single-family town and the numbers are not ambiguous. Thirty-nine houses sold at a median of $915,000, sellers got 105.8 percent of list on average, nearly three quarters of homes closed above asking, and the median days on market was 12. That is a real seller's market, with multiple offer situations behind a lot of these closings. Sales ran from $510,000 to $1,665,000, so the median is the better guide than the range. Monthly volume built from four closings in April to eight in each of May, June, and July, which is the normal Bergen County spring-into-summer arc, and July's median of $1,175,000 was the highest of the window. Those monthly counts are small, so treat the swings as mix rather than price movement, but the direction of volume is real. If Hillsdale follows the usual pattern, expect closings and medians to ease through fall. Condo and townhouse activity is thin, four sales at a median of $708,000, selling right at list in about 25 days. Four sales is not a trend, it's a footnote, and if you want a lower-maintenance option here you'll be waiting on limited inventory rather than choosing from it.",
+  "hash": "bf8b1f84ccf828b6",
+  "paragraph": "Hillsdale is a single-family town, and the numbers leave little room for interpretation: 39 sales over six months at a median of $915,000, a sale-to-list ratio of 1.058, nearly three quarters of homes closing above asking, and a median of 12 days on market. That is a real seller's market, with plenty of multiple offer situations. The typical sale is a four-bedroom colonial, ranch, or split-level with two full baths, and the spread runs from $510,000 to $1,665,000, so the median is the number to anchor on. Volume built from four closings in April to eight in each of May, June, and July, which tracks the normal seasonal climb into summer. The monthly medians swing hard, from $675,000 in March to $1,175,000 in July, but with four to eight closings a month that is mix, not a price trend. Condos and townhouses barely register here with four sales at a median of $708,000, too thin to read as a market. If you want low-maintenance living in Hillsdale, expect to wait for the right unit. If you want space and a yard, expect competition and be ready to move fast.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 1543,
+    "input_tokens": 1745,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 689,
+    "output_tokens": 708,
     "output_tokens_details": {
-      "thinking_tokens": 319
+      "thinking_tokens": 357
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:40:53.911Z"
+  "generatedAt": "2026-08-06T19:45:30.187Z"
 }

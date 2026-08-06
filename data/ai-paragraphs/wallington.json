@@ -1,24 +1,24 @@
 {
-  "hash": "9686d46a7d7d3f17",
-  "paragraph": "Wallington runs on two property types, and they behave differently. Single-family is the larger tier with 13 sales over six months at a median of $745,000, a sale-to-list ratio of exactly 1.00, and a median of 28 days on market. About 31 percent sold above asking. That's competitive but not frenzied. Priced homes are moving, and sellers are generally getting close to what they ask without a bidding war doing the work. The range runs from $570,000 to $1,275,000, so the median is the better guide than either end. Multi-family, by contrast, is the tighter market. Nine sales at a median of $760,000, a sale-to-list ratio of 1.05, two thirds selling above asking, and a median of 19 days on market. Sellers are dictating terms in that tier, though nine sales is a thin sample and one strong month moves the number. The monthly counts are too small to read a seasonal trend here, so treat the six-month picture as the real read. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and single-household simplicity of a detached home or the rental income and tenant management that comes with a two- or three-family.",
+  "hash": "8eac9e5b7244fc67",
+  "paragraph": "Wallington's single-family market ran 13 sales over six months at a median of $745,000, with a sale-to-list ratio of exactly 1.00 and a median of 28 days on market. About 31 percent sold above asking, which puts this in competitive but balanced territory. Well-priced homes are moving, and the good ones still draw competition, but sellers aren't dictating terms. The typical sale is a four-bedroom colonial with three full baths, and prices spanned $570,000 to $1,275,000, so the median is the number to anchor on. Two-families are the other half of this market, 9 sales at a median of $760,000, every one of them a two-family, typically five bedrooms and two baths. That tier is tighter: two thirds sold above asking, the sale-to-list ratio was 1.05, and the median was 19 days on market. Nine sales is a small sample, so read it as a firm tier rather than a runaway one. The monthly counts here are too thin to support a trend claim, one to four closings a month, so the six-month picture is the honest read. If you're weighing the two, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or the rental income of a two-family.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 1336,
+    "input_tokens": 1515,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 673,
+    "output_tokens": 730,
     "output_tokens_details": {
-      "thinking_tokens": 301
+      "thinking_tokens": 342
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:47:59.662Z"
+  "generatedAt": "2026-08-06T19:54:14.815Z"
 }

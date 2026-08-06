@@ -1,24 +1,24 @@
 {
-  "hash": "469e70f7e0b81212",
-  "paragraph": "Cresskill is a single-family town first, with 44 detached sales over six months at a median of $1,317,500 against a $1,300,000 median list. The sale-to-list ratio sits right at 1.00, about 43 percent of homes sold above asking, and the median days on market is 20. That is competitive but not frenzied. Good homes priced correctly move quickly, and the rest wait. The range runs from $698,000 to $4,299,000, so the median is the better guide than either end. The monthly series is worth reading: February through May were thin, three to seven closings a month, too small to call a trend, but June brought 11 sales at $1,335,000 and July brought 16 at $1,475,000. Volume and median climbing together into midsummer is the seasonal peak doing what it usually does here. If Cresskill follows the normal Bergen arc, expect closings and medians to ease through fall. Condos and townhouses are a small slice, 5 sales at a median of $940,000, moving in 14 days with a sale-to-list ratio of 1.01. Five sales is not enough to build a strategy on. If you are comparing the two, the deciding factor is whether you want the space and grounds of a single-family or the low-maintenance setup of a townhouse.",
+  "hash": "b725fe6b25a5826f",
+  "paragraph": "Cresskill is a single-family town first. Forty-four houses closed over six months at a median of $1,317,500, with a sale-to-list ratio of exactly 1.00, about 43 percent selling above asking, and a median of 20 days on market. That is competitive but not frenzied. Well-priced homes are moving quickly, and buyers should expect competition on the good ones, but sellers are not dictating terms across the board. The typical sale is a four-bedroom colonial with three full baths, though capes and split-levels show up regularly. Prices run from $698,000 to $4,299,000, so the median is the number to anchor on. The monthly series tracks the normal seasonal arc on volume: thin February through May, then 11 closings in June and 16 in July. Those two months are the only ones with enough sales to read, and their medians came in at $1,335,000 and $1,475,000. If Cresskill follows the usual pattern, expect closings to taper modestly through fall before deep winter thins out. Townhouses are a small slice, five sales at a median of $940,000, mostly three-bedroom units that went in about two weeks. Five sales cannot carry a trend claim, but the demand is clearly there. If you're weighing the two, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or the low-maintenance setup of a townhouse.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 1585,
+    "input_tokens": 1764,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 694,
+    "output_tokens": 881,
     "output_tokens_details": {
-      "thinking_tokens": 292
+      "thinking_tokens": 437
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:37:02.717Z"
+  "generatedAt": "2026-08-06T19:41:04.710Z"
 }

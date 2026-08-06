@@ -1,24 +1,24 @@
 {
-  "hash": "e6815ed24a81539f",
-  "paragraph": "Saddle Brook is a single-family town, and the numbers are firmly seller-leaning: 39 sales over six months at a median of $655,000, roughly 72 percent closing above asking, and a median of 16 days on market with one home going in 2 days. The sale-to-list ratio of 1.017 tells you the overbids are real but measured, not runaway. Sales ran from $510,000 to $1,258,000, so the median is the number to anchor on. On the seasonal read, the early months are too thin to draw a line through, but July brought 15 closings at a median of $660,000, meaning volume climbed sharply while the median held flat from May and June. That's resilience where a summer mix shift usually pulls the median around. If the usual Bergen County arc holds, expect closings to thin out through fall. Condo and townhouse activity is minimal here, 3 sales at a median of $345,000 and 58 days on market, not enough to call a trend. If you're buying in Saddle Brook, you're buying a single-family house, and you should be prepared to compete on terms and timing.",
+  "hash": "a63a5dff3dd37c96",
+  "paragraph": "The single-family market is Saddle Brook, with 39 closings over six months at a median of $655,000 against a median list of $625,000. Roughly 72 percent sold above asking and the median time to contract was 16 days, so buyers should expect competition on the good ones and sellers have been dictating terms. The typical sale is a three-bedroom with two full baths, mostly colonials, capes, and ranches, which is what keeps this town accessible relative to neighbors. Prices ran from $510,000 to $1,258,000, so the median is the number to anchor on. On the monthly series, the early-spring months are too thin to read, but May through July held between $631,000 and $660,000 while volume climbed to 15 closings in July. That is the seasonal arc working normally, with prices flat and the summer closing peak arriving on schedule. If Saddle Brook follows the usual pattern, expect volume to taper modestly through fall before deep winter thins it out. Condo and townhouse activity was three sales, too little to generalize from.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 1532,
+    "input_tokens": 1736,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 951,
+    "output_tokens": 938,
     "output_tokens_details": {
-      "thinking_tokens": 605
+      "thinking_tokens": 608
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:46:32.633Z"
+  "generatedAt": "2026-08-06T19:52:34.729Z"
 }

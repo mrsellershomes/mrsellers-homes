@@ -1,24 +1,24 @@
 {
-  "hash": "95e8a9d13747e782",
-  "paragraph": "Fort Lee's single-family tier is small, 23 sales over six months at a median of $1,108,800, with a sale-to-list ratio of 1.02 and 61 percent of homes closing above asking. Median days on market of 30 keeps this competitive rather than frenzied. Condos and townhouses carry the volume with 145 sales at a median of $600,000, and this category includes new-construction side-by-side duplexes built on torn-down single-family lots, not only high-rise units. Buckingham, Atrium Palace, and The Palisades trade regularly. Co-ops sit at the entry point, 87 sales at a median of $236,000, with a 55-day median days on market that tells you sellers there are okay with waiting for the right buyer. Horizon House, The Plaza, and Century Tower are the names to know, and they come with board approval, financing restrictions, and resale friction, which not every buyer is aware of going in. Look into the specifics before you fall in love with a unit. On the seasonal read, condo volume held steady all six months while the median swung from $649,500 in April to $490,000 in July, which points to a mix shift toward smaller units rather than falling values. Single-family months are too thin to read on their own. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the low-maintenance lifestyle of a condo, or the lower price point of a co-op.",
+  "hash": "c064db27bfa3f5d5",
+  "paragraph": "Single-family activity in Fort Lee is sparse, 23 sales over six months at a median of $1,108,800, and the typical sale is a four-bedroom colonial or ranch with three full baths. A sale-to-list ratio of 1.02, about 61% of homes closing above asking, and a 30-day median days on market read as competitive but not frenzied, so expect competition on the good ones without assuming every listing turns into an auction. Two-families are a small but real slice at seven sales and a median of $1,485,000, closing right at list in 23 days. Condos and townhouses carry the volume with 145 sales at a median of $600,000, mostly two-bedroom, two-bath units, and this category includes new-construction side-by-side duplexes built on torn-down single-family lots, not only high-rise apartments. Buckingham, Atrium Palace, and Mediterranean South trade consistently. Prices run from $233,000 to $2.1 million here, so the median is the number to anchor on. Co-ops sit at the entry point, 87 sales at a median of $236,000, mostly one-bedrooms, with a 55-day median days on market. Horizon House, The Plaza, and Century Tower are the names to know, and they come with board approval, financing restrictions, and resale friction, which not every buyer is aware of going in. Worth looking into before you fall in love with a unit. On timing, condo volume peaked in April and June and monthly medians bounce with unit mix rather than signaling a price move, and the single-family months are too thin individually to read a trend. If this follows the usual arc, closings taper modestly through fall and bottom in deep winter. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the rental income of a two-family, the low-maintenance lifestyle of a condo, or the lower price point of a co-op.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 3354,
+    "input_tokens": 3712,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 4048,
+    "cache_read_input_tokens": 4589,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 915,
+    "output_tokens": 1316,
     "output_tokens_details": {
-      "thinking_tokens": 450
+      "thinking_tokens": 703
     },
     "service_tier": "standard",
     "inference_geo": "global"
   },
-  "generatedAt": "2026-08-06T18:39:28.519Z"
+  "generatedAt": "2026-08-06T19:43:44.366Z"
 }
