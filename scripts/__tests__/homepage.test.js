@@ -40,15 +40,16 @@ test('homepage forms are address-first with distinct sources', () => {
   assert.match(s, /-real-estate\//);  // town links built client-side from names
 });
 
-test('sticky bar deferred + contact sheet contract', () => {
+test('sticky text pill contract (replaced bar + contact sheet)', () => {
   const s = html();
-  assert.match(s, /id="stickyCta"[^>]*hidden/);           // hidden by default
-  assert.match(s, /id="contactSheet"/);
-  assert.match(s, /Homepage \| Seller \(sticky sheet\)/); // sheet form source-tagged
+  assert.match(s, /id="textPill"/);
+  // sms link hits the Quo line with a pre-typed first line (?& works on iOS and Android)
+  assert.match(s, /sms:\+12013080525\?&body=Hi%20Tyler/);
+  assert.match(s, /tel:\+12013080525/);                    // hero call action stays
   assert.match(s, /addEventListener\('scroll', check/);    // deferred reveal wired
-  assert.match(s, /sms:\+12013080525/);                   // text action
-  assert.match(s, /tel:\+12013080525/);                   // call action
-  // sheet form carries the verbatim consent language
+  // the old bar and sheet must be fully gone, not just hidden
+  assert.doesNotMatch(s, /id="stickyCta"|id="contactSheet"|id="sheetBackdrop"|openSheet/);
+  // hero + footer af-forms still carry the verbatim consent language
   const consentCount = (s.match(/Text me real estate info from Mr\. Sellers Homes\./g) || []).length;
-  assert.ok(consentCount >= 3, 'consent block on all af-forms incl. sheet');
+  assert.ok(consentCount >= 2, 'consent block on remaining af-forms');
 });
