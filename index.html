@@ -725,7 +725,10 @@
       }).then(function (svg) {
         holder.innerHTML = svg;
         var el = holder.querySelector('svg');
-        if (el) { el.style.maxHeight = '425px'; el.style.width = 'auto'; el.style.height = '100%'; }
+        // Size like the static <img> it replaces: the SVG has a viewBox but no
+        // intrinsic width/height, so width:auto + height:100% resolves to 0x0 in
+        // WebKit (blank map in Safari and the Instagram in-app browser).
+        if (el) { el.style.maxHeight = '425px'; el.style.width = '100%'; el.style.height = 'auto'; }
         function isTouchUI() {
           return window.__forceTouchUI || (window.matchMedia && window.matchMedia('(hover: none)').matches);
         }
