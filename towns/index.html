@@ -25,6 +25,16 @@
 @media (min-width: 900px) { .towns-layout { grid-template-columns: 5fr 4fr; align-items: start; } .map-wrap { position: sticky; top: 20px; order: 2; } }
 .map-wrap svg { width: 100%; height: auto; }
 .map-hint { font-size: 12px; color: #767676; text-align: center; margin-top: 6px; }
+.hidden { display: none; }
+/* Live preview card: mirrors the homepage map card so both behave the same. */
+.map-card { background: #fff; border: 1px solid #e6e2dc; border-radius: 12px; padding: 16px 18px 14px; box-shadow: 0 10px 32px rgba(26,26,26,0.06); margin-top: 10px; }
+#mapTownName { font-family: 'Playfair Display', Georgia, serif; font-size: 25px; font-weight: 600; color: #1a1a1a; text-align: center; margin: 0 0 4px; }
+#mapStats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; text-align: center; margin-top: 8px; }
+#mapStats p:first-child { font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: 600; color: #1a1a1a; margin: 0; }
+#mapStats p:last-child { font-size: 12px; color: #8a8478; margin-top: 1px; }
+#mapPeriod { text-align: center; font-size: 12px; color: #8a8478; margin-top: 6px; }
+#mapCta { display: block; text-align: center; margin-top: 8px; color: #E2001A; font-size: 15px; font-weight: 500; text-decoration: none; }
+#mapCta:hover { text-decoration: underline; }
 .letter-group { margin-bottom: 22px; }
 .letter-head { font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: 600; color: #E2001A; border-bottom: 1px solid #e6e2dc; padding-bottom: 4px; margin-bottom: 10px; }
 .letter-towns { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 6px; }
@@ -79,6 +89,9 @@ One map.</h1>
   <div class="towns-layout">
     <div class="map-wrap">
       <details open class="map-details"><summary>Bergen County map</summary>
+        <div class="map-card">
+          <p id="mapTownName">Bergen County</p>
+          <div id="countyMap">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 860" role="img" aria-label="Clickable map of all 70 Bergen County towns">
 <style>
 .town-shape { fill: #ddd3be; stroke: #ffffff; stroke-width: 1.2; transition: fill 0.2s ease; cursor: pointer; }
@@ -156,10 +169,19 @@ a:hover .town-shape, a:focus .town-shape { fill: #E2001A; }
 <a href="/edgewater-real-estate/" aria-label="Edgewater real estate market report"><path d="M524.6,700.5L525.4,698.8L526.0,697.6L527.2,696.3L527.9,695.4L529.2,695.2L530.4,694.3L533.3,695.1L531.8,694.1L531.4,692.6L532.3,691.8L533.6,691.3L535.7,691.7L536.8,691.1L539.5,691.3L535.2,688.7L536.1,687.8L538.0,687.5L538.9,686.3L542.1,687.6L543.6,685.5L542.0,684.8L540.3,684.2L540.9,683.2L542.0,682.8L543.4,681.9L544.5,681.4L545.1,680.1L544.3,679.0L544.9,678.0L546.8,678.1L549.0,679.0L546.1,677.4L546.3,676.2L547.5,675.8L547.8,674.5L547.7,673.3L548.8,672.4L550.2,672.4L550.1,671.2L551.1,670.1L552.2,669.5L553.0,668.2L554.0,666.9L554.8,665.8L555.4,664.7L556.3,663.8L557.0,662.7L557.7,661.5L558.4,660.4L559.2,658.9L558.9,657.7L560.2,657.7L561.0,656.6L561.7,655.4L562.4,654.4L563.1,653.3L563.7,652.1L562.6,651.4L563.3,650.4L564.1,649.3L565.4,648.8L566.1,647.8L566.6,646.6L567.1,645.5L567.6,644.3L566.8,643.2L567.3,642.0L568.1,640.7L569.2,639.6L569.0,638.2L569.0,636.9L569.7,635.8L569.5,634.6L568.2,634.2L565.9,633.6L566.1,632.4L566.4,631.2L567.3,630.3L568.8,630.5L569.0,629.3L568.0,628.7L569.6,628.5L570.9,628.2L572.2,627.8L569.7,626.5L569.8,625.2L570.4,624.0L571.6,623.7L572.9,623.2L573.9,622.5L574.3,621.1L574.8,620.0L575.6,618.9L576.5,617.9L577.0,616.8L578.1,615.9L578.9,614.8L577.0,615.2L575.8,615.8L574.4,615.6L574.7,613.5L573.4,614.3L572.1,614.9L570.8,614.6L569.3,614.3L568.7,615.7L568.2,616.9L567.6,618.0L567.2,619.1L566.3,620.0L565.6,621.1L564.4,620.7L563.9,621.9L563.4,623.2L562.8,624.9L562.0,626.0L561.3,627.7L560.6,629.2L560.2,630.6L560.0,632.0L559.5,633.3L558.6,635.2L558.7,636.5L559.1,637.7L559.0,639.0L559.0,640.4L558.6,641.6L558.0,642.7L556.1,645.4L555.1,646.6L554.4,648.5L553.2,650.3L552.5,652.2L550.9,654.4L549.5,656.6L548.6,657.7L547.7,660.4L545.9,661.7L544.7,664.1L542.7,667.1L541.2,669.9L539.3,672.3L537.9,673.1L534.6,676.3L533.2,675.7L531.5,678.3L530.4,679.3L529.4,680.1L527.3,678.9L526.7,680.0L525.8,681.6L525.1,683.9L524.7,685.6L523.7,686.4L522.1,686.8L521.1,687.6L520.7,689.4L521.8,690.1L523.2,690.9L523.0,692.2L522.5,694.7L522.2,696.0L522.2,697.7L522.6,699.6L524.6,700.5Z" class="town-shape"><title>Edgewater</title></path></a>
 </svg>
 
+          </div>
+          <div id="mapStats">
+            <div><p id="msMedian">70</p><p id="msMedianL">towns tracked</p></div>
+            <div><p id="msSold">Monthly</p><p id="msSoldL">data updates</p></div>
+            <div><p id="msPct">Real</p><p id="msPctL">closed sales</p></div>
+          </div>
+          <p id="mapPeriod">Real NJMLS closed sales &middot; updated monthly</p>
+          <a id="mapCta" href="#townsGrid">Browse all 70 towns A to Z &darr;</a>
+        </div>
       </details>
-      <p class="map-hint">Tap a town to open its market report</p>
+      <p class="map-hint"><span class="hint-hover">Hover a town to preview its market.</span><span class="hint-touch hidden">Tap a town to preview its market.</span></p>
     </div>
-    <div class="grid-wrap">
+    <div class="grid-wrap" id="townsGrid">
 
   <div class="letter-group" data-letter="A">
     <h2 class="letter-head">A</h2>
@@ -510,5 +532,6 @@ function filterTownLinks(q) {
   document.querySelector('.no-results').style.display = any ? 'none' : 'block';
 }
 </script>
+<script src="/js/county-map.js" defer></script>
 </body>
 </html>

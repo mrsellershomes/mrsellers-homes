@@ -62,6 +62,16 @@ ${TRACKING_HEAD}
 @media (min-width: 900px) { .towns-layout { grid-template-columns: 5fr 4fr; align-items: start; } .map-wrap { position: sticky; top: 20px; order: 2; } }
 .map-wrap svg { width: 100%; height: auto; }
 .map-hint { font-size: 12px; color: #767676; text-align: center; margin-top: 6px; }
+.hidden { display: none; }
+/* Live preview card: mirrors the homepage map card so both behave the same. */
+.map-card { background: #fff; border: 1px solid #e6e2dc; border-radius: 12px; padding: 16px 18px 14px; box-shadow: 0 10px 32px rgba(26,26,26,0.06); margin-top: 10px; }
+#mapTownName { font-family: 'Playfair Display', Georgia, serif; font-size: 25px; font-weight: 600; color: #1a1a1a; text-align: center; margin: 0 0 4px; }
+#mapStats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; text-align: center; margin-top: 8px; }
+#mapStats p:first-child { font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: 600; color: #1a1a1a; margin: 0; }
+#mapStats p:last-child { font-size: 12px; color: #8a8478; margin-top: 1px; }
+#mapPeriod { text-align: center; font-size: 12px; color: #8a8478; margin-top: 6px; }
+#mapCta { display: block; text-align: center; margin-top: 8px; color: #E2001A; font-size: 15px; font-weight: 500; text-decoration: none; }
+#mapCta:hover { text-decoration: underline; }
 .letter-group { margin-bottom: 22px; }
 .letter-head { font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: 600; color: #E2001A; border-bottom: 1px solid #e6e2dc; padding-bottom: 4px; margin-bottom: 10px; }
 .letter-towns { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 6px; }
@@ -83,11 +93,23 @@ ${renderSiteNav()}
   <div class="towns-layout">
     <div class="map-wrap">
       <details open class="map-details"><summary>Bergen County map</summary>
+        <div class="map-card">
+          <p id="mapTownName">Bergen County</p>
+          <div id="countyMap">
 ${mapSvg}
+          </div>
+          <div id="mapStats">
+            <div><p id="msMedian">70</p><p id="msMedianL">towns tracked</p></div>
+            <div><p id="msSold">Monthly</p><p id="msSoldL">data updates</p></div>
+            <div><p id="msPct">Real</p><p id="msPctL">closed sales</p></div>
+          </div>
+          <p id="mapPeriod">Real NJMLS closed sales &middot; updated monthly</p>
+          <a id="mapCta" href="#townsGrid">Browse all 70 towns A to Z &darr;</a>
+        </div>
       </details>
-      <p class="map-hint">Tap a town to open its market report</p>
+      <p class="map-hint"><span class="hint-hover">Hover a town to preview its market.</span><span class="hint-touch hidden">Tap a town to preview its market.</span></p>
     </div>
-    <div class="grid-wrap">
+    <div class="grid-wrap" id="townsGrid">
 ${grid}
       <p class="no-results">No town by that name in Bergen County. Check the spelling, or ask Tyler.</p>
     </div>
@@ -112,6 +134,7 @@ function filterTownLinks(q) {
   document.querySelector('.no-results').style.display = any ? 'none' : 'block';
 }
 </script>
+<script src="/js/county-map.js" defer></script>
 </body>
 </html>
 `;

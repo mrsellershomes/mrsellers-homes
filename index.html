@@ -378,7 +378,7 @@
       </div>
       <div style="max-width:560px;justify-self:end;width:100%;background:#fff;border:1px solid var(--gray-light);border-radius:12px;padding:18px 22px 16px;box-shadow:0 10px 32px rgba(26,26,26,0.06);">
         <p id="mapTownName" style="font-family:'Playfair Display',Georgia,serif;font-size:25px;font-weight:600;color:var(--black);text-align:center;margin:0 0 2px;">Bergen County</p>
-        <div id="countyMap" style="min-height:300px;max-height:435px;display:flex;align-items:center;justify-content:center;">
+        <div id="countyMap" data-map-src="/assets/bergen-county-map.svg" data-map-max-height="425px" style="min-height:300px;max-height:435px;display:flex;align-items:center;justify-content:center;">
           <a href="/towns/"><img src="/assets/bergen-county-map.svg" alt="Clickable map of all 70 Bergen County towns" style="width:100%;max-height:425px;object-fit:contain;" loading="lazy"></a>
         </div>
         <div id="mapStats" style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:center;margin-top:6px;">
@@ -681,81 +681,8 @@
       }
       box.style.display = 'block';
     }
-    // Live county map: interactive SVG + real stats on hover, fed by
-    // assets/town-stats.json (regenerated with every monthly data run).
-    // Fails soft at every step: static image + generic stats remain.
-    (function () {
-      var holder = document.getElementById('countyMap');
-      if (!holder || !window.fetch) return;
-      var stats = null;
-      fetch('/assets/town-stats.json').then(function (r) { return r.ok ? r.json() : null; }).then(function (j) {
-        if (j) {
-          stats = j.towns;
-          var per = document.getElementById('mapPeriod');
-          if (per && j.period) per.textContent = 'Closed NJMLS sales, ' + j.period + '.';
-        }
-      }).catch(function () {});
-      function fmtMoney(n) {
-        if (!n) return '\u2013';
-        return n >= 1e6 ? '$' + (n / 1e6).toFixed(2).replace(/0$/, '') + 'M' : '$' + Math.round(n / 1000) + 'K';
-      }
-      function setText(id, v) { var el = document.getElementById(id); if (el) el.textContent = v; }
-      function showTown(href) {
-        var t = stats && stats[href.replace(/\//g, '')];
-        if (!t) return;
-        setText('mapTownName', t.name);
-        setText('msMedian', fmtMoney(t.median)); setText('msMedianL', 'median sale price');
-        setText('msSold', t.sold != null ? t.sold : '\u2013'); setText('msSoldL', 'homes sold');
-        setText('msPct', t.pctList != null ? (t.pctList * 100).toFixed(1) + '%' : '\u2013'); setText('msPctL', 'of list price');
-        var cta = document.getElementById('mapCta');
-        if (cta) { cta.href = href; cta.textContent = t.name + ' market report \u2192'; }
-      }
-      function reset() {
-        setText('mapTownName', 'Bergen County');
-        setText('msMedian', '70'); setText('msMedianL', 'towns tracked');
-        setText('msSold', 'Monthly'); setText('msSoldL', 'data updates');
-        setText('msPct', 'Real'); setText('msPctL', 'closed sales');
-        var cta = document.getElementById('mapCta');
-        if (cta) { cta.href = '/towns/'; cta.textContent = 'Browse all 70 towns \u2192'; }
-      }
-      window.__showTownOnMap = showTown;
-      fetch('/assets/bergen-county-map.svg').then(function (r) {
-        if (!r.ok) throw new Error(r.status);
-        return r.text();
-      }).then(function (svg) {
-        holder.innerHTML = svg;
-        var el = holder.querySelector('svg');
-        // Size like the static <img> it replaces: the SVG has a viewBox but no
-        // intrinsic width/height, so width:auto + height:100% resolves to 0x0 in
-        // WebKit (blank map in Safari and the Instagram in-app browser).
-        if (el) { el.style.maxHeight = '425px'; el.style.width = '100%'; el.style.height = 'auto'; }
-        function isTouchUI() {
-          return window.__forceTouchUI || (window.matchMedia && window.matchMedia('(hover: none)').matches);
-        }
-        if (isTouchUI()) {
-          var hh = document.querySelector('.hint-hover'), ht = document.querySelector('.hint-touch');
-          if (hh) hh.classList.add('hidden');
-          if (ht) ht.classList.remove('hidden');
-        }
-        var selected = null;
-        holder.querySelectorAll('a').forEach(function (a) {
-          var href = a.getAttribute('href');
-          // Hover preview (mouse users; harmless on touch)
-          a.addEventListener('mouseenter', function () { if (!isTouchUI()) showTown(href); });
-          a.addEventListener('mouseleave', function () { if (!isTouchUI() && !selected) reset(); });
-          // Touch: first tap previews and sticks; the CTA below navigates.
-          // Mouse: click passes through to the town page as normal.
-          a.addEventListener('click', function (e) {
-            if (!isTouchUI()) return;
-            e.preventDefault();
-            if (selected) selected.style.fill = '';
-            var shape = a.querySelector('.town-shape');
-            if (shape) { shape.style.fill = '#E2001A'; selected = shape; }
-            showTown(href);
-          });
-        });
-      }).catch(function () { /* static image remains */ });
-    })();
+    // The interactive county map lives in /js/county-map.js, shared with /towns/.
+    // It reads its config and its idle state off #countyMap and the card markup.
 
     // Search suggestion hover lights the town on the map
     function highlightOnMap(href, on) {
@@ -769,6 +696,7 @@
       if (box && !e.target.closest('.town-search')) { box.style.display = 'none'; }
     });
   </script>
+<script src="/js/county-map.js" defer></script>
 <script src="/js/fub-submit.js"></script>
 <script src="/js/address-first.js"></script>
 </body>
