@@ -1,21 +1,24 @@
 {
-  "hash": "f32a7fd702b51771",
-  "paragraph": "Single-family homes dominate Ridgefield Park's market, with 22 sales over six months at a median of $625,000. Over 72 percent of homes sold above asking, and the sale-to-list ratio sits at 1.02, which means sellers are getting their price and then some. Median days on market of 31.5 days is solid without being frenzied, so homes that are properly priced and presented move within a reasonable window. Multi-family properties are sparse but telling, with three sales at a median of $875,000 and a median days on market of 10 days, indicating real strength at that price point. Condos and townhouses are a smaller segment with four sales at a median of $385,000, moving slower at a median 49 days on market with half the homes selling above asking. Co-ops sit at the entry level with three sales at a median of $155,500 and a flat sale-to-list ratio, meaning buyers are getting fair value without bidding wars. If you're comparing what Ridgefield Park offers, the single-family market is where the volume and momentum live. The deciding factor is whether you want the space and grounds of a single-family home, the rental-free lower price point of a condo, or the lowest entry cost of a co-op.",
+  "hash": "de261dbb5da28673",
+  "paragraph": "Single-family is the market in Ridgefield Park, with 30 sales over six months at a median of $617,500 and a sale-to-list ratio of 1.02. Two thirds of homes sold above list, but the median took 30 days to get there, so this reads competitive rather than frenzied. Priced homes are moving and sellers are getting their number, they are not always getting it in a week. The range runs from $375,000 to $980,000, wide enough that the median is the better guide than either end. Multi-family is small but sharp, 6 sales at a median of $857,500, a 1.08 ratio and a median of 13.5 days on market, which tells you the two-family stock here clears fast when it comes up. Condos and townhouses barely register with 3 sales at a median of $475,000, and co-ops account for 4 at $162,750 with a median of 64 days on market. Co-ops carry board approval, financing restrictions, and resale friction, which not every buyer is aware of going in. On the monthly numbers, most months carry only three or four closings, too thin to call a trend, though July's 12 closings at $608,250 land right on the six-month median, which is steady where a seasonal softening would be normal. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the income side of a multi-family, or the lower price point of a co-op.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "Single-family homes dominate Ridgefield Park's market, with 22 sales over six months at a median of $625,000. Over 72 percent of homes sold above asking, and the sale-to-list ratio sits at 1.02, which means sellers are getting their price and then some. Median days on market of 31.5 days is solid without being frenzied, so homes that are properly priced and presented move within a reasonable window. Multi-family properties are sparse but telling, with three sales at a median of $875,000 and a median days on market of just 10 days, indicating real strength at that price point. Condos and townhouses are a smaller segment with four sales at a median of $385,000, moving slower at a median 49 days on market with half the homes selling above asking. Co-ops sit at the entry level with three sales at a median of $155,500 and a flat sale-to-list ratio, meaning buyers are getting fair value without bidding wars. If you're comparing what Ridgefield Park offers, the single-family market is where the volume and momentum live. The deciding factor is whether you want the space and grounds of a single-family home, the rental-free lower price point of a condo, or the lowest entry cost of a co-op.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3843,
+    "input_tokens": 1899,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 295,
+    "output_tokens": 985,
+    "output_tokens_details": {
+      "thinking_tokens": 539
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:27:07.118Z"
+  "generatedAt": "2026-08-06T18:45:21.018Z"
 }

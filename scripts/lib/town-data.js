@@ -168,6 +168,37 @@ function classifyCCT(row) {
 }
 
 /**
+ * Month-by-month series for the AI commentary prompt. Buckets a town's rows
+ * by sold month (soldDate is "YYYY-MM-DD") and reports count + median per
+ * property-type bucket. This is what lets the commentary reason about
+ * within-window trend and seasonality per town instead of only seeing the
+ * 6-month blend. Small-sample months are still reported (the model is told
+ * to treat low counts as noise), so no threshold is applied here.
+ */
+function buildMonthlyTrend(sfRows, condoTownhouseRows) {
+  const months = new Map();
+  const add = (row, key) => {
+    if (!row.soldDate) return;
+    const month = row.soldDate.slice(0, 7);
+    if (!months.has(month)) {
+      months.set(month, { singleFamily: [], condoTownhouse: [] });
+    }
+    months.get(month)[key].push(row.soldPrice);
+  };
+  for (const r of sfRows) add(r, 'singleFamily');
+  for (const r of condoTownhouseRows) add(r, 'condoTownhouse');
+
+  return [...months.keys()].sort().map(month => {
+    const b = months.get(month);
+    return {
+      month,
+      singleFamily: { sold: b.singleFamily.length, medianSalePrice: median(b.singleFamily) },
+      condoTownhouse: { sold: b.condoTownhouse.length, medianSalePrice: median(b.condoTownhouse) }
+    };
+  });
+}
+
+/**
  * Aggregate raw normalized rows into the per-town shape that the renderers
  * expect. `towns` is data/bergen-towns.json contents.
  */
@@ -205,7 +236,10 @@ export function aggregateTownData(rows, towns) {
       },
       // When SF is thin, drive the sub-threshold placeholder with whatever
       // SF data we do have (even if it is 1-5 sales over 6 months).
-      sub10: sfHasHeadline ? null : buildStats(sfRows)
+      sub10: sfHasHeadline ? null : buildStats(sfRows),
+      // Month-by-month series (all months in the window) consumed only by
+      // the AI commentary prompt, never rendered directly.
+      monthlyTrend: buildMonthlyTrend(sfRows, condoTownhouseRows)
     };
   }
 

@@ -1,21 +1,24 @@
 {
-  "hash": "8202ed9ebaae82bf",
-  "paragraph": "The single-family market in Mahwah is moving steadily in sellers' favor. Fifty-two homes sold over six months at a median of $1,218,000, with nearly 58 percent selling above asking and a sale-to-list ratio of 1.02. Median days on market sits at 20.5, which means priced homes are moving without extreme urgency. Sellers aren't dictating terms through scarcity alone, but they're not giving ground either. By contrast, the condo and townhouse market is distinctly hotter. Ninety units sold at a median of $507,500, with 73 percent selling above asking, a sale-to-list ratio of 1.04, and a median of 14 days on market. This is real seller momentum in the condo tier, the kind where multiple offers show up on well-priced units. The price gap between single-family and condo is substantial, roughly $710,000 separating the two medians. That spread reflects not only square footage but also the appeal of low-maintenance living versus space and grounds. If you're weighing Mahwah's tiers, the deciding factor isn't market temperature. It's whether you want the space and grounds of a single-family home or the lower price point and simpler upkeep of a condo or townhouse.",
+  "hash": "26472b7d5e6951d0",
+  "paragraph": "Mahwah is running hot in both tiers right now. Single-family homes posted 63 sales over six months at a median of $1,050,000, with a 1.03 sale-to-list ratio, 60 percent of homes selling above asking, and a median of 18 days on market. That is a real seller's market, and multiple offer situations are common. Condos and townhouses are the higher-volume tier at 102 sales and a median of $513,750, moving even faster at 14 days on market with three quarters of sales closing above list. Mahwah's single-family range is unusually wide, from a handful of land and teardown-level sales under $150,000 up to $2,600,000, so the median tells you less here than in a town with more uniform housing stock. On the seasonal read, single-family volume climbed steadily into June and July while the July median fell to $934,750 from June's $1,312,500. Volume up and median down means the mix shifted toward smaller homes, not that values dropped. Condo medians have drifted from $553,500 in May to $510,000 in July, which tracks the normal arc. If you're comparing tiers, the deciding factor isn't market heat. Both tiers are competitive. It's whether you want the space and grounds of a single-family or the low-maintenance lifestyle of a townhouse.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "The single-family market in Mahwah is moving steadily in sellers' favor. Fifty-two homes sold over six months at a median of $1,218,000, with nearly 58 percent selling above asking and a sale-to-list ratio of 1.02. Median days on market sits at 20.5, which means priced homes are moving without extreme urgency. Sellers aren't dictating terms through scarcity alone, but they're not giving ground either. By contrast, the condo and townhouse market is distinctly hotter. Ninety units sold at a median of $507,500, with 73 percent selling above asking, a sale-to-list ratio of 1.04, and a median of just 14 days on market. This is real seller momentum in the condo tier, the kind where multiple offers show up on well-priced units. The price gap between single-family and condo is substantial, roughly $710,000 separating the two medians. That spread reflects not just square footage but also the appeal of low-maintenance living versus space and grounds. If you're weighing Mahwah's tiers, the deciding factor isn't market temperature. It's whether you want the space and grounds of a single-family home or the lower price point and simpler upkeep of a condo or townhouse.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 4136,
+    "input_tokens": 2195,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 3976,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 300,
+    "output_tokens": 783,
+    "output_tokens_details": {
+      "thinking_tokens": 370
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:25:29.769Z"
+  "generatedAt": "2026-08-06T18:35:12.431Z"
 }

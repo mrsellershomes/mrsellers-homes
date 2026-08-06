@@ -1,21 +1,24 @@
 {
-  "hash": "861234d6fef161d5",
-  "paragraph": "The single-family market in Tenafly is where the activity is, with 63 sales over six months at a median of $1.7 million. Homes are selling slightly above asking, with roughly half of sales closing above list price, and a median days on market of 21. The sale-to-list ratio sits right at 1.00, meaning sellers who price accurately are moving inventory without leaving money on the table. The range is wide, from $850,000 to $5.5 million, which reflects the town's genuine diversity of lot size and condition rather than a fragmented market. Condos and townhouses are minimal here, with only 3 sales at a median of $460,000, moving faster on the calendar but too thin to read as a meaningful alternative tier. If you're considering Tenafly, you're buying single-family homes. The market isn't frenzied. Sellers are pricing realistically and homes are moving within three weeks on average, which is a healthy pace in this price range. You're looking at a market where pricing discipline matters more than urgency.",
+  "hash": "354e9b7e8b69bc75",
+  "paragraph": "Tenafly is a single-family town, with 68 detached sales over six months against 8 condo and townhouse closings. The single-family median sits at $1,700,000, the sale-to-list ratio is essentially even at 1.0003, half of homes sold above asking, and the median days on market is 18. That is competitive but not frenzied. Well-priced homes move in under three weeks, and sellers are getting their number without buyers bidding wildly past it. The range runs from $555,000 to $6,650,000, so the median is the better guide than the average here. On the monthly series, June was the peak with 19 sales at a $2,400,000 median, and July held volume at 18 while the median came back to $1,662,500. That is a mix shift toward the middle of the market, not a price drop, and it tracks the normal Bergen arc where early summer carries the biggest houses. If the usual pattern holds, expect volume to thin through fall. The condo and townhouse tier is too small at 8 sales to read as a trend, but it clusters around $698,500 and gives you a low-maintenance option in a town otherwise built on space and grounds.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 3324,
+    "input_tokens": 1746,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 241,
+    "output_tokens": 697,
+    "output_tokens_details": {
+      "thinking_tokens": 336
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:27:59.189Z"
+  "generatedAt": "2026-08-06T18:47:18.826Z"
 }

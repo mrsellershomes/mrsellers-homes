@@ -1,21 +1,24 @@
 {
-  "hash": "57dcc937f45be01a",
-  "paragraph": "The single-family market in Leonia is a real seller's market. The median sits at $825,000 with a sale-to-list ratio of 1.04 and nearly 69 percent of homes selling above asking. Median days on market runs 16 days, which means priced homes are moving decisively and sellers are dictating terms. You'll see everything from $570,000 starter homes to $2.2 million properties, so there's genuine range here, but the story across that spectrum is the same: buyers are competing and patience doesn't pay off. Condos and townhouses, by contrast, sit in buyer-friendly territory. Only 7 sales in the period at a median of $590,000, with no homes selling above asking and a median days on market of 54 days. The sale-to-list ratio falls below 1.0 at 0.992, which signals that sellers need to price competitively to move inventory. This is a smaller segment of the Leonia market, and it's moving slower and requiring more realistic pricing than the single-family tier. If you're deciding between a single-family home and a condo or townhouse in Leonia, the single-family side offers no negotiating room right now. Condos and townhouses give you room to make an offer and ask questions, but you'll need to find the right property because volume is thin.",
+  "hash": "4dde3f22bdcc9325",
+  "paragraph": "Leonia's single-family market is the whole story right now: 22 sales over six months at a median of $887,500, a sale-to-list ratio of 1.0385, and a median of 16 days on market. Roughly 68 percent of those homes sold above asking. That is a real seller's market, with plenty of multiple offer situations behind those numbers. Prices ran from $570,000 to $2,200,000, so the median is the better guide than the range. Condos and townhouses are a much smaller and slower slice, 7 sales at a median of $460,000, a sale-to-list ratio of exactly 1.00, nothing above asking, and a median of 54 days on market. Nothing is being bid up in that tier, and you'll have more room to negotiate. On the monthly series, no single month clears five closings, so it's too thin to read a trend from. July was the strongest month on both count and median, which fits the normal early-to-mid-summer peak. If Leonia follows the usual seasonal arc, expect closings and medians to ease through fall. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or the low-maintenance lifestyle and lower price point of a condo.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "The single-family market in Leonia is a real seller's market. The median sits at $825,000 with a sale-to-list ratio of 1.04 and nearly 69 percent of homes selling above asking. Median days on market runs just 16 days, which means priced homes are moving decisively and sellers are dictating terms. You'll see everything from $570,000 starter homes to $2.2 million properties, so there's genuine range here, but the story across that spectrum is the same: buyers are competing and patience doesn't pay off. Condos and townhouses, by contrast, sit in buyer-friendly territory. Only 7 sales in the period at a median of $590,000, with no homes selling above asking and a median days on market of 54 days. The sale-to-list ratio dips below 1.0 at 0.992, which signals that sellers need to price competitively to move inventory. This is a much smaller segment of the Leonia market, and it's moving slower and requiring more realistic pricing than the single-family tier. If you're deciding between a single-family home and a condo or townhouse in Leonia, the single-family side offers no negotiating room right now. Condos and townhouses give you room to make an offer and ask questions, but you'll need to find the right property because volume is thin.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3518,
+    "input_tokens": 1467,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 310,
+    "output_tokens": 691,
+    "output_tokens_details": {
+      "thinking_tokens": 297
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:25:09.487Z"
+  "generatedAt": "2026-08-06T18:41:14.157Z"
 }

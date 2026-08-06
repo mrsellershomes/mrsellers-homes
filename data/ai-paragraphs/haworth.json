@@ -1,21 +1,24 @@
 {
-  "hash": "021f3cb55b0561b0",
-  "paragraph": "Haworth is almost entirely a single-family market, and the data shows a strong seller's market right now. The median sale price sits at $1,450,000 against a median list price of $1,399,999, with half of homes selling above asking and a sale-to-list ratio of 1.00. Homes are moving fast too, with a median of 13 days on market. This isn't a market where you can lowball or wait around. Sellers are dictating terms, and priced homes are attracting multiple offers. The price range is genuinely broad, from the $574,000s to $2,550,000, which speaks to real variety in the housing stock, but the consistent pattern across the market is clear: if you're buying here, you're competing for homes that move quickly and don't linger.",
+  "hash": "1d7b367275cb0500",
+  "paragraph": "Haworth is a single-family town and the data reflects that: 14 detached sales over six months at a median of $1,505,000, against a median list of $1,449,500. The sale-to-list ratio is exactly 1.00 and about 43 percent of homes sold above asking, with a median of 12 days on market. That combination reads as competitive but not frenzied. Homes that are priced right move quickly, and sellers are generally getting their number rather than a bidding premium. Sales ran from $900,000 to $3,150,000, so the median is the better guide than either end. Monthly closings never topped four, which is too thin to call a seasonal trend in either direction. There were two condo or townhouse sales in the window, not enough to describe a market. If you're buying here, you're buying the house and the lot.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "Haworth is almost entirely a single-family market, and the data shows a strong seller's market right now. The median sale price sits at $1,450,000 against a median list price of $1,399,999, with half of homes selling above asking and a sale-to-list ratio of 1.00. Homes are moving fast too, with a median of just 13 days on market. This isn't a market where you can lowball or wait around. Sellers are dictating terms, and priced homes are attracting multiple offers. The price range is genuinely broad, from the $574,000s to $2,550,000, which speaks to real variety in the housing stock, but the consistent pattern across the market is clear: if you're buying here, you're competing for homes that move quickly and don't linger.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3180,
+    "input_tokens": 1138,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 186,
+    "output_tokens": 519,
+    "output_tokens_details": {
+      "thinking_tokens": 266
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:24:45.486Z"
+  "generatedAt": "2026-08-06T18:40:43.231Z"
 }

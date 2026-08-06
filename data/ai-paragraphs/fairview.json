@@ -1,21 +1,24 @@
 {
-  "hash": "dda18e5326b727be",
-  "paragraph": "Fairview's single-family market is moving at a measured pace with 8 sales over six months at a median of $617,500. Homes are selling slightly under asking at a 0.97 sale-to-list ratio, with a median of 22 days on market. Only about 37 percent are fetching over asking, which tells you sellers need to price competitively to move inventory. Multi-family properties, by contrast, are the real strength here. Twelve sales landed at a median of $817,500, and buyers are actively bidding these properties up, with 75 percent selling above asking and a sale-to-list ratio of 1.04. The median days on market of 20.5 reflects genuine buyer interest in the two to three unit space. Condos and townhouses sit at the lower price point with 7 sales at a median of $545,000, but they're spending more time on the market, averaging 34 days. Only 14 percent are crossing the finish line above asking, and they're selling at a 0.98 ratio, suggesting buyer caution in this tier. If you're comparing property types in Fairview, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or multi-family investment, or the lower price point of a condo or townhouse.",
+  "hash": "9ac5b96a512e2235",
+  "paragraph": "Multi-family is the center of the Fairview market, with 13 sales over six months at a median of $800,000 and a sale-to-list ratio of 1.032. Roughly three quarters of those closed above asking with a median of 22 days on market, so sellers of two and three family properties are largely getting their number, and buyers competing for them should not expect much room. Detached single-family is thinner at 6 sales and a median of $645,000, half above asking, also 22 days on market. Competitive, not frenzied. Condos and townhouses run the other way: 9 sales at a median of $545,000, a sale-to-list ratio of 0.976, and 34 days on market, with only one in nine going above list. That tier is where a buyer has actual negotiating room. The condo range runs from $279,000 to $780,000, so the median is the better guide than either end. On the monthly numbers, no tier posts more than three closings in any single month, which is too small a sample to read a trend from. Judge Fairview on the six-month picture. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the rental income of a multi-family, the space and grounds of a single-family, or the lower price point and lighter upkeep of a condo.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "Fairview's single-family market is moving at a measured pace with 8 sales over six months at a median of $617,500. Homes are selling just under asking at a 0.97 sale-to-list ratio, with a median of 22 days on market. Only about 37 percent are fetching over asking, which tells you sellers need to price competitively to move inventory. Multi-family properties, by contrast, are the real strength here. Twelve sales landed at a median of $817,500, and buyers are actively bidding these properties up, with 75 percent selling above asking and a sale-to-list ratio of 1.04. The median days on market of 20.5 reflects genuine buyer interest in the two to three unit space. Condos and townhouses sit at the lower price point with 7 sales at a median of $545,000, but they're spending more time on the market, averaging 34 days. Only 14 percent are crossing the finish line above asking, and they're selling at a 0.98 ratio, suggesting buyer caution in this tier. If you're comparing property types in Fairview, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or multi-family investment, or the lower price point of a condo or townhouse.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3674,
+    "input_tokens": 1638,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 302,
+    "output_tokens": 885,
+    "output_tokens_details": {
+      "thinking_tokens": 490
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:23:50.295Z"
+  "generatedAt": "2026-08-06T18:39:16.677Z"
 }

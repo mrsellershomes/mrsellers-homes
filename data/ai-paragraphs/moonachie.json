@@ -1,21 +1,24 @@
 {
-  "hash": "b22c685a8f9f21bd",
-  "paragraph": "The single-family market in Moonachie is extremely sparse with only four sales over the past six months, making it difficult to draw strong conclusions from the data. The median sale price sits at $752,500 against a median list price of $789,500, putting the sale-to-list ratio at 0.95, which means homes are selling slightly below asking on average. About one quarter of homes sold above list, while the median time on market was 21.5 days. The price range varied considerably, from a low of $585,000 to a high of $780,000, reflecting the limited sample size and likely the wide variation in property condition and lot characteristics across these few transactions. With such minimal volume, you're not looking at a market with clear momentum in either direction. Rather, you're seeing isolated sales that may or may not reflect where the next home will land. If you're considering Moonachie, treat each listing on its own merits, price competitively relative to comparable sales, and be prepared for a slower process without the sense of urgency that higher-volume markets can create.",
+  "hash": "28446d0fe7530977",
+  "paragraph": "Moonachie is a small market, and the numbers say so. Three single-family sales over six months, a median of $755,000, and a range from $585,000 to $780,000. The sale-to-list ratio came in at about 0.96 and one of the three sold above asking, while the median days on market was 21. Read that as sellers holding out for their number rather than a market with real leverage on either side, and understand that three closings cannot carry a trend claim. The monthly series is the same story. One sale in February, two in June, nothing else. If Moonachie follows the usual Bergen County seasonal arc, activity thins further through fall. With inventory this limited, what matters more than the countywide picture is what is actually available the week you are ready to move.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 2784,
+    "input_tokens": 795,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 239,
+    "output_tokens": 399,
+    "output_tokens_details": {
+      "thinking_tokens": 169
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:25:50.663Z"
+  "generatedAt": "2026-08-06T18:42:27.342Z"
 }

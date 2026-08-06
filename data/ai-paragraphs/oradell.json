@@ -1,21 +1,24 @@
 {
-  "hash": "3c185534168c6d3e",
-  "paragraph": "Oradell is a single-family market almost entirely. Twenty-five homes sold over the past six months at a median of $1,025,000 against a median list price of $945,000, and sellers are dictating terms. The sale-to-list ratio sits at 1.11, nearly 9 in 10 homes are selling above asking, and the median time on market is 13 days. This is a real seller's market where priced homes move fast and multiple offer situations are common. The price range runs from $740,000 to $1,665,000, so there is some variety in what you can find, but inventory is sparse enough that if you see something that fits what you want, you're competing for it. If you're thinking about selling, you have leverage. If you're buying, you'll need to be prepared to move quickly and understand that negotiating below asking is not the dynamic right now.",
+  "hash": "d912a46dc62b86b3",
+  "paragraph": "Oradell is a single-family market, plain and simple. Thirty-one detached homes sold over six months at a median of $999,000, with a sale-to-list ratio of 1.11 and a median of 12 days on market. More than 93 percent of those homes sold above asking. That is a real seller's market, and multiple offer situations are the norm rather than the exception here. The range ran from $740,000 to $1,665,000, so the median is your better guide than either end. Only two condo or townhouse sales closed in the whole window, which is not enough to read as a tier. On the monthly numbers, volume built through spring and peaked at 12 closings in June, then July came in at 8 sales with a median of $930,500. That tracks the usual Bergen County seasonal arc, and if the pattern holds, expect closings and medians to ease through fall. If you're buying here, plan on moving fast and coming in strong. Homes are not sitting.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "Oradell is a single-family market almost entirely. Twenty-five homes sold over the past six months at a median of $1,025,000 against a median list price of $945,000, and sellers are dictating terms. The sale-to-list ratio sits at 1.11, nearly 9 in 10 homes are selling above asking, and the median time on market is just 13 days. This is a real seller's market where priced homes move fast and multiple offer situations are common. The price range runs from $740,000 to $1,665,000, so there is some variety in what you can find, but inventory is sparse enough that if you see something that fits what you want, you're competing for it. If you're thinking about selling, you have leverage. If you're buying, you'll need to be prepared to move quickly and understand that negotiating below asking is not the dynamic right now.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3256,
+    "input_tokens": 1315,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 205,
+    "output_tokens": 536,
+    "output_tokens_details": {
+      "thinking_tokens": 238
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:26:26.514Z"
+  "generatedAt": "2026-08-06T18:43:43.664Z"
 }

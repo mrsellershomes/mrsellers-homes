@@ -1,21 +1,24 @@
 {
-  "hash": "d7a391b4c784006e",
-  "paragraph": "The single-family market in Little Ferry is balanced and steady. With 16 sales over six months at a median of $598,000, homes are selling right at asking price, and half are fetching offers above list. The median days on market sits at 42, which means priced homes are moving but without the urgency of a true seller's market. Multi-family properties tell a different story. Only 5 sales over the period, but they're commanding attention. The median sits at $730,000, sale-to-list ratio climbs to 1.02, and median days on market drops to 22. Sixty percent sold above asking. This tier is competitive, though the sample is small enough that any single sale moves the needle. Condos and townhouses are the volume play at 14 sales and a median of $292,250. Like single-family, they're selling at parity with list price and moving in 19 days on the median. Half sold above asking. This is the entry point in Little Ferry and it's working. If you're weighing single-family against multi-family against condo, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the income or flexibility of a multi-family building, or the lower price point of a condo.",
+  "hash": "73f926ebfb8532e0",
+  "paragraph": "Little Ferry's single-family market is the volume leader with 16 sales over six months at a median of $622,000, and the range is tight, $505,000 to $750,000, so the median is a genuinely useful number here rather than an average of extremes. The sale-to-list ratio sits essentially at asking, about 56 percent of homes cleared list, and the median days on market is 34. That's competitive but not frenzied. Priced homes move, and sellers who aim high are willing to wait. Condos and townhouses come in at a median of $294,500 across 13 sales, with a median of 19 days on market and a ratio slightly above list, so that tier turns faster than the houses do. Multi-family barely registers with 3 sales, and one of them sat 169 days, which is too thin to read as a trend. The same caution applies to the monthly numbers. Most months here close two to five homes, which is noise, not signal, so the six-month picture is the honest guide. If you're comparing tiers, the deciding factor is whether you want the space and yard of a single-family or the lower price point and lighter upkeep of a condo.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 3246,
+    "input_tokens": 1658,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 289,
+    "output_tokens": 672,
+    "output_tokens_details": {
+      "thinking_tokens": 318
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:25:13.717Z"
+  "generatedAt": "2026-08-06T18:41:25.890Z"
 }

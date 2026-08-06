@@ -1,21 +1,24 @@
 {
-  "hash": "4daf3a329d3dd442",
-  "paragraph": "Woodcliff Lake is a single-family market through and through. Twenty-six homes sold over six months at a median of $1,357,500, and the data tells a straightforward story: sellers are dictating terms here. Sixty-one percent of homes sold above asking, the sale-to-list ratio sits at 1.01, and the median time on market is 11.5 days. When a home hits the market priced right, multiple offers follow quickly. The range is wide, from $210,000 to $2,200,000, but the bulk of activity clusters around the $1.2 million to $1.6 million band. Condo and townhouse inventory is sparse at only seven sales, and those are moving differently. The median there is $1,320,000, but only 14 percent sold above asking and the median days on market stretched to 27 days. The sale-to-list ratio dipped to 0.98, meaning sellers are accepting slightly below list on average. If you're looking in Woodcliff Lake, the single-family market is the real game, and it's moving fast enough that you'll need to be ready when the right property appears.",
+  "hash": "6d081c64b66350ce",
+  "paragraph": "Single-family is the market here: 27 sales over six months at a median of $1,270,000, a sale-to-list ratio of 1.02, two-thirds of homes closing above asking, and a median of 12 days on market. That is a real seller's market, with many multiple offer situations. Sale prices ran from $210,000 up to $2.2 million, so the range is unusually wide and the median is the better guide to what you'll actually compete for. Condos and townhouses are a small, tight tier: 8 sales at a median of $1,295,000, every one of them between $901,000 and $1,335,000, with a 0.98 sale-to-list ratio and 22 days on market. Attached housing here is not the entry point. It prices right alongside the houses, and sellers in that tier are more willing to wait for the right buyer. On seasonality, monthly closings run between one and seven, too thin to call a trend from any single month. Across the six months the medians bounce without a clear direction. If you're weighing the two tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or the low-maintenance lifestyle of a townhouse at a similar number.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "Woodcliff Lake is a single-family market through and through. Twenty-six homes sold over six months at a median of $1,357,500, and the data tells a straightforward story: sellers are dictating terms here. Sixty-one percent of homes sold above asking, the sale-to-list ratio sits at 1.01, and the median time on market is just 11.5 days. When a home hits the market priced right, multiple offers follow quickly. The range is wide, from $210,000 to $2,200,000, but the bulk of activity clusters around the $1.2 million to $1.6 million band. Condo and townhouse inventory is sparse at only seven sales, and those are moving differently. The median there is $1,320,000, but only 14 percent sold above asking and the median days on market stretched to 27 days. The sale-to-list ratio dipped to 0.98, meaning sellers are accepting slightly below list on average. If you're looking in Woodcliff Lake, the single-family market is the real game, and it's moving fast enough that you'll need to be ready when the right property appears.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3555,
+    "input_tokens": 1542,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 267,
+    "output_tokens": 600,
+    "output_tokens_details": {
+      "thinking_tokens": 223
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:28:38.961Z"
+  "generatedAt": "2026-08-06T18:48:47.344Z"
 }

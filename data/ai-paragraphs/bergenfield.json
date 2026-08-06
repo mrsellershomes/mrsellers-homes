@@ -1,21 +1,24 @@
 {
-  "hash": "602445e34aa01d33",
-  "paragraph": "The single-family market in Bergenfield is moving at a real seller's market clip. Fifty-seven homes sold over the last six months at a median of $707,500, with a sale-to-list ratio of 1.04 and nearly 69 percent of those sales closing above asking. The median days on market of 21 tells you homes priced right are not sitting around. Sellers are dictating terms in this tier, and if you're coming to market, you'll want to price competitively from day one because the buyer pool is active and ready to make decisions. Multi-family properties, a much smaller segment with five sales, sat slightly longer at a 19-day median and closed under asking on average, which suggests sellers in that category are pricing closer to reality. If you're shopping in Bergenfield, the single-family market is where the momentum is, and that's where you should expect some competition if you're looking to land a home.",
+  "hash": "9ce8baec4040f8d5",
+  "paragraph": "Bergenfield is a single-family town, and the data leaves little room for interpretation. Sixty-seven homes sold over six months at a median of $699,000, with a sale-to-list ratio of 1.045, roughly 75 percent of homes closing above asking, and a median of 19 days on market. That is a real seller's market, with plenty of multiple offer situations behind those numbers. The spread runs from $395,000 to $1,750,000, so the median is the better guide than the average here. Multi-family is a small but real second tier, six sales at a median of $745,000 with a ratio slightly under list, which tells you investor buyers are negotiating in a way owner-occupant buyers are not. Condo and townhouse activity is effectively nonexistent, one sale in six months. On seasonality, June peaked at a $812,500 median on 12 closings and July came in at $650,000 on 15. Volume rose while the median fell, so read that as a mix shift toward entry-level product, not softening values. If the usual Bergen County arc holds, expect closings to thin out through fall while competition on well-priced homes stays firm.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "The single-family market in Bergenfield is moving at a real seller's market clip. Fifty-seven homes sold over the last six months at a median of $707,500, with a sale-to-list ratio of 1.04 and nearly 69 percent of those sales closing above asking. The median days on market of 21 tells you homes priced right are not sitting around. Sellers are dictating terms in this tier, and if you're coming to market, you'll want to price competitively from day one because the buyer pool is active and ready to make decisions. Multi-family properties, a much smaller segment with only five sales, sat slightly longer at a 19-day median and closed just under asking on average, which suggests sellers in that category are pricing closer to reality. If you're shopping in Bergenfield, the single-family market is where the momentum is, and that's where you should expect some competition if you're looking to land a home.",
+  "firstDraft": "Bergenfield is a single-family town, and the data leaves little room for interpretation. Sixty-seven homes sold over six months at a median of $699,000, with a sale-to-list ratio of 1.045, roughly 75 percent of homes closing above asking, and a median of 19 days on market. That is a real seller's market, with plenty of multiple offer situations behind those numbers. The spread runs from $395,000 to $1,750,000, so the median is the better guide than the average here. Multi-family is a small but real second tier, six sales at a median of $745,000 with a ratio just under list, which tells you investor buyers are negotiating in a way owner-occupant buyers are not. Condo and townhouse activity is effectively nonexistent, one sale in six months. On seasonality, June peaked at a $812,500 median on 12 closings and July came in at $650,000 on 15. Volume rose while the median fell, so read that as a mix shift toward entry-level product, not softening values. If the usual Bergen County arc holds, expect closings to thin out through fall while competition on well-priced homes stays firm.",
   "usage": {
-    "input_tokens": 3614,
+    "input_tokens": 2250,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 212,
+    "output_tokens": 361,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:22:22.228Z"
+  "generatedAt": "2026-08-06T18:36:04.757Z"
 }

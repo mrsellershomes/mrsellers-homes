@@ -1,21 +1,24 @@
 {
-  "hash": "e2378d1eeb1ab211",
-  "paragraph": "The single-family market in Lodi is moving with real momentum. Twenty-five homes sold over six months at a median of $600,000, and buyers are paying over asking in the majority of sales, with a sale-to-list ratio of 1.03 and a median days on market of 26. This is a competitive but balanced market where priced homes are moving. Multi-family properties, which include duplexes and small rental buildings, are tracking similarly at a median of $880,000 across 17 sales over the same period. The ratio sits at 1.04 and median days on market mirrors the single-family tier at 26 days, indicating that both investor and owner-occupant buyers are active and willing to move quickly on the right property. The modest spread between single-family and multi-family medians reflects Lodi's real estate composition: you're looking at working-class and middle-class neighborhoods where both property types coexist and draw serious interest. If you're considering either tier, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home or the income potential and flexibility of a multi-family building.",
+  "hash": "7d8af4679b0128a5",
+  "paragraph": "Single-family is the base of the Lodi market with 27 sales over six months at a median of $625,000, and the spread runs from $130,000 to $905,000, so the median is the honest guide here rather than the range. Sale-to-list sits at 1.03 with roughly 85 percent of homes closing above asking and a median of 25 days on market. That is competitive but not frenzied. Priced homes are moving, and buyers should expect company on the good ones. Multi-family is the other real tier, 20 sales at a median of $885,500, with a 1.05 sale-to-list ratio and 22 days on market. These are the two- and three-family houses that let an owner live in one unit and rent the other, and they carry landlord obligations, different financing, and tenant turnover that not every buyer is aware of going in. Condos and townhouses barely register at 4 sales with a median of $471,500, too thin to draw conclusions from. Monthly counts run four to six closings, which is noise rather than trend, so the six-month picture is what to trust. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the rental income of a multi-family, or the lower price point of a condo.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 3142,
+    "input_tokens": 1741,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 260,
+    "output_tokens": 915,
+    "output_tokens_details": {
+      "thinking_tokens": 520
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:25:17.702Z"
+  "generatedAt": "2026-08-06T18:41:39.813Z"
 }

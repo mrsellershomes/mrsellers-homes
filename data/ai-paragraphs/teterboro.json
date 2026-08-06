@@ -1,21 +1,24 @@
 {
-  "hash": "9e77b94a619f8bf9",
-  "paragraph": "There's no meaningful market activity to report in Teterboro over the last six months. Zero sales across all property types means the market data is empty, and any analysis would be speculation rather than fact. If you're considering a move to Teterboro or tracking the local real estate landscape, check back in a few months when transaction volume returns. In the meantime, reach out directly if you have specific questions about the town or want to discuss your timeline and needs.",
+  "hash": "b2bddbd0b8a086df",
+  "paragraph": "Teterboro recorded no closed sales across any property type in the six months ending July 2026. That isn't a soft market or a slow one. Teterboro is one of the smallest boroughs in Bergen County with a housing stock that barely registers, so a six-month window with zero transactions is normal here, not a signal. There's no median, no sale-to-list ratio, and no days on market to read, and no monthly series to compare against the usual Bergen seasonal arc. If you're looking at Teterboro seriously, you'll be pricing and comping off neighboring towns like Moonachie, South Hackensack, Little Ferry, and Hasbrouck Heights, because that's the only reliable data available. When something does come up here, it will trade on its own terms rather than off a local comp set. Tell me what you're trying to accomplish and I'll tell you whether Teterboro or the towns around it fits it better.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 2735,
+    "input_tokens": 554,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 100,
+    "output_tokens": 510,
+    "output_tokens_details": {
+      "thinking_tokens": 221
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:28:01.034Z"
+  "generatedAt": "2026-08-06T18:47:27.812Z"
 }

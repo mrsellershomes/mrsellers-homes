@@ -1,21 +1,24 @@
 {
-  "hash": "9c03010988321765",
-  "paragraph": "Ridgewood's single-family market is firing on all cylinders. Eighty-eight sales over six months at a median of $1,462,500 tells you there is real volume here, and the numbers back up what that volume means. Sellers are dictating terms, with 76 percent of homes selling above asking and a sale-to-list ratio of 1.12. Median days on market sits at 10.5 days, which means priced homes are moving fast and multiple offer situations are routine. The range is wide, from $620,000 to $4,750,000, so Ridgewood accommodates buyers across the spectrum, but the median floor is solid and the market confidence is unmistakable. Multi-family properties, though sparse at only five sales, show similar strength with 80 percent selling above list and a median of $1,280,000. If you're selling, this is a seller's market. If you're buying, you're competing, and pricing strategically matters more than waiting for the perfect home to appear on the market.",
+  "hash": "732146e791ac9f11",
+  "paragraph": "Ridgewood is a real seller's market and the numbers are not subtle about it. 106 single-family sales over six months at a median of $1,598,750, a sale-to-list ratio of 1.14, roughly 76 percent of homes closing above asking, and a median of 10 days on market. Multiple offer situations are the norm here, not the exception. The range runs from $680,000 to $4,750,000, so a single median hides a lot: you are competing in a different market at $900,000 than at $2,500,000, and both tiers are moving fast. Volume climbed every month from 5 closings in February to 33 in July, which is the normal spring build in Bergen County running its full course. Medians bounced with the mix rather than trending cleanly, and July's $1,585,000 coming in under June's $1,900,000 on higher volume reflects more entry-level and mid-range houses closing, not softening values. Multi-family is thin at 5 sales with a median of $1,300,000, and condo and townhouse activity, at 3 sales, is too small to read as a trend. If you are buying here, the practical decision is not whether the market is competitive. It is how much house you want to stretch for and how fast you can be ready to move.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "Ridgewood's single-family market is firing on all cylinders. Eighty-eight sales over six months at a median of $1,462,500 tells you there is real volume here, and the numbers back up what that volume means. Sellers are dictating terms, with 76 percent of homes selling above asking and a sale-to-list ratio of 1.12. Median days on market sits at just 10.5 days, which means priced homes are moving fast and multiple offer situations are routine. The range is wide, from $620,000 to $4,750,000, so Ridgewood accommodates buyers across the spectrum, but the median floor is solid and the market confidence is unmistakable. Multi-family properties, though sparse at only five sales, show similar strength with 80 percent selling above list and a median of $1,280,000. If you're selling, this is a seller's market. If you're buying, you're competing, and pricing strategically matters more than waiting for the perfect home to appear on the market.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3855,
-    "cache_creation_input_tokens": 0,
+    "input_tokens": 2169,
+    "cache_creation_input_tokens": 3976,
     "cache_read_input_tokens": 0,
     "cache_creation": {
-      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 3976,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 237,
+    "output_tokens": 719,
+    "output_tokens_details": {
+      "thinking_tokens": 331
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:27:12.453Z"
+  "generatedAt": "2026-08-06T18:35:00.545Z"
 }

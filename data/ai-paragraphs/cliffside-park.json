@@ -1,21 +1,24 @@
 {
-  "hash": "1f8fa456fdf6477d",
-  "paragraph": "The condo and townhouse market is where the volume lives in Cliffside Park, with 74 sales over six months at a median of $557,000. This category has real breadth, ranging from $250,000 to $1,490,000, so you're looking at everything from entry-level units to substantial properties. The sale-to-list ratio sits at 0.99 with about 32 percent of homes selling above asking, which signals a competitive but balanced market where priced homes are moving without frenzied multiple offers. Median days on market of 28.5 days reflects steady interest without urgency. Single-family homes are sparse at 16 sales and a median of $842,000, with a ratio of 0.98 and only 19 percent above asking. These properties take longer to move, around 35 days, suggesting sellers need to price thoughtfully to generate traction. Multi-family properties are even more limited but move quickly, median $750,000 with 14 days on market and 40 percent selling above asking. Co-ops round out the market at the entry point with a median of $272,500 and 6 sales over the period. They carry board approval, financing restrictions, and resale friction that not every buyer is aware of going in. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the low-maintenance lifestyle of a condo, or the lower price point of a co-op.",
+  "hash": "45ecd2b045e1929c",
+  "paragraph": "Condos and townhouses are the Cliffside Park market with 88 sales over six months at a median of $553,000, and that tier is competitive but not frenzied. The sale-to-list ratio sits at 0.99, about 31 percent of units sold above asking, and the median days on market is 28.5, so priced units are moving without sellers dictating terms. The spread inside that tier is wide, from $273,500 to $1,360,000, which tells you the category covers everything from older mid-rise units to newer construction, and the median is the better guide than either end. Monthly volume has climbed steadily from 11 closings in February to 22 in July while the July median dropped back to $537,500, which is a mix shift toward entry-level units rather than a price decline. Single-family is thin at 14 sales, median $825,000, with a 64.5-day median days on market and only two homes selling above list. Sellers there are okay with waiting for the right buyer rather than pricing to move fast. Co-op activity is minimal at five sales, median $280,000, and co-ops carry board approval, financing restrictions, and resale friction that not every buyer is aware of going in. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the low-maintenance lifestyle of a condo, or the lower price point of a co-op.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "The condo and townhouse market is where the volume lives in Cliffside Park, with 74 sales over six months at a median of $557,000. This category has real breadth, ranging from $250,000 to $1,490,000, so you're looking at everything from entry-level units to substantial properties. The sale-to-list ratio sits at 0.99 with about 32 percent of homes selling above asking, which signals a competitive but balanced market where priced homes are moving without frenzied multiple offers. Median days on market of 28.5 days reflects steady interest without urgency. Single-family homes are sparse at just 16 sales and a median of $842,000, with a ratio of 0.98 and only 19 percent above asking. These properties take longer to move, around 35 days, suggesting sellers need to price thoughtfully to generate traction. Multi-family properties are even more limited but move quickly, median $750,000 with just 14 days on market and 40 percent selling above asking. Co-ops round out the market at the entry point with a median of $272,500 and 6 sales over the period. They carry board approval, financing restrictions, and resale friction that not every buyer is aware of going in. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the low-maintenance lifestyle of a condo, or the lower price point of a co-op.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 4257,
+    "input_tokens": 2256,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 340,
+    "output_tokens": 929,
+    "output_tokens_details": {
+      "thinking_tokens": 492
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:22:41.686Z"
+  "generatedAt": "2026-08-06T18:36:38.576Z"
 }

@@ -1,21 +1,24 @@
 {
-  "hash": "28e3ae29130da8c9",
-  "paragraph": "The single-family market in Wallington is showing buyer-friendly signals across the board. Median price is $729,900 on a sale-to-list ratio of 0.99, meaning homes are selling slightly below asking, and the median days on market sits at 38. Only 20 percent of homes sold above list price, which tells you that sellers who price competitively are moving inventory, but there's no urgency pushing buyers to overpay. The range is real though, from $430,000 to $1,275,000, so neighborhood and condition matter significantly. Multi-family properties tell a different story. Ten sales over six months hit a median of $782,500, and here the ratio jumps to 1.04 with 70 percent of homes selling above asking and a median days on market of 18.5. That's a competitive tier where priced homes are moving and buyers are competing for the right property. If you're looking at Wallington, the single-family market gives you room to negotiate and time to be selective, while multi-family moves faster and demands you be ready when you find the right building.",
+  "hash": "9686d46a7d7d3f17",
+  "paragraph": "Wallington runs on two property types, and they behave differently. Single-family is the larger tier with 13 sales over six months at a median of $745,000, a sale-to-list ratio of exactly 1.00, and a median of 28 days on market. About 31 percent sold above asking. That's competitive but not frenzied. Priced homes are moving, and sellers are generally getting close to what they ask without a bidding war doing the work. The range runs from $570,000 to $1,275,000, so the median is the better guide than either end. Multi-family, by contrast, is the tighter market. Nine sales at a median of $760,000, a sale-to-list ratio of 1.05, two thirds selling above asking, and a median of 19 days on market. Sellers are dictating terms in that tier, though nine sales is a thin sample and one strong month moves the number. The monthly counts are too small to read a seasonal trend here, so treat the six-month picture as the real read. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and single-household simplicity of a detached home or the rental income and tenant management that comes with a two- or three-family.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "The single-family market in Wallington is showing buyer-friendly signals across the board. Median price is $729,900 on a sale-to-list ratio of 0.99, meaning homes are selling just slightly below asking, and the median days on market sits at 38. Only 20 percent of homes sold above list price, which tells you that sellers who price competitively are moving inventory, but there's no urgency pushing buyers to overpay. The range is real though, from $430,000 to $1,275,000, so neighborhood and condition matter significantly. Multi-family properties tell a different story. Ten sales over six months hit a median of $782,500, and here the ratio jumps to 1.04 with 70 percent of homes selling above asking and a median days on market of just 18.5. That's a competitive tier where priced homes are moving and buyers are competing for the right property. If you're looking at Wallington, the single-family market gives you room to negotiate and time to be selective, while multi-family moves faster and demands you be ready when you find the right building.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3439,
+    "input_tokens": 1336,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 250,
+    "output_tokens": 673,
+    "output_tokens_details": {
+      "thinking_tokens": 301
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:28:17.518Z"
+  "generatedAt": "2026-08-06T18:47:59.662Z"
 }

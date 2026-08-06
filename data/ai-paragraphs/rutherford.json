@@ -1,21 +1,24 @@
 {
-  "hash": "f8d605011bb4706b",
-  "paragraph": "Single-family homes in Rutherford are moving in a real seller's market, with a median sale price of $815,000, a sale-to-list ratio of 1.01, and a median of 19 days on market. Over half of homes sold above asking, and sellers are dictating terms in many multiple offer situations. The multi-family tier sits at a median of $940,000 across 10 sales, but these properties move much more slowly at 82 days on market, which tells you that two-to-four unit buildings require patience and the right buyer profile. By contrast, condos and townhouses trade at a median of $415,000 with faster velocity, though the sale-to-list ratio of 0.99 and only 31 percent sold above asking suggest buyers have more leverage here than in single-family. Co-ops anchor the entry point at $186,500 but move slowly at a 53-day median, reflecting the financing and board approval friction that comes with share ownership. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family home, the investment potential of a multi-family building, the low-maintenance lifestyle of a condo, or the lower price point of a co-op.",
+  "hash": "88322666d8fcd04a",
+  "paragraph": "Single-family is the engine in Rutherford, with 53 sales over six months at a median of $850,000 and a median of 17 days on market. Nearly 57 percent sold above list, but the sale-to-list ratio of 1.007 says those overages are modest. Call it competitive but not frenzied. Priced homes move quickly, and the range from $530,000 to $1,725,000 is wide enough that the median is the better guide than the average. The monthly series shows volume building the way it normally does, 9 closings in May, 17 in June, 12 in July, while the median eased from $999,999 in May to $837,500 in July. That is a mix shift toward smaller homes on heavier volume, not a value drop. Multi-family is a real category here with 10 sales at a median of $940,000, though the 50-day median days on market says those buyers take their time. Condos and townhouses are the softer tier, 12 sales at a median of $422,500 with a ratio slightly under list and about 40 days on market, so buyers have some room to negotiate. Co-ops are thin at 6 sales and a median of $203,250, and they carry board approval and financing restrictions that not every buyer is aware of going in. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the rental income of a multi-family, the low-maintenance lifestyle of a condo, or the lower price point of a co-op.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "Single-family is the engine in Rutherford, with 53 sales over six months at a median of $850,000 and a median of 17 days on market. Just under 57 percent sold above list, but the sale-to-list ratio of 1.007 says those overages are modest. Call it competitive but not frenzied. Priced homes move quickly, and the range from $530,000 to $1,725,000 is wide enough that the median is the better guide than the average. The monthly series shows volume building the way it normally does, 9 closings in May, 17 in June, 12 in July, while the median eased from $999,999 in May to $837,500 in July. That is a mix shift toward smaller homes on heavier volume, not a value drop. Multi-family is a real category here with 10 sales at a median of $940,000, though the 50-day median days on market says those buyers take their time. Condos and townhouses are the softer tier, 12 sales at a median of $422,500 with a ratio just under list and about 40 days on market, so buyers have some room to negotiate. Co-ops are thin at 6 sales and a median of $203,250, and they carry board approval and financing restrictions that not every buyer is aware of going in. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the rental income of a multi-family, the low-maintenance lifestyle of a condo, or the lower price point of a co-op.",
   "usage": {
-    "input_tokens": 3659,
+    "input_tokens": 2744,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 287,
+    "output_tokens": 464,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:27:36.864Z"
+  "generatedAt": "2026-08-06T18:46:17.394Z"
 }

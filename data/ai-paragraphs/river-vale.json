@@ -1,21 +1,24 @@
 {
-  "hash": "3bf37f4fc3b4f4ff",
-  "paragraph": "River Vale's single-family market is where the volume and momentum are. Thirty-one homes sold over six months at a median of $1,195,000, and sellers are dictating terms. Over 64 percent of homes sold above asking, the sale-to-list ratio sits at 1.03, and the median time on market is 14 days. This is a real seller's market, with many multiple offer situations, especially for homes priced competitively in the $1 million to $1.5 million range. The spread is wide, from $580,000 to $3.4 million, so the market rewards sellers who price accurately for their home's actual condition and location within town. The condo and townhouse tier is much smaller at 18 sales over the same period with a median of $1,280,000, but it tells a different story. These homes sit longer, with a median of 24.5 days on market, and only 16 percent sold above asking. The sale-to-list ratio is exactly 1.0, meaning homes are selling at list price rather than over it. If you're deciding between single-family and condo in River Vale, the single-family market is moving fast and favors sellers willing to act. Condos need to be priced to attract a buyer right away rather than wait for multiple offers.",
+  "hash": "93a51d2804a97742",
+  "paragraph": "The single-family market in River Vale is doing the heavy lifting with 45 sales over six months at a median of $1,105,000, a sale-to-list ratio of 1.03, and a median of 14 days on market. Nearly three quarters of homes sold above asking. That is a real seller's market, and multiple offer situations are common. The monthly series shows volume building hard into summer, 17 closings in July against five in February, while the monthly median drifted from $1,475,000 down to about $1,000,000. Volume and median moving opposite directions like that reflects a mix shift toward smaller and entry-level houses, not a drop in values. Condos and townhouses are a smaller but split category, 24 sales at a median of $1,280,000, with sales running from $325,000 to $1,599,999. There is an older, lower-priced attached segment and a newer high-end townhouse segment, and the median tells you almost nothing about either one on its own. That tier sells at asking, 22 days on market, with only about one in five going above list. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or the low-maintenance lifestyle of a townhouse.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "River Vale's single-family market is where the volume and momentum are. Thirty-one homes sold over six months at a median of $1,195,000, and sellers are dictating terms. Over 64 percent of homes sold above asking, the sale-to-list ratio sits at 1.03, and the median time on market is just 14 days. This is a real seller's market, with many multiple offer situations, especially for homes priced competitively in the $1 million to $1.5 million range. The spread is wide, from $580,000 to $3.4 million, so the market rewards sellers who price accurately for their home's actual condition and location within town. The condo and townhouse tier is much smaller at 18 sales over the same period with a median of $1,280,000, but it tells a different story. These homes sit longer, with a median of 24.5 days on market, and only 16 percent sold above asking. The sale-to-list ratio is exactly 1.0, meaning homes are selling at list price rather than over it. If you're deciding between single-family and condo in River Vale, the single-family market is moving fast and favors sellers willing to act. Condos need to be priced to attract a buyer right away rather than wait for multiple offers.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3661,
+    "input_tokens": 1717,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 300,
+    "output_tokens": 701,
+    "output_tokens_details": {
+      "thinking_tokens": 315
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:27:23.629Z"
+  "generatedAt": "2026-08-06T18:45:45.825Z"
 }

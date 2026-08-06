@@ -1,21 +1,24 @@
 {
-  "hash": "f3b4821b121e68bc",
-  "paragraph": "Single-family homes in Edgewater are sparse, with only four sales in the last six months. The median sits at $992,499.50, and these homes are taking a median of 91 days on market. With a sale-to-list ratio of 0.98 and only 25 percent selling above asking, sellers aren't commanding premiums here. The range is wide, from $830,000 to $1,750,000, which reflects the reality that Edgewater's single-family stock is small and varied. Condos and townhouses tell a completely different story. This tier dominates the market with 72 sales at a median of $617,500, moving much faster at a 35.5-day median. The sale-to-list ratio of 0.99 and 22 percent selling above asking point to a balanced, competitive market where priced homes are moving steadily. The price spread here is also wide, from $265,000 to $2,069,000, which means you're working with genuine variety in unit size, location within town, and amenities. If you're weighing Edgewater, the single-family market is thin enough that availability becomes the real constraint. The condo market is where the actual volume and liquidity sit.",
+  "hash": "05324f9c17150833",
+  "paragraph": "Edgewater is a condo market with a small single-family tier attached. Six detached homes closed over six months at a median of roughly $1,100,000, with a sale-to-list ratio of 0.979 and a median 68.5 days on market. Only one of the six went above list. That's too few sales to build a trend on, but the read is that sellers of detached houses here are okay with waiting for the right buyer rather than pricing to move fast. Condos and townhouses are the actual market with 75 sales at a median of $625,000, a 0.988 sale-to-list ratio, 36 median days on market, and about 21 percent selling above asking. Competitive, not frenzied. Sales ran from $236,000 to $2,137,500, so the median is a much better guide than the $817,937 average, which the Hudson River waterfront high-rise sales pull upward. Monthly condo medians bounced between $580,000 and $745,000 on steady volume every month, and July closed at $649,000, above June. That's resilience rather than the usual late-summer drift. If Edgewater follows the normal seasonal arc, expect volume to thin through fall with pricing holding. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or the low-maintenance living of a condo.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 3337,
+    "input_tokens": 1763,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 284,
+    "output_tokens": 1516,
+    "output_tokens_details": {
+      "thinking_tokens": 1092
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:23:18.929Z"
+  "generatedAt": "2026-08-06T18:37:57.894Z"
 }

@@ -1,5 +1,5 @@
 // AI commentary generator for the "What this means right now" card on each
-// town page. Calls Claude Haiku 4.5 with prompt caching so the voice rules,
+// town page. Calls Claude Opus 5 with prompt caching so the voice rules,
 // hard constraints, and audience persona are billed once and reused across
 // all 70 towns each refresh.
 //
@@ -17,8 +17,10 @@ import { createHash } from 'node:crypto';
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 
-const MODEL = 'claude-haiku-4-5-20251001';
-const MAX_TOKENS = 800;
+// Opus 5: thinking is on by default and counts against max_tokens, so the
+// cap is sized for reasoning + a 220-word paragraph, not just the paragraph.
+const MODEL = 'claude-opus-5';
+const MAX_TOKENS = 8000;
 const CACHE_DIR = 'data/ai-paragraphs';
 
 // Buildings that exist only in rental databases and must never appear in
@@ -118,9 +120,27 @@ The single-family market in Fort Lee is sparse, with a small share of homes bein
 1. Building names: use ONLY names from the curated lists in the user prompt. Never invent, combine, or generalize.
 2. Rental-only buildings are forbidden (Hudson Lights, Modera Fort Lee, equivalent).
 3. Match buildings to the right ownership tier (co-op buildings under co-op tier only).
-4. Do not fabricate statistics. Use only the aggregated stats in the user prompt.
-5. Do not claim trends beyond the 6-month rolling window. No year-over-year, no multi-year seasonal claims.
+4. Do not fabricate statistics. Use only the aggregated stats and monthly trend data in the user prompt.
+5. No year-over-year claims. The data covers one 6-month window; never compare to "last year" or invent multi-year history.
+7. Do not speculate about what an outlier sale was (teardown, land, estate sale, mobile home). If the range is unusually wide, note the wide range and that the median is the better guide; leave the low outlier unexplained.
 6. No sales-talk language ("now is a great time to buy", "the market is on fire").
+
+# SEASONALITY AND TREND (this is the critical-thinking layer)
+
+Bergen County has a well-known seasonal arc: activity and prices build through spring, peak in early-to-mid summer, then closings and medians typically drift down through fall and winter. You may state this general pattern as market context. It is the ONE piece of outside knowledge you are allowed.
+
+The user prompt includes a month-by-month series for this town (sold count and median per month, single-family and condo/townhouse). Use it to take a position on where THIS town sits relative to that seasonal arc. Every town-specific trend claim must be grounded in those monthly numbers.
+
+Rules for reading the monthly series:
+1. Classify the town's recent months honestly: tracking the seasonal pattern (recent medians softening as expected), showing resilience (holding flat where a dip would be normal), or bucking the trend (recent months still climbing). Say which one it is in plain language. Do not claim all three.
+2. Small samples are noise, not signal. A month with fewer than 5 closings cannot support a trend claim on its own. If most months are thin, say the sample is too small to read a monthly trend and fall back to the 6-month picture.
+3. A falling median on RISING volume often means the mix shifted toward smaller or entry-level homes, not that values dropped. When volume and median move in opposite directions, say so instead of calling it a price decline.
+4. Frame the forward look conditionally and modestly: "if this town follows the usual seasonal pattern, expect X" is fine; a confident price prediction is not.
+5. One or two sentences of seasonal read is the right dose. This is seasoning, not the meal. The tiered property-type walkthrough remains the core of the paragraph.
+
+# TONE: MATTER-OF-FACT
+
+Write like an agent reading the numbers to a smart client, not like a report generator. Short declarative sentences. Name what the data shows and what it does not show. No throat-clearing, no "it's worth noting," no "interestingly." If a number is unremarkable, do not dress it up. Where the honest read is "flat and unremarkable," say that; a boring market stated plainly is more credible than a dramatized one.
 
 # AUDIENCE
 
@@ -246,7 +266,8 @@ function buildUserPrompt({ townName, periodLabel, monthYear, aggregate, notableB
     monthYear,
     propertyTypes: aggregate.propertyTypes,
     rawCounts: aggregate.rawCounts,
-    sub10: aggregate.sub10
+    sub10: aggregate.sub10,
+    monthlyTrend: aggregate.monthlyTrend || []
   };
   const coopList = notableBuildings?.coop?.length
     ? notableBuildings.coop.join(', ')
@@ -269,7 +290,7 @@ Curated content available:
 - Notable condo and townhouse buildings: ${condoList}
 - About town context: ${aboutSummary}
 
-Write the "What this means right now" content for ${townName} in Tyler's voice, following all rules in the system prompt. Match length to the variety of data: short for single-tier markets, longer (with bullet lists) for multi-tier markets. Only reference building names from the curated lists above. Skip building names entirely if no relevant list is curated. Do not reference any rental-only buildings.`;
+Write the "What this means right now" paragraph for ${townName} in Tyler's voice, following all rules in the system prompt. Match length to the variety of data: short for single-tier markets, longer for multi-tier markets. Use the monthlyTrend series in the stats to give the seasonal read required by the system prompt. Only reference building names from the curated lists above. Skip building names entirely if no relevant list is curated. Do not reference any rental-only buildings.`;
 }
 
 function loadCache(slug) {
@@ -315,9 +336,11 @@ export async function generateAiParagraph(opts) {
     propertyTypes: aggregate.propertyTypes,
     rawCounts: aggregate.rawCounts,
     sub10: aggregate.sub10,
+    monthlyTrend: aggregate.monthlyTrend || [],
     notableBuildings,
     periodLabel,
-    monthYear
+    monthYear,
+    model: MODEL
   };
   const hash = statsHash(fingerprintPayload);
 

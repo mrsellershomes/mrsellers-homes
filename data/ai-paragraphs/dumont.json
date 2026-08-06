@@ -1,21 +1,24 @@
 {
-  "hash": "202a0a5edb105be7",
-  "paragraph": "Dumont's single-family market is moving in a real seller's market right now. Forty-two homes sold over the last six months at a median of $647,500, with 76 percent of them closing above asking price. The sale-to-list ratio sits at 1.05, and the median time on market is 14 days. Sellers are dictating terms here, and homes that are priced right are seeing multiple offers. Multi-family properties, though sparse with only seven sales, show a similar pattern at a median of $765,000, also with 71 percent closing above asking and a median of 18 days on market. If you're thinking about selling, this is the environment to be in. If you're buying, you'll need to come prepared with a competitive offer and realistic expectations about price. The market isn't waiting for fence-sitters, and the homes that sit around for 30 or 40 days are usually the ones with a real pricing or condition issue.",
+  "hash": "52f1eeeda3fd1274",
+  "paragraph": "Dumont's single-family market is a real seller's market right now. Fifty-one sales over six months at a median of $680,000, a sale-to-list ratio of 1.054, and a median of 14 days on market, with 76 percent of homes closing above asking. Sellers are dictating terms, and buyers should expect multiple offer situations on anything well presented. The monthly series backs that up rather than contradicting it: medians moved from $650,000 in February up through $680,000 in May and $699,000 in July, and July also brought the heaviest volume of the period at 15 closings. Prices climbing on rising volume is the strongest version of that signal. If Dumont follows the usual Bergen County arc, expect closings and medians to drift down through fall as the summer contracts clear. Multi-family is thinner at 8 sales, median $780,000, ratio of 1.036 and 18 days on market. That sample is too small to read a trend, but it is running in the same competitive direction. If you're weighing the two, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family or the rental income of a two-family.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "Dumont's single-family market is moving in a real seller's market right now. Forty-two homes sold over the last six months at a median of $647,500, with 76 percent of them closing above asking price. The sale-to-list ratio sits at 1.05, and the median time on market is just 14 days. Sellers are dictating terms here, and homes that are priced right are seeing multiple offers. Multi-family properties, though sparse with only seven sales, show a similar pattern at a median of $765,000, also with 71 percent closing above asking and a median of 18 days on market. If you're thinking about selling, this is the environment to be in. If you're buying, you'll need to come prepared with a competitive offer and realistic expectations about price. The market isn't waiting for fence-sitters, and the homes that sit around for 30 or 40 days are usually the ones with a real pricing or condition issue.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3552,
+    "input_tokens": 1597,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 219,
+    "output_tokens": 613,
+    "output_tokens_details": {
+      "thinking_tokens": 250
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:23:06.256Z"
+  "generatedAt": "2026-08-06T18:37:23.510Z"
 }

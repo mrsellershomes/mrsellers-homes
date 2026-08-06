@@ -1,21 +1,24 @@
 {
-  "hash": "87526b63a1c48546",
-  "paragraph": "Englewood Cliffs is a single-family market, and it's playing by buyer rules right now. With 18 sales over six months at a median of $2,250,000, inventory is moving but not fast. The sale-to-list ratio sits at 0.96, meaning homes are selling below asking on average, and the median days on market of 43.5 days tells you sellers aren't getting multiple offers or commanding premiums. Only about 17 percent of homes sold above list price, which is the opposite of a seller's market. The price range is wide, from $999,000 to $5,400,000, so you're seeing everything from mid-range estates to high-end properties in the same town. What this means for you is straightforward: if you're selling, you'll need to price competitively and be realistic about timing. If you're buying, the leverage is yours. Homes aren't sitting for months, so there's still reasonable interest, but you're not walking into a bidding war either. The best homes will draw some competition, but priced homes are moving at or slightly below asking. This is a buyer-friendly market in a town where price and condition matter more than how fast your agent can push you to the table.",
+  "hash": "8035cef62b15b62e",
+  "paragraph": "Englewood Cliffs is a single-family market and nothing else. Twenty-four homes sold over six months at a median of $2,250,000, with sales running from $999,000 to $5,400,000. That range is wide enough that the median is the better guide than the average. A sale-to-list ratio of 0.97, a quarter of homes going above asking, and a median of 37 days on market put this in competitive but not frenzied territory. Sellers here are generally okay with waiting for the right buyer rather than pricing to move fast. The monthly counts are too thin to read a trend from, though July brought 8 closings at a median of $2,025,500 against June's 5 at $3,300,000. That is a mix shift toward smaller homes on higher volume, not a drop in values. If the usual seasonal arc holds, expect activity to taper through fall.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 2894,
+    "input_tokens": 1287,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 277,
+    "output_tokens": 552,
+    "output_tokens_details": {
+      "thinking_tokens": 282
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:23:38.543Z"
+  "generatedAt": "2026-08-06T18:38:50.392Z"
 }

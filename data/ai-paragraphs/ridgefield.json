@@ -1,21 +1,24 @@
 {
-  "hash": "29324aa1c2c43f6d",
-  "paragraph": "The single-family market in Ridgefield is competitive but not frenzied. Twenty-four homes sold over six months with a median of $717,500, and half of them went for asking or above. The sale-to-list ratio sits right at 1.0, and median days on market runs about 25, which means priced homes are moving without the frenzy of a real seller's market. You'll see the range run from $500,000 to $1,400,000, so there's volume across the price spectrum. Multi-family properties, by contrast, are moving faster and hotter. Six sales in the period, but the median climbs to $962,499.50 and two-thirds of them sold above asking. Median days on market drops to 14.5, and the sale-to-list ratio reaches 1.05, which signals real competition among buyers for these units. The condo and townhouse tier sits at the entry point with a median of $322,500 across six sales, though the category is small enough that individual outliers pull the average well above the median. If you're weighing Ridgefield, the deciding factor isn't overall market heat. It's whether you want the space and grounds of a single-family at a balanced pace, the tighter competition and faster turnover of a multi-family building, or the lower price point of a condo or townhouse.",
+  "hash": "ee460ff53b0f17a0",
+  "paragraph": "Ridgefield's single-family market is the core here, with 23 sales over six months at a median of $720,000 and a sale-to-list ratio of exactly 1.00. Slightly under half sold above asking with a median of 26 days on market, which is competitive but not frenzied. Priced homes are moving, and sellers who stretch are waiting. The range runs from $520,000 to $1,375,000, so the median is the better guide than either end. Multi-family is the tighter category, 8 sales at a median of $920,000, a 1.03 sale-to-list ratio, 75 percent above asking, and a median of 14.5 days on market. Those are seller's market numbers, though eight sales is a small sample and Ridgefield's two-family stock draws both owner-occupants and investors bidding on the same houses. Condos and townhouses are thin at 6 sales with a median of $322,500, nothing above asking, and a range from $225,000 to $935,000 that tells you this category holds very different products. On the monthly numbers, most months carry fewer than five closings, so there is no readable monthly trend. The six-month picture is the honest read, and if Ridgefield follows the usual Bergen seasonal arc, expect fall closings to soften from summer levels.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "The single-family market in Ridgefield is competitive but not frenzied. Twenty-four homes sold over six months with a median of $717,500, and half of them went for asking or above. The sale-to-list ratio sits right at 1.0, and median days on market runs about 25, which means priced homes are moving without the frenzy of a real seller's market. You'll see the range run from $500,000 to $1,400,000, so there's volume across the price spectrum. Multi-family properties, by contrast, are moving faster and hotter. Just six sales, but the median climbs to $962,499.50 and two-thirds of them sold above asking. Median days on market drops to 14.5, and the sale-to-list ratio reaches 1.05, which signals real competition among buyers for these units. The condo and townhouse tier sits at the entry point with a median of $322,500 across six sales, though the category is small enough that individual outliers pull the average well above the median. If you're weighing Ridgefield, the deciding factor isn't overall market heat. It's whether you want the space and grounds of a single-family at a balanced pace, the tighter competition and faster turnover of a multi-family building, or the lower price point of a condo or townhouse.",
+  "firstDraft": "Ridgefield's single-family market is the core here, with 23 sales over six months at a median of $720,000 and a sale-to-list ratio of exactly 1.00. Just under half sold above asking with a median of 26 days on market, which is competitive but not frenzied. Priced homes are moving, and sellers who stretch are waiting. The range runs from $520,000 to $1,375,000, so the median is the better guide than either end. Multi-family is the tighter category, 8 sales at a median of $920,000, a 1.03 sale-to-list ratio, 75 percent above asking, and a median of 14.5 days on market. Those are seller's market numbers, though eight sales is a small sample and Ridgefield's two-family stock draws both owner-occupants and investors bidding on the same houses. Condos and townhouses are thin at 6 sales with a median of $322,500, nothing above asking, and a range from $225,000 to $935,000 that tells you this category holds very different products. On the monthly numbers, most months carry fewer than five closings, so there is no readable monthly trend. The six-month picture is the honest read, and if Ridgefield follows the usual Bergen seasonal arc, expect fall closings to soften from summer levels.",
   "usage": {
-    "input_tokens": 3728,
+    "input_tokens": 2258,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 310,
+    "output_tokens": 405,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:27:00.731Z"
+  "generatedAt": "2026-08-06T18:45:07.138Z"
 }

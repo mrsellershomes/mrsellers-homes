@@ -1,21 +1,24 @@
 {
-  "hash": "e013a5cc74a581bf",
-  "paragraph": "Harrington Park is a single-family market, and it's a real seller's market right now. The median sale price is $1,066,500 against a median list price of $965,000, which means homes are selling at a 6.3 percent premium on average, with 83 percent of sales closing above asking. Median days on market sits at 13 days, and multiple offer situations are common enough that sellers are dictating terms rather than pricing aggressively to move fast. The range is wide, from $715,000 to $1,550,000, so a home's condition and location within town matter enormously to how quickly it sells and what it fetches. If you're in the market to sell, you're in a strong position right now. If you're buying, you'll need to move decisively on homes that meet your criteria, because the best properties aren't staying on the market long.",
+  "hash": "ed23c6bae35f1830",
+  "paragraph": "Harrington Park is a single-family market and nothing else, with 23 sales over six months at a median of $999,999. The sale-to-list ratio is 1.0436, 78 percent of homes sold above asking, and the median days on market is 13. That is a real seller's market, with multiple offer situations behind a good share of those numbers. Sales ran from $700,000 to $2,175,000, so the median is the better guide than the ends. Monthly closings are too thin to read a trend from any single month, though volume did build into June and July the way Bergen County summers usually go. If the town follows the normal seasonal arc, expect fall closings to thin out and the median to drift with whatever mix happens to close.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "Harrington Park is a single-family market, and it's a real seller's market right now. The median sale price is $1,066,500 against a median list price of $965,000, which means homes are selling at a 6.3 percent premium on average, with 83 percent of sales closing above asking. Median days on market sits at just 13 days, and multiple offer situations are common enough that sellers are dictating terms rather than pricing aggressively to move fast. The range is wide, from $715,000 to $1,550,000, so a home's condition and location within town matter enormously to how quickly it sells and what it fetches. If you're in the market to sell, you're in a strong position right now. If you're buying, you'll need to move decisively on homes that meet your criteria, because the best properties aren't staying on the market long.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3222,
+    "input_tokens": 1267,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 202,
+    "output_tokens": 418,
+    "output_tokens_details": {
+      "thinking_tokens": 195
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:24:37.151Z"
+  "generatedAt": "2026-08-06T18:40:26.411Z"
 }

@@ -1,21 +1,24 @@
 {
-  "hash": "092f4f425c6f57a7",
-  "paragraph": "Hackensack's market breaks into tiers with distinctly different heat levels. Single-family homes, the smallest segment with 34 sales at a median of $642,500, sit in competitive but balanced territory. About half the homes sold above asking, and the median days on market is 30.5, which means priced homes are moving without the urgency of a true seller's market. Multi-family properties, by contrast, show real momentum with 12 sales at a median of $787,500. Two-thirds sold above list, the median sale-to-list ratio crossed 1.01, and homes moved in 19 days on market. This is a real seller's market for investment and multi-unit properties. Condos and townhouses represent the largest volume at 78 sales with a median of $323,500, but the dynamics here lean toward balance or slight buyer advantage. Roughly a third sold above asking, and the median days on market sits at 29.5. This tier has space to breathe. Co-ops round out the market at the lowest entry point, a median of $200,000, though the sample is small at only 7 sales. They come with board approval, financing restrictions, and resale friction that not every buyer is aware of going in. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the investment potential or rental income of a multi-family building, the affordability of a condo, or the lowest price point of a co-op.",
+  "hash": "cabf1447cc6e5bb3",
+  "paragraph": "Hackensack runs four tiers, and the volume sits in condos. Single-family closed 36 sales over six months at a median of $650,000, with a sale-to-list ratio of 1.003 and a median 21 days on market. About 58 percent went above asking, so this is competitive but not frenzied. Priced homes are moving, and the spread from $380,000 to $1,190,000 is wide enough that the median is the number to trust. Multi-family is the smaller, higher-priced tier at 12 sales and a median of $785,000, moving in roughly 19 days at essentially full list. Condos and townhouses carry the market with 82 sales at a median of $320,000, a ratio of exactly 1.00, and 29 days on market, with about a third selling above ask. Co-ops are thin at 8 sales and a median of $201,000, closing slightly under list after 43 days, and they come with board approval, financing restrictions, and resale friction that not every buyer is aware of going in. On the monthly numbers, single-family has held flat to slightly firmer through July while condo medians have drifted down on steady volume, which reads as mix shifting toward smaller units rather than values dropping. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the rental income of a multi-family, the low-maintenance lifestyle of a condo, or the lower price point of a co-op.",
   "fallback": false,
   "reason": null,
   "retried": true,
-  "firstDraft": "Hackensack's market breaks into tiers with distinctly different heat levels. Single-family homes, the smallest segment with 34 sales at a median of $642,500, sit in competitive but balanced territory. About half the homes sold above asking, and the median days on market is 30.5, which means priced homes are moving without the urgency of a true seller's market. Multi-family properties, by contrast, show real momentum with 12 sales at a median of $787,500. Two-thirds sold above list, the median sale-to-list ratio crossed 1.01, and homes moved in just 19 days on market. This is a real seller's market for investment and multi-unit properties. Condos and townhouses represent the largest volume at 78 sales with a median of $323,500, but the dynamics here lean toward balance or slight buyer advantage. Just under a third sold above asking, and the median days on market sits at 29.5. This tier has space to breathe. Co-ops round out the market at the lowest entry point, a median of $200,000, though the sample is small at only 7 sales. They come with board approval, financing restrictions, and resale friction that not every buyer is aware of going in. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the investment potential or rental income of a multi-family building, the affordability of a condo, or the lowest price point of a co-op.",
+  "firstDraft": "Hackensack runs four tiers, and the volume sits in condos. Single-family closed 36 sales over six months at a median of $650,000, with a sale-to-list ratio of 1.003 and a median 21 days on market. Just under 60 percent went above asking, so this is competitive but not frenzied. Priced homes are moving, and the spread from $380,000 to $1,190,000 is wide enough that the median is the number to trust. Multi-family is the smaller, higher-priced tier at 12 sales and a median of $785,000, moving in about 19 days at essentially full list. Condos and townhouses carry the market with 82 sales at a median of $320,000, a ratio of exactly 1.00, and 29 days on market, with roughly a third selling above ask. Co-ops are thin at 8 sales and a median of $201,000, closing slightly under list after 43 days, and they come with board approval, financing restrictions, and resale friction that not every buyer is aware of going in. On the monthly numbers, single-family has held flat to slightly firmer through July while condo medians have drifted down on steady volume, which reads as mix shifting toward smaller units rather than values dropping. If you're comparing tiers, the deciding factor isn't market heat. It's whether you want the space and grounds of a single-family, the rental income of a multi-family, the low-maintenance lifestyle of a condo, or the lower price point of a co-op.",
   "usage": {
-    "input_tokens": 4422,
+    "input_tokens": 3018,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 342,
+    "output_tokens": 502,
+    "output_tokens_details": {
+      "thinking_tokens": 40
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:24:31.867Z"
+  "generatedAt": "2026-08-06T18:40:19.076Z"
 }

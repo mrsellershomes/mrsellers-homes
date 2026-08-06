@@ -1,21 +1,24 @@
 {
-  "hash": "4b1518edbc094fc3",
-  "paragraph": "The single-family market in Waldwick is a real seller's market, with 37 homes selling over the last six months at a median of $685,000. Homes are selling above list 89 percent of the time, the sale-to-list ratio sits at 1.09, and the median time on market is 13 days. Sellers are dictating terms here, and you'll see multiple offer situations on anything priced right. The condo and townhouse tier is smaller with 6 sales at a median of $562,500, but the fundamentals are equally strong: 83 percent of units sold above asking, a 1.05 sale-to-list ratio, and an 18-day median days on market. Multi-family properties are sparse, with 4 sales at a median of $1,025,000 over the period, and they sit in more balanced territory with a 0.98 sale-to-list ratio and a 26-day median. If you're looking at Waldwick, the single-family and condo markets are both moving fast enough that you'll need to be ready to act. The multi-family category is too thin to call a reliable pattern.",
+  "hash": "45257e9c43ca7666",
+  "paragraph": "Waldwick's single-family market is the whole story here, with 38 sales over six months at a median of $722,500 and a sale-to-list ratio of 1.09. Nearly 90 percent of homes sold above asking and the median time to contract was 12 days. That is a real seller's market, and multiple offer situations are the norm rather than the exception. The monthly numbers track the seasonal build cleanly: February closed at a median of $615,000, and June and July came in at $777,500 and $776,000. If Waldwick follows the usual Bergen County arc, expect medians to ease as fall closings come through, which reflects the mix shifting more than any softening in value. Condos and townhouses are a thin slice at 7 sales with a median of $550,000, and the range runs from $500,000 to $947,000, so the median is the better guide than the average. Multi-family activity is three sales at a median of $1,100,000, too few to read as a trend. If you're weighing tiers, the decision isn't about market heat, since both move fast. It's whether you want the space and grounds of a single-family or the low-maintenance setup of a townhouse, and the townhouse inventory is genuinely limited.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "The single-family market in Waldwick is a real seller's market, with 37 homes selling over the last six months at a median of $685,000. Homes are selling above list 89 percent of the time, the sale-to-list ratio sits at 1.09, and the median time on market is just 13 days. Sellers are dictating terms here, and you'll see multiple offer situations on anything priced right. The condo and townhouse tier is smaller with only 6 sales at a median of $562,500, but the fundamentals are just as strong: 83 percent of units sold above asking, a 1.05 sale-to-list ratio, and a 18-day median days on market. Multi-family properties are sparse, with just 4 sales at a median of $1,025,000 over the period, and they sit in more balanced territory with a 0.98 sale-to-list ratio and a 26-day median. If you're looking at Waldwick, the single-family and condo markets are both moving fast enough that you'll need to be ready to act. The multi-family category is too thin to call a reliable pattern.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3752,
+    "input_tokens": 1745,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 266,
+    "output_tokens": 688,
+    "output_tokens_details": {
+      "thinking_tokens": 308
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:28:10.751Z"
+  "generatedAt": "2026-08-06T18:47:48.783Z"
 }

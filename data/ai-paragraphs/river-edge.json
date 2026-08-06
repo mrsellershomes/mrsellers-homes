@@ -1,21 +1,24 @@
 {
-  "hash": "9f6f80abc7a94d29",
-  "paragraph": "River Edge is a single-family market, and it's solidly competitive. Twenty-six homes sold over the last six months at a median of $915,000, with about 38 percent selling above asking and a median of 23.5 days on market. The sale-to-list ratio sits right at 1.0, meaning homes are hitting their asking price on average rather than commanding premiums or sitting long. Priced homes are moving, but sellers aren't dictating terms. The range is wide, from $590,000 to $1,750,000, so where you land in that spread depends entirely on the specific property and neighborhood. If you're looking to buy here, pricing matters. Homes that sit on market for weeks aren't usually overpriced so much as waiting for the right buyer at their chosen price point. That's typical of a balanced market where neither side has real leverage, and it means you'll want to work with someone who knows which properties have genuine competitive interest and which ones are genuinely negotiable. It's not a slow market, but it's not a bidding war either.",
+  "hash": "e7b6fa3f9aeab283",
+  "paragraph": "River Edge is a single-family town, plain and simple. Forty-one detached homes closed over six months at a median of $950,000, with a sale-to-list ratio of 1.00 and a median of 21 days on market. Nearly half sold above asking. That is competitive but not frenzied. Priced homes move, and the ones that sit are usually asking ahead of the comps. Sales ran from $590,000 to $1,900,000, so the median is your better guide than the range. Month to month, most windows carried four to seven closings, too thin to call a trend, and the medians swing on which homes happened to close. July brought 15 sales at $970,000, the volume peak you would expect in a Bergen County summer. If the usual seasonal arc holds, expect closings to thin through fall. Only two condo or townhouse sales registered here, not enough to read as a market.",
   "fallback": false,
   "reason": null,
-  "retried": false,
-  "firstDraft": null,
+  "retried": true,
+  "firstDraft": "River Edge is a single-family town, plain and simple. Forty-one detached homes closed over six months at a median of $950,000, with a sale-to-list ratio of 1.00 and a median of 21 days on market. Just under half sold above asking. That is competitive but not frenzied. Priced homes move, and the ones that sit are usually asking ahead of the comps. Sales ran from $590,000 to $1,900,000, so the median is your better guide than the range. Month to month, most windows carried four to seven closings, too thin to call a trend, and the medians swing on which homes happened to close. July brought 15 sales at $970,000, the volume peak you would expect in a Bergen County summer. If the usual seasonal arc holds, expect closings to thin through fall. Only two condo or townhouse sales registered here, not enough to read as a market.",
   "usage": {
-    "input_tokens": 2911,
+    "input_tokens": 1819,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 240,
+    "output_tokens": 324,
+    "output_tokens_details": {
+      "thinking_tokens": 50
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:27:16.318Z"
+  "generatedAt": "2026-08-06T18:45:34.403Z"
 }

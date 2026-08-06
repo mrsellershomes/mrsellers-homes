@@ -1,21 +1,24 @@
 {
-  "hash": "185b0dd7f86dfad2",
-  "paragraph": "Hillsdale is a single-family market, and it's a real seller's market right now. Thirty-eight homes sold over six months at a median of $875,000, with 71 percent of them closing above asking price and a median sale-to-list ratio of 1.05. Homes are moving fast, with a median of 14.5 days on market. Many multiple offer situations are happening here, especially on well-priced inventory. Sellers are dictating terms, which means if you're looking to buy, you'll need to move decisively and come prepared. The spread runs wide, from $510,000 to $1,415,000, so there's activity across price points, but the best homes are getting competed for hard. If you're selling, this is your window to price strategically and let the market work for you. If you're buying, understand that patience comes at a cost in this environment.",
+  "hash": "8e6763d6df94d555",
+  "paragraph": "Hillsdale is a single-family town and the numbers are not ambiguous. Thirty-nine houses sold at a median of $915,000, sellers got 105.8 percent of list on average, nearly three quarters of homes closed above asking, and the median days on market was 12. That is a real seller's market, with multiple offer situations behind a lot of these closings. Sales ran from $510,000 to $1,665,000, so the median is the better guide than the range. Monthly volume built from four closings in April to eight in each of May, June, and July, which is the normal Bergen County spring-into-summer arc, and July's median of $1,175,000 was the highest of the window. Those monthly counts are small, so treat the swings as mix rather than price movement, but the direction of volume is real. If Hillsdale follows the usual pattern, expect closings and medians to ease through fall. Condo and townhouse activity is thin, four sales at a median of $708,000, selling right at list in about 25 days. Four sales is not a trend, it's a footnote, and if you want a lower-maintenance option here you'll be waiting on limited inventory rather than choosing from it.",
   "fallback": false,
   "reason": null,
-  "retried": true,
-  "firstDraft": "Hillsdale is a single-family market, and it's a real seller's market right now. Thirty-eight homes sold over six months at a median of $875,000, with 71 percent of them closing above asking price and a median sale-to-list ratio of 1.05. Homes are moving fast, with a median of just 14.5 days on market. Many multiple offer situations are happening here, especially on well-priced inventory. Sellers are dictating terms, which means if you're looking to buy, you'll need to move decisively and come prepared. The spread runs wide, from $510,000 to $1,415,000, so there's activity across price points, but the best homes are getting competed for hard. If you're selling, this is your window to price strategically and let the market work for you. If you're buying, understand that patience comes at a cost in this environment.",
+  "retried": false,
+  "firstDraft": null,
   "usage": {
-    "input_tokens": 3330,
+    "input_tokens": 1543,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 205,
+    "output_tokens": 689,
+    "output_tokens_details": {
+      "thinking_tokens": 319
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:24:50.172Z"
+  "generatedAt": "2026-08-06T18:40:53.911Z"
 }

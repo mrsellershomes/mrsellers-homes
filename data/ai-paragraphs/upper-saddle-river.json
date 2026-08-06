@@ -1,21 +1,24 @@
 {
-  "hash": "46b184fc6cb76e0f",
-  "paragraph": "Upper Saddle River is a single-family market, and it's moving. Fifty-five homes sold over six months at a median of $1,650,000, with a sale-to-list ratio of 1.00 and over half the sales closing above asking price. Median days on market sits at 18, which means priced homes aren't lingering. The range is wide, from $825,000 to $5,325,000, so there's real diversity in what Upper Saddle River offers depending on your budget and what you're looking for in terms of lot size and renovation. Sellers here are confident because the market supports that confidence. You'll see multiple offer situations on well-presented homes, especially in the $1.5 million to $2.5 million range where the bulk of activity concentrates. If you're coming in at list price or above, you're competitive. If you're trying to negotiate down, you'll need either a property with a genuine flaw or patience to wait for the occasional home that doesn't grab immediate attention. This is a seller's market, but it's not frenzied. Homes that are priced right and presented well move decisively.",
+  "hash": "c1483caaa79c0f92",
+  "paragraph": "Upper Saddle River is a single-family market and nothing else, with 54 detached sales over six months against two condo closings that are too few to read. The median sits at $1,688,750, and the sale-to-list ratio of exactly 1.00 with 48 percent of homes going above asking says competitive but not frenzied. Homes are moving quickly when priced right, with a median of 17.5 days on market and a fastest sale of 5 days. Sale prices run from $825,000 to $5,325,000, so the median is the better guide than the average here. On the monthly series, volume built through spring and peaked at 19 closings in June. The May median dropped to $1,352,500 as volume tripled, which is a mix shift toward smaller homes rather than a price decline, and July came back at $1,950,000 on 9 sales. That is resilience where a seasonal drift down would be normal. If the usual Bergen pattern holds, expect closings to thin out through fall while prices stay roughly where they are.",
   "fallback": false,
   "reason": null,
   "retried": false,
   "firstDraft": null,
   "usage": {
-    "input_tokens": 3108,
+    "input_tokens": 1473,
     "cache_creation_input_tokens": 0,
-    "cache_read_input_tokens": 0,
+    "cache_read_input_tokens": 4048,
     "cache_creation": {
       "ephemeral_5m_input_tokens": 0,
       "ephemeral_1h_input_tokens": 0
     },
-    "output_tokens": 261,
+    "output_tokens": 666,
+    "output_tokens_details": {
+      "thinking_tokens": 348
+    },
     "service_tier": "standard",
-    "inference_geo": "not_available"
+    "inference_geo": "global"
   },
-  "generatedAt": "2026-07-19T15:28:04.957Z"
+  "generatedAt": "2026-08-06T18:47:37.918Z"
 }
